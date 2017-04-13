@@ -1,0 +1,7 @@
+.active {
+    opacity: 0.3;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    transition: opacity,color 1s ease-in-out;
+}

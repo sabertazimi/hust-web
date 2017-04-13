@@ -1,0 +1,9 @@
+.text-default {
+    color: white !important;
+    background-color: transparent !important;
+}
+
+.text-white {
+    color: white;
+    background-color: transparent;
+}

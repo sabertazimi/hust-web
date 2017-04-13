@@ -1,0 +1,21 @@
+.navbar,
+.navbar * {
+    color: white;
+    background: transparent;
+    border: none;
+}
+
+.navbar-component {
+    color: white;
+    border-width: 2px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 30px;
+    background-color: transparent;
+    transition: border-color .3s ease-in;
+}
+
+.navbar-component:hover,
+.navbar-component:active {
+    border-color: white;
+}

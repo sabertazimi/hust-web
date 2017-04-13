@@ -1,0 +1,140 @@
+/*
+ * musicplayer.css
+ * Copyright (C) 2017 sabertazimi
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #fff;
+    color: #222;
+    font-size: 0.9em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+button {
+    background-color: #f2f2f2;
+    color: rgba(61, 100, 158, 1);
+    border: none;
+}
+
+main {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+main aside {
+    flex: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+main aside i.fa {
+    font-size: 0.9em;
+}
+
+.content {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+.music-head {
+    display: flex;
+    flex: 0 0 280px;
+    padding: 40px;
+    background-color: #4e4e4e;
+}
+
+.music-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    list-style-type: none;
+    padding: 5px 10px 0px;
+}
+
+.music-list li {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    min-height: 50px;
+}
+
+.music-list li p {
+    flex: 0 0 25%;
+}
+
+.music-list li span.catty-cloud {
+    padding: 3px;
+    border: 1px solid black;
+    font-size: 0.6em;
+}
+
+.music-list li:nth-child(2n) {
+    background-color: #f2f2f2;
+}
+
+.catty-music {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding-left: 50px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.catty-music div:nth-child(1) {
+    margin-bottom: auto;
+}
+
+.catty-music div:nth-child(2) {
+    margin-top: 0;
+}
+
+.catty-music div:nth-child(2) i.fa {
+    padding: 0 0.7em;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.catty-music div:nth-child(1) p:first-child {
+    margin: 0 0 10px;
+    font-size: 1.8em;
+}
+
+.catty-music div:nth-child(1) p:not(:first-child) {
+    margin: 2px 0;
+    font-size: 0.9em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 90px;
+    padding: 20px;
+    background-color: rgba(61, 100, 158, 0.9);
+    color: #fff;
+}
+
+.catty-music-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}

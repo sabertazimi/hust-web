@@ -1,0 +1,54 @@
+{
+  "name": "react-hn",
+  "version": "1.0.0",
+  "description": "Hacker News in Reactjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "google-chrome index.html",
+    "dev": "NODE_ENV=development webpack --progress --config webpack.config --colors --display-modules",
+    "build": "NODE_ENV=production webpack --progress --config webpack.prod.config --colors -p --display-modules",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/st-proj.git"
+  },
+  "keywords": [
+    "react",
+    "nest-hub",
+    "hust"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabertazimi/st-proj/issues"
+  },
+  "homepage": "https://github.com/sabertazimi/st-proj#readme",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "material-ui": "^0.15.2",
+    "moment": "^2.14.1",
+    "normalize.css": "^4.2.0",
+    "react": "^15.2.1",
+    "react-addons-css-transition-group": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-tap-event-plugin": "^1.0.0",
+    "remarkable": "^1.6.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "imports-loader": "^0.6.5",
+    "node-sass": "^3.8.0",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-cleanup-plugin": "^0.2.0"
+  }
+}
