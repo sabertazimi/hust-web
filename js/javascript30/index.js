@@ -10,7 +10,7 @@
         },
         {
             'title': '03 - CSS Variables',
-            'content': ''
+            'content': 'css variables'
         },
         {
             'title': '04 - Array Cardio Day 1',
