@@ -18,7 +18,7 @@
         },
         {
             'title': '05 - Flex Panel Gallery',
-            'content': 'flex box'
+            'content': 'flex box and use "transitionend" event to delay animation'
         },
         {
             'title': '06 - Type Ahead',
