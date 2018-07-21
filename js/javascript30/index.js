@@ -18,7 +18,7 @@
         },
         {
             'title': '05 - Flex Panel Gallery',
-            'content': ''
+            'content': 'flex box'
         },
         {
             'title': '06 - Type Ahead',
@@ -130,7 +130,7 @@
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h3 class="card-title"><a href="https://sabertazimi.github.io/hust-web/javascript30/${title}">${title}</a></h3>
+                        <h3 class="card-title"><a target="_blank" href="https://sabertazimi.github.io/hust-web/javascript30/${title}">${title}</a></h3>
                         <p>${content}</p>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
     let cardsDOM = '';
 
     cardsData.forEach((card, index) => {
-        cardsDOM += createCardComponent(index, card.title, card.content);
+        cardsDOM += createCardComponent(index + 1, card.title, card.content);
     });
 
     const container = document.querySelector('.card-container');
