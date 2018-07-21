@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+  - $HOME/.npm
+script:
+  - npm install
+  - npm run build
+branches:
+  only:
+    - master # 只对 master 分支进行构建
+deploy:
+  provider: pages
+  skip_cleanup: true
+  # 在项目仪表盘的 Settings -> Environment Variables 中配置
+  github_token: $GITHUB_TOKEN
+  # 将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起
+  local_dir: build
+  name: $GIT_NAME
+  email: $GIT_EMAIL
+  on:
+    branch: master

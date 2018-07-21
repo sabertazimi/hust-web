@@ -1,8 +1,3 @@
-* [hust-web](#hust-web)
-    * [Directory](#directory)
-    * [License](#license)
-    * [Contact](#contact)
-
 # hust-web
 
 A repo for learning demo archives
@@ -10,6 +5,7 @@ A repo for learning demo archives
 [![Author](https://img.shields.io/badge/author-sabertazimi-lightgrey.svg)](https://github.com/sabertazimi)
 [![stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)](https://github.com/sabertazimi/hust-web)
 [![MIT](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/hust-web/master/LICENSE)
+[![Build Status](https://travis-ci.org/sabertazimi/hust-web.svg?branch=master)](https://travis-ci.org/sabertazimi/hust-web)
 
 ## Directory
 

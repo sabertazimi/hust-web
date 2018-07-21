@@ -1,0 +1,23 @@
+{
+  "name": "hust-web",
+  "version": "1.0.0",
+  "description": "hust web",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p ./build && cp -fr ./js/javascript30 ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/hust-web.git"
+  },
+  "keywords": [
+    "web",
+    "front-end"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabertazimi/hust-web/issues"
+  },
+  "homepage": "https://github.com/sabertazimi/hust-web"
+}
