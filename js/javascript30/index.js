@@ -14,7 +14,7 @@
         },
         {
             'title': '04 - Array Cardio Day 1',
-            'content': ''
+            'content': 'simple JavaScript array API'
         },
         {
             'title': '05 - Flex Panel Gallery',
@@ -22,11 +22,11 @@
         },
         {
             'title': '06 - Type Ahead',
-            'content': ''
+            'content': 'awesome search bar and awesome list css style (with transform and background)'
         },
         {
             'title': '07 - Array Cardio Day 2',
-            'content': ''
+            'content': 'simple JavaScript array API'
         },
         {
             'title': '08 - Fun with HTML5 Canvas',
