@@ -30,7 +30,7 @@
         },
         {
             'title': '08 - Fun with HTML5 Canvas',
-            'content': ''
+            'content': 'canvas api, hsl css and "mouse"(move/up/down/out) event'
         },
         {
             'title': '09 - Dev Tools Domination',
