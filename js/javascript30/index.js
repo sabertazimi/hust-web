@@ -34,7 +34,7 @@
         },
         {
             'title': '09 - Dev Tools Domination',
-            'content': ''
+            'content': 'nonsense - all you can get on google chrome devtools documentation'
         },
         {
             'title': '10 - Hold Shift and Check Checkboxes',
