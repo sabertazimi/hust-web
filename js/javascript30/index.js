@@ -38,7 +38,7 @@
         },
         {
             'title': '10 - Hold Shift and Check Checkboxes',
-            'content': ''
+            'content': '"+" css selector and checkbox input api'
         },
         {
             'title': '11 - Custom Video Player',
