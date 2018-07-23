@@ -91,6 +91,13 @@ body {
   width: 100%;
   background: #ffc600;
   flex: 0;
+  flex-basis: 0%;
+}
+
+.progress__buffered {
+  width: 100%;
+  background: gray;
+  flex: 0;
   flex-basis: 100%;
 }
 
