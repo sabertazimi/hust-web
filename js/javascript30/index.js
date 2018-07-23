@@ -54,11 +54,11 @@
         },
         {
             'title': '14 - JavaScript References VS Copying',
-            'content': ''
+            'content': 'skip'
         },
         {
             'title': '15 - LocalStorage',
-            'content': ''
+            'content': 'local storage, event delegation and "submit" event'
         },
         {
             'title': '16 - Mouse Move Shadow',
