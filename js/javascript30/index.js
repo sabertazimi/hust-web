@@ -42,7 +42,7 @@
         },
         {
             'title': '11 - Custom Video Player',
-            'content': ''
+            'content': 'Media element api and Media events'
         },
         {
             'title': '12 - Key Sequence Detection',
