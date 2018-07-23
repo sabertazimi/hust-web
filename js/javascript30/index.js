@@ -46,7 +46,7 @@
         },
         {
             'title': '12 - Key Sequence Detection',
-            'content': ''
+            'content': 'key input events'
         },
         {
             'title': '13 - Slide in on Scroll',
