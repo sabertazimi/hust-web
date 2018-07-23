@@ -50,7 +50,7 @@
         },
         {
             'title': '13 - Slide in on Scroll',
-            'content': ''
+            'content': 'window scroll events, debouncing function and scroll effect with "opacity" and "translateX" transition'
         },
         {
             'title': '14 - JavaScript References VS Copying',
