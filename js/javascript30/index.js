@@ -74,7 +74,7 @@
         },
         {
             'title': '19 - Webcam Fun',
-            'content': ''
+            'content': 'webcam media api, URL.createObjectURL/canvas.toDataURL and pixels filter'
         },
         {
             'title': '20 - Speech Detection',
