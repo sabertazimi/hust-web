@@ -78,7 +78,7 @@
         },
         {
             'title': '20 - Speech Detection',
-            'content': ''
+            'content': 'SpeechRecognition api'
         },
         {
             'title': '21 - Geolocation',
