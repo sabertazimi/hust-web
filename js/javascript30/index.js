@@ -114,7 +114,7 @@
         },
         {
             'title': '29 - Countdown Timer',
-            'content': ''
+            'content': 'setInterval/clearInterval and document.name.name.etc'
         },
         {
             'title': '30 - Whack A Mole',
