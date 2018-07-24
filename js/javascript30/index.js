@@ -98,7 +98,7 @@
         },
         {
             'title': '25 - Event Capture, Propagation, Bubbling and Once',
-            'content': ''
+            'content': 'event mechnism - capture/once config and event.stopPropagation'
         },
         {
             'title': '26 - Stripe Follow Along Nav',
