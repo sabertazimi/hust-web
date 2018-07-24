@@ -62,7 +62,7 @@
         },
         {
             'title': '16 - Mouse Move Shadow',
-            'content': ''
+            'content': 'textShadow css style and offsetX/offsetWidth/offsetTop HTML element attributes'
         },
         {
             'title': '17 - Sort Without Articles',
