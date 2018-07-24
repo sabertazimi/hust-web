@@ -94,7 +94,7 @@
         },
         {
             'title': '24 - Sticky Nav',
-            'content': ''
+            'content': 'sticky nav bar when scrolling down (with padding-top max-width fixed)'
         },
         {
             'title': '25 - Event Capture, Propagation, Bubbling and Once',
