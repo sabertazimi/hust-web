@@ -67,3 +67,18 @@ h1 {
 .hole.up .mole {
   top:0;
 }
+
+button {
+  border:0;
+  color:white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background:rgba(0,0,0,0.1);
+  padding:1rem;
+  font-family: 'Inconsolata', monospace;
+}
+
+button:hover,
+button:active {
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}

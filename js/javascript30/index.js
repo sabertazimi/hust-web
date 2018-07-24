@@ -118,7 +118,7 @@
         },
         {
             'title': '30 - Whack A Mole',
-            'content': ''
+            'content': 'random api and event.isTrusted attribute'
         }
     ]
     const createCardComponent = (day, title, content) => {
