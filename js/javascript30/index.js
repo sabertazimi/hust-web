@@ -102,7 +102,7 @@
         },
         {
             'title': '26 - Stripe Follow Along Nav',
-            'content': ''
+            'content': 'awesome dropdown nav - seperate dropdown panel resizable (w/h, opacity and translate) (when hovering on different main nav-li'
         },
         {
             'title': '27 - Click and Drag',

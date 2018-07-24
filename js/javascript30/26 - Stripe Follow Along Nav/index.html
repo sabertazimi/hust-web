@@ -5,7 +5,6 @@
   <title>Follow Along Nav</title>
 </head>
 <body>
-  <h2>Cool</h2>
   <nav class="top">
     <div class="dropdownBackground">
       <span class="arrow"></span>
@@ -120,10 +119,10 @@
     padding:20px;
     top:-20px;
     border-radius:2px;
-    transition: all 0.5s;
+    transition: all 0.5;
     transform: translateY(100px);
     will-change: transform;
-    display: none;
+    display: block;
   }
 
   .trigger-enter .dropdown {
@@ -133,8 +132,6 @@
   .trigger-enter-active .dropdown {
     opacity: 1;
   }
-
-
 
   .dropdownBackground {
     width:100px;
@@ -206,8 +203,43 @@
   .button[href*=courses] { background: #ffc600; }
 
 </style>
-
 <script>
+const triggers = document.querySelectorAll('.cool > li');
+const background = document.querySelector('.dropdownBackground');
+const nav = document.querySelector('.top');
+
+const onEnter = function(event) {
+  console.log(event.target);
+  this.classList.add('trigger-enter');
+  setTimeout(() => {
+    if (this.classList.contains('trigger-enter')) {
+      this.classList.add('trigger-enter-active')
+    }
+  }, 150);
+  background.classList.add('open');
+
+  const dropdown = this.querySelector('.dropdown');
+  const dropdownCoords = dropdown.getBoundingClientRect();
+  const navCoords = nav.getBoundingClientRect();
+  const coords = {
+    height: dropdownCoords.height,
+    width: dropdownCoords.width,
+    top: dropdownCoords.top - navCoords.top,
+    left: dropdownCoords.left
+  };
+
+  background.style.width = `${coords.width}px`;
+  background.style.height = `${coords.height}px`;
+  background.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+};
+
+const onLeave = function(event) {
+  this.classList.remove('trigger-enter', 'trigger-enter-active');
+  background.classList.remove('open');
+};
+
+triggers.forEach(trigger => trigger.addEventListener('mouseenter', onEnter));
+triggers.forEach(trigger => trigger.addEventListener('mouseleave', onLeave));
 </script>
 
 </body>
