@@ -66,7 +66,7 @@
         },
         {
             'title': '17 - Sort Without Articles',
-            'content': ''
+            'content': 'sort, map, join and replace'
         },
         {
             'title': '18 - Adding Up Times with Reduce',
