@@ -82,7 +82,7 @@
         },
         {
             'title': '21 - Geolocation',
-            'content': ''
+            'content': 'geolocation api'
         },
         {
             'title': '22 - Follow Along Link Highlighter',
