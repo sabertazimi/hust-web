@@ -70,7 +70,7 @@
         },
         {
             'title': '18 - Adding Up Times with Reduce',
-            'content': ''
+            'content': 'reduce and math api'
         },
         {
             'title': '19 - Webcam Fun',
