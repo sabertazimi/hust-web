@@ -90,7 +90,7 @@
         },
         {
             'title': '23 - Speech Synthesis',
-            'content': ''
+            'content': 'speech synthesis api and select input element api'
         },
         {
             'title': '24 - Sticky Nav',
