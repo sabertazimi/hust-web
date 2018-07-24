@@ -110,7 +110,7 @@
         },
         {
             'title': '28 - Video Speed Controller',
-            'content': ''
+            'content': 'playbackRate and mouse events'
         },
         {
             'title': '29 - Countdown Timer',
