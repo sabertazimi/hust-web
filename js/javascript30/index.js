@@ -86,7 +86,7 @@
         },
         {
             'title': '22 - Follow Along Link Highlighter',
-            'content': ''
+            'content': 'awesome hovering highlight css style with "span.highlight", getBoundingClientRect (with ScrollX/Y fix)'
         },
         {
             'title': '23 - Speech Synthesis',
