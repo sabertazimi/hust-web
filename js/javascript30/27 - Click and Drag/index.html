@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Click and Drag</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="items">
     <div class="item item1">01</div>
@@ -34,8 +36,42 @@
     <div class="item item25">25</div>
   </div>
 
-<script>
-</script>
+  <script>
+    const slider = document.querySelector('.items');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  </body>
+    slider.addEventListener('mousedown', (event) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = event.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', (event) => {
+      isDown = false;
+      slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mouseup', (event) => {
+      isDown = false;
+      slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mousemove', (event) => {
+      if (!isDown) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const currentX = event.pageX - slider.offsetLeft;
+      const walk = currentX - startX;
+      slider.scrollLeft = scrollLeft + walk;
+    });
+  </script>
+
+</body>
+
 </html>

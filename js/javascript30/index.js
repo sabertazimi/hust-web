@@ -106,7 +106,7 @@
         },
         {
             'title': '27 - Click and Drag',
-            'content': ''
+            'content': 'click and drag effect with mousedown/mousemove/mouseup/mouseleave events and pageX/offsetLeft/scrollLeft attributes'
         },
         {
             'title': '28 - Video Speed Controller',
