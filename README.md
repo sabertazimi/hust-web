@@ -7,16 +7,6 @@ A repo for learning demo archives
 [![MIT](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/hust-web/master/LICENSE)
 [![Build Status](https://travis-ci.org/sabertazimi/hust-web.svg?branch=master)](https://travis-ci.org/sabertazimi/hust-web)
 
-## Directory
-
--   blog: nodejs app
--   express: back-end exercise
--   ife: learning demos
--   js: js tiny proj
--   meteor: meteor app
--   react
--   (Deprecated) stayLifeORDeath: tiny flappy-bird-like game
-
 ## License
 
 MIT License [@sabertazimi](https://github.com/sabertazimi)
