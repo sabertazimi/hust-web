@@ -7,6 +7,7 @@ cache:
   - $HOME/.npm
 script:
   - npm install
+  - cd ./css/material-menu-button && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../
   - npm run build
 branches:
   only:
