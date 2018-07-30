@@ -1,0 +1,242 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-family: inherit;
+  transition: all .3s;
+}
+
+*+* {
+  margin-top: 5px;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  background-color: #ededee;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5px;
+  background-color: #3a3942;
+}
+
+.header {
+  position: fixed;
+  top: 5px;
+  left: 0px;
+  z-index: 99;
+  width: 100%;
+  padding: 10px;
+  background-color: #ededee;
+}
+
+.nav__bar {
+  list-style: none;
+}
+
+.nav__logo {
+  float: left;
+}
+
+.nav__list {
+  float: right;
+}
+
+.nav__bar>li::before,
+.nav__bar>li::after {
+  content: "";
+  display: table;
+}
+
+.nav__bar>li::after {
+  clear: both;
+}
+
+.nav__logo {
+  margin-left: 50px;
+}
+
+.nav__list {
+  margin-right: 50px;
+  padding: 15px;
+}
+
+.nav__link,
+.foot__link {
+  text-decoration: none;
+  color: darkorange;
+}
+
+.nav__link:hover,
+.foot__link:hover {
+  color: black;
+}
+
+.main {
+  margin-top: 100px;
+}
+
+.started {
+  margin-bottom: 120px;
+}
+
+.started__input {
+  display: block;
+  width: 20%;
+  margin: 20px auto;
+  padding: 5px;
+}
+
+.started__button,
+.pricing__button {
+  padding: 5px 20px;
+  border: 0;
+  background-color: darkorange;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.started__button:hover,
+.pricing__button:hover {
+  background-color: #ddd;
+  color: darkorange;
+}
+
+.features {
+  max-width: 70%;
+  margin-bottom: 100px;
+}
+
+.features__list {
+  list-style: none;
+}
+
+.features__list figure {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.features__icon {
+  width: 10%;
+  color: darkorange;
+}
+
+.features__desc {
+  display: inline-block;
+  width: 85%;
+  margin-left: 30px;
+  overflow: wrap;
+}
+
+.features__desc h2,
+.features__desc p {
+  text-align: left;
+}
+
+.works {
+  max-width: 80%;
+  margin-bottom: 80px;
+}
+
+.works iframe {
+  width: 560px;
+  max-width: 560px;
+}
+
+.pricing {
+  max-width: 90%;
+  margin-bottom: 40px;
+}
+
+.pricing__card {
+  display: inline-block;
+  margin: 10px 10px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.pricing__card>h3 {
+  padding: 10px 60px;
+  background-color: #ddd;
+}
+
+.pricing__card>h2 {
+  margin: 20px auto;
+}
+
+.pricing__list>li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.pricing__button {
+  margin: 15px auto;
+}
+
+.footer {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #ddd;
+}
+
+.foot__list {
+  list-style: none;
+  margin: 0;
+}
+
+.foot__list > li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer small {
+  margin-right: 10px;
+  color: #444;
+}
+
+@media screen and (max-width: 700px) {
+  .nav__logo,
+  .nav__list {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .features__list figure {
+    text-align: center;
+  }
+
+  .main {
+    margin-top: 170px;
+  }
+
+  .works iframe {
+    width: 300px;
+  }
+
+  .footer {
+    width: 100%;
+  }
+}
