@@ -22,18 +22,70 @@ li,
 a,
 span {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
-ul {
-  list-style: none inside;
+h1 {
+  font-size: 4em;
 }
 
-a {
-  text-decoration: none;
+h2 {
+  font-size: 2em;
+}
+
+.resume {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.resume__section {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-bottom: 1px solid #111;
 }
 
 .resume__title {
   text-transform: capitalize;
+}
+
+.resume__list {
+  list-style: none inside;
+}
+
+.resume__list a {
+  transition: color 0.3s ease;
+  color: darkred;
+  text-decoration: none;
+}
+
+.resume__list a:hover {
+  color: white;
+}
+
+.resume__item {
+  position: relative;
+  padding: 0.5em;
+  transition: all 0.3s ease;
+}
+
+.resume__item:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+.resume__item:hover a {
+  color: white;
+}
+
+.time {
+  position: absolute;
+  display: inline-block;
+  top: 0.5em;
+  right: 0.5em;
 }
