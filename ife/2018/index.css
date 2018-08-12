@@ -37,6 +37,7 @@ a {
 .ife-link {
   display: block;
   width: 80%;
+  padding: 1em;
   transition: color 0.3s, transform 0.3s;
   color: white;
   text-decoration: none;
