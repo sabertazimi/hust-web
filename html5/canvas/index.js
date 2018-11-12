@@ -66,10 +66,10 @@ class ParticleFactory {
 class ParticleSystem {
   constructor(factor = 20) {
     this.factory = new ParticleFactory();
-    this.canvas = document.createElement('canvas');
-    this.context = this.canvas.getContext('2d');
-    this._canvas = document.getElementById('canvas');
-    this.screen = this._canvas.getContext('2d');
+    this.buffer = document.createElement('canvas');
+    this.context = this.buffer.getContext('2d');
+    this.canvas = document.getElementById('canvas');
+    this.screen = this.canvas.getContext('2d');
     this.factor = factor;
 
     this.init();
@@ -83,11 +83,10 @@ class ParticleSystem {
 
   resize() {
     // Size canvas
-    this._canvas.width = window.innerWidth;
-    this._canvas.height = window.innerHeight;
-
     this.canvas.width = window.innerWidth;
     this.canvas.height = window.innerHeight;
+    this.buffer.width = window.innerWidth;
+    this.buffer.height = window.innerHeight;
   }
 
   initStyle() {
@@ -98,14 +97,11 @@ class ParticleSystem {
 
     // Make sure it's on top of other elements
     this.canvas.style.zIndex = '1001';
-
-    // Make sure other elements under it are clickable
-    this.canvas.style.pointerEvents = 'none';
   }
 
   handleClick() {
     // bind click event to screen canvas
-    this._canvas.addEventListener('click', (event) => {
+    this.canvas.addEventListener('click', (event) => {
       const x = event.clientX;
       const y = event.clientY;
       let count = this.factor;
@@ -139,13 +135,13 @@ class ParticleSystem {
     });
 
     // render to screen canvas
-    this.screen.drawImage(this.canvas, 0, 0);
+    this.screen.drawImage(this.buffer, 0, 0);
   }
 
   clear() {
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    this.screen.clearRect(0, 0, this._canvas.width, this.canvas.height);
-    // this.screen.drawImage(this.canvas, 0, 0);
+    this.context.clearRect(0, 0, this.buffer.width, this.buffer.height);
+    this.screen.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    // this.screen.drawImage(this.buffer, 0, 0);
   }
 }
 
