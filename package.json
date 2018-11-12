@@ -4,7 +4,7 @@
   "description": "hust web",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p ./build && cp -fr ./css/* ./js/* ./ife ./fcc ./spec ./build"
+    "build": "mkdir -p ./build && cp -fr html5/* ./css/* ./js/* ./ife ./fcc ./spec ./build"
   },
   "repository": {
     "type": "git",
