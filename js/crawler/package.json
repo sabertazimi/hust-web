@@ -1,0 +1,29 @@
+{
+  "name": "crawler",
+  "version": "1.0.0",
+  "description": "A simple Node.js crawler based on Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/hust-web.git"
+  },
+  "keywords": [
+    "node",
+    "puppeteer",
+    "chrome",
+    "headless",
+    "crawler"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabertazimi/hust-web/issues"
+  },
+  "homepage": "https://github.com/sabertazimi/hust-web#readme",
+  "dependencies": {
+    "puppeteer-core": "^1.10.0"
+  }
+}
