@@ -1,0 +1,23 @@
+{
+  "name": "koa",
+  "version": "1.0.0",
+  "description": "koa mock",
+  "main": "src/application.js",
+  "scripts": {
+    "start": "node src/application.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/hust-web.git"
+  },
+  "keywords": [
+    "nodejs",
+    "koa"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabertazimi/hust-web/issues"
+  },
+  "homepage": "https://github.com/sabertazimi/hust-web#readme"
+}
