@@ -9,10 +9,28 @@ const responseProxy = require('./response');
 class Koa extends EventEmitter {
   constructor() {
     super();
+    this.middlewares = [];
   }
 
   use(fn) {
-    this.fn = fn;
+    this.middlewares.push(fn);
+  }
+  
+  compose(middlewares, ctx) {
+    const dispatch = (index) => {
+      if (index === middlewares.length) {
+        return;
+      }
+
+      // `next` function: call next middleware recursively
+      const next = () => dispatch(index + 1);
+
+      // call current middleware
+      const middleware = middlewares[index];
+      middleware(ctx, next);
+    };
+
+    dispatch(0);
   }
 
   createContext(req, res) {
@@ -41,7 +59,7 @@ class Koa extends EventEmitter {
     const ctx = this.createContext(req, res);
 
     // middleware (open api for Koa users)
-    this.fn(ctx);
+    this.compose(this.middlewares, ctx);
 
     if (typeof ctx.body === 'object' && ctx.body !== null) {
       res.setHeader('Content-Type', 'application/json;charset=utf8');
