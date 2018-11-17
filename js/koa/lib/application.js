@@ -1,5 +1,7 @@
 const http = require('http');
+const Stream = require('stream');
 const EventEmitter = require('events');
+
 const contextProxy = require('./context');
 const requestProxy = require('./request');
 const responseProxy = require('./response');
@@ -32,9 +34,26 @@ class Koa extends EventEmitter {
   }
 
   handleRequest(req, res) {
+    // when ctx.body dosen't change, statusCode contains '404'
+    res.statusCode = 404;
+
+    // create context proxy for `req` and `res` operations
     const ctx = this.createContext(req, res);
-    this.fn(ctx); // api to Koa users
-    res.end(ctx.body);
+
+    // middleware (open api for Koa users)
+    this.fn(ctx);
+
+    if (typeof ctx.body === 'object' && ctx.body !== null) {
+      res.setHeader('Content-Type', 'application/json;charset=utf8');
+      res.end(JSON.stringify(ctx.body));
+    } else if (ctx.body instanceof Stream) {
+      ctx.body.pipe(res);
+    } else if (typeof ctx.body === 'string' || Buffer.isBuffer(ctx.body)) {
+      res.setHeader('Content-Type', 'text/htmlcharset=utf8');
+      res.end(ctx.body);
+    } else {
+      res.end('Not Found');
+    }
   }
 
   listen(...args) {
