@@ -15,11 +15,11 @@ class Koa extends EventEmitter {
   use(fn) {
     this.middlewares.push(fn);
   }
-  
+
   compose(middlewares, ctx) {
     const dispatch = (index) => {
       if (index === middlewares.length) {
-        return;
+        return Promise.resolve();
       }
 
       // `next` function: call next middleware recursively
@@ -27,10 +27,10 @@ class Koa extends EventEmitter {
 
       // call current middleware
       const middleware = middlewares[index];
-      middleware(ctx, next);
+      return Promise.resolve(middleware(ctx, next));
     };
 
-    dispatch(0);
+    return dispatch(0);
   }
 
   createContext(req, res) {
@@ -59,19 +59,25 @@ class Koa extends EventEmitter {
     const ctx = this.createContext(req, res);
 
     // middleware (open api for Koa users)
-    this.compose(this.middlewares, ctx);
+    const fn = this.compose(this.middlewares, ctx);
 
-    if (typeof ctx.body === 'object' && ctx.body !== null) {
-      res.setHeader('Content-Type', 'application/json;charset=utf8');
-      res.end(JSON.stringify(ctx.body));
-    } else if (ctx.body instanceof Stream) {
-      ctx.body.pipe(res);
-    } else if (typeof ctx.body === 'string' || Buffer.isBuffer(ctx.body)) {
-      res.setHeader('Content-Type', 'text/htmlcharset=utf8');
-      res.end(ctx.body);
-    } else {
-      res.end('Not Found');
-    }
+    fn.then(() => {
+      if (typeof ctx.body === 'object' && ctx.body !== null) {
+        res.setHeader('Content-Type', 'application/json;charset=utf8');
+        res.end(JSON.stringify(ctx.body));
+      } else if (ctx.body instanceof Stream) {
+        ctx.body.pipe(res);
+      } else if (typeof ctx.body === 'string' || Buffer.isBuffer(ctx.body)) {
+        res.setHeader('Content-Type', 'text/htmlcharset=utf8');
+        res.end(ctx.body);
+      } else {
+        res.end('Not Found');
+      }
+    }).catch((err) => {
+      this.emit('error', err);
+      res.statusCode = 500;
+      res.end('Internal Server Error');
+    });
   }
 
   listen(...args) {

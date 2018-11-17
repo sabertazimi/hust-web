@@ -1,22 +1,26 @@
 const Koa = require('./lib');
 const app = new Koa();
 
-app.use((ctx, next) => {
-  ctx.body = '1';
-  next()
-  ctx.body += '2';
+app.use(async (ctx, next) => {
+  console.log(1);
+  await next();
+  console.log(2);
 });
 
-app.use((ctx, next) => {
-  ctx.body += '3';
-  next()
-  ctx.body += '4';
-});
+app.use(async (ctx, next) => {
+  console.log(3);
 
-app.use((ctx, next) => {
-  ctx.body += '5';
-  next();
-  ctx.body += '6';
+  const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log('3.5');
+      resolve();
+    }, 1000);
+  });
+
+  await p.then();
+  await next();
+  console.log(4);
+  ctx.body = 'Hello Koa';
 });
 
 app.listen(2323, () => {
