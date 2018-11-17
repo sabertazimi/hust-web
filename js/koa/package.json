@@ -2,9 +2,9 @@
   "name": "koa",
   "version": "1.0.0",
   "description": "koa mock",
-  "main": "src/application.js",
+  "main": "lib/application.js",
   "scripts": {
-    "start": "node src/application.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/sabertazimi/hust-web/issues"
   },
-  "homepage": "https://github.com/sabertazimi/hust-web#readme"
+  "homepage": "https://github.com/sabertazimi/hust-web#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
 }
