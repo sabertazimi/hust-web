@@ -1,24 +1,32 @@
 class ExplodingParticle {
-  constructor(x = 0, y = 0, colorData = [156, 39, 176]) {
+  constructor({
+    x = 0,
+    y = 0,
+    color = [156, 39, 176],
+    duration = 1000,
+    speed,
+    radius,
+    life,
+  }) {
     this.startX = x;
     this.startY = y;
-    this.rgbArray = colorData;
+    this.color = color;
 
-    // Set the speed for particle
-    this.speed = {
+    // Speed
+    this. speed = speed || {
       x: -5 + Math.random() * 10,
-      y: -5 + Math.random() * 10
+      y: -5 + Math.random() * 10,
     };
 
     // Size particle
-    this.radius = 5 + Math.random() * 5;
+    this.radius = radius || 5 + Math.random() * 5;
 
     // Set how long particle to animate for X ms
     this.startTime = Date.now();
-    this.animationDuration = 1000;
+    this.animationDuration = duration;
 
     // Set a max time to live for particle
-    this.life = 30 + Math.random() * 10;
+    this.life = life || 30 + Math.random() * 10;
     this.remainingLife = this.life;
   }
 
@@ -30,7 +38,7 @@ class ExplodingParticle {
       // Draw a circle at the current location
       ctx.beginPath();
       ctx.arc(this.startX, this.startY, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${this.rgbArray[0]},${this.rgbArray[1]},${this.rgbArray[2]},1)`;
+      ctx.fillStyle = `rgba(${this.color[0]},${this.color[1]},${this.color[2]},1)`;
       ctx.fill();
 
       // Update the particle's location and life
@@ -57,8 +65,8 @@ class ParticleFactory {
     }
   }
 
-  emit(x = 0, y = 0, colorData = [156, 39, 176]) {
-    const particle = new ExplodingParticle(x, y, colorData);
+  emit(particleOptions = {}) {
+    const particle = new ExplodingParticle(particleOptions);
     this.particles.push(particle);
   }
 }
@@ -104,17 +112,23 @@ class ParticleSystem {
     this.screenCanvas.addEventListener('click', (event) => {
       const x = event.clientX;
       const y = event.clientY;
-      let count = this.factor;
+      const getRandomInt = (min, max) => () => (Math.floor(Math.random() * (max - min)) + min);
+      const getColor = getRandomInt(0, 255);
 
-      while (count) {
-        particleSystem.emit(x, y);
+      for (let count = this.factor; count > 0; --count) {
+        const color = [getColor(), getColor(), getColor()];
+        const speed = {
+          x: -5 + Math.random() * 10,
+          y: -5 + Math.random() * 10,
+        };
+        particleSystem.emit({ x, y, color, speed });
         count--;
       }
     });
   }
 
-  emit(x = 0, y = 0, colorData = [156, 39, 176]) {
-    this.factory.emit(x, y, colorData);
+  emit(x = 0, y = 0, color = [156, 39, 176]) {
+    this.factory.emit(x, y, color);
   }
 
   draw() {
