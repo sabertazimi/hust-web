@@ -1,17 +1,23 @@
 language: node_js
+
 node_js:
   - "stable"
+
 cache:
   directories:
   - node_modules
   - $HOME/.npm
+
 script:
   - npm install
   - cd ./css/material-menu-button && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../
+  - cd ./ife/2018/basic/mis && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../../
   - npm run build
+
 branches:
   only:
     - master
+
 deploy:
   provider: pages
   skip_cleanup: true
