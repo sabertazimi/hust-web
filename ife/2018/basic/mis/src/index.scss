@@ -49,6 +49,13 @@ body {
 }
 
 .container {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 30px auto;
+}
+
+.grid-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -67,6 +74,7 @@ body {
     justify-content: center;
 
     width: 100%;
+    min-height: 30px;
   }
 
   .col {
@@ -84,30 +92,34 @@ body {
   }
 }
 
-.container + .container {
+.grid-container + .grid-container {
   margin-top: 0.5em;
 }
 
-table {
-  padding: 1em;
+.table {
   border: 0;
   border-collapse: collapse;
 
+
   tr:nth-child(odd) {
-    background-color: $color-gray-1; 
+    padding: 1em;
+    background-color: $color-gray-2; 
   }
 
   tr:nth-child(even) {
-    background-color: $color-gray-3; 
+    padding: 1em;
+    background-color: $color-gray-0; 
   }
 
   th {
+    padding: 1em;
     border: 0;
     background-color: $color-primary;
     color: $color-gray-0;
   }
 
   td {
+    padding: 1em;
     border: 0;
     white-space: pre-wrap;
   }

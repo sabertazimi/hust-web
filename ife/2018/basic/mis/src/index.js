@@ -1,5 +1,6 @@
 import {
   $regionFilter,
+  $productFilter,
   $table,
 } from './dom';
 
@@ -7,6 +8,7 @@ import data from './data';
 
 import {
   regionFilter,
+  productFilter,
 } from './reducer';
 
 import {
@@ -15,12 +17,13 @@ import {
 
 import './index.scss';
 
-const renderTableWithRegionFiler = () => {
-  const filteredData = regionFilter($regionFilter, data);
+const renderTableWithFilter = () => {
+  const filteredData = productFilter($productFilter, regionFilter($regionFilter, data));
   const renderedTable = renderTable(filteredData);
   $table.innerHTML = renderedTable;
 };
 
-$regionFilter.addEventListener('change', renderTableWithRegionFiler);
+$regionFilter.addEventListener('change', renderTableWithFilter);
+$productFilter.addEventListener('change', renderTableWithFilter);
 
-renderTableWithRegionFiler();
+renderTableWithFilter();
