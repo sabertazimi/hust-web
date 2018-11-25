@@ -29,7 +29,7 @@ const generateCheckBoxes = (schema) => {
   `);
 };
 
-const handleCheckBoxes = ($container, filterField, event) => {
+const handleCheckBoxes = ($container, field, event) => {
   const [allCheckBox, ...checkBoxes] = Array.from($container.querySelectorAll('input[type="checkbox"]'));
 
   if (event.target.value.includes('all')) {
@@ -41,7 +41,7 @@ const handleCheckBoxes = ($container, filterField, event) => {
       /* eslint-enable */
     });
 
-    dispatch(createAction(checked ? SHOW_ALL : FILTER_ALL));
+    dispatch(createAction(checked ? SHOW_ALL : FILTER_ALL, field));
   } else {
     const filters = [];
 
@@ -51,15 +51,17 @@ const handleCheckBoxes = ($container, filterField, event) => {
       }
     });
 
-    dispatch(createAction(FILTER_DATA, filterField, filters));
+    allCheckBox.checked = (checkBoxes.every(checkBox => checkBox.checked));
+
+    dispatch(createAction(FILTER_DATA, field, filters));
   }
 };
 
-const renderCheckBoxes = ($container, filterField, schema) => {
+const renderCheckBoxes = ($container, field, schema) => {
   /* eslint-disable */
   $container.innerHTML = generateCheckBoxes(schema);
   /* eslint-enable */
-  $container.addEventListener('change', event => handleCheckBoxes($container, filterField, event));
+  $container.addEventListener('change', event => handleCheckBoxes($container, field, event));
 };
 
 export default renderCheckBoxes;

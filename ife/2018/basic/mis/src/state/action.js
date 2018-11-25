@@ -10,12 +10,15 @@ const createAction = (type, ...args) => {
     case FILTER_ALL:
       return {
         type,
+        payload: {
+          field: args[0],
+        },
       };
     case FILTER_DATA:
       return {
         type,
         payload: {
-          filterField: args[0],
+          field: args[0],
           filters: args[1],
         },
       };

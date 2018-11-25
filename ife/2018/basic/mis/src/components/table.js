@@ -17,6 +17,9 @@ const generateRow = ({
   region,
   sales,
 }) => {
+  // const { mixedFilters } = getState();
+  // console.log(mixedFilters);
+
   const productHTML = `<td>${product}</td>`;
   const regionHTML = `<td>${region}</td>`;
   const salesHTML = sales.map(sale => `<td class="right">${sale.toString(10).padStart(3)}</td>`).join('');
