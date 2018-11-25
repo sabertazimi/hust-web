@@ -13,53 +13,79 @@ import data from './data';
 
 import {
   renderTable,
-  renderCheckBox,
+  renderCheckBoxes,
 } from './render';
 
 import './index.scss';
 
-$regionFilter.innerHTML = renderCheckBox($regionFilter, {
+$regionFilter.innerHTML = renderCheckBoxes({
   label: 'Region',
   data: [
     {
       value: 'north',
-      text: 'north',
+      text: 'North',
     },
     {
       value: 'south',
-      text: 'south',
+      text: 'South',
     },
     {
       value: 'east',
-      text: 'east',
+      text: 'East',
     },
   ],
 });
 
-$productFilter.innerHTML = renderCheckBox($productFilter, {
+$productFilter.innerHTML = renderCheckBoxes({
   label: 'Product',
   data: [
     {
       value: 'phone',
-      text: 'phone',
+      text: 'Phone',
     },
     {
       value: 'laptop',
-      text: 'laptop',
+      text: 'Laptop',
     },
     {
       value: 'smart speaker',
-      text: 'smart speaker',
+      text: 'Smart Speaker',
     },
   ],
 });
 
-const renderTableWithFilter = () => {
-  const renderedTable = renderTable(data);
-  $table.innerHTML = renderedTable;
+const handleCheckBoxes = ($container, event) => {
+  const checkBoxes = Array.from($container.querySelectorAll('input[type="checkbox"]'));
+  const el = event.target;
+
+  if (el.value.includes('all')) {
+    // reverse manipulation due to event bubble
+    if (el.checked) {
+      checkBoxes.forEach((checkbox) => {
+        /* eslint-disable */
+        if (!checkbox.checked) checkbox.checked = true;
+        /* eslint-enable */
+      });
+
+      const renderedTable = renderTable(data);
+      $table.innerHTML = renderedTable;
+    } else {
+      checkBoxes.forEach((checkbox) => {
+        /* eslint-disable */
+        if (checkbox.checked) checkbox.checked = false;
+        /* eslint-enable */
+      });
+
+      const renderedTable = renderTable([]);
+      $table.innerHTML = renderedTable;
+    }
+  } else {
+    console.log(el);
+  }
 };
 
-$regionFilter.addEventListener('change', renderTableWithFilter);
-$productFilter.addEventListener('change', renderTableWithFilter);
+$regionFilter.addEventListener('change', event => handleCheckBoxes($regionFilter, event));
+$productFilter.addEventListener('change', event => handleCheckBoxes($productFilter, event));
 
-renderTableWithFilter();
+const renderedTable = renderTable([]);
+$table.innerHTML = renderedTable;
