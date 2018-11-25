@@ -19,7 +19,7 @@ const createAction = (type, ...args) => {
         type,
         payload: {
           field: args[0],
-          filters: args[1],
+          filter: args[1],
         },
       };
     default:

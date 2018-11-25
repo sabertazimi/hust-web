@@ -13,15 +13,15 @@ const initialFilters = {
 
 const initialState = {
   type: 'all',
-  mixedFilters: { ...initialFilters },
+  filters: { ...initialFilters },
   data: sourceData,
 };
 
-const getDataWithFilters = (data, mixedFilters) => (
+const getDataWithFilters = (data, filters) => (
   data.filter(item => (
-    Object.keys(mixedFilters).map(key => (
-      mixedFilters[key].some(filter => item[key] === filter)
-    )).every(Boolean)
+    Object.keys(filters)
+      .map(key => filters[key].includes(item[key]))
+      .every(Boolean)
   ))
 );
 
@@ -29,37 +29,37 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SHOW_ALL: {
       const { field } = action.payload;
-      const { mixedFilters } = state;
-      mixedFilters[field] = initialFilters[field];
-      const data = getDataWithFilters(sourceData, mixedFilters);
+      const { filters } = state;
+      filters[field] = initialFilters[field];
+      const data = getDataWithFilters(sourceData, filters);
 
       return {
         ...state,
-        mixedFilters,
+        filters,
         data,
       };
     }
     case FILTER_ALL: {
       const { field } = action.payload;
-      const { mixedFilters } = state;
-      mixedFilters[field] = [];
-      const data = getDataWithFilters(sourceData, mixedFilters);
+      const { filters } = state;
+      filters[field] = [];
+      const data = getDataWithFilters(sourceData, filters);
 
       return {
         ...state,
-        mixedFilters,
+        filters,
         data,
       };
     }
     case FILTER_DATA: {
-      const { field, filters } = action.payload;
-      const { mixedFilters } = state;
-      mixedFilters[field] = filters;
-      const data = getDataWithFilters(sourceData, mixedFilters);
+      const { field, filter } = action.payload;
+      const { filters } = state;
+      filters[field] = filter;
+      const data = getDataWithFilters(sourceData, filters);
 
       return {
         ...state,
-        mixedFilters,
+        filters,
         data,
       };
     }

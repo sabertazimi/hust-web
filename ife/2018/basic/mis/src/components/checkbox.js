@@ -43,17 +43,17 @@ const handleCheckBoxes = ($container, field, event) => {
 
     dispatch(createAction(checked ? SHOW_ALL : FILTER_ALL, field));
   } else {
-    const filters = [];
+    const filter = [];
 
     checkBoxes.forEach((checkbox) => {
       if (checkbox.checked) {
-        filters.push(checkbox.value);
+        filter.push(checkbox.value);
       }
     });
 
     allCheckBox.checked = (checkBoxes.every(checkBox => checkBox.checked));
 
-    dispatch(createAction(FILTER_DATA, field, filters));
+    dispatch(createAction(FILTER_DATA, field, filter));
   }
 };
 
