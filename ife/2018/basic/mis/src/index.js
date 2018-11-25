@@ -4,21 +4,23 @@ import {
   $table,
 } from './dom';
 
-import data from './data';
-
-// import {
-//   regionFilter,
-//   productFilter,
-// } from './reducer';
+import {
+  generateTable,
+  generateCheckBoxes,
+} from './render';
 
 import {
-  renderTable,
-  renderCheckBoxes,
-} from './render';
+  SHOW_ALL,
+  FILTER_ALL,
+  FILTER_DATA,
+} from './constants';
+
+import createAction from './action';
+import store from './store';
 
 import './index.scss';
 
-$regionFilter.innerHTML = renderCheckBoxes({
+$regionFilter.innerHTML = generateCheckBoxes({
   label: 'Region',
   data: [
     {
@@ -36,7 +38,7 @@ $regionFilter.innerHTML = renderCheckBoxes({
   ],
 });
 
-$productFilter.innerHTML = renderCheckBoxes({
+$productFilter.innerHTML = generateCheckBoxes({
   label: 'Product',
   data: [
     {
@@ -54,38 +56,57 @@ $productFilter.innerHTML = renderCheckBoxes({
   ],
 });
 
-const handleCheckBoxes = ($container, event) => {
-  const checkBoxes = Array.from($container.querySelectorAll('input[type="checkbox"]'));
-  const el = event.target;
+const {
+  getState,
+  dispatch,
+  subscribe,
+} = store;
 
-  if (el.value.includes('all')) {
-    // reverse manipulation due to event bubble
-    if (el.checked) {
+// const isAllChecked = (checkBoxes) => {
+
+// };
+
+const handleCheckBoxes = ($container, filterField, event) => {
+  const [allCheckBox, ...checkBoxes] = Array.from($container.querySelectorAll('input[type="checkbox"]'));
+
+  if (event.target.value.includes('all')) {
+    if (allCheckBox.checked) {
       checkBoxes.forEach((checkbox) => {
         /* eslint-disable */
-        if (!checkbox.checked) checkbox.checked = true;
+        checkbox.checked = true;
         /* eslint-enable */
       });
 
-      const renderedTable = renderTable(data);
-      $table.innerHTML = renderedTable;
+      dispatch(createAction(SHOW_ALL));
     } else {
       checkBoxes.forEach((checkbox) => {
         /* eslint-disable */
-        if (checkbox.checked) checkbox.checked = false;
+        checkbox.checked = false;
         /* eslint-enable */
       });
 
-      const renderedTable = renderTable([]);
-      $table.innerHTML = renderedTable;
+      dispatch(createAction(FILTER_ALL));
     }
   } else {
-    console.log(el);
+    const filters = [];
+
+    checkBoxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        filters.push(checkbox.value);
+      }
+    });
+
+    dispatch(createAction(FILTER_DATA, filterField, filters));
   }
 };
 
-$regionFilter.addEventListener('change', event => handleCheckBoxes($regionFilter, event));
-$productFilter.addEventListener('change', event => handleCheckBoxes($productFilter, event));
+$regionFilter.addEventListener('change', event => handleCheckBoxes($regionFilter, 'region', event));
+$productFilter.addEventListener('change', event => handleCheckBoxes($productFilter, 'product', event));
 
-const renderedTable = renderTable([]);
-$table.innerHTML = renderedTable;
+subscribe(() => {
+  const generatedTable = generateTable(getState().data);
+  $table.innerHTML = generatedTable;
+});
+
+const generatedTable = generateTable(getState().data);
+$table.innerHTML = generatedTable;

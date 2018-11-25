@@ -1,4 +1,4 @@
-const renderHeader = (headers) => {
+const generateHeader = (headers) => {
   const headersHTML = headers.map(header => `<th>${header}</th>`).join('');
 
   return (`
@@ -8,7 +8,7 @@ const renderHeader = (headers) => {
   `);
 };
 
-const renderRow = ({
+const generateRow = ({
   product,
   region,
   sales,
@@ -26,10 +26,10 @@ const renderRow = ({
   `);
 };
 
-const renderTable = (data) => {
+const generateTable = (data) => {
   const months = [...Array.from(Array(12).keys())].map(number => (number + 1));
-  const headersHTML = renderHeader(['product', 'region', ...months]);
-  const bodyHTML = data.map(item => renderRow(item)).join('');
+  const headersHTML = generateHeader(['product', 'region', ...months]);
+  const bodyHTML = data.map(item => generateRow(item)).join('');
 
   return (`
     ${headersHTML}
@@ -37,16 +37,16 @@ const renderTable = (data) => {
   `);
 };
 
-const renderCheckBoxes = (schema) => {
+const generateCheckBoxes = (schema) => {
   const { label, data } = schema;
 
   const labelHTML = `${label}: `;
   const checkAllBoxHTML = (`
-    <input type="checkbox" id="${label}-all" name="${label}" value="all">
+    <input type="checkbox" id="${label}-all" name="${label}" value="all" checked>
     <label for="${label}-all">All</label>
   `);
   const checkBoxesHTML = data.map(({ value, text }) => (`
-    <input type="checkbox" id="${label}-${value}" name="${label}" value="${value}">
+    <input type="checkbox" id="${label}-${value}" name="${label}" value="${value}" checked>
     <label for="${label}-${value}">${text}</label>
   `)).join('');
 
@@ -58,6 +58,6 @@ const renderCheckBoxes = (schema) => {
 };
 
 export {
-  renderTable,
-  renderCheckBoxes,
+  generateTable,
+  generateCheckBoxes,
 };
