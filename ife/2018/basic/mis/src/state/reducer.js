@@ -4,7 +4,7 @@ import {
   FILTER_DATA,
 } from './constants';
 
-import sourceData from './data';
+import sourceData from '../data';
 
 const initialState = {
   filterField: 'all',

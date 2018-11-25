@@ -1,3 +1,7 @@
+import store from '../state/store';
+
+const { getState } = store;
+
 const generateHeader = (headers) => {
   const headersHTML = headers.map(header => `<th>${header}</th>`).join('');
 
@@ -37,27 +41,11 @@ const generateTable = (data) => {
   `);
 };
 
-const generateCheckBoxes = (schema) => {
-  const { label, data } = schema;
-
-  const labelHTML = `${label}: `;
-  const checkAllBoxHTML = (`
-    <input type="checkbox" id="${label}-all" name="${label}" value="all" checked>
-    <label for="${label}-all">All</label>
-  `);
-  const checkBoxesHTML = data.map(({ value, text }) => (`
-    <input type="checkbox" id="${label}-${value}" name="${label}" value="${value}" checked>
-    <label for="${label}-${value}">${text}</label>
-  `)).join('');
-
-  return (`
-    ${labelHTML}
-    ${checkAllBoxHTML}
-    ${checkBoxesHTML}
-  `);
+const renderTable = ($table) => {
+  const generatedTable = generateTable(getState().data);
+  /* eslint-disable */
+  $table.innerHTML = generatedTable;
+  /* eslint-enable */
 };
 
-export {
-  generateTable,
-  generateCheckBoxes,
-};
+export default renderTable;

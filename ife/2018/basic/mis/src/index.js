@@ -1,26 +1,19 @@
 import {
+  renderCheckBoxes,
+  renderTable,
+} from './components';
+
+import {
   $regionFilter,
   $productFilter,
   $table,
-} from './dom';
+} from './containers';
 
-import {
-  generateTable,
-  generateCheckBoxes,
-} from './render';
-
-import {
-  SHOW_ALL,
-  FILTER_ALL,
-  FILTER_DATA,
-} from './constants';
-
-import createAction from './action';
-import store from './store';
+import store from './state/store';
 
 import './index.scss';
 
-$regionFilter.innerHTML = generateCheckBoxes({
+renderCheckBoxes($regionFilter, 'region', {
   label: 'Region',
   data: [
     {
@@ -38,7 +31,7 @@ $regionFilter.innerHTML = generateCheckBoxes({
   ],
 });
 
-$productFilter.innerHTML = generateCheckBoxes({
+renderCheckBoxes($productFilter, 'product', {
   label: 'Product',
   data: [
     {
@@ -56,57 +49,10 @@ $productFilter.innerHTML = generateCheckBoxes({
   ],
 });
 
-const {
-  getState,
-  dispatch,
-  subscribe,
-} = store;
+renderTable($table);
 
-// const isAllChecked = (checkBoxes) => {
-
-// };
-
-const handleCheckBoxes = ($container, filterField, event) => {
-  const [allCheckBox, ...checkBoxes] = Array.from($container.querySelectorAll('input[type="checkbox"]'));
-
-  if (event.target.value.includes('all')) {
-    if (allCheckBox.checked) {
-      checkBoxes.forEach((checkbox) => {
-        /* eslint-disable */
-        checkbox.checked = true;
-        /* eslint-enable */
-      });
-
-      dispatch(createAction(SHOW_ALL));
-    } else {
-      checkBoxes.forEach((checkbox) => {
-        /* eslint-disable */
-        checkbox.checked = false;
-        /* eslint-enable */
-      });
-
-      dispatch(createAction(FILTER_ALL));
-    }
-  } else {
-    const filters = [];
-
-    checkBoxes.forEach((checkbox) => {
-      if (checkbox.checked) {
-        filters.push(checkbox.value);
-      }
-    });
-
-    dispatch(createAction(FILTER_DATA, filterField, filters));
-  }
-};
-
-$regionFilter.addEventListener('change', event => handleCheckBoxes($regionFilter, 'region', event));
-$productFilter.addEventListener('change', event => handleCheckBoxes($productFilter, 'product', event));
+const { subscribe } = store;
 
 subscribe(() => {
-  const generatedTable = generateTable(getState().data);
-  $table.innerHTML = generatedTable;
+  renderTable($table);
 });
-
-const generatedTable = generateTable(getState().data);
-$table.innerHTML = generatedTable;
