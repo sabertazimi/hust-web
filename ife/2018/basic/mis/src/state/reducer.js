@@ -13,7 +13,7 @@ const initialFilters = {
 
 const initialState = {
   type: 'all',
-  mixedFilters: {},
+  mixedFilters: { ...initialFilters },
   data: sourceData,
 };
 
