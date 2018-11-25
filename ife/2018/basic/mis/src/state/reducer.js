@@ -54,7 +54,7 @@ const reducer = (state = initialState, action) => {
     case FILTER_DATA: {
       const { field, filter } = action.payload;
       const { filters } = state;
-      filters[field] = filter;
+      filters[field] = [...filter];
       const data = getDataWithFilters(sourceData, filters);
 
       return {

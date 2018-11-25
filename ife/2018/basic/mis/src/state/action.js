@@ -14,14 +14,17 @@ const createAction = (type, ...args) => {
           field: args[0],
         },
       };
-    case FILTER_DATA:
+    case FILTER_DATA: {
+      const [field, filter] = args;
+
       return {
         type,
         payload: {
-          field: args[0],
-          filter: args[1],
+          field,
+          filter,
         },
       };
+    }
     default:
       return {
         type: undefined,
