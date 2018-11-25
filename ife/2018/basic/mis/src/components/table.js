@@ -19,7 +19,7 @@ const generateRow = ({
 }, rowspan = 1) => {
   const productHTML = (rowspan === 0) ? '' : `<td rowspan="${rowspan}">${product}</td>`;
   const regionHTML = `<td>${region}</td>`;
-  const salesHTML = sales.map(sale => `<td class="right">${sale.toString(10).padStart(3)}</td>`).join('');
+  const salesHTML = sales.map(sale => `<td contenteditable class="right">${sale.toString(10).padStart(3)}</td>`).join('');
 
   return (`
     <tr>
@@ -59,9 +59,8 @@ const generateTable = (data) => {
 };
 
 const renderTable = ($table) => {
-  const generatedTable = generateTable(getState().data);
   /* eslint-disable */
-  $table.innerHTML = generatedTable;
+  $table.innerHTML = generateTable(getState().data);
   /* eslint-enable */
 };
 
