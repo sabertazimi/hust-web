@@ -37,8 +37,38 @@ const renderTable = (data) => {
   `);
 };
 
+const renderCheckBox = ($container, schema) => {
+  const { label, data } = schema;
+
+  const labelHTML = `${label}: `;
+  const checkAllBoxHTML = (`
+    <input type="checkbox" id="${label}-all" name="${label}" value="all">
+    <label for="${label}-all">所有</label>
+  `);
+  const checkboxesHTML = data.map(({ value, text }) => (`
+    <input type="checkbox" id="${label}-${value}" name="${label}" value="${value}">
+    <label for="${label}-${value}">${text}</label>
+  `)).join('');
+
+  $container.addEventListener('change', (event) => {
+    const el = event.target;
+
+    if (el.value.includes('all')) {
+      console.log('all');
+      console.log(el);
+    } else {
+      console.log(el);
+    }
+  });
+
+  return (`
+    ${labelHTML}
+    ${checkAllBoxHTML}
+    ${checkboxesHTML}
+  `);
+};
+
 export {
-  renderHeader,
-  renderRow,
   renderTable,
+  renderCheckBox,
 };
