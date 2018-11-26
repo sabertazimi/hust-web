@@ -26,7 +26,7 @@ const createStore = (_reducer) => {
       return () => {
         const index = subscribers.indexOf(handler);
 
-        if (index > 0) {
+        if (index !== -1) {
           subscribers.splice(index, 1);
         }
       };
