@@ -1,7 +1,9 @@
-import Restaurant from './restaurant';
-import Cook from './cook';
+import {
+  Restaurant,
+  Cook,
+} from '../components';
 
-const Test = ($log) => {
+const test = ($log) => {
   const ifeRestaurant = new Restaurant({
     cash: 1000000,
     seats: 20,
@@ -17,4 +19,4 @@ const Test = ($log) => {
   $log(ifeRestaurant.staffs);
 };
 
-export default Test;
+export default test;

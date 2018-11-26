@@ -1,3 +1,3 @@
-# boilerplate
+# OOP
 
-Minimal web boilerplate
+IFE 2018 OOP Project
