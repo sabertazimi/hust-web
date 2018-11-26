@@ -1,10 +1,35 @@
+import {
+  STAFF_UNEMPLOYED,
+} from './constants';
+
 export default class Staff {
   constructor(name = '', salary = 0) {
+    this.id = STAFF_UNEMPLOYED;
     this.name = name;
     this.salary = salary;
   }
 
-  work() {
-    console.log(`${this.name} working ...`);
+  setID(id = STAFF_UNEMPLOYED) {
+    this.id = id;
+  }
+
+  getJob(id) {
+    this.setID(id);
+  }
+
+  loseJob() {
+    this.setID(STAFF_UNEMPLOYED);
+  }
+
+  isEmployed() {
+    return !this.isUnemployed();
+  }
+
+  isUnemployed() {
+    return this.id === STAFF_UNEMPLOYED;
+  }
+
+  work(...args) {
+    console.log(`${this.name} working with ${args}`);
   }
 }

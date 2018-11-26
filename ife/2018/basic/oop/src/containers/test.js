@@ -14,9 +14,11 @@ const test = ($log) => {
 
   ifeRestaurant.hire(newCook);
   $log(ifeRestaurant.staffs);
+  $log(newCook);
 
   ifeRestaurant.fire(newCook);
   $log(ifeRestaurant.staffs);
+  $log(newCook);
 };
 
 export default test;

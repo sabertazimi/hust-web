@@ -1,3 +1,5 @@
+let STAFF_ID = 0;
+
 export default class Restaurant {
   constructor({
     cash = 0,
@@ -10,7 +12,10 @@ export default class Restaurant {
   }
 
   hire(staff) {
-    if (this.staffs.indexOf(staff) === -1) {
+    if (this.staffs.indexOf(staff) === -1
+    && staff.isUnemployed()) {
+      staff.getJob(STAFF_ID);
+      STAFF_ID += 1;
       this.staffs.push(staff);
     }
   }
@@ -19,6 +24,7 @@ export default class Restaurant {
     const index = this.staffs.indexOf(staff);
 
     if (index !== -1) {
+      this.staffs[index].loseJob();
       this.staffs.splice(index, 1);
     }
   }
