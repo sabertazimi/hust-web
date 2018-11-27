@@ -21,9 +21,6 @@ export default class Consumer {
 
   eat(cookedOrders) {
     this.orders = this.orders.filter(order => !cookedOrders.includes(order));
-    // this.orders = this.orders.filter(order => (
-    //   !cookedOrders.map(food => food.name).includes(order.name)
-    // ));
 
     return [...this.orders];
   }

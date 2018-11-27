@@ -25,13 +25,11 @@ export default class Staff {
   enter(restaurant) {
     this.setID(restaurant.nextStaffID());
     this.menus = restaurant.getMenus();
-    // this.restaurant = restaurant;
   }
 
   leave() {
     this.setID(STAFF_UNEMPLOYED);
     this.menus = STAFF_UNEMPLOYED;
-    // this.restaurant = STAFF_UNEMPLOYED;
   }
 
   isEmployed() {
