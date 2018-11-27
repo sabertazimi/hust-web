@@ -2,15 +2,15 @@ import Food from './food';
 
 export default class Menus {
   constructor() {
-    this.menus = [
-      new Food('apple', 500),
-      new Food('orange', 500),
-      new Food('cola', 500),
+    this.list = [
+      new Food('apple', 500, 3000),
+      new Food('orange', 500, 3000),
+      new Food('cola', 500, 3000),
     ];
   }
 
   order() {
-    const index = Math.floor(Math.random() * this.menus.length);
-    return this.menus.slice(index, 1);
+    const index = Math.floor(Math.random() * this.list.length);
+    return this.list.slice(index, index + 1);
   }
 }
