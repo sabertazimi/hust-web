@@ -1,3 +1,10 @@
+import {
+  STAFF_WAITER,
+  STAFF_COOK,
+} from './constants';
+
+import Menus from './menus';
+
 let STAFF_ID = 0;
 
 export default class Restaurant {
@@ -11,6 +18,15 @@ export default class Restaurant {
     this.seats = seats;
     this.staffs = staffs;
     this.consumers = consumers;
+    this.menus = new Menus();
+  }
+
+  getMenus() {
+    return this.menus;
+  }
+
+  getFreeStaff(type) {
+    return this.staffs.filter(staff => staff.getType() === type);
   }
 
   serve(consumer) {
@@ -20,6 +36,12 @@ export default class Restaurant {
       if (index === -1) {
         this.seats -= 1;
         this.consumers.push(consumer);
+
+        const [waiter] = this.getFreeStaff(STAFF_WAITER);
+        const [cook] = this.getFreeStaff(STAFF_COOK);
+        const orders = waiter.work(consumer);
+        const cookedOrders = cook.work(orders);
+        waiter.work(consumer, cookedOrders);
       }
     }
   }
@@ -36,8 +58,7 @@ export default class Restaurant {
   hire(staff) {
     if (this.staffs.indexOf(staff) === -1
     && staff.isUnemployed()) {
-      staff.getJob(STAFF_ID);
-      STAFF_ID += 1;
+      staff.enter(this);
       this.staffs.push(staff);
     }
   }
@@ -46,8 +67,15 @@ export default class Restaurant {
     const index = this.staffs.indexOf(staff);
 
     if (index !== -1) {
-      this.staffs[index].loseJob();
+      this.staffs[index].leave();
       this.staffs.splice(index, 1);
     }
   }
+
+  /* eslint-disable */
+  nextStaffID() {
+    STAFF_ID += 1;
+    return STAFF_ID;
+  }
+  /* eslint-enable */
 }

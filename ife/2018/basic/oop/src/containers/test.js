@@ -1,24 +1,25 @@
 import {
   Restaurant,
+  Waiter,
   Cook,
+  Consumer,
 } from '../components';
 
-const test = ($log) => {
+const test = () => {
   const ifeRestaurant = new Restaurant({
     cash: 1000000,
-    seats: 20,
+    seats: 1,
     staffs: [],
   });
 
-  const newCook = new Cook('Tony', 10000);
+  const waiter = new Waiter('Sily', 10000);
+  const cook = new Cook('Tony', 10000);
+  ifeRestaurant.hire(cook);
+  ifeRestaurant.hire(waiter);
 
-  ifeRestaurant.hire(newCook);
-  $log(ifeRestaurant.staffs);
-  $log(newCook);
-
-  ifeRestaurant.fire(newCook);
-  $log(ifeRestaurant.staffs);
-  $log(newCook);
+  const consumer = new Consumer('Saber');
+  consumer.enter(ifeRestaurant);
+  consumer.leave(ifeRestaurant);
 };
 
 export default test;
