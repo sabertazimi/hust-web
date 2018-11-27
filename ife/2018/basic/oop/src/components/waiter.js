@@ -8,18 +8,30 @@ export default class Waiter extends Staff {
     super(name, salary);
 
     this.type = STAFF_WAITER;
-    this.menus = [];
+    this.orders = [];
+  }
+
+  order(consumer) {
+    const orders = consumer.order(this.getMenus());
+    this.orders.push(...orders);
+    return [...this.orders];
+  }
+
+  serve(consumer, args) {
+    this.orders = this.orders.filter(menu => !args.includes(menu));
+    consumer.eat(args);
+    return [...this.orders];
   }
 
   /**
    * @override
    * @memberof Waiter
    */
-  work(...args) {
-    if (args.length === 1) {
-      this.serve(args);
-    } else {
-      this.addToMenus(args);
+  work(consumer, ...args) {
+    if (args.length > 0) {
+      return this.serve(consumer, args);
     }
+
+    return this.order(consumer);
   }
 }

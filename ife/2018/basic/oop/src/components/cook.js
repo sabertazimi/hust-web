@@ -8,14 +8,20 @@ export default class Cook extends Staff {
     super(name, salary);
 
     this.type = STAFF_COOK;
-    this.menus = [];
+    this.orders = [];
+  }
+
+  cook(orders) {
+    this.orders.push(orders);
+    this.orders.splice(0);
   }
 
   /**
    * @override
    * @memberof Waiter
    */
-  work(menus) {
-    this.cook(menus);
+  work(orders) {
+    this.cook(orders);
+    return orders;
   }
 }
