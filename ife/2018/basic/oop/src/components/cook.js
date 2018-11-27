@@ -38,7 +38,7 @@ export default class Cook extends Staff {
               waiter.work([food]);
               return [];
             })
-            .then(([leftOrder]) => leftOrder)
+            .then(([leftOrder]) => [order, leftOrder])
         );
       })
     ), Promise.resolve());

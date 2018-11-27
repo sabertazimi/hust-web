@@ -61,8 +61,14 @@ export default class Restaurant {
             $log(`customer '${customer.name}' ordered (${order.map(food => food.name).join(', ')}) !`);
             return cook.work(order, _waiter);
           })
-          .then((leftOrder) => {
-            $log(`customer '${customer.name}' left order (${leftOrder.map(food => food.name).join(', ')}) !`);
+          .then(([order, leftOrder]) => {
+            const eatenOrder = order.filter(food => !leftOrder.includes(food));
+            const sales = eatenOrder.reduce((sale, food) => (sale + food.price), 0);
+            this.cash += sales;
+
+            $log(`customer '${customer.name}' eaten (${eatenOrder.map(food => food.name).join(', ')}) !`);
+            $log(`customer '${customer.name}' paid $${sales} !`);
+            $log(`restaurant cash is $${this.cash} !`);
           });
       }
 
