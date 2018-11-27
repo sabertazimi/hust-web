@@ -7,3 +7,6 @@ export const STAFF_COOK = 1;
 
 export const STAFF_FREE = 0;
 export const STAFF_BUSY = 1;
+
+export const CUSTOMER_EATING_TIME = 3;
+export const CUSTOMER_ORDERING_TIME = 3;

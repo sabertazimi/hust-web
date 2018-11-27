@@ -7,7 +7,7 @@ import {
   $log,
 } from '../utils';
 
-import Menus from './menus';
+import Menu from './menu';
 
 let STAFF_ID = 0;
 
@@ -22,7 +22,7 @@ export default class Restaurant {
     this.seats = seats;
     this.staffs = staffs;
     this.customers = customers;
-    this.menus = new Menus();
+    this.menus = new Menu();
   }
 
   /* eslint-disable */
@@ -61,19 +61,19 @@ export default class Restaurant {
 
         return waiter.work(customer)
           .then(([order, _waiter]) => {
-            $log(`customer '${customer.name}' order: ${order.map(food => food.name).join(' ')}`);
+            $log(`customer '${customer.name}' ordered (${order.map(food => food.name).join(', ')})`);
             return cook.work(order, _waiter);
           })
           .then((leftOrder) => {
-            $log(`customer '${customer.name}' left order: ${JSON.stringify(leftOrder)}`);
+            $log(`customer '${customer.name}' left ${JSON.stringify(leftOrder)}`);
           });
       }
 
-      $log(`customer ${customer.name} already in`);
+      $log(`customer '${customer.name}' already in !`);
       return Promise.resolve();
     }
 
-    $log(`No seats for costomer ${customer.name}!`);
+    $log(`No seats for costomer '${customer.name}' !`);
     return Promise.resolve();
   }
 

@@ -24,11 +24,11 @@ export default class Cook extends Staff {
   work(order, waiter) {
     return order.reduce((promise, food) => (
       promise.then(() => {
-        $log(`cook '${this.name}' is cooking ${food.name} ...`);
+        $log(`cook '${this.name}' is cooking (${food.name}) (${food.time} s) ...`);
         return (
           sleep(food.time)
             .then(() => {
-              $log(`cook '${this.name}' cooked ${food.name}!`);
+              $log(`cook '${this.name}' cooked (${food.name}) !`);
               return waiter.work([food]);
             })
             .then(([leftOrder]) => leftOrder)

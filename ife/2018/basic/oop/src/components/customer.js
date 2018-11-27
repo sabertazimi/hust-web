@@ -3,6 +3,10 @@ import {
   sleep,
 } from '../utils';
 
+import {
+  CUSTOMER_EATING_TIME, CUSTOMER_ORDERING_TIME,
+} from './constants';
+
 export default class Customer {
   constructor(name = '') {
     this.name = name;
@@ -18,7 +22,7 @@ export default class Customer {
   }
 
   getOrder(menus) {
-    return sleep(3).then(() => {
+    return sleep(CUSTOMER_ORDERING_TIME).then(() => {
       const order = menus.generateOrder();
       $log(`customer '${this.name}' is ordering ...`);
       this.order = [...order];
@@ -29,9 +33,12 @@ export default class Customer {
   eat(cookedOrder) {
     return cookedOrder.reduce((promise, food) => (
       promise.then(() => {
-        $log(`customer '${this.name}' is eating ${food.name} ...`);
+        $log(`customer '${this.name}' is eating (${food.name}) (${CUSTOMER_EATING_TIME} s) ...`);
         this.order = this.order.filter(_food => _food.name !== food.name);
-        return sleep(3).then(() => [...this.order]);
+        return sleep(CUSTOMER_EATING_TIME).then(() => {
+          $log(`customer '${this.name}' ate (${food.name}) !`);
+          return [...this.order];
+        });
       })
     ), Promise.resolve());
   }

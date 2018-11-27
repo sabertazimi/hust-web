@@ -13,7 +13,7 @@ import './index.scss';
 
 const app = () => {
   const ifeRestaurant = new Restaurant({
-    cash: 1000000,
+    cash: 0,
     seats: 1,
     staffs: [],
   });
