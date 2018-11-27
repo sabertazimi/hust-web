@@ -42,6 +42,7 @@ export default class Restaurant {
 
       if (index === -1) {
         console.log(`consumer '${consumer.name}' entered ...`);
+
         this.seats -= 1;
         // @TODO: add seatID to each consumer
         this.consumers.push(consumer);

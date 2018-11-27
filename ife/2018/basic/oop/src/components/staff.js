@@ -42,7 +42,7 @@ export default class Staff {
     return this.id === STAFF_UNEMPLOYED;
   }
 
-  work(...args) {
-    console.log(`${this.name} working with ${args}`);
+  work() {
+    return this.name;
   }
 }

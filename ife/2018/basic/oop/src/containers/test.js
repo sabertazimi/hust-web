@@ -5,7 +5,7 @@ import {
   Consumer,
 } from '../components';
 
-const test = () => {
+const test = ($log) => {
   const ifeRestaurant = new Restaurant({
     cash: 1000000,
     seats: 1,
@@ -14,10 +14,16 @@ const test = () => {
 
   const waiter = new Waiter('Sily', 10000);
   const cook = new Cook('Tony', 10000);
-  ifeRestaurant.hire(cook);
   ifeRestaurant.hire(waiter);
+  ifeRestaurant.hire(cook);
+
+  $log('Staffs:');
+  $log(waiter);
+  $log(cook);
 
   const consumer = new Consumer('Saber');
+  $log('Consumer:');
+  $log(consumer);
   consumer.enter(ifeRestaurant);
   consumer.leave(ifeRestaurant);
 };
