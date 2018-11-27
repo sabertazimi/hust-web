@@ -4,6 +4,7 @@ import {
 
 import {
   $log,
+  sleep,
 } from '../utils';
 
 import Staff from './staff';
@@ -16,17 +17,17 @@ export default class Cook extends Staff {
     this.order = [];
   }
 
-  cook(food) {
-    $log(`cook ${this.name} is cooking ${food.name} ...`);
-  }
-
   // @TODO: map for (customer, order)
   /**
    * @override
    * @memberof Waiter
    */
-  work(order) {
-    order.forEach(this.cook.bind(this));
-    return order;
+  work(order, waiter) {
+    return order.reduce((promise, food) => (
+      promise.then(() => {
+        $log(`cook ${this.name} is cooking ${food.name} ...`);
+        return sleep(food.time).then(() => waiter.work([...food]));
+      })
+    ), Promise.resolve());
   }
 }
