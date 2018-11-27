@@ -3,4 +3,12 @@ export default class Consumer {
     this.name = name;
     this.menus = [];
   }
+
+  enter(restaurant) {
+    restaurant.serve(this);
+  }
+
+  leave(restaurant) {
+    restaurant.depart(this);
+  }
 }

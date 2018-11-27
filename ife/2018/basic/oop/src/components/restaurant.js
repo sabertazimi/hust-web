@@ -5,10 +5,32 @@ export default class Restaurant {
     cash = 0,
     seats = 0,
     staffs = [],
+    consumers = [],
   }) {
     this.cash = cash;
     this.seats = seats;
     this.staffs = staffs;
+    this.consumers = consumers;
+  }
+
+  serve(consumer) {
+    if (this.seats > 0) {
+      const index = this.consumers.indexOf(consumer);
+
+      if (index === -1) {
+        this.seats -= 1;
+        this.consumers.push(consumer);
+      }
+    }
+  }
+
+  depart(consumer) {
+    const index = this.consumers.indexOf(consumer);
+
+    if (index !== -1) {
+      this.seats += 1;
+      this.consumers.splice(index, 1);
+    }
   }
 
   hire(staff) {
