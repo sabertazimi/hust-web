@@ -3,6 +3,8 @@ import {
   STAFF_COOK,
 } from './constants';
 
+import $log from '../log';
+
 import Menus from './menus';
 
 let STAFF_ID = 0;
@@ -36,37 +38,35 @@ export default class Restaurant {
     return this.staffs.filter(staff => staff.getType() === type);
   }
 
+  // @TODO: add seatID to each consumer
   serve(consumer) {
     if (this.seats > 0) {
       const index = this.consumers.indexOf(consumer);
 
       if (index === -1) {
-        console.group(`consumer - ${consumer.name} entered ...`);
+        $log(`[Enter] consumer '${consumer.name}' ...`);
 
-        // @TODO: add seatID to each consumer
         this.seats -= 1;
         this.consumers.push(consumer);
 
         const [waiter] = this.getFreeStaff(STAFF_WAITER);
         const [cook] = this.getFreeStaff(STAFF_COOK);
 
-        console.log(`serve for consumer '${consumer.name}'`);
+        $log(`serve for consumer '${consumer.name}'`);
 
         const orders = waiter.work(consumer);
-        console.log(`consumer '${consumer.name}' order list: ${JSON.stringify(orders)}`);
+        $log(`consumer '${consumer.name}' order list: ${JSON.stringify(orders)}`);
 
         const cookedOrders = cook.work(orders);
-        console.log(`cook '${cook.name}' cooked list: ${JSON.stringify(cookedOrders)}`);
+        $log(`cook '${cook.name}' cooked list: ${JSON.stringify(cookedOrders)}`);
 
         const leftOrders = waiter.work(consumer, cookedOrders);
-        console.log(`consumer '${consumer.name}' left order list: ${JSON.stringify(leftOrders)}`);
-
-        console.groupEnd();
+        $log(`consumer '${consumer.name}' left order list: ${JSON.stringify(leftOrders)}`);
       } else {
-        console.log(`consumer ${consumer.name} already in`);
+        $log(`consumer ${consumer.name} already in`);
       }
     } else {
-      console.log('No seats!');
+      $log('No seats!');
     }
   }
 
@@ -74,7 +74,7 @@ export default class Restaurant {
     const index = this.consumers.indexOf(consumer);
 
     if (index !== -1) {
-      console.log(`consumer ${consumer.name} left ...`);
+      $log(`[Left] consumer '${consumer.name}' ...`);
       this.seats += 1;
       this.consumers.splice(index, 1);
     }

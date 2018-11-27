@@ -3,9 +3,9 @@ import {
   Waiter,
   Cook,
   Consumer,
-} from '../components';
+} from './components';
 
-const test = ($log) => {
+const test = () => {
   const ifeRestaurant = new Restaurant({
     cash: 1000000,
     seats: 1,
@@ -14,17 +14,10 @@ const test = ($log) => {
 
   const waiter = new Waiter('Sily', 10000);
   const cook = new Cook('Tony', 10000);
-  ifeRestaurant.hire(waiter);
-  ifeRestaurant.hire(cook);
-
-  $log('Staffs:');
-  $log(waiter);
-  $log(cook);
-
   const consumer = new Consumer('Saber');
 
-  $log('Consumer:');
-  $log(consumer);
+  ifeRestaurant.hire(waiter);
+  ifeRestaurant.hire(cook);
 
   consumer.enter(ifeRestaurant);
   consumer.enter(ifeRestaurant);

@@ -1,7 +1,5 @@
-import {
-  test,
-  $log,
-} from './containers';
+import $log from './log';
+import test from './test';
 
 import './index.scss';
 
