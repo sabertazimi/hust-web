@@ -1,6 +1,11 @@
 import {
   STAFF_COOK,
 } from './constants';
+
+import {
+  $log,
+} from '../utils';
+
 import Staff from './staff';
 
 export default class Cook extends Staff {
@@ -8,21 +13,20 @@ export default class Cook extends Staff {
     super(name, salary);
 
     this.type = STAFF_COOK;
-    this.orders = [];
+    this.order = [];
   }
 
-  // @TODO: map for (customer, orders)
-  cook(orders) {
-    this.orders.push(orders);
-    this.orders.splice(0);
+  cook(food) {
+    $log(`cook ${this.name} is cooking ${food.name} ...`);
   }
 
+  // @TODO: map for (customer, order)
   /**
    * @override
    * @memberof Waiter
    */
-  work(orders) {
-    this.cook(orders);
-    return orders;
+  work(order) {
+    order.forEach(this.cook.bind(this));
+    return order;
   }
 }

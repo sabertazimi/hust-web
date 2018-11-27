@@ -5,6 +5,10 @@ import {
   Customer,
 } from './components';
 
+import {
+  sleep,
+} from './utils';
+
 import './index.scss';
 
 const app = () => {
@@ -16,17 +20,26 @@ const app = () => {
 
   const waiter = new Waiter('Sily', 10000);
   const cook = new Cook('Tony', 10000);
-  const customer = new Customer('Saber');
 
   ifeRestaurant.hire(waiter);
   ifeRestaurant.hire(cook);
 
-  customer.enter(ifeRestaurant);
-  customer.enter(ifeRestaurant);
-  customer.leave(ifeRestaurant);
-  customer.leave(ifeRestaurant);
-  customer.enter(ifeRestaurant);
-  customer.leave(ifeRestaurant);
+  let CUSTOMER_ID = 0;
+
+  const mainLoop = () => {
+    const time = Math.floor(Math.random() * 3 + 3);
+    sleep(time).then(() => {
+      if (CUSTOMER_ID < 10) {
+        CUSTOMER_ID += 1;
+        const customer = new Customer(`Customer ${CUSTOMER_ID}`);
+        customer.enter(ifeRestaurant);
+        customer.leave(ifeRestaurant);
+        mainLoop();
+      }
+    });
+  };
+
+  mainLoop();
 };
 
 app();

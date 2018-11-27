@@ -38,7 +38,8 @@ export default class Restaurant {
 
   getFreeStaff(type) {
     return this.staffs.filter(staff => (
-      staff.getType() === type && staff.isFree()
+      // staff.getType() === type && staff.isFree()
+      staff.getType() === type
     ));
   }
 
@@ -58,14 +59,14 @@ export default class Restaurant {
 
         $log(`serve for customer '${customer.name}'`);
 
-        const orders = waiter.work(customer);
-        $log(`customer '${customer.name}' order list: ${JSON.stringify(orders)}`);
+        const order = waiter.work(customer);
+        $log(`customer '${customer.name}' order list: ${JSON.stringify(order)}`);
 
-        const cookedOrders = cook.work(orders);
-        $log(`cook '${cook.name}' cooked list: ${JSON.stringify(cookedOrders)}`);
+        const cookedOrder = cook.work(order);
+        $log(`cook '${cook.name}' cooked list: ${JSON.stringify(cookedOrder)}`);
 
-        const leftOrders = waiter.work(customer, cookedOrders);
-        $log(`customer '${customer.name}' left order list: ${JSON.stringify(leftOrders)}`);
+        const leftOrder = waiter.work(cookedOrder);
+        $log(`customer '${customer.name}' left order list: ${JSON.stringify(leftOrder)}`);
       } else {
         $log(`customer ${customer.name} already in`);
       }

@@ -1,7 +1,7 @@
 export default class Customer {
   constructor(name = '') {
     this.name = name;
-    this.orders = [];
+    this.order = [];
   }
 
   enter(restaurant) {
@@ -12,16 +12,16 @@ export default class Customer {
     restaurant.depart(this);
   }
 
-  order(menus) {
-    const orders = menus.order();
-    this.orders = [...orders];
+  getOrder(menus) {
+    const order = menus.generateOrder();
+    this.order = [...order];
 
-    return [...this.orders];
+    return [...this.order];
   }
 
-  eat(cookedOrders) {
-    this.orders = this.orders.filter(order => !cookedOrders.includes(order));
+  eat(cookedOrder) {
+    this.order = this.order.filter(food => !cookedOrder.includes(food));
 
-    return [...this.orders];
+    return [...this.order];
   }
 }

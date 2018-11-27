@@ -9,7 +9,7 @@ export default class Menus {
     ];
   }
 
-  order() {
+  generateOrder() {
     const index = Math.floor(Math.random() * this.list.length);
     return this.list.slice(index, index + 1);
   }

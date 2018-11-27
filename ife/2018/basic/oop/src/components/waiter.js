@@ -4,12 +4,12 @@ import {
 import Staff from './staff';
 
 export default class Waiter extends Staff {
-  // @TODO: map for (customer, orders)
+  // @TODO: map for (customer, order)
   constructor(name = '', salary = 0) {
     super(name, salary);
 
     this.type = STAFF_WAITER;
-    this.orders = [];
+    this.order = [];
   }
 
   /**
@@ -17,32 +17,38 @@ export default class Waiter extends Staff {
    * @returns customer order list
    * @memberof Waiter
    */
-  order(customer) {
-    const orders = customer.order(this.getMenus());
-    this.orders.push(...orders);
-    return [...this.orders];
+  getOrderFrom(customer) {
+    // command pattern: set receiver
+    this.customer = customer;
+
+    const order = this.customer.getOrder(this.getMenus());
+    this.order.push(...order);
+    return [...this.order];
   }
 
   /**
    * @param {*} customer
-   * @param {*} cookedOrders
+   * @param {*} cookedOrder
    * @returns left order list
    * @memberof Waiter
    */
-  serve(customer, cookedOrders) {
-    this.orders = customer.eat(cookedOrders);
-    return [...this.orders];
+  serveFor(cookedOrder) {
+    this.order = this.customer.eat(cookedOrder);
+    return [...this.order];
   }
 
   /**
    * @override
    * @memberof Waiter
    */
-  work(customer, orders) {
-    if (orders) {
-      return this.serve(customer, orders);
+  work(arg) {
+    if (arg && Array.isArray(arg)) {
+      // serve order to customer
+      const order = arg;
+      return this.serveFor(order);
     }
 
-    return this.order(customer);
+    const customer = arg;
+    return this.getOrderFrom(customer);
   }
 }
