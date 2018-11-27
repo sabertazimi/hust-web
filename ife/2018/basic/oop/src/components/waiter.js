@@ -16,8 +16,8 @@ export default class Waiter extends Staff {
    * @returns consumer order list
    * @memberof Waiter
    */
+  // @TODO: map for (consumer, orders)
   order(consumer) {
-    // @TODO: map for [consumer, orders]
     const orders = consumer.order(this.getMenus());
     this.orders.push(...orders);
     return [...this.orders];
@@ -29,8 +29,8 @@ export default class Waiter extends Staff {
    * @returns left order list
    * @memberof Waiter
    */
+  // @TODO: map for (consumer, orders)
   serve(consumer, cookedOrders) {
-    // @TODO: map for [consumer, orders]
     this.orders = consumer.eat(cookedOrders);
     return [...this.orders];
   }

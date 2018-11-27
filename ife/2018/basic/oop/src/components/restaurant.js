@@ -43,8 +43,8 @@ export default class Restaurant {
       if (index === -1) {
         console.group(`consumer - ${consumer.name} entered ...`);
 
-        this.seats -= 1;
         // @TODO: add seatID to each consumer
+        this.seats -= 1;
         this.consumers.push(consumer);
 
         const [waiter] = this.getFreeStaff(STAFF_WAITER);

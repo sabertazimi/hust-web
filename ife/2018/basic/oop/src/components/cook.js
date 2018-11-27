@@ -11,8 +11,8 @@ export default class Cook extends Staff {
     this.orders = [];
   }
 
+  // @TODO: map for (consumer, orders)
   cook(orders) {
-    // @TODO: map for (consumer, orders)
     this.orders.push(orders);
     this.orders.splice(0);
   }
