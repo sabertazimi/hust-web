@@ -21,6 +21,13 @@ export default class Restaurant {
     this.menus = new Menus();
   }
 
+  /* eslint-disable */
+  nextStaffID() {
+    STAFF_ID += 1;
+    return STAFF_ID;
+  }
+  /* eslint-enable */
+
   getMenus() {
     return this.menus;
   }
@@ -34,14 +41,20 @@ export default class Restaurant {
       const index = this.consumers.indexOf(consumer);
 
       if (index === -1) {
+        console.log(`consumer '${consumer.name}' entered ...`);
         this.seats -= 1;
+        // @TODO: add seatID to each consumer
         this.consumers.push(consumer);
 
         const [waiter] = this.getFreeStaff(STAFF_WAITER);
         const [cook] = this.getFreeStaff(STAFF_COOK);
+        console.log(`serve for consumer '${consumer.name}'`);
         const orders = waiter.work(consumer);
+        console.log(`consumer '${consumer.name}' order list: ${JSON.stringify(orders)}`);
         const cookedOrders = cook.work(orders);
-        waiter.work(consumer, cookedOrders);
+        console.log(`cook cooked list: ${JSON.stringify(cookedOrders)}`);
+        const leftOrders = waiter.work(consumer, cookedOrders);
+        console.log(`consumer '${consumer.name}' left order list: ${JSON.stringify(leftOrders)}`);
       }
     }
   }
@@ -50,6 +63,7 @@ export default class Restaurant {
     const index = this.consumers.indexOf(consumer);
 
     if (index !== -1) {
+      console.log(`consumer ${consumer.name} left ...`);
       this.seats += 1;
       this.consumers.splice(index, 1);
     }
@@ -71,11 +85,4 @@ export default class Restaurant {
       this.staffs.splice(index, 1);
     }
   }
-
-  /* eslint-disable */
-  nextStaffID() {
-    STAFF_ID += 1;
-    return STAFF_ID;
-  }
-  /* eslint-enable */
 }
