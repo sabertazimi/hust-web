@@ -1,11 +1,11 @@
 import Restaurant from './restaurant';
 import Waiter from './waiter';
 import Cook from './cook';
-import Consumer from './consumer';
+import Customer from './customer';
 
 export {
   Restaurant,
   Waiter,
   Cook,
-  Consumer,
+  Customer,
 };

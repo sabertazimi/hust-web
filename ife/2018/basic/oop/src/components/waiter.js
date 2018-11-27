@@ -12,26 +12,26 @@ export default class Waiter extends Staff {
   }
 
   /**
-   * @param {*} consumer
-   * @returns consumer order list
+   * @param {*} customer
+   * @returns customer order list
    * @memberof Waiter
    */
-  // @TODO: map for (consumer, orders)
-  order(consumer) {
-    const orders = consumer.order(this.getMenus());
+  // @TODO: map for (customer, orders)
+  order(customer) {
+    const orders = customer.order(this.getMenus());
     this.orders.push(...orders);
     return [...this.orders];
   }
 
   /**
-   * @param {*} consumer
+   * @param {*} customer
    * @param {*} cookedOrders
    * @returns left order list
    * @memberof Waiter
    */
-  // @TODO: map for (consumer, orders)
-  serve(consumer, cookedOrders) {
-    this.orders = consumer.eat(cookedOrders);
+  // @TODO: map for (customer, orders)
+  serve(customer, cookedOrders) {
+    this.orders = customer.eat(cookedOrders);
     return [...this.orders];
   }
 
@@ -39,11 +39,11 @@ export default class Waiter extends Staff {
    * @override
    * @memberof Waiter
    */
-  work(consumer, orders) {
+  work(customer, orders) {
     if (orders) {
-      return this.serve(consumer, orders);
+      return this.serve(customer, orders);
     }
 
-    return this.order(consumer);
+    return this.order(customer);
   }
 }

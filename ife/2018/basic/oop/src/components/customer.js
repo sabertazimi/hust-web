@@ -1,4 +1,4 @@
-export default class Consumer {
+export default class Customer {
   constructor(name = '') {
     this.name = name;
     this.orders = [];

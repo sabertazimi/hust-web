@@ -2,7 +2,7 @@ import {
   Restaurant,
   Waiter,
   Cook,
-  Consumer,
+  Customer,
 } from './components';
 
 const test = () => {
@@ -14,17 +14,17 @@ const test = () => {
 
   const waiter = new Waiter('Sily', 10000);
   const cook = new Cook('Tony', 10000);
-  const consumer = new Consumer('Saber');
+  const customer = new Customer('Saber');
 
   ifeRestaurant.hire(waiter);
   ifeRestaurant.hire(cook);
 
-  consumer.enter(ifeRestaurant);
-  consumer.enter(ifeRestaurant);
-  consumer.leave(ifeRestaurant);
-  consumer.leave(ifeRestaurant);
-  consumer.enter(ifeRestaurant);
-  consumer.leave(ifeRestaurant);
+  customer.enter(ifeRestaurant);
+  customer.enter(ifeRestaurant);
+  customer.leave(ifeRestaurant);
+  customer.leave(ifeRestaurant);
+  customer.enter(ifeRestaurant);
+  customer.leave(ifeRestaurant);
 };
 
 export default test;

@@ -14,12 +14,12 @@ export default class Restaurant {
     cash = 0,
     seats = 0,
     staffs = [],
-    consumers = [],
+    customers = [],
   }) {
     this.cash = cash;
     this.seats = seats;
     this.staffs = staffs;
-    this.consumers = consumers;
+    this.customers = customers;
     this.menus = new Menus();
   }
 
@@ -38,45 +38,45 @@ export default class Restaurant {
     return this.staffs.filter(staff => staff.getType() === type);
   }
 
-  // @TODO: add seatID to each consumer
-  serve(consumer) {
+  // @TODO: add seatID to each customer
+  serve(customer) {
     if (this.seats > 0) {
-      const index = this.consumers.indexOf(consumer);
+      const index = this.customers.indexOf(customer);
 
       if (index === -1) {
-        $log(`[Enter] consumer '${consumer.name}' ...`);
+        $log(`[Enter] customer '${customer.name}' ...`);
 
         this.seats -= 1;
-        this.consumers.push(consumer);
+        this.customers.push(customer);
 
         const [waiter] = this.getFreeStaff(STAFF_WAITER);
         const [cook] = this.getFreeStaff(STAFF_COOK);
 
-        $log(`serve for consumer '${consumer.name}'`);
+        $log(`serve for customer '${customer.name}'`);
 
-        const orders = waiter.work(consumer);
-        $log(`consumer '${consumer.name}' order list: ${JSON.stringify(orders)}`);
+        const orders = waiter.work(customer);
+        $log(`customer '${customer.name}' order list: ${JSON.stringify(orders)}`);
 
         const cookedOrders = cook.work(orders);
         $log(`cook '${cook.name}' cooked list: ${JSON.stringify(cookedOrders)}`);
 
-        const leftOrders = waiter.work(consumer, cookedOrders);
-        $log(`consumer '${consumer.name}' left order list: ${JSON.stringify(leftOrders)}`);
+        const leftOrders = waiter.work(customer, cookedOrders);
+        $log(`customer '${customer.name}' left order list: ${JSON.stringify(leftOrders)}`);
       } else {
-        $log(`consumer ${consumer.name} already in`);
+        $log(`customer ${customer.name} already in`);
       }
     } else {
       $log('No seats!');
     }
   }
 
-  depart(consumer) {
-    const index = this.consumers.indexOf(consumer);
+  depart(customer) {
+    const index = this.customers.indexOf(customer);
 
     if (index !== -1) {
-      $log(`[Left] consumer '${consumer.name}' ...`);
+      $log(`[Left] customer '${customer.name}' ...`);
       this.seats += 1;
-      this.consumers.splice(index, 1);
+      this.customers.splice(index, 1);
     }
   }
 
