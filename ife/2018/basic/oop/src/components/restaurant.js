@@ -3,7 +3,9 @@ import {
   STAFF_COOK,
 } from './constants';
 
-import $log from '../log';
+import {
+  $log,
+} from '../utils';
 
 import Menus from './menus';
 
@@ -35,7 +37,9 @@ export default class Restaurant {
   }
 
   getFreeStaff(type) {
-    return this.staffs.filter(staff => staff.getType() === type);
+    return this.staffs.filter(staff => (
+      staff.getType() === type && staff.isFree()
+    ));
   }
 
   // @TODO: add seatID to each customer

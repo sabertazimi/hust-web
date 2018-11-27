@@ -1,11 +1,14 @@
 import {
   STAFF_UNEMPLOYED,
+  STAFF_FREE,
+  STAFF_BUSY,
 } from './constants';
 
 export default class Staff {
   constructor(name = '', salary = 0) {
     this.id = STAFF_UNEMPLOYED;
     this.type = STAFF_UNEMPLOYED;
+    this.status = STAFF_FREE;
     this.name = name;
     this.salary = salary;
   }
@@ -16,6 +19,22 @@ export default class Staff {
 
   getType() {
     return this.type;
+  }
+
+  isFree() {
+    return (this.status === STAFF_FREE);
+  }
+
+  isBusy() {
+    return (this.status === STAFF_BUSY);
+  }
+
+  setFree() {
+    this.status = STAFF_FREE;
+  }
+
+  setBusy() {
+    this.status = STAFF_BUSY;
   }
 
   getMenus() {
