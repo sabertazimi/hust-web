@@ -4,6 +4,7 @@ import {
 import Staff from './staff';
 
 export default class Waiter extends Staff {
+  // @TODO: map for (customer, orders)
   constructor(name = '', salary = 0) {
     super(name, salary);
 
@@ -16,7 +17,6 @@ export default class Waiter extends Staff {
    * @returns customer order list
    * @memberof Waiter
    */
-  // @TODO: map for (customer, orders)
   order(customer) {
     const orders = customer.order(this.getMenus());
     this.orders.push(...orders);
@@ -29,7 +29,6 @@ export default class Waiter extends Staff {
    * @returns left order list
    * @memberof Waiter
    */
-  // @TODO: map for (customer, orders)
   serve(customer, cookedOrders) {
     this.orders = customer.eat(cookedOrders);
     return [...this.orders];
