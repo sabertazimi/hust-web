@@ -41,7 +41,7 @@ export default class Restaurant {
       const index = this.consumers.indexOf(consumer);
 
       if (index === -1) {
-        console.log(`consumer '${consumer.name}' entered ...`);
+        console.group(`consumer - ${consumer.name} entered ...`);
 
         this.seats -= 1;
         // @TODO: add seatID to each consumer
@@ -49,14 +49,24 @@ export default class Restaurant {
 
         const [waiter] = this.getFreeStaff(STAFF_WAITER);
         const [cook] = this.getFreeStaff(STAFF_COOK);
+
         console.log(`serve for consumer '${consumer.name}'`);
+
         const orders = waiter.work(consumer);
         console.log(`consumer '${consumer.name}' order list: ${JSON.stringify(orders)}`);
+
         const cookedOrders = cook.work(orders);
-        console.log(`cook cooked list: ${JSON.stringify(cookedOrders)}`);
+        console.log(`cook '${cook.name}' cooked list: ${JSON.stringify(cookedOrders)}`);
+
         const leftOrders = waiter.work(consumer, cookedOrders);
         console.log(`consumer '${consumer.name}' left order list: ${JSON.stringify(leftOrders)}`);
+
+        console.groupEnd();
+      } else {
+        console.log(`consumer ${consumer.name} already in`);
       }
+    } else {
+      console.log('No seats!');
     }
   }
 

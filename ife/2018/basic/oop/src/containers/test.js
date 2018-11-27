@@ -22,8 +22,14 @@ const test = ($log) => {
   $log(cook);
 
   const consumer = new Consumer('Saber');
+
   $log('Consumer:');
   $log(consumer);
+
+  consumer.enter(ifeRestaurant);
+  consumer.enter(ifeRestaurant);
+  consumer.leave(ifeRestaurant);
+  consumer.leave(ifeRestaurant);
   consumer.enter(ifeRestaurant);
   consumer.leave(ifeRestaurant);
 };
