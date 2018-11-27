@@ -11,15 +11,29 @@ export default class Waiter extends Staff {
     this.orders = [];
   }
 
+
+  /**
+   * @param {*} consumer
+   * @returns consumer order list
+   * @memberof Waiter
+   */
   order(consumer) {
+    // @TODO: map for [consumer, orders]
     const orders = consumer.order(this.getMenus());
     this.orders.push(...orders);
     return [...this.orders];
   }
 
-  serve(consumer, args) {
-    this.orders = this.orders.filter(menu => !args.includes(menu));
-    consumer.eat(args);
+
+  /**
+   * @param {*} consumer
+   * @param {*} cookedOrders
+   * @returns left order list
+   * @memberof Waiter
+   */
+  serve(consumer, cookedOrders) {
+    // @TODO: map for [consumer, orders]
+    this.orders = consumer.eat(cookedOrders);
     return [...this.orders];
   }
 
