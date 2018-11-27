@@ -1,3 +1,8 @@
+import {
+  $log,
+  sleep,
+} from '../utils';
+
 export default class Customer {
   constructor(name = '') {
     this.name = name;
@@ -5,7 +10,7 @@ export default class Customer {
   }
 
   enter(restaurant) {
-    return new Promise(resolve => resolve(restaurant.serve(this)));
+    return restaurant.serve(this);
   }
 
   leave(restaurant) {
@@ -13,15 +18,21 @@ export default class Customer {
   }
 
   getOrder(menus) {
-    const order = menus.generateOrder();
-    this.order = [...order];
-
-    return [...this.order];
+    return sleep(3).then(() => {
+      const order = menus.generateOrder();
+      $log(`customer '${this.name}' is ordering ...`);
+      this.order = [...order];
+      return [...this.order];
+    });
   }
 
   eat(cookedOrder) {
-    this.order = this.order.filter(food => !cookedOrder.includes(food));
-
-    return [...this.order];
+    return cookedOrder.reduce((promise, food) => (
+      promise.then(() => {
+        $log(`customer '${this.name}' is eating ${food.name} ...`);
+        this.order = this.order.filter(_food => _food.name !== food.name);
+        return sleep(3).then(() => [...this.order]);
+      })
+    ), Promise.resolve());
   }
 }

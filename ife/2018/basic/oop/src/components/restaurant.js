@@ -45,12 +45,12 @@ export default class Restaurant {
 
   // @TODO: add seatID to each customer
   serve(customer) {
+    $log(`[Enter] customer '${customer.name}' ...`);
+
     if (this.seats > 0) {
       const index = this.customers.indexOf(customer);
 
       if (index === -1) {
-        $log(`[Enter] customer '${customer.name}' ...`);
-
         this.seats -= 1;
         this.customers.push(customer);
 
@@ -59,35 +59,38 @@ export default class Restaurant {
 
         $log(`serve for customer '${customer.name}'`);
 
-        const order = waiter.work(customer);
-        $log(`customer '${customer.name}' order list: ${JSON.stringify(order)}`);
-
-        const cookedOrder = cook.work(order);
-        $log(`cook '${cook.name}' cooked list: ${JSON.stringify(cookedOrder)}`);
-
-        const leftOrder = waiter.work(cookedOrder);
-        $log(`customer '${customer.name}' left order list: ${JSON.stringify(leftOrder)}`);
-      } else {
-        $log(`customer ${customer.name} already in`);
+        return waiter.work(customer)
+          .then(([order, _waiter]) => {
+            $log(`customer '${customer.name}' order: ${order.map(food => food.name).join(' ')}`);
+            return cook.work(order, _waiter);
+          })
+          .then((leftOrder) => {
+            $log(`customer '${customer.name}' left order: ${JSON.stringify(leftOrder)}`);
+          });
       }
-    } else {
-      $log('No seats!');
+
+      $log(`customer ${customer.name} already in`);
+      return Promise.resolve();
     }
+
+    $log(`No seats for costomer ${customer.name}!`);
+    return Promise.resolve();
   }
 
   depart(customer) {
     const index = this.customers.indexOf(customer);
 
     if (index !== -1) {
-      $log(`[Left] customer '${customer.name}' ...`);
       this.seats += 1;
       this.customers.splice(index, 1);
     }
+
+    $log(`[Left] customer '${customer.name}' ...`);
   }
 
   hire(staff) {
     if (this.staffs.indexOf(staff) === -1
-    && staff.isUnemployed()) {
+      && staff.isUnemployed()) {
       staff.enter(this);
       this.staffs.push(staff);
     }

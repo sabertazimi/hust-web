@@ -14,7 +14,6 @@ export default class Cook extends Staff {
     super(name, salary);
 
     this.type = STAFF_COOK;
-    this.order = [];
   }
 
   // @TODO: map for (customer, order)
@@ -25,8 +24,15 @@ export default class Cook extends Staff {
   work(order, waiter) {
     return order.reduce((promise, food) => (
       promise.then(() => {
-        $log(`cook ${this.name} is cooking ${food.name} ...`);
-        return sleep(food.time).then(() => waiter.work([...food]));
+        $log(`cook '${this.name}' is cooking ${food.name} ...`);
+        return (
+          sleep(food.time)
+            .then(() => {
+              $log(`cook '${this.name}' cooked ${food.name}!`);
+              return waiter.work([food]);
+            })
+            .then(([leftOrder]) => leftOrder)
+        );
       })
     ), Promise.resolve());
   }

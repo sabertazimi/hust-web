@@ -1,6 +1,7 @@
 import {
   STAFF_WAITER,
 } from './constants';
+
 import Staff from './staff';
 
 export default class Waiter extends Staff {
@@ -13,42 +14,27 @@ export default class Waiter extends Staff {
   }
 
   /**
-   * @param {*} customer
-   * @returns customer order list
-   * @memberof Waiter
-   */
-  getOrderFrom(customer) {
-    // command pattern: set receiver
-    this.customer = customer;
-
-    const order = this.customer.getOrder(this.getMenus());
-    this.order.push(...order);
-    return [...this.order];
-  }
-
-  /**
-   * @param {*} customer
-   * @param {*} cookedOrder
-   * @returns left order list
-   * @memberof Waiter
-   */
-  serveFor(cookedOrder) {
-    this.order = this.customer.eat(cookedOrder);
-    return [...this.order];
-  }
-
-  /**
    * @override
    * @memberof Waiter
    */
   work(arg) {
     if (arg && Array.isArray(arg)) {
       // serve order to customer
-      const order = arg;
-      return this.serveFor(order);
+      const cookedOrder = arg;
+
+      return this.customer.eat(cookedOrder).then((leftOrder) => {
+        this.order = leftOrder;
+        return [[...this.order], this];
+      });
     }
 
     const customer = arg;
-    return this.getOrderFrom(customer);
+    // command pattern: set receiver
+    this.customer = customer;
+
+    return this.customer.getOrder(this.getMenus()).then((order) => {
+      this.order.push(...order);
+      return [[...this.order], this];
+    });
   }
 }
