@@ -11,7 +11,6 @@ export default class Waiter extends Staff {
     this.orders = [];
   }
 
-
   /**
    * @param {*} consumer
    * @returns consumer order list
@@ -23,7 +22,6 @@ export default class Waiter extends Staff {
     this.orders.push(...orders);
     return [...this.orders];
   }
-
 
   /**
    * @param {*} consumer
@@ -41,9 +39,9 @@ export default class Waiter extends Staff {
    * @override
    * @memberof Waiter
    */
-  work(consumer, ...args) {
-    if (args.length > 0) {
-      return this.serve(consumer, args);
+  work(consumer, orders) {
+    if (orders) {
+      return this.serve(consumer, orders);
     }
 
     return this.order(consumer);
