@@ -9,8 +9,6 @@ import {
 
 import Menu from './menu';
 
-let STAFF_ID = 0;
-
 export default class Restaurant {
   constructor({
     cash = 0,
@@ -22,18 +20,17 @@ export default class Restaurant {
     this.seats = seats;
     this.staffs = staffs;
     this.customers = customers;
-    this.menus = new Menu();
+    this.menu = new Menu();
+    this.STAFF_ID = 5;
   }
 
-  /* eslint-disable */
   nextStaffID() {
-    STAFF_ID += 1;
-    return STAFF_ID;
+    this.STAFF_ID += 1;
+    return this.STAFF_ID;
   }
-  /* eslint-enable */
 
-  getMenus() {
-    return this.menus;
+  getMenu() {
+    return this.menu;
   }
 
   getFreeStaff(type) {

@@ -31,7 +31,7 @@ export default class Waiter extends Staff {
     // command pattern: set receiver
     this.customer = customer;
 
-    return this.customer.getOrder(this.getMenus()).then((order) => {
+    return this.customer.getOrder(this.getMenu()).then((order) => {
       this.order.push(...order);
       return [[...this.order], this];
     });

@@ -21,9 +21,9 @@ export default class Customer {
     restaurant.depart(this);
   }
 
-  getOrder(menus) {
+  getOrder(menu) {
     return sleep(CUSTOMER_ORDERING_TIME).then(() => {
-      const order = menus.generateOrder();
+      const order = menu.generateOrder();
       $log(`customer '${this.name}' is ordering ...`);
       this.order = [...order];
       return [...this.order];
