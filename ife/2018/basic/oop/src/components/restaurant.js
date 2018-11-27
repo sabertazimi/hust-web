@@ -57,15 +57,15 @@ export default class Restaurant {
         const [waiter] = this.getFreeStaff(STAFF_WAITER);
         const [cook] = this.getFreeStaff(STAFF_COOK);
 
-        $log(`serve for customer '${customer.name}'`);
+        $log(`serve for customer '${customer.name}' ...`);
 
         return waiter.work(customer)
           .then(([order, _waiter]) => {
-            $log(`customer '${customer.name}' ordered (${order.map(food => food.name).join(', ')})`);
+            $log(`customer '${customer.name}' ordered (${order.map(food => food.name).join(', ')}) !`);
             return cook.work(order, _waiter);
           })
           .then((leftOrder) => {
-            $log(`customer '${customer.name}' left ${JSON.stringify(leftOrder)}`);
+            $log(`customer '${customer.name}' left order (${leftOrder.map(food => food.name).join(', ')}) !`);
           });
       }
 

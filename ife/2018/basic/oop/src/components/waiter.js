@@ -5,7 +5,6 @@ import {
 import Staff from './staff';
 
 export default class Waiter extends Staff {
-  // @TODO: map for (customer, order)
   constructor(name = '', salary = 0) {
     super(name, salary);
 
