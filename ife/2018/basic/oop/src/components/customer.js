@@ -5,7 +5,7 @@ export default class Customer {
   }
 
   enter(restaurant) {
-    restaurant.serve(this);
+    return new Promise(resolve => resolve(restaurant.serve(this)));
   }
 
   leave(restaurant) {

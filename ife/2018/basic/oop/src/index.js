@@ -28,12 +28,14 @@ const app = () => {
 
   const mainLoop = () => {
     const time = Math.floor(Math.random() * 3 + 3);
+
     sleep(time).then(() => {
       if (CUSTOMER_ID < 10) {
         CUSTOMER_ID += 1;
         const customer = new Customer(`Customer ${CUSTOMER_ID}`);
-        customer.enter(ifeRestaurant);
-        customer.leave(ifeRestaurant);
+        customer.enter(ifeRestaurant).then(() => {
+          customer.leave(ifeRestaurant);
+        });
         mainLoop();
       }
     });
