@@ -1,0 +1,45 @@
+<template>
+
+<div>
+  <router-link class="router-link" to="{{ to }}">
+    <slot></slot>
+  </router-link>
+</div>
+
+</template>
+
+<script>
+
+import { Link } from 'san-router';
+
+export default {
+  components: {
+    'router-link': Link,
+  },
+  initData() {
+    return {
+      to: "/",
+    };
+  },
+};
+
+</script>
+
+<style>
+
+.router-link {
+  display: inline-block;
+  margin: 1em 1em;
+  padding: 0.75em 1em;
+  background-color: #f03e3e;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color .2s ease-in;
+}
+
+.router-link:hover {
+  background-color: #ff6b6b;
+}
+
+</style>

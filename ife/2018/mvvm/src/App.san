@@ -1,21 +1,28 @@
 <template>
 
-<task1 />
+<div class="app">
+  <link to="/task1">Task 1</link>
+</div>
 
 </template>
 
 <script>
 
-import Task1 from './components/Task1.san';
+import { Link } from './components';
 
 export default {
   components: {
-    task1: Task1,
+    link: Link,
   },
 };
 
 </script>
 
 <style>
+
+.app {
+  width: 100%;
+  padding: 1em;
+}
 
 </style>

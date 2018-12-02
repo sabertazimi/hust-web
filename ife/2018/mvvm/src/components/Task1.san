@@ -1,20 +1,26 @@
 <template>
 
 <div>
-  <input type="text" name="name" value="{= name =}" placeholder="Name" />
-  <input type="number" name="age" value="{= age =}" placeholder="Age" />
-  <input type="text" name="badge" value="{= badge =}" placeholder="Badge" />
+  <input type="text" name="name" value="{= name =}" placeholder="Name (string)" />
+  <input type="number" name="age" value="{= age =}" placeholder="Age (number)" />
+  <input type="text" name="badge" value="{= badge =}" placeholder="Badge (string)" />
   <button class="button" on-click="removeData">Remove Data</button>
   <p>Name: {{ name || 'Unknown' }}</p>
   <p>Age: {{ age || 'Unknown' }}</p>
   <p>Badge: {{ badge || 'Unknown' }}</p>
+  <link to="/">Back to home</link>
 </div>
 
 </template>
 
 <script>
 
+import Link from './Link.san';
+
 export default {
+  components: {
+    link: Link,
+  },
   initData() {
     return {
       name: 'sabertazimi',
