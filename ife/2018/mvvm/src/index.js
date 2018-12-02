@@ -1,7 +1,9 @@
 import { router } from 'san-router';
 
 import App from './App.san';
-import Task1 from './components/Task1.san';
+import {
+  Task1,
+} from './components';
 
 import './index.css';
 

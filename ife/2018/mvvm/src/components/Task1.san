@@ -15,11 +15,17 @@
 
 <script>
 
+import { DataTypes } from 'san';
 import Link from './Link.san';
 
 export default {
   components: {
     link: Link,
+  },
+  dataTypes: {
+    name: DataTypes.string,
+    age: DataTypes.number,
+    badge: DataTypes.string,
   },
   initData() {
     return {
