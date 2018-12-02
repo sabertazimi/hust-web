@@ -1,15 +1,19 @@
 <template>
-  <div>
-    <input type="text" name="name" value="{= name =}" placeholder="Name" />
-    <input type="number" name="age" value="{= age =}" placeholder="Age" />
-    <input type="text" name="badge" value="{= badge =}" placeholder="Badge" />
-    <button class="button" on-click="removeData">Remove Data</button>
-    <p>Name: {{ name || 'Unknown' }}</p>
-    <p>Age: {{ age || 'Unknown' }}</p>
-    <p>Badge: {{ badge || 'Unknown' }}</p>
-  </div>
+
+<div>
+  <input type="text" name="name" value="{= name =}" placeholder="Name" />
+  <input type="number" name="age" value="{= age =}" placeholder="Age" />
+  <input type="text" name="badge" value="{= badge =}" placeholder="Badge" />
+  <button class="button" on-click="removeData">Remove Data</button>
+  <p>Name: {{ name || 'Unknown' }}</p>
+  <p>Age: {{ age || 'Unknown' }}</p>
+  <p>Badge: {{ badge || 'Unknown' }}</p>
+</div>
+
 </template>
+
 <script>
+
 export default {
   initData() {
     return {
@@ -22,12 +26,16 @@ export default {
     this.data.set('name', undefined);
     this.data.set('age', undefined);
     this.data.set('badge', undefined);
-  }
+  },
 };
+
 </script>
+
 <style>
+
 .button {
   display: block;
   margin: 0;
 }
+
 </style>

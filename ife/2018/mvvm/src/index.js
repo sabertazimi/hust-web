@@ -1,5 +1,10 @@
-import Task1 from './components/Task1.san';
+import {
+  router,
+} from 'san-router';
+
+import App from './App.san';
+
 import './index.css';
 
-const app = new Task1();
-app.attach(document.querySelector('#root'));
+router.add({ rule: '/', Component: App, target: '#app' });
+router.start();

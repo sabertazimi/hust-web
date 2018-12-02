@@ -1,0 +1,21 @@
+<template>
+
+<task1 />
+
+</template>
+
+<script>
+
+import Task1 from './components/Task1.san';
+
+export default {
+  components: {
+    task1: Task1,
+  },
+};
+
+</script>
+
+<style>
+
+</style>
