@@ -1,0 +1,15 @@
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, 'Open Sans', Arial, sans-serif, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: inherit;
+  padding: inherit;
+  font-family: inherit;
+}

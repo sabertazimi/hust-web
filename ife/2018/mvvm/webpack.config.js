@@ -18,6 +18,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.san$/,
+        use: [
+          'san-loader',
+        ],
+      },
+      {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: [
@@ -37,7 +43,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
@@ -47,7 +53,6 @@ module.exports = {
             },
           },
           'postcss-loader',
-          'sass-loader',
         ],
       },
     ],
@@ -66,7 +71,12 @@ module.exports = {
     new StyleLintPlugin(),
   ],
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.san'],
+    alias: {
+      san: devMode
+        ? 'san/dist/san.dev.js'
+        : 'san/dist/san.js',
+    },
   },
   devtool: 'source-map',
 };

@@ -7,7 +7,7 @@
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --port 2333 --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "lint": "stylelint ./src/**/*.scss && eslint --ext .js --ext .jsx ./src"
+    "lint": "stylelint ./src/**/*.css && eslint --ext .js ./src"
   },
   "repository": {
     "type": "git",
@@ -37,16 +37,15 @@
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
-    "eslint": "^5.3.0",
+    "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-import": "^2.14.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.9.2",
     "postcss-loader": "^2.1.5",
-    "sass-loader": "^7.0.3",
+    "san-loader": "0.0.7",
     "style-loader": "^0.21.0",
     "stylelint": "^9.4.0",
     "stylelint-config-mass": "^1.0.2",

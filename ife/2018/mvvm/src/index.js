@@ -1,13 +1,5 @@
-import san from 'san';
+import Task1 from './components/Task1.san';
+import './index.css';
 
-const App = san.defineComponent({
-  template: '<p>Hello {{name}}!</p>',
-  initData() {
-    return {
-      name: 'San',
-    };
-  },
-});
-
-const app = new App();
+const app = new Task1();
 app.attach(document.querySelector('#root'));

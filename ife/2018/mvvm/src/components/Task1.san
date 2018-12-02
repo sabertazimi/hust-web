@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <input type="text" name="name" value="{= name =}" placeholder="Name" />
+    <input type="number" name="age" value="{= age =}" placeholder="Age" />
+    <input type="text" name="badge" value="{= badge =}" placeholder="Badge" />
+  </div>
+</template>
+<script>
+export default {
+  initData() {
+    return {
+      name: 'sabertazimi',
+      age: 22,
+      badge: 'coder',
+    };
+  },
+};
+</script>
+<style>
+</style>
