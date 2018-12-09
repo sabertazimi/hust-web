@@ -10,10 +10,7 @@ cache:
 
 script:
   - npm install
-  - cd ./css/material-menu-button && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../
-  - cd ./ife/2018/basic/mis && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../../
-  - cd ./ife/2018/basic/oop && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../../
-  - cd ./ife/2018/mvvm && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../
+  - bash ci.sh
   - npm run build
 
 branches:
