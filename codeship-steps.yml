@@ -1,0 +1,17 @@
+- type: parallel
+  steps:
+  - name: hust-web-copy-1
+    service: hust-web-service
+    command: bash -c "cd ./css/material-menu-button && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../"
+  - name: hust-web-copy-2
+    service: hust-web-service
+    command: bash -c "cd ./ife/2018/basic/mis && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../../"
+  - name: hust-web-copy-3
+    service: hust-web-service
+    command: bash -c "cd ./ife/2018/basic/oop && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../../"
+  - name: hust-web-copy-4
+    service: hust-web-service
+    command: bash -c "cd ./ife/2018/mvvm && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../"
+- name: hust-web-deployment
+  service: hust-web-service
+  command: npm run build

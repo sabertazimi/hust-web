@@ -1,0 +1,4 @@
+hust-web-service:
+  build:
+    image: hust-web-service
+    dockerfile: Dockerfile
