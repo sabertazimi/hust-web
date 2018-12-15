@@ -1,0 +1,20 @@
+<template>
+  
+</template>
+
+<script>
+import Link from './Link.san';
+
+export default {
+  components: {
+    'router-link': Link,
+  },
+  initData() {
+
+  },
+};
+</script>
+
+<style>
+
+</style>

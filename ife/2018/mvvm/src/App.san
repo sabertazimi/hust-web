@@ -2,6 +2,7 @@
 
 <div class="app">
   <router-link to="/task1">Task 1</router-link>
+  <router-link to="/task2">Task 2</router-link>
 </div>
 
 </template>
