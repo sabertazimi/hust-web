@@ -29,13 +29,13 @@ export default {
 
 .router-link {
   display: inline-block;
-  margin: 1em 1em;
+  transition: background-color 0.2s ease-in;
+  margin: 1em;
   padding: 0.75em 1em;
   background-color: #f03e3e;
   color: #fff;
-  text-decoration: none;
   text-align: center;
-  transition: background-color .2s ease-in;
+  text-decoration: none;
 }
 
 .router-link:hover {

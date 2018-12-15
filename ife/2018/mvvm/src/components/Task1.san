@@ -8,7 +8,7 @@
   <p>Name: {{ name || 'Unknown' }}</p>
   <p>Age: {{ age || 'Unknown' }}</p>
   <p>Badge: {{ badge || 'Unknown' }}</p>
-  <link to="/">Back to home</link>
+  <router-link to="/">Back to home</router-link>
 </div>
 
 </template>
@@ -20,7 +20,7 @@ import Link from './Link.san';
 
 export default {
   components: {
-    link: Link,
+    'router-link': Link,
   },
   dataTypes: {
     name: DataTypes.string,
