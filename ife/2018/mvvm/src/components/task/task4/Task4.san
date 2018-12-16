@@ -1,12 +1,14 @@
 <template>
 <div>
   <task>
-    Hello San!
+    <label for="child">子组件：</label>
+    <input type="text" id="child" name="child" />
+    <button type="button">通知父组件</button>
   </task>
 </div>
 </template>
 <script>
-import { Task } from '../ui';
+import { Task } from '../../ui';
 
 export default {
   components: {

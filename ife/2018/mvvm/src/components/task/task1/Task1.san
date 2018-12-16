@@ -15,7 +15,7 @@
 <script>
 
 import { DataTypes } from 'san';
-import { Task } from '../ui';
+import { Task } from '../../ui';
 
 export default {
   components: {
