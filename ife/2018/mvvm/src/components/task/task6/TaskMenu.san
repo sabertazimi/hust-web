@@ -1,0 +1,48 @@
+<template>
+<div>
+  <h2 s-if="title">{{ title }}</h2>
+  <slot s-if="!title" name="title"></slot>
+  <div class="task-board">
+    <div class="task-board__entry" s-for="task, index in tasks">
+      <slot
+        name="task"
+        s-bind="{ index: index, title: task.title, content: task.content, date: task.date }"
+      >
+        <h4>Task {{ index + 1 }}</h4>
+        <p>Title: {{ title }}</p>
+        <p>Content: {{ content }}</p>
+        <p>Date: {{ date }}</p>
+      </slot>
+    </div>
+  </div>
+</div>
+</template>
+
+<script>
+export default {
+  initData() {
+    return {
+      title: '',
+      tasks: [],
+    };
+  },
+};
+</script>
+
+<style>
+.task-board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.task-board__entry {
+  flex: 1 1 auto;
+  width: 30%;
+  margin: 1em;
+  padding: 1em;
+  background-color: #f03e3e;
+  color: #fff;
+}
+</style>

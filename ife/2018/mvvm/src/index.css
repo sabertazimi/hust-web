@@ -2,6 +2,7 @@ body {
   max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
+  padding: 0;
   font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, 'Open Sans', Arial, sans-serif, serif;
 }
 
@@ -10,6 +11,5 @@ body {
 *::after {
   box-sizing: inherit;
   margin: inherit;
-  padding: inherit;
   font-family: inherit;
 }

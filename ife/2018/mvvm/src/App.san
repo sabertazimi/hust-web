@@ -25,13 +25,13 @@ export default {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  flex-wrap: auto;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 100vw;
   padding: 1em;
 }
 
 .app > * {
-  flex: 1;
+  flex: 1 1 auto;
 }
 </style>

@@ -1,0 +1,68 @@
+<template>
+<div>
+  <task>
+    <task-menu tasks="{{ tasks }}">
+      <div slot="title">
+        <h2 style="text-align: center;">
+          {{ title }}
+        </h2>
+      </div>
+      <div slot="task">
+        <h4>Slot Task {{ index + 1 }}</h4>
+        <p>Title: {{ title }}</p>
+        <p>Content: {{ content }}</p>
+        <p>Date: {{ date }}</p>
+      </div>
+    </task-menu>
+  </task>
+</div>
+</template>
+
+<script>
+import { Task } from '../../ui';
+import TaskMenu from './TaskMenu.san';
+
+export default {
+  components: {
+    'task': Task,
+    'task-menu': TaskMenu,
+  },
+  initData() {
+    return {
+      title: 'Task Board',
+      tasks: [
+        {
+          title: 'Task 1',
+          content: 'Content 1',
+          date: '2018-12-25',
+        },
+        {
+          title: 'Task 2',
+          content: 'Content 2',
+          date: '2018-12-26',
+        },
+        {
+          title: 'Task 3',
+          content: 'Content 3',
+          date: '2018-12-27',
+        },
+        {
+          title: 'Task 4',
+          content: 'Content 4',
+          date: '2018-12-28',
+        },
+        {
+          title: 'Task 5',
+          content: 'Content 5',
+          date: '2018-12-29',
+        },
+        {
+          title: 'Task 6',
+          content: 'Content 6',
+          date: '2018-12-30',
+        },
+      ],
+    };
+  },
+};
+</script>
