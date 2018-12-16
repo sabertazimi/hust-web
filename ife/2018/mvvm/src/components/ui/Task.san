@@ -1,8 +1,6 @@
 <template>
 <div class="task-container">
-  <div>
-    <slot></slot>
-  </div>
+  <slot></slot>
   <router-link to="/">Back to home</router-link>
 </div>
 </template>
@@ -19,5 +17,8 @@ export default {
 .task-container {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  padding: 3em;
 }
+
 </style>

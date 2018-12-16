@@ -41,12 +41,3 @@ export default {
 };
 
 </script>
-
-<style>
-
-.button {
-  display: block;
-  margin: 0;
-}
-
-</style>

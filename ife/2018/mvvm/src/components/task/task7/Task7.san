@@ -1,0 +1,92 @@
+<template>
+<div>
+  <task>
+    <button class="button" on-click="toggle">TOGGLE</button>
+    <span s-if="show" s-transition="hook">
+      Transition Layer
+    </span>
+    <p s-if="show" s-transition="hook">
+      The river is long and tempestuous, it was like a hero. The success or
+      failure of the turn is empty, the green hills are still there, and the
+      sunset is red. The white-haired fisherman is on the river and is used
+      to watching the autumn and spring. A pot of turbid wine meets, and
+      there are many things in ancient and modern times. the river is long
+      and tempestuous, it was like a hero. The success or failure of the turn
+      is empty, the green hills are still there, and the sunset is red. The
+      white-haired fisherman is on the river and is used to watching the
+      autumn and spring. A pot of turbid wine meets, and there are many
+      things in ancient and modern times. the river is long and tempestuous,
+      it was like a hero. The success or failure of the turn is empty, the
+      green hills are still there, and the sunset is red. The white-haired
+      fisherman is on the river and is used to watching the autumn and
+      spring. A pot of turbid wine meets, how many things in ancient and
+      modern times, all pay attention to laughter.
+    </p>
+  </task>
+</div>
+</template>
+
+<script>
+import { Task } from '../../ui';
+
+export default {
+  components: {
+    'task': Task,
+  },
+  initData() {
+    return {
+      show: true,
+    };
+  },
+  toggle() {
+    this.data.set('show', !this.data.get('show'));
+  },
+  hook() {
+    return {
+      enter(el, done) {
+        el.classList.add('before-enter');
+
+        setTimeout(() => {
+          el.classList.remove('before-enter');   	
+          el.classList.add('enter'); 
+        }, 20);  
+
+        setTimeout(() => {
+          el.classList.remove('enter');
+          done();
+        }, 500);
+      },
+      leave(el, done) {
+        el.classList.add('before-leave');
+
+        setTimeout(() => {
+          el.classList.remove('before-leave');
+          el.classList.add('leave');
+        }, 0);
+
+        setTimeout(() => {
+          el.classList.remove('leave');
+          done();
+        }, 500);
+      },
+    };
+  },
+};
+</script>
+
+<style>
+.enter,
+.leave {
+  transition: all 0.5s;
+}
+
+.before-enter,
+.leave {
+  opacity: 0;
+}
+
+.enter,
+.before-leave {
+  opacity: 1;
+}
+</style>
