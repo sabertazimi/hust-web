@@ -22,8 +22,15 @@ export default {
 <style>
 
 .app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: auto;
   width: 100%;
   padding: 1em;
+}
+
+.app > * {
+  flex: 1;
 }
 
 </style>

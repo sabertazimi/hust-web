@@ -1,7 +1,7 @@
 <template>
 
-<div>
-  <router-link class="router-link" to="{{ to }}">
+<div class="router-link">
+  <router-link class="router-link__entry" to="{{ to }}">
     <slot></slot>
   </router-link>
 </div>
@@ -28,17 +28,21 @@ export default {
 <style>
 
 .router-link {
-  display: inline-block;
-  transition: background-color 0.2s ease-in;
+  width: fit-content;
+  max-width: 20%;
   margin: 1em;
   padding: 0.75em 1em;
+  text-align: center;
+}
+
+.router-link__entry {
+  transition: background-color 0.2s ease-in;
   background-color: #f03e3e;
   color: #fff;
-  text-align: center;
   text-decoration: none;
 }
 
-.router-link:hover {
+.router-link__entry:hover {
   background-color: #ff6b6b;
 }
 
