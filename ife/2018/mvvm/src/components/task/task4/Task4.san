@@ -1,25 +1,34 @@
 <template>
 <div>
   <task>
-    <label for="child">子组件：</label>
-    <input type="text" id="child" name="child" />
-    <button type="button">通知父组件</button>
+    <parent />
+    <p class="red">{{ userInput === '' ? 'Waiting for input ... ' : userInput }}</p>
   </task>
 </div>
 </template>
 <script>
 import { Task } from '../../ui';
+import Parent from './Parent.san';
 
 export default {
   components: {
     'task': Task,
+    'parent': Parent,
+  },
+  messages: {
+    'input:grandParent': function (event) {
+      this.data.set('userInput', event.value);
+    }
   },
   initData() {
     return {
-
+      userInput: '',
     };
   },
 };
 </script>
 <style>
+.red {
+  color: #f00;
+}
 </style>

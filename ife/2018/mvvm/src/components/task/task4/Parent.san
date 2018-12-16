@@ -1,0 +1,33 @@
+<template>
+<div>
+  <child userInput="{{ userInput }}" />
+  <p class="green" on-input="handleInput($event)" contenteditable>{{ userInput === '' ? 'Waiting for input ... ' : userInput }}</p>
+</div>
+</template>
+<script>
+import Child from './Child.san';
+
+export default {
+  components: {
+    'child': Child,
+  },
+  messages: {
+    'input:parent': function (event) {
+      this.data.set('userInput', event.value);
+    }
+  },
+  initData() {
+    return {
+      userInput: '',
+    }
+  },
+  handleInput(event) {
+    this.data.set('userInput', event.target.innerHTML);
+  }
+};
+</script>
+<style>
+.green {
+  color: #008000;
+}
+</style>

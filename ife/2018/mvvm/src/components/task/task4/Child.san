@@ -1,0 +1,21 @@
+<template>
+<div>
+  <label for="child">子组件：</label>
+  <input type="text" id="child" name="child" value="{= userInput =}"/>
+  <button type="button" on-click="handleClick">通知父组件</button>
+</div>
+</template>
+<script>
+export default {
+  initData() {
+    return {
+      userInput: '',
+    }
+  },
+  handleClick() {
+    const userInput = this.data.get('userInput');
+    this.dispatch('input:parent', userInput);
+    this.dispatch('input:grandParent', userInput);
+  }
+};
+</script>
