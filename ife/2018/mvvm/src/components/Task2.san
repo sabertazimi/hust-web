@@ -1,35 +1,36 @@
 <template>
 <div>
-  <button class="button" on-click="addUser">Add</button>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>State</th>
-        <th>Operation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr s-for="user in users">
-        <td>{{ user.name }}</td>
-        <td>{{ user.state }}</td>
-        <td>
-          <button s-if="user.state === 'unknown'" on-click="changeUser(user)">Pass</button>
-          <button s-else on-click="changeUser(user)">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <router-link to="/">Back to home</router-link>
+  <task>
+    <button class="button" on-click="addUser">Add</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>State</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr s-for="user in users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.state }}</td>
+          <td>
+            <button s-if="user.state === 'unknown'" on-click="changeUser(user)">Pass</button>
+            <button s-else on-click="changeUser(user)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </task>
 </div>
 </template>
 
 <script>
-import Link from './Link.san';
+import Task from './Task.san';
 
 export default {
   components: {
-    'router-link': Link,
+    'task': Task,
   },
   initData() {
     return {

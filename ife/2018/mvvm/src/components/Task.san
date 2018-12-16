@@ -1,0 +1,23 @@
+<template>
+<div class="task-container">
+  <div>
+    <slot></slot>
+  </div>
+  <router-link to="/">Back to home</router-link>
+</div>
+</template>
+<script>
+import Link from './Link.san';
+
+export default {
+  components: {
+    'router-link': Link,
+  },
+};
+</script>
+<style>
+.task-container {
+  display: flex;
+  flex-direction: column;
+}
+</style>

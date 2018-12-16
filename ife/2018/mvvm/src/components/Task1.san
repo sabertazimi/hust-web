@@ -1,26 +1,25 @@
 <template>
-
 <div>
-  <input type="text" name="name" value="{= name =}" placeholder="Name (string)" />
-  <input type="number" name="age" value="{= age =}" placeholder="Age (number)" />
-  <input type="text" name="badge" value="{= badge =}" placeholder="Badge (string)" />
-  <button class="button" on-click="removeData">Remove Data</button>
-  <p>Name: {{ name || 'Unknown' }}</p>
-  <p>Age: {{ age || 'Unknown' }}</p>
-  <p>Badge: {{ badge || 'Unknown' }}</p>
-  <router-link to="/">Back to home</router-link>
+  <task>
+    <input type="text" name="name" value="{= name =}" placeholder="Name (string)" />
+    <input type="number" name="age" value="{= age =}" placeholder="Age (number)" />
+    <input type="text" name="badge" value="{= badge =}" placeholder="Badge (string)" />
+    <button class="button" on-click="removeData">Remove Data</button>
+    <p>Name: {{ name || 'Unknown' }}</p>
+    <p>Age: {{ age || 'Unknown' }}</p>
+    <p>Badge: {{ badge || 'Unknown' }}</p>
+  </task>
 </div>
-
 </template>
 
 <script>
 
 import { DataTypes } from 'san';
-import Link from './Link.san';
+import Task from './Task.san';
 
 export default {
   components: {
-    'router-link': Link,
+    'task': Task,
   },
   dataTypes: {
     name: DataTypes.string,
