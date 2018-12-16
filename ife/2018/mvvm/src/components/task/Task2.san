@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Task from './Task.san';
+import { Task } from '../ui';
 
 export default {
   components: {
