@@ -1,7 +1,16 @@
 <template>
 <div>
   <task>
-    Hello San!
+    <div
+      id="block"
+      style="
+        background: {{ color }};
+        width: 100px;
+        height: 100px;
+      "
+      on-click="changeColor"
+    >
+    </div>
   </task>
 </div>
 </template>
@@ -14,9 +23,13 @@ export default {
   },
   initData() {
     return {
-
+      color: '#000',
     };
   },
+  changeColor() {
+    const color = `#${(Math.random() * 0xFFFFFF<<0).toString(16)}`;
+    this.data.set('color', color);
+  }
 };
 </script>
 <style>
