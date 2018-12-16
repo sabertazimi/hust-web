@@ -1,26 +1,26 @@
 <template>
-
 <div class="app">
-  <router-link to="/task1">Task 1</router-link>
-  <router-link to="/task2">Task 2</router-link>
+  <router-link s-for="link in links" to="/{{ link }}">{{ link }}</router-link>
 </div>
-
 </template>
 
 <script>
-
-import { Link } from './components';
+import { Link } from './components/ui';
+import * as Tasks from './components/task';
 
 export default {
   components: {
     'router-link': Link,
   },
+  initData() {
+    const links = Object.keys(Tasks);
+    return {
+      links,
+    };
+  },
 };
-
 </script>
-
 <style>
-
 .app {
   display: flex;
   flex-direction: row;
@@ -32,5 +32,4 @@ export default {
 .app > * {
   flex: 1;
 }
-
 </style>
