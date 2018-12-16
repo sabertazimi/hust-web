@@ -1,0 +1,59 @@
+<template>
+<div>
+  <label s-if="label !== ''" for="{{ id }}">{{ label }}</label>
+  <input
+    type="text"
+    id="{{ id }}"
+    class="input {{ alert ? 'input--alert' : '' }}"
+    placeholder="{{ placeholder }}"
+    disabled="{{ disabled }}"
+    readonly="{{ readonly }}"
+    on-input="handleEvent('input', $event)"
+    on-focus="handleEvent('focus', $event)"
+    on-blur="handleEvent('blur', $event)"
+  />
+  <span s-if="alert" class="alert">{{ alertMessage }}</span>
+</div>
+</template>
+
+<script>
+export default {
+  initData() {
+    return {
+      label: '',
+      id: `input-${Math.random().toString(36).substr(2, 5)}`,
+      placeholder: '',
+      disabled: false,
+      readonly: false,
+      alert: false,
+      alertMessage: '',
+      value: '',
+    };
+  },
+  handleEvent(eventType, event) {
+    const value = event.target.value;
+    const pattern = this.data.get('pattern');
+
+    if (pattern && pattern(value)) {
+      this.data.set('alertMessage', pattern(value));
+      this.data.set('alert', true);
+    } else {
+      this.data.set('alert', false);
+    }
+    
+    this.data.set('value', value);  // state
+    this.fire(eventType, event);
+  },
+};
+</script>
+
+<style>
+.input--alert {
+  border-color: #f00;
+}
+
+.alert {
+  background-color: #f00;
+  color: #fff;
+}
+</style>

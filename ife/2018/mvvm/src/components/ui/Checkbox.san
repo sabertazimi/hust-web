@@ -1,0 +1,40 @@
+<template>
+<div>
+  <input
+    type="checkbox"
+    id="{{ id }}"
+    disabled="{{ disabled }}"
+    value="{{ value }}"
+    on-change="handleChange('change', $event)"
+  />
+  <label s-if="label !== ''" for="{{ id }}">{{ label }}</label>
+</div>
+</template>
+
+<script>
+export default {
+  initData() {
+    return {
+      label: '',
+      id: `input-${Math.random().toString(36).substr(2, 5)}`,
+      disabled: false,
+      indeterminate: false,
+      trueValue: '',
+      falseValue: '',
+      checked: false,
+      value: '',
+    };
+  },
+  handleChange(eventType, event) {
+    const checked = event.target.checked;
+    const value = checked ? this.data.get('trueValue') : this.data.get('falseValue');
+    this.data.set('checked', checked);  // state
+    this.data.set('value', value);      // state
+    this.fire(eventType, event);
+  },
+};
+</script>
+
+<style>
+
+</style>
