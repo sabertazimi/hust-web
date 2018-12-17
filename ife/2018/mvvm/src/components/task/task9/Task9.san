@@ -1,14 +1,19 @@
 <template>
 <div>
   <task>
-    <san-cascader options="{{ options }}" />
+    <div style="margin: 1em 0;">
+      <san-cascader depth="{{ depth }}" options="{{ options }}" path="{= path =}"/>
+    </div>
+    <p s-if="path.length">{{ path }}</p>
   </task>
 </div>
 </template>
 
 <script>
-import { Task } from '../../ui';
-import Cascader from './Cascader.san';
+import {
+  Task,
+  Cascader,
+} from '../../ui';
 
 export default {
   components: {
@@ -17,6 +22,8 @@ export default {
   },
   initData() {
     return {
+      depth: 0,
+      path: [],
       options: [
         {
           value: 'zhinan',
