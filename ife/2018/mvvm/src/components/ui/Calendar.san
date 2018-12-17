@@ -1,0 +1,237 @@
+<template>
+<div class="calendar">
+  <div class="calendar__header">
+    <div class="calendar__item calendar__header__item">&lt;&lt;</div>
+    <div class="calendar__item calendar__header__item">&lt;</div>
+    <div class="calendar__item calendar__header__item calendar__header_date">
+     {{ selectedDateItem.year }} 年 {{ selectedDateItem.month + 1 }} 月
+    </div>
+    <div class="calendar__item calendar__header__item">&gt;</div>
+    <div class="calendar__item calendar__header__item">&gt;&gt;</div>
+  </div>
+  <div class="calendar__week">
+    <div s-for="weekday in weekdayList" class="calendar__item">
+      {{ weekday }}
+    </div>
+  </div>
+  <div class="calendar__body">
+    <div
+      s-for="dateItem in dateItemList"
+      class="
+        calendar__item calendar__date
+        {{ dateItem.month !== selectedDateItem.month ? 'calendar__date--inactive' : '' }}
+        {{ dateItem.value === selectedDateItem.value ? 'calendar__date--active' : ''}}
+      "
+      on-click="handleDateItemClick(dateItem)"
+    >
+      {{ dateItem.date }}
+    </div>
+  </div>
+</div>
+</template>
+
+<script>
+const weekday = (year, month, date) => {
+  return (new Date(year, month, date)).getDay();
+};
+
+const dateValue = (year, month, date) => {
+  return (new Date(year, month, date)).toString();
+};
+
+const daysOfMonth = (year, month) => {
+  // `0` for last day
+  return (new Date(year, month + 1, 0)).getDate();
+};
+
+const prevYear = (year) => {
+  return (new Date(year - 1, 0)).getFullYear();
+}
+
+const nextYear = (year) => {
+  return (new Date(year + 1, 0)).getFullYear();
+}
+
+const prevMonth = (year, month) => {
+  return (new Date(year, month - 1)).getMonth();
+};
+
+const nextMonth = (year, month) => {
+  return (new Date(year, month + 1)).getMonth();
+};
+
+const DateItem = (year, month, date) => {
+  return {
+    year,
+    month,
+    date,
+    day: weekday(year, month, date),
+    value: dateValue(year, month, date),
+  };
+};
+
+const DateItemFromDate = (_date) => {
+  const year = _date.getFullYear();
+  const month = _date.getMonth();
+  const date = _date.getDate();
+
+  return {
+    year,
+    month,
+    date,
+    day: _date.getDay(),
+    value: dateValue(year, month, date)
+  };
+};
+
+const getDateItemList = (year, month) => {
+  const days = daysOfMonth(year, month);
+  const currentDateItemList = [...Array(days).keys()].map((index) => {
+    return DateItem(year, month, 1 + index);
+  });
+
+  const firstDayItem = DateItem(year, month, 1);
+  const firstDayWeekday = firstDayItem.day;
+  const lastMonthDays = daysOfMonth(year, month - 1);
+  const prefixDays = firstDayWeekday === 0 ? 7 : firstDayWeekday;
+  const prefixFirstDay = lastMonthDays - prefixDays + 1;
+  const prefixYear = prevYear(year);
+  const prefixMonth = prevMonth(year, month);
+  const prefixDateItemList = [...Array(prefixDays).keys()].map((index) => {
+    return DateItem(prefixYear, prefixMonth, prefixFirstDay + index);
+  });
+
+  const lastDayItem = DateItem(year, month, days);
+  const lastDayWeekday = lastDayItem.day;
+  const suffixDays = lastDayWeekday === 6 ? 7: (6 - lastDayWeekday);
+  const suffixYear = nextYear(year);
+  const suffixMonth = nextMonth(year, month);
+  const suffixDateItemList = [...Array(suffixDays).keys()].map((index) => {
+    return DateItem(suffixYear, suffixMonth, 1 + index);
+  });
+
+  const dateItemList = [
+    ...prefixDateItemList,
+    ...currentDateItemList,
+    ...suffixDateItemList,
+  ];
+
+  return dateItemList;
+};
+
+export default {
+  initData() {
+    return {
+      OP: {
+        PREV_YEAR: 0,
+        PREV_MONTH: 1,
+        NEXT_MONTH: 2,
+        NEXT_YEAR: 3,
+      },
+      weekdayList: [
+        '日', '一', '二', '三', '四', '五', '六',
+      ],
+      dateItemList: getDateItemList(new Date().getFullYear(), new Date().getMonth()),
+      selectedDateItem: DateItemFromDate(new Date()),
+    };
+  },
+  changeMonth(year, month) {
+    const newDateItemList = getDateItemList(year, month);
+    this.data.set('dateItemList', newDateItemList);
+  },
+  handleDateItemClick(dateItem) {
+    const selectedDateItem = this.data.get('selectedDateItem');
+
+    if (selectedDateItem.month !== dateItem.month) {
+      this.changeMonth(dateItem.year, dateItem.month);
+    }
+
+    this.data.set('selectedDateItem', dateItem);
+  },
+};
+</script>
+
+<style>
+.calendar {
+  display: flex;
+  flex-direction: column;
+  max-width: 20em;
+  margin: 0;
+  padding: 1em;
+  border: 2px solid #f03e3e;
+}
+
+.calendar__item {
+  width: 13%; /* 1/7 */
+  margin: 0;
+  color: #000;
+  text-align: center;
+}
+
+.calendar__header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.calendar__header__item {
+  flex: 1;
+  transition: color 0.2s ease-in;
+  cursor: pointer;
+}
+
+.calendar__header__item:hover {
+  color: #f03e3e;
+}
+
+.calendar__header_date {
+  flex: 4;
+}
+
+.calendar__week,
+.calendar__body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 0.5em;
+  padding: 0;
+}
+
+.calendar__week {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #f03e3e;
+}
+
+.calendar__date {
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  cursor: pointer;
+}
+
+.calendar__date:hover {
+  color: #f03e3e;
+}
+
+.calendar__date--active {
+  background-color: #f03e3e;
+  color: #fff;
+}
+
+.calendar__date--active:hover {
+  background-color: #f08686;
+  color: #fff;
+}
+
+.calendar__date--inactive {
+  background-color: #fff;
+  color: #aaa;
+}
+
+.calendar__date--inactive:hover {
+  color: #777;
+}
+</style>

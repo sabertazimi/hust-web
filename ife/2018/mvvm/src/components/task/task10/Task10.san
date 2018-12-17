@@ -1,21 +1,27 @@
 <template>
 <div>
   <task>
-    Calendar Component
+    <san-calendar />
   </task>
 </div>
 </template>
 
 <script>
-import { Task } from '../../ui';
+import {
+  Task,
+  Calendar,
+  Modal,
+} from '../../ui';
 
 export default {
   components: {
     'task': Task,
+    'san-calendar': Calendar,
+    'san-modal': Modal,
   },
   initData() {
     return {
-
+      date: new Date(),
     };
   },
 };
