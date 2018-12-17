@@ -1,0 +1,28 @@
+<template>
+  <p>
+    {{ content }}
+  </p>
+</template>
+
+<script>
+export default {
+  compiled() {
+    console.log('Paragraph compiled !');
+  },
+  inited() {
+    console.log('Paragraph inited !');
+  },
+  created() {
+    console.log('Paragraph created !');
+  },
+  attached() {
+    console.log('Paragraph attached !');
+  },
+  detached() {
+    console.log('Paragraph detached !');
+  },
+  disposed() {
+    console.log('Paragraph disposed !');
+  },
+};
+</script>

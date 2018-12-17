@@ -1,0 +1,98 @@
+<template>
+<div class="panel">
+  <div class="panel__title">
+    <slot name="title">
+      <h3>{{ title }}</h3>
+    </slot>
+  </div>
+  <button class="button panel__button" on-click="toggle">{{ show ? '↑' : '↓'}}</button>
+  <div class="panel__content" s-if="show" s-transition="hook">
+    <slot>
+      <p>{{ content }}</p>
+    </slot>
+  </div>
+</div>
+</template>
+
+<script>
+export default {
+  initData() {
+    return {
+      show: true,
+    };
+  },
+  toggle() {
+    this.data.set('show', !this.data.get('show'));
+  },
+  hook() {
+    return {
+      enter(el, done) {
+        el.classList.add('before-enter');
+
+        setTimeout(() => {
+          el.classList.remove('before-enter');   	
+          el.classList.add('enter'); 
+        }, 20);  
+
+        setTimeout(() => {
+          el.classList.remove('enter');
+          done();
+        }, 500);
+      },
+      leave(el, done) {
+        el.classList.add('before-leave');
+
+        setTimeout(() => {
+          el.classList.remove('before-leave');
+          el.classList.add('leave');
+        }, 0);
+
+        setTimeout(() => {
+          el.classList.remove('leave');
+          done();
+        }, 500);
+      },
+    };
+  },
+};
+</script>
+
+<style>
+.panel {
+  position: relative;
+  width: 80%;
+  min-width: 80%;
+  padding: 0.5em;
+  border: 1px solid #f03e3e;
+  border-radius: 1em;
+}
+
+.panel__button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  font-size: 0.3rem;
+}
+
+.panel__content {
+  margin-top: 3em;
+}
+
+.enter,
+.leave {
+  transition: all 0.5s;
+}
+
+.before-enter,
+.leave {
+  opacity: 0;
+}
+
+.enter,
+.before-leave {
+  opacity: 1;
+}
+</style>
