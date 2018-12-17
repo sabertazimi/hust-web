@@ -6,6 +6,13 @@ import Task5 from './task5';
 import Task6 from './task6';
 import Task7 from './task7';
 import Task8 from './task8';
+import Task9 from './task9';
+import Task10 from './task10';
+import Task11 from './task11';
+import Task12 from './task12';
+import Task13 from './task13';
+import Task14 from './task14';
+import Task15 from './task15';
 
 export {
   Task1,
@@ -16,4 +23,11 @@ export {
   Task6,
   Task7,
   Task8,
+  Task9,
+  Task10,
+  Task11,
+  Task12,
+  Task13,
+  Task14,
+  Task15,
 };

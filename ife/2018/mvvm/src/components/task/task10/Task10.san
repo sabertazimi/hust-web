@@ -1,0 +1,26 @@
+<template>
+<div>
+  <task>
+    Calendar Component
+  </task>
+</div>
+</template>
+
+<script>
+import { Task } from '../../ui';
+
+export default {
+  components: {
+    'task': Task,
+  },
+  initData() {
+    return {
+
+    };
+  },
+};
+</script>
+
+<style>
+
+</style>
