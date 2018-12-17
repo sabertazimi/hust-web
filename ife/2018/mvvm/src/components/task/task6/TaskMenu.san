@@ -1,7 +1,10 @@
 <template>
 <div>
-  <h2 s-if="title">{{ title }}</h2>
-  <slot s-if="!title" name="title"></slot>
+  <slot name="title">
+    <h2 style="text-align: center;">
+      {{ title }}
+    </h2>
+  </slot>
   <div class="task-board">
     <div class="task-board__entry" s-for="task, index in tasks">
       <slot
