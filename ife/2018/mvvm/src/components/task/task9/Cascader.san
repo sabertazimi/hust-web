@@ -1,81 +1,45 @@
 <template>
-  
+<div>
+  <ul class="cas__list">
+    <li class="cas__item" s-for="option in options">
+      {{ option.label }}
+    </li>
+  </ul>
+  <ul class="cas__list">
+    <li class="cas__item" s-for="option in options">
+      {{ option.label }}
+    </li>
+  </ul>
+</div>
 </template>
 
 <script>
 export default {
   components: {
-    'ui-node': 'self'
-  },
-  initData() {
-    return {
-      : [
-        {
-          value: 'zhinan',
-          label: '指南',
-          children: [
-            {
-              value: 'shejiyuanze',
-              label: '设计原则',
-              children: [
-                {
-                  value: 'yizhi',
-                  label: '一致'
-                },
-                {
-                  value: 'fankui',
-                  label: '反馈'
-                },
-                {
-                  value: 'xiaolv',
-                  label: '效率'
-                },
-                {
-                  value: 'kekong',
-                  label: '可控'
-                }
-              ]
-            },
-            {
-              value: 'daohang',
-              label: '导航',
-              children: [
-                {
-                  value: 'cexiangdaohang',
-                  label: '侧向导航'
-                },
-                {
-                  value: 'dingbudaohang',
-                  label: '顶部导航'
-                }
-              ]
-            }
-          ]
-        },
-        {
-          value: 'ziyuan',
-          label: '资源',
-          children: [
-            {
-              value: 'axure',
-              label: 'Axure Components'
-            },
-            {
-              value: 'sketch',
-              label: 'Sketch Templates'
-            },
-            {
-              value: 'jiaohu',
-              label: '组件交互文档'
-            }
-          ]
-        }
-      ]
-    };
+    'ui-node': 'self',
   },
 };
 </script>
 
 <style>
+.cas__list {
+  display: inline-block;
+  margin: 0;
+  list-style-type: none;
+}
 
+.cas__item {
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  min-width: 5em;
+  min-width: 10em;
+  padding: 0.5em 1em;
+  border: 1px solid #f03e3e;
+  border-radius: 2em;
+  color: #f03e3e;
+}
+
+.cas__item:hover {
+  background-color: #f03e3e;
+  color: #fff;
+}
 </style>
