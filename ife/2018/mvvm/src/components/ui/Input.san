@@ -15,6 +15,7 @@
     on-blur="handleEvent('blur', $event)"
   />
   <span s-if="alert" class="form__alert">{{ alertText }}</span>
+  <span s-else class="form__alert--placeholder">Alert Placeholder 占位符</span>
 </div>
 </template>
 
@@ -62,6 +63,9 @@ export default {
 <style>
 .form__input__wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
 
 .form__input {
@@ -78,6 +82,12 @@ export default {
 .form__alert {
   padding: 0.5em 1em;
   background-color: #f03e3e;
+  color: #fff;
+}
+
+.form__alert--placeholder {
+  padding: 0.5em 1em;
+  background-color: #fff;
   color: #fff;
 }
 </style>

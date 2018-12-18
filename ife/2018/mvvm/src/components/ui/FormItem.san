@@ -44,6 +44,7 @@ export default {
 .form__item {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
   margin: 0;
   margin-top: 0.5em;
@@ -61,5 +62,9 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.form__item--label-right .form__item__label {
+  justify-content: flex-end;
 }
 </style>
