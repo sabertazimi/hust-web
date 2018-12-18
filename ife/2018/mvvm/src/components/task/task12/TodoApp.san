@@ -1,0 +1,399 @@
+<template>
+  <div class="container">
+    <section class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
+        <input
+          class="new-todo"
+          placeholder="What needs to be done?"
+          value="{= newTodo =}"
+        >
+      </header>
+      <section class="main" s-if="todos.length">
+        <input class="toggle-all" type="checkbox" value="{= allDone =}">
+        <ul class="todo-list">
+          <li
+            s-for="todo in filteredTodos"
+            class="
+              {{ todo.completed ? 'completed' : '' }}
+              {{ todo == editedTodo ? 'editing' : '' }}
+            "
+          >
+            <div class="view">
+              <input class="toggle" type="checkbox" value="{= todo.completed =}">
+              <label on-click="editTodo(todo)">{{ todo.title }}</label>
+              <button class="destroy" on-click="removeTodo(todo)"></button>
+            </div>
+            <input
+              class="edit"
+              type="text"
+              value="{= todo.title =}"
+              on-blur="doneEdit(todo)"
+            >
+          </li>
+        </ul>
+      </section>
+      <footer class="footer" s-if="todos.length">
+        <span class="todo-count">
+          <strong>{{ remaining }}</strong>
+          {{ remaining | pluralize }} left
+        </span>
+        <ul class="filters">
+          <li>
+            <a class="{{ visibility == 'all' ? 'selected' : '' }}">All</a>
+          </li>
+          <li>
+            <a class="{{ visibility == 'active' ? 'selected' : '' }}">Active</a>
+          </li>
+          <li>
+            <a class="{{ visibility == 'completed' ? 'selected' : '' }}">Completed</a>
+          </li>
+        </ul>
+        <button
+          class="clear-completed"
+          on-click="removeCompleted"
+          s-if="todos.length > remaining"
+        >Clear completed</button>
+      </footer>
+    </section>
+    <footer class="info">
+      <p>Written by
+        <a href="http://sabertazimi.github.io">sabertazimi</a>
+      </p>
+      <p>Part of
+        <a href="http://todomvc.com">TodoMVC</a>
+      </p>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  initData() {
+    return {
+      newTodo: '',
+      allDone: false,
+      todos: [
+        {
+          completed: false,
+          title: 'TodoMVC Demo',
+        },
+      ],
+    }
+  },
+};
+</script>
+
+<style>
+.todoapp button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  vertical-align: baseline;
+  appearance: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.todoapp {
+  position: relative;
+  margin: 130px 0 40px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.todoapp input::input-placeholder {
+  color: #e6e6e6;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.todoapp h1 {
+  position: absolute;
+  top: -155px;
+  width: 100%;
+  color: rgba(175, 47, 47, 0.15);
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+
+.new-todo,
+.edit {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 6px;
+  border: 0;
+  border: 1px solid #999;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  color: inherit;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: inherit;
+  line-height: 1.4em;
+}
+
+.new-todo {
+  padding: 16px 16px 16px 60px;
+  border: 0 solid transparent;
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.003);
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #e6e6e6;
+}
+
+.toggle-all {
+  position: absolute;
+  right: 100%;
+  bottom: 100%;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  border: 0 solid transparent; /* Mobile Safari */
+}
+
+.toggle-all + label {
+  position: absolute;
+  top: -52px;
+  left: -13px;
+  transform: rotate(90deg);
+  width: 60px;
+  height: 34px;
+  font-size: 0;
+}
+
+.toggle-all + label::before {
+  padding: 10px 27px;
+  color: #e6e6e6;
+  font-size: 22px;
+  content: "❯";
+}
+
+.toggle-all:checked + label::before {
+  color: #737373;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-list li {
+  position: relative;
+  border-bottom: 1px solid #ededed;
+  font-size: 24px;
+}
+
+.todo-list li:last-child {
+  border-bottom: 0 solid transparent;
+}
+
+.todo-list li.editing {
+  padding: 0;
+  border-bottom: 0 solid transparent;
+}
+
+.todo-list li.editing .edit {
+  display: block;
+  width: 506px;
+  margin: 0 0 0 43px;
+  padding: 12px 16px;
+}
+
+.todo-list li.editing .view {
+  display: none;
+}
+
+.todo-list li .toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  /* auto, since non-WebKit browsers doesn't support input styling */
+  height: auto;
+  margin: auto 0;
+  text-align: center;
+  appearance: none;
+}
+
+.todo-list li .toggle {
+  opacity: 0;
+}
+
+.todo-list li .toggle + label {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E");
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+
+.todo-list li .toggle:checked + label {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E");
+}
+
+.todo-list li label {
+  display: block;
+  transition: color 0.4s;
+  padding: 15px 15px 15px 60px;
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+.todo-list li.completed label {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+.todo-list li .destroy {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  display: none;
+  transition: color 0.2s ease-out;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  margin-bottom: 11px;
+  color: #cc9a9a;
+  font-size: 30px;
+}
+
+.todo-list li .destroy:hover {
+  color: #af5b5e;
+}
+
+.todo-list li .destroy::after {
+  content: "×";
+}
+
+.todo-list li:hover .destroy {
+  display: block;
+}
+
+.todo-list li .edit {
+  display: none;
+}
+
+.todo-list li.editing:last-child {
+  margin-bottom: -1px;
+}
+
+.footer {
+  height: 20px;
+  padding: 10px 15px;
+  border-top: 1px solid #e6e6e6;
+  color: #777;
+  text-align: center;
+}
+
+.footer::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6,
+    0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6,
+    0 17px 2px -6px rgba(0, 0, 0, 0.2);
+  content: "";
+}
+
+.todo-count {
+  float: left;
+  text-align: left;
+}
+
+.todo-count strong {
+  font-weight: 300;
+}
+
+.filters {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filters li {
+  display: inline;
+}
+
+.filters li a {
+  margin: 3px;
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.filters li a:hover {
+  border-color: rgba(175, 47, 47, 0.1);
+}
+
+.filters li a.selected {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.clear-completed,
+html .clear-completed:active {
+  position: relative;
+  float: right;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 20px;
+}
+
+.clear-completed:hover {
+  text-decoration: underline;
+}
+
+.info {
+  margin: 65px auto 0;
+  color: #bfbfbf;
+  font-size: 10px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.info p {
+  line-height: 1;
+}
+
+.info a {
+  color: inherit;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  margin: 0;
+}
+</style>
