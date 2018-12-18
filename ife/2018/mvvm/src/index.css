@@ -12,7 +12,6 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: inherit;
   font-family: inherit;
 }
 

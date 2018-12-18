@@ -1,8 +1,10 @@
 <template>
 <div>
   <task>
-    <parent />
-    <p class="red">{{ userInput === '' ? 'Waiting for input ... ' : userInput }}</p>
+    <div style="margin: 0 auto;">
+      <parent />
+      <p class="red">{{ userInput === '' ? 'Waiting for input ... ' : userInput }}</p>
+    </div>
   </task>
 </div>
 </template>

@@ -1,48 +1,46 @@
 <template>
-<div>
-  <task>
-    <san-input
-      label="Input: "
-      placeholder="Input here ..."
-      value="{= inputValue =}"
-      pattern="{{ pattern }}"
-    />
-    <p>{{ inputValue }}</p>
-    <san-checkbox
-      label="Checkbox"
-      trueValue="checkedBox"
-      falseValue="uncheckedBox"
-      checked="true"
-      value="{= checkboxValue =}"
-    />
-    <p>{{ checkboxValue }}</p>
-  </task>
-</div>
+  <div>
+    <task>
+      <div style="margin: 0 auto;">
+        <san-input
+          label="Input: "
+          placeholder="Input here ..."
+          value="{= inputValue =}"
+          pattern="{{ pattern }}"
+        />
+        <p>{{ inputValue }}</p>
+        <san-checkbox
+          label="Checkbox"
+          trueValue="checkedBox"
+          falseValue="uncheckedBox"
+          checked="true"
+          value="{= checkboxValue =}"
+        />
+        <p>{{ checkboxValue }}</p>
+      </div>
+    </task>
+  </div>
 </template>
 <script>
-import {
-  Task,
-  Input,
-  Checkbox,
-} from '../../ui';
+import { Task, Input, Checkbox } from "../../ui";
 
 export default {
   components: {
-    'task': Task,
-    'san-input': Input,
-    'san-checkbox': Checkbox,
+    task: Task,
+    "san-input": Input,
+    "san-checkbox": Checkbox
   },
   initData() {
     return {
-      inputValue: '',
-      checkboxValue: '',
+      inputValue: "",
+      checkboxValue: "",
       pattern: function(value) {
         if (value.length <= 5) {
-          return 'Too short!';
+          return "Too short!";
         }
-      },
+      }
     };
-  },
+  }
 };
 </script>
 <style>

@@ -62,6 +62,7 @@ export default {
   position: relative;
   width: 80%;
   min-width: 80%;
+  margin: 0 auto;
   padding: 0.5em;
   border: 1px solid #f03e3e;
   border-radius: 1em;
