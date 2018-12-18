@@ -1,0 +1,103 @@
+<template>
+<div class="datepicker">
+  <div class="datepicker__header" on-click="toggle">
+    <h3 s-if="dateItem">
+      {{ dateItem.year }}-{{ dateItem.month}}-{{ dateItem.date}}
+    </h3>
+    <h3 s-else>
+      Date ...
+    </h3>
+  </div>
+  <div class="datepicker__body" s-if="show" s-transition="transition">
+    <san-calendar selectedDateItem="{= dateItem =}" on-click="toggle" />
+  </div>
+</div>
+</template>
+
+<script>
+import Calendar from './Calendar.san';
+
+export default {
+  components: {
+    'san-calendar': Calendar,
+  },
+  initData() {
+    return {
+      show: false,
+    };
+  },
+  toggle() {
+    this.data.set('show', !this.data.get('show'));
+  },
+  transition() {
+    return {
+      enter(el, done) {
+        el.classList.add('datepicker__body--before-enter');
+
+        setTimeout(() => {
+          el.classList.remove('datepicker__body--before-enter');   	
+          el.classList.add('datepicker__body--enter'); 
+        }, 20);  
+
+        setTimeout(() => {
+          el.classList.remove('datepicker__body--enter');
+          done();
+        }, 500);
+      },
+      leave(el, done) {
+        el.classList.add('datepicker__body--before-leave');
+
+        setTimeout(() => {
+          el.classList.remove('datepicker__body--before-leave');
+          el.classList.add('datepicker__body--leave');
+        }, 0);
+
+        setTimeout(() => {
+          el.classList.remove('datepicker__body--leave');
+          done();
+        }, 500);
+      },
+    };
+  },
+};
+</script>
+
+<style>
+.datepicker {
+  position: relative;
+  width: 80%;
+  max-width: 20em;
+  padding: 0.5em;
+  border: 1px solid #f03e3e;
+}
+
+.datepicker__header {
+  cursor: pointer;
+}
+
+.datepicker__body {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  transform: translateY(1em);
+}
+
+.datepicker__body > * {
+  z-index: 999;
+}
+
+.datepicker__body--enter,
+.datepicker__body--leave {
+  transition: all 0.5s;
+}
+
+.datepicker__body--before-enter,
+.datepicker__body--leave {
+  opacity: 0;
+}
+
+.datepicker__body--enter,
+.datepicker__body--before-leave {
+  opacity: 1;
+}
+</style>

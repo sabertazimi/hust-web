@@ -141,6 +141,8 @@ export default {
     }
 
     this.data.set('selectedDateItem', dateItem);
+
+    this.fire('click');
   },
   handleHeaderClick(type) {
     const [ ny, nm ] = type;
@@ -164,6 +166,7 @@ export default {
   margin: 0;
   padding: 1em;
   border: 2px solid #f03e3e;
+  background-color: #fff;
 }
 
 .calendar__item {

@@ -1,7 +1,7 @@
 <template>
 <div>
   <task>
-    <san-calendar />
+    <san-datepicker />
   </task>
 </div>
 </template>
@@ -10,14 +10,13 @@
 import {
   Task,
   Calendar,
-  Modal,
+  DatePicker,
 } from '../../ui';
 
 export default {
   components: {
     'task': Task,
-    'san-calendar': Calendar,
-    'san-modal': Modal,
+    'san-datepicker': DatePicker,
   },
   initData() {
     return {
