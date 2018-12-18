@@ -2,7 +2,7 @@
 <div class="datepicker">
   <div class="datepicker__header" on-click="toggle">
     <h3 s-if="dateItem">
-      {{ dateItem.year }}-{{ dateItem.month}}-{{ dateItem.date}}
+      {{ dateItem.year }}-{{ dateItem.month + 1 }}-{{ dateItem.date }}
     </h3>
     <h3 s-else>
       Date ...

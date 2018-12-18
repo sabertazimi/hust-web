@@ -12,7 +12,7 @@
     on-focus="handleEvent('focus', $event)"
     on-blur="handleEvent('blur', $event)"
   />
-  <span s-if="alert" class="alert">{{ alertMessage }}</span>
+  <span s-if="alert" class="alert">{{ alertText }}</span>
 </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
       disabled: false,
       readonly: false,
       alert: false,
-      alertMessage: '',
+      alertText: '',
       value: '',
     };
   },
@@ -35,7 +35,7 @@ export default {
     const pattern = this.data.get('pattern');
 
     if (pattern && pattern(value)) {
-      this.data.set('alertMessage', pattern(value));
+      this.data.set('alertText', pattern(value));
       this.data.set('alert', true);
     } else {
       this.data.set('alert', false);

@@ -44,22 +44,6 @@ const daysOfMonth = (year, month) => {
   return (new Date(year, month + 1, 0)).getDate();
 };
 
-const prevYear = (year) => {
-  return (new Date(year - 1, 0)).getFullYear();
-}
-
-const nextYear = (year) => {
-  return (new Date(year + 1, 0)).getFullYear();
-}
-
-const prevMonth = (year, month) => {
-  return (new Date(year, month - 1)).getMonth();
-};
-
-const nextMonth = (year, month) => {
-  return (new Date(year, month + 1)).getMonth();
-};
-
 const DateItem = (year, month, date) => {
   return DateItemFromDate(new Date(year, month, date));
 };
@@ -89,19 +73,15 @@ const getDateItemList = (year, month) => {
   const lastMonthDays = daysOfMonth(year, month - 1);
   const prefixDays = firstDayWeekday === 0 ? 7 : firstDayWeekday;
   const prefixFirstDay = lastMonthDays - prefixDays + 1;
-  const prefixYear = prevYear(year);
-  const prefixMonth = prevMonth(year, month);
   const prefixDateItemList = [...Array(prefixDays).keys()].map((index) => {
-    return DateItem(prefixYear, prefixMonth, prefixFirstDay + index);
+    return DateItem(year, month - 1, prefixFirstDay + index);
   });
 
   const lastDayItem = DateItem(year, month, days);
   const lastDayWeekday = lastDayItem.day;
   const suffixDays = lastDayWeekday === 6 ? 7: (6 - lastDayWeekday);
-  const suffixYear = nextYear(year);
-  const suffixMonth = nextMonth(year, month);
   const suffixDateItemList = [...Array(suffixDays).keys()].map((index) => {
-    return DateItem(suffixYear, suffixMonth, 1 + index);
+    return DateItem(year, month + 1, 1 + index);
   });
 
   const dateItemList = [
@@ -125,9 +105,12 @@ export default {
       weekdayList: [
         '日', '一', '二', '三', '四', '五', '六',
       ],
-      dateItemList: getDateItemList(new Date().getFullYear(), new Date().getMonth()),
       selectedDateItem: DateItemFromDate(new Date()),
     };
+  },
+  inited() {
+    const selectedDateItem = this.data.get('selectedDateItem');
+    this.data.set('dateItemList', getDateItemList(selectedDateItem.year, selectedDateItem.month));
   },
   changeMonth(year, month) {
     const newDateItemList = getDateItemList(year, month);
@@ -142,7 +125,7 @@ export default {
 
     this.data.set('selectedDateItem', dateItem);
 
-    this.fire('click');
+    this.fire('click', dateItem);
   },
   handleHeaderClick(type) {
     const [ ny, nm ] = type;
@@ -150,10 +133,10 @@ export default {
 
     const newYear = year + ny;
     const newMonth = month + nm;
-    const newSelectedDateItem = DateItem(newYear, newMonth, 15);
+    const dateItem = DateItem(newYear, newMonth, 15);
 
     this.changeMonth(newYear, newMonth);
-    this.data.set('selectedDateItem', newSelectedDateItem);
+    this.data.set('selectedDateItem', dateItem);
   }
 };
 </script>
