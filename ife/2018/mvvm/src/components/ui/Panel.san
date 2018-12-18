@@ -67,12 +67,13 @@ export default {
   border-radius: 1em;
 }
 
-.panel__button {
+.panel .panel__button {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
   width: 1em;
   height: 1em;
+  padding: 1em;
   border-radius: 50%;
   font-size: 0.3rem;
 }

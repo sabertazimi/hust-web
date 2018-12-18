@@ -16,15 +16,11 @@ body {
   font-family: inherit;
 }
 
-* + * {
-  margin-top: 0.5em;
-}
-
 .button {
   display: block;
   transition: background-color 0.2s ease-in, color 0.2s ease-in;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5em 1em;
   border: 1px solid #f03e3e;
   outline: none;
   background-color: #fff;

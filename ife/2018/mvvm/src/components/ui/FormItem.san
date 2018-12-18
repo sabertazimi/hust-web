@@ -1,0 +1,51 @@
+<template>
+<div
+  class="
+    form__item
+    {{ labelPosition === 'top' ? 'form__item--label-top' : '' }}
+    {{ labelPosition === 'right' ? 'form__item--label-right' : '' }}
+  "
+>
+  <label class="form__item__label" style="width: {{ labelWidth }};">
+    {{ label }}
+  </label>
+  <slot />
+</div>
+</template>
+
+<script>
+export default {
+  initData() {
+    return {
+      require: false,
+      labelWidth: '100px',
+      rules: [],
+      labelPosition: 'left',
+    }
+  },
+};
+</script>
+
+<style>
+.form__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.form__item--label-top {
+  flex-direction: column;
+}
+
+.form__item--label-right {
+  flex-direction: row-reverse;
+}
+
+.form__item__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+</style>

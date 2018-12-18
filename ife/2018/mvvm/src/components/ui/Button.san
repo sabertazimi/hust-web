@@ -1,0 +1,19 @@
+<template>
+<button class="button form__button" on-click="handleClick">
+  <slot />
+</button>
+</template>
+
+<script>
+export default {
+  handleClick() {
+    this.fire('click');
+  },
+};
+</script>
+
+<style>
+.form .form__button {
+  z-index: 1;
+}
+</style>

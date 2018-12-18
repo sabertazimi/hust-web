@@ -4,7 +4,7 @@
   <input
     type="text"
     id="{{ id }}"
-    class="input {{ alert ? 'input--alert' : '' }}"
+    class="form__input {{ alert ? 'form__input--alert' : '' }}"
     placeholder="{{ placeholder }}"
     disabled="{{ disabled }}"
     readonly="{{ readonly }}"
@@ -48,12 +48,19 @@ export default {
 </script>
 
 <style>
-.input--alert {
-  border-color: #f00;
+.form__input {
+  margin: 0;
+  padding: 0.5em 1em;
+  border: 1px solid #000;
+}
+
+.form__input--alert {
+  border-color: #f03e3e;
 }
 
 .alert {
-  background-color: #f00;
+  padding: 0.5em 1em;
+  background-color: #f03e3e;
   color: #fff;
 }
 </style>
