@@ -394,6 +394,7 @@ html .clear-completed:active {
 }
 
 .container {
-  margin: 0;
+  width: 80%;
+  margin: 0 auto;
 }
 </style>
