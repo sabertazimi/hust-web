@@ -1,13 +1,13 @@
 <template>
 <div class="calendar">
   <div class="calendar__header">
-    <div class="calendar__item calendar__header__item">&lt;&lt;</div>
-    <div class="calendar__item calendar__header__item">&lt;</div>
+    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.PREV_YEAR)">&lt;&lt;</div>
+    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.PREV_MONTH)">&lt;</div>
     <div class="calendar__item calendar__header__item calendar__header_date">
      {{ selectedDateItem.year }} 年 {{ selectedDateItem.month + 1 }} 月
     </div>
-    <div class="calendar__item calendar__header__item">&gt;</div>
-    <div class="calendar__item calendar__header__item">&gt;&gt;</div>
+    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.NEXT_MONTH)">&gt;</div>
+    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.NEXT_YEAR)">&gt;&gt;</div>
   </div>
   <div class="calendar__week">
     <div s-for="weekday in weekdayList" class="calendar__item">
@@ -61,13 +61,7 @@ const nextMonth = (year, month) => {
 };
 
 const DateItem = (year, month, date) => {
-  return {
-    year,
-    month,
-    date,
-    day: weekday(year, month, date),
-    value: dateValue(year, month, date),
-  };
+  return DateItemFromDate(new Date(year, month, date));
 };
 
 const DateItemFromDate = (_date) => {
@@ -123,10 +117,10 @@ export default {
   initData() {
     return {
       OP: {
-        PREV_YEAR: 0,
-        PREV_MONTH: 1,
-        NEXT_MONTH: 2,
-        NEXT_YEAR: 3,
+        PREV_YEAR: [-1, 0],
+        PREV_MONTH: [0, -1],
+        NEXT_MONTH: [0, 1],
+        NEXT_YEAR: [1, 0],
       },
       weekdayList: [
         '日', '一', '二', '三', '四', '五', '六',
@@ -148,6 +142,17 @@ export default {
 
     this.data.set('selectedDateItem', dateItem);
   },
+  handleHeaderClick(type) {
+    const [ ny, nm ] = type;
+    const { year, month } = this.data.get('selectedDateItem');
+
+    const newYear = year + ny;
+    const newMonth = month + nm;
+    const newSelectedDateItem = DateItem(newYear, newMonth, 15);
+
+    this.changeMonth(newYear, newMonth);
+    this.data.set('selectedDateItem', newSelectedDateItem);
+  }
 };
 </script>
 
