@@ -9,16 +9,31 @@ export default {
   initData() {
     return {
       formModel: {}, 
+      resets: [],
+      rules: {},
     };
   },
   validate(callback) {
-
+    const formModel = this.data.get('formModel');
+    formModel.keys().reduce((valid, prop) => {
+      return validateField(prop) && valid;
+    }, true);
   },
-  validateField() {
+  validateField(prop) {
 
   },
   resetFields() {
+    const resets = this.data.get('resets');
+    resets.forEach(reset => reset());
+  },
+  messages: {
+    'init:input': function(event) {
+      const $formItem = event.target;
+      const { prop, rules, reset, ref: $input } = event.value;
+      const resets = this.data.get('resets');
 
+      resets.push(reset);
+    },
   },
 };
 </script>

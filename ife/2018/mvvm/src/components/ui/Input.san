@@ -4,6 +4,7 @@
   <input
     type="text"
     id="{{ id }}"
+    value="{= value =}"
     class="form__input {{ alert ? 'form__input--alert' : '' }}"
     placeholder="{{ placeholder }}"
     disabled="{{ disabled }}"
@@ -30,6 +31,9 @@ export default {
       value: '',
     };
   },
+  inited() {
+    this.dispatch('init:input');
+  },
   handleEvent(eventType, event) {
     const value = event.target.value;
     const pattern = this.data.get('pattern');
@@ -44,11 +48,17 @@ export default {
     this.data.set('value', value);  // state
     this.fire(eventType, event);
   },
+  reset() {
+    this.data.set('alert', false);
+    this.data.set('alertText', '');
+    this.data.set('value', '');
+  },
 };
 </script>
 
 <style>
 .form__input {
+  min-width: 20em;
   margin: 0;
   padding: 0.5em 1em;
   border: 1px solid #000;

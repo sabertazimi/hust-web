@@ -23,6 +23,21 @@ export default {
       labelPosition: 'left',
     }
   },
+  messages: {
+    'init:input': function(event) {
+      const $input = event.target;
+
+      $input.data.set('placeholder', this.data.get('helpText'));
+
+      // 传给form组件
+      this.dispatch('init:input', {
+        prop: this.data.get('prop'),
+        rules: this.data.get('rules'),
+        reset: $input.reset.bind($input),
+        ref: $input,
+      });
+    },
+  },
 };
 </script>
 
