@@ -47,20 +47,13 @@ export default {
   },
   initData() {
     const idCardValidate = (rule, value, callback) => {
-      if (value) {
-        // 异步、远程验证
-        let userName = this.data.get("formModel.userName");
-        console.log({
-          userName,
-          idCard: value
-        });
-        // 将用户名和身份证号码作为参数发送异步请求，到服务端验证
+      if (!value) {
         setTimeout(function() {
-          callback([new Error("您输入的身份信息不匹配")]);
+          callback(["请输入身份证号码"]);
         }, 1000);
       } else {
         setTimeout(function() {
-          callback(["请输入身份证号码"]);
+          callback([]);
         }, 1000);
       }
     };
@@ -100,11 +93,11 @@ export default {
         },
         {
           min: 6,
-          message: "用户名需不少于6个字符"
+          message: "地址需不少于6个字符"
         },
         {
           max: 20,
-          message: "用户名需不超过20个字符"
+          message: "地址需不超过20个字符"
         }
       ],
       ruleIdCard: [

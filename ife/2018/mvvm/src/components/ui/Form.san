@@ -5,35 +5,76 @@
 </template>
 
 <script>
+import Schema from 'async-validator';
+
 export default {
   initData() {
     return {
       formModel: {}, 
-      resets: [],
-      rules: {},
+      _rules: {},
+      _values: {},
+      alertters: {},
+      resetters: [],
     };
   },
   validate(callback) {
     const formModel = this.data.get('formModel');
-    formModel.keys().reduce((valid, prop) => {
-      return validateField(prop) && valid;
-    }, true);
+    const alertters = this.data.get('alertters');
+    const asyncValidator = new Schema(this.data.get('_rules'));
+
+    asyncValidator.validate(formModel, (errors, fields) => {
+        if (fields) {
+          const _fields = Object.keys(fields);
+
+          Object.keys(alertters).forEach((prop) => {
+            if (!_fields.includes(prop)) {
+              alertters[prop]('');
+              return;
+            }
+
+            alertters[prop](fields[prop][0].message);
+          });
+        }
+
+        if (callback) {
+          callback(!errors);
+        }
+    });
   },
   validateField(prop) {
+    const formModel = this.data.get('formModel');
+    const alertter = this.data.get('alertters')[prop];
+    const rule = this.data.get('_rules')[prop];
+    const asyncValidator = new Schema({ prop: rule });
 
+    asyncValidator.validate({ prop: formModel[prop] }, (errors, fields) => {
+      if (errors && errors.length) {
+        alertter(errors[0].message);
+        return ;
+      }
+
+      alertter('');
+    });
   },
   resetFields() {
-    const resets = this.data.get('resets');
-    resets.forEach(reset => reset());
+    const resetters = this.data.get('resetters');
+    resetters.forEach(resetter => resetter());
   },
   messages: {
     'init:input': function(event) {
-      const $formItem = event.target;
-      const { prop, rules, reset, ref: $input } = event.value;
-      const resets = this.data.get('resets');
+      const { prop, rules, alert, reset } = event.value;
 
-      resets.push(reset);
-    },
+      const _rules = {...this.data.get('_rules')};
+      _rules[prop] = rules;
+      this.data.set('_rules', _rules);
+
+      const alertters = {...this.data.get('alertters')};
+      alertters[prop] = alert;
+      this.data.set('alertters', alertters);
+
+      const resetters = this.data.get('resetters');
+      resetters.push(reset);
+    }
   },
 };
 </script>

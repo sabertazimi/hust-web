@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="form__input__wrapper">
   <label s-if="label !== ''" for="{{ id }}">{{ label }}</label>
   <input
     type="text"
@@ -9,11 +9,12 @@
     placeholder="{{ placeholder }}"
     disabled="{{ disabled }}"
     readonly="{{ readonly }}"
+    require="{{ require }}"
     on-input="handleEvent('input', $event)"
     on-focus="handleEvent('focus', $event)"
     on-blur="handleEvent('blur', $event)"
   />
-  <span s-if="alert" class="alert">{{ alertText }}</span>
+  <span s-if="alert" class="form__alert">{{ alertText }}</span>
 </div>
 </template>
 
@@ -26,6 +27,7 @@ export default {
       placeholder: '',
       disabled: false,
       readonly: false,
+      require: false,
       alert: false,
       alertText: '',
       value: '',
@@ -36,17 +38,18 @@ export default {
   },
   handleEvent(eventType, event) {
     const value = event.target.value;
-    const pattern = this.data.get('pattern');
-
-    if (pattern && pattern(value)) {
-      this.data.set('alertText', pattern(value));
-      this.data.set('alert', true);
-    } else {
-      this.data.set('alert', false);
-    }
-    
     this.data.set('value', value);  // state
     this.fire(eventType, event);
+  },
+  alert(text) {
+    if (text) {
+      this.data.set('alertText', text);
+      this.data.set('alert', true);
+      return;
+    }
+
+    this.data.set('alertText', '');
+    this.data.set('alert', false);
   },
   reset() {
     this.data.set('alert', false);
@@ -57,6 +60,10 @@ export default {
 </script>
 
 <style>
+.form__input__wrapper {
+  position: relative;
+}
+
 .form__input {
   min-width: 20em;
   margin: 0;
@@ -68,7 +75,7 @@ export default {
   border-color: #f03e3e;
 }
 
-.alert {
+.form__alert {
   padding: 0.5em 1em;
   background-color: #f03e3e;
   color: #fff;
