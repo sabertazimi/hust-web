@@ -7,10 +7,12 @@
           class="new-todo"
           placeholder="What needs to be done?"
           value="{= newTodo =}"
+          on-keyup="addNewTodo($event.key, newTodo)"
         >
       </header>
       <section class="main" s-if="todos.length">
-        <input class="toggle-all" type="checkbox" value="{= allDone =}">
+        <input class="toggle-all" type="checkbox">
+        <label on-click="toggleAllDone"></label>
         <ul class="todo-list">
           <li
             s-for="todo in filteredTodos"
@@ -20,33 +22,27 @@
             "
           >
             <div class="view">
-              <input class="toggle" type="checkbox" value="{= todo.completed =}">
-              <label on-click="editTodo(todo)">{{ todo.title }}</label>
+              <input class="toggle" type="checkbox" on-click="toggleDone(todo.id)" checked="{{ todo.completed }}">
+              <label contenteditable on-blur="editTodo($event.target.textContent, todo)">{{ todo.title }}</label>
               <button class="destroy" on-click="removeTodo(todo)"></button>
             </div>
-            <input
-              class="edit"
-              type="text"
-              value="{= todo.title =}"
-              on-blur="doneEdit(todo)"
-            >
           </li>
         </ul>
       </section>
       <footer class="footer" s-if="todos.length">
         <span class="todo-count">
-          <strong>{{ remaining }}</strong>
+          <strong>{{ todos.length }} total, </strong>
           {{ remaining | pluralize }} left
         </span>
         <ul class="filters">
           <li>
-            <a class="{{ visibility == 'all' ? 'selected' : '' }}">All</a>
+            <a class="{{ filter == 'all' ? 'selected' : '' }}" on-click="changeFilter('all')">All</a>
           </li>
           <li>
-            <a class="{{ visibility == 'active' ? 'selected' : '' }}">Active</a>
+            <a class="{{ filter == 'active' ? 'selected' : '' }}" on-click="changeFilter('active')">Active</a>
           </li>
           <li>
-            <a class="{{ visibility == 'completed' ? 'selected' : '' }}">Completed</a>
+            <a class="{{ filter == 'completed' ? 'selected' : '' }}" on-click="changeFilter('completed')">Completed</a>
           </li>
         </ul>
         <button
@@ -71,15 +67,118 @@
 export default {
   initData() {
     return {
+      id: 1,
       newTodo: '',
       allDone: false,
+      editedTodo: {},
       todos: [
         {
+          id: 0,
           completed: false,
           title: 'TodoMVC Demo',
         },
       ],
+      filter: 'all',
+      filteredTodos: [],
+      remaining: 1,
     }
+  },
+  inited() {
+    this.reloadTodos();
+  },
+  clearInput() {
+    this.data.set('newTodo', '');
+  },
+  reloadTodos() {
+    this.updateRemaining();
+    this.changeFilter(`${this.data.get('filter')}`);
+  },
+  updateRemaining() {
+    const remaining = this.data.get('todos').reduce((remain, todo) => {
+      if (todo.completed === false) return remain + 1;
+      return remain;
+    }, 0);
+    this.data.set('remaining', remaining);
+  },
+  toggleAllDone() {
+    const allDone = !this.data.get('allDone');
+
+    this.data.set('allDone', allDone);
+    this.data.set('todos', this.data.get('todos').map((todo) => {
+      return {
+        ...todo,
+        completed: allDone,
+      };
+    }));
+
+    this.reloadTodos();
+  },
+  removeCompleted() {
+    this.data.set('todos', this.data.get('todos').map((todo) => {
+      return {
+        ...todo,
+        completed: false,
+      };
+    }));
+
+    this.reloadTodos();
+  },
+  toggleDone(id) {
+    this.data.set('todos', this.data.get('todos').map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed,
+        };
+      }
+
+      return todo;
+    }))
+
+    this.reloadTodos();
+  },
+  addNewTodo(keyName, newTodo) {
+    if (keyName === 'Enter' && newTodo !== '') {
+      this.clearInput();
+      this.data.push('todos', {
+        id: this.data.get('id'),
+        completed: false,
+        title: newTodo,
+      });
+
+      this.data.set('id', this.data.get('id') + 1);
+
+      this.reloadTodos();
+    }
+  },
+  editTodo(label, _todo) {
+    this.data.set('todos', this.data.get('todos').map((todo) => {
+      if (todo.id === _todo.id) {
+        return {
+          ...todo,
+          title: label,
+        }
+      }
+
+      return todo;
+    }));
+
+    this.reloadTodos();
+  },
+  removeTodo(_todo) {
+    this.data.set('todos', this.data.get('todos').filter((todo) => {
+      return todo.id !== _todo.id;
+    }));
+
+    this.reloadTodos();
+  },
+  changeFilter(filter) {
+    this.data.set('filter', filter);
+    this.data.set('filteredTodos', this.data.get('todos').filter((todo) => {
+      if (filter === 'active') return todo.completed === false;
+      if (filter === 'completed') return todo.completed === true;
+      return true;
+    }));
   },
 };
 </script>
@@ -130,8 +229,7 @@ export default {
   text-rendering: optimizeLegibility;
 }
 
-.new-todo,
-.edit {
+.new-todo {
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -177,6 +275,7 @@ export default {
   transform: rotate(90deg);
   width: 60px;
   height: 34px;
+  cursor: pointer;
   font-size: 0;
 }
 
@@ -231,6 +330,7 @@ export default {
   /* auto, since non-WebKit browsers doesn't support input styling */
   height: auto;
   margin: auto 0;
+  cursor: pointer;
   text-align: center;
   appearance: none;
 }
@@ -273,6 +373,7 @@ export default {
   height: 40px;
   margin: auto 0;
   margin-bottom: 11px;
+  cursor: pointer;
   color: #cc9a9a;
   font-size: 30px;
 }
@@ -287,10 +388,6 @@ export default {
 
 .todo-list li:hover .destroy {
   display: block;
-}
-
-.todo-list li .edit {
-  display: none;
 }
 
 .todo-list li.editing:last-child {
