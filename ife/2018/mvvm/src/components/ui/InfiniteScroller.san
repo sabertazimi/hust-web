@@ -1,0 +1,21 @@
+<template>
+<div class="infinite-scroller">
+  <slot s-for="item in data" s-bind="{ title: item.title, content: item.content }">
+    <h3>{{ title }}</h3>
+    <p>{{ content }}</p>
+  </slot>
+</div>
+</template>
+
+<script>
+export default {
+
+};
+</script>
+
+<style>
+.infinite-scroller {
+  width: 100%;
+  margin: 0 auto;
+}
+</style>

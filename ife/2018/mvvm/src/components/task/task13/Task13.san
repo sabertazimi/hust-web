@@ -1,21 +1,33 @@
 <template>
 <div>
   <task>
-    Infinite Feed Component
+    <san-scroller data="{{ data }}">
+      <h3>{{ title }}</h3>
+      <p>{{ content }}</p>
+    <san-scroller/>
   </task>
 </div>
 </template>
 
 <script>
-import { Task } from '../../ui';
+import {
+  Task,
+  InfiniteScroller,
+} from '../../ui';
 
 export default {
   components: {
     'task': Task,
+    'san-scroller': InfiniteScroller,
   },
   initData() {
     return {
-
+      data: [
+        {
+          title: 'Feed',
+          content: 'This is content of feed',
+        },
+      ],
     };
   },
 };
