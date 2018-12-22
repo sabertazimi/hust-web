@@ -1,7 +1,7 @@
 <template>
 <div>
   <task title="Date Picker">
-    <san-datepicker />
+    <san-datepicker style="margin: 0 auto;" />
   </task>
 </div>
 </template>

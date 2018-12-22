@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,300,600');
 
 body {
+  position: relative;
   max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
@@ -18,6 +19,7 @@ body {
 .button {
   display: block;
   transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  min-width: 3em;
   margin: 0 auto;
   padding: 0.5em 1em;
   border: 1px solid #f03e3e;

@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task title="Infinite Scroller">
+  <task title="Infinite Scroller" top="{{ true }}">
     <san-scroller data="{{ feeds }}" on-scrolled="handleScrolled" updating="{{ updating }}">
       <h3 class="is__text">{{ title }}</h3>
       <p class="is__text">{{ content }}</p>

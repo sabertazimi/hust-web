@@ -1,9 +1,9 @@
 <template>
 <div>
   <task title="Two Way Binding">
-    <input type="text" name="name" value="{= name =}" placeholder="Name (string)" />
-    <input type="number" name="age" value="{= age =}" placeholder="Age (number)" />
-    <input type="text" name="badge" value="{= badge =}" placeholder="Badge (string)" />
+    <input class="task1__input" type="text" name="name" value="{= name =}" placeholder="Name (string)" />
+    <input class="task1__input" type="number" name="age" value="{= age =}" placeholder="Age (number)" />
+    <input class="task1__input" type="text" name="badge" value="{= badge =}" placeholder="Badge (string)" />
     <button class="button" on-click="removeData">Remove Data</button>
     <p>Name: {{ name || 'Unknown' }}</p>
     <p>Age: {{ age || 'Unknown' }}</p>
@@ -41,3 +41,13 @@ export default {
 };
 
 </script>
+
+<style>
+.task1__input {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+}
+</style>
+

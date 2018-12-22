@@ -4,7 +4,18 @@
     <h1 style="text-align: center;">{{ title }}</h1>
   </slot>
   <slot />
-  <router-link to="/">Back to home</router-link>
+  <router-link
+    class="
+      task__router-link
+      {{ top ? 'task__router-link--top' : '' }}
+      {{ right ? 'task__router-link--right' : '' }}
+      {{ bottom ? 'task__router-link--bottom' : '' }}
+      {{ left ? 'task__router-link--left' : '' }}
+    "
+    to="/"
+  >
+    Back to home
+  </router-link>
 </div>
 </template>
 <script>
@@ -17,6 +28,10 @@ export default {
   initData() {
     return {
       title: 'Task',
+      top: false,
+      right: true,
+      bottom: true,
+      left: false,
     };
   },
 };
@@ -30,4 +45,23 @@ export default {
   padding: 3em;
 }
 
+.task__router-link {
+  position: absolute;
+}
+
+.task__router-link--top {
+  top: 1em;
+}
+
+.task__router-link--right {
+  right: 1em;
+}
+
+.task__router-link--bottom {
+  bottom: 1em;
+}
+
+.task__router-link--left {
+  left: 1em;
+}
 </style>

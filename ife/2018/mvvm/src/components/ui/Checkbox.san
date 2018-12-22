@@ -1,6 +1,7 @@
 <template>
 <div>
   <input
+    class="san-checkbox"
     type="checkbox"
     id="{{ id }}"
     disabled="{{ disabled }}"
@@ -34,7 +35,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-</style>
