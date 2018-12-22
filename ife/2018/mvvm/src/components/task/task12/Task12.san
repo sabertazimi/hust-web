@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="TodoMVC App">
     <todo />
   </task>
 </div>

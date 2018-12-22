@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Two Way Binding">
     <input type="text" name="name" value="{= name =}" placeholder="Name (string)" />
     <input type="number" name="age" value="{= age =}" placeholder="Age (number)" />
     <input type="text" name="badge" value="{= badge =}" placeholder="Badge (string)" />

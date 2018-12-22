@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Table">
     Ant Design Table Component
   </task>
 </div>

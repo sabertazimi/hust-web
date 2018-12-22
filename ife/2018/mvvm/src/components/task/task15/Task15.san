@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Element UI">
     Element UI
   </task>
 </div>

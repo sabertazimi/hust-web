@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Slot">
     <task-menu tasks="{{ tasks }}">
       <div slot="title">
         <h2 style="text-align: center;">

@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Date Picker">
     <san-datepicker />
   </task>
 </div>

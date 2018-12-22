@@ -1,6 +1,6 @@
 <template>
   <div>
-    <task>
+    <task title="Input">
       <div style="margin: 0 auto;">
         <san-input
           label="Input: "

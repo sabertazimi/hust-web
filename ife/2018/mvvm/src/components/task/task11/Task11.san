@@ -1,6 +1,6 @@
 <template>
   <div>
-    <task>
+    <task title="Form Validator">
       <div class="demo-section">
         <ui-form formModel="{=formModel=}" san-ref="formModel">
           <ui-form-item rules="{{ruleMobile}}" prop="mobile" helpText="请输入手机号码" label="手机号码">

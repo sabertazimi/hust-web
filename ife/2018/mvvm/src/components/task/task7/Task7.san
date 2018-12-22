@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Transition">
     <button class="button" on-click="toggle">TOGGLE</button>
     <span s-if="show" s-transition="hook">
       Transition Layer

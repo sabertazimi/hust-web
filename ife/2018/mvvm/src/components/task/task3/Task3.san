@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Style">
     <div
       id="block"
       style="

@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Lifecycle of Component">
     <san-panel title="{{ title }}">
       <san-p content="{{ content }}" />
     </san-panel>

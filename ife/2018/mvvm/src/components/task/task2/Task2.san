@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Conditional and Loop Statement">
     <button class="button" on-click="addUser">Add</button>
     <table class="table">
       <thead>

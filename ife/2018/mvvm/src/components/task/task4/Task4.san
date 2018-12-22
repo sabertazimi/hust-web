@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Events">
     <div style="margin: 0 auto;">
       <parent />
       <p class="red">{{ userInput === '' ? 'Waiting for input ... ' : userInput }}</p>

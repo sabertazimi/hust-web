@@ -1,6 +1,6 @@
 <template>
 <div>
-  <task>
+  <task title="Cascader">
     <div style="margin: 1em 0;">
       <san-cascader depth="{{ depth }}" options="{{ options }}" path="{= path =}"/>
     </div>

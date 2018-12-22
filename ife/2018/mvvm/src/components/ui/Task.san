@@ -1,6 +1,9 @@
 <template>
 <div class="task-container">
-  <slot></slot>
+  <slot name="title">
+    <h1 style="text-align: center;">{{ title }}</h1>
+  </slot>
+  <slot />
   <router-link to="/">Back to home</router-link>
 </div>
 </template>
@@ -11,14 +14,19 @@ export default {
   components: {
     'router-link': Link,
   },
+  initData() {
+    return {
+      title: 'Task',
+    };
+  },
 };
 </script>
 <style>
 .task-container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   width: 80%;
+  margin: 0 auto;
   padding: 3em;
 }
 
