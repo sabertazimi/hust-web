@@ -9,6 +9,7 @@ import FormItem from './FormItem.san';
 import Input from './Input.san';
 import Panel from './Panel.san';
 import Link from './Link.san';
+import Table from './Table.san';
 import Task from './Task.san';
 
 export {
@@ -23,5 +24,6 @@ export {
   Input,
   Panel,
   Link,
+  Table,
   Task,
 };

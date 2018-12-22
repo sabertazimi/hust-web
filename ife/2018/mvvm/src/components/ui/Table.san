@@ -1,0 +1,50 @@
+<template>
+  <table class="san-table">
+    <thead>
+      <tr>
+        <th s-for="column in columns" key="{{ column.key }}">{{ column.title }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr s-for="item in dataSource">
+        <td s-for="column in columns" key="{{ item.key }}">{{ item[column.key] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>
+
+<script>
+export default {
+  initData() {
+    return {
+      columns: [],
+      dataSource: [],
+    };
+  },
+};
+</script>
+
+<style>
+.san-table {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1em;
+  border: 0;
+  border-collapse: collapse;
+}
+
+.san-table tbody tr:nth-child(odd) {
+  background-color: #e9ecef;
+}
+
+.san-table tbody tr:nth-child(even) {
+  background-color: #495057;
+  color: #fff;
+}
+
+.san-table tr,
+.san-table th,
+.san-table td {
+  padding: 1em;
+}
+</style>
