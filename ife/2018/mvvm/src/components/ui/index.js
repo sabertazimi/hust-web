@@ -3,6 +3,7 @@ import Calendar from './Calendar.san';
 import Cascader from './Cascader.san';
 import Checkbox from './Checkbox.san';
 import DatePicker from './DatePicker.san';
+import InfiniteScroller from './InfiniteScroller.san';
 import Form from './Form.san';
 import FormItem from './FormItem.san';
 import Input from './Input.san';
@@ -15,6 +16,7 @@ export {
   Calendar,
   Cascader,
   Checkbox,
+  InfiniteScroller,
   Form,
   FormItem,
   DatePicker,

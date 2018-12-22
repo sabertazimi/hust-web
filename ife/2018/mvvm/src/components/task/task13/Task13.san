@@ -1,10 +1,10 @@
 <template>
 <div>
-  <task>
-    <san-scroller data="{{ data }}">
-      <h3>{{ title }}</h3>
-      <p>{{ content }}</p>
-    <san-scroller/>
+  <task title="Infinite Scroller">
+    <san-scroller data="{{ feeds }}" on-scrolled="handleScrolled" updating="{{ updating }}">
+      <h3 class="is__text">{{ title }}</h3>
+      <p class="is__text">{{ content }}</p>
+    </san-scroller>
   </task>
 </div>
 </template>
@@ -22,17 +22,37 @@ export default {
   },
   initData() {
     return {
-      data: [
-        {
-          title: 'Feed',
-          content: 'This is content of feed',
-        },
-      ],
+      length: 10,
+      feeds: [],
+      updating: false,
     };
+  },
+  inited() {
+    this.data.set('feeds', this.generateFeeds(this.data.get('length')));
+  },
+  handleScrolled() {
+    this.data.set('updating', true);
+
+    setTimeout(() => {
+      this.data.set('length', this.data.get('length') + 5);
+      this.data.set('feeds', this.generateFeeds(this.data.get('length')));
+      this.data.set('updating', false);
+    }, 500);
+  },
+  generateFeeds(length) {
+    return [...Array(length).keys()].map((item, index) => ({
+      title: `Feed ${index + 1}`,
+      content: `This is content of feed ${index + 1}`,
+    }));
   },
 };
 </script>
 
 <style>
-
+.is__text {
+  margin: 0;
+  padding: 0.5em 1em;
+  background-color: #f03e3e;
+  color: #fff;
+}
 </style>

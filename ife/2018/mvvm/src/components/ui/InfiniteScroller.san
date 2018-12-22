@@ -4,12 +4,33 @@
     <h3>{{ title }}</h3>
     <p>{{ content }}</p>
   </slot>
+  <slot name="loading" s-if="updating">
+    <h3>Loading ...</h3>
+  </slot>
 </div>
 </template>
 
 <script>
 export default {
+  initData() {
+    return {
+      data: [],
+      updating: false,
+    };
+  },
+  attached() {
+    window.addEventListener('scroll', this.handleScroll.bind(this));
+  },
+  handleScroll() {
+    if (this.data.get('updating')) {
+      return;
+    }
 
+    const element = document.documentElement;
+    if (element.scrollTop + element.clientHeight > element.scrollHeight - 50) {
+      this.fire('scrolled');
+    }
+  },
 };
 </script>
 
