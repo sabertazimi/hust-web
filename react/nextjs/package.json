@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production next build && nodemon server.js",
     "dev": "nodemon server.js",
-    "build": "next build"
+    "build": "next build && next export -o build"
   },
   "keywords": [
     "nextjs",
