@@ -4,8 +4,8 @@
   "description": "Nextjs Demo",
   "main": "index.js",
   "scripts": {
-    "start": "next start",
-    "dev": "next",
+    "start": "cross-env NODE_ENV=production next build && nodemon server.js",
+    "dev": "nodemon server.js",
     "build": "next build"
   },
   "keywords": [
@@ -15,8 +15,13 @@
   "author": "sabertazimi",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.16.4",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.18.9"
   }
 }
