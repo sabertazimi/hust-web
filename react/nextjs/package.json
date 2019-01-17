@@ -6,7 +6,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production next build && nodemon server.js",
     "dev": "nodemon server.js",
-    "build": "next build && next export -o build"
+    "build": "next build && next export -o build",
+    "analyze": "cross-env ANALYZE=1 next build"
   },
   "keywords": [
     "nextjs",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "webpack-bundle-analyzer": "^3.0.3"
   }
 }
