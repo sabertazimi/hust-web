@@ -1,0 +1,22 @@
+{
+  "name": "nextjs",
+  "version": "1.0.0",
+  "description": "Nextjs Demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "next start",
+    "dev": "next",
+    "build": "next build"
+  },
+  "keywords": [
+    "nextjs",
+    "react"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
