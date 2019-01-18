@@ -22,7 +22,7 @@ export default {
   },
   initData() {
     return {
-      length: 10,
+      length: 20,
       feeds: [],
       updating: false,
     };
