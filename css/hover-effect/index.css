@@ -23,7 +23,7 @@
 }
 
 .degree-effect::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 120%;
   height: 120%;
@@ -52,4 +52,46 @@
     left: -10%;
     top: -10%;
   }
+}
+
+.switch-effect {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  border: 1px solid #ffc109;
+  border-radius: 5px;
+  outline: none;
+  background: #ffc109;
+  cursor: pointer;
+}
+
+.switch-effect::before {
+  content: 'Hover Me';
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  font-size: 1.2em;
+}
+
+.switch-effect:hover::before {
+  top: -2em;
+}
+
+.switch-effect::after {
+  content: 'Superise';
+  position: absolute;
+  color: white;
+  left: 50%;
+  bottom: -2em;
+  transform: translate(-50%, 50%);
+  transition: all 0.5s;
+  font-size: 1.2em;
+}
+
+
+.switch-effect:hover::after {
+  bottom: 50%;
 }
