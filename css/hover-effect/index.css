@@ -1,6 +1,55 @@
 .degree-effect {
-  border-radius: 50%;
-  padding: 1em;
-  color: #3f51b5;
-  font-size: 2em;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  background: #f1f1f1;
+  color: #3498db;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.degree-effect i {
+  font-size: 1.8em;
+  line-height: 90px;
+  transition: 0.2s linear;
+}
+
+.degree-effect:hover i {
+  transform: scale(1.3);
+  color: white;
+}
+
+.degree-effect::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.degree-effect:hover::before {
+  animation: degree 0.7s 1;
+  left: -10%;
+  top: -10%;
+}
+
+@keyframes degree {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
 }
