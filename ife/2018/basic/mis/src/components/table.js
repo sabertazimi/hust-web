@@ -19,6 +19,8 @@ const generateRow = ({
 }, rowspan = 1) => {
   const productHTML = (rowspan === 0) ? '' : `<td rowspan="${rowspan}">${product}</td>`;
   const regionHTML = `<td>${region}</td>`;
+  // use `data-row` and `data-column` to locate cells
+  // const { currentTarget: { dataset: { row, column }}} = event;
   const salesHTML = sales.map(sale => `<td contenteditable class="right">${sale.toString(10).padStart(3)}</td>`).join('');
 
   return (`
