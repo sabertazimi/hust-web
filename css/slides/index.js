@@ -2,8 +2,8 @@ const slideContainer = document.querySelector('.slide-container');
 const slides = document.querySelectorAll('.slide');
 const select = document.querySelector('.animation-select');
 
-// reset scrollX when change slides
-const resetScollX = () => {
+// reset scrollX and scrollY when change slides
+const resetScroll = () => {
   window.scrollTo(0, 0);
 };
 
@@ -26,7 +26,7 @@ const getNextSlideIndex = () => {
 const changeToSlide = (index) => {
   const { origin, pathname } = window.location;
   window.location = `${origin}${pathname}#slide${index}`;
-  resetScollX();
+  resetScroll();
 };
 
 const changeToPrevSlide = () => {

@@ -27,6 +27,32 @@
   transform: translateX(100%);
 }
 
+.slide--up {
+  transform: translateY(100%);
+  transition: transform 1s;
+}
+
+.slide--up:target {
+  transform: translateY(0);
+}
+
+.slide--up:target ~ .slide {
+  transform: translateY(-100%);
+}
+
+.slide--down {
+  transform: translateY(-100%);
+  transition: transform 1s;
+}
+
+.slide--down:target {
+  transform: translateY(0);
+}
+
+.slide--down:target ~ .slide {
+  transform: translateY(100%);
+}
+
 .slide--rotate {
   transform: rotate(90deg);
   transform-origin: 0 0;
@@ -39,6 +65,19 @@
 
 .slide--rotate:target ~ .slide {
   transform: rotate(-90deg);
+}
+
+.slide--scale {
+  transform: scale(0.5);
+  transition: transform 1s;
+}
+
+.slide--scale:target {
+  transform: scale(1);
+}
+
+.slide--scale:target ~ .slide {
+  transform: scale(0.5);
 }
 
 .slide--fade {
