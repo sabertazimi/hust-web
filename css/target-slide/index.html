@@ -9,34 +9,34 @@
   <link rel="stylesheet" type="text/css" media="screen" href="animation.css">
 </head>
 <body>
-    <section class="slide slide--rotate" id="slide1">
+    <section class="slide slide--left-in" id="slide1">
       <a class="slide-link slide-link--hidden" href="#slide5">prev</a>
       <a class="slide-link" href="#slide2">next</a>
       <div class="slide-content">1</div>
     </section>
-    <section class="slide slide--rotate" id="slide2">
+    <section class="slide slide--left-in" id="slide2">
       <a class="slide-link" href="#slide1">prev</a>
       <a class="slide-link" href="#slide3">next</a>
       <div class="slide-content">2</div>
     </section>
-    <section class="slide slide--rotate" id="slide3">
+    <section class="slide slide--left-in" id="slide3">
       <a class="slide-link" href="#slide2">prev</a>
       <a class="slide-link" href="#slide4">next</a>
       <div class="slide-content">3</div>
     </section>
-    <section class="slide slide--rotate" id="slide4">
+    <section class="slide slide--left-in" id="slide4">
       <a class="slide-link" href="#slide3">prev</a>
       <a class="slide-link" href="#slide5">next</a>
       <div class="slide-content">4</div>
     </section>
-    <section class="slide slide--rotate" id="slide5">
+    <section class="slide slide--left-in" id="slide5">
       <a class="slide-link" href="#slide4">prev</a>
       <div class="slide-content">5</div>
     </section>
   <select name="animation" id="animation" class="animation-select">
-    <option value="rotate">Roate</option>
     <option value="left-in">Left In</option>
     <option value="right-in">Right In</option>
+    <option value="rotate">Roate</option>
     <option value="fade">Fade</option>
   </select>
   <script src="index.js"></script>
