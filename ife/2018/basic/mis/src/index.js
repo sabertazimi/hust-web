@@ -11,7 +11,7 @@ import {
 
 import store from './state/store';
 
-import './index.scss';
+import './index.css';
 
 renderCheckBoxes($regionFilter, 'region', {
   label: 'Region',
