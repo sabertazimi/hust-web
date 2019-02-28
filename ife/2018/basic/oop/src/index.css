@@ -1,0 +1,37 @@
+:root {
+  --font-stack: ('Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, 'Open Sans', Arial, sans-serif, serif);
+  --color-primary: #7048e8;
+  --color-gray: #f8f9fa;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  font-family: var(--font-stack);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: inherit;
+  padding: inherit;
+  font-family: inherit;
+}
+
+.container {
+  width: 100%;
+  min-height: 80vh;
+  margin: 2em;
+  padding: 2em 3em;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-primary);
+  color: var(--color-gray);
+  font-size: 20px;
+}

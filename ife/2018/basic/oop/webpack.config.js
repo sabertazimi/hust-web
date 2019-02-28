@@ -37,7 +37,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
@@ -47,7 +47,6 @@ module.exports = {
             },
           },
           'postcss-loader',
-          'sass-loader',
         ],
       },
     ],

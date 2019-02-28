@@ -7,7 +7,7 @@
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --port 2333 --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "lint": "stylelint ./src/**/*.scss && eslint --ext .js --ext .jsx ./src"
+    "lint": "stylelint ./src/**/*.css && eslint --ext .js --ext .jsx ./src"
   },
   "repository": {
     "type": "git",
@@ -45,15 +45,13 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.9.2",
     "postcss-loader": "^2.1.5",
-    "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
-    "stylelint": "^9.4.0",
+    "stylelint": "^9.10.1",
     "stylelint-config-mass": "^1.0.2",
     "stylelint-webpack-plugin": "^0.10.5",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.6",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.2.1"
   }
 }
