@@ -41,8 +41,10 @@ const changeToNextSlide = () => {
 window.addEventListener('keydown', (event) => {
   const { key: keyName } = event;
 
-  event.preventDefault();
-  event.stopPropagation();
+  if (keyName === 'ArrowLeft' || keyName === 'ArrowRight') {
+    event.preventDefault();
+    event.stopPropagation();
+  }
 
   switch (keyName) {
     case 'ArrowLeft':
