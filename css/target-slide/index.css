@@ -8,35 +8,49 @@ body {
   width: 100vw;
   height: 100vh;
   padding-top: 1em;
-}
-
-.slide:nth-child(2n) {
-  background-color: white;
+  padding-left: 2em;
 }
 
 .slide:nth-child(2n+1) {
   background-color: black;
 }
 
+.slide:nth-child(2n) {
+  background-color: white;
+}
+
 .slide-link {
   position: relative;
-  padding: 0.8em 2em;
+  padding: 2em 0 0.5em 0;
   text-decoration: none;
+}
+
+.slide:nth-child(2n+1) .slide-link {
+  color: white;
 }
 
 .slide:nth-child(2n) .slide-link {
   color: black;
 }
 
-.slide:nth-child(2n) .slide-link::after {
+.slide .slide-link::after {
   content: '';
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 0;
-  width: 100%;
-  height: 2px;
+  width: 0;
+  height: 3px;
+  transition: width .2s;
 }
 
-.slide:nth-child(2n+1) .slide-link {
-  color: white;
+.slide .slide-link:hover::after {
+  width: 100%;
+}
+
+.slide:nth-child(2n+1) .slide-link::after {
+  background-color: white;
+}
+
+.slide:nth-child(2n) .slide-link::after {
+  background-color: black;
 }
