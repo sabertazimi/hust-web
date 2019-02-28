@@ -1,5 +1,3 @@
-import './index.scss';
-
 const menu = document.querySelector('.menu');
 const menuButton = document.querySelector('.menu__button');
 
