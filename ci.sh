@@ -3,7 +3,7 @@
 echo "[JOBS] Start sub-projects building ..."
 
 echo "[JOB] Start 'bootstrap-cms' building ..."
-bash -c "cd ./css/bootstrap && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../" &
+bash -c "cd ./css/bootstrap-cms && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../" &
 
 echo "[JOB] Start 'ife/2018/basic/mis' building ..."
 bash -c "cd ./ife/2018/basic/mis && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../../" &

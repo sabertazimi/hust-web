@@ -67,6 +67,26 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/pages.html',
+      filename: './pages.html',
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/posts.html',
+      filename: './posts.html',
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/users.html',
+      filename: './users.html',
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/login.html',
+      filename: './login.html',
+    }),
     new MiniCssExtractPlugin({
       filename: devMode ? '[name].css' : '[name].[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
