@@ -109,7 +109,7 @@ module.exports = {
     }),
     new StyleLintPlugin(),
     new CopyWebpackPlugin([{
-      from: './favicon.ico',
+      from: './src/favicon.ico',
     }]),
   ],
   resolve: {
