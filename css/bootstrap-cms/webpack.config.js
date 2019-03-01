@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const packageJson = require('./package.json');
 
@@ -58,6 +59,21 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [...styleLoader],
       },
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: 'url-loader?limit=10000',
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        use: 'file-loader',
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'file-loader?name=images/[name].[ext]',
+          'image-webpack-loader?bypassOnDebug',
+        ],
+      },
     ],
   },
   plugins: [
@@ -92,6 +108,9 @@ module.exports = {
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
     new StyleLintPlugin(),
+    new CopyWebpackPlugin([{
+      from: './favicon.ico',
+    }]),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
