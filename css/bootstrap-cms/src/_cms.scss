@@ -1,1 +1,31 @@
-$green: #4cff00;
+// @function color($key: 'blue') {
+//   @return map-get($colors, $key);
+// }
+
+// @function theme-color($key: 'primary') {
+//   @return map-get($theme-colors, $key);
+// }
+
+// @function gray($key: '100') {
+//   @return map-get($grays, $key);
+// }
+
+// @function theme-color-level($color-name: 'primary', $level: 0) {
+//   $color: theme-color($color-name);
+//   $color-base: if($level > 0, #000, #fff);
+//   $level: abs($level);
+
+//   @return mix($color-base, $color, $level * $theme-color-interval);
+// }
+
+// color contrast: color-yiq(#000), color-yiq(theme-color('dark'))
+
+$theme-colors: (
+  'primary': #0074d9,
+  'danger': #ff4136
+  'secondary':#495057,
+  'success': #37b24d,
+  'info': #1c7ed6,
+  'warning': #f59f00,
+  'danger': #f03e3e,
+);

@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap-cms",
+  "name": "bootstrap",
   "version": "1.0.0",
-  "description": "CMS custom theme for Bootstrap 4",
+  "description": "custom theme for Bootstrap 4",
   "main": "./src/index.js",
   "scripts": {
     "start": "npm run dev",
