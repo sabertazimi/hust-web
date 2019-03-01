@@ -50,6 +50,7 @@ $cyan: #1c7ed6;
 $yellow: #f59f00;
 $red: #f03e3e;
 
+// custom color list
 $colors: (
   'purple': $violet,
   'green': $green,
@@ -58,6 +59,7 @@ $colors: (
   'red': $red,
 );
 
+// custom theme colors
 $theme-colors: (
   'primary': $violet,
   'success': $green,
@@ -66,9 +68,12 @@ $theme-colors: (
   'danger': $red,
 );
 
+// global options
+$enable-rounded: false;
 $enable-shadows: true;
-$enable-gradients: true;
+$enable-gradients: false;
 
+// custom for navbar
 $navbar-light-color: $violet-3;
 $navbar-light-hover-color: $violet-5;
 $navbar-light-active-color: $violet-9;
