@@ -20,6 +20,22 @@
 
 // color contrast: color-yiq(#000), color-yiq(theme-color('dark'))
 
+// $colors: (
+//   'blue': $blue,
+//   'indigo': $indigo,
+//   'purple': $purple,
+//   'pink': $pink,
+//   'red': $red,
+//   'orange': $orange,
+//   'yellow': $yellow,
+//   'green': $green,
+//   'teal': $teal,
+//   'cyan': $cyan,
+//   'white': $white,
+//   'gray': $gray-600,
+//   'gray-dark': $gray-800
+// ) !default;
+
 $theme-colors: (
   'primary': #0074d9,
   'danger': #ff4136
@@ -29,3 +45,6 @@ $theme-colors: (
   'warning': #f59f00,
   'danger': #f03e3e,
 );
+
+$enable-shadows: true;
+$enable-gradients: true;
