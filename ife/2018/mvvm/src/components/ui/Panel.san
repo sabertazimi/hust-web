@@ -30,8 +30,8 @@ export default {
         el.classList.add('before-enter');
 
         setTimeout(() => {
-          el.classList.remove('before-enter');   	
-          el.classList.add('enter'); 
+          el.classList.remove('before-enter');
+          el.classList.add('enter');
         }, 20);  
 
         setTimeout(() => {
