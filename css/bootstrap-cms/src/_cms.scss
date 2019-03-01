@@ -20,30 +20,56 @@
 
 // color contrast: color-yiq(#000), color-yiq(theme-color('dark'))
 
-// $colors: (
-//   'blue': $blue,
-//   'indigo': $indigo,
-//   'purple': $purple,
-//   'pink': $pink,
-//   'red': $red,
-//   'orange': $orange,
-//   'yellow': $yellow,
-//   'green': $green,
-//   'teal': $teal,
-//   'cyan': $cyan,
-//   'white': $white,
-//   'gray': $gray-600,
-//   'gray-dark': $gray-800
-// ) !default;
+$violet-list: (
+  '0': #f8f0fc,
+  '1': #f3d9fa,
+  '2': #eebefa,
+  '3': #e599f7,
+  '4': #da77f2,
+  '5': #cc5de8,
+  '6': #be4bdb,
+  '7': #ae3ec9,
+  '8': #9c36b5,
+  '9': #862e9c
+) !default;
+
+$violet-0: map-get($violet-list, '0') !default;
+$violet-1: map-get($violet-list, '1') !default;
+$violet-2: map-get($violet-list, '2') !default;
+$violet-3: map-get($violet-list, '3') !default;
+$violet-4: map-get($violet-list, '4') !default;
+$violet-5: map-get($violet-list, '5') !default;
+$violet-6: map-get($violet-list, '6') !default;
+$violet-7: map-get($violet-list, '7') !default;
+$violet-8: map-get($violet-list, '8') !default;
+$violet-9: map-get($violet-list, '9') !default;
+
+$violet: $violet-9;
+$green: #37b24d;
+$cyan: #1c7ed6;
+$yellow: #f59f00;
+$red: #f03e3e;
+
+$colors: (
+  'purple': $violet,
+  'green': $green,
+  'cyan': $cyan,
+  'yellow': $yellow,
+  'red': $red,
+);
 
 $theme-colors: (
-  'primary': #0074d9,
-  'secondary':#495057,
-  'success': #37b24d,
-  'info': #1c7ed6,
-  'warning': #f59f00,
-  'danger': #f03e3e,
+  'primary': $violet,
+  'success': $green,
+  'info': $cyan,
+  'warning': $yellow,
+  'danger': $red,
 );
 
 $enable-shadows: true;
 $enable-gradients: true;
+
+$navbar-light-color: $violet-3;
+$navbar-light-hover-color: $violet-5;
+$navbar-light-active-color: $violet-9;
+$navbar-light-toggler-border-color: $violet-1;
