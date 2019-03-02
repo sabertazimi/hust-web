@@ -50,6 +50,11 @@ const plugins = [
   }),
   new HtmlWebpackPlugin({
     hash: true,
+    template: './src/products.html',
+    filename: './products.html',
+  }),
+  new HtmlWebpackPlugin({
+    hash: true,
     template: './src/edit.html',
     filename: './edit.html',
   }),

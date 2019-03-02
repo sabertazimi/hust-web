@@ -1,7 +1,8 @@
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import ScrollReveal from 'scrollreveal';
+
 import './index.scss';
 import 'bootstrap';
-
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 ClassicEditor
   .create(document.querySelector('#pageEditor'), {
@@ -15,3 +16,29 @@ ClassicEditor
       ckeAlert.classList.add('show');
     }
   });
+
+const SR = ScrollReveal();
+
+SR.reveal('.srjs-left', {
+  origin: 'left',
+  duration: 2000,
+  distance: '300px',
+});
+
+SR.reveal('.srjs-right', {
+  origin: 'right',
+  duration: 2000,
+  distance: '300px',
+});
+
+SR.reveal('.srjs-top', {
+  origin: 'top',
+  duration: 2000,
+  distance: '300px',
+});
+
+SR.reveal('.srjs-bottom', {
+  origin: 'bottom',
+  duration: 2000,
+  distance: '50px',
+});
