@@ -77,7 +77,12 @@
                 Create Content
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Add Page</a>
+                <a
+                  class="dropdown-item" href="#"
+                  data-toggle="modal" data-target="#addPageModal"
+                >
+                  Add Page
+                </a>
                 <a class="dropdown-item" href="#">Add Post</a>
                 <a class="dropdown-item" href="#">Add User</a>
               </div>
@@ -246,5 +251,48 @@
         </div>
       </div>
     </section>
+
+    <!-- Modals -->
+    <div class="modal fade" id="addPageModal" tabindex="-1" role="dialog" aria-labelledby="addPageModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form>
+          <div class="modal-header">
+            <h5 class="modal-title">Add Page</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="inputPageTitle">Page Title</label>
+              <input type="text" class="form-control" id="inputPageTitle" placeholder="Enter Page Title">
+            </div>
+            <div class="form-group">
+              <label for="inputPageBody">Page Body</label>
+              <textarea name="pageEditor" class="form-control" id="inputPageBody" placeholder="Enter Page Content" rows="5"></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="inputPublishPage">
+              <label class="form-check-label" for="inputPublishPage">Published</label>
+            </div>
+            <div class="form-group">
+              <label for="inputMetaTags">Meta Tags</label>
+              <input type="text" class="form-control" id="inputMetaTags" placeholder="Add Some Tags">
+            </div>
+            <div class="form-group">
+              <label for="inputMetaDescription">Meta Description</label>
+              <input type="text" class="form-control" id="inputMetaDescription" placeholder="Add Meta Description">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
