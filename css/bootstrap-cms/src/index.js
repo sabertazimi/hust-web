@@ -9,6 +9,9 @@ ClassicEditor
   })
   .catch(() => {
     const ckeAlert = document.querySelector('#ckeAlert');
-    ckeAlert.classList.remove('d-none');
-    ckeAlert.classList.add('show');
+
+    if (ckeAlert) {
+      ckeAlert.classList.remove('d-none');
+      ckeAlert.classList.add('show');
+    }
   });
