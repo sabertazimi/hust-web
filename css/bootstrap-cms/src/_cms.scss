@@ -73,7 +73,18 @@ $enable-rounded: true;
 $enable-shadows: true;
 $enable-gradients: false;
 
-// custom for navbar
+// custom spacing
+$spacer: 1rem;
+
+// custom border
+$border-width: 1px;
+$border-radius: 0;
+
+// custom navigation
+$navbar-nav-link-padding-x: 2rem;
+$nav-link-padding-x: 2rem;
+$nav-link-padding-y: 1rem;
+
 $navbar-light-color: $violet-3;
 $navbar-light-hover-color: $violet-5;
 $navbar-light-active-color: $violet-9;
