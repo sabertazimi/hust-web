@@ -1,7 +1,7 @@
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-
 import './index.scss';
 import 'bootstrap';
+
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 ClassicEditor
   .create(document.querySelector('#pageEditor'), {
