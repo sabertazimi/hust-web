@@ -49,6 +49,8 @@ $green: #37b24d;
 $cyan: #1c7ed6;
 $yellow: #f59f00;
 $red: #f03e3e;
+$white: #fff;
+$black: #000;
 
 // custom color list
 $colors: (
@@ -59,13 +61,19 @@ $colors: (
   'red': $red,
 );
 
+$primary: $violet;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+
 // custom theme colors
 $theme-colors: (
-  'primary': $violet,
-  'success': $green,
-  'info': $cyan,
-  'warning': $yellow,
-  'danger': $red,
+  'primary': $primary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
 );
 
 // global options
@@ -81,11 +89,54 @@ $border-width: 1px;
 $border-radius: 0;
 
 // custom navigation
-$navbar-nav-link-padding-x: 2rem;
-$nav-link-padding-x: 2rem;
+$navbar-nav-link-padding-x: 1.5rem;
+$nav-link-padding-x: 1.5rem;
 $nav-link-padding-y: 1rem;
 
 $navbar-light-color: $violet-3;
 $navbar-light-hover-color: $violet-5;
 $navbar-light-active-color: $violet-9;
 $navbar-light-toggler-border-color: $violet-1;
+
+$navbar-dark-color: $violet-3;
+$navbar-dark-hover-color: $violet-5;
+$navbar-dark-active-color: $violet-1;
+$navbar-dark-toggler-border-color: $violet-1;
+
+$nav-tabs-border-color: $primary;
+$nav-tabs-link-hover-border-color: $violet-5;
+$nav-tabs-link-active-color: $violet-9;
+$nav-tabs-link-active-bg: $violet-3;
+$nav-tabs-link-active-border-color: $violet-1;
+
+$nav-pills-link-active-color: $white;
+$nav-pills-link-active-bg: $primary;
+
+// custom dropdown
+$dropdown-padding-y: 1rem;
+$dropdown-spacer: 0.5rem;
+$dropdown-bg: $white;
+$dropdown-border-color: $primary;
+$dropdown-border-width: $border-width * 3;
+$dropdown-link-color: $primary;
+$dropdown-item-padding-y: 0.5rem;
+$dropdown-item-padding-x: 3rem;
+
+// custom listgroup
+$list-group-border-color: $primary;
+
+// custom card
+$card-border-color: $primary;
+$card-color: $primary;
+$card-bg: $violet-0;
+
+// custom breadcrumb
+$breadcrumb-bg: $violet-0;
+$breadcrumb-active-color: $violet-3;
+$breadcrumb-divider: quote('>');
+
+// custom form
+$input-btn-padding-y: 0.75rem;
+$input-btn-padding-x: 1.5rem;
+$input-btn-focus-width: 0.05rem;
+$custom-control-indicator-checked-color: $primary;
