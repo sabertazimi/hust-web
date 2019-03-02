@@ -26,6 +26,46 @@ if (useSass) {
   styleLoader.push('sass-loader');
 }
 
+const plugins = [
+  new CleanWebpackPlugin('build'),
+  new HtmlWebpackPlugin({
+    hash: true,
+    template: './src/index.html',
+    filename: './index.html',
+  }),
+  new HtmlWebpackPlugin({
+    hash: true,
+    template: './src/pages.html',
+    filename: './pages.html',
+  }),
+  new HtmlWebpackPlugin({
+    hash: true,
+    template: './src/posts.html',
+    filename: './posts.html',
+  }),
+  new HtmlWebpackPlugin({
+    hash: true,
+    template: './src/users.html',
+    filename: './users.html',
+  }),
+  new HtmlWebpackPlugin({
+    hash: true,
+    template: './src/login.html',
+    filename: './login.html',
+  }),
+  new MiniCssExtractPlugin({
+    filename: devMode ? '[name].css' : '[name].[hash].css',
+    chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+  }),
+  new StyleLintPlugin(),
+];
+
+if (!devMode) {
+  plugins.push(new CopyWebpackPlugin([{
+    from: './src/favicon.ico',
+  }]));
+}
+
 module.exports = {
   entry: {
     main: './src/index.js',
@@ -76,42 +116,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin('build'),
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: './src/index.html',
-      filename: './index.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: './src/pages.html',
-      filename: './pages.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: './src/posts.html',
-      filename: './posts.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: './src/users.html',
-      filename: './users.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: './src/login.html',
-      filename: './login.html',
-    }),
-    new MiniCssExtractPlugin({
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
-    }),
-    new StyleLintPlugin(),
-    new CopyWebpackPlugin([{
-      from: './src/favicon.ico',
-    }]),
-  ],
+  plugins,
   resolve: {
     extensions: ['.js', '.jsx'],
   },
