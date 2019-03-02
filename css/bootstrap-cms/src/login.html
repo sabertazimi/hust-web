@@ -7,13 +7,56 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
-    <title>CMS - Login</title>
+    <title>Bootstrap CMS Theme</title>
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div>Hello World</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+      <a class="navbar-brand mx-auto" href="#">CMS</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="section-header text-white bg-dark py-3 mb-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <h1 class="text-center">
+              Admin Area
+              <small class="text-muted">Login</small>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-main mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mx-auto">
+            <!-- Login Form -->
+            <form class="card" action="index.html">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="xxx@gmail.com">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="xxxxxx">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
