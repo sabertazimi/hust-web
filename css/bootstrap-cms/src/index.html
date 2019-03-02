@@ -209,7 +209,7 @@
               </div>
             </div>
             <!-- Latest Users -->
-            <div class="card">
+            <div class="card mb-3">
               <div class="card-header text-white bg-primary">
                 Latest Users
               </div>
@@ -252,6 +252,15 @@
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid p-4 font-weight-bold text-center text-muted bg-dark">
+        <p class="mb-0">
+          Copyright &copy; 2019-now
+        </p>
+      </div>
+    </footer>
+
     <!-- Modals -->
     <div class="modal fade" id="addPageModal" tabindex="-1" role="dialog" aria-labelledby="addPageModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -269,8 +278,8 @@
               <input type="text" class="form-control" id="inputPageTitle" placeholder="Enter Page Title">
             </div>
             <div class="form-group">
-              <label for="inputPageBody">Page Body</label>
-              <textarea name="pageEditor" class="form-control" id="inputPageBody" placeholder="Enter Page Content" rows="5"></textarea>
+              <label for="pageEditor">Page Body</label>
+              <textarea name="pageEditor" id="pageEditor"></textarea>
             </div>
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="inputPublishPage">
@@ -292,6 +301,14 @@
           </form>
         </div>
       </div>
+    </div>
+
+    <!-- CKEditor Setup Failure Alert -->
+    <div id="ckeAlert" class="alert alert-danger alert-dismissible fade d-none" role="alert">
+      <strong>Error!</strong> CKEditor setup failed.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
 
   </body>
