@@ -2,6 +2,7 @@
   "name": "react-hooks-form",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sabertazimi.github.io/hust-web/react/hooks-form",
   "dependencies": {
     "bulma": "^0.7.4",
     "react": "^16.8.3",

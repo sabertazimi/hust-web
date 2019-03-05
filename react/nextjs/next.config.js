@@ -2,6 +2,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { ANALYZE } = process.env;
 
 module.exports = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/hust-web/react/nextjs' : '',
   exportPathMap: () => {
     return {
       '/': { page: '/' },
