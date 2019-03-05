@@ -9,6 +9,16 @@ A repo for learning demo archives
 [![stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)](https://github.com/sabertazimi/hust-web)
 [![MIT](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/hust-web/master/LICENSE)
 
+## Collections
+
+- [CSS Collection](https://sabertazimi.github.io/hust-web/css)
+- [JavaScript Collection](https://sabertazimi.github.io/hust-web/js)
+- [Free Code Camp Collection](https://sabertazimi.github.io/hust-web/fcc)
+- [IFE 2016 Collection](https://sabertazimi.github.io/hust-web/ife/2016)
+- [IFE 2018 Collection](https://sabertazimi.github.io/hust-web/ife/2018)
+- [React Collection](https://sabertazimi.github.io/hust-web/react)
+- [Vue Collection](https://sabertazimi.github.io/hust-web/vue)
+
 ## License
 
 MIT License [@sabertazimi](https://github.com/sabertazimi)
