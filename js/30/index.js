@@ -130,7 +130,7 @@
                 </div>
                 <div class="back">
                     <div class="content">
-                        <h3 class="card-title"><a target="_blank" href="https://sabertazimi.github.io/hust-web/javascript30/${title}">${title}</a></h3>
+                        <h3 class="card-title"><a target="_blank" href="https://sabertazimi.github.io/hust-web/js/30/${title}">${title}</a></h3>
                         <p>${content}</p>
                     </div>
                 </div>
