@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import PUBLIC_URL from './url';
 
 const PostLink = ({ id, title }) => (
   <li>
-    <Link as={`/p/${id}`} href={`/post?id=${id}`}>
+    <Link as={`${PUBLIC_URL}/p/${id}`} href={`${PUBLIC_URL}/post?id=${id}`}>
       <a>{ title }</a>
     </Link>
     <style jsx>{`

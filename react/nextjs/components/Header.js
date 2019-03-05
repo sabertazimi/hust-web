@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PUBLIC_URL from './url';
 
 const linkStyle = {
   marginRight: 15,
@@ -7,10 +8,10 @@ const linkStyle = {
 
 const Header = () => (
   <div>
-    <Link href="/">
+    <Link href={`${PUBLIC_URL}/`}>
       <a style={linkStyle}>Home</a>
     </Link>
-    <Link href="/about">
+    <Link href={`${PUBLIC_URL}/about`}>
       <a style={linkStyle}>About</a>
     </Link>
     <style jsx>{`
