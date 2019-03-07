@@ -24,11 +24,11 @@ button {
 
 button span {
   position: absolute;
-  top: 0;
+  top: 0;         /* with JavaScript, set top and left to click point could be better */
   right: 0;
   bottom: 0;
   left: 0;
-  width: 300px;
+  width: 300px;   /* with JavaScript, set width and height to size of button could be better */
   height: 300px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
