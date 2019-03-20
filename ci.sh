@@ -23,5 +23,8 @@ bash -c "cd ./react/hooks-form && npm install && npm run build && rm -fr src && 
 echo "[JOB] Start 'vue/modal' building ..."
 bash -c "cd ./vue/modal && npm install && npm run build && rm -fr src && mv ./dist/* . && cd ../../" &
 
+echo "[JOB] Start 'angular/learn' building ..."
+bash -c "cd ./angular/learn && npm install && npm run build && rm -fr src e2e && mv ./build/* . && cd ../../" &
+
 wait
 echo "[SUCCESS] All jobs completed !"
