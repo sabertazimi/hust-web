@@ -1,4 +1,4 @@
-# hust-web
+# [hust-web](https://sabertazimi.github.io/hust-web/)
 
 [![Build Status](https://travis-ci.org/sabertazimi/hust-web.svg?branch=master)](https://travis-ci.org/sabertazimi/hust-web)
 [![Codeship Status for sabertazimi/hust-web](https://app.codeship.com/projects/f03f8780-ddac-0136-6157-66d22330fd7b/status?branch=master)](https://app.codeship.com/projects/318043)
