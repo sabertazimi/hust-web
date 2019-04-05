@@ -93,7 +93,7 @@ body {
 
 .menu-item {
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
 }
 
 .menu-link {
@@ -130,4 +130,34 @@ body {
   opacity: 1;
   /* magic effect for delaying transition */
   transition: opacity 0.4s ease-in-out 0.4s;
+}
+
+.jumbotron {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url('./bg.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jumbotron h1 {
+  font-weight: 800;
+  font-size: 8rem;
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .menu-link {
+    font-size: 3rem;
+  }
+
+  .jumbotron h1 {
+    font-size: 4rem;
+  }
 }
