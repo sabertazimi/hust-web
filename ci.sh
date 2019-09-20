@@ -20,6 +20,9 @@ bash -c "cd ./react/nextjs && npm install && npm run build && rm -fr .next compo
 echo "[JOB] Start 'react/hooks-form' building ..."
 bash -c "cd ./react/hooks-form && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../" &
 
+echo "[JOB] Start 'react/switch' building ..."
+bash -c "cd ./react/switch && npm install && npm run build && rm -fr src public && mv ./build/* . && cd ../../" &
+
 echo "[JOB] Start 'vue/modal' building ..."
 bash -c "cd ./vue/modal && npm install && npm run build && rm -fr src && mv ./dist/* . && cd ../../" &
 
