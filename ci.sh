@@ -1,33 +1,43 @@
 #!/bin/bash
 
+work_dir=$(pwd)
+css_proj=(bootstrap-cms)
+ife_proj=(basic/mis basic/oop mvvm)
+react_proj=(nextjs hooks-form switch jwt-full-stack)
+vue_proj=(modal)
+angular_proj=(learn)
+
 echo "[JOBS] Start sub-projects building ..."
 
-echo "[JOB] Start 'bootstrap-cms' building ..."
-bash -c "cd ./css/bootstrap-cms && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../" &
+for proj in ${css_proj[@]}
+do
+    echo "[JOB] Start 'css/$proj' building ..."
+    bash -c "cd $work_dir/css/$proj && npm install && npm run build && rm -fr src && mv ./build/* ." &
+done
 
-echo "[JOB] Start 'ife/2018/basic/mis' building ..."
-bash -c "cd ./ife/2018/basic/mis && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../../" &
+for proj in ${ife_proj[@]}
+do
+    echo "[JOB] Start 'ife/2018/$proj' building ..."
+    bash -c "cd $work_dir/ife/2018/$proj && npm install && npm run build && rm -fr src && mv ./build/* ." &
+done
 
-echo "[JOB] Start 'ife/2018/basic/oop' building ..."
-bash -c "cd ./ife/2018/basic/oop && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../../" &
+for proj in ${react_proj[@]}
+do
+    echo "[JOB] Start 'react/$proj' building ..."
+    bash -c "cd $work_dir/react/$proj && npm install && npm run build && rm -fr src && mv ./build/* ." &
+done
 
-echo "[JOB] Start 'ife/2018/mvvm' building ..."
-bash -c "cd ./ife/2018/mvvm && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../../" &
+for proj in ${vue_proj[@]}
+do
+    echo "[JOB] Start 'vue/$proj' building ..."
+    bash -c "cd $work_dir/vue/$proj && npm install && npm run build && rm -fr src && mv ./dist/* ." &
+done
 
-echo "[JOB] Start 'react/nextjs' building ..."
-bash -c "cd ./react/nextjs && npm install && npm run build && rm -fr .next components pages && mv ./build/* . && cd ../../" &
-
-echo "[JOB] Start 'react/hooks-form' building ..."
-bash -c "cd ./react/hooks-form && npm install && npm run build && rm -fr src && mv ./build/* . && cd ../../" &
-
-echo "[JOB] Start 'react/switch' building ..."
-bash -c "cd ./react/switch && npm install && npm run build && rm -fr src public && mv ./build/* . && cd ../../" &
-
-echo "[JOB] Start 'vue/modal' building ..."
-bash -c "cd ./vue/modal && npm install && npm run build && rm -fr src && mv ./dist/* . && cd ../../" &
-
-echo "[JOB] Start 'angular/learn' building ..."
-bash -c "cd ./angular/learn && npm install && npm run build && rm -fr src e2e && mv ./build/* . && cd ../../" &
+for proj in ${angular_proj[@]}
+do
+    echo "[JOB] Start 'angular/$proj' building ..."
+    bash -c "cd $work_dir/angular/$proj && npm install && npm run build && rm -fr src && mv ./dist/* ." &
+done
 
 wait
 echo "[SUCCESS] All jobs completed !"
