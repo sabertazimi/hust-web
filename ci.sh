@@ -3,7 +3,7 @@
 work_dir=$(pwd)
 css_proj=(bootstrap-cms)
 ife_proj=(basic/mis basic/oop mvvm)
-react_proj=(nextjs hooks-form switch jwt-full-stack)
+react_proj=(nextjs hooks-form switch)
 vue_proj=(modal)
 angular_proj=(learn)
 
