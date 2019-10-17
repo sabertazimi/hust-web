@@ -9,7 +9,12 @@ export class UserResolver {
     return 'Hello JWT';
   }
 
-  @Mutation()
+  @Query(() => [User])
+  users() {
+    return User.find();
+  }
+
+  @Mutation(() => Boolean)
   async register(
     @Arg('email') email: string,
     @Arg('password') password: string,
