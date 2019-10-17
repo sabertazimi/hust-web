@@ -12,8 +12,8 @@ export const isAuth: MiddlewareFn<AppContext> = ({ context }, next) => {
     const token = authorization.split(' ')[1];
     const payload = verify(token, process.env.ACCESS_TOKEN_SECRET!);
     context.payload = payload as any;
-  } catch(err) {
-    console.error(err.messge);
+  } catch (err) {
+    console.error(`[error] ${err.name}: ${err.message}`);
     throw new Error('Not authenticated');
   }
 

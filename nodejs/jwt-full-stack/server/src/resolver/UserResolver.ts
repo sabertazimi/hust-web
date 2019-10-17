@@ -13,12 +13,30 @@ import { User } from '../entity/User';
 import { AppContext } from '../AppContext';
 import { createRefreshToken, createAccessToken } from '../auth';
 import { isAuth } from '../middleware/isAuth';
+import { getConnection } from 'typeorm';
 
 @ObjectType()
 class LoginResponse {
   @Field()
   accessToken: string;
 }
+
+/**
+ * Revoke valid tokens
+ * @param userId user ID to revoken tokens
+ */
+export const revokeRefreshTokensForUser = async (userId: number) => {
+  try {
+    await getConnection()
+      .getRepository(User)
+      .increment({ id: userId }, 'tokenVersion', 1);
+  } catch (err) {
+    console.error(`[error] ${err.name}: ${err.message}`);
+    return false;
+  }
+
+  return true;
+};
 
 @Resolver()
 export class UserResolver {
@@ -46,7 +64,7 @@ export class UserResolver {
         password: hashedPassword
       });
     } catch (err) {
-      console.error(err.message);
+      console.error(`[error] ${err.name}: ${err.message}`);
       return false;
     }
 
