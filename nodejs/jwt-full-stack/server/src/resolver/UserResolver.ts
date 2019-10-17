@@ -1,14 +1,25 @@
-import { Resolver, Query, Mutation, Arg } from 'type-graphql';
-import { hash } from 'bcryptjs';
+import {
+  Resolver,
+  Query,
+  Mutation,
+  Arg,
+  Ctx,
+  ObjectType,
+  Field
+} from 'type-graphql';
+import { hash, compare } from 'bcryptjs';
 import { User } from '../entity/User';
+import { AppContext } from '../AppContext';
+import { createRefreshToken, createAccessToken } from '../auth';
+
+@ObjectType()
+class LoginResponse {
+  @Field()
+  accessToken: string;
+}
 
 @Resolver()
 export class UserResolver {
-  @Query(() => String)
-  hello() {
-    return 'Hello JWT';
-  }
-
   @Query(() => [User])
   users() {
     return User.find();
@@ -17,14 +28,14 @@ export class UserResolver {
   @Mutation(() => Boolean)
   async register(
     @Arg('email') email: string,
-    @Arg('password') password: string,
+    @Arg('password') password: string
   ) {
     const hashedPassword = await hash(password, 12);
 
     try {
       await User.insert({
         email,
-        password: hashedPassword,
+        password: hashedPassword
       });
     } catch (err) {
       console.error(err.message);
@@ -32,5 +43,30 @@ export class UserResolver {
     }
 
     return true;
+  }
+
+  @Mutation(() => LoginResponse)
+  async login(
+    @Arg('email') email: string,
+    @Arg('password') password: string,
+    @Ctx() context: AppContext
+  ) {
+    const { res } = context;
+
+    const user = await User.findOne({
+      where: { email }
+    });
+    if (!user) {
+      throw new Error('Could not find user');
+    }
+
+    const valid = await compare(password, user.password);
+    if (!valid) {
+      throw new Error('Bad password');
+    }
+
+    // login success
+    res.cookie('jid', createRefreshToken(user), { httpOnly: true });
+    return { accessToken: createAccessToken(user) };
   }
 }

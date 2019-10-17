@@ -1,29 +1,31 @@
+import 'dotenv/config';
 import 'reflect-metadata';
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
-import { UserResolver } from './resolver/UserResolver';
 import { createConnection } from 'typeorm';
+import { UserResolver } from './resolver/UserResolver';
 
 const SERVER_PORT = process.env.PORT || 4000;
 
 (async () => {
-
   const app = express();
+  app.get('/', (_req, res) => res.send('Hello JWT'));
+
   await createConnection();
+
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
       resolvers: [UserResolver]
-    })
+    }),
+    context: ({ req, res }) => ({ req, res })
   });
 
   apolloServer.applyMiddleware({ app });
 
-  app.get('/', (_req, res) => res.send('Hello JWT'));
   app.listen(4000, () => {
     console.log(`Express server started on port ${SERVER_PORT}`);
-  })
-
+  });
 })();
 
 // createConnection().then(async connection => {
