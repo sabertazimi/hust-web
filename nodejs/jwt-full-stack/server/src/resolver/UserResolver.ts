@@ -5,12 +5,14 @@ import {
   Arg,
   Ctx,
   ObjectType,
-  Field
+  Field,
+  UseMiddleware
 } from 'type-graphql';
 import { hash, compare } from 'bcryptjs';
 import { User } from '../entity/User';
 import { AppContext } from '../AppContext';
 import { createRefreshToken, createAccessToken } from '../auth';
+import { isAuth } from '../middleware/isAuth';
 
 @ObjectType()
 class LoginResponse {
@@ -20,6 +22,12 @@ class LoginResponse {
 
 @Resolver()
 export class UserResolver {
+  @Query(() => String)
+  @UseMiddleware(isAuth)
+  bye(@Ctx() { payload }: AppContext) {
+    return `Your use id is: ${payload!.userId}`;
+  }
+
   @Query(() => [User])
   users() {
     return User.find();
