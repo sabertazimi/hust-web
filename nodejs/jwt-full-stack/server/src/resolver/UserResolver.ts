@@ -41,6 +41,11 @@ export const revokeRefreshTokensForUser = async (userId: number) => {
 @Resolver()
 export class UserResolver {
   @Query(() => String)
+  hello() {
+    return 'Hello JWT';
+  }
+
+  @Query(() => String)
   @UseMiddleware(isAuth)
   bye(@Ctx() { payload }: AppContext) {
     return `Your use id is: ${payload!.userId}`;
