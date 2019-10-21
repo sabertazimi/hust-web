@@ -1,7 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import { BasicLayout, Home, Register, Login, Agreement, ForgotPassword } from './components';
+import {
+  BasicLayout,
+  Home,
+  Register,
+  Login,
+  Agreement,
+  ForgotPassword
+} from './components';
 
 const App: React.FC = () => {
   return (
