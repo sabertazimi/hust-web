@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import { FormComponentProps } from 'antd/lib/form/Form';
 import { Breakpoints } from '../config';
+import { useLoginMutation } from '../query';
 
 interface Props extends FormComponentProps {}
 
@@ -15,18 +16,30 @@ type FormValues = {
 const NormalLoginForm: React.FC<Props> = ({ form }) => {
   const { getFieldDecorator } = form;
   const history = useHistory();
+  const [login] = useLoginMutation();
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      form.validateFields((err: any, values: FormValues) => {
+      form.validateFields(async (err: any, values: FormValues) => {
         if (!err) {
-          console.log('Received values of form: ', values);
-          history.push('/');
+          const { email, password } = values;
+          const response = await login({
+            variables: {
+              email,
+              password
+            }
+          });
+
+          if (response.data!.login.accessToken) {
+            history.push('/');
+          } else {
+            message.error('Non-existent user or wrong password. Please retry');
+          }
         }
       });
     },
-    [form, history]
+    [form, history, login]
   );
 
   return (
