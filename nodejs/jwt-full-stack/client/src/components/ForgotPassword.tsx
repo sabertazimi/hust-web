@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { Form, Icon, Input, Button } from 'antd';
 import { FormComponentProps } from 'antd/lib/form/Form';
+import { Breakpoints } from '../config';
 
 interface Props extends FormComponentProps {}
 
@@ -28,7 +29,7 @@ const ForgotPasswordForm: React.FC<Props> = ({ form }) => {
       onSubmit={handleSubmit}
       style={{
         margin: '0 auto',
-        maxWidth: 1024
+        maxWidth: Breakpoints.Small
       }}
     >
       <Form.Item>

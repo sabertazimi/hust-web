@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Form, Input, Checkbox, Button } from 'antd';
 import { FormComponentProps, ValidationRule } from 'antd/lib/form/Form';
 import { useRegisterMutation } from '../query';
+import { Breakpoints } from '../config';
 
 type ValidateCallback<V> = (errors?: any, values?: V) => void;
 
@@ -17,8 +18,8 @@ type FormValues = {
 
 const RegistrationForm: React.FC<Props> = ({ form }) => {
   const { getFieldDecorator } = form;
-  const [register] = useRegisterMutation();
   const history = useHistory();
+  const [register] = useRegisterMutation();
   const [confirmDirty, setConfirmDirty] = useState(false);
 
   const handleSubmit = useCallback(
@@ -103,6 +104,7 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
       sm: { span: 16 }
     }
   };
+
   const tailFormItemLayout = {
     wrapperCol: {
       xs: {
@@ -122,7 +124,7 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
       onSubmit={handleSubmit}
       style={{
         margin: '0 auto',
-        maxWidth: 1024
+        maxWidth: Breakpoints.Small
       }}
     >
       <Form.Item label="E-mail">

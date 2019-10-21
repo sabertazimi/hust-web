@@ -1,11 +1,12 @@
 import React from 'react';
 import { Spin, List, Avatar } from 'antd';
 import { useUsersQuery } from '../query';
+import { Colors } from '../config';
 
 interface Props {}
 
 const Home: React.FC<Props> = () => {
-  const { data, loading } = useUsersQuery();
+  const { data, loading } = useUsersQuery({ fetchPolicy: 'network-only' });
 
   return (
     <Spin spinning={loading} size="large">
@@ -19,9 +20,15 @@ const Home: React.FC<Props> = () => {
             renderItem={user => (
               <List.Item>
                 <List.Item.Meta
-                  avatar={<Avatar size="large" icon="user" />}
+                  avatar={
+                    <Avatar
+                      size="large"
+                      icon="user"
+                      style={{ backgroundColor: Colors.PrimaryColor }}
+                    />
+                  }
                   title={
-                    <a href="https://github.com/sabertazimi/hust-web">
+                    <a href={`mailto:${user.email}`}>
                       {user.email}
                     </a>
                   }

@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import { FormComponentProps } from 'antd/lib/form/Form';
+import { Breakpoints } from '../config';
 
 interface Props extends FormComponentProps {}
 
@@ -33,7 +34,7 @@ const NormalLoginForm: React.FC<Props> = ({ form }) => {
       onSubmit={handleSubmit}
       style={{
         margin: '0 auto',
-        maxWidth: 1024
+        maxWidth: Breakpoints.Small
       }}
     >
       <Form.Item>
