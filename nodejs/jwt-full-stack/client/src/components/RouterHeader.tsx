@@ -6,7 +6,7 @@ interface Props {
   defaultSelectedKey?: number;
 }
 
-const RouterHeader: React.FC<Props> = ({ defaultSelectedKey = 1 }) => {
+const RouterHeader: React.FC<Props> = ({ defaultSelectedKey = '/' }) => {
   const location = useLocation();
 
   return (
