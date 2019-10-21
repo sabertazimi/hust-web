@@ -4,5 +4,14 @@ import Register from './Register';
 import Login from './Login';
 import Agreement from './Agreement';
 import ForgotPassword from './ForgotPassword';
+import Dashboard from './Dashboard';
 
-export { BasicLayout, Home, Register, Login, Agreement, ForgotPassword };
+export {
+  BasicLayout,
+  Home,
+  Register,
+  Login,
+  Agreement,
+  ForgotPassword,
+  Dashboard
+};

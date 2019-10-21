@@ -27,6 +27,9 @@ const RouterHeader: React.FC<Props> = ({ defaultSelectedKey = '/' }) => {
         <Menu.Item key="/login">
           <Link to="/login">Login</Link>
         </Menu.Item>
+        <Menu.Item key="/dashboard">
+          <Link to="/dashboard">Dashboard</Link>
+        </Menu.Item>
       </Menu>
     </Layout.Header>
   );

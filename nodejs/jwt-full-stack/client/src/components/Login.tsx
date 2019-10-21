@@ -4,6 +4,7 @@ import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import { FormComponentProps } from 'antd/lib/form/Form';
 import { Breakpoints } from '../config';
 import { useLoginMutation } from '../query';
+import Auth from '../auth';
 
 interface Props extends FormComponentProps {}
 
@@ -32,8 +33,10 @@ const NormalLoginForm: React.FC<Props> = ({ form }) => {
           });
 
           if (response.data!.login.accessToken) {
-            history.push('/');
+            Auth.setAccessToken(response.data!.login.accessToken);
+            history.push('/dashboard');
           } else {
+            Auth.setAccessToken('');
             message.error('Non-existent user or wrong password. Please retry');
           }
         }

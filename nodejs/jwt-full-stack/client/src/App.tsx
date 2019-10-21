@@ -7,7 +7,8 @@ import {
   Register,
   Login,
   Agreement,
-  ForgotPassword
+  ForgotPassword,
+  Dashboard
 } from './components';
 
 const App: React.FC = () => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
           <Route path="/login" component={Login} />
           <Route path="/agreement" component={Agreement} />
           <Route path="/forgot-password" component={ForgotPassword} />
+          <Route path="/dashboard" component={Dashboard} />
         </Switch>
       </BasicLayout>
     </BrowserRouter>
