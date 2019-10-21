@@ -6,6 +6,7 @@ import { buildSchema } from 'type-graphql';
 import { createConnection } from 'typeorm';
 import cookieParser from 'cookie-parser';
 import { verify } from 'jsonwebtoken';
+import cors from 'cors';
 import { UserResolver } from './resolver/UserResolver';
 import { User } from './entity/User';
 import { createRefreshToken, createAccessToken } from './auth';
@@ -14,6 +15,7 @@ const SERVER_PORT = process.env.PORT || 4000;
 
 (async () => {
   const app = express();
+  app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
   app.use(cookieParser());
   app.get('/', (_req, res) => res.send('Hello JWT'));
   app.post('/refresh_token', async (req, res) => {
@@ -52,7 +54,7 @@ const SERVER_PORT = process.env.PORT || 4000;
     context: ({ req, res }) => ({ req, res })
   });
 
-  apolloServer.applyMiddleware({ app });
+  apolloServer.applyMiddleware({ app, cors: false });
 
   app.listen(4000, () => {
     console.log(`Express server started on port ${SERVER_PORT}`);
