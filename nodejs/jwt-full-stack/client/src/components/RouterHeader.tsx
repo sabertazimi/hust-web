@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 
 interface Props {
@@ -7,21 +7,24 @@ interface Props {
 }
 
 const RouterHeader: React.FC<Props> = ({ defaultSelectedKey = 1 }) => {
+  const location = useLocation();
+
   return (
     <Layout.Header>
       <Menu
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={[`${defaultSelectedKey}`]}
+        selectedKeys={[location.pathname]}
         style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="1">
+        <Menu.Item key="/">
           <Link to="/">Home</Link>
         </Menu.Item>
-        <Menu.Item key="2">
+        <Menu.Item key="/register">
           <Link to="/register">Register</Link>
         </Menu.Item>
-        <Menu.Item key="3">
+        <Menu.Item key="/login">
           <Link to="/login">Login</Link>
         </Menu.Item>
       </Menu>

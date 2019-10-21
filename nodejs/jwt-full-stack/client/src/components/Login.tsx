@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import { FormComponentProps } from 'antd/lib/form/Form';
 
@@ -13,6 +13,7 @@ type FormValues = {
 
 const NormalLoginForm: React.FC<Props> = ({ form }) => {
   const { getFieldDecorator } = form;
+  const history = useHistory();
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,10 +21,11 @@ const NormalLoginForm: React.FC<Props> = ({ form }) => {
       form.validateFields((err: any, values: FormValues) => {
         if (!err) {
           console.log('Received values of form: ', values);
+          history.push('/');
         }
       });
     },
-    [form]
+    [form, history]
   );
 
   return (
