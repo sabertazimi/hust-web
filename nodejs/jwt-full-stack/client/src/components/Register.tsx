@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input, Checkbox, Button } from 'antd';
 import { FormComponentProps, ValidationRule } from 'antd/lib/form/Form';
+import { useRegisterMutation } from '../query';
 
 type ValidateCallback<V> = (errors?: any, values?: V) => void;
 
@@ -21,22 +22,26 @@ interface State {
 const RegistrationForm: React.FC<Props> = ({ form }) => {
   const { getFieldDecorator } = form;
   const [confirmDirty, setConfirmDirty] = useState(false);
+  const [register] = useRegisterMutation();
 
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    form.validateFieldsAndScroll((err: any, values: FormValues) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
-  }, []);
+  const handleSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      form.validateFieldsAndScroll((err: any, values: FormValues) => {
+        if (!err) {
+          console.log('Received values of form: ', values);
+        }
+      });
+    },
+    [form]
+  );
 
   const handleConfirmBlur = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const { value } = e.target;
       setConfirmDirty(confirmDirty || !!value);
     },
-    []
+    [confirmDirty]
   );
 
   const compareToFirstPassword = useCallback(
@@ -51,7 +56,7 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
         callback();
       }
     },
-    []
+    [form]
   );
 
   const validateToNextPassword = useCallback(
@@ -65,7 +70,7 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
       }
       callback();
     },
-    [confirmDirty]
+    [form, confirmDirty]
   );
 
   const validateToAgreement = useCallback(

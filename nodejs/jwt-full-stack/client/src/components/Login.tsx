@@ -14,14 +14,17 @@ type FormValues = {
 const NormalLoginForm: React.FC<Props> = ({ form }) => {
   const { getFieldDecorator } = form;
 
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    form.validateFields((err: any, values: FormValues) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
-  }, []);
+  const handleSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      form.validateFields((err: any, values: FormValues) => {
+        if (!err) {
+          console.log('Received values of form: ', values);
+        }
+      });
+    },
+    [form]
+  );
 
   return (
     <Form
