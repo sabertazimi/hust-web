@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Form, Input, Checkbox, Button } from 'antd';
+import { Form, Input, Checkbox, Button, message } from 'antd';
 import { FormComponentProps, ValidationRule } from 'antd/lib/form/Form';
 import { useRegisterMutation } from '../query';
 import { Breakpoints } from '../config';
@@ -34,8 +34,12 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
               password
             }
           });
-          console.log(response);
-          history.push('/');
+
+          if (response.data!.register) {
+            history.push('/');
+          } else {
+            message.error(`Email ${email} already registered`);
+          }
         }
       });
     },

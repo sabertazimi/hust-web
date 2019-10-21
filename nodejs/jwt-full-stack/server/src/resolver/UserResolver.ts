@@ -64,6 +64,13 @@ export class UserResolver {
     const hashedPassword = await hash(password, 12);
 
     try {
+      const user = await User.findOne({
+        where: { email }
+      });
+      if (user) {
+        throw new Error('User already existed.');
+      }
+
       await User.insert({
         email,
         password: hashedPassword
