@@ -1,6 +1,8 @@
+import BasicLayout from './BasicLayout';
 import Home from './Home';
 import Register from './Register';
 import Login from './Login';
-import BasicLayout from './BasicLayout';
+import Agreement from './Agreement';
+import ForgotPassword from './ForgotPassword';
 
-export { Home, Register, Login, BasicLayout };
+export { BasicLayout, Home, Register, Login, Agreement, ForgotPassword };
