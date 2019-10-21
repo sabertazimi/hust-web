@@ -91,20 +91,25 @@ export class UserResolver {
   ) {
     const { res } = context;
 
-    const user = await User.findOne({
-      where: { email }
-    });
-    if (!user) {
-      throw new Error('Could not find user');
-    }
+    try {
+      const user = await User.findOne({
+        where: { email }
+      });
+      if (!user) {
+        throw new Error('Non-existent user or wrong password');
+      }
 
-    const valid = await compare(password, user.password);
-    if (!valid) {
-      throw new Error('Bad password');
-    }
+      const valid = await compare(password, user.password);
+      if (!valid) {
+        throw new Error('Non-existent user or wrong password');
+      }
 
-    // login success
-    res.cookie('jid', createRefreshToken(user), { httpOnly: true });
-    return { accessToken: createAccessToken(user) };
+      // login success
+      res.cookie('jid', createRefreshToken(user), { httpOnly: true });
+      return { accessToken: createAccessToken(user) };
+    } catch (err) {
+      console.error(`[error] ${err.name}: ${err.message}`);
+      return { accessToken: '' };
+    }
   }
 }
