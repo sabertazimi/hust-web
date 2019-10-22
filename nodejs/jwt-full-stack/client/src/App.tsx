@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <BasicLayout>
         <Switch>
           {routes.map(route => (
-            <Route exact path={route.path} component={route.component} />
+            <Route exact key={route.path} path={route.path} component={route.component} />
           ))}
         </Switch>
       </BasicLayout>
