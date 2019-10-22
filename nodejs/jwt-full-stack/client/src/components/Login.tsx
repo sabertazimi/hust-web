@@ -47,7 +47,7 @@ const NormalLoginForm: React.FC<Props> = ({ form }) => {
 
           if (response.data!.login.accessToken) {
             Auth.setAccessToken(response.data!.login.accessToken);
-            history.push('/dashboard');
+            setTimeout(() => history.push('/dashboard'), 0);
           } else {
             Auth.setAccessToken('');
             message.error('Non-existent user or wrong password. Please retry');

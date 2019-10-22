@@ -36,7 +36,7 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
           });
 
           if (response.data!.register) {
-            history.push('/');
+            setTimeout(() => history.push('/'), 0);
           } else {
             message.error(`Email ${email} already registered`);
           }

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useHistory } from 'react-router';
 import { Alert, Spin, Button } from 'antd';
-import { useUserQuery } from '../query';
+import { useUserQuery, useLogoutMutation } from '../query';
 import Auth from '../auth';
 
 interface Props {}
@@ -9,6 +9,14 @@ interface Props {}
 const Dashboard: React.FC<Props> = () => {
   const history = useHistory();
   const { data, loading, error } = useUserQuery();
+  const [logout, { client }] = useLogoutMutation();
+
+  const handleClick = useCallback(async () => {
+    await logout();
+    Auth.setAccessToken('');
+    await client!.resetStore();
+    setTimeout(() => history.push('/login'), 0);
+  }, [logout, history, client]);
 
   if (error) {
     Auth.setAccessToken('');
@@ -21,7 +29,11 @@ const Dashboard: React.FC<Props> = () => {
       <div style={{ marginBottom: '1em' }}>
         {loading ? '' : <div>Email: {data!.user.email}</div>}
       </div>
-      <Button type="primary">Logout</Button>
+      {!loading && data && data.user ? (
+        <Button type="primary" onClick={handleClick}>
+          Logout
+        </Button>
+      ) : null}
     </Spin>
   );
 };
