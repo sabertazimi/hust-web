@@ -14,6 +14,7 @@ export type Scalars = {
 export type LoginResponse = {
    __typename?: 'LoginResponse',
   accessToken: Scalars['String'],
+  user: User,
 };
 
 export type Mutation = {
@@ -37,7 +38,7 @@ export type MutationLoginArgs = {
 export type Query = {
    __typename?: 'Query',
   hello: Scalars['String'],
-  user: Scalars['String'],
+  user: User,
   users: Array<User>,
 };
 
@@ -66,6 +67,10 @@ export type LoginMutation = (
   & { login: (
     { __typename?: 'LoginResponse' }
     & Pick<LoginResponse, 'accessToken'>
+    & { user: (
+      { __typename?: 'User' }
+      & Pick<User, 'id' | 'email'>
+    ) }
   ) }
 );
 
@@ -85,7 +90,10 @@ export type UserQueryVariables = {};
 
 export type UserQuery = (
   { __typename?: 'Query' }
-  & Pick<Query, 'user'>
+  & { user: (
+    { __typename?: 'User' }
+    & Pick<User, 'id' | 'email'>
+  ) }
 );
 
 export type UsersQueryVariables = {};
@@ -134,6 +142,10 @@ export const LoginDocument = gql`
     mutation Login($email: String!, $password: String!) {
   login(email: $email, password: $password) {
     accessToken
+    user {
+      id
+      email
+    }
   }
 }
     `;
@@ -196,7 +208,10 @@ export type RegisterMutationResult = ApolloReactCommon.MutationResult<RegisterMu
 export type RegisterMutationOptions = ApolloReactCommon.BaseMutationOptions<RegisterMutation, RegisterMutationVariables>;
 export const UserDocument = gql`
     query User {
-  user
+  user {
+    id
+    email
+  }
 }
     `;
 

@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import { FormComponentProps } from 'antd/lib/form/Form';
 import { Breakpoints } from '../config';
-import { useLoginMutation } from '../query';
+import { useLoginMutation, UserDocument } from '../query';
 import Auth from '../auth';
 
 interface Props extends FormComponentProps {}
@@ -29,6 +29,19 @@ const NormalLoginForm: React.FC<Props> = ({ form }) => {
             variables: {
               email,
               password
+            },
+            update: (store, { data }) => {
+              if (!data) {
+                return null;
+              }
+
+              // update apollo in-memory cache
+              store.writeQuery({
+                query: UserDocument,
+                data: {
+                  user: data.login.user
+                }
+              });
             }
           });
 

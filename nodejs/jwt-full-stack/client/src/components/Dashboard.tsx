@@ -8,9 +8,7 @@ interface Props {}
 
 const Dashboard: React.FC<Props> = () => {
   const history = useHistory();
-  const { data, loading, error } = useUserQuery({
-    fetchPolicy: 'network-only'
-  });
+  const { data, loading, error } = useUserQuery();
 
   if (error) {
     Auth.setAccessToken('');
@@ -21,7 +19,7 @@ const Dashboard: React.FC<Props> = () => {
   return (
     <Spin spinning={loading} size="large">
       <div style={{ marginBottom: '1em' }}>
-        {loading ? '' : <div>Your user ID is {data!.user}</div>}
+        {loading ? '' : <div>Email: {data!.user.email}</div>}
       </div>
       <Button type="primary">Logout</Button>
     </Spin>
