@@ -4,19 +4,21 @@ import { Layout, Menu } from 'antd';
 import Auth from '../auth';
 
 interface Props {
-  defaultSelectedKey?: number;
 }
 
-const RouterHeader: React.FC<Props> = ({ defaultSelectedKey = '/' }) => {
+const RouterHeader: React.FC<Props> = () => {
   const location = useLocation();
-  const menus = [{ path: '/', title: 'Home' }];
   const accessToken = Auth.getAccessToken();
+  const menus = [{ path: '/', title: 'Home' }];
+  const defaultMenu = [];
 
   if (accessToken) {
     menus.push({ path: '/dashboard', title: 'Dashboard' });
+    defaultMenu.push('/dashboard');
   } else {
     menus.push({ path: '/register', title: 'Register' });
     menus.push({ path: '/login', title: 'Login' });
+    defaultMenu.push('/');
   }
 
   return (
@@ -24,7 +26,7 @@ const RouterHeader: React.FC<Props> = ({ defaultSelectedKey = '/' }) => {
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={[`${defaultSelectedKey}`]}
+        defaultSelectedKeys={defaultMenu}
         selectedKeys={[location.pathname]}
         style={{ lineHeight: '64px' }}
       >

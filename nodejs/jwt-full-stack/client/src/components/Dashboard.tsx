@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router';
 import { Alert, Spin, Button } from 'antd';
 import { useUserQuery } from '../query';
+import Auth from '../auth';
 
 interface Props {}
 
@@ -12,6 +13,7 @@ const Dashboard: React.FC<Props> = () => {
   });
 
   if (error) {
+    Auth.setAccessToken('');
     setTimeout(() => history.push('/login'), 0);
     return <Alert message="Haven't logged in" type="info" showIcon />;
   }
