@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
+import Auth from '../auth';
 
 interface Props {
   defaultSelectedKey?: number;
@@ -8,6 +9,15 @@ interface Props {
 
 const RouterHeader: React.FC<Props> = ({ defaultSelectedKey = '/' }) => {
   const location = useLocation();
+  const menus = [{ path: '/', title: 'Home' }];
+  const accessToken = Auth.getAccessToken();
+
+  if (accessToken) {
+    menus.push({ path: '/dashboard', title: 'Dashboard' });
+  } else {
+    menus.push({ path: '/register', title: 'Register' });
+    menus.push({ path: '/login', title: 'Login' });
+  }
 
   return (
     <Layout.Header>
@@ -18,18 +28,11 @@ const RouterHeader: React.FC<Props> = ({ defaultSelectedKey = '/' }) => {
         selectedKeys={[location.pathname]}
         style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="/">
-          <Link to="/">Home</Link>
-        </Menu.Item>
-        <Menu.Item key="/register">
-          <Link to="/register">Register</Link>
-        </Menu.Item>
-        <Menu.Item key="/login">
-          <Link to="/login">Login</Link>
-        </Menu.Item>
-        <Menu.Item key="/dashboard">
-          <Link to="/dashboard">Dashboard</Link>
-        </Menu.Item>
+        {menus.map(menu => (
+          <Menu.Item key={menu.path}>
+            <Link to={menu.path}>{menu.title}</Link>
+          </Menu.Item>
+        ))}
       </Menu>
     </Layout.Header>
   );

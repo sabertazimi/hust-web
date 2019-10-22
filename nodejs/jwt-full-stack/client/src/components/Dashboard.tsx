@@ -1,21 +1,25 @@
 import React from 'react';
-import { Alert, Spin } from 'antd';
+import { useHistory } from 'react-router';
+import { Alert, Spin, Button } from 'antd';
 import { useUserQuery } from '../query';
 
 interface Props {}
 
 const Dashboard: React.FC<Props> = () => {
+  const history = useHistory();
   const { data, loading, error } = useUserQuery({
     fetchPolicy: 'network-only'
   });
 
   if (error) {
-    return <Alert message="Not authenticated" type="error" showIcon closable />;
+    history.push('/login');
+    return <Alert message="Haven't logged in" type="info" showIcon />;
   }
 
   return (
     <Spin spinning={loading} size="large">
-      <div>{loading ? '' : `Your user ID is ${data!.user}`}</div>
+      <div style={{marginBottom: '1em'}}>{loading ? '' : <div>Your user ID is {data!.user}</div>}</div>
+      <Button type="primary">Logout</Button>
     </Spin>
   );
 };

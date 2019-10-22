@@ -12,16 +12,22 @@ import {
 } from './components';
 
 const App: React.FC = () => {
+  const routes = [
+    { path: '/', component: Home },
+    { path: '/register', component: Register },
+    { path: '/login', component: Login },
+    { path: '/agreement', component: Agreement },
+    { path: '/forgot-password', component: ForgotPassword },
+    { path: '/dashboard', component: Dashboard }
+  ];
+
   return (
     <BrowserRouter>
       <BasicLayout>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
-          <Route path="/agreement" component={Agreement} />
-          <Route path="/forgot-password" component={ForgotPassword} />
-          <Route path="/dashboard" component={Dashboard} />
+          {routes.map(route => (
+            <Route exact path={route.path} component={route.component} />
+          ))}
         </Switch>
       </BasicLayout>
     </BrowserRouter>
