@@ -48,7 +48,7 @@ export class UserResolver {
   @Query(() => String)
   @UseMiddleware(isAuth)
   user(@Ctx() { payload }: AppContext) {
-    return `Your user ID is: ${payload!.userId}`;
+    return `${payload!.userId}`;
   }
 
   @Query(() => [User])
