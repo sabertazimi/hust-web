@@ -5,7 +5,9 @@ import { useUserQuery } from '../query';
 interface Props {}
 
 const Dashboard: React.FC<Props> = () => {
-  const { data, loading, error } = useUserQuery();
+  const { data, loading, error } = useUserQuery({
+    fetchPolicy: 'network-only'
+  });
 
   if (error) {
     return <Alert message="Not authenticated" type="error" showIcon closable />;
