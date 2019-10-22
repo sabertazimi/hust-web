@@ -1,3 +1,6 @@
 query User {
-  user
+  user {
+    id,
+    email
+  }
 }

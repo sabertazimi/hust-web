@@ -19,6 +19,9 @@ import { getConnection } from 'typeorm';
 class LoginResponse {
   @Field()
   accessToken: string;
+
+  @Field(() => User)
+  user: User;
 }
 
 /**
@@ -45,10 +48,10 @@ export class UserResolver {
     return 'Hello JWT';
   }
 
-  @Query(() => String)
+  @Query(() => User)
   @UseMiddleware(isAuth)
   user(@Ctx() { payload }: AppContext) {
-    return `${payload!.userId}`;
+    return User.findOne(payload!.userId);
   }
 
   @Query(() => [User])
@@ -106,10 +109,10 @@ export class UserResolver {
 
       // login success
       res.cookie('jid', createRefreshToken(user), { httpOnly: true });
-      return { accessToken: createAccessToken(user) };
+      return { accessToken: createAccessToken(user), user };
     } catch (err) {
       console.error(`[error] ${err.name}: ${err.message}`);
-      return { accessToken: '' };
+      return { accessToken: '', user: null };
     }
   }
 }
