@@ -3,8 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import Auth from '../auth';
 
-interface Props {
-}
+interface Props {}
 
 const RouterHeader: React.FC<Props> = () => {
   const location = useLocation();
