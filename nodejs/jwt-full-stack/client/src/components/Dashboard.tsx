@@ -12,13 +12,15 @@ const Dashboard: React.FC<Props> = () => {
   });
 
   if (error) {
-    history.push('/login');
+    setTimeout(() => history.push('/login'), 0);
     return <Alert message="Haven't logged in" type="info" showIcon />;
   }
 
   return (
     <Spin spinning={loading} size="large">
-      <div style={{marginBottom: '1em'}}>{loading ? '' : <div>Your user ID is {data!.user}</div>}</div>
+      <div style={{ marginBottom: '1em' }}>
+        {loading ? '' : <div>Your user ID is {data!.user}</div>}
+      </div>
       <Button type="primary">Logout</Button>
     </Spin>
   );
