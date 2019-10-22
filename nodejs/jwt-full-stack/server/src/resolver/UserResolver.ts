@@ -11,7 +11,11 @@ import {
 import { hash, compare } from 'bcryptjs';
 import { User } from '../entity/User';
 import { AppContext } from '../AppContext';
-import { createRefreshToken, createAccessToken } from '../auth';
+import {
+  createRefreshToken,
+  createAccessToken,
+  sendRefreshToken
+} from '../auth';
 import { isAuth } from '../middleware/isAuth';
 import { getConnection } from 'typeorm';
 
@@ -108,11 +112,17 @@ export class UserResolver {
       }
 
       // login success
-      res.cookie('jid', createRefreshToken(user), { httpOnly: true });
+      sendRefreshToken(res, createRefreshToken(user));
       return { accessToken: createAccessToken(user), user };
     } catch (err) {
       console.error(`[error] ${err.name}: ${err.message}`);
       return { accessToken: '', user: null };
     }
+  }
+
+  @Mutation(() => Boolean)
+  async logout(@Ctx() { res }: AppContext) {
+    sendRefreshToken(res, '');
+    return true;
   }
 }

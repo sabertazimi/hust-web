@@ -9,7 +9,11 @@ import { verify } from 'jsonwebtoken';
 import cors from 'cors';
 import { UserResolver } from './resolver/UserResolver';
 import { User } from './entity/User';
-import { createRefreshToken, createAccessToken } from './auth';
+import {
+  createRefreshToken,
+  createAccessToken,
+  sendRefreshToken
+} from './auth';
 
 const SERVER_PORT = process.env.PORT || 4000;
 
@@ -41,7 +45,7 @@ const SERVER_PORT = process.env.PORT || 4000;
       return res.send({ ok: false, accessToken: '' });
     }
 
-    res.cookie('jid', createRefreshToken(user), { httpOnly: true });
+    sendRefreshToken(res, createRefreshToken(user));
     return res.send({ ok: true, accessToken: createAccessToken(user) });
   });
 
