@@ -1,0 +1,48 @@
+.card {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 0;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+  box-sizing: border-box;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  padding: 45% 0 45% 0;
+
+  cursor: pointer;
+  text-align: center;
+  background-color: #1e90ff;
+  color: white;
+
+  backface-visibility: hidden;
+  transition: transform .75s ease-in-out;
+}
+
+.card .front {
+  transform: rotateY(0deg);
+}
+
+.card .back {
+  background-color: #800080;
+  transform: rotateY(-180deg);
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}

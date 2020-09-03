@@ -1,0 +1,23 @@
+input {
+  transition: border-bottom 0.5s ease-out;
+}
+
+input:focus {
+  border-bottom: 1px solid #2196f3;
+}
+
+input ~ label {
+  transition: transform .25s ease-in-out;
+}
+
+input[value=""] ~ label {
+  transform: scale(1) translate(0, 0);
+}
+
+input[value=""]:focus ~ label {
+  transform: scale(0.8) translate(-40px, -20px);
+}
+
+input:not([value=""]) ~ label {
+  transform: scale(0.8) translate(-40px, -20px);
+}

@@ -1,0 +1,30 @@
+{
+  "name": "nextjs",
+  "version": "1.0.0",
+  "description": "Nextjs Demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production next build && nodemon server.js",
+    "dev": "nodemon server.js",
+    "build": "next build && next export -o build",
+    "analyze": "cross-env ANALYZE=1 next build"
+  },
+  "keywords": [
+    "nextjs",
+    "react"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "webpack-bundle-analyzer": "^3.0.3"
+  }
+}
