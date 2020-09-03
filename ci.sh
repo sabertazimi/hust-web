@@ -36,7 +36,7 @@ done
 for proj in ${angular_proj[@]}
 do
     echo "[JOB] Start 'angular/$proj' building ..."
-    bash -c "cd $work_dir/angular/$proj && npm install && npm run build && rm -fr src && mv ./dist/* ." &
+    bash -c "cd $work_dir/angular/$proj && npm install && npm run build && rm -fr src && mv ./build/* ." &
 done
 
 wait
