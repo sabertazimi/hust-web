@@ -1,8 +1,0 @@
-- type: parallel
-  steps:
-  - name: hust-web-sub-project
-    service: hust-web-service
-    command: bash ci.sh
-- name: hust-web-deployment
-  service: hust-web-service
-  command: npm run build
