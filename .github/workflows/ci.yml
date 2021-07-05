@@ -16,7 +16,6 @@ jobs:
         - ubuntu-latest
         node-version:
         - 11
-        - 14
         architecture:
         - x64
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
