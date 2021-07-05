@@ -1,12 +1,11 @@
 # [hust-web](https://sabertazimi.github.io/hust-web/)
 
-[![Continuous Integration](https://github.com/sabertazimi/hust-web/actions/workflows/ci.yml/badge.svg)](https://github.com/sabertazimi/hust-web/actions/workflows/ci.yml)
-
-A repo for learning demo archives
-
 [![Author](https://img.shields.io/badge/author-sabertazimi-lightgrey.svg)](https://github.com/sabertazimi)
 [![stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)](https://github.com/sabertazimi/hust-web)
 [![MIT](https://img.shields.io/badge/license-mit-brightgreen.svg)](https://raw.githubusercontent.com/sabertazimi/hust-web/master/LICENSE)
+[![Continuous Integration](https://github.com/sabertazimi/hust-web/actions/workflows/ci.yml/badge.svg)](https://github.com/sabertazimi/hust-web/actions/workflows/ci.yml)
+
+A repo for learning demo archives
 
 ## Collections
 
