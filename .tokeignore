@@ -35,6 +35,8 @@ Doxyfile
 gdbinit
 Gruntfile.js
 Gulpfile.js
+install.sh
 LICENSE
 Makefile
 robots.txt
+setup.sh
