@@ -1,0 +1,78 @@
+@import '../variable';
+
+input {
+  font-size: 16px/26px;
+}
+
+.form-wrap {
+  width: 320px;
+  margin: 3em auto;
+  box-shadow: 0 1px 8px $color-gray-5;
+  background-color: #fff;
+}
+
+.tabs {
+  overflow: hidden;
+  margin: 0;
+}
+
+.tabs h2 {
+  float: left;
+  width: 50%;
+}
+
+.tabs h2 {
+  display: block;
+  padding: 0.5em 0;
+  background-color: #e6e7e8;
+  cursor: pointer;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+}
+
+.tabs .active {
+  background-color: #fff;
+}
+
+.form-wrap .tabs-content {
+  margin: 0;
+  padding: 1.5em;
+}
+
+.form-wrap .tabs-content .active {
+  display: block !important;
+}
+
+.form-wrap form .input {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 0.8em;
+  padding: 0.8em 0 10px 0.8em;
+  padding-right: 2em;
+  border: 1px solid #cfcfcf;
+  outline: 0;
+  color: inherit;
+  font-family: inherit;
+}
+
+.form-wrap form .button {
+  width: 100%;
+  padding: 0.8em 0 10px 0.8em;
+  border: 0 solid transparent;
+  background-color: #28a55f;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.form-wrap form .button:hover {
+  background-color: #4fda8c;
+}
+
+.form-wrap form .checkbox {
+  visibility: hidden;
+  margin: 0.5em 0 1.5em;
+  padding: 20px;
+}

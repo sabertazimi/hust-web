@@ -1,0 +1,27 @@
+@import './variable';
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  font-family: $font-stack;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: inherit;
+  padding: inherit;
+  font-family: inherit;
+}
+
+a {
+  color: $color-secondary;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color-success;
+}
+

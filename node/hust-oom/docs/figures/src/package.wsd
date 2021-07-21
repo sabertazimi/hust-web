@@ -1,0 +1,59 @@
+@startuml PackagePacked
+hide empty members
+hide <<主题>> circle
+
+package 1 <<Rectangle>> {
+  class 用户系统 <<主题>>
+}
+
+package 2 <<Rectangle>> {
+  class 管理系统 <<主题>>
+}
+
+package 3 <<Rectangle>> {
+  class 外部接口 <<主题>>
+}
+
+package 4 <<Rectangle>> {
+  class 事件系统 <<主题>>
+}
+@enduml
+
+@startuml PackageUnpacked
+hide empty members
+hide <<主题>> circle
+
+package 1 <<Folder>> {
+  class 用户系统 <<主题>> {
+    用户
+    好友
+    好友分组
+    聊天信息
+  }
+}
+
+package 2 <<Folder>> {
+  class 管理系统 <<主题>> {
+    管理员
+    账户管理器
+    账户
+    配置表
+  }
+}
+
+package 3 <<Folder>> {
+  class 外部接口 <<主题>> {
+    外部聊天系统
+  }
+}
+
+package 4 <<Folder>> {
+  class 事件系统 <<主题>> {
+    事件
+    登录事件
+    注册事件
+    好友事件
+    聊天事件
+  }
+}
+@enduml

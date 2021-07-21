@@ -1,0 +1,92 @@
+@startuml UsecaseSubsystem
+left to right direction
+
+sprite $aComponent jar:archimate/application-component
+
+archimate #APPLICATION "<<subsystem>>\n账户管理" as User <<application-component>>
+archimate #APPLICATION "<<subsystem>>\n好友管理" as Friend <<application-component>>
+archimate #APPLICATION "<<subsystem>>\n聊天管理" as Chat <<application-component>>
+
+Friend .up.|> User
+Chat .up.|> User
+Chat .up.|> Friend
+@enduml
+
+@startuml UsecaseAccount
+' sign up
+' log in
+' information
+left to right direction
+
+:用户: as User << Human >>
+:数据库: as DB << Application >>
+
+(注册) as (Signup)
+(登录) as (Login)
+(信息维护) as (Info)
+
+User -- (Signup)
+(Signup) -- DB : 新建账户
+
+User -- (Login)
+(Login) -- DB : 账户校验
+
+User -- (Info)
+(Info) -- DB : 修改账户信息
+@enduml
+
+@startuml UsecaseFriend
+' add friend
+' import friend
+' delete friend
+' group friend
+left to right direction
+
+:用户: as User << Human >>
+:用户 B: as Userb << Human >>
+:用户 A: as Usera << Human >>
+:数据库: as DB << Application >>
+
+(添加好友) as (Add)
+(导入好友) as (Import)
+(删除好友) as (Delete)
+(好友分组) as (Group)
+
+Usera -- (Add)
+Userb -- (Add)
+(Add) -- DB
+
+Usera -- (Import)
+Userb -- (Import)
+(Import) -- DB
+
+Usera -- (Delete)
+Userb -- (Delete)
+(Delete) -- DB
+
+User -- (Group)
+(Group) -- DB
+@enduml
+
+@startuml UsecaseChat
+' online chat
+' offline chat
+left to right direction
+
+:用户 A: as Usera << Human >>
+:用户 B: as Userb << Human >>
+:服务端: as Server << Application >>
+:数据库: as DB << Application >>
+
+(在线消息) as (Online)
+(离线消息) as (Offline)
+
+Usera -- (Online)
+Userb -- (Online)
+(Online) -- Server
+
+Usera -- (Offline)
+Userb -- (Offline)
+(Offline) -- Server
+(Offline) -- DB
+@enduml

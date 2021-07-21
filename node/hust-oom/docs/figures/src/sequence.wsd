@@ -1,0 +1,51 @@
+@startuml SequenceAccountLogin
+actor 用户 as User
+boundary 登录界面 as UI1
+entity 账户管理器 as AccountManager
+collections 账户列表 as Accounts
+boundary 用户面板 as UI2
+
+activate User
+User -> UI1: 输入邮箱与密码, 请求登录系统
+activate UI1
+UI1 -> AccountManager: 登录验证请求（登录事件）
+deactivate UI1
+activate AccountManager
+AccountManager -> Accounts: 查询并验证登录信息
+deactivate AccountManager
+
+alt 账号不存在情况
+  activate Accounts
+  Accounts --> AccountManager: 验证账号不存在
+  deactivate Accounts
+  activate AccountManager
+  AccountManager --> UI1 : 账号不存在信息
+  deactivate AccountManager
+  activate UI1
+  UI1 --> User: 账号不存在信息
+  deactivate UI1
+else 登录失败情况
+  activate Accounts
+  Accounts --> AccountManager: 登录信息验证失败
+  deactivate Accounts
+  activate AccountManager
+  AccountManager --> UI1 : 登录失败信息
+  deactivate AccountManager
+  activate UI1
+  UI1 --> User: 登录失败信息
+  deactivate UI1
+else 登录成功情况
+  activate Accounts
+  Accounts --> AccountManager: 登录信息验证成功
+  deactivate Accounts
+  activate AccountManager
+  AccountManager --> UI1 : 登录成功信息
+  deactivate AccountManager
+  activate UI1
+  UI1 --> User: 登录成功信息
+  deactivate UI1
+  User -> UI2: 跳转至用户面板
+end
+
+deactivate User
+@enduml

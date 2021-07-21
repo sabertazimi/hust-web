@@ -1,0 +1,126 @@
+@startuml ActivityAccount
+|Client|
+start
+if (注册状态) then (未注册)
+  :注册;
+  -> 个人信息与初始密码;
+  |#AntiqueWhite|Server|
+  if (账户审核) then (成功)
+    :注册新用户;
+  else (失败)
+    :拒绝注册;
+  endif
+  -> 注册结果;
+  |Client|
+  while (注册结果) is (失败)
+    :重新注册;
+    detach
+  endwhile (成功) 
+else (已注册)
+endif
+:登录;
+-> 个人信息与密码;
+|#AntiqueWhite|Server|
+:账户验证;
+:匹配账户存在性;
+:匹配密码适配性;
+-> 验证结果;
+|Client|
+if (验证结果) then (不通过)
+  :登录失败;
+  :重新登录;
+  detach
+else (通过)
+  :登录成功;
+  :维护账户信息 (昵称、密码、好友等);
+endif
+stop
+@enduml
+
+@startuml ActivityAddfriend
+|User A|
+start
+fork
+  :添加好友;
+fork again
+  :从手机通讯里批量导入;
+end fork
+-> 发送添加好友申请至用户 B;
+|#AntiqueWhite|Server|
+:查询用户 B;
+-> 发送申请至用户 B;
+|User B|
+:处理用户 A 的好友申请;
+-> 处理结果;
+|#AntiqueWhite|Server|
+if (用户 A 的好友申请) then (通过)
+  -> 通过信息;
+  :建立用户 A 与 B 的好友关系;
+else (拒绝)
+  -> 拒绝信息;
+  :保持用户 A 与 B 的陌生人关系;
+endif
+-> 申请结果;
+|User A|
+stop
+@enduml
+
+@startuml ActivityDeletefriend
+|User A|
+start
+:删除好友;
+-> 发送删除好友申请;
+|#AntiqueWhite|Server|
+:查询用户 B;
+:删除用户 A 与 B 的好友关系;
+fork
+  -> 发送删除好友结果至用户 A;
+  :删除好友成功;
+fork again
+  -> 发送删除好友通知至用户 B;
+  |User B|
+  :得知与用户 A 不再是好友关系;
+  detach
+end fork
+|User A|
+stop
+@enduml
+
+@startuml ActivityGroupfriend
+|User A|
+start
+:对好友进行分组;
+-> 发送好友分组信息;
+|#AntiqueWhite|Server|
+:建立用户 A 的好友分组信息;
+|User A|
+stop
+@enduml
+
+@startuml ActivityChat
+|User A|
+start
+:发送聊天信息给 B;
+-> 聊天信息(A to B);
+|#AntiqueWhite|Server|
+:查询用户 B;
+if (两者的好友关系) then (否)
+  :拒绝发送;
+  |User A|
+  :聊天信息发送失败;
+  |#AntiqueWhite|Server|
+else (是)
+  if (用户 B 状态) then (离线)
+    |#AntiqueWhite|Server|
+    :暂存聊天信息一定时间;
+    :用户 B 登录后进行补发;
+  else (在线)
+  endif
+  :发送聊天信息;
+  |User B|
+  :接收聊天信息;
+  detach
+endif
+|User A|
+stop
+@enduml

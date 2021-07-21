@@ -1,0 +1,7 @@
+@startuml StateAccount
+[*] -right-> 初始化
+初始化 -right-> 注册 : 开始注册账户
+注册 -down-> 登录 : 已注册或注册成功
+登录 -left-> 已登录 : 账户校验通过
+已登录 -left-> [*]
+@enduml
