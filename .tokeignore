@@ -1,12 +1,17 @@
 *.conf
 *.config
 *.dat
+*.ico
 *.ini
+*.jpg
+*.jpeg
 *.json
 *.ld
 *.lock
 *.map
 *.md
+*.png
+*.svg
 *.txt
 *.xml
 *.yaml
