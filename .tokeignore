@@ -1,6 +1,8 @@
+*.bib
 *.conf
 *.config
 *.dat
+*.git
 *.ico
 *.ini
 *.jpg
@@ -10,9 +12,12 @@
 *.lock
 *.map
 *.md
+*.pdf
 *.png
 *.svg
+*.tex
 *.txt
+*.wsd
 *.xml
 *.yaml
 *.yml
@@ -22,14 +27,22 @@
 *.min.js
 
 .babelrc
+.babelrc.js
 .browserslistrc
+.browserslistrc.js
 .clang-format
 .editorconfig
+.eslintrc
 .eslintrc.js
 .gitignore
 .gitmodules
 .npmignore
 .prettierrc
+.prettierrc.js
+.sassdocrc
+.sassdocrc.js
+.stylelintrc
+.stylelintrc.js
 .vscodeignore
 
 browserslist
@@ -43,5 +56,7 @@ Gulpfile.js
 install.sh
 LICENSE
 Makefile
+Makefile.*
 robots.txt
 setup.sh
+
