@@ -3,9 +3,9 @@
 work_dir=$(pwd)
 css_proj=(bootstrap-cms)
 ife_proj=(basic/mis basic/oop mvvm)
-react_proj=(nextjs hooks-form switch)
-vue_proj=(modal)
 angular_proj=(learn)
+react_proj=(hooks-form nextjs switch)
+vue_proj=(modal)
 
 echo "[JOBS] Start sub-projects building ..."
 
