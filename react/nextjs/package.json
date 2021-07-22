@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "nodemon": "^1.18.9",
+    "nodemon": "^2.0.12",
     "webpack-bundle-analyzer": "^3.0.3"
   }
 }
