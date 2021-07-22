@@ -12,5 +12,6 @@ updates:
 
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/css/bootstrap-cms" # Location of package manifests
+    directory: "/angular/learn" # Location of package manifests
     schedule:
       interval: "daily"
