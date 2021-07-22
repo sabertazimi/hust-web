@@ -2,7 +2,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -13,12 +13,7 @@ const useSass = !!(packageJson.devDependencies['node-sass']);
 
 const styleLoader = [
   devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-  {
-    loader: 'css-loader',
-    options: {
-      minimize: !devMode,
-    },
-  },
+  'css-loader',
   'postcss-loader',
 ];
 
@@ -27,7 +22,7 @@ if (useSass) {
 }
 
 const plugins = [
-  new CleanWebpackPlugin('build'),
+  new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
     hash: true,
     template: './src/index.html',
