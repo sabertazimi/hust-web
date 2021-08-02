@@ -1,6 +1,7 @@
 {
   "name": "nextjs",
   "version": "1.0.0",
+  "private": true,
   "description": "Nextjs Demo",
   "main": "index.js",
   "scripts": {

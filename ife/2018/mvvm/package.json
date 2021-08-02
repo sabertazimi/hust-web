@@ -1,6 +1,7 @@
 {
   "name": "MVVM",
   "version": "1.0.0",
+  "private": true,
   "description": "IFE 2018 MVVM Project",
   "main": "./src/index.js",
   "scripts": {
