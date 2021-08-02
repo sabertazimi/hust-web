@@ -7,7 +7,7 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=1 next build",
     "build": "next build && next export -o build",
-    "postbuild": "rm -fr src && mv ./build/* .",
+    "postbuild": "rm -fr components pages && mv ./build/* .",
     "dev": "nodemon server.js",
     "start": "cross-env NODE_ENV=production next build && nodemon server.js"
   },
