@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Setup npm workspaces for monorepo instead of bash scripts
+
 work_dir=$(pwd)
 css_proj=(bootstrap-cms)
 ife_proj=(basic/mis basic/oop mvvm)
