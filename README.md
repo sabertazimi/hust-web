@@ -17,7 +17,6 @@ A repo for learning demo archives
 - [IFE 2018 Collection](https://sabertazimi.github.io/hust-web/ife/2018)
 - [React Collection](https://sabertazimi.github.io/hust-web/react)
 - [Vue Collection](https://sabertazimi.github.io/hust-web/vue)
-- [Angular Collection](https://sabertazimi.github.io/hust-web/angular)
 
 ## License
 

@@ -5,7 +5,6 @@
 work_dir=$(pwd)
 css_proj=(bootstrap-cms)
 ife_proj=(basic/mis basic/oop mvvm)
-angular_proj=(learn)
 react_proj=(hooks-form nextjs switch)
 vue_proj=(modal)
 
@@ -33,12 +32,6 @@ for proj in ${vue_proj[@]}
 do
     echo "[JOB] Start 'vue/$proj' building ..."
     bash -c "cd $work_dir/vue/$proj && npm install && npm run build && rm -fr src && mv ./dist/* ." &
-done
-
-for proj in ${angular_proj[@]}
-do
-    echo "[JOB] Start 'angular/$proj' building ..."
-    bash -c "cd $work_dir/angular/$proj && npm install && npm run build && rm -fr src && mv ./build/* ." &
 done
 
 wait
