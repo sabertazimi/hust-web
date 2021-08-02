@@ -1,23 +1,44 @@
 {
   "name": "hust-web",
   "version": "1.0.0",
-  "description": "hust web",
+  "description": "A repo for learning demo archives",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p ./build && cp -fr ./css ./js ./fcc ./ife ./react ./vue ./angular ./index.html ./index.css ./build"
+    "build": "mkdir -p ./build && cp -fr ./css ./js ./fcc ./ife ./react ./vue ./angular ./index.html ./index.css ./build",
+    "prelease": "standard-version --dry-run -s",
+    "release": "standard-version -s",
+    "start": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sabertazimi/hust-web.git"
   },
   "keywords": [
+    "html",
+    "html5",
+    "css",
+    "css3",
+    "js",
+    "javascript",
+    "ecmascript",
+    "react",
+    "reactjs",
+    "vue",
+    "vuejs",
+    "node",
+    "nodejs",
+    "front-end",
+    "front-end development",
     "web",
-    "front-end"
+    "web development"
   ],
   "author": "sabertazimi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sabertazimi/hust-web/issues"
   },
-  "homepage": "https://github.com/sabertazimi/hust-web"
+  "homepage": "https://github.com/sabertazimi/hust-web",
+  "devDependencies": {
+    "standard-version": "^9.3.1"
+  }
 }
