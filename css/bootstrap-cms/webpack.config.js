@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const packageJson = require('./package.json');
@@ -59,10 +60,11 @@ const plugins = [
     filename: './login.html',
   }),
   new MiniCssExtractPlugin({
-    filename: devMode ? '[name].css' : '[name].[hash].css',
-    chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+    filename: devMode ? '[name].css' : '[name].[contenthash].css',
+    chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
   }),
   new StyleLintPlugin(),
+  new ESLintPlugin({ extensions: ['js', 'jsx'] }),
 ];
 
 if (!devMode) {
@@ -84,10 +86,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-          'babel-loader',
-          'eslint-loader',
-        ],
+        use: ['babel-loader'],
       },
       {
         test: /\.html$/,
