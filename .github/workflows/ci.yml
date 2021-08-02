@@ -42,7 +42,7 @@ jobs:
           npm run test --if-present
           npm run build --if-present
     - name: List production artifacts
-      run: ls -alhR
+      run: ls -alhR -Inode_modules
       working-directory: build
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -54,3 +54,4 @@ jobs:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         commit_message: ${{ github.event.head_commit.message }}
+
