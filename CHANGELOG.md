@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/sabertazimi/hust-web/compare/v1.0.0...v1.1.0) (2021-08-02)
+
+
+### Features
+
+* **monorepo:** add NPM workspaces support ([bb7ece8](https://github.com/sabertazimi/hust-web/commit/bb7ece8f9c1b8d3e43461f37addf58b67ff31c8b)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+
+
+### Bug Fixes
+
+* **lockfile:** rectify lockfile for package building ([a3284c5](https://github.com/sabertazimi/hust-web/commit/a3284c555caf23e1d6540573d8e8bc998fcb576a)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+* **packages:** add private limit to packages ([3d269f9](https://github.com/sabertazimi/hust-web/commit/3d269f937fd19c4093b18727f5677c0545728ef9)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+* **react-scripts:** keep consistence ([beeefa7](https://github.com/sabertazimi/hust-web/commit/beeefa722052a4a51f595afeedaaaff84022faa1)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+* **react-scripts:** skip preflight check ([e27eea4](https://github.com/sabertazimi/hust-web/commit/e27eea4b020ee6642335c17fa2dfa33ae2bdbdc6)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+* **vue-modal:** rectify babel-eslint deps conflict ([1ccfa7d](https://github.com/sabertazimi/hust-web/commit/1ccfa7d621e82d1e22b720cabb6f78051340aee4)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+* **vue:** remove stale vue demos ([7d0337c](https://github.com/sabertazimi/hust-web/commit/7d0337c77d75fed82c8f1a0d2c0cccc6aa1a9e22)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+
+
+### Updates
+
+* **angular:** remove angular deprecated demo ([13b2520](https://github.com/sabertazimi/hust-web/commit/13b2520992c5726a377070cc21487796da3ec017))
+
+
+### Building Work
+
+* **nextjs:** polish postbuild script ([13797ac](https://github.com/sabertazimi/hust-web/commit/13797ac58e111931f4e8c1ab6793ef6385726e9d))
+* **postbuild:** add postbuild to workspace scripts ([61f28f9](https://github.com/sabertazimi/hust-web/commit/61f28f97db4c5f2d8b2731b324dfb2bd98cc316d)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+* **workspaces:** remove packages separate lockfiles ([449fa0c](https://github.com/sabertazimi/hust-web/commit/449fa0c7165b6182df5139acb3d7f319ccbd5f0f)), closes [#94](https://github.com/sabertazimi/hust-web/issues/94)
+* **workspaces:** replace bash scripts with workspaces ([b16d847](https://github.com/sabertazimi/hust-web/commit/b16d8478f04112ba531121cbb0269f9aa1cd2e9d))
+
 ## 1.0.0 (2021-08-02)
 
 
