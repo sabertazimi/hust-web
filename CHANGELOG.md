@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/sabertazimi/hust-web/compare/v1.1.0...v1.1.1) (2021-08-02)
+
+
+### Building Work
+
+* **CI:** list build files exclude node_modules ([a3c7d27](https://github.com/sabertazimi/hust-web/commit/a3c7d27aa2c852facd625529d69c26ff24cd6b18))
+* **CI:** rectify CI error ([c85a89c](https://github.com/sabertazimi/hust-web/commit/c85a89cabcbbe744f96f888bb0ef42d130a6ff59))
+* **deps-dev:** bump eslint-config-airbnb-base from 13.2.0 to 14.2.1 ([0a2bd61](https://github.com/sabertazimi/hust-web/commit/0a2bd6125ec2ee3e95eddf21476b6638f18f9d41))
+* **deps-dev:** bump image-webpack-loader from 4.6.0 to 7.0.1 ([7e15a48](https://github.com/sabertazimi/hust-web/commit/7e15a48ca4ca3f9595b5ed69ba1b432e02d1566b))
+* **deps-dev:** bump nodemon from 1.19.4 to 2.0.12 ([9b2e16d](https://github.com/sabertazimi/hust-web/commit/9b2e16d82931f38c9c2eef5a284acf6ebbf66204))
+* **deps-dev:** bump webpack-bundle-analyzer from 3.9.0 to 4.4.2 ([76d1cf4](https://github.com/sabertazimi/hust-web/commit/76d1cf449580d979bca9e00c070097d03f7169b7))
+* **deps:** bump @ckeditor/ckeditor5-build-classic ([eb52425](https://github.com/sabertazimi/hust-web/commit/eb52425c58b74d8047d9bbf6ce8ba112ecbb6650))
+* **deps:** bump next from 7.0.3 to 10.0.4 ([ff9462c](https://github.com/sabertazimi/hust-web/commit/ff9462ce19ed3f1934b59799ef172c22a6c7db4d))
+* **deps:** bump react-scripts from 3.1.2 to 4.0.3 ([97d3dcf](https://github.com/sabertazimi/hust-web/commit/97d3dcf1fa21b9054198fbcb1bbfe70b057c0d4f))
+
 ## [1.1.0](https://github.com/sabertazimi/hust-web/compare/v1.0.0...v1.1.0) (2021-08-02)
 
 
