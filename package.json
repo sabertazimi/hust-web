@@ -6,7 +6,7 @@
   "scripts": {
     "audit": "npm audit fix --registry https://registry.npmjs.org",
     "build": "npm run build -ws",
-    "postbuild": "mkdir -p ./build && cp -fr ./css ./js ./fcc ./ife ./react ./vue ./index.html ./index.css ./build",
+    "postbuild": "mkdir -p ./build && cp -fr ./css ./js ./fcc ./ife ./react ./index.html ./index.css ./build",
     "prelease": "standard-version --dry-run -s",
     "release": "standard-version -s",
     "start": "npm run build"
@@ -25,8 +25,6 @@
     "ecmascript",
     "react",
     "reactjs",
-    "vue",
-    "vuejs",
     "node",
     "nodejs",
     "front-end",
@@ -48,7 +46,6 @@
     "./css/*",
     "./ife/2018/*",
     "./ife/2018/basic/*",
-    "./react/*",
-    "./vue/*"
+    "./react/*"
   ]
 }
