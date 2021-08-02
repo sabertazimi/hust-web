@@ -5,10 +5,11 @@
   "description": "Nextjs Demo",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production next build && nodemon server.js",
-    "dev": "nodemon server.js",
+    "analyze": "cross-env ANALYZE=1 next build",
     "build": "next build && next export -o build",
-    "analyze": "cross-env ANALYZE=1 next build"
+    "postbuild": "rm -fr src && mv ./build/* .",
+    "dev": "nodemon server.js",
+    "start": "cross-env NODE_ENV=production next build && nodemon server.js"
   },
   "keywords": [
     "nextjs",

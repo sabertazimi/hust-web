@@ -8,6 +8,7 @@
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --port 2333 --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
+    "postbuild": "rm -fr src && mv ./build/* .",
     "lint": "stylelint ./src/**/*.css && eslint --ext .js ./src"
   },
   "repository": {
