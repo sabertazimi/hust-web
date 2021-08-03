@@ -68,9 +68,11 @@ const plugins = [
 ];
 
 if (!devMode) {
-  plugins.push(new CopyWebpackPlugin([{
-    from: './src/favicon.ico',
-  }]));
+  plugins.push(
+    new CopyWebpackPlugin({
+      patterns: [{ from: './src/favicon.ico' }],
+    })
+  );
 }
 
 module.exports = {
