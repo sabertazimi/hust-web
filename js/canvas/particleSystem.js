@@ -13,7 +13,7 @@ class ExplodingParticle {
     this.color = color;
 
     // Speed
-    this. speed = speed || {
+    this.speed = speed || {
       x: -5 + Math.random() * 10,
       y: -5 + Math.random() * 10,
     };
@@ -112,7 +112,8 @@ class ParticleSystem {
     this.screenCanvas.addEventListener('click', (event) => {
       const x = event.clientX;
       const y = event.clientY;
-      const getRandomInt = (min, max) => () => (Math.floor(Math.random() * (max - min)) + min);
+      const getRandomInt = (min, max) => () =>
+        Math.floor(Math.random() * (max - min)) + min;
       const getColor = getRandomInt(0, 255);
 
       for (let count = this.factor; count > 0; --count) {
@@ -121,14 +122,14 @@ class ParticleSystem {
           x: -5 + Math.random() * 10,
           y: -5 + Math.random() * 10,
         };
-        particleSystem.emit({ x, y, color, speed });
+        this.emit({ x, y, color, speed });
         count--;
       }
     });
   }
 
-  emit(x = 0, y = 0, color = [156, 39, 176]) {
-    this.factory.emit(x, y, color);
+  emit({ x = 0, y = 0, color = [156, 39, 176], speed }) {
+    this.factory.emit({ x, y, color, speed });
   }
 
   draw() {
@@ -140,7 +141,8 @@ class ParticleSystem {
 
       // Simple way to clean up if the last particle is done animating
       if (index === particles.length - 1) {
-        let percent = (Date.now() - particle.startTime) / particle.animationDuration;
+        let percent =
+          (Date.now() - particle.startTime) / particle.animationDuration;
 
         if (percent > 1) {
           this.factory.clearParticles();
@@ -153,16 +155,19 @@ class ParticleSystem {
   }
 
   clear() {
-    this.buffer.clearRect(0, 0, this.bufferCanvas.width, this.bufferCanvas.height);
+    this.buffer.clearRect(
+      0,
+      0,
+      this.bufferCanvas.width,
+      this.bufferCanvas.height
+    );
 
-    // only the next drawing operation on screen will be visible
-    // everything else will get cleared out
-    // this.screen.globalCompositeOperation = 'copy';
-    // this.screen.drawImage(this.bufferCanvas, 0, 0);
-    // set back to default mode
-    // this.screen.globalCompositeOperation = 'sourc-over';
-
-    this.screen.clearRect(0, 0, this.screenCanvas.width, this.screenCanvas.height);
+    this.screen.clearRect(
+      0,
+      0,
+      this.screenCanvas.width,
+      this.screenCanvas.height
+    );
   }
 
   update() {
