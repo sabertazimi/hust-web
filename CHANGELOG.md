@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/sabertazimi/hust-web/compare/v1.1.1...v1.1.2) (2021-08-09)
+
+
+### Bug Fixes
+
+* **JS-canvas:** rectify emit parameters ([6011459](https://github.com/sabertazimi/hust-web/commit/60114590918881c86c9b11212cdf720912ec5a6e))
+* **san-loader:** san-loader use .babelrc as default ([3f24ada](https://github.com/sabertazimi/hust-web/commit/3f24adaaf61730728cd3507ef48e05e70f763f8e))
+
+
+### Building Work
+
+* **css-bootstrap cms:** add eslint-parser support ([b4013a3](https://github.com/sabertazimi/hust-web/commit/b4013a39849e16846f00d5041511ba59f1cb8cf2))
+* **deps-dev:** npm audit fix ([8a7f54f](https://github.com/sabertazimi/hust-web/commit/8a7f54f6916b61c0017662a8f148740038582e6f))
+* **deps:** bump async-validator from 1.12.2 to 3.5.2 ([295931d](https://github.com/sabertazimi/hust-web/commit/295931d96e6310ee27cccc87142f5d46a17a019d))
+* **deps:** bump bulma from 0.7.5 to 0.9.3 ([3aa19b8](https://github.com/sabertazimi/hust-web/commit/3aa19b850d72c8808eafc23f64e17ee1fb82fec3))
+* **deps:** bump tar from 2.2.1 to 2.2.2 in /node/hust-oom ([d88d3a9](https://github.com/sabertazimi/hust-web/commit/d88d3a9d7387ceb387481f8ea5393b7c2093c4f7))
+* **webpack:** bump copy-webpack-plugin to 9.0.1 ([a33c8a7](https://github.com/sabertazimi/hust-web/commit/a33c8a7b946792db4a618b66ca9fd3efcceeeab7))
+
 ### [1.1.1](https://github.com/sabertazimi/hust-web/compare/v1.1.0...v1.1.1) (2021-08-02)
 
 

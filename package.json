@@ -1,6 +1,6 @@
 {
   "name": "hust-web",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A repo for learning demo archives",
   "main": "index.js",
   "scripts": {
