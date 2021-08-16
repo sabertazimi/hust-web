@@ -3,7 +3,7 @@ import store from '../state/store';
 const { getState } = store;
 
 const generateHeader = (headers) => {
-  const headersHTML = headers.map(header => `<th>${header}</th>`).join('');
+  const headersHTML = headers.map((header) => `<th>${header}</th>`).join('');
 
   return (`
     <tr>
@@ -21,7 +21,7 @@ const generateRow = ({
   const regionHTML = `<td>${region}</td>`;
   // use `data-row` and `data-column` to locate cells
   // const { currentTarget: { dataset: { row, column }}} = event;
-  const salesHTML = sales.map(sale => `<td contenteditable class="right">${sale.toString(10).padStart(3)}</td>`).join('');
+  const salesHTML = sales.map((sale) => `<td contenteditable class="right">${sale.toString(10).padStart(3)}</td>`).join('');
 
   return (`
     <tr>
@@ -43,7 +43,7 @@ const generateTable = (data) => {
 
     return 1;
   });
-  const months = [...Array.from(Array(12).keys())].map(number => (number + 1));
+  const months = [...Array.from(Array(12).keys())].map((number) => (number + 1));
   const headersHTML = generateHeader(['product', 'region', ...months]);
   const bodyHTML = sortedData.map((item, index, array) => {
     if (index === 0 || array[index - 1].product !== item.product) {

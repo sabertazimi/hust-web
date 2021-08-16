@@ -18,9 +18,9 @@ const initialState = {
 };
 
 const getDataWithFilters = (data, filters) => (
-  data.filter(item => (
+  data.filter((item) => (
     Object.keys(filters)
-      .map(key => filters[key].includes(item[key]))
+      .map((key) => filters[key].includes(item[key]))
       .every(Boolean)
   ))
 );

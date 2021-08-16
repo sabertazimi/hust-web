@@ -34,7 +34,7 @@ export default class Restaurant {
   }
 
   getFreeStaff(type) {
-    return this.staffs.filter(staff => (
+    return this.staffs.filter((staff) => (
       // staff.getType() === type && staff.isFree()
       staff.getType() === type
     ));
@@ -58,15 +58,15 @@ export default class Restaurant {
 
         return waiter.work(customer)
           .then(([order, _waiter]) => {
-            $log(`customer '${customer.name}' ordered (${order.map(food => food.name).join(', ')}) !`);
+            $log(`customer '${customer.name}' ordered (${order.map((food) => food.name).join(', ')}) !`);
             return cook.work(order, _waiter);
           })
           .then(([order, leftOrder]) => {
-            const eatenOrder = order.filter(food => !leftOrder.includes(food));
+            const eatenOrder = order.filter((food) => !leftOrder.includes(food));
             const sales = eatenOrder.reduce((sale, food) => (sale + food.price), 0);
             this.cash += sales;
 
-            $log(`customer '${customer.name}' eaten (${eatenOrder.map(food => food.name).join(', ')}) !`);
+            $log(`customer '${customer.name}' eaten (${eatenOrder.map((food) => food.name).join(', ')}) !`);
             $log(`customer '${customer.name}' paid $${sales} !`);
             $log(`restaurant cash is $${this.cash} !`);
           });

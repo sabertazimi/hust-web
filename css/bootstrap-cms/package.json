@@ -9,7 +9,7 @@
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "postbuild": "rm -fr src && mv ./build/* .",
-    "lint": "stylelint ./src/**/*.scss ./src/**/*.css && eslint --ext .js --ext .jsx ./src"
+    "lint": "stylelint --fix ./src/**/*.scss ./src/**/*.css && eslint --fix --ext .js --ext .jsx ./src"
   },
   "repository": {
     "type": "git",

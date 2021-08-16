@@ -9,7 +9,7 @@ const createStore = (_reducer) => {
 
   const coreDispatch = (action) => {
     state = _reducer(state, action);
-    subscribers.forEach(handler => handler());
+    subscribers.forEach((handler) => handler());
   };
 
   const getState = () => state;
