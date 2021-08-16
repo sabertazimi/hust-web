@@ -57,7 +57,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "async-validator": "^3.5.2",
+    "async-validator": "^4.0.1",
     "san": "^3.6.15",
     "san-router": "^1.2.0"
   }
