@@ -5,11 +5,11 @@
   "description": "Restaurant",
   "main": "./src/index.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --port 2333 --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --port 2333 --mode development --open",
+    "lint": "stylelint ./src/**/*.css && eslint --ext .js --ext .jsx ./src",
     "postbuild": "rm -fr src && mv ./build/* .",
-    "lint": "stylelint ./src/**/*.css && eslint --ext .js --ext .jsx ./src"
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
