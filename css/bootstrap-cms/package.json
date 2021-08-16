@@ -5,11 +5,11 @@
   "description": "CMS custom theme for Bootstrap 4",
   "main": "./src/index.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
+    "lint": "stylelint --fix ./src/**/*.scss ./src/**/*.css && eslint --fix --ext .js --ext .jsx ./src",
     "postbuild": "rm -fr src && mv ./build/* .",
-    "lint": "stylelint --fix ./src/**/*.scss ./src/**/*.css && eslint --fix --ext .js --ext .jsx ./src"
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",

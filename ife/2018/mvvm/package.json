@@ -5,11 +5,11 @@
   "description": "IFE 2018 MVVM Project",
   "main": "./src/index.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --port 2333 --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
+    "lint": "stylelint --fix ./src/**/*.css && eslint --fix --ext .js ./src",
     "postbuild": "rm -fr src && mv ./build/* .",
-    "lint": "stylelint --fix ./src/**/*.css && eslint --fix --ext .js ./src"
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/sabertazimi/hust-web/issues"
   },
-  "homepage": "https://github.com/sabertazimi/hust-web",
+  "homepage": "https://sabertazimi.github.io/hust-web/ife/2018/mvvm",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/eslint-parser": "^7.15.0",
