@@ -10,7 +10,7 @@
     "postbuild": "mkdir -p ./build && cp -fr ./css ./js ./fcc ./ife ./react ./index.html ./index.css ./build",
     "prelease": "standard-version --dry-run -s",
     "release": "standard-version -s",
-    "start": "npm run build"
+    "start": "npm start -w MVVM"
   },
   "repository": {
     "type": "git",

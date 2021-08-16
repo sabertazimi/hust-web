@@ -1,8 +1,6 @@
 import { router } from 'san-router';
-
 import App from './App.san';
 import * as Tasks from './components/task';
-
 import './index.css';
 
 router.add({ rule: '/', Component: App, target: '#app' });

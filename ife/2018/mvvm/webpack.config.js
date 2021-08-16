@@ -1,5 +1,4 @@
 const path = require('path');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -21,27 +20,16 @@ module.exports = {
     rules: [
       {
         test: /\.san$/,
-        use: [
-          'san-loader',
-        ],
+        use: ['san-loader'],
       },
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: [
-          'babel-loader',
-        ],
+        use: ['babel-loader'],
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: {
-              minimize: !devMode,
-            },
-          },
-        ],
+        use: ['html-loader'],
       },
       {
         test: /\.css$/,
@@ -64,17 +52,12 @@ module.exports = {
       filename: devMode ? '[name].css' : '[name].[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
-    new ESLintPlugin({ extensions: ['js', 'jsx'] }),
+    new ESLintPlugin({ extensions: ['js'] }),
     new StyleLintPlugin(),
     new SanLoaderPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.san'],
-    alias: {
-      san: devMode
-        ? 'san/dist/san.dev.js'
-        : 'san/dist/san.js',
-    },
   },
   devtool: 'source-map',
 };
