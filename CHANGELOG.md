@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/sabertazimi/hust-web/compare/v1.1.2...v1.2.0) (2021-08-27)
+
+
+### Bug Fixes
+
+* **babel:** rectify babel configuration ([4a7ed99](https://github.com/sabertazimi/hust-web/commit/4a7ed99708686bd4c5df1f02b0b138f9fc867680))
+* **deps:** npm audit rectify ([f6ba75a](https://github.com/sabertazimi/hust-web/commit/f6ba75ae5e7463b46bd93eae62f370f5ec120ec7))
+* **postcss:** rectify configuration ([8ba68d0](https://github.com/sabertazimi/hust-web/commit/8ba68d046cf897e8a46630df4b1407c6a344ecdd))
+* **webpack-css:** rectify css-loader configuration ([885088f](https://github.com/sabertazimi/hust-web/commit/885088f3db061f11c0cadd643f34a3237acb6600))
+
+
+### Building Work
+
+* **babel:** update babel configuration ([13ccb36](https://github.com/sabertazimi/hust-web/commit/13ccb36f5f08c7d347b8f445be4e1713543f1c84))
+* **CI:** enable lint monorepo ([e83ee12](https://github.com/sabertazimi/hust-web/commit/e83ee12410d3d0ba4e0dd2d5acc74be2d8b4eeea))
+* **deps-dev:** bump @babel/core from 7.14.8 to 7.15.0 ([a2ad1d4](https://github.com/sabertazimi/hust-web/commit/a2ad1d4aeed205c017c0d86bafe964d358bd391c))
+* **deps-dev:** bump @babel/eslint-parser from 7.14.9 to 7.15.0 ([818e92c](https://github.com/sabertazimi/hust-web/commit/818e92cb0699f6231336539a15ee624295995058))
+* **deps-dev:** bump @babel/preset-env from 7.14.9 to 7.15.0 ([70957d0](https://github.com/sabertazimi/hust-web/commit/70957d0664d236dd49c0d924a8f1e225b42421c0))
+* **deps-dev:** bump autoprefixer from 10.3.1 to 10.3.2 ([9221e26](https://github.com/sabertazimi/hust-web/commit/9221e26a5b819a38a291a423785e426059085dc4))
+* **deps-dev:** bump autoprefixer from 10.3.2 to 10.3.3 ([5464f1e](https://github.com/sabertazimi/hust-web/commit/5464f1e4a499f4c133578788127a4cb624cc668e))
+* **deps-dev:** bump eslint-plugin-import from 2.23.4 to 2.24.0 ([8033f06](https://github.com/sabertazimi/hust-web/commit/8033f06aa3a593b60b87d6fcbf00a6ea6926e695))
+* **deps-dev:** bump eslint-plugin-import from 2.24.0 to 2.24.1 ([23a7b57](https://github.com/sabertazimi/hust-web/commit/23a7b5786c7812e73b64edca0e51376be3c2dc67))
+* **deps-dev:** bump eslint-plugin-import from 2.24.1 to 2.24.2 ([7d95118](https://github.com/sabertazimi/hust-web/commit/7d951188785d03576b63209a0dea30cf22680113))
+* **deps-dev:** bump stylelint-config-mass from 1.0.2 to 2.0.0 ([6fd6be5](https://github.com/sabertazimi/hust-web/commit/6fd6be56223330e840616bd16b47591cd3b38546))
+* **deps-dev:** bump stylelint-config-mass from 2.0.0 to 5.0.2 ([911b18e](https://github.com/sabertazimi/hust-web/commit/911b18e101f5059d4a1d6a335455436ab59c6c5c))
+* **deps-dev:** bump to latest version ([728e32e](https://github.com/sabertazimi/hust-web/commit/728e32e76b930cbace1203fc9fe0dccee5e6fe73))
+* **deps-dev:** bump to latest version ([026d00a](https://github.com/sabertazimi/hust-web/commit/026d00ac24a1f1d5a78bc245dab7b67b39a74dab))
+* **deps-dev:** bump webpack-dev-server from 3.11.2 to 4.0.0 ([5e0d3f2](https://github.com/sabertazimi/hust-web/commit/5e0d3f2896869eae904cecb8a2c8b91de1443577))
+* **deps:** bump @ckeditor/ckeditor5-build-classic ([8fe3990](https://github.com/sabertazimi/hust-web/commit/8fe39909759f61cb38e711fc65ecbeb880e00973))
+* **deps:** bump async-validator from 3.5.2 to 4.0.1 ([452477b](https://github.com/sabertazimi/hust-web/commit/452477b6ac7839b5afe93ab8173655209aed1921))
+* **deps:** bump async-validator from 4.0.1 to 4.0.2 ([c90bec7](https://github.com/sabertazimi/hust-web/commit/c90bec70a966ccb3c51be01a6290a5331cc0f360))
+* **deps:** bump next to v11 and react to v17 ([0432c93](https://github.com/sabertazimi/hust-web/commit/0432c93f74db00544acf6e521ed55df5a35892ec))
+* **deps:** bump path-parse from 1.0.5 to 1.0.7 in /node/hust-oom ([ca85aae](https://github.com/sabertazimi/hust-web/commit/ca85aaee39cf93143cd4427bbc187accba75bb38))
+* **deps:** bump react from 16.14.0 to 17.0.2 ([2039864](https://github.com/sabertazimi/hust-web/commit/203986472ee1149e5a6e05692d440bd889050591))
+* **deps:** bump react-dom from 16.14.0 to 17.0.2 ([50ab579](https://github.com/sabertazimi/hust-web/commit/50ab5796b29a99f7a4f928bc9bb054a634bf810e))
+* **deps:** bump san from 3.10.6 to 3.10.9 ([17e55f0](https://github.com/sabertazimi/hust-web/commit/17e55f0a8c092a9486c6d9d83bd363faabe7869a))
+* **deps:** bump san to latest version ([9279d45](https://github.com/sabertazimi/hust-web/commit/9279d45f913a6daa0ea3c94e4f7c2cf88fb1d146))
+* **deps:** bump url-parse from 1.4.4 to 1.5.3 in /node/hust-oom ([2f393ec](https://github.com/sabertazimi/hust-web/commit/2f393ecc69d418ddc2856426d53572c5eb04d903))
+* **deps:** change dependabot versioning strategy ([fc07198](https://github.com/sabertazimi/hust-web/commit/fc07198776fba72c7de66bcc1a465b3392c9bf9c))
+* **san:** update configuration ([6973ba9](https://github.com/sabertazimi/hust-web/commit/6973ba937fbc23811905da95ccf13ec6e5171cca))
+* **scripts:** update npm run scripts ([0552fe7](https://github.com/sabertazimi/hust-web/commit/0552fe714f16a7752eba9734952ffb0e8fc05e05))
+
 ### [1.1.2](https://github.com/sabertazimi/hust-web/compare/v1.1.1...v1.1.2) (2021-08-09)
 
 
