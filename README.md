@@ -4,7 +4,7 @@
 [![LICENSE](https://img.shields.io/github/license/sabertazimi/hust-web?style=for-the-badge)](https://raw.githubusercontent.com/sabertazimi/hust-web/main/LICENSE)
 
 [![Code Lines](https://img.shields.io/tokei/lines/github/sabertazimi/hust-web?style=for-the-badge&logo=visualstudiocode)](https://github.com/sabertazimi/hust-web)
-[![Continuous Integration](https://img.shields.io/github/workflow/status/sabertazimi/hust-web/Continuous%20Integration/main?style=for-the-badge&logo=github)](https://github.com/sabertazimi/hust-web/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/workflow/status/sabertazimi/hust-web/CI/main?style=for-the-badge&logo=github)](https://github.com/sabertazimi/hust-web/actions/workflows/ci.yml)
 
 A repo for learning demo archives
 
