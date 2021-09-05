@@ -5,8 +5,10 @@
   "homepage": "https://sabertazimi.github.io/hust-web/react/switch",
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@sabertazimi/react-scripts": "^5.3.3"
   },
   "scripts": {
     "build": "react-scripts build",
@@ -16,7 +18,25 @@
     "test": "react-scripts test"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "bod",
+      "bod/jest",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-bod",
+      "stylelint-prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   },
   "browserslist": {
     "production": [
@@ -29,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

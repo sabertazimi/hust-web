@@ -6,8 +6,10 @@
   "dependencies": {
     "bulma": "^0.9.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@sabertazimi/react-scripts": "^5.3.3"
   },
   "scripts": {
     "build": "react-scripts build",
@@ -17,12 +19,39 @@
     "test": "react-scripts test"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "bod",
+      "bod/jest",
+      "plugin:prettier/recommended"
+    ]
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "stylelint": {
+    "extends": [
+      "stylelint-config-bod",
+      "stylelint-prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
