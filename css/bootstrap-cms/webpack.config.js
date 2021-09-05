@@ -1,12 +1,10 @@
 const path = require('path');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 const packageJson = require('./package.json');
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -121,6 +119,31 @@ module.exports = {
         ],
       },
     ],
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      minSize: 30000,
+      minChunks: 1,
+      maxAsyncRequests: 6,
+      maxInitialRequests: 4,
+      automaticNameDelimiter: '-',
+      cacheGroups: {
+        vendors: {
+          name: 'chunk-vendors',
+          priority: -10,
+          chunks: 'initial',
+          test: /[\\/]node_modules[\\/]/,
+        },
+        common: {
+          name: 'chunk-common',
+          priority: -20,
+          chunks: 'initial',
+          minChunks: 2,
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   plugins,
   resolve: {
