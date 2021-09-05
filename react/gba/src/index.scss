@@ -1,0 +1,20 @@
+@import './common';
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  font-family: $font-stack;
+}
+
+html {
+  min-width: 512px;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  color: $color-white;
+  text-align: center;
+  line-height: 100vh;
+}

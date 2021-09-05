@@ -1,0 +1,67 @@
+@import '../common';
+
+.gobang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.board {
+  position: relative;
+  flex: 1;
+  min-width: 500px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+
+.cells {
+  position: absolute;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &__button {
+    display: block;
+    transition: 0.2s all ease-in;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid $color-black;
+    border-radius: 5px;
+    background-color: $color-white;
+    color: $color-black;
+  }
+
+  &__button--wins {
+    border-color: $color-red;
+    background-color: $color-red;
+    color: $color-white;
+  }
+
+  &__button:hover {
+    border-color: $color-black;
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+@media (max-width: 687px) {
+  .gobang {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .info {
+    height: auto;
+  }
+}

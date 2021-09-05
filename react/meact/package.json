@@ -1,0 +1,49 @@
+{
+  "name": "meact",
+  "version": "1.0.3",
+  "private": true,
+  "description": "Minimal react-like library",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --port 2333 --mode development --open",
+    "postbuild": "rm -fr src && mv ./build/* .",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/meact.git"
+  },
+  "engines": {
+    "node": ">=9"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "sabertazimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabertazimi/meact/issues"
+  },
+  "homepage": "https://github.com/sabertazimi/meact#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-react": "^7.14.5",
+    "autoprefixer": "^10.3.4",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-meact-jsx": "^0.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.2.2",
+    "postcss-loader": "^6.1.1",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.0"
+  }
+}

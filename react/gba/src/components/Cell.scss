@@ -1,0 +1,39 @@
+@import '../common';
+
+.cells .cell {
+  position: absolute;
+  z-index: 10;
+  padding: 1.8px;
+  cursor: pointer;
+
+  &:hover div {
+    width: 100%;
+    height: 100%;
+    border: 3px solid $color-red;
+    border-radius: 50%;
+    background-color: none;
+  }
+
+  .white,
+  .black {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .white {
+    border: 1px solid $color-black;
+    background-color: $color-white;
+  }
+
+  .black {
+    border: 1px solid $color-black;
+    background-color: $color-black;
+  }
+}
+
+.grid .cell {
+  position: absolute;
+  border-right: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+}
