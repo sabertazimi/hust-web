@@ -3,6 +3,7 @@
 [![Author](https://img.shields.io/badge/author-sabertaz-lightgrey?style=for-the-badge)](https://github.com/sabertazimi)
 [![LICENSE](https://img.shields.io/github/license/sabertazimi/hust-web?style=for-the-badge)](https://raw.githubusercontent.com/sabertazimi/hust-web/main/LICENSE)
 
+[![Lerna](https://img.shields.io/github/lerna-json/v/sabertazimi/hust-web?logo=npm&style=for-the-badge)](https://github.com/lerna/lerna)
 [![Code Lines](https://img.shields.io/tokei/lines/github/sabertazimi/hust-web?style=for-the-badge&logo=visualstudiocode)](https://github.com/sabertazimi/hust-web)
 [![CI](https://img.shields.io/github/workflow/status/sabertazimi/hust-web/CI/main?style=for-the-badge&logo=github)](https://github.com/sabertazimi/hust-web/actions/workflows/ci.yml)
 

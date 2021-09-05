@@ -4,11 +4,10 @@
   "description": "A repo for learning demo archives",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build -ws --if-present",
-    "lint": "npm run lint -ws --if-present",
+    "build": "lerna run build",
+    "lint": "lerna run lint",
     "postbuild": "mkdir -p ./build && cp -fr ./css ./js ./fcc ./ife ./react ./index.html ./index.css ./build",
-    "prelease": "standard-version --dry-run -s",
-    "release": "standard-version -s",
+    "release": "lerna version --force-publish --no-push",
     "start": "npm start -w mvvm"
   },
   "repository": {
@@ -39,7 +38,7 @@
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
   "devDependencies": {
-    "standard-version": "^9.3.1"
+    "lerna": "^4.0.0"
   },
   "workspaces": [
     "./packages/*",

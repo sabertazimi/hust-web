@@ -1,0 +1,37 @@
+{
+  "version": "1.2.0",
+  "npmClient": "npm",
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
+    },
+    "create": {
+      "private": true,
+      "homepage": "https://sabertazimi.github.io/hust-web",
+      "license": "MIT"
+    },
+    "run": {
+      "stream": true
+    },
+    "version": {
+      "changelogPreset": "angular",
+      "conventionalCommits": true,
+      "message": "chore(release): %s"
+    }
+  },
+  "ignoreChanges": [
+    "**/__fixtures__/**",
+    "**/__tests__/**",
+    "**/*.md"
+  ],
+  "useWorkspaces": true,
+  "packages": [
+    "./packages/*",
+    "./css/*",
+    "./ife/2018/*",
+    "./ife/2018/basic/*",
+    "./react/*"
+  ]
+}
