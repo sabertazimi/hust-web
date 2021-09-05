@@ -1,0 +1,29 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.0.0](https://github.com/sabertazimi/hust-web/compare/v1.2.0...v2.0.0) (2021-09-05)
+
+
+### Bug Fixes
+
+* **lerna:** enable lerna workspace ([93771d5](https://github.com/sabertazimi/hust-web/commit/93771d5ad84d8fc96a66f93f0ec75a11a0fe6c65))
+* **react-hooks:** add prompt information ([3f95098](https://github.com/sabertazimi/hust-web/commit/3f95098f495ad0774232c899332dcc7d0a53e9d7))
+* **react:** add links ([861472a](https://github.com/sabertazimi/hust-web/commit/861472a7d5ef1f6cf821afa3b60720f616cbb930))
+
+
+### Build System
+
+* **monorepo:** aggregate dist files into root `build/` ([975ee62](https://github.com/sabertazimi/hust-web/commit/975ee62aa2637702568a44bf978e6b723fb35e0f))
+
+
+### Features
+
+* **react-scripts:** change to custom react-scripts ([3a0b1be](https://github.com/sabertazimi/hust-web/commit/3a0b1be9e3e0b3ed0b8365daff08afb661817c4b))
+* **React:** merge other 3 React projects ([f59b633](https://github.com/sabertazimi/hust-web/commit/f59b6335439c813262cfa07bd5fdd1ebf0a02d22))
+
+
+### BREAKING CHANGES
+
+* **monorepo:** ship to lerna.
