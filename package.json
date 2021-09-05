@@ -4,7 +4,9 @@
   "description": "A repo for learning demo archives",
   "scripts": {
     "build": "lerna run build",
+    "clean": "lerna clean --yes",
     "lint": "lerna run lint",
+    "postbuild": "cp -fr index.html index.css ./build",
     "prebuild": "rm -fr ./build && mkdir -p ./build",
     "release": "node scripts/release.js",
     "start": "npm start -w mvvm"
@@ -43,9 +45,16 @@
     "semver": "^7.3.5"
   },
   "workspaces": [
-    "./css/*",
-    "./ife/2018/*",
-    "./ife/2018/basic/*",
+    "./css",
+    "./css/bootstrap-cms",
+    "./fcc",
+    "./ife/2016",
+    "./ife/2018",
+    "./ife/2018/basic/mis",
+    "./ife/2018/basic/oop",
+    "./ife/2018/mvvm",
+    "./js",
+    "./react",
     "./react/*"
   ]
 }

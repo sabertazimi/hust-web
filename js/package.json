@@ -1,0 +1,15 @@
+{
+  "name": "javascript-collection",
+  "version": "1.2.0",
+  "description": "JavaScript Collection",
+  "author": "sabertazimi <sabertazimi@gmail.com>",
+  "homepage": "https://github.com/sabertazimi/hust-web",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sabertazimi/hust-web"
+  },
+  "scripts": {
+    "build": "mkdir -p ../build/js && cp -fr index.html index.css 30 canvas cursor dom-alert fancy-form logo slides snake-game webaudio ../build/js"
+  }
+}

@@ -8,7 +8,6 @@
       ]
     },
     "create": {
-      "homepage": "https://sabertazimi.github.io/hust-web",
       "license": "MIT"
     },
     "run": {
@@ -27,9 +26,16 @@
   ],
   "useWorkspaces": true,
   "packages": [
-    "./css/*",
-    "./ife/2018/*",
-    "./ife/2018/basic/*",
+    "./css",
+    "./css/bootstrap-cms",
+    "./fcc",
+    "./ife/2016",
+    "./ife/2018",
+    "./ife/2018/basic/mis",
+    "./ife/2018/basic/oop",
+    "./ife/2018/mvvm",
+    "./js",
+    "./react",
     "./react/*"
   ]
 }

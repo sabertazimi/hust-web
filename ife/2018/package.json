@@ -1,0 +1,19 @@
+{
+  "name": "ife-2018-collection",
+  "version": "1.2.0",
+  "description": "IFE 2018 Collection",
+  "author": "sabertazimi <sabertazimi@gmail.com>",
+  "homepage": "https://github.com/sabertazimi/hust-web",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sabertazimi/hust-web"
+  },
+  "scripts": {
+    "build": "npm run build:directory && npm run build:index && npm run build:basic && npm run build:css",
+    "build:directory": "mkdir -p ../../build/ife/2018/basic ../../build/ife/2018/css",
+    "build:index": "cp -fr ./index.html ./index.css ../../build/ife/2018",
+    "build:basic": "cp -fr ./basic/layout ./basic/resume ../../build/ife/2018/basic",
+    "build:css": "cp -fr ./css ../../build/ife/2018"
+  }
+}
