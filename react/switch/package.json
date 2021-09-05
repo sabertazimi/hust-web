@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "postbuild": "echo postbuild",
+    "postbuild": "mkdir -p ../../build/react/switch && mv ./build/* ../../build/react/switch",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },

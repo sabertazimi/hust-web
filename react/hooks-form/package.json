@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "postbuild": "echo postbuild",
+    "postbuild": "mkdir -p ../../build/react/hooks-form && mv ./build/* ../../build/react/hooks-form",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },

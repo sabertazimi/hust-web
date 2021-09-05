@@ -7,7 +7,7 @@
     "analyze": "cross-env ANALYZE=1 next build",
     "build": "next build && next export -o build",
     "dev": "nodemon server.js",
-    "postbuild": "echo postbuild",
+    "postbuild": "mkdir -p ../../build/react/nextjs && mv ./build/* ../../build/react/nextjs",
     "start": "cross-env NODE_ENV=production next build && nodemon server.js"
   },
   "keywords": [

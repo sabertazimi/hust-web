@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint ./src/**/*.scss && eslint --fix --ext .js --ext .jsx ./src",
-    "postbuild": "echo postbuild",
+    "postbuild": "mkdir -p ../../build/react/gba && mv ./build/* ../../build/react/gba",
     "start": "npm run dev"
   },
   "repository": {

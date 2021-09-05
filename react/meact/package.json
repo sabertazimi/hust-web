@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --port 2333 --mode development --open",
-    "postbuild": "echo postbuild",
+    "postbuild": "mkdir -p ../../build/react/meact && mv ./build/* ../../build/react/meact",
     "start": "npm run dev"
   },
   "repository": {
