@@ -1,7 +1,6 @@
 {
   "name": "switch",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://sabertazimi.github.io/hust-web/react/switch",
   "dependencies": {
     "react": "^17.0.2",

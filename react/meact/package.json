@@ -1,7 +1,6 @@
 {
   "name": "meact",
   "version": "1.0.3",
-  "private": true,
   "description": "Minimal react-like library",
   "main": "./src/index.js",
   "scripts": {

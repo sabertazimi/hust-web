@@ -1,7 +1,6 @@
 {
   "name": "medux",
   "version": "1.0.2",
-  "private": true,
   "description": "Minimal redux-like library",
   "main": "index.js",
   "engines": {
