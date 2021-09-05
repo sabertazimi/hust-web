@@ -73,6 +73,7 @@ if (!devMode) {
   );
 }
 
+/** @type {import('webpack').Configuration} */
 module.exports = {
   entry: {
     main: './src/index.js',

@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
+/** @type {import('webpack').Configuration} */
 module.exports = {
   entry: {
     main: './src/index.js',
