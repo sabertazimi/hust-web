@@ -59,7 +59,7 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
-    "async-validator": "^4.0.2",
+    "async-validator": "^4.0.3",
     "san": "^3.10.9",
     "san-router": "^1.2.4"
   }
