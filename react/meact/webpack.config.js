@@ -6,53 +6,54 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-    entry: {
-        main: './src/index.js'
-    },
-    output: {
-        filename: '[name].[chunkhash].js',
-        path: path.resolve(__dirname, 'build')
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+  entry: {
+    main: './src/index.js',
+  },
+  output: {
+    filename: '[name].[chunkhash].js',
+    path: path.resolve(__dirname, 'build'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: true,
             },
-            {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: 'html-loader',
-                        options: {
-                            minimize: true
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'postcss-loader'
-                ]
-            }
-        ]
-    },
-    plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-          hash: true,
-          template: "./src/index.html",
-          filename: "./index.html"
-        }),
-        new MiniCssExtractPlugin({
-          filename: "[name].[contenthash].css",
-          chunkFilename: "[id].[contenthash].css"
-        })
-    ]
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/index.html',
+      filename: './index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css',
+    }),
+  ],
+  devtool: devMode ? 'eval-cheap-module-source-map' : false,
 };

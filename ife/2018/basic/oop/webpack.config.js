@@ -20,9 +20,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-          'babel-loader',
-        ],
+        use: ['babel-loader'],
       },
       {
         test: /\.html$/,
@@ -62,5 +60,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devtool: 'source-map',
+  devtool: devMode ? 'eval-cheap-module-source-map' : false,
 };

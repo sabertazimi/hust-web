@@ -59,5 +59,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.san'],
   },
-  devtool: 'source-map',
+  devtool: devMode ? 'eval-cheap-module-source-map' : false,
 };

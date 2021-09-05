@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const packageJson = require('./package.json');
 
 const devMode = process.env.NODE_ENV !== 'production';
-const useSass = !!(packageJson.devDependencies['node-sass']);
+const useSass = !!packageJson.devDependencies['node-sass'];
 
 const styleLoader = [
   devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -124,6 +124,7 @@ module.exports = {
     splitChunks: {
       chunks: 'async',
       minSize: 30000,
+      maxSize: 200000,
       minChunks: 1,
       maxAsyncRequests: 6,
       maxInitialRequests: 4,
@@ -149,5 +150,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devtool: 'source-map',
+  devtool: devMode ? 'eval-cheap-module-source-map' : false,
 };
