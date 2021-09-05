@@ -1,13 +1,12 @@
 {
   "name": "hust-web",
-  "version": "1.2.0",
+  "private": "true",
   "description": "A repo for learning demo archives",
-  "main": "index.js",
   "scripts": {
     "build": "lerna run build",
     "lint": "lerna run lint",
     "postbuild": "mkdir -p ./build && cp -fr ./css ./js ./fcc ./ife ./react ./index.html ./index.css ./build",
-    "release": "lerna version --force-publish --no-push",
+    "release": "node scripts/release.js",
     "start": "npm start -w mvvm"
   },
   "repository": {
@@ -38,10 +37,12 @@
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "chalk": "^2.4.2",
+    "consola": "^2.15.3",
+    "lerna": "^4.0.0",
+    "semver": "^7.3.5"
   },
   "workspaces": [
-    "./packages/*",
     "./css/*",
     "./ife/2018/*",
     "./ife/2018/basic/*",
