@@ -15,7 +15,22 @@ A repo for learning demo archives
 - [Free Code Camp Collection](https://sabertazimi.github.io/hust-web/fcc)
 - [IFE 2016 Collection](https://sabertazimi.github.io/hust-web/ife/2016)
 - [IFE 2018 Collection](https://sabertazimi.github.io/hust-web/ife/2018)
-- [React Collection](https://sabertazimi.github.io/hust-web/react)
+
+## CSS
+
+### Bootstrap CMS
+
+CMS custom theme for Bootstrap 4 without any explicit selector styles.
+
+## React
+
+- [Next demo](https://sabertazimi.github.io/hust-web/react/nextjs).
+- [Form component based hooks](https://sabertazimi.github.io/hust-web/react/hooks-form).
+- [Pretty Switch component](https://tazimi.dev/hust-web/react/switch).
+- [GoBang AI](https://sabertazimi.github.io/hust-web/react/gba).
+- [Minimal react-like library](https://sabertazimi.github.io/hust-web/react/meact).
+- [Minimal redux-like library](https://sabertazimi.github.io/hust-web/react/medux).
+- [Minimal hooks implementation](https://sabertazimi.github.io/hust-web/react/mooks).
 
 ## License
 
