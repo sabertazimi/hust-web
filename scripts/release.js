@@ -1,5 +1,5 @@
-import semver from 'semver';
-import * as utils from './utils';
+const semver = require('semver');
+const utils = require('./utils');
 
 const main = () => {
   utils.info(`Working in directory ${process.cwd()}.`);

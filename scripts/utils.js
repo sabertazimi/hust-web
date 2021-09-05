@@ -1,6 +1,6 @@
-import chalk from 'chalk';
-import cp from 'child_process';
-import consola from 'consola';
+const chalk = require('chalk');
+const cp = require('child_process');
+const consola = require('consola');
 
 const log = (log) => {
   consola.log(log);
@@ -43,4 +43,4 @@ const execPipe = (command, cwd) => {
   });
 };
 
-export { log, info, success, error, cmd, isFlag, exec, execPipe };
+module.exports = { log, info, success, error, cmd, isFlag, exec, execPipe };
