@@ -11,8 +11,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "postbuild": "rm -fr src && mv ./build/* .",
-    "eject": "react-scripts eject",
+    "postbuild": "echo postbuild",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },

@@ -9,7 +9,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --port 2333 --mode development --open",
-    "postbuild": "rm -fr src && mv ./build/* .",
+    "postbuild": "echo postbuild",
     "start": "npm run dev"
   },
   "repository": {

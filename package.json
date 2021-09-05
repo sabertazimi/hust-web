@@ -5,7 +5,7 @@
   "scripts": {
     "build": "lerna run build",
     "lint": "lerna run lint",
-    "postbuild": "mkdir -p ./build && cp -fr ./css ./js ./fcc ./ife ./react ./index.html ./index.css ./build",
+    "prebuild": "mkdir -p ./build",
     "release": "node scripts/release.js",
     "start": "npm start -w mvvm"
   },

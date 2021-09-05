@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint --fix ./src/**/*.css && eslint --fix --ext .js ./src",
-    "postbuild": "rm -fr src && mv ./build/* .",
+    "postbuild": "echo postbuild",
     "start": "npm run dev"
   },
   "repository": {

@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint --fix ./src/**/*.scss ./src/**/*.css && eslint --fix --ext .js --ext .jsx ./src",
-    "postbuild": "rm -fr src && mv ./build/* .",
+    "postbuild": "mkdir -p ../../build/bootstrap-cms && mv ./build/* ../../build/bootstrap-cms",
     "start": "npm run dev"
   },
   "repository": {
