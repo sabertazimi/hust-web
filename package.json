@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
   "devDependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^4.1.2",
     "consola": "^2.15.3",
     "lerna": "^4.0.0",
     "semver": "^7.3.5"
