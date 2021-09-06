@@ -8,6 +8,7 @@ import { createConnection } from 'typeorm';
 import cookieParser from 'cookie-parser';
 import { verify } from 'jsonwebtoken';
 import cors from 'cors';
+import csrf from 'csurf';
 import { UserResolver } from './resolver/UserResolver';
 import { User } from './entity/User';
 import {
@@ -22,6 +23,7 @@ const SERVER_PORT = process.env.PORT || 4000;
   const app = express();
   app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
   app.use(cookieParser());
+  app.use(csrf({ cookie: true }));
   app.use(
     rateLimit({
       windowMs: 12 * 60 * 60 * 1000, // 12 hour duration in milliseconds
