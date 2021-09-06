@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const http = require('http');
 const express = require('express');
+const rateLimit = require('express-rate-limit');
 const bodyParser = require('body-parser');
 const socketio = require('socket.io');
 
@@ -16,20 +17,35 @@ const sockets = [];
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(
+  rateLimit({
+    windowMs: 12 * 60 * 60 * 1000, // 12 hour duration in milliseconds
+    max: 5,
+    message: 'You exceeded 100 requests in 12 hour limit!',
+    headers: true,
+  })
+);
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
-  res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers'
+  );
   next();
 });
 
 app.post('/signup', (req, res) => {
   const { email, username, password } = req.body;
 
-  if (dbData.users.every(({ email: _email, username: _username }) => (
-    _email !== email && _username !== username
-  ))) {
+  if (
+    dbData.users.every(
+      ({ email: _email, username: _username }) =>
+        _email !== email && _username !== username
+    )
+  ) {
     dbData.users.push({
       email,
       username,
@@ -50,10 +66,14 @@ app.post('/signup', (req, res) => {
 
       return user;
     });
-    fs.writeFileSync(path.resolve(__dirname, './db.json'), JSON.stringify(dbData), {
-      encoding: 'utf8',
-      flag: 'w+',
-    });
+    fs.writeFileSync(
+      path.resolve(__dirname, './db.json'),
+      JSON.stringify(dbData),
+      {
+        encoding: 'utf8',
+        flag: 'w+',
+      }
+    );
 
     res.json({
       status: 200,
@@ -74,20 +94,24 @@ app.post('/login', (req, res) => {
   let username = '';
   let friends = [];
 
-  if (dbData.users.some(({
-    email: _email,
-    username: _username,
-    password: _password,
-    friends: _friends,
-  }) => {
-    if (_email === email && _password === password) {
-      username = _username;
-      friends = _friends;
-      return true;
-    }
+  if (
+    dbData.users.some(
+      ({
+        email: _email,
+        username: _username,
+        password: _password,
+        friends: _friends,
+      }) => {
+        if (_email === email && _password === password) {
+          username = _username;
+          friends = _friends;
+          return true;
+        }
 
-    return false;
-  })) {
+        return false;
+      }
+    )
+  ) {
     res.json({
       status: 200,
       email,

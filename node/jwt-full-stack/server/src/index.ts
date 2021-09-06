@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import 'reflect-metadata';
 import express from 'express';
+import rateLimit from 'express-rate-limit';
 import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
 import { createConnection } from 'typeorm';
@@ -12,7 +13,7 @@ import { User } from './entity/User';
 import {
   createRefreshToken,
   createAccessToken,
-  sendRefreshToken
+  sendRefreshToken,
 } from './auth';
 
 const SERVER_PORT = process.env.PORT || 4000;
@@ -21,6 +22,14 @@ const SERVER_PORT = process.env.PORT || 4000;
   const app = express();
   app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
   app.use(cookieParser());
+  app.use(
+    rateLimit({
+      windowMs: 12 * 60 * 60 * 1000, // 12 hour duration in milliseconds
+      max: 5,
+      message: 'You exceeded 100 requests in 12 hour limit!',
+      headers: true,
+    })
+  );
   app.get('/', (_req, res) => res.send('Hello JWT'));
   app.post('/refresh_token', async (req, res) => {
     const token = req.cookies.jid;
@@ -53,9 +62,9 @@ const SERVER_PORT = process.env.PORT || 4000;
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
-      resolvers: [UserResolver]
+      resolvers: [UserResolver],
     }),
-    context: ({ req, res }) => ({ req, res })
+    context: ({ req, res }) => ({ req, res }),
   });
 
   apolloServer.applyMiddleware({ app, cors: false });
