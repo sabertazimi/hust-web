@@ -3235,9 +3235,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sabertazimi/react-scripts@npm:5.3.7":
-  version: 5.3.7
-  resolution: "@sabertazimi/react-scripts@npm:5.3.7"
+"@sabertazimi/react-scripts@npm:5.3.8":
+  version: 5.3.8
+  resolution: "@sabertazimi/react-scripts@npm:5.3.8"
   dependencies:
     "@babel/core": 7.15.5
     "@pmmmwh/react-refresh-webpack-plugin": 0.5.0-rc.3
@@ -3255,7 +3255,7 @@ __metadata:
     dotenv: 9.0.2
     dotenv-expand: 5.1.0
     eslint: ^7.30.0
-    eslint-config-bod: ^5.3.7
+    eslint-config-bod: ^5.3.8
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
     eslint-webpack-plugin: ^3.0.1
@@ -3286,7 +3286,7 @@ __metadata:
     source-map-loader: ^3.0.0
     style-loader: 3.2.1
     stylelint: ^13.13.1
-    stylelint-config-bod: ^5.3.7
+    stylelint-config-bod: ^5.3.8
     stylelint-config-prettier: ^8.0.2
     stylelint-prettier: ^1.2.0
     stylelint-webpack-plugin: ^3.0.1
@@ -3307,7 +3307,7 @@ __metadata:
       optional: true
   bin:
     react-scripts: bin/react-scripts.js
-  checksum: ff819aa74cbcc816e9083d0c87cd6f876cfb222d2d9d78180a4498c726fe9f7cdb65b53487e19dbb9b6324ae363610139f15aba75e2b8ca403d432b105845d5f
+  checksum: f8e9195e4141c6df72a68a91402128378d84443a3be954792bd0099c05156dd9c7bfc3f7b1f07910deefc13f16b3d3330cf32e1ed56ae480f52a533a38076c92
   languageName: node
   linkType: hard
 
@@ -7473,9 +7473,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-bod@npm:^5.3.7":
-  version: 5.3.7
-  resolution: "eslint-config-bod@npm:5.3.7"
+"eslint-config-bod@npm:^5.3.8":
+  version: 5.3.8
+  resolution: "eslint-config-bod@npm:5.3.8"
   dependencies:
     "@babel/core": 7.15.5
     "@babel/eslint-parser": ^7.15.4
@@ -7493,7 +7493,7 @@ __metadata:
     eslint-plugin-testing-library: ^4.12.2
   peerDependencies:
     eslint: ^7.30.0
-  checksum: ee4e2918d8cfb2044a57e4588585882b79c439fdf6ea0557e47cf54beb2079eaf0679e11e25577ffcd2bbe1c0846bca3663fc90c875be4cfca46fb43c9d19498
+  checksum: 91f618578a792d02c9222acbd27b47c58e7eabf7b52cff52c0fa55fe31a5e1afd223cd5c71cd545ed86c91beb20e93b284c705415e040d1b3a7906b970566c27
   languageName: node
   linkType: hard
 
@@ -15241,7 +15241,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "react-hooks-form@workspace:react/hooks-form"
   dependencies:
-    "@sabertazimi/react-scripts": 5.3.7
+    "@sabertazimi/react-scripts": 5.3.8
     bulma: 0.9.3
     react: 17.0.2
     react-dom: 17.0.2
@@ -17078,16 +17078,16 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"stylelint-config-bod@npm:^5.3.7":
-  version: 5.3.7
-  resolution: "stylelint-config-bod@npm:5.3.7"
+"stylelint-config-bod@npm:^5.3.8":
+  version: 5.3.8
+  resolution: "stylelint-config-bod@npm:5.3.8"
   dependencies:
     stylelint-a11y: ^1.2.3
     stylelint-config-recess-order: ^2.5.0
     stylelint-config-standard: ^22.0.0
   peerDependencies:
     stylelint: ^13.13.0
-  checksum: 4fec5d630c1620e85703763fdaf350aec7c803aafc72e320358ab94c76bae77e4485eee278968becf9266aa4835f0954692e15af112e1c6cbaf3266608694b6f
+  checksum: c50ae3926ca6d6ca31cafa71b71fcd3f892c1032d8fb2f2941ea2e2d18048603dd8b67ad33a2905f009b73191513112fb9fabbbe43b4f60c91e2d983cce05143
   languageName: node
   linkType: hard
 
@@ -17401,7 +17401,7 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "switch@workspace:react/switch"
   dependencies:
-    "@sabertazimi/react-scripts": 5.3.7
+    "@sabertazimi/react-scripts": 5.3.8
     react: 17.0.2
     react-dom: 17.0.2
   languageName: unknown
