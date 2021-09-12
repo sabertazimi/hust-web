@@ -7,9 +7,9 @@
     "node": ">=9"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && yarn build:post",
+    "build:post": "mkdir -p ../../build/react/medux && mv ./build/* ../../build/react/medux",
     "dev": "webpack serve --port 2333 --mode development --open",
-    "postbuild": "mkdir -p ../../build/react/medux && mv ./build/* ../../build/react/medux",
     "start": "yarn dev"
   },
   "repository": {

@@ -1,13 +1,12 @@
 {
   "name": "hust-web",
-  "private": "true",
   "description": "A repo for learning demo archives",
   "scripts": {
-    "build": "lerna run build",
+    "build": "yarn build:prepare && lerna run build && yarn build:post",
+    "build:prepare": "rm -fr ./build && mkdir -p ./build",
+    "build:post": "cp -fr index.html index.css ./build",
     "clean": "lerna clean --yes",
     "lint": "lerna run lint",
-    "postbuild": "cp -fr index.html index.css ./build",
-    "prebuild": "rm -fr ./build && mkdir -p ./build",
     "release": "node scripts/release.js --push",
     "start": "yarn workspace mvvm start"
   },

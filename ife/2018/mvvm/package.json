@@ -4,10 +4,10 @@
   "description": "IFE 2018 MVVM Project",
   "main": "./src/index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "build": "cross-env NODE_ENV=production webpack --mode production && yarn build:post",
+    "build:post": "mkdir -p ../../../build/ife/2018/mvvm && mv ./build/* ../../../build/ife/2018/mvvm",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint --fix ./src/**/*.css && eslint --fix --ext .js ./src",
-    "postbuild": "mkdir -p ../../../build/ife/2018/mvvm && mv ./build/* ../../../build/ife/2018/mvvm",
     "start": "yarn dev"
   },
   "repository": {
@@ -48,7 +48,7 @@
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.2.2",
     "postcss-loader": "^6.1.1",
-    "san-loader": "0.3.0",
+    "san-loader": "^0.3.1",
     "style-loader": "^3.2.1",
     "stylelint": "^13.13.1",
     "stylelint-config-mass": "^5.3.3",

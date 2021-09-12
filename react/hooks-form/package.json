@@ -11,8 +11,8 @@
     "@sabertazimi/react-scripts": "^5.3.3"
   },
   "scripts": {
-    "build": "react-scripts build",
-    "postbuild": "mkdir -p ../../build/react/hooks-form && mv ./build/* ../../build/react/hooks-form",
+    "build": "react-scripts build && yarn build:post",
+    "build:post": "mkdir -p ../../build/react/hooks-form && mv ./build/* ../../build/react/hooks-form",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },

@@ -4,10 +4,10 @@
   "description": "Minimal webpack boilerplate",
   "main": "./src/index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "build": "cross-env NODE_ENV=production webpack --mode production && yarn build:post",
+    "build:post": "mkdir -p ../../build/react/gba && mv ./build/* ../../build/react/gba",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint ./src/**/*.scss && eslint --fix --ext .js --ext .jsx ./src",
-    "postbuild": "mkdir -p ../../build/react/gba && mv ./build/* ../../build/react/gba",
     "start": "yarn dev"
   },
   "repository": {

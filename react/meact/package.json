@@ -4,9 +4,9 @@
   "description": "Minimal react-like library",
   "main": "./src/index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && yarn build:post",
+    "build:post": "mkdir -p ../../build/react/meact && mv ./build/* ../../build/react/meact",
     "dev": "webpack serve --port 2333 --mode development --open",
-    "postbuild": "mkdir -p ../../build/react/meact && mv ./build/* ../../build/react/meact",
     "start": "yarn dev"
   },
   "repository": {
