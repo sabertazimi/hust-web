@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint ./src/**/*.scss && eslint --fix --ext .js --ext .jsx ./src",
     "postbuild": "mkdir -p ../../build/react/gba && mv ./build/* ../../build/react/gba",
-    "start": "npm run dev"
+    "start": "yarn dev"
   },
   "repository": {
     "type": "git",

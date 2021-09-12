@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint --fix ./src/**/*.scss ./src/**/*.css && eslint --fix --ext .js --ext .jsx ./src",
     "postbuild": "mkdir -p ../../build/css/bootstrap-cms && mv ./build/* ../../build/css/bootstrap-cms",
-    "start": "npm run dev"
+    "start": "yarn dev"
   },
   "repository": {
     "type": "git",

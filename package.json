@@ -9,7 +9,7 @@
     "postbuild": "cp -fr index.html index.css ./build",
     "prebuild": "rm -fr ./build && mkdir -p ./build",
     "release": "node scripts/release.js --push",
-    "start": "npm start -w mvvm"
+    "start": "yarn workspace mvvm start"
   },
   "repository": {
     "type": "git",

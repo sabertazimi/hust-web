@@ -12,7 +12,7 @@
     "watch": [
       "src"
     ],
-    "exec": "npm start",
+    "exec": "yarn start",
     "ext": "ts"
   },
   "devDependencies": {

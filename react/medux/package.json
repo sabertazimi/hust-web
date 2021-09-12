@@ -10,7 +10,7 @@
     "build": "webpack --mode production",
     "dev": "webpack serve --port 2333 --mode development --open",
     "postbuild": "mkdir -p ../../build/react/medux && mv ./build/* ../../build/react/medux",
-    "start": "npm run dev"
+    "start": "yarn dev"
   },
   "repository": {
     "type": "git",
