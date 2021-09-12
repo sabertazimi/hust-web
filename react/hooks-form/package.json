@@ -4,8 +4,8 @@
   "homepage": "https://sabertazimi.github.io/hust-web/react/hooks-form",
   "dependencies": {
     "bulma": "0.9.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@sabertazimi/react-scripts": "5.3.6"
