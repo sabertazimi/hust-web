@@ -4620,13 +4620,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async-validator@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "async-validator@npm:4.0.3"
-  checksum: 564b65fd3ce4f78c1c9b0eb26ead590dcd403f563cb3c4c5ec4531fa976dd3c52f6e3e45b8235c1269f5d41f1b08426f62b586e7865b51aa90be12ba25f3a820
-  languageName: node
-  linkType: hard
-
 "async@npm:^2.6.2":
   version: 2.6.3
   resolution: "async@npm:2.6.3"
@@ -7059,15 +7052,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"domhandler@npm:^3.0.0":
-  version: 3.3.0
-  resolution: "domhandler@npm:3.3.0"
-  dependencies:
-    domelementtype: ^2.0.1
-  checksum: 850e5e9fee7834ab4314811e18bc1f4294d7eafbf6a79ad03cbe50cf964108935c97257ac248944d72a9312b4a18dfa8323e857d23278964dc83b1f124467fa3
-  languageName: node
-  linkType: hard
-
 "domhandler@npm:^4.0.0, domhandler@npm:^4.2.0":
   version: 4.2.2
   resolution: "domhandler@npm:4.2.2"
@@ -7087,7 +7071,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"domutils@npm:^2.0.0, domutils@npm:^2.5.2, domutils@npm:^2.6.0":
+"domutils@npm:^2.5.2, domutils@npm:^2.6.0":
   version: 2.8.0
   resolution: "domutils@npm:2.8.0"
   dependencies:
@@ -9280,13 +9264,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hash-sum@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "hash-sum@npm:2.0.0"
-  checksum: efeeacf09ecbd467202865403c3a1991fa15d4f4903c1148ecbe13223fdbf9ec6d7dc661e17e5ce6e776cd70d67b6ee4c82e0171318962435be45c1155175f3f
-  languageName: node
-  linkType: hard
-
 "he@npm:^1.2.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
@@ -9416,18 +9393,6 @@ __metadata:
     inherits: ^2.0.1
     readable-stream: ^3.1.1
   checksum: 6875f7dd875aa10be17d9b130e3738cd8ed4010b1f2edaf4442c82dfafe9d9336b155870dcc39f38843cbf7fef5e4fcfdf0c4c1fd4db3a1b91a1e0ee8f6c3475
-  languageName: node
-  linkType: hard
-
-"htmlparser2@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "htmlparser2@npm:4.1.0"
-  dependencies:
-    domelementtype: ^2.0.1
-    domhandler: ^3.0.0
-    domutils: ^2.0.0
-    entities: ^2.0.0
-  checksum: 615fcf34ae74775eba9d2c7c54034201645ac4146dfe2889cda21939aa77806ad3aee27963ae72c5c2da23ce7b0b99b2533e1d9f327b74821cc11f755cc5153f
   languageName: node
   linkType: hard
 
@@ -12564,43 +12529,6 @@ __metadata:
   checksum: ff48d251fc3f827e5b1206cda0ffdaec885e56057ee86a3155e1951bc940fd5f33531774b1cc8414d7668c10a8907f863f6561875ee6e8768931a62121a531a1
   languageName: node
   linkType: hard
-
-"mvvm@workspace:ife/2018/mvvm":
-  version: 0.0.0-use.local
-  resolution: "mvvm@workspace:ife/2018/mvvm"
-  dependencies:
-    "@babel/core": ^7.15.5
-    "@babel/eslint-parser": ^7.15.4
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.7
-    "@babel/preset-env": ^7.15.4
-    async-validator: ^4.0.3
-    autoprefixer: ^10.3.4
-    babel-loader: ^8.2.2
-    clean-webpack-plugin: ^4.0.0
-    cross-env: ^7.0.3
-    css-loader: ^6.2.0
-    eslint: ^7.31.0
-    eslint-config-airbnb: ^18.2.1
-    eslint-plugin-import: ^2.24.2
-    eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-react: ^7.25.1
-    eslint-webpack-plugin: ^3.0.1
-    html-loader: ^2.1.2
-    html-webpack-plugin: ^5.3.2
-    mini-css-extract-plugin: ^2.2.2
-    postcss-loader: ^6.1.1
-    san: ^3.10.9
-    san-loader: 0.3.0
-    san-router: ^1.2.4
-    style-loader: ^3.2.1
-    stylelint: ^13.13.1
-    stylelint-config-mass: ^5.3.3
-    stylelint-webpack-plugin: ^3.0.1
-    webpack: ^5.48.0
-    webpack-cli: ^4.8.0
-    webpack-dev-server: ^4.1.0
-  languageName: unknown
-  linkType: soft
 
 "nan@npm:^2.13.2":
   version: 2.15.0
@@ -16040,45 +15968,6 @@ resolve@^2.0.0-next.3:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0
-  languageName: node
-  linkType: hard
-
-"san-anode-utils@npm:~3.9.1":
-  version: 3.9.1
-  resolution: "san-anode-utils@npm:3.9.1"
-  dependencies:
-    san: ^3.9.0
-  checksum: 754d0b4433e7f80318d43aca07ec34c75c13eb7ad85d9c99eb31d802c6dbc5d0b26b5f414187c65354933a6d81573ee6d0977bddb85d62e02e0e62aaa920b838
-  languageName: node
-  linkType: hard
-
-"san-loader@npm:0.3.0":
-  version: 0.3.0
-  resolution: "san-loader@npm:0.3.0"
-  dependencies:
-    hash-sum: ^2.0.0
-    htmlparser2: ^4.1.0
-    loader-utils: ^2.0.0
-    magic-string: ^0.25.7
-    postcss: ^8.3.5
-    san-anode-utils: ~3.9.1
-  peerDependencies:
-    webpack: ^3.0.0 || ^4.1.0 || ^5.0.0-0
-  checksum: cefe2c00bbc96433c704d3412b1e84645a2ade8a531270806625e96131ade0d4cc20e5cc801faea8060183a092ef142475b87bde1d465984a61e1e577f5889f0
-  languageName: node
-  linkType: hard
-
-"san-router@npm:^1.2.4":
-  version: 1.2.4
-  resolution: "san-router@npm:1.2.4"
-  checksum: a9c5967e820c6da0400d4665401e6784759622be9c1016aff0345dc2154e8aab7eb6be8b7f3fdbeedd338337e0de6ba28d3a94ed185e4fdaa11f0394ece99c83
-  languageName: node
-  linkType: hard
-
-"san@npm:^3.10.9, san@npm:^3.9.0":
-  version: 3.10.10
-  resolution: "san@npm:3.10.10"
-  checksum: e2c6c5d97852e7c98db9109f194e07198b6bfe0e54a31796f2f22c7834399ca383ddfd44ee5e5d54b01b2c0f670c56c865553ac324878c63383d4bc939c00e3c
   languageName: node
   linkType: hard
 

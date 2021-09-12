@@ -8,7 +8,7 @@
     "clean": "lerna clean --yes",
     "lint": "lerna run lint",
     "release": "node scripts/release.js --push",
-    "start": "yarn workspace mvvm start"
+    "start": "yarn workspace meact start"
   },
   "repository": {
     "type": "git",
@@ -52,7 +52,6 @@
     "./ife/2018",
     "./ife/2018/basic/mis",
     "./ife/2018/basic/oop",
-    "./ife/2018/mvvm",
     "./js",
     "./react",
     "./react/*"
