@@ -41,7 +41,7 @@
     "chalk": "4.1.2",
     "consola": "2.15.3",
     "eslint": "7.32.0",
-    "lerna": "^4.0.0",
+    "lerna": "4.0.0",
     "semver": "7.3.5"
   },
   "workspaces": [

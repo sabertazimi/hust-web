@@ -9563,7 +9563,7 @@ __metadata:
     chalk: 4.1.2
     consola: 2.15.3
     eslint: 7.32.0
-    lerna: ^4.0.0
+    lerna: 4.0.0
     semver: 7.3.5
   languageName: unknown
   linkType: soft
@@ -11434,7 +11434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lerna@npm:^4.0.0":
+"lerna@npm:4.0.0":
   version: 4.0.0
   resolution: "lerna@npm:4.0.0"
   dependencies:
