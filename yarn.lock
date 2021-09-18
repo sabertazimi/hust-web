@@ -5104,7 +5104,7 @@ __metadata:
     "@ckeditor/ckeditor5-build-classic": ^29.2.0
     autoprefixer: ^10.3.4
     babel-loader: ^8.2.2
-    bootstrap: ^4.3.1
+    bootstrap: ^4.6.0
     clean-webpack-plugin: ^4.0.0
     copy-webpack-plugin: ^9.0.1
     cross-env: ^7.0.3
@@ -5140,7 +5140,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"bootstrap@npm:^4.3.1":
+"bootstrap@npm:^4.6.0":
   version: 4.6.0
   resolution: "bootstrap@npm:4.6.0"
   peerDependencies:
