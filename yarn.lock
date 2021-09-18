@@ -66,9 +66,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-parser@npm:^7.15.4":
-  version: 7.15.4
-  resolution: "@babel/eslint-parser@npm:7.15.4"
+"@babel/eslint-parser@npm:^7.15.4, @babel/eslint-parser@npm:^7.15.7":
+  version: 7.15.7
+  resolution: "@babel/eslint-parser@npm:7.15.7"
   dependencies:
     eslint-scope: ^5.1.1
     eslint-visitor-keys: ^2.1.0
@@ -76,7 +76,7 @@ __metadata:
   peerDependencies:
     "@babel/core": ">=7.11.0"
     eslint: ">=7.5.0"
-  checksum: e4406f3eeef8f5217fd930cbd2032188afbf191cdf5719244de8822f895934a2b4e14a4663b6336bc0d6fabeef5ab3a001815ed69f4639890431f8dfd9c09073
+  checksum: f087a11e8730e324cfe3f5e856752fe57a36c56aa49fbb1018540d7a0c1c2ca3b0d49be240c19e923e098237f51276ca0ab35e01c1658e2c03cfb222a25e5b89
   languageName: node
   linkType: hard
 
@@ -5097,7 +5097,7 @@ __metadata:
   resolution: "bootstrap-cms@workspace:css/bootstrap-cms"
   dependencies:
     "@babel/core": ^7.15.5
-    "@babel/eslint-parser": ^7.15.4
+    "@babel/eslint-parser": ^7.15.7
     "@babel/plugin-proposal-class-properties": ^7.14.5
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.6
@@ -8631,7 +8631,7 @@ __metadata:
   resolution: "gba@workspace:react/gba"
   dependencies:
     "@babel/core": ^7.15.5
-    "@babel/eslint-parser": ^7.15.4
+    "@babel/eslint-parser": ^7.15.7
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.6
     "@babel/preset-react": ^7.14.5
@@ -12389,7 +12389,7 @@ __metadata:
   resolution: "mis@workspace:ife/2018/basic/mis"
   dependencies:
     "@babel/core": ^7.15.5
-    "@babel/eslint-parser": ^7.15.4
+    "@babel/eslint-parser": ^7.15.7
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.6
     autoprefixer: ^10.3.4
@@ -15823,7 +15823,7 @@ resolve@^2.0.0-next.3:
   resolution: "restaurant@workspace:ife/2018/basic/oop"
   dependencies:
     "@babel/core": ^7.15.5
-    "@babel/eslint-parser": ^7.15.4
+    "@babel/eslint-parser": ^7.15.7
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.6
     autoprefixer: ^10.3.4
