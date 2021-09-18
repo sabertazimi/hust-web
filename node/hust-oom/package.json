@@ -53,7 +53,7 @@
     "nodemon": "^1.19.4",
     "postcss-loader": "^2.1.6",
     "sass-loader": "^7.3.1",
-    "style-loader": "^0.21.0",
+    "style-loader": "^0.23.1",
     "stylelint": "^9.10.1",
     "stylelint-config-mass": "^1.0.2",
     "stylelint-webpack-plugin": "^0.10.5",
