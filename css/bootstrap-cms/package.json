@@ -71,6 +71,6 @@
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
-    "scrollreveal": "^4.0.5"
+    "scrollreveal": "^4.0.9"
   }
 }
