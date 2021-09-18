@@ -27,7 +27,7 @@
     "@types/node": "^12.20.25",
     "nodemon": "^1.19.4",
     "ts-node": "^8.3.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.9.10"
   },
   "dependencies": {
     "apollo-server-express": "^2.25.2",
