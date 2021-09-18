@@ -5128,7 +5128,7 @@ __metadata:
     postcss-loader: ^6.1.1
     precss: ^4.0.0
     sass-loader: ^12.1.0
-    scrollreveal: ^4.0.5
+    scrollreveal: ^4.0.9
     style-loader: ^3.2.1
     stylelint: ^13.13.1
     stylelint-config-mass: ^5.3.6
@@ -16082,7 +16082,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"scrollreveal@npm:^4.0.5":
+"scrollreveal@npm:^4.0.9":
   version: 4.0.9
   resolution: "scrollreveal@npm:4.0.9"
   dependencies:
