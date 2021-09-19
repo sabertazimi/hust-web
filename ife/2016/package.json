@@ -10,6 +10,7 @@
     "url": "https://github.com/sabertazimi/hust-web"
   },
   "scripts": {
-    "build": "mkdir -p ../../build/ife/2016 && cp -fr * ../../build/ife/2016 && rm -fr ../../build/ife/2016/package.json"
+    "build": "mkdir -p ../../build/ife/2016 && cp -fr * ../../build/ife/2016 && rm -fr ../../build/ife/2016/package.json && yarn build:post",
+    "build:post": "rm -fr ../../build/ife/2016/stageTwo/task26/dist && rm -fr ../../build/ife/2016/stageTwo/task27/dist && rm -fr ../../build/ife/2016/stageTwo/task28/dist"
   }
 }

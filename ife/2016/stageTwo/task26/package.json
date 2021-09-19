@@ -1,14 +1,17 @@
 {
-  "name": "task26",
-  "version": "1.0.0",
+  "name": "ife-2016-task26",
+  "version": "2.1.0",
   "description": "task 26",
-  "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "build": "yarn build:prepare && gulp build && yarn build:post",
+    "build:prepare": "rm -fr ../../../../build/ife/2016/stageTwo/task26 && mkdir -p ../../../../build/ife/2016/stageTwo/task26",
+    "build:post": "mv dist/* ../../../../build/ife/2016/stageTwo/task26",
+    "dev": "gulp",
+    "start": "yarn dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Weblearningunion/LearningTasks.git"
+    "url": "git+https://github.com/sabertazimi/hust-web.git"
   },
   "keywords": [
     "ife",
@@ -19,25 +22,32 @@
   "author": "sabertazimi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Weblearningunion/LearningTasks/issues"
+    "url": "https://github.com/sabertazimi/hust-web/issues"
   },
-  "homepage": "https://github.com/Weblearningunion/LearningTasks#readme",
+  "homepage": "https://github.com/sabertazimi/hust-web#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-declare": "^0.3.0",
-    "gulp-handlebars": "^5.0.2",
-    "gulp-imagemin": "^8.0.0",
-    "gulp-less": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^2.0.0",
-    "gulp-ruby-sass": "^3.0.0",
-    "gulp-sourcemaps": "^1.12.1",
-    "gulp-uglify": "^1.5.4",
-    "gulp-util": "^3.0.8",
-    "gulp-watch-path": "^0.1.0",
-    "gulp-wrap": "^0.15.0",
-    "stream-combiner2": "^1.1.1"
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
