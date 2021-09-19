@@ -7,7 +7,7 @@ import {
   Login,
   Agreement,
   ForgotPassword,
-  Dashboard
+  Dashboard,
 } from './components';
 
 const Routes: React.FC = () => {
@@ -17,7 +17,7 @@ const Routes: React.FC = () => {
     { path: '/login', component: Login },
     { path: '/agreement', component: Agreement },
     { path: '/forgot-password', component: ForgotPassword },
-    { path: '/dashboard', component: Dashboard }
+    { path: '/dashboard', component: Dashboard },
   ];
 
   return (

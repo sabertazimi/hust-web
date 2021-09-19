@@ -11,7 +11,7 @@ const App: React.FC = () => {
     setLoading(true);
     fetch(`${SERVER_URL}/refresh_token`, {
       method: 'POST',
-      credentials: 'include'
+      credentials: 'include',
     }).then(async response => {
       const { accessToken } = await response.json();
       Auth.setAccessToken(accessToken);
@@ -26,7 +26,7 @@ const App: React.FC = () => {
           position: 'fixed',
           top: '50%',
           left: '50%',
-          transform: 'translate(-50%, -50%)'
+          transform: 'translate(-50%, -50%)',
         }}
       >
         <Skeleton active avatar paragraph={{ rows: 10 }} />

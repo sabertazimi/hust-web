@@ -13,5 +13,5 @@ export {
   Login,
   Agreement,
   ForgotPassword,
-  Dashboard
+  Dashboard,
 };

@@ -1,13 +1,13 @@
-import React, { useState, useCallback } from 'react';
+import { Button, Checkbox, Form, FormProps, Input, message } from 'antd';
+import { Rule } from 'rc-field-form/lib/interface';
+import React, { useCallback, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Form, Input, Checkbox, Button, message } from 'antd';
-import { FormComponentProps, ValidationRule } from 'antd/lib/form/Form';
+import { breakpoints } from '../config';
 import { useRegisterMutation } from '../query';
-import { Breakpoints } from '../config';
 
 type ValidateCallback<V> = (errors?: any, values?: V) => void;
 
-interface Props extends FormComponentProps {}
+interface Props extends FormProps {}
 
 type FormValues = {
   email: string;
@@ -16,8 +16,8 @@ type FormValues = {
   agreement: Boolean;
 };
 
-const RegistrationForm: React.FC<Props> = ({ form }) => {
-  const { getFieldDecorator } = form;
+const RegistrationForm: React.FC<Props> = () => {
+  const [form] = Form.useForm();
   const history = useHistory();
   const [register] = useRegisterMutation();
   const [confirmDirty, setConfirmDirty] = useState(false);
@@ -25,21 +25,19 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      form.validateFieldsAndScroll(async (err: any, values: FormValues) => {
-        if (!err) {
-          const { email, password } = values;
-          const response = await register({
-            variables: {
-              email,
-              password
-            }
-          });
+      form.validateFields().then(async (values: FormValues) => {
+        const { email, password } = values;
+        const response = await register({
+          variables: {
+            email,
+            password,
+          },
+        });
 
-          if (response.data!.register) {
-            setTimeout(() => history.push('/'), 0);
-          } else {
-            message.error(`Email ${email} already registered`);
-          }
+        if (response.data!.register) {
+          setTimeout(() => history.push('/'), 0);
+        } else {
+          message.error(`Email ${email} already registered`);
         }
       });
     },
@@ -55,11 +53,7 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
   );
 
   const compareToFirstPassword = useCallback(
-    (
-      rule: ValidationRule,
-      value: string,
-      callback: ValidateCallback<string>
-    ) => {
+    (rule: Rule, value: string, callback: ValidateCallback<string>) => {
       if (value && value !== form.getFieldValue('password')) {
         callback('Two passwords that you enter is inconsistent!');
       } else {
@@ -70,25 +64,15 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
   );
 
   const validateToNextPassword = useCallback(
-    (
-      rule: ValidationRule,
-      value: string,
-      callback: ValidateCallback<string>
-    ) => {
-      if (value && confirmDirty) {
-        form.validateFields(['confirm'], { force: true });
-      }
+    async (rule: Rule, value: string, callback: ValidateCallback<string>) => {
+      if (value && confirmDirty) await form.validateFields();
       callback();
     },
     [form, confirmDirty]
   );
 
   const validateToAgreement = useCallback(
-    (
-      rule: ValidationRule,
-      value: Boolean,
-      callback: ValidateCallback<Boolean>
-    ) => {
+    (rule: Rule, value: Boolean, callback: ValidateCallback<Boolean>) => {
       if (!value) {
         callback('Please read the agreement!');
       } else {
@@ -101,89 +85,98 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
   const formItemLayout = {
     labelCol: {
       xs: { span: 24 },
-      sm: { span: 8 }
+      sm: { span: 8 },
     },
     wrapperCol: {
       xs: { span: 24 },
-      sm: { span: 16 }
-    }
+      sm: { span: 16 },
+    },
   };
 
   const tailFormItemLayout = {
     wrapperCol: {
       xs: {
         span: 24,
-        offset: 0
+        offset: 0,
       },
       sm: {
         span: 16,
-        offset: 8
-      }
-    }
+        offset: 8,
+      },
+    },
   };
 
   return (
     <Form
       {...formItemLayout}
-      onSubmit={handleSubmit}
+      form={form}
+      onFinish={handleSubmit}
       style={{
         margin: '0 auto',
-        maxWidth: Breakpoints.Small
+        maxWidth: breakpoints.small,
       }}
     >
-      <Form.Item label="E-mail">
-        {getFieldDecorator('email', {
-          rules: [
-            {
-              type: 'email',
-              message: 'The input is not valid E-mail!'
-            },
-            {
-              required: true,
-              message: 'Please input your E-mail!'
-            }
-          ]
-        })(<Input />)}
+      <Form.Item
+        label="E-mail"
+        name="email"
+        rules={[
+          {
+            type: 'email',
+            message: 'The input is not valid E-mail!',
+          },
+          {
+            required: true,
+            message: 'Please input your E-mail!',
+          },
+        ]}
+      >
+        <Input />
       </Form.Item>
-      <Form.Item label="Password" hasFeedback>
-        {getFieldDecorator('password', {
-          rules: [
-            {
-              required: true,
-              message: 'Please input your password!'
-            },
-            {
-              validator: validateToNextPassword
-            }
-          ]
-        })(<Input.Password />)}
+      <Form.Item
+        label="Password"
+        hasFeedback
+        name="password"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your password!',
+          },
+          {
+            validator: validateToNextPassword,
+          },
+        ]}
+      >
+        <Input.Password />
       </Form.Item>
-      <Form.Item label="Confirm Password" hasFeedback>
-        {getFieldDecorator('confirm', {
-          rules: [
-            {
-              required: true,
-              message: 'Please confirm your password!'
-            },
-            {
-              validator: compareToFirstPassword
-            }
-          ]
-        })(<Input.Password onBlur={handleConfirmBlur} />)}
+      <Form.Item
+        label="Confirm Password"
+        hasFeedback
+        name="confirm"
+        rules={[
+          {
+            required: true,
+            message: 'Please confirm your password!',
+          },
+          {
+            validator: compareToFirstPassword,
+          },
+        ]}
+      >
+        <Input.Password onBlur={handleConfirmBlur} />
       </Form.Item>
-      <Form.Item {...tailFormItemLayout}>
-        {getFieldDecorator('agreement', {
-          valuePropName: 'checked',
-          rules: [
-            {
-              validator: validateToAgreement
-            }
-          ]
-        })(
-          <Checkbox>
-            I have read the <Link to="/agreement">agreement</Link>
-          </Checkbox>
-        )}
+      <Form.Item
+        {...tailFormItemLayout}
+        name="agreement"
+        valuePropName="checked"
+        rules={[
+          {
+            validator: validateToAgreement,
+          },
+        ]}
+      >
+        <Checkbox>
+          I have read the <Link to="/agreement">agreement</Link>
+        </Checkbox>
       </Form.Item>
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit">
@@ -194,8 +187,4 @@ const RegistrationForm: React.FC<Props> = ({ form }) => {
   );
 };
 
-const WrappedRegistrationForm = Form.create({ name: 'register' })(
-  RegistrationForm
-);
-
-export default WrappedRegistrationForm;
+export default RegistrationForm;

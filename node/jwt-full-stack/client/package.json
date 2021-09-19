@@ -1,31 +1,32 @@
 {
-  "name": "client",
+  "name": "jwt-client",
   "version": "0.1.0",
-  "dependencies": {
-    "@apollo/react-hooks": "^3.1.5",
-    "antd": "^3.26.20",
-    "apollo-cache-inmemory": "^1.6.6",
-    "apollo-client": "^2.6.10",
-    "apollo-link": "^1.2.14",
-    "apollo-link-error": "^1.1.13",
-    "apollo-link-http": "^1.5.17",
-    "apollo-link-token-refresh": "^0.3.2",
-    "graphql": "^14.7.0",
-    "graphql-tag": "^2.12.5",
-    "jwt-decode": "^2.2.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-router-dom": "^5.3.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "gen": "graphql-codegen -r dotenv/config --config codegen.yml"
+    "gen": "graphql-codegen -r dotenv/config --config codegen.yml",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "bod",
+      "bod/jest",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-bod",
+      "stylelint-prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   },
   "browserslist": {
     "production": [
@@ -39,19 +40,35 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "@apollo/react-common": "^3.1.4",
+    "@apollo/react-hooks": "^4.0.0",
+    "antd": "^4.16.13",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-error": "^1.1.13",
+    "apollo-link-http": "^1.5.17",
+    "apollo-link-token-refresh": "^0.3.2",
+    "apollo-utilities": "^1.3.4",
+    "graphql": "^15.5.3",
+    "graphql-tag": "^2.12.5",
+    "jwt-decode": "^3.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
+  },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.21.8",
-    "@graphql-codegen/typescript": "^1.23.0",
-    "@graphql-codegen/typescript-operations": "^1.18.4",
-    "@graphql-codegen/typescript-react-apollo": "^1.17.7",
-    "@types/graphql": "^14.5.0",
+    "@graphql-codegen/cli": "^2.2.0",
+    "@graphql-codegen/typescript": "^2.2.2",
+    "@graphql-codegen/typescript-operations": "^2.1.4",
+    "@graphql-codegen/typescript-react-apollo": "^3.1.4",
+    "@sabertazimi/react-scripts": "^5.3.8",
     "@types/jest": "^27.0.1",
-    "@types/jwt-decode": "^2.2.1",
-    "@types/node": "^14.17.17",
+    "@types/node": "^16.9.3",
     "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.9",
-    "react-scripts": "^4.0.3",
-    "typescript": "^3.9.10"
+    "typescript": "^4.4.3"
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Spin, List, Avatar } from 'antd';
 import { useUsersQuery } from '../query';
-import { Colors } from '../config';
+import { colors } from '../config';
 
 interface Props {}
 
@@ -24,14 +24,10 @@ const Home: React.FC<Props> = () => {
                     <Avatar
                       size="large"
                       icon="user"
-                      style={{ backgroundColor: Colors.PrimaryColor }}
+                      style={{ backgroundColor: colors.primary }}
                     />
                   }
-                  title={
-                    <a href={`mailto:${user.email}`}>
-                      {user.email}
-                    </a>
-                  }
+                  title={<a href={`mailto:${user.email}`}>{user.email}</a>}
                   description="React JWT Full Stack Project"
                 />
               </List.Item>

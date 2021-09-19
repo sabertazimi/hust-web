@@ -4,7 +4,7 @@ const Auth = {
   setAccessToken: (_accessToken: string) => {
     accessToken = _accessToken;
   },
-  getAccessToken: () => accessToken
+  getAccessToken: () => accessToken,
 };
 
 export default Auth;

@@ -1,26 +1,25 @@
+import { ApolloProvider } from '@apollo/react-hooks';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloClient } from 'apollo-client';
+import { ApolloLink, Observable } from 'apollo-link';
+import { onError } from 'apollo-link-error';
+import { HttpLink } from 'apollo-link-http';
+import { TokenRefreshLink } from 'apollo-link-token-refresh';
+import jwtDecode, { JwtPayload } from 'jwt-decode';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { HttpLink } from 'apollo-link-http';
-import { onError } from 'apollo-link-error';
-import { TokenRefreshLink } from 'apollo-link-token-refresh';
-import { ApolloLink, Observable } from 'apollo-link';
-import { ApolloProvider } from '@apollo/react-hooks';
-import jwtDecode from 'jwt-decode';
 import App from './App';
-import { SERVER_URL, GRAPHQL_URI } from './config';
 import Auth from './auth';
-import * as serviceWorker from './serviceWorker';
+import { GRAPHQL_URI, SERVER_URL } from './config';
 import './index.css';
 
 const cache = new InMemoryCache({
   cacheRedirects: {
     Query: {
       movie: (_, { id }, { getCacheKey }) =>
-        getCacheKey({ __typename: 'Movie', id })
-    }
-  }
+        getCacheKey({ __typename: 'Movie', id }),
+    },
+  },
 });
 
 const requestLink = new ApolloLink(
@@ -34,8 +33,8 @@ const requestLink = new ApolloLink(
           if (accessToken) {
             operation.setContext({
               headers: {
-                authorization: `jwt ${accessToken}`
-              }
+                authorization: `jwt ${accessToken}`,
+              },
             });
           }
         })
@@ -43,7 +42,7 @@ const requestLink = new ApolloLink(
           handle = forward(operation).subscribe({
             next: observer.next.bind(observer),
             error: observer.error.bind(observer),
-            complete: observer.complete.bind(observer)
+            complete: observer.complete.bind(observer),
           });
         })
         .catch(observer.error.bind(observer));
@@ -69,8 +68,8 @@ const client = new ApolloClient({
         }
 
         try {
-          const { exp } = jwtDecode(token);
-          if (Date.now() >= exp * 1000) {
+          const decoded = jwtDecode<JwtPayload>(token);
+          if (decoded.exp && Date.now() >= decoded.exp * 1000) {
             // expired
             return false;
           } else {
@@ -84,7 +83,7 @@ const client = new ApolloClient({
       fetchAccessToken: () => {
         return fetch(`${SERVER_URL}/refresh_token`, {
           method: 'POST',
-          credentials: 'include'
+          credentials: 'include',
         });
       },
       handleFetch: accessToken => {
@@ -93,8 +92,8 @@ const client = new ApolloClient({
       handleError: err => {
         // full control over handling token fetch Error
         console.warn('Your refresh token is invalid. Try to relogin');
-      }
-    }),
+      },
+    }) as unknown as ApolloLink,
     onError(({ graphQLErrors, networkError }) => {
       if (graphQLErrors) {
         graphQLErrors.forEach(({ message, locations, path }) =>
@@ -110,17 +109,15 @@ const client = new ApolloClient({
     requestLink,
     new HttpLink({
       uri: GRAPHQL_URI,
-      credentials: 'include'
-    })
+      credentials: 'include',
+    }),
   ]),
-  cache
+  cache,
 });
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
+  <ApolloProvider client={client as unknown as any}>
     <App />
   </ApolloProvider>,
   document.getElementById('root')
 );
-
-serviceWorker.register();
