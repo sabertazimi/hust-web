@@ -56,6 +56,7 @@
     "./ife/2018/basic/mis",
     "./ife/2018/basic/oop",
     "./js",
+    "./node/hust-oom",
     "./react",
     "./react/*"
   ]

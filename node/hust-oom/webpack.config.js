@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -12,7 +12,7 @@ module.exports = {
     main: './client/index.jsx',
   },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: devMode ? '[name].js' : '[name].[contenthash].js',
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
   },
@@ -25,6 +25,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'html-loader',
@@ -36,14 +37,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              minimize: !devMode,
-            },
-          },
+          'css-loader',
           'postcss-loader',
           'sass-loader',
         ],
@@ -54,7 +51,7 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new CleanWebpackPlugin('build'),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       hash: true,
       template: './client/index.html',

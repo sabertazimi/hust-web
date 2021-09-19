@@ -1,18 +1,17 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable max-classes-per-file */
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+import { withRouter } from 'react-router-dom';
 import {
-  SERVER_URL,
   SERVER_LOGIN_PATH,
   SERVER_SIGNUP_PATH,
+  SERVER_URL,
 } from '../constants';
-import postData from '../utils/postData';
-
-import './Form.scss';
 import Actions from '../states/actions';
+import postData from '../utils/postData';
+import './Form.scss';
 
 const FormContext = React.createContext({});
 const FormProvider = FormContext.Provider;
@@ -31,12 +30,12 @@ class FormWrapper extends React.Component {
     const { activePanel } = this.state;
 
     return (
-      <React.Fragment>
+      <>
         <FormProvider
           value={{
             activePanel,
             actions: {
-              switchPanel: (newPanel) => {
+              switchPanel: newPanel => {
                 this.setState({
                   activePanel: newPanel,
                 });
@@ -46,17 +45,14 @@ class FormWrapper extends React.Component {
         >
           {children}
         </FormProvider>
-      </React.Fragment>
+      </>
     );
   }
 }
 
 const FormPanel = ({ isActive, children }) => (
   <FormConsumer>
-    {({ activePanel }) => (
-      activePanel === isActive ? children : null
-    )
-    }
+    {({ activePanel }) => (activePanel === isActive ? children : null)}
   </FormConsumer>
 );
 
@@ -65,9 +61,7 @@ const Panel = ({ id, children }) => (
     {({ actions }) => (
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events
       // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-      <div onClick={() => actions.switchPanel(id)}>
-        {children}
-      </div>
+      <div onClick={() => actions.switchPanel(id)}>{children}</div>
     )}
   </FormConsumer>
 );
@@ -102,7 +96,7 @@ class _Login extends React.Component {
       email,
       password,
     })
-      .then((res) => {
+      .then(res => {
         if (res.status === 200) {
           onLogin(res);
           history.push('/dashboard');
@@ -118,7 +112,7 @@ class _Login extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <div id="login-tab-content" className="active tabs-content">
           <form className="login-form" onSubmit={this.handleSubmit}>
             <input
@@ -142,7 +136,7 @@ class _Login extends React.Component {
             <input type="submit" className="button" value="Login" />
           </form>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
@@ -179,7 +173,7 @@ class _SignUp extends React.Component {
       username,
       password,
     })
-      .then((res) => {
+      .then(res => {
         if (res.status === 200) {
           onLogin(res);
           history.push('/dashboard');
@@ -195,7 +189,7 @@ class _SignUp extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <div id="signup-tab-content" className="active tabs-content">
           <form className="signup-form" onSubmit={this.handleSubmit}>
             <input
@@ -230,43 +224,42 @@ class _SignUp extends React.Component {
             <input type="submit" className="button" value="Sign Up" />
           </form>
         </div>
-      </React.Fragment>
-
+      </>
     );
   }
 }
 
-const Login = withRouter(connect(
-  () => ({}),
-  dispatch => ({
-    onLogin: (...args) => {
-      dispatch(Actions.login(...args));
-    },
-  }),
-)(_Login));
+const Login = withRouter(
+  connect(
+    () => ({}),
+    dispatch => ({
+      onLogin: (...args) => {
+        dispatch(Actions.login(...args));
+      },
+    })
+  )(_Login)
+);
 
-const SignUp = withRouter(connect(
-  () => ({}),
-  dispatch => ({
-    onLogin: (...args) => {
-      dispatch(Actions.login(...args));
-    },
-  }),
-)(_SignUp));
+const SignUp = withRouter(
+  connect(
+    () => ({}),
+    dispatch => ({
+      onLogin: (...args) => {
+        dispatch(Actions.login(...args));
+      },
+    })
+  )(_SignUp)
+);
 
 const Form = () => (
   <div className="form-wrap">
     <FormWrapper>
       <div className="tabs">
         <Panel id="login">
-          <h2 className="login-tab">
-            Login
-          </h2>
+          <h2 className="login-tab">Login</h2>
         </Panel>
         <Panel id="signup">
-          <h2 className="signup-tab">
-            Sign Up
-          </h2>
+          <h2 className="signup-tab">Sign Up</h2>
         </Panel>
       </div>
 

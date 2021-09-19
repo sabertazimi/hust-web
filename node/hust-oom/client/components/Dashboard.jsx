@@ -1,31 +1,28 @@
+/* eslint-disable max-classes-per-file */
+import {
+  AgentBar,
+  Avatar,
+  ChatList,
+  ChatListItem,
+  Column,
+  IconButton,
+  Message,
+  MessageList,
+  MessageText,
+  Row,
+  SendButton,
+  SendIcon,
+  Subtitle,
+  TextComposer,
+  TextInput,
+  ThemeProvider,
+  Title,
+} from '@livechat/ui-kit';
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import {
-  ThemeProvider,
-  AgentBar,
-  Avatar,
-  Column,
-  Row,
-  Title,
-  Subtitle,
-  ChatList,
-  ChatListItem,
-  MessageList,
-  Message,
-  MessageText,
-  TextComposer,
-  TextInput,
-  SendIcon,
-  SendButton,
-  IconButton,
-} from '@livechat/ui-kit';
 import io from 'socket.io-client';
-
-import {
-  SERVER_URL,
-} from '../constants';
-
+import { SERVER_URL } from '../constants';
 import './Dashboard.scss';
 
 class ChatMessage {
@@ -68,7 +65,7 @@ class Dashboard extends React.Component {
       const { messageList } = prevState;
       const socket = io(SERVER_URL, { query: { username } });
 
-      friends.forEach((friend) => {
+      friends.forEach(friend => {
         if (!messageList[friend]) {
           messageList[friend] = [];
         }
@@ -79,7 +76,7 @@ class Dashboard extends React.Component {
         console.log('Connected to server !');
       });
 
-      socket.on(username, (chatMessage) => {
+      socket.on(username, chatMessage => {
         const prevvState = this.state;
         const { from, to, content } = JSON.parse(chatMessage);
         const message = new ChatMessage(from, to, content);
@@ -141,12 +138,7 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const {
-      email,
-      username,
-      friends,
-      history,
-    } = this.props;
+    const { email, username, friends, history } = this.props;
     const { currentWindow, messageList } = this.state;
 
     if (email === '' || username === '') {
@@ -154,10 +146,12 @@ class Dashboard extends React.Component {
         <ThemeProvider>
           <MessageList active>
             <Message authorName="Error">
-              <MessageText>
-                Plesase sign up or login !
-              </MessageText>
-              <IconButton onClick={() => { history.push('/'); }}>
+              <MessageText>Plesase sign up or login !</MessageText>
+              <IconButton
+                onClick={() => {
+                  history.push('/');
+                }}
+              >
                 <SendIcon color="#f03e3e" />
               </IconButton>
             </Message>
@@ -186,12 +180,8 @@ class Dashboard extends React.Component {
             <AgentBar>
               <Column>
                 <Avatar letter={username.toUpperCase()[0]} />
-                <Title>
-                  {username}
-                </Title>
-                <Subtitle>
-                  {email}
-                </Subtitle>
+                <Title>{username}</Title>
+                <Subtitle>{email}</Subtitle>
               </Column>
             </AgentBar>
             <ChatList
@@ -199,20 +189,20 @@ class Dashboard extends React.Component {
                 maxWidth: 300,
               }}
             >
-              {
-                friends.map(friend => (
-                  <ChatListItem key={friend} data-name={friend} onClick={this.handleSwitch}>
-                    <Avatar letter={friend.toUpperCase()[0]} />
-                    <Column fill="true">
-                      <Row justify>
-                        <Title ellipsis>
-                          {friend}
-                        </Title>
-                      </Row>
-                    </Column>
-                  </ChatListItem>
-                ))
-              }
+              {friends.map(friend => (
+                <ChatListItem
+                  key={friend}
+                  data-name={friend}
+                  onClick={this.handleSwitch}
+                >
+                  <Avatar letter={friend.toUpperCase()[0]} />
+                  <Column fill="true">
+                    <Row justify>
+                      <Title ellipsis>{friend}</Title>
+                    </Row>
+                  </Column>
+                </ChatListItem>
+              ))}
             </ChatList>
           </div>
           <div
@@ -226,39 +216,39 @@ class Dashboard extends React.Component {
               }}
             >
               <MessageList active>
-                {
-                  messageList[currentWindow] ? messageList[currentWindow].map(message => (
+                {messageList[currentWindow] ? (
+                  messageList[currentWindow].map(message => (
                     <Message
                       key={`${message.content} ${Math.random()}`}
                       isOwn={message.from !== currentWindow}
                     >
-                      <MessageText>
-                        {message.content}
-                      </MessageText>
+                      <MessageText>{message.content}</MessageText>
                     </Message>
-                  )) : (
-                    <Message authorName="Welcome">
-                      <MessageText>
-                        Welcome to Chat System !
-                      </MessageText>
-                    </Message>
-                  )
-                }
+                  ))
+                ) : (
+                  <Message authorName="Welcome">
+                    <MessageText>Welcome to Chat System !</MessageText>
+                  </Message>
+                )}
               </MessageList>
             </div>
             <div>
-              {
-                messageList[currentWindow] ? (
-                  <TextComposer onChange={this.handleType} onSend={this.handleSend}>
-                    <Row align="center">
-                      <TextInput placeholder="Write something to send ..." fill="true" />
-                      <SendButton fit="true" />
-                    </Row>
-                  </TextComposer>
-                ) : (
-                  <br />
-                )
-              }
+              {messageList[currentWindow] ? (
+                <TextComposer
+                  onChange={this.handleType}
+                  onSend={this.handleSend}
+                >
+                  <Row align="center">
+                    <TextInput
+                      placeholder="Write something to send ..."
+                      fill="true"
+                    />
+                    <SendButton fit="true" />
+                  </Row>
+                </TextComposer>
+              ) : (
+                <br />
+              )}
             </div>
           </div>
         </div>
@@ -267,12 +257,14 @@ class Dashboard extends React.Component {
   }
 }
 
-export default withRouter(connect((state) => {
-  const { username, email, friends } = state;
+export default withRouter(
+  connect(state => {
+    const { username, email, friends } = state;
 
-  return {
-    username,
-    email,
-    friends,
-  };
-})(Dashboard));
+    return {
+      username,
+      email,
+      friends,
+    };
+  })(Dashboard)
+);
