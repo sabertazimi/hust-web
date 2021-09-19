@@ -40,10 +40,10 @@
     ]
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.21.8",
-    "@graphql-codegen/typescript": "^1.23.0",
-    "@graphql-codegen/typescript-operations": "^1.18.4",
-    "@graphql-codegen/typescript-react-apollo": "^1.17.7",
+    "@graphql-codegen/cli": "^2.2.0",
+    "@graphql-codegen/typescript": "^2.2.2",
+    "@graphql-codegen/typescript-operations": "^2.1.4",
+    "@graphql-codegen/typescript-react-apollo": "^3.1.4",
     "@types/graphql": "^14.5.0",
     "@types/jest": "^27.0.1",
     "@types/jwt-decode": "^2.2.1",
