@@ -1,6 +1,6 @@
 {
   "name": "gba",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Minimal webpack boilerplate",
   "main": "./src/index.js",
   "scripts": {
