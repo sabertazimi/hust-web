@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
-    "@types/jest": "^24.9.1",
-    "@types/node": "^14.17.17",
-    "@types/react": "^16.14.15",
-    "@types/react-dom": "^16.9.14",
     "antd": "^3.26.20",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
@@ -19,9 +15,7 @@
     "jwt-decode": "^2.2.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "^3.4.4",
-    "typescript": "^3.9.10"
+    "react-router-dom": "^5.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,7 +45,13 @@
     "@graphql-codegen/typescript-operations": "^1.18.4",
     "@graphql-codegen/typescript-react-apollo": "^1.17.7",
     "@types/graphql": "^14.5.0",
+    "@types/jest": "^24.9.1",
     "@types/jwt-decode": "^2.2.1",
-    "@types/react-router-dom": "^5.1.9"
+    "@types/node": "^14.17.17",
+    "@types/react": "^16.14.15",
+    "@types/react-dom": "^16.9.14",
+    "@types/react-router-dom": "^5.1.9",
+    "react-scripts": "^3.4.4",
+    "typescript": "^3.9.10"
   }
 }
