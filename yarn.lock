@@ -6611,7 +6611,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-redux: ^7.2.5
-    react-router-dom: ^5.0.0
+    react-router-dom: ^5.3.0
     redux: ^4.1.1
     sass-loader: ^12.1.0
     socket.io: ^2.4.1
@@ -18726,7 +18726,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^5.0.0":
+"react-router-dom@npm:^5.3.0":
   version: 5.3.0
   resolution: "react-router-dom@npm:5.3.0"
   dependencies:
