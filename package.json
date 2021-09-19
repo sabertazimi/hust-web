@@ -57,6 +57,7 @@
     "./ife/2018/basic/oop",
     "./js",
     "./node/hust-oom",
+    "./node/jwt-full-stack/client",
     "./react",
     "./react/*"
   ]
