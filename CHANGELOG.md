@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/sabertazimi/hust-web/compare/v2.1.0...v2.2.0) (2021-09-19)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([#159](https://github.com/sabertazimi/hust-web/issues/159)) ([a507aef](https://github.com/sabertazimi/hust-web/commit/a507aef0b264bba3225d6cc8fda8adb2f555d7cd))
+* **deps:** pin dependency react-router-dom to 5.3.0 ([#160](https://github.com/sabertazimi/hust-web/issues/160)) ([11774d5](https://github.com/sabertazimi/hust-web/commit/11774d5764971323e90e2c662ec29ae8fa8c7ffe))
+* **deps:** update dependency @types/jest to ^24.9.1 ([#183](https://github.com/sabertazimi/hust-web/issues/183)) ([cd1e9c2](https://github.com/sabertazimi/hust-web/commit/cd1e9c200539fbe86d7370fc4615321464b9639d))
+* **deps:** update dependency @types/react to ^16.14.15 ([#184](https://github.com/sabertazimi/hust-web/issues/184)) ([469ada7](https://github.com/sabertazimi/hust-web/commit/469ada768a9bf587b7902c1371f58362d8daa8c7))
+* **deps:** update dependency @types/react-dom to v16.9.14 ([#163](https://github.com/sabertazimi/hust-web/issues/163)) ([b52e76a](https://github.com/sabertazimi/hust-web/commit/b52e76a4623bed0c4e26c88ebf47df2762ef0887))
+* **deps:** update dependency apollo-link-token-refresh to ^0.3.2 ([#185](https://github.com/sabertazimi/hust-web/issues/185)) ([10e5a7b](https://github.com/sabertazimi/hust-web/commit/10e5a7b3d9e1adbd489a213561bd1659075c9e75))
+* **deps:** update dependency body-parser to ^1.19.0 ([#186](https://github.com/sabertazimi/hust-web/issues/186)) ([84490e6](https://github.com/sabertazimi/hust-web/commit/84490e6f94a7de1142f5f06705d36d6cd03893ef))
+* **deps:** update dependency bootstrap to ^4.6.0 ([#170](https://github.com/sabertazimi/hust-web/issues/170)) ([0ed2c75](https://github.com/sabertazimi/hust-web/commit/0ed2c75feed2efc4679b5fe978ce1b1507cb6ac7))
+* **deps:** update dependency express to ^4.17.1 ([#187](https://github.com/sabertazimi/hust-web/issues/187)) ([4d6f8f3](https://github.com/sabertazimi/hust-web/commit/4d6f8f30d562e2994405e3e9a2f7946fe41813d6))
+* **deps:** update dependency jquery to ^3.6.0 ([#171](https://github.com/sabertazimi/hust-web/issues/171)) ([3f31874](https://github.com/sabertazimi/hust-web/commit/3f318744a4382b4144fe5e3ba3c0e5f1e7b30b1d))
+* **deps:** update dependency popper.js to ^1.16.1 ([#172](https://github.com/sabertazimi/hust-web/issues/172)) ([df78016](https://github.com/sabertazimi/hust-web/commit/df78016afbc46a4c879f81bf6d9cecce634cb667))
+* **deps:** update dependency puppeteer-core to ^1.20.0 ([#188](https://github.com/sabertazimi/hust-web/issues/188)) ([842b17d](https://github.com/sabertazimi/hust-web/commit/842b17d1aa53645a27ca2958678d3d893fbb520f))
+* **deps:** update dependency react-redux to ^6.0.1 ([#173](https://github.com/sabertazimi/hust-web/issues/173)) ([1b41019](https://github.com/sabertazimi/hust-web/commit/1b41019b0f78d0dc4adec24b9a8628e5781e0f48))
+* **deps:** update dependency react-scripts to ^3.4.4 ([#189](https://github.com/sabertazimi/hust-web/issues/189)) ([e4f0961](https://github.com/sabertazimi/hust-web/commit/e4f09617798d98dfac8f5d8b1de08cd838987620))
+* **deps:** update dependency redux to ^4.1.1 ([#190](https://github.com/sabertazimi/hust-web/issues/190)) ([f7b111a](https://github.com/sabertazimi/hust-web/commit/f7b111a9fa4d6e03f127c6863961fa7b70b53580))
+* **deps:** update dependency san to ^3.10.10 ([#175](https://github.com/sabertazimi/hust-web/issues/175)) ([c93ab04](https://github.com/sabertazimi/hust-web/commit/c93ab0422afe21bcf373c806b5666a538cedf77f))
+* **deps:** update dependency scrollreveal to ^4.0.9 ([#176](https://github.com/sabertazimi/hust-web/issues/176)) ([6f17df3](https://github.com/sabertazimi/hust-web/commit/6f17df39ad225de26ce6bce687e3ebb3d7e72c34))
+* **deps:** update dependency typeorm to ^0.2.37 ([#177](https://github.com/sabertazimi/hust-web/issues/177)) ([219f01b](https://github.com/sabertazimi/hust-web/commit/219f01bacdd0d75891f462b48e95fc870aa37c60))
+* **deps:** update react monorepo to ^16.14.0 ([#191](https://github.com/sabertazimi/hust-web/issues/191)) ([5486beb](https://github.com/sabertazimi/hust-web/commit/5486beb5ae3d7789c2a59c0851ca4f688185678a))
+* **deps:** update socket.io packages ([#192](https://github.com/sabertazimi/hust-web/issues/192)) ([eaab7bd](https://github.com/sabertazimi/hust-web/commit/eaab7bd04d205a5f11bb4f285a720c6babc8e90e))
+
+
+### Features
+
+* **ife-2016:** enable Gulp building workd ([7131454](https://github.com/sabertazimi/hust-web/commit/713145437272a5cdf0c8f64ba9c60062e0db8334))
+* **Node-chat:** enable chat client building work ([c845f42](https://github.com/sabertazimi/hust-web/commit/c845f429348d607873f9b78def405931259c8d35))
+
+
+
+
+
 # [2.1.0](https://github.com/sabertazimi/hust-web/compare/v2.0.1...v2.1.0) (2021-09-12)
 
 
