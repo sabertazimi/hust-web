@@ -5881,7 +5881,7 @@ __metadata:
     scrollreveal: ^4.0.9
     style-loader: ^3.2.1
     stylelint: ^13.13.1
-    stylelint-config-mass: ^5.3.6
+    stylelint-config-mass: ^5.3.8
     stylelint-webpack-plugin: ^3.0.1
     url-loader: ^4.1.1
     webpack: ^5.52.1
@@ -10568,7 +10568,7 @@ fsevents@^1.2.7:
     sass-loader: ^12.1.0
     style-loader: ^3.2.1
     stylelint: ^13.13.1
-    stylelint-config-mass: ^5.3.6
+    stylelint-config-mass: ^5.3.8
     stylelint-webpack-plugin: ^3.0.1
     webpack: ^5.52.1
     webpack-cli: ^4.8.0
@@ -15439,7 +15439,7 @@ fsevents@^1.2.7:
     postcss-loader: ^6.1.1
     style-loader: ^3.2.1
     stylelint: ^13.13.1
-    stylelint-config-mass: ^5.3.6
+    stylelint-config-mass: ^5.3.8
     stylelint-webpack-plugin: ^3.0.1
     webpack: ^5.52.1
     webpack-cli: ^4.8.0
@@ -19551,7 +19551,7 @@ resolve@^2.0.0-next.3:
     postcss-loader: ^6.1.1
     style-loader: ^3.2.1
     stylelint: ^13.13.1
-    stylelint-config-mass: ^5.3.6
+    stylelint-config-mass: ^5.3.8
     stylelint-webpack-plugin: ^3.0.1
     webpack: ^5.52.1
     webpack-cli: ^4.8.0
@@ -21056,7 +21056,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"stylelint-config-mass@npm:^5.3.6, stylelint-config-mass@npm:^5.3.8":
+"stylelint-config-mass@npm:^5.3.8":
   version: 5.3.8
   resolution: "stylelint-config-mass@npm:5.3.8"
   dependencies:
@@ -23033,47 +23033,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "webpack-dev-server@npm:4.2.0"
-  dependencies:
-    ansi-html-community: ^0.0.8
-    bonjour: ^3.5.0
-    chokidar: ^3.5.1
-    colorette: ^1.2.2
-    compression: ^1.7.4
-    connect-history-api-fallback: ^1.6.0
-    del: ^6.0.0
-    express: ^4.17.1
-    graceful-fs: ^4.2.6
-    html-entities: ^2.3.2
-    http-proxy-middleware: ^2.0.0
-    internal-ip: ^6.2.0
-    ipaddr.js: ^2.0.1
-    open: ^8.0.9
-    p-retry: ^4.5.0
-    portfinder: ^1.0.28
-    schema-utils: ^3.1.0
-    selfsigned: ^1.10.11
-    serve-index: ^1.9.1
-    sockjs: ^0.3.21
-    spdy: ^4.0.2
-    strip-ansi: ^7.0.0
-    url: ^0.11.0
-    webpack-dev-middleware: ^5.1.0
-    ws: ^8.1.0
-  peerDependencies:
-    webpack: ^4.37.0 || ^5.0.0
-  peerDependenciesMeta:
-    webpack-cli:
-      optional: true
-  bin:
-    webpack-dev-server: bin/webpack-dev-server.js
-  checksum: 67392d41771eb4f8be32d53bc77b62318cf11d2b5f7703102240085db65c99dd450bbd9519361c3e10c8329959c6c2e3875a081166e4ec11e9c93516bfb7cc31
-  languageName: node
-  linkType: hard
-
-"webpack-dev-server@npm:^4.2.1":
+"webpack-dev-server@npm:^4.2.0, webpack-dev-server@npm:^4.2.1":
   version: 4.2.1
   resolution: "webpack-dev-server@npm:4.2.1"
   dependencies:
@@ -23162,44 +23122,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.52.1":
-  version: 5.52.1
-  resolution: "webpack@npm:5.52.1"
-  dependencies:
-    "@types/eslint-scope": ^3.7.0
-    "@types/estree": ^0.0.50
-    "@webassemblyjs/ast": 1.11.1
-    "@webassemblyjs/wasm-edit": 1.11.1
-    "@webassemblyjs/wasm-parser": 1.11.1
-    acorn: ^8.4.1
-    acorn-import-assertions: ^1.7.6
-    browserslist: ^4.14.5
-    chrome-trace-event: ^1.0.2
-    enhanced-resolve: ^5.8.0
-    es-module-lexer: ^0.7.1
-    eslint-scope: 5.1.1
-    events: ^3.2.0
-    glob-to-regexp: ^0.4.1
-    graceful-fs: ^4.2.4
-    json-parse-better-errors: ^1.0.2
-    loader-runner: ^4.2.0
-    mime-types: ^2.1.27
-    neo-async: ^2.6.2
-    schema-utils: ^3.1.0
-    tapable: ^2.1.1
-    terser-webpack-plugin: ^5.1.3
-    watchpack: ^2.2.0
-    webpack-sources: ^3.2.0
-  peerDependenciesMeta:
-    webpack-cli:
-      optional: true
-  bin:
-    webpack: bin/webpack.js
-  checksum: 3a509d571ec7b7a1f21d364c7abbfa994bc0bd897bf57d690e56ad3a0b438e0065255ec92720d1839a8ea2ad526041306d0b0f7a7efaf8789f37d18b20cb20a3
-  languageName: node
-  linkType: hard
-
-"webpack@npm:^5.53.0":
+"webpack@npm:^5.52.1, webpack@npm:^5.53.0":
   version: 5.53.0
   resolution: "webpack@npm:5.53.0"
   dependencies:
