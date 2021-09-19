@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^29.2.0",
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.1.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "scrollreveal": "^4.0.9"
