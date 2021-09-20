@@ -37,6 +37,7 @@
     "url": "https://github.com/sabertazimi/hust-web/issues"
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
+  "packageManager": "yarn@3.0.2",
   "devDependencies": {
     "chalk": "^4.1.2",
     "consola": "^2.15.3",
