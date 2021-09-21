@@ -8,6 +8,7 @@
     "clean": "lerna clean --yes",
     "lint": "lerna run lint",
     "release": "node scripts/release.js --push",
+    "test": "lerna run test",
     "start": "yarn workspace meact start"
   },
   "repository": {
@@ -57,6 +58,7 @@
     "./ife/2018/basic/mis",
     "./ife/2018/basic/oop",
     "./js",
+    "./js/mpm",
     "./node/hust-oom",
     "./node/jwt-full-stack/client",
     "./react",
