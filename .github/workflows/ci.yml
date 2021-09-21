@@ -28,9 +28,12 @@ jobs:
       - name: Installation
         run: |
           yarn
-      - name: Linting
+      - name: Code linting
         run: |
           yarn lint
+      - name: Unit testing
+        run: |
+          yarn test
       - name: Building work
         run: |
           yarn build
