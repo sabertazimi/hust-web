@@ -27,8 +27,8 @@ CMS custom theme for Bootstrap 4 without any explicit selector styles.
 ## React
 
 - [Form component based hooks](https://sabertazimi.github.io/hust-web/react/hooks-form).
-- [Pretty Switch component](https://tazimi.dev/hust-web/react/switch).
-- [Styled Components Demo](https://sabertazimi.github.io/hust-web/react/styled-components-demo).
+- [Pretty switch component](https://tazimi.dev/hust-web/react/switch).
+- [Styled components demo](https://sabertazimi.github.io/hust-web/react/styled-components-demo).
 - [GoBang AI](https://sabertazimi.github.io/hust-web/react/gba).
 - [Minimal react-like library](https://sabertazimi.github.io/hust-web/react/meact).
 - [Minimal redux-like library](https://sabertazimi.github.io/hust-web/react/medux).
