@@ -24163,7 +24163,6 @@ resolve@^2.0.0-next.3:
     react-is: ^17.0.2
     styled-components: ^5.3.1
     typescript: ^4.3.5
-    web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
 
@@ -26318,13 +26317,6 @@ resolve@^2.0.0-next.3:
   dependencies:
     defaults: ^1.0.3
   checksum: 814e9d1ddcc9798f7377ffa448a5a3892232b9275ebb30a41b529607691c0491de47cba426e917a4d08ded3ee7e9ba2f3fe32e62ee3cd9c7d3bafb7754bd553c
-  languageName: node
-  linkType: hard
-
-"web-vitals@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "web-vitals@npm:2.1.0"
-  checksum: 4381dcc999d2e267ab0df53da0e2c29c1152c3017bf6d58269e2f6a091bc10dd311260ecca3c2264af41eff04073c61fdcaf54a04553ad8ebfa617d6ba8d5ea4
   languageName: node
   linkType: hard
 
