@@ -1,6 +1,6 @@
 {
   "name": "jwt-client",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "scripts": {
     "build": "react-scripts build",
     "gen": "graphql-codegen -r dotenv/config --config codegen.yml",
