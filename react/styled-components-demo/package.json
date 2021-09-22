@@ -1,0 +1,71 @@
+{
+  "name": "styled-components-demo",
+  "version": "2.4.0",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-is": "^17.0.2",
+    "styled-components": "^5.3.1",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "build": "react-scripts build && yarn build:post",
+    "build:post": "mkdir -p ../../build/react/styled-components-demo && mv ./build/* ../../build/react/styled-components-demo",
+    "build:profile": "react-scripts build --profile",
+    "start": "react-scripts start",
+    "start:https": "HTTPS=true react-scripts start",
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "test:node": "react-scripts test --env=node"
+  },
+  "eslintConfig": {
+    "extends": [
+      "bod",
+      "bod/jest",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-bod",
+      "stylelint-prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@sabertazimi/react-scripts": "^5.3.10",
+    "@testing-library/dom": "^8.6.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.6.1",
+    "@types/react": "^17.0.18",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-is": "^17.0.2",
+    "@types/styled-components": "^5.1.14",
+    "typescript": "^4.3.5"
+  },
+  "homepage": "https://sabertazimi.github.io/hust-web/react/styled-components-demo"
+}

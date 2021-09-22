@@ -9,7 +9,7 @@
     "lint": "lerna run lint",
     "release": "node scripts/release.js --push",
     "test": "lerna run test",
-    "start": "yarn workspace meact start"
+    "start": "yarn workspace styled-components-demo start"
   },
   "repository": {
     "type": "git",
