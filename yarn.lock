@@ -4799,23 +4799,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*":
+"@types/jest@npm:*, @types/jest@npm:^27.0.1":
   version: 27.0.2
   resolution: "@types/jest@npm:27.0.2"
   dependencies:
     jest-diff: ^27.0.0
     pretty-format: ^27.0.0
   checksum: 814ad5f5d2f277849f47e52906da4b745758e555630fc8cb46a071bde648eefeffb1b35710c530a8cea7fc4ea7c1d813812c120484bf7902ab6c5e473cdd49c9
-  languageName: node
-  linkType: hard
-
-"@types/jest@npm:^27.0.1":
-  version: 27.0.1
-  resolution: "@types/jest@npm:27.0.1"
-  dependencies:
-    jest-diff: ^27.0.0
-    pretty-format: ^27.0.0
-  checksum: 972aaae341b83eb608970c93295282f1f9edc056dc8123635456cbaced822702673118d60279c7b889300e7c9a0726c3674d701115915e2e1967db09542389c2
   languageName: node
   linkType: hard
 
@@ -4888,14 +4878,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=6, @types/node@npm:^16.9.3":
-  version: 16.9.3
-  resolution: "@types/node@npm:16.9.3"
-  checksum: 5e72a0d69d54a1b8df68cb46c43388ebb500c696859e8ba1ef6adff6eadb366257b6211d6490aed13b756dc556938218255db3605e304a7c9ce956c0afe3be2e
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^16.6.1":
+"@types/node@npm:*, @types/node@npm:>=6, @types/node@npm:^16.6.1, @types/node@npm:^16.9.3":
   version: 16.9.6
   resolution: "@types/node@npm:16.9.6"
   checksum: 1c11ff4b58af87ddade05784e90bb5a2fe01f461ce489fdb1428d89e709695a26b0dcbac0520305911f5e4017561416747e544f1b9ec36649ccbfad6ffff4a0a
@@ -4988,18 +4971,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^17.0.21":
-  version: 17.0.21
-  resolution: "@types/react@npm:17.0.21"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: a590bd2e50e4ec0b1957388e198cf248bac3051e525e036901dea10f7d12203bf1c58350aa899e66494cbf8a60ee56402522273866c29748217f72552bb27d04
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^17.0.18":
+"@types/react@npm:*, @types/react@npm:^17.0.18, @types/react@npm:^17.0.21":
   version: 17.0.24
   resolution: "@types/react@npm:17.0.24"
   dependencies:
@@ -17910,14 +17882,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.1":
-  version: 2.6.2
-  resolution: "node-fetch@npm:2.6.2"
-  checksum: de367eae1dfbc0e12283c1cf92256ea7fba7eac8655e2e51ebb217727162396fc6cf24689ef9fc6accf075e3991e2ffaa061f7cfaa958215329649b2297ff06d
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:^2.6.2":
+"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.2":
   version: 2.6.4
   resolution: "node-fetch@npm:2.6.4"
   dependencies:
@@ -24062,7 +24027,7 @@ resolve@^2.0.0-next.3:
     react-icons: ^4.2.0
     react-is: ^17.0.2
     styled-components: ^5.3.1
-    typescript: ^4.3.5
+    typescript: ^4.4.3
   languageName: unknown
   linkType: soft
 
@@ -25357,7 +25322,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"typescript@^4.3.5, typescript@^4.4.3":
+typescript@^4.4.3:
   version: 4.4.3
   resolution: "typescript@npm:4.4.3"
   bin:
@@ -25367,7 +25332,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
   version: 4.4.3
   resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"
   bin:
