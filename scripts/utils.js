@@ -1,5 +1,5 @@
-const chalk = require('chalk');
 const cp = require('child_process');
+const chalk = require('chalk');
 const consola = require('consola');
 
 const log = log => {

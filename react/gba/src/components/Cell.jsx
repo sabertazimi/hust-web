@@ -1,20 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  CELL_SIZE,
-  BLACK,
-  WHITE,
-} from '../constants';
+import { CELL_SIZE, BLACK, WHITE } from '../constants';
 
 import './Cell.scss';
 
-const Cell = (props) => {
-  const {
-    row,
-    col,
-    val,
-  } = props;
+const Cell = props => {
+  const { row, col, val } = props;
 
   const styles = {
     width: CELL_SIZE,

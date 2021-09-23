@@ -1,13 +1,6 @@
-import {
-  renderCheckBoxes,
-  renderTable,
-} from './components';
+import { renderCheckBoxes, renderTable } from './components';
 
-import {
-  $regionFilter,
-  $productFilter,
-  $table,
-} from './containers';
+import { $regionFilter, $productFilter, $table } from './containers';
 
 import store from './state/store';
 

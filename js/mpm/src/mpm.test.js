@@ -49,6 +49,7 @@ describe('mpm.getPinnedReference', () => {
         reference: '~15.3.0',
       })
       .catch(error => {
+        // eslint-disable-next-line jest/no-conditional-expect
         expect(error).toEqual(new Error('Couldn\'t fetch package "reacttt"'));
       });
   });
@@ -61,6 +62,7 @@ describe('mpm.getPinnedReference', () => {
         reference: '~99.0.0',
       })
       .catch(error => {
+        // eslint-disable-next-line jest/no-conditional-expect
         expect(error).toEqual(
           new Error(
             'Couldn\'t find a version matching "~99.0.0" for package  "react"'
@@ -105,6 +107,7 @@ describe('mpm.fetchPackage', () => {
         reference: '99.0.0',
       })
       .catch(error => {
+        // eslint-disable-next-line jest/no-conditional-expect
         expect(error instanceof Error).toBe(true);
       });
   });

@@ -1,14 +1,6 @@
-import {
-  EMPTY,
-  BLACK,
-  DEATH,
-  ROWS,
-  COLS,
-} from '../constants';
+import { EMPTY, BLACK, DEATH, ROWS, COLS } from '../constants';
 
-import {
-  BoardVisitor,
-} from '../utils';
+import { BoardVisitor } from '../utils';
 
 import SBTS from './sbts';
 
@@ -65,9 +57,7 @@ const StateMachine = {
   },
 
   isDeadGame(state) {
-    const {
-      board,
-    } = state;
+    const { board } = state;
 
     for (let i = 1; i < ROWS; i += 1) {
       for (let j = 1; j < COLS; j += 1) {
@@ -81,9 +71,7 @@ const StateMachine = {
   },
 
   checkWinnerWithoutPlay(state) {
-    const {
-      board,
-    } = state;
+    const { board } = state;
 
     for (let i = 1; i < ROWS; i += 1) {
       for (let j = 1; j < COLS; j += 1) {
@@ -118,30 +106,32 @@ const StateMachine = {
     let axisFlag = 0;
     let axisCount = 0;
 
-    if (BoardVisitor.countOnDirections(state, play, directions, 4,
-      (curstate, playy, xdir, ydir, step) => {
-        const {
-          board,
-          player,
-        } = curstate;
-        const {
-          row,
-          col,
-        } = playy;
+    if (
+      BoardVisitor.countOnDirections(
+        state,
+        play,
+        directions,
+        4,
+        (curstate, playy, xdir, ydir, step) => {
+          const { board, player } = curstate;
+          const { row, col } = playy;
 
-        return board[row + ydir * step][col + xdir * step] === player;
-      }, (_, __, ___, ____, curCount) => {
-        if (axisFlag === 0) {
-          axisFlag = 1;
-          axisCount += curCount;
-          return false;
+          return board[row + ydir * step][col + xdir * step] === player;
+        },
+        (_, __, ___, ____, curCount) => {
+          if (axisFlag === 0) {
+            axisFlag = 1;
+            axisCount += curCount;
+            return false;
+          }
+
+          const count = axisCount + curCount;
+          axisFlag = 0;
+          axisCount = 0;
+          return count >= 4;
         }
-
-        const count = axisCount + curCount;
-        axisFlag = 0;
-        axisCount = 0;
-        return count >= 4;
-      })) {
+      )
+    ) {
       return state.player;
     }
 

@@ -7,9 +7,9 @@ function getFileName(entryName, virtualPath) {
   entryName = entryName.replace(/^\/+/, '');
 
   for (let i = 0; i < virtualPath; ++i) {
-    let index = entryName.indexOf('/');
+    const index = entryName.indexOf('/');
 
-    if (index == -1) {
+    if (index === -1) {
       return null;
     }
 
@@ -23,7 +23,7 @@ function getFileName(entryName, virtualPath) {
  * @param  {Buffer} buffer archive buffer
  */
 async function readFileFromArchive(fileName, buffer) {
-  return new Promise((resolve /*, rejects*/) => {
+  return new Promise((resolve /*, rejects */) => {
     const extractor = tar.extract();
 
     extractor.on('entry', (header, stream) => {
@@ -52,7 +52,7 @@ async function readPackageJsonFromArchive(packageBuffer) {
 }
 
 async function extractArchiveTo(packageBuffer, target, { virtualPath }) {
-  return new Promise((resolve /*, rejects*/) => {
+  return new Promise((resolve /*, rejects */) => {
     const map = header => {
       // header.name = getFileName(header.name, virtualPath) || header.name;
       header.name = getFileName(header.name, virtualPath);

@@ -1,10 +1,5 @@
-import {
-  SHOW_ALL,
-  FILTER_ALL,
-  FILTER_DATA,
-} from './constants';
-
 import sourceData from '../data';
+import { SHOW_ALL, FILTER_ALL, FILTER_DATA } from './constants';
 
 const initialFilters = {
   region: ['north', 'south', 'east'],
@@ -17,13 +12,12 @@ const initialState = {
   data: sourceData,
 };
 
-const getDataWithFilters = (data, filters) => (
-  data.filter((item) => (
+const getDataWithFilters = (data, filters) =>
+  data.filter(item =>
     Object.keys(filters)
-      .map((key) => filters[key].includes(item[key]))
+      .map(key => filters[key].includes(item[key]))
       .every(Boolean)
-  ))
-);
+  );
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

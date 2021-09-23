@@ -1,8 +1,4 @@
-import {
-  STAFF_UNEMPLOYED,
-  STAFF_FREE,
-  STAFF_BUSY,
-} from './constants';
+import { STAFF_UNEMPLOYED, STAFF_FREE, STAFF_BUSY } from './constants';
 
 export default class Staff {
   constructor(name = '', salary = 0) {
@@ -22,11 +18,11 @@ export default class Staff {
   }
 
   isFree() {
-    return (this.status === STAFF_FREE);
+    return this.status === STAFF_FREE;
   }
 
   isBusy() {
-    return (this.status === STAFF_BUSY);
+    return this.status === STAFF_BUSY;
   }
 
   setFree() {

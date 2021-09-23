@@ -66,9 +66,7 @@ class MCTS {
     return childNode;
   }
 
-  /* eslint-disable */
   simulate(node) {
-    /* eslint-enable */
     let { state } = node;
     let winner = SM.checkWinner(state, node.play);
 
@@ -93,7 +91,6 @@ class MCTS {
     return winner;
   }
 
-  /* eslint-disable */
   backpropagate(node, winner) {
     while (node !== null) {
       node.nPlays += 1;
@@ -107,7 +104,6 @@ class MCTS {
       node = node.parent;
     }
   }
-  /* eslint-enable */
 
   runSearch(state, timeout = 3) {
     this.makeNode(state);
@@ -171,7 +167,7 @@ class MCTS {
       children: [],
     };
 
-    node.children.forEach((child) => {
+    node.children.forEach(child => {
       if (child.node === null) {
         stats.children.push({
           play: child.play,

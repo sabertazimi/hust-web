@@ -1,21 +1,10 @@
-import {
-  STAFF_WAITER,
-  STAFF_COOK,
-} from './constants';
-
-import {
-  $log,
-} from '../utils';
+import { $log } from '../utils';
+import { STAFF_WAITER, STAFF_COOK } from './constants';
 
 import Menu from './menu';
 
 export default class Restaurant {
-  constructor({
-    cash = 0,
-    seats = 0,
-    staffs = [],
-    customers = [],
-  }) {
+  constructor({ cash = 0, seats = 0, staffs = [], customers = [] }) {
     this.cash = cash;
     this.seats = seats;
     this.staffs = staffs;
@@ -34,10 +23,11 @@ export default class Restaurant {
   }
 
   getFreeStaff(type) {
-    return this.staffs.filter((staff) => (
-      // staff.getType() === type && staff.isFree()
-      staff.getType() === type
-    ));
+    return this.staffs.filter(
+      staff =>
+        // staff.getType() === type && staff.isFree()
+        staff.getType() === type
+    );
   }
 
   // @TODO: add seatID to each customer
@@ -56,17 +46,29 @@ export default class Restaurant {
 
         $log(`serve for customer '${customer.name}' ...`);
 
-        return waiter.work(customer)
+        return waiter
+          .work(customer)
           .then(([order, _waiter]) => {
-            $log(`customer '${customer.name}' ordered (${order.map((food) => food.name).join(', ')}) !`);
+            $log(
+              `customer '${customer.name}' ordered (${order
+                .map(food => food.name)
+                .join(', ')}) !`
+            );
             return cook.work(order, _waiter);
           })
           .then(([order, leftOrder]) => {
-            const eatenOrder = order.filter((food) => !leftOrder.includes(food));
-            const sales = eatenOrder.reduce((sale, food) => (sale + food.price), 0);
+            const eatenOrder = order.filter(food => !leftOrder.includes(food));
+            const sales = eatenOrder.reduce(
+              (sale, food) => sale + food.price,
+              0
+            );
             this.cash += sales;
 
-            $log(`customer '${customer.name}' eaten (${eatenOrder.map((food) => food.name).join(', ')}) !`);
+            $log(
+              `customer '${customer.name}' eaten (${eatenOrder
+                .map(food => food.name)
+                .join(', ')}) !`
+            );
             $log(`customer '${customer.name}' paid $${sales} !`);
             $log(`restaurant cash is $${this.cash} !`);
           });
@@ -92,8 +94,7 @@ export default class Restaurant {
   }
 
   hire(staff) {
-    if (this.staffs.indexOf(staff) === -1
-      && staff.isUnemployed()) {
+    if (!this.staffs.includes(staff) && staff.isUnemployed()) {
       staff.enter(this);
       this.staffs.push(staff);
     }

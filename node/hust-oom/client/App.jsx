@@ -1,15 +1,8 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import {
-  Form,
-  Dashboard,
-} from './components';
+import { Form, Dashboard } from './components';
 
 import './index.scss';
 

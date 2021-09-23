@@ -2,10 +2,9 @@ import React from 'react';
 
 import { BLACK, WHITE, DEATH, ROWS, COLS } from '../constants';
 
+import Game from '../core';
 import Grid from './Grid';
 import Cell from './Cell';
-
-import Game from '../core';
 
 import './GoBang.scss';
 

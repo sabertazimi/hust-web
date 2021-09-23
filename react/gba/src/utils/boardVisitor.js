@@ -1,26 +1,20 @@
-import {
-  ROWS,
-  COLS,
-} from '../constants';
+import { ROWS, COLS } from '../constants';
 
 const BoardVisitor = {
   /**
    * @param {object} currentState {board, player}
    */
   countOnDirection: (currentState, play, xdir, ydir, range, cb, ...args) => {
-    const {
-      row,
-      col,
-    } = play;
+    const { row, col } = play;
 
     let count = 0;
 
     for (let i = 1; i <= range; i += 1) {
-      if (xdir !== 0 && ((col + xdir * i < 0) || col + xdir * i >= COLS)) {
+      if (xdir !== 0 && (col + xdir * i < 0 || col + xdir * i >= COLS)) {
         break;
       }
 
-      if (ydir !== 0 && ((row + ydir * i < 0) || row + ydir * i >= ROWS)) {
+      if (ydir !== 0 && (row + ydir * i < 0 || row + ydir * i >= ROWS)) {
         break;
       }
 
@@ -41,8 +35,11 @@ const BoardVisitor = {
   countOnDirections: function countOnDirections(
     currentState,
     play,
-    directions, range,
-    cb1, cb2, ...args
+    directions,
+    range,
+    cb1,
+    cb2,
+    ...args
   ) {
     let count = 0;
 
@@ -52,7 +49,15 @@ const BoardVisitor = {
       const xdir = axis[0];
       const ydir = axis[1];
 
-      axisCount += this.countOnDirection(currentState, play, xdir, ydir, range, cb1, ...args);
+      axisCount += this.countOnDirection(
+        currentState,
+        play,
+        xdir,
+        ydir,
+        range,
+        cb1,
+        ...args
+      );
 
       if (cb2 && cb2(currentState, play, xdir, ydir, axisCount, ...args)) {
         count += 1;

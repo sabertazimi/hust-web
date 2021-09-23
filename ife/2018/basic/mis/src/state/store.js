@@ -1,15 +1,15 @@
 import reducer from './reducer';
 
-const createStore = (_reducer) => {
+const createStore = _reducer => {
   // clousre for storing global state
   let state;
 
   // subscribe to `dispatch` event
   const subscribers = [];
 
-  const coreDispatch = (action) => {
+  const coreDispatch = action => {
     state = _reducer(state, action);
-    subscribers.forEach((handler) => handler());
+    subscribers.forEach(handler => handler());
   };
 
   const getState = () => state;
@@ -17,8 +17,8 @@ const createStore = (_reducer) => {
   const store = {
     dispatch: coreDispatch,
     getState,
-    subscribe: (handler) => {
-      if (subscribers.indexOf(handler) === -1) {
+    subscribe: handler => {
+      if (!subscribers.includes(handler)) {
         subscribers.push(handler);
       }
 

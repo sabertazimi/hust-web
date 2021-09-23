@@ -2,16 +2,9 @@
  * Score Board optimization
  */
 
-import {
-  EMPTY,
-  ROWS,
-  COLS,
-  Score,
-} from '../constants';
+import { EMPTY, ROWS, COLS, Score } from '../constants';
 
-import {
-  BoardVisitor,
-} from '../utils';
+import { BoardVisitor } from '../utils';
 
 const SBTS = {
   /**
@@ -45,14 +38,8 @@ const SBTS = {
     let axisFlag = 0;
 
     const humanCB1 = (state, play, xdir, ydir, step) => {
-      const {
-        board,
-        player,
-      } = state;
-      const {
-        row,
-        col,
-      } = play;
+      const { board, player } = state;
+      const { row, col } = play;
 
       const currentplayer = board[row + ydir * step][col + xdir * step];
       if (currentplayer === -player) {
@@ -73,10 +60,7 @@ const SBTS = {
         return true;
       }
 
-      const {
-        row,
-        col,
-      } = play;
+      const { row, col } = play;
 
       switch (humanCount) {
         case 1:
@@ -111,14 +95,8 @@ const SBTS = {
     };
 
     const aiCB1 = (state, play, xdir, ydir, step) => {
-      const {
-        board,
-        player,
-      } = state;
-      const {
-        row,
-        col,
-      } = play;
+      const { board, player } = state;
+      const { row, col } = play;
 
       const currentplayer = board[row + ydir * step][col + xdir * step];
 
@@ -141,10 +119,7 @@ const SBTS = {
         return true;
       }
 
-      const {
-        row,
-        col,
-      } = play;
+      const { row, col } = play;
 
       switch (aiCount) {
         case 0:
@@ -184,14 +159,28 @@ const SBTS = {
     for (let i = 0; i < ROWS; i += 1) {
       for (let j = 0; j < COLS; j += 1) {
         if (currentState.board[i][j] === EMPTY) {
-          BoardVisitor.countOnDirections(currentState, {
-            row: i,
-            col: j,
-          }, directions, 4, humanCB1, humanCB2);
-          BoardVisitor.countOnDirections(currentState, {
-            row: i,
-            col: j,
-          }, directions, 4, aiCB1, aiCB2);
+          BoardVisitor.countOnDirections(
+            currentState,
+            {
+              row: i,
+              col: j,
+            },
+            directions,
+            4,
+            humanCB1,
+            humanCB2
+          );
+          BoardVisitor.countOnDirections(
+            currentState,
+            {
+              row: i,
+              col: j,
+            },
+            directions,
+            4,
+            aiCB1,
+            aiCB2
+          );
         }
       }
     }

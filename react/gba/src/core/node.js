@@ -44,7 +44,7 @@ class Node {
   allPlays() {
     const ret = [];
 
-    this.children.forEach((child) => ret.push(child.play));
+    this.children.forEach(child => ret.push(child.play));
 
     return ret;
   }
@@ -52,7 +52,7 @@ class Node {
   unexpandedPlays() {
     const ret = [];
 
-    this.children.forEach((child) => {
+    this.children.forEach(child => {
       if (child.node === null) {
         ret.push(child.play);
       }
@@ -62,13 +62,11 @@ class Node {
   }
 
   isFullyExpanded() {
-    /* eslint-disable */
-    for (let child of this.children.values()) {
+    for (const child of this.children.values()) {
       if (child.node === null) {
         return false;
       }
     }
-    /* eslint-enable */
 
     return true;
   }

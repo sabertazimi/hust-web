@@ -1,8 +1,4 @@
-import {
-  SHOW_ALL,
-  FILTER_ALL,
-  FILTER_DATA,
-} from './constants';
+import { SHOW_ALL, FILTER_ALL, FILTER_DATA } from './constants';
 
 const createAction = (type, ...args) => {
   switch (type) {

@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  CELL_SIZE,
-} from '../constants';
+import { CELL_SIZE } from '../constants';
 
 import './Grid.scss';
 
-const Grid = ({
-  rows,
-  cols,
-}) => {
+const Grid = ({ rows, cols }) => {
   const cellNodes = [];
 
   for (let i = 0; i < rows - 1; i += 1) {
@@ -25,18 +20,29 @@ const Grid = ({
       if (i === Math.floor(rows / 2 - 1) && j === Math.floor(cols / 2 - 1)) {
         styles.borderRightWidth = 3;
         styles.borderBottomWidth = 3;
-      } else if (i === Math.floor(rows / 2 - 1) && j === Math.floor(cols / 2 - 1) + 1) {
+      } else if (
+        i === Math.floor(rows / 2 - 1) &&
+        j === Math.floor(cols / 2 - 1) + 1
+      ) {
         styles.borderLeftWidth = 3;
         styles.borderBottomWidth = 3;
-      } else if (i === Math.floor(rows / 2 - 1) + 1 && j === Math.floor(cols / 2 - 1)) {
+      } else if (
+        i === Math.floor(rows / 2 - 1) + 1 &&
+        j === Math.floor(cols / 2 - 1)
+      ) {
         styles.borderRightWidth = 3;
         styles.borderTopWidth = 3;
-      } else if (i === Math.floor(rows / 2 - 1) + 1 && j === Math.floor(cols / 2 - 1) + 1) {
+      } else if (
+        i === Math.floor(rows / 2 - 1) + 1 &&
+        j === Math.floor(cols / 2 - 1) + 1
+      ) {
         styles.borderLeftWidth = 3;
         styles.borderTopWidth = 3;
       }
 
-      cellNodes.push(<div key={i * rows + j} className="cell" style={styles} />);
+      cellNodes.push(
+        <div key={i * rows + j} className="cell" style={styles} />
+      );
     }
   }
 

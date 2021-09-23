@@ -30,6 +30,6 @@ export default class Emitter {
       return;
     }
 
-    this.channels[channel].forEach((receiver) => receiver(message));
+    this.channels[channel].forEach(receiver => receiver(message));
   }
 }

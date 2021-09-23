@@ -1,9 +1,7 @@
-import {
-  AIMode,
-} from '../constants';
+import { AIMode } from '../constants';
 
-import MCTS from './mcts';
 import config from '../ai.json';
+import MCTS from './mcts';
 
 class AI {
   constructor(_config) {

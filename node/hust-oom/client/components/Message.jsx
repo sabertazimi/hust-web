@@ -57,10 +57,6 @@ import React from 'react';
 //   }
 // }
 
-const Message = () => (
-  <div>
-    Hello Chat!
-  </div>
-);
+const Message = () => <div>Hello Chat!</div>;
 
 export default Message;

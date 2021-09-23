@@ -1,9 +1,4 @@
-import {
-  LOGIN,
-  ADD_FRIEND,
-  DELETE_FRIEND,
-  SEND_MESSAGE,
-} from './types';
+import { LOGIN, ADD_FRIEND, DELETE_FRIEND, SEND_MESSAGE } from './types';
 
 const initialState = {
   username: '',

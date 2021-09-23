@@ -52,7 +52,7 @@ app.post('/signup', (req, res) => {
       password,
       friends: ['sabertazimi'],
     });
-    dbData.users = dbData.users.map((user) => {
+    dbData.users = dbData.users.map(user => {
       const { username: _username, friends: _friends } = user;
 
       if (_username === 'sabertazimi') {
@@ -126,7 +126,7 @@ app.post('/login', (req, res) => {
   }
 });
 
-io.on('connection', (socket) => {
+io.on('connection', socket => {
   const { username } = socket.handshake.query;
 
   sockets.push({
@@ -134,7 +134,7 @@ io.on('connection', (socket) => {
     channel: socket,
   });
 
-  socket.on(username, (chatMessage) => {
+  socket.on(username, chatMessage => {
     const { to } = JSON.parse(chatMessage);
 
     sockets.forEach(({ name, channel }) => {

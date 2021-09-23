@@ -1,11 +1,5 @@
-import {
-  STAFF_COOK,
-} from './constants';
-
-import {
-  $log,
-  sleep,
-} from '../utils';
+import { $log, sleep } from '../utils';
+import { STAFF_COOK } from './constants';
 
 import Staff from './staff';
 
@@ -22,11 +16,13 @@ export default class Cook extends Staff {
    * @memberof Waiter
    */
   work(order, waiter) {
-    return order.reduce((promise, food, index, array) => (
-      promise.then(() => {
-        $log(`cook '${this.name}' is cooking (${food.name}) (${food.time} s) ...`);
-        return (
-          sleep(food.time)
+    return order.reduce(
+      (promise, food, index, array) =>
+        promise.then(() => {
+          $log(
+            `cook '${this.name}' is cooking (${food.name}) (${food.time} s) ...`
+          );
+          return sleep(food.time)
             .then(() => {
               $log(`cook '${this.name}' cooked (${food.name}) !`);
 
@@ -38,9 +34,9 @@ export default class Cook extends Staff {
               waiter.work([food]);
               return [];
             })
-            .then(([leftOrder]) => [order, leftOrder])
-        );
-      })
-    ), Promise.resolve());
+            .then(([leftOrder]) => [order, leftOrder]);
+        }),
+      Promise.resolve()
+    );
   }
 }

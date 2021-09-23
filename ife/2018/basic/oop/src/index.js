@@ -1,13 +1,6 @@
-import {
-  Restaurant,
-  Waiter,
-  Cook,
-  Customer,
-} from './components';
+import { Restaurant, Waiter, Cook, Customer } from './components';
 
-import {
-  sleep,
-} from './utils';
+import { sleep } from './utils';
 
 import './index.css';
 

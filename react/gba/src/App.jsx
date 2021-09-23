@@ -1,11 +1,7 @@
 import React from 'react';
 
-import {
-  GoBang,
-} from './components';
+import { GoBang } from './components';
 
-const App = () => (
-  <GoBang />
-);
+const App = () => <GoBang />;
 
 export default App;
