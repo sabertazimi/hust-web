@@ -64,7 +64,7 @@
     "@graphql-codegen/typescript-operations": "^2.1.4",
     "@graphql-codegen/typescript-react-apollo": "^3.1.4",
     "@sabertazimi/react-scripts": "^5.3.10",
-    "@types/jest": "^27.0.1",
+    "@types/jest": "^27.0.2",
     "@types/node": "^16.9.3",
     "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.9",
