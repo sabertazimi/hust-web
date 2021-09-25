@@ -4340,34 +4340,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rushstack/eslint-patch@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "@rushstack/eslint-patch@npm:1.0.6"
-  checksum: fbecc15d7e95186622514d86f566082f1f6d04c30d93830bffe154fd699780f32120bbbce2efb919658696af01c58f0e02e580941ede8eee8cc9b007637b639c
+"@rushstack/eslint-patch@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "@rushstack/eslint-patch@npm:1.0.7"
+  checksum: 2b013723a2ea9c2f2ebbdef5f085d70ad5cf4a88c6d429f949fca05939c93b49a6d84c9582cd03b01e27956eedfa903ed7b92741f588cd043ab46ef134d6e719
   languageName: node
   linkType: hard
 
-"@sabertazimi/react-scripts@npm:^5.3.10":
-  version: 5.3.10
-  resolution: "@sabertazimi/react-scripts@npm:5.3.10"
+"@sabertazimi/react-scripts@npm:^5.3.11":
+  version: 5.3.11
+  resolution: "@sabertazimi/react-scripts@npm:5.3.11"
   dependencies:
     "@babel/core": ^7.15.5
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.1
     "@svgr/webpack": ^5.5.0
-    babel-jest: ^27.2.0
+    babel-jest: ^27.2.2
     babel-loader: ^8.2.2
     babel-plugin-named-asset-import: ^0.3.7
     babel-preset-react-app: ^11.0.0-next.81
     bfj: ^7.0.2
-    browserslist: ^4.17.0
+    browserslist: ^4.17.1
     camelcase: ^6.2.0
     case-sensitive-paths-webpack-plugin: ^2.4.0
     css-loader: ^6.3.0
     css-minimizer-webpack-plugin: ^3.0.2
-    dotenv: ^9.0.2
+    dotenv: ^10.0.0
     dotenv-expand: ^5.1.0
     eslint: ^7.32.0
-    eslint-config-bod: ^5.3.10
+    eslint-config-bod: ^5.3.11
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
     eslint-webpack-plugin: ^3.0.1
@@ -4376,12 +4376,11 @@ __metadata:
     fsevents: ^2.3.2
     html-webpack-plugin: ^5.3.2
     identity-obj-proxy: ^3.0.0
-    jest: ^27.2.0
-    jest-circus: ^27.2.0
-    jest-resolve: ^27.2.0
+    jest: ^27.2.2
+    jest-resolve: ^27.2.2
     jest-watch-typeahead: ^0.6.4
     mini-css-extract-plugin: ^2.3.0
-    postcss: ^8.3.6
+    postcss: ^8.3.8
     postcss-flexbugs-fixes: ^5.0.2
     postcss-loader: ^6.1.1
     postcss-normalize: ^10.0.1
@@ -4396,15 +4395,16 @@ __metadata:
     sass-loader: ^12.1.0
     semver: ^7.3.5
     source-map-loader: ^3.0.0
-    style-loader: ^3.2.1
+    style-loader: ^3.3.0
     stylelint: ^13.13.1
-    stylelint-config-bod: ^5.3.10
+    stylelint-config-bod: ^5.3.11
     stylelint-config-prettier: ^8.0.2
     stylelint-prettier: ^1.2.0
     stylelint-webpack-plugin: ^3.0.1
-    webpack: ^5.53.0
+    terser-webpack-plugin: ^5.2.4
+    webpack: ^5.54.0
     webpack-bundle-analyzer: ^4.4.2
-    webpack-dev-server: ^4.2.1
+    webpack-dev-server: ^4.3.0
     webpack-manifest-plugin: ^4.0.2
     webpackbar: ^5.0.0-3
     workbox-webpack-plugin: ^6.3.0
@@ -4419,7 +4419,7 @@ __metadata:
       optional: true
   bin:
     react-scripts: bin/react-scripts.js
-  checksum: a3c5ec013623cb0e041e5af1f1802a29ab17d26520cc091cf9a27ee381ab28ffae70ceb38ab1bf7385e0c8184747a4cbb25ac8436a8f3f4cc57e555e72d6f6ca
+  checksum: 1a42ecbbf15eaa123401c613e1d9c480569c4c53a2e834e9bac47a01811e72cf66383a638336d4c12412de67396026ebc69f5320b249256880b2fedbdce0a097
   languageName: node
   linkType: hard
 
@@ -5202,7 +5202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^4.31.1, @typescript-eslint/eslint-plugin@npm:^4.31.2":
+"@typescript-eslint/eslint-plugin@npm:^4.31.2":
   version: 4.31.2
   resolution: "@typescript-eslint/eslint-plugin@npm:4.31.2"
   dependencies:
@@ -5239,7 +5239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^4.31.1, @typescript-eslint/parser@npm:^4.31.2":
+"@typescript-eslint/parser@npm:^4.31.2":
   version: 4.31.2
   resolution: "@typescript-eslint/parser@npm:4.31.2"
   dependencies:
@@ -6589,7 +6589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-jest@npm:^27.2.0, babel-jest@npm:^27.2.2":
+"babel-jest@npm:^27.2.2":
   version: 27.2.2
   resolution: "babel-jest@npm:27.2.2"
   dependencies:
@@ -10195,13 +10195,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^9.0.2":
-  version: 9.0.2
-  resolution: "dotenv@npm:9.0.2"
-  checksum: 6b7980330a653089bc9b83362248547791151ee74f9881eb223ac2f4d641b174b708f77315d88708b551d45b4177afd3ba71bca4832f8807e003f71c2a0f83e7
-  languageName: node
-  linkType: hard
-
 "download@npm:^6.2.2":
   version: 6.2.5
   resolution: "download@npm:6.2.5"
@@ -10516,7 +10509,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-abstract@npm:^1.17.2, es-abstract@npm:^1.18.0-next.1, es-abstract@npm:^1.18.0-next.2, es-abstract@npm:^1.18.2":
+"es-abstract@npm:^1.17.2, es-abstract@npm:^1.18.0-next.1, es-abstract@npm:^1.18.0-next.2, es-abstract@npm:^1.18.1, es-abstract@npm:^1.18.2":
   version: 1.18.6
   resolution: "es-abstract@npm:1.18.6"
   dependencies:
@@ -10665,27 +10658,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-bod@npm:^5.3.10":
-  version: 5.3.10
-  resolution: "eslint-config-bod@npm:5.3.10"
+"eslint-config-bod@npm:^5.3.10, eslint-config-bod@npm:^5.3.11":
+  version: 5.3.11
+  resolution: "eslint-config-bod@npm:5.3.11"
   dependencies:
     "@babel/core": 7.15.5
     "@babel/eslint-parser": ^7.15.7
-    "@rushstack/eslint-patch": ^1.0.6
-    "@typescript-eslint/eslint-plugin": ^4.31.1
-    "@typescript-eslint/parser": ^4.31.1
+    "@rushstack/eslint-patch": ^1.0.7
+    "@typescript-eslint/eslint-plugin": ^4.31.2
+    "@typescript-eslint/parser": ^4.31.2
     babel-preset-react-app: 11.0.0-next.81
     confusing-browser-globals: 2.0.0-next.75
-    eslint-plugin-flowtype: ^6.0.1
+    eslint-plugin-flowtype: ^6.1.0
     eslint-plugin-import: ^2.24.2
     eslint-plugin-jest: ^24.4.2
     eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-react: ^7.25.2
+    eslint-plugin-react: ^7.26.0
     eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-testing-library: ^4.12.2
+    eslint-plugin-testing-library: ^4.12.4
   peerDependencies:
     eslint: ^7.30.0
-  checksum: d47e1dfb054198bc98f31af307d7b6a3dfa073dfa982948952d429b80eb5c88e7e0dab5d9d5fd791c4f01b7f949c87337eab26044d6a7a461bfd9e977831d427
+  checksum: 6476e38d1dd13f254ab876299ab99523ba0e06d03b065c8ccdf10031a584b978b93afb738c8599c17b6a8775f6ecdf43f829424b92c67d9b67a02e009de43b7d
   languageName: node
   linkType: hard
 
@@ -10756,15 +10749,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-flowtype@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "eslint-plugin-flowtype@npm:6.0.1"
+"eslint-plugin-flowtype@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "eslint-plugin-flowtype@npm:6.1.0"
   dependencies:
     lodash: ^4.17.21
     string-natural-compare: ^3.0.1
   peerDependencies:
     eslint: ^7.32.0
-  checksum: 0b3c1a5c6531cbb856d1e4fdc31d561ec6234032536b3f6c64c29e6d1c54c29e5a369476273556fbb3a6792c81127816fe5dd18e310a0863d2670853eb1daea7
+  checksum: a3c865273150d6d37243ec4c70e350bf52027df3c11c22af387b78ad3a45ede32eeeaa2b07d5545a7fab6f1e75321282be0337f9561000f25dc089587508abe4
   languageName: node
   linkType: hard
 
@@ -10900,37 +10893,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.25.2":
-  version: 7.25.2
-  resolution: "eslint-plugin-react@npm:7.25.2"
+"eslint-plugin-react@npm:^7.26.0":
+  version: 7.26.0
+  resolution: "eslint-plugin-react@npm:7.26.0"
   dependencies:
     array-includes: ^3.1.3
     array.prototype.flatmap: ^1.2.4
     doctrine: ^2.1.0
     estraverse: ^5.2.0
-    has: ^1.0.3
     jsx-ast-utils: ^2.4.1 || ^3.0.0
     minimatch: ^3.0.4
     object.entries: ^1.1.4
     object.fromentries: ^2.0.4
+    object.hasown: ^1.0.0
     object.values: ^1.1.4
     prop-types: ^15.7.2
     resolve: ^2.0.0-next.3
+    semver: ^6.3.0
     string.prototype.matchall: ^4.0.5
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7
-  checksum: 79ae67ace68e3a98ebc2f133c995a470e8d84a86c5d0ecf99ee46a9697dbb8f3a76ee351c49ecdbab4acf729392b39df9562116f63cb929247dd273d50d22662
+  checksum: 363c2ed43ae0c6457c6ad1e7e7c561892189d3e1253a7d5e369413053e9629129c533d3512d9992087f95a3ac71e464d552d63e8c711f90d83c6e8db543587df
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^4.12.2":
-  version: 4.12.2
-  resolution: "eslint-plugin-testing-library@npm:4.12.2"
+"eslint-plugin-testing-library@npm:^4.12.4":
+  version: 4.12.4
+  resolution: "eslint-plugin-testing-library@npm:4.12.4"
   dependencies:
     "@typescript-eslint/experimental-utils": ^4.30.0
   peerDependencies:
     eslint: ^7.5.0
-  checksum: 81cf490d124ba49aba00d0a8ab319b6c3289afa6e3cc2a0b53b9f764aeeecf4f52cee4a85171bb017befda826364ec1a7e20dd08fb7799f26db0e08cb55f9225
+  checksum: 8b4c65b22dd3c2bdcd51db590b0c931b9ae8f6a23b4008047e78fa3b9dde30bfc58e3539a9788a07183d23cbf40ec49f892af9ba0fc4f0d850c0eb81560627b7
   languageName: node
   linkType: hard
 
@@ -15303,7 +15297,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jest-circus@npm:^27.2.0, jest-circus@npm:^27.2.2":
+"jest-circus@npm:^27.2.2":
   version: 27.2.2
   resolution: "jest-circus@npm:27.2.2"
   dependencies:
@@ -15590,7 +15584,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jest-resolve@npm:27.2.2, jest-resolve@npm:^27.2.0, jest-resolve@npm:^27.2.2":
+"jest-resolve@npm:27.2.2, jest-resolve@npm:^27.2.2":
   version: 27.2.2
   resolution: "jest-resolve@npm:27.2.2"
   dependencies:
@@ -15797,7 +15791,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jest@npm:^27.2.0, jest@npm:^27.2.2":
+"jest@npm:^27.2.2":
   version: 27.2.2
   resolution: "jest@npm:27.2.2"
   dependencies:
@@ -16181,7 +16175,7 @@ fsevents@^1.2.7:
     "@graphql-codegen/typescript": ^2.2.2
     "@graphql-codegen/typescript-operations": ^2.1.4
     "@graphql-codegen/typescript-react-apollo": ^3.1.4
-    "@sabertazimi/react-scripts": ^5.3.10
+    "@sabertazimi/react-scripts": ^5.3.11
     "@types/jest": ^27.0.2
     "@types/node": ^16.9.3
     "@types/react": ^17.0.24
@@ -18674,6 +18668,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"object.hasown@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "object.hasown@npm:1.0.0"
+  dependencies:
+    define-properties: ^1.1.3
+    es-abstract: ^1.18.1
+  checksum: 77c9c3dd744c811ba6e0a687d2dc5c34f4fb64b311cd0e042e9c26d1c87986c1aa5859aa0a552f3b6054abea738d962c0ced2752f859588365f08df3c9e1bd4a
+  languageName: node
+  linkType: hard
+
 "object.map@npm:^1.0.0":
   version: 1.0.1
   resolution: "object.map@npm:1.0.1"
@@ -20683,7 +20687,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.15, postcss@npm:^8.3.0, postcss@npm:^8.3.5, postcss@npm:^8.3.6, postcss@npm:^8.3.8":
+"postcss@npm:^8.2.15, postcss@npm:^8.3.0, postcss@npm:^8.3.5, postcss@npm:^8.3.8":
   version: 8.3.8
   resolution: "postcss@npm:8.3.8"
   dependencies:
@@ -21701,7 +21705,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "react-hooks-form@workspace:react/hooks-form"
   dependencies:
-    "@sabertazimi/react-scripts": ^5.3.10
+    "@sabertazimi/react-scripts": ^5.3.11
     bulma: ^0.9.3
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -24201,7 +24205,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"style-loader@npm:^3.2.1, style-loader@npm:^3.3.0":
+"style-loader@npm:^3.3.0":
   version: 3.3.0
   resolution: "style-loader@npm:3.3.0"
   peerDependencies:
@@ -24231,7 +24235,7 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "styled-components-demo@workspace:react/styled-components-demo"
   dependencies:
-    "@sabertazimi/react-scripts": ^5.3.10
+    "@sabertazimi/react-scripts": ^5.3.11
     "@testing-library/dom": ^8.6.0
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^12.1.0
@@ -24294,16 +24298,16 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"stylelint-config-bod@npm:^5.3.10":
-  version: 5.3.10
-  resolution: "stylelint-config-bod@npm:5.3.10"
+"stylelint-config-bod@npm:^5.3.11":
+  version: 5.3.11
+  resolution: "stylelint-config-bod@npm:5.3.11"
   dependencies:
     stylelint-a11y: ^1.2.3
     stylelint-config-recess-order: ^2.5.0
     stylelint-config-standard: ^22.0.0
   peerDependencies:
     stylelint: ^13.13.0
-  checksum: ee54d051cb486932e06bad136f61d502f9b77a49ff82c7df3d41d2e4704c16421214de5c00380c9e5be30b8d0334a7d2192c5939a1453e192a57ce868e125dc8
+  checksum: 212379f6a0fe5dc4fdf0e68e225d0db433370c6ac81ab8a14bcf10d3d4f4d1ef05c16be7bc7f908868e2bba967083f156945b9da0f4f27c7c3ec2c5a501e5ce7
   languageName: node
   linkType: hard
 
@@ -24658,7 +24662,7 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "switch@workspace:react/switch"
   dependencies:
-    "@sabertazimi/react-scripts": ^5.3.10
+    "@sabertazimi/react-scripts": ^5.3.11
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -24875,7 +24879,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:^5.1.3":
+"terser-webpack-plugin@npm:^5.1.3, terser-webpack-plugin@npm:^5.2.4":
   version: 5.2.4
   resolution: "terser-webpack-plugin@npm:5.2.4"
   dependencies:
@@ -26492,7 +26496,7 @@ typescript@^4.4.3:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:^4.2.1, webpack-dev-server@npm:^4.3.0":
+"webpack-dev-server@npm:^4.3.0":
   version: 4.3.0
   resolution: "webpack-dev-server@npm:4.3.0"
   dependencies:
@@ -26581,7 +26585,7 @@ typescript@^4.4.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.53.0, webpack@npm:^5.54.0":
+"webpack@npm:^5.54.0":
   version: 5.54.0
   resolution: "webpack@npm:5.54.0"
   dependencies:
