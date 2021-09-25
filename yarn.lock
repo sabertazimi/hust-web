@@ -17919,7 +17919,7 @@ fsevents@^1.2.7:
     gunzip-maybe: ^1.4.2
     jest: ^27.2.1
     log4js: ^6.3.0
-    node-fetch: ^2.6.2
+    node-fetch: ^2.6.5
     ora: ^5.4.1
     prettier: ^2.4.1
     semver: ^7.3.5
@@ -18134,12 +18134,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.2":
-  version: 2.6.4
-  resolution: "node-fetch@npm:2.6.4"
+"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.5":
+  version: 2.6.5
+  resolution: "node-fetch@npm:2.6.5"
   dependencies:
     whatwg-url: ^5.0.0
-  checksum: 0ab0e1f16776aea6f27bcb68b86dcdf2096f9eb728bb7d028ce3e75ae22bd08cb908b7c00a4dd86ad5b31f154494b6fc18051863cd89f0bce66130f3b432c597
+  checksum: 4e83db450718e70762882f00d96f647a7f2f3170035225934ddd5450cb1d91ef339ceb180d3687bcb0a6ed78c3fa5636ce8d3e44ec81ab59e0224ebf8965f65f
   languageName: node
   linkType: hard
 
