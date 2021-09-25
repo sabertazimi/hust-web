@@ -7171,7 +7171,7 @@ __metadata:
     prettier: ^2.4.1
     sass-loader: ^12.1.0
     scrollreveal: ^4.0.9
-    style-loader: ^3.2.1
+    style-loader: ^3.3.0
     stylelint: ^13.13.1
     stylelint-config-mass: ^5.3.10
     stylelint-webpack-plugin: ^3.0.1
@@ -7979,7 +7979,7 @@ __metadata:
     sass-loader: ^12.1.0
     socket.io: ^4.2.0
     socket.io-client: ^4.2.0
-    style-loader: ^3.2.1
+    style-loader: ^3.3.0
     stylelint: ^13.13.1
     stylelint-config-mass: ^5.3.10
     stylelint-webpack-plugin: ^3.0.1
@@ -12331,7 +12331,7 @@ fsevents@^1.2.7:
     react: ^17.0.2
     react-dom: ^17.0.2
     sass-loader: ^12.1.0
-    style-loader: ^3.2.1
+    style-loader: ^3.3.0
     stylelint: ^13.13.1
     stylelint-config-mass: ^5.3.10
     stylelint-webpack-plugin: ^3.0.1
@@ -17294,7 +17294,7 @@ fsevents@^1.2.7:
     mini-css-extract-plugin: ^2.3.0
     postcss: ^8.3.7
     postcss-loader: ^6.1.1
-    style-loader: ^3.2.1
+    style-loader: ^3.3.0
     webpack: ^5.54.0
     webpack-cli: ^4.8.0
     webpack-dev-server: ^4.2.1
@@ -17329,7 +17329,7 @@ fsevents@^1.2.7:
     prettier: ^2.4.1
     react: ^17.0.2
     react-dom: ^17.0.2
-    style-loader: ^3.2.1
+    style-loader: ^3.3.0
     webpack: ^5.54.0
     webpack-cli: ^4.8.0
     webpack-dev-server: ^4.2.1
@@ -17753,7 +17753,7 @@ fsevents@^1.2.7:
     postcss: ^8.3.7
     postcss-loader: ^6.1.1
     prettier: ^2.4.1
-    style-loader: ^3.2.1
+    style-loader: ^3.3.0
     stylelint: ^13.13.1
     stylelint-config-mass: ^5.3.10
     stylelint-webpack-plugin: ^3.0.1
@@ -22633,7 +22633,7 @@ resolve@^2.0.0-next.3:
     postcss: ^8.3.7
     postcss-loader: ^6.1.1
     prettier: ^2.4.1
-    style-loader: ^3.2.1
+    style-loader: ^3.3.0
     stylelint: ^13.13.1
     stylelint-config-mass: ^5.3.10
     stylelint-webpack-plugin: ^3.0.1
@@ -24187,12 +24187,12 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"style-loader@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "style-loader@npm:3.2.1"
+"style-loader@npm:^3.2.1, style-loader@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "style-loader@npm:3.3.0"
   peerDependencies:
     webpack: ^5.0.0
-  checksum: 10e47c29f4fff7a95fd24cc905c61abba82910cf956730294e8823271b1c2777bd0a180248c2a5185fccf2555863c695b4be31f3b5a8ca2026aab31ee4cba809
+  checksum: edad553a1ae74af9afb4dd582774d484e8e4e5f8c9593a921b0f3f0e2cdb3a58c4b44a3afb43021956804042eaffd68d5dc4f956d4c5f633e7e67eda6a750042
   languageName: node
   linkType: hard
 
