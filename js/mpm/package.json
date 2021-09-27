@@ -4,7 +4,7 @@
   "description": "Minimal package manager",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --fix --ext .js ./src",
+    "lint": "eslint --ext .js ./src",
     "start": "node src/index.js",
     "test": "jest",
     "test:watch": "jest --watch"
