@@ -7170,7 +7170,7 @@ __metadata:
     file-loader: ^6.2.0
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.2
-    image-webpack-loader: ^7.0.1
+    image-webpack-loader: ^8.0.1
     jquery: ^3.6.0
     mini-css-extract-plugin: ^2.3.0
     node-sass: ^6.0.1
@@ -13947,16 +13947,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"image-webpack-loader@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "image-webpack-loader@npm:7.0.1"
+"image-webpack-loader@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "image-webpack-loader@npm:8.0.1"
   dependencies:
     imagemin: ^7.0.1
     imagemin-gifsicle: ^7.0.0
     imagemin-mozjpeg: ^9.0.0
     imagemin-optipng: ^8.0.0
-    imagemin-pngquant: ^9.0.1
-    imagemin-svgo: ^8.0.0
+    imagemin-pngquant: ^9.0.2
+    imagemin-svgo: ^9.0.0
     imagemin-webp: ^6.0.0
     loader-utils: ^2.0.0
     object-assign: ^4.1.1
@@ -13974,7 +13974,7 @@ fsevents@^1.2.7:
       optional: true
     imagemin-webp:
       optional: true
-  checksum: 25d704ac0cefc9ba7d4320613dbdcecca6621fa36d5ea422b889538b7093f335992e5b30a155a03dbb528657da5388cb107db50c2113aa1d3bf7a5d3d486f78b
+  checksum: 200256d3125f5d2ced1235207d7af5564d24fe26243ee9665e5ae74fb9ffae38a0c9625646bd9f4aa1d4029bd1d17e966bd70a9608b53ce66433fadedcd824fd
   languageName: node
   linkType: hard
 
@@ -14033,7 +14033,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"imagemin-pngquant@npm:^9.0.1":
+"imagemin-pngquant@npm:^9.0.2":
   version: 9.0.2
   resolution: "imagemin-pngquant@npm:9.0.2"
   dependencies:
@@ -14056,13 +14056,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"imagemin-svgo@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "imagemin-svgo@npm:8.0.0"
+"imagemin-svgo@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "imagemin-svgo@npm:9.0.0"
   dependencies:
     is-svg: ^4.2.1
-    svgo: ^1.3.2
-  checksum: 0ca41b7b07f641f52a44083ca7a206a9237c85e30308dce9c89c0188717bfedc6cc2dd8e86762ede1d6e2b4fb952efe9bbc0e3e5d20b05cf4c8410ddd7c931b4
+    svgo: ^2.1.0
+  checksum: f5686a06e68ee0a42740ed26085e6716ace59d80340cd278d6df59ad570f50bb37a04b30d00b94de307112b2d4a96dd0e21ed7eb9bd8a7de70bd17f23be943e5
   languageName: node
   linkType: hard
 
@@ -24647,7 +24647,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"svgo@npm:^2.3.0":
+"svgo@npm:^2.1.0, svgo@npm:^2.3.0":
   version: 2.7.0
   resolution: "svgo@npm:2.7.0"
   dependencies:
