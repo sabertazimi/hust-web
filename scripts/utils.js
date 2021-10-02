@@ -1,23 +1,42 @@
+// @ts-check
 const cp = require('child_process');
 const chalk = require('chalk');
+
+/** @type {import('consola').Consola} */
+// @ts-ignore
 const consola = require('consola');
 
+/**
+ * @param {string} [log]
+ */
 const log = log => {
   consola.log(log);
 };
 
+/**
+ * @param {string} [info]
+ */
 const info = info => {
   consola.info(chalk.blue(info));
 };
 
+/**
+ * @param {string} [success]
+ */
 const success = success => {
   consola.success(chalk.green(success));
 };
 
+/**
+ * @param {string} [error]
+ */
 const error = error => {
   consola.error(error);
 };
 
+/**
+ * @param {string} [cmd]
+ */
 const cmd = cmd => {
   console.info(`    ${chalk.bgGreen.black('[exec]')}: ${cmd}`);
 };
@@ -36,6 +55,10 @@ const checkGitStatus = () => {
   }
 };
 
+/**
+ * @param {string} [command]
+ * @param {string | undefined} [cwd]
+ */
 const exec = (command, cwd) => {
   cmd(command);
   return cp.execSync(command, {
@@ -45,6 +68,10 @@ const exec = (command, cwd) => {
   });
 };
 
+/**
+ * @param {string} [command]
+ * @param {string | undefined} [cwd]
+ */
 const execPipe = (command, cwd) => {
   cmd(command);
   return cp.execSync(command, {

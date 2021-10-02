@@ -1,3 +1,5 @@
+// @ts-check
+/** @type {(options: any) => Promise<any> | any} */
 const lernaVersion = require('@lerna/version');
 const semver = require('semver');
 const utils = require('./utils');
