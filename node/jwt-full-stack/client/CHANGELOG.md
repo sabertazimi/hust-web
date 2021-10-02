@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency graphql to ^15.6.0 ([#251](https://github.com/sabertazimi/hust-web/issues/251)) ([dc37a17](https://github.com/sabertazimi/hust-web/commit/dc37a17ec49870696c405a57b4af15d3e17fe3d2))
+
+
+
+
+
 # [2.5.0](https://github.com/sabertazimi/hust-web/compare/v2.4.0...v2.5.0) (2021-09-22)
 
 **Note:** Version bump only for package jwt-client

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency node-fetch to ^2.6.5 ([#247](https://github.com/sabertazimi/hust-web/issues/247)) ([5e9db7b](https://github.com/sabertazimi/hust-web/commit/5e9db7b534986a8ca9bbc8dd77ca3a84c308cf61))
+* **deps:** update dependency puppeteer-core to v10 ([#254](https://github.com/sabertazimi/hust-web/issues/254)) ([5452e9a](https://github.com/sabertazimi/hust-web/commit/5452e9a1dc537dc04b83004101f4b67d62c6ec41))
+
+
+
+
+
 # [2.5.0](https://github.com/sabertazimi/hust-web/compare/v2.4.0...v2.5.0) (2021-09-22)
 
 **Note:** Version bump only for package javascript-collection

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v30 ([#279](https://github.com/sabertazimi/hust-web/issues/279)) ([4ef5276](https://github.com/sabertazimi/hust-web/commit/4ef527613d47487c98a0c44bd36677625c3b1793))
+* **deps:** update dependency express-rate-limit to ^5.4.0 ([#277](https://github.com/sabertazimi/hust-web/issues/277)) ([9c8255e](https://github.com/sabertazimi/hust-web/commit/9c8255e21a85edf40d752f08a9deb6478f163a55))
+* **deps:** update dependency graphql to ^15.6.0 ([#251](https://github.com/sabertazimi/hust-web/issues/251)) ([dc37a17](https://github.com/sabertazimi/hust-web/commit/dc37a17ec49870696c405a57b4af15d3e17fe3d2))
+* **deps:** update dependency node-fetch to ^2.6.5 ([#247](https://github.com/sabertazimi/hust-web/issues/247)) ([5e9db7b](https://github.com/sabertazimi/hust-web/commit/5e9db7b534986a8ca9bbc8dd77ca3a84c308cf61))
+* **deps:** update dependency puppeteer-core to v10 ([#254](https://github.com/sabertazimi/hust-web/issues/254)) ([5452e9a](https://github.com/sabertazimi/hust-web/commit/5452e9a1dc537dc04b83004101f4b67d62c6ec41))
+* **deps:** update socket.io packages to v4 ([#255](https://github.com/sabertazimi/hust-web/issues/255)) ([b835dd1](https://github.com/sabertazimi/hust-web/commit/b835dd1267853895f8167d877ee02b364fa2d14b))
+
+
+
+
+
 # [2.5.0](https://github.com/sabertazimi/hust-web/compare/v2.4.0...v2.5.0) (2021-09-22)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/sabertazimi/hust-oom/compare/v2.5.0...v2.5.1) (2021-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency express-rate-limit to ^5.4.0 ([#277](https://github.com/sabertazimi/hust-oom/issues/277)) ([9c8255e](https://github.com/sabertazimi/hust-oom/commit/9c8255e21a85edf40d752f08a9deb6478f163a55))
+* **deps:** update socket.io packages to v4 ([#255](https://github.com/sabertazimi/hust-oom/issues/255)) ([b835dd1](https://github.com/sabertazimi/hust-oom/commit/b835dd1267853895f8167d877ee02b364fa2d14b))
+
+
+
+
+
 # [2.5.0](https://github.com/sabertazimi/hust-oom/compare/v2.4.0...v2.5.0) (2021-09-22)
 
 **Note:** Version bump only for package chat

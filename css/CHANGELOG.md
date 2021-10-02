@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v30 ([#279](https://github.com/sabertazimi/hust-web/issues/279)) ([4ef5276](https://github.com/sabertazimi/hust-web/commit/4ef527613d47487c98a0c44bd36677625c3b1793))
+
+
+
+
+
 # [2.5.0](https://github.com/sabertazimi/hust-web/compare/v2.4.0...v2.5.0) (2021-09-22)
 
 
