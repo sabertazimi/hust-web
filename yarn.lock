@@ -7196,7 +7196,7 @@ __metadata:
     html-webpack-plugin: ^5.3.2
     image-webpack-loader: ^8.0.1
     jquery: ^3.6.0
-    mini-css-extract-plugin: ^2.3.0
+    mini-css-extract-plugin: ^2.4.2
     node-sass: ^6.0.1
     popper.js: ^1.16.1
     postcss: ^8.3.9
@@ -7997,7 +7997,7 @@ __metadata:
     express-rate-limit: ^5.4.1
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.2
-    mini-css-extract-plugin: ^2.3.0
+    mini-css-extract-plugin: ^2.4.2
     node-sass: ^6.0.1
     nodemon: ^2.0.13
     postcss: ^8.3.9
@@ -12349,7 +12349,7 @@ fsevents@^1.2.7:
     eslint-webpack-plugin: ^3.0.1
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.2
-    mini-css-extract-plugin: ^2.3.0
+    mini-css-extract-plugin: ^2.4.2
     node-sass: ^6.0.1
     postcss: ^8.3.9
     postcss-loader: ^6.1.1
@@ -17357,7 +17357,7 @@ fsevents@^1.2.7:
     css-loader: ^6.3.0
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.2
-    mini-css-extract-plugin: ^2.3.0
+    mini-css-extract-plugin: ^2.4.2
     postcss: ^8.3.9
     postcss-loader: ^6.1.1
     style-loader: ^3.3.0
@@ -17389,7 +17389,7 @@ fsevents@^1.2.7:
     css-loader: ^6.3.0
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.2
-    mini-css-extract-plugin: ^2.3.0
+    mini-css-extract-plugin: ^2.4.2
     postcss: ^8.3.9
     postcss-loader: ^6.1.1
     prettier: ^2.4.1
@@ -17640,14 +17640,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"mini-css-extract-plugin@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "mini-css-extract-plugin@npm:2.3.0"
+"mini-css-extract-plugin@npm:^2.3.0, mini-css-extract-plugin@npm:^2.4.2":
+  version: 2.4.2
+  resolution: "mini-css-extract-plugin@npm:2.4.2"
   dependencies:
     schema-utils: ^3.1.0
   peerDependencies:
     webpack: ^5.0.0
-  checksum: 3c2f5ff29ba4d85999be36f4414b9b7200751411c6961b1ac7faa8ea5ae09b9e74bcb3b0425dbc94083d57d828449b393e56ccb709c2b5c766d968023726e25d
+  checksum: c413b4fd0ba0ff398b58ddecc0e805c254c2253e6536627469408b29ea1eb9f5b38c610a3be505c6ca9096a1bb5ed4faf8c6ff8c387b2b4891c8e38fdc8f719b
   languageName: node
   linkType: hard
 
@@ -17808,7 +17808,7 @@ fsevents@^1.2.7:
     eslint-webpack-plugin: ^3.0.1
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.2
-    mini-css-extract-plugin: ^2.3.0
+    mini-css-extract-plugin: ^2.4.2
     postcss: ^8.3.9
     postcss-loader: ^6.1.1
     prettier: ^2.4.1
@@ -22703,7 +22703,7 @@ resolve@^2.0.0-next.3:
     eslint-webpack-plugin: ^3.0.1
     html-loader: ^2.1.2
     html-webpack-plugin: ^5.3.2
-    mini-css-extract-plugin: ^2.3.0
+    mini-css-extract-plugin: ^2.4.2
     postcss: ^8.3.9
     postcss-loader: ^6.1.1
     prettier: ^2.4.1
