@@ -61,7 +61,7 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.56.0",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.3.0"
+    "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^30.0.0",
