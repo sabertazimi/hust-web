@@ -7353,22 +7353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.0.0, browserslist@npm:^4.12.0, browserslist@npm:^4.14.5, browserslist@npm:^4.16.0, browserslist@npm:^4.16.5, browserslist@npm:^4.16.6, browserslist@npm:^4.17.3, browserslist@npm:^4.6.4":
-  version: 4.17.3
-  resolution: "browserslist@npm:4.17.3"
-  dependencies:
-    caniuse-lite: ^1.0.30001264
-    electron-to-chromium: ^1.3.857
-    escalade: ^3.1.1
-    node-releases: ^1.1.77
-    picocolors: ^0.2.1
-  bin:
-    browserslist: cli.js
-  checksum: 9295bdff6e054fdbb131275f88d282dddda7e8d54ddc1571b24374d6ba85e6d1f7cb72280543ea44a9726bb5076ded644d943b38cdc5610249699254ca951f46
-  languageName: node
-  linkType: hard
-
-"browserslist@npm:^4.17.4":
+"browserslist@npm:^4.0.0, browserslist@npm:^4.12.0, browserslist@npm:^4.14.5, browserslist@npm:^4.16.0, browserslist@npm:^4.16.5, browserslist@npm:^4.16.6, browserslist@npm:^4.17.3, browserslist@npm:^4.17.4, browserslist@npm:^4.6.4":
   version: 4.17.4
   resolution: "browserslist@npm:4.17.4"
   dependencies:
@@ -7871,14 +7856,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001264":
-  version: 1.0.30001265
-  resolution: "caniuse-lite@npm:1.0.30001265"
-  checksum: 19f1943045503ebd182191075a991035523123db6985bcccde6702c445154a470a72ff064568a977b607a0c42789bed73ecee6a6a04601dd04691c1a1fdfbd1c
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001265":
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001264, caniuse-lite@npm:^1.0.30001265":
   version: 1.0.30001267
   resolution: "caniuse-lite@npm:1.0.30001267"
   checksum: 1a84f792a17a7819d42bed24eafe2a4832ab1f58937b6d65a9f43e9cdd2a3b10308e8bc2bbb3808f1df6b60940b1770b185c42370fa9dac2c8bc5c8a0363c158
@@ -8088,7 +8066,7 @@ __metadata:
     react-router-dom: ^5.3.0
     redux: ^4.1.1
     sass-loader: ^12.2.0
-    socket.io: ^4.3.0
+    socket.io: ^4.3.1
     socket.io-client: ^4.3.1
     style-loader: ^3.3.0
     stylelint: ^13.13.1
@@ -10491,13 +10469,6 @@ __metadata:
   version: 2.7.4
   resolution: "ejs@npm:2.7.4"
   checksum: a1d2bfc7d1f0b39e99ae19b20c9469a25aeddba1ffc225db098110b18d566f73772fcdcc740b108cfda7452276f67d7b64eb359f90285414c942f4ae70713371
-  languageName: node
-  linkType: hard
-
-"electron-to-chromium@npm:^1.3.857":
-  version: 1.3.866
-  resolution: "electron-to-chromium@npm:1.3.866"
-  checksum: 03b4cf46baf631d9022d7d2f1c058899152941a7d3b3e9df02c2fc48d2eb52362637337b3e2e793a533fa30ed9ec844b4a1d56a55c421d64e39cf8080b980d52
   languageName: node
   linkType: hard
 
@@ -18496,13 +18467,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^1.1.77":
-  version: 1.1.77
-  resolution: "node-releases@npm:1.1.77"
-  checksum: eb2fcb45310e7d77f82bfdadeca546a698d258e011f15d88ad9a452a5e838a672ec532906581096ca19c66284a788330c3b09227ffc540e67228730f41b9c2e2
-  languageName: node
-  linkType: hard
-
 "node-releases@npm:^2.0.0":
   version: 2.0.0
   resolution: "node-releases@npm:2.0.0"
@@ -23836,9 +23800,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"socket.io@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "socket.io@npm:4.3.0"
+"socket.io@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "socket.io@npm:4.3.1"
   dependencies:
     accepts: ~1.3.4
     base64id: ~2.0.0
@@ -23846,7 +23810,7 @@ resolve@^2.0.0-next.3:
     engine.io: ~6.0.0
     socket.io-adapter: ~2.3.2
     socket.io-parser: ~4.0.4
-  checksum: 97a061a1e65fff783ad9a44c7aa348d887974cb43d4d91380f3553fcca8de95a197c7280ede140691e21fc78ce79b625763675fd8a351bf5c62cafc571b01107
+  checksum: 8552f9cdf47fa121393c26c6f5aa526110813865b18f73e4c481a3057f5e095e5508e7c1c9dc57f341b0c6fe4fc970fb43baf33868732e2c2a38540cbf64805c
   languageName: node
   linkType: hard
 
