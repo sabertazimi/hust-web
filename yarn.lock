@@ -1936,78 +1936,78 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dg-scripts/eslint-config-basic@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@dg-scripts/eslint-config-basic@npm:5.5.0"
+"@dg-scripts/eslint-config-basic@npm:^5.5.2":
+  version: 5.5.2
+  resolution: "@dg-scripts/eslint-config-basic@npm:5.5.2"
   dependencies:
     eslint-config-standard: ^16.0.3
     eslint-plugin-eslint-comments: ^3.2.0
     eslint-plugin-html: ^6.2.0
-    eslint-plugin-import: ^2.25.1
+    eslint-plugin-import: ^2.25.2
     eslint-plugin-jsonc: ^1.7.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-promise: ^5.1.0
-    eslint-plugin-unicorn: ^36.0.0
+    eslint-plugin-unicorn: ^37.0.1
     eslint-plugin-yml: ^0.10.1
     jsonc-eslint-parser: ^1.4.1
     yaml-eslint-parser: ^0.4.1
   peerDependencies:
     eslint: ^7.32.0 || >=8.0.0
-  checksum: a24c651435493794cbed74eb969710f83312fc9e7cc2d3c03df9143c1b15732764c1f6cf5eedca4c8adf77b72ca65d4f3154c62a0e6c3af47e1e99d1744c8cc7
+  checksum: 22def8e7c536d8b8392e3d724a272348b34d817935746d42441ddf0ae17dac13b55de59382e10efa29a2dafdeae8e1f325001055d7e889a5e52f44fbb6d66231
   languageName: node
   linkType: hard
 
-"@dg-scripts/eslint-config-react@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@dg-scripts/eslint-config-react@npm:5.5.0"
+"@dg-scripts/eslint-config-react@npm:^5.5.2":
+  version: 5.5.2
+  resolution: "@dg-scripts/eslint-config-react@npm:5.5.2"
   dependencies:
-    eslint-config-bod: ^5.5.0
+    eslint-config-bod: ^5.5.2
   peerDependencies:
     eslint: ^7.32.0 || >=8.0.0
-  checksum: 8b9ce10a2057c39c9c6a314321d704dbbbf550efba569b4da0f3932cc0e395419ffa8b05c1719b4cff2be1f483b76d73ec87999f3430841252e2c0e9daed10ff
+  checksum: cfe79c4e771f1fff505f2543504cf765df722efdf753455be1ab023409acf71df6765f9ddeefa42d4fffdd43434bebb47773ce7bdfa10dce87c313ba51a930bd
   languageName: node
   linkType: hard
 
-"@dg-scripts/eslint-config-ts@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@dg-scripts/eslint-config-ts@npm:5.5.0"
+"@dg-scripts/eslint-config-ts@npm:^5.5.2":
+  version: 5.5.2
+  resolution: "@dg-scripts/eslint-config-ts@npm:5.5.2"
   dependencies:
-    "@dg-scripts/eslint-config-basic": ^5.5.0
+    "@dg-scripts/eslint-config-basic": ^5.5.2
     "@typescript-eslint/eslint-plugin": ^5.0.0
     "@typescript-eslint/parser": ^5.0.0
   peerDependencies:
     eslint: ^7.32.0 || >=8.0.0
     typescript: ^4.0.0
-  checksum: 9163584f9d6528d699303615c8b8935bdbbb6fefc58f4a3ea77addd60e5f38431b744e758be9d4af9c6c7c193aa43d205782e66c9d54d36714f59333291db87b
+  checksum: e126bd6d533dfa10eedb4c9c105c178a307277b5cdd7c5da0fda078d5a62a5d12c739628ad218188e27053d506c3cddf278e2f8a079689be578e6c2347341fec
   languageName: node
   linkType: hard
 
-"@dg-scripts/eslint-config-vue@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@dg-scripts/eslint-config-vue@npm:5.5.0"
+"@dg-scripts/eslint-config-vue@npm:^5.5.2":
+  version: 5.5.2
+  resolution: "@dg-scripts/eslint-config-vue@npm:5.5.2"
   dependencies:
-    "@dg-scripts/eslint-config-ts": ^5.5.0
+    "@dg-scripts/eslint-config-ts": ^5.5.2
     eslint-plugin-vue: ^7.19.1
   peerDependencies:
     eslint: ^7.32.0 || >=8.0.0
     typescript: ^4.0.0
-  checksum: beb53d33d080552d24539667841ae9e57aa2514f00e42206a3018286b610999fa2327bba7e850c0b1257b78ada979a14731d55d941d872a6b42f2774c35b93b4
+  checksum: 7493b677703b149ee6185b3fda0f2c1c469b5146067546e61ec3e1b5ade0114712018128bdee530b114c2b6d63bd82f248663d1c3d06a0509c9bca6b816edcca
   languageName: node
   linkType: hard
 
-"@dg-scripts/eslint-config@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@dg-scripts/eslint-config@npm:5.5.0"
+"@dg-scripts/eslint-config@npm:^5.5.2":
+  version: 5.5.2
+  resolution: "@dg-scripts/eslint-config@npm:5.5.2"
   dependencies:
-    "@dg-scripts/eslint-config-react": ^5.5.0
-    "@dg-scripts/eslint-config-vue": ^5.5.0
+    "@dg-scripts/eslint-config-react": ^5.5.2
+    "@dg-scripts/eslint-config-vue": ^5.5.2
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^4.0.0
   peerDependencies:
     eslint: ^7.32.0 || >=8.0.0
     prettier: ^2.4.0
     typescript: ^4.0.0
-  checksum: 3b72a379e3d82e349428745449fa053288a4653809a1c8e33e7969dbb961fb81d49170d75817404b815dc2af1f9168dee1e78e2592d5da0dfda82777c44e1750
+  checksum: 8b98e9592ba09681187d74832a65dfcacf27b59b13ffa169739023541512fdb5ff6a18a2f992e20d95782a528a2d197395acb5d86080c075d9c6465e79bc47b5
   languageName: node
   linkType: hard
 
@@ -7240,7 +7240,7 @@ __metadata:
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.8
     "@ckeditor/ckeditor5-build-classic": ^30.0.0
-    "@dg-scripts/eslint-config": ^5.5.0
+    "@dg-scripts/eslint-config": ^5.5.2
     autoprefixer: ^10.3.7
     babel-loader: ^8.2.2
     bootstrap: ^4.6.0
@@ -8041,7 +8041,7 @@ __metadata:
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.8
     "@babel/preset-react": ^7.14.5
-    "@dg-scripts/eslint-config": ^5.5.0
+    "@dg-scripts/eslint-config": ^5.5.2
     "@livechat/ui-kit": ^0.5.0-20
     autoprefixer: ^10.3.7
     babel-loader: ^8.2.2
@@ -10813,7 +10813,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-bod@npm:^5.5.0, eslint-config-bod@npm:^5.5.2":
+"eslint-config-bod@npm:^5.5.2":
   version: 5.5.2
   resolution: "eslint-config-bod@npm:5.5.2"
   dependencies:
@@ -10913,7 +10913,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.25.1, eslint-plugin-import@npm:^2.25.2":
+"eslint-plugin-import@npm:^2.25.2":
   version: 2.25.2
   resolution: "eslint-plugin-import@npm:2.25.2"
   dependencies:
@@ -11069,15 +11069,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:^36.0.0":
-  version: 36.0.0
-  resolution: "eslint-plugin-unicorn@npm:36.0.0"
+"eslint-plugin-unicorn@npm:^37.0.1":
+  version: 37.0.1
+  resolution: "eslint-plugin-unicorn@npm:37.0.1"
   dependencies:
     "@babel/helper-validator-identifier": ^7.14.9
     ci-info: ^3.2.0
     clean-regexp: ^1.0.0
     eslint-template-visitor: ^2.3.2
     eslint-utils: ^3.0.0
+    esquery: ^1.4.0
+    indent-string: 4
     is-builtin-module: ^3.1.0
     lodash: ^4.17.21
     pluralize: ^8.0.0
@@ -11085,9 +11087,10 @@ __metadata:
     regexp-tree: ^0.1.23
     safe-regex: ^2.1.1
     semver: ^7.3.5
+    strip-indent: ^3.0.0
   peerDependencies:
     eslint: ">=7.32.0"
-  checksum: 8c1051036b65509228639bdf7eafaa034982985071a817a3b275f58b68ad525e8741eca2ba0a2b56cd8b5e82b9a8911bd1f65456659cdef267e9e230d2edd1e3
+  checksum: 9c74b642150c765919fc925808791910a3e8ce642db4a5a38aa4c04e8b4899b8aed5fab4ae73947cf0ad0b4a783161e2389c9148ed30c73469a757ba8372c1cd
   languageName: node
   linkType: hard
 
@@ -12472,7 +12475,7 @@ fsevents@^1.2.7:
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.8
     "@babel/preset-react": ^7.14.5
-    "@dg-scripts/eslint-config": ^5.5.0
+    "@dg-scripts/eslint-config": ^5.5.2
     autoprefixer: ^10.3.7
     babel-loader: ^8.2.2
     clean-webpack-plugin: ^4.0.0
@@ -13953,7 +13956,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "hust-web@workspace:."
   dependencies:
-    "@dg-scripts/eslint-config": ^5.5.0
+    "@dg-scripts/eslint-config": ^5.5.2
     chalk: ^4.1.2
     consola: ^2.15.3
     eslint: ^7.32.0
@@ -14338,6 +14341,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"indent-string@npm:4, indent-string@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "indent-string@npm:4.0.0"
+  checksum: 824cfb9929d031dabf059bebfe08cf3137365e112019086ed3dcff6a0a7b698cb80cf67ccccde0e25b9e2d7527aa6cc1fed1ac490c752162496caba3e6699612
+  languageName: node
+  linkType: hard
+
 "indent-string@npm:^2.1.0":
   version: 2.1.0
   resolution: "indent-string@npm:2.1.0"
@@ -14351,13 +14361,6 @@ fsevents@^1.2.7:
   version: 3.2.0
   resolution: "indent-string@npm:3.2.0"
   checksum: a0b72603bba6c985d367fda3a25aad16423d2056b22a7e83ee2dd9ce0ce3d03d1e078644b679087aa7edf1cfb457f0d96d9eeadc0b12f38582088cc00e995d2f
-  languageName: node
-  linkType: hard
-
-"indent-string@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "indent-string@npm:4.0.0"
-  checksum: 824cfb9929d031dabf059bebfe08cf3137365e112019086ed3dcff6a0a7b698cb80cf67ccccde0e25b9e2d7527aa6cc1fed1ac490c752162496caba3e6699612
   languageName: node
   linkType: hard
 
@@ -17984,7 +17987,7 @@ fsevents@^1.2.7:
     "@babel/core": ^7.15.8
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.8
-    "@dg-scripts/eslint-config": ^5.5.0
+    "@dg-scripts/eslint-config": ^5.5.2
     autoprefixer: ^10.3.7
     babel-loader: ^8.2.2
     clean-webpack-plugin: ^4.0.0
@@ -18108,7 +18111,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "mpmjs@workspace:js/mpm"
   dependencies:
-    "@dg-scripts/eslint-config": ^5.5.0
+    "@dg-scripts/eslint-config": ^5.5.2
     commander: ^8.2.0
     eslint: ^7.32.0
     fs-extra: ^10.0.0
@@ -22951,7 +22954,7 @@ resolve@^2.0.0-next.3:
     "@babel/core": ^7.15.8
     "@babel/plugin-proposal-object-rest-spread": ^7.15.6
     "@babel/preset-env": ^7.15.8
-    "@dg-scripts/eslint-config": ^5.5.0
+    "@dg-scripts/eslint-config": ^5.5.2
     autoprefixer: ^10.3.7
     babel-loader: ^8.2.2
     clean-webpack-plugin: ^4.0.0
