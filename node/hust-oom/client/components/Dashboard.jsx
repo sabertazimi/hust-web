@@ -21,7 +21,7 @@ import {
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import io from 'socket.io-client';
+import * as io from 'socket.io-client';
 import { SERVER_URL } from '../constants';
 import './Dashboard.scss';
 
