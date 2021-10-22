@@ -6602,9 +6602,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:^8.2.2":
-  version: 8.2.2
-  resolution: "babel-loader@npm:8.2.2"
+"babel-loader@npm:^8.2.2, babel-loader@npm:^8.2.3":
+  version: 8.2.3
+  resolution: "babel-loader@npm:8.2.3"
   dependencies:
     find-cache-dir: ^3.3.1
     loader-utils: ^1.4.0
@@ -6613,7 +6613,7 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
     webpack: ">=2"
-  checksum: df5092ef9886bb49aacb7c58ac40ed0681ced031c8d91e49d680cedace2aa1703390a31fbe7c0e409f739836e911c5c991119133d90d9289f681c0a8ff2447a1
+  checksum: 78e1e1a91954d644b6ce66366834d4d245febbc0fde33e4e2831725e83d6e760d12b3a78e9534ce92af69067bef1d9d9674df36d8c1f20ee127bc2354b2203ba
   languageName: node
   linkType: hard
 
@@ -7144,7 +7144,7 @@ __metadata:
     "@ckeditor/ckeditor5-build-classic": ^30.0.0
     "@dg-scripts/eslint-config": ^5.5.4
     autoprefixer: ^10.3.7
-    babel-loader: ^8.2.2
+    babel-loader: ^8.2.3
     bootstrap: ^4.6.0
     clean-webpack-plugin: ^4.0.0
     copy-webpack-plugin: ^9.0.1
@@ -7946,7 +7946,7 @@ __metadata:
     "@dg-scripts/eslint-config": ^5.5.4
     "@livechat/ui-kit": ^0.5.0-20
     autoprefixer: ^10.3.7
-    babel-loader: ^8.2.2
+    babel-loader: ^8.2.3
     body-parser: ^1.19.0
     clean-webpack-plugin: ^4.0.0
     concurrently: ^6.3.0
@@ -12385,7 +12385,7 @@ fsevents@^1.2.7:
     "@babel/preset-react": ^7.14.5
     "@dg-scripts/eslint-config": ^5.5.4
     autoprefixer: ^10.3.7
-    babel-loader: ^8.2.2
+    babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.4.0
@@ -17468,7 +17468,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.15.8
     "@babel/preset-react": ^7.14.5
     autoprefixer: ^10.3.7
-    babel-loader: ^8.2.2
+    babel-loader: ^8.2.3
     babel-plugin-transform-meact-jsx: ^0.1.2
     clean-webpack-plugin: ^4.0.0
     css-loader: ^6.4.0
@@ -17501,7 +17501,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.15.8
     "@babel/preset-react": ^7.14.5
     autoprefixer: ^10.3.7
-    babel-loader: ^8.2.2
+    babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     css-loader: ^6.4.0
     html-loader: ^2.1.2
@@ -17917,7 +17917,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.15.8
     "@dg-scripts/eslint-config": ^5.5.4
     autoprefixer: ^10.3.7
-    babel-loader: ^8.2.2
+    babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.4.0
@@ -22889,7 +22889,7 @@ resolve@^2.0.0-next.3:
     "@babel/preset-env": ^7.15.8
     "@dg-scripts/eslint-config": ^5.5.4
     autoprefixer: ^10.3.7
-    babel-loader: ^8.2.2
+    babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.4.0
