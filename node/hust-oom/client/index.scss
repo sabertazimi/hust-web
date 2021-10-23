@@ -11,8 +11,8 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: inherit;
   padding: inherit;
+  margin: inherit;
   font-family: inherit;
 }
 
@@ -21,7 +21,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: $color-success;
 }
-
