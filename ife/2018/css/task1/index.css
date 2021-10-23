@@ -1,9 +1,9 @@
 body,
 .container {
-  widows: 100%;
   height: 100vh;
-  margin: 0 auto;
   padding: 0;
+  margin: 0 auto;
+  widows: 100%;
 }
 
 .container {
@@ -13,49 +13,79 @@ body,
   justify-content: center;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .button {
+    position: relative;
+    display: block;
+    width: 8em;
+    padding: 1em 2em;
+    font-size: 1.25em;
+    color: #ba55d3;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid transparent;
+    outline: none;
+    transition: none;
+  }
+}
+
 .button {
-  display: block;
   position: relative;
+  display: block;
   width: 8em;
   padding: 1em 2em;
+  font-size: 1.25em;
+  color: #ba55d3;
+  cursor: pointer;
+  background-color: #fff;
   border: 1px solid transparent;
   outline: none;
-  background-color: #fff;
-  color: #ba55d3;
-  font-size: 1.25em;
-  cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .button + .button {
   margin-top: 1em;
 }
 
-.button__switch {
+.button-switch {
   border: 1px solid #ba55d3;
 }
 
-.button__switch:hover {
-  background-color: #ba55d3;
+.button-switch:hover,
+.button-switch:focus {
   color: #fff;
+  background-color: #ba55d3;
 }
 
-.button__menu::after {
+@media screen and (prefers-reduced-motion: reduce) {
+  .button-menu::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 5px;
+    content: '';
+    background-color: blue;
+    transition: none;
+  }
+}
+
+.button-menu::after {
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 0;
   height: 5px;
-  background-color: blue;
-  transition: all .3s ease;
   content: '';
+  background-color: blue;
+  transition: all 0.3s ease;
 }
 
-.button__menu--blue {
+.button-menu-blue {
   color: blue;
 }
 
-.button__menu--enable::after {
+.button-menu-enable::after {
   left: 0;
   width: 100%;
 }

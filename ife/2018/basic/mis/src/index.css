@@ -24,16 +24,16 @@ body {
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
   padding: 0;
+  margin: 0 auto;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: inherit;
   padding: inherit;
+  margin: inherit;
 }
 
 .container {
@@ -45,11 +45,9 @@ body {
 
 .grid-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-items: center;
-
   width: 100%;
   min-width: 512px;
   max-width: 1024px;
@@ -61,7 +59,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
   width: 100%;
   min-height: 30px;
 }
@@ -85,33 +82,33 @@ body {
 }
 
 .table {
-  border: 0;
   border-collapse: collapse;
+  border: 0;
 }
 
 .table tr:nth-child(odd) {
   padding: 1em;
-  background-color: var(--color-gray-2); 
+  background-color: var(--color-gray-2);
 }
 
 .table tr:nth-child(even) {
   padding: 1em;
-  background-color: var(--color-gray-0); 
+  background-color: var(--color-gray-0);
 }
 
 .table th {
   padding: 1em;
-  border: 0;
-  background-color: var(--color-primary);
   color: var(--color-gray-0);
   text-transform: uppercase;
+  background-color: var(--color-primary);
+  border: 0;
 }
 
 .table td {
   padding: 1em;
-  border: 0;
   text-transform: capitalize;
   white-space: pre-wrap;
+  border: 0;
 }
 
 .table .left {

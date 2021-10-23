@@ -1,12 +1,12 @@
-const switchButton = document.querySelector('.button__switch');
-const menuButton = document.querySelector('.button__menu');
+const switchButton = document.querySelector('.button-switch');
+const menuButton = document.querySelector('.button-menu');
 
 switchButton.addEventListener('click', () => {
-  menuButton.classList.toggle('button__menu--enable');
+  menuButton.classList.toggle('button-menu-enable');
 });
 
-menuButton.addEventListener('transitionend', (event) => {
+menuButton.addEventListener('transitionend', event => {
   if (event.propertyName === 'width') {
-    menuButton.classList.toggle('button__menu--blue');
+    menuButton.classList.toggle('button-menu-blue');
   }
 });

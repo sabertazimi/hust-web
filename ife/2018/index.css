@@ -7,8 +7,8 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
+  font-family: Raleway, 'Open Sans', sans, sans-serif;
   font-size: 1.6em;
-  font-family: 'Raleway', 'Open Sans', sans, sans-serif;
 }
 
 main,
@@ -18,8 +18,8 @@ ul,
 li,
 a {
   box-sizing: border-box;
-  margin: 0 auto;
   padding: 0;
+  margin: 0 auto;
 }
 
 .ife-header {
@@ -30,20 +30,32 @@ a {
 
 .ife-list {
   padding: 1em;
-  background-color: blueviolet;
   list-style: none inside;
+  background-color: blueviolet;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .ife-link {
+    display: block;
+    width: 80%;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    transition: none;
+  }
 }
 
 .ife-link {
   display: block;
   width: 80%;
   padding: 1em;
-  transition: color 0.3s, transform 0.3s;
   color: white;
   text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.ife-link:hover {
-  transform: scale(1.1);
+.ife-link:hover,
+.ife-link:focus {
   color: violet;
+  transform: scale(1.1);
 }

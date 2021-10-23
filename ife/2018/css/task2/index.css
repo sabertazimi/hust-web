@@ -1,9 +1,9 @@
 body,
 .container {
-  widows: 100%;
   height: 100vh;
-  margin: 0 auto;
   padding: 0;
+  margin: 0 auto;
+  widows: 100%;
 }
 
 .container {
@@ -16,10 +16,10 @@ body,
 .box {
   width: 10em;
   height: 5em;
-  background-color: #ba55d3;
+  line-height: 5em;
   color: white;
   text-align: center;
-  line-height: 5em;
+  background-color: #ba55d3;
 }
 
 .box + .box {
@@ -38,7 +38,7 @@ body,
   transform: rotate(45deg);
 }
 
-.box4{
+.box4 {
   transform: translate(10px, 20px);
 }
 

@@ -3,10 +3,90 @@
   box-sizing: border-box;
   width: 200px;
   height: 300px;
-  margin: 0 auto;
   padding: 0;
+  margin: 0 auto;
   perspective: 800px;
   transform-style: preserve-3d;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .card .front,
+  .card .back {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    box-sizing: border-box;
+    width: 90%;
+    height: 90%;
+    padding: 45% 0;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1e90ff;
+    transition: none;
+    backface-visibility: hidden;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .card .front,
+  .card .back {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    box-sizing: border-box;
+    width: 90%;
+    height: 90%;
+    padding: 45% 0;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1e90ff;
+    transition: none;
+    backface-visibility: hidden;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .card .front,
+  .card .back {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    box-sizing: border-box;
+    width: 90%;
+    height: 90%;
+    padding: 45% 0;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1e90ff;
+    transition: none;
+    backface-visibility: hidden;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .card .front,
+  .card .back {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    box-sizing: border-box;
+    width: 90%;
+    height: 90%;
+    padding: 45% 0;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1e90ff;
+    transition: none;
+    backface-visibility: hidden;
+  }
 }
 
 .card .front,
@@ -14,20 +94,17 @@
   position: absolute;
   top: 5%;
   left: 5%;
-
   box-sizing: border-box;
   width: 90%;
   height: 90%;
+  padding: 45% 0;
   margin: 0 auto;
-  padding: 45% 0 45% 0;
-
-  cursor: pointer;
-  text-align: center;
-  background-color: #1e90ff;
   color: white;
-
+  text-align: center;
+  cursor: pointer;
+  background-color: #1e90ff;
+  transition: transform 0.75s ease-in-out;
   backface-visibility: hidden;
-  transition: transform .75s ease-in-out;
 }
 
 .card .front {
@@ -39,10 +116,12 @@
   transform: rotateY(-180deg);
 }
 
-.card:hover .front {
+.card:hover .front,
+.card:focus .front {
   transform: rotateY(180deg);
 }
 
-.card:hover .back {
+.card:hover .back,
+.card:focus .back {
   transform: rotateY(0deg);
 }

@@ -4,9 +4,10 @@ body {
   position: relative;
   max-width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
   padding: 0;
-  font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, 'Open Sans', Arial, sans-serif, serif;
+  margin: 0 auto;
+  font-family: Raleway, HelveticaNeue, 'Helvetica Neue', Helvetica, 'Open Sans',
+    Arial, sans-serif, serif;
 }
 
 *,
@@ -16,20 +17,36 @@ body {
   font-family: inherit;
 }
 
-.button {
-  display: block;
-  transition: background-color 0.2s ease-in, color 0.2s ease-in;
-  min-width: 3em;
-  margin: 0 auto;
-  padding: 0.5em 1em;
-  border: 1px solid #f03e3e;
-  outline: none;
-  background-color: #fff;
-  cursor: pointer;
-  color: #f03e3e;
+@media screen and (prefers-reduced-motion: reduce) {
+  .button {
+    display: block;
+    min-width: 3em;
+    padding: 0.5em 1em;
+    margin: 0 auto;
+    color: #f03e3e;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #f03e3e;
+    outline: none;
+    transition: none;
+  }
 }
 
-.button:hover {
-  background-color: #f03e3e;
+.button {
+  display: block;
+  min-width: 3em;
+  padding: 0.5em 1em;
+  margin: 0 auto;
+  color: #f03e3e;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #f03e3e;
+  outline: none;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.button:hover,
+.button:focus {
   color: #fff;
+  background-color: #f03e3e;
 }
