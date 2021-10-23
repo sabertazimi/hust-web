@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .js ./src",
     "start": "node src/index.js",
-    "test": "jest",
+    "test": "jest --config ./jest.config.js",
     "test:watch": "jest --watch"
   },
   "repository": {
