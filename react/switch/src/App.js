@@ -6,7 +6,7 @@ function App() {
   const [value, setValue] = useState(false);
 
   return (
-    <div className="App">
+    <div className="app">
       <Switch
         isOn={value}
         onColor="#EF476F"
