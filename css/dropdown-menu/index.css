@@ -1,3 +1,9 @@
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
 * {
   transition: all 0.3s;
 }
@@ -14,9 +20,9 @@ body {
   left: 20px;
   display: block;
   width: 5%;
+  padding: 10px;
   margin: auto;
   margin-bottom: auto;
-  padding: 10px;
   color: #111;
   text-align: center;
 }
@@ -33,84 +39,41 @@ body {
   left: 380px;
 }
 
-.dropdown label {
-  display: block;
-  padding: 5px;
-  background-color: #111;
-  color: #fff;
-}
-
-.dropdown__list {
-  perspective: 1000px;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none inside;
-}
-
-.dropdown__list li {
-  background-color: #111;
-  display: none;
-}
-
-.dropdown__link {
-  display: block;
-  margin: 0;
-  padding: 5px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.dropdown__toggle {
-  cursor: pointer;
-  display: none;
-}
-
-.dropdown__toggle ~ label {
-  cursor: pointer;
-}
-
-.dropdown__toggle:checked ~ .dropdown__list li {
-  display: block;
-}
-
-.dropdown__list li {
-  transform-origin: top center;
-  opacity: 0;
-  animation-duration: 300ms;
-  animation-timing-function:  ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.dropdown__list li:nth-child(1) {
-  animation-delay: 0;
-}
-
-.dropdown__list li:nth-child(2) {
-  animation-delay: 100ms;
-}
-
-.dropdown__list li:nth-child(3) {
-  animation-delay: 200ms;
-}
-
-.dropdown__list li:nth-child(4) {
-  animation-delay: 300ms;
-}
-
-.dropdown__list li:nth-child(5) {
-  animation-delay: 400ms;
+@media screen and (prefers-reduced-motion: reduce) {
+  .dropdown-1 li {
+    animation: none;
+  }
 }
 
 .dropdown-1 li {
   animation-name: dropdown-1;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .dropdown-2 li {
+    animation: none;
+  }
+}
+
 .dropdown-2 li {
   animation-name: dropdown-2;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .dropdown-3 li {
+    animation: none;
+  }
+}
+
 .dropdown-3 li {
   animation-name: dropdown-3;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .dropdown-4 li {
+    transform-origin: top right;
+    animation: none;
+  }
 }
 
 .dropdown-4 li {
@@ -118,55 +81,126 @@ body {
   animation-name: dropdown-4;
 }
 
+.dropdown label {
+  display: block;
+  padding: 5px;
+  color: #fff;
+  background-color: #111;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-list {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none inside;
+  perspective: 1000px;
+}
+
+.dropdown-list li {
+  display: none;
+  background-color: #111;
+  opacity: 0%;
+  transform-origin: top center;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.dropdown-list li:nth-child(1) {
+  animation-delay: 0;
+}
+
+.dropdown-list li:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.dropdown-list li:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.dropdown-list li:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.dropdown-list li:nth-child(5) {
+  animation-delay: 400ms;
+}
+
+.dropdown-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.dropdown-toggle ~ label {
+  cursor: pointer;
+}
+
+.dropdown-toggle:checked ~ .dropdown-list li {
+  display: block;
+}
+
 /* animation for list */
 
 @keyframes dropdown-1 {
   0% {
-    opacity: 0;
+    opacity: 0%;
     transform: rotateX(-90deg);
   }
+
   60% {
-    transform: rotateX(50deg)
+    transform: rotateX(50deg);
   }
+
   100% {
-    opacity: 1;
+    opacity: 100%;
     transform: rotateX(0);
   }
 }
 
 @keyframes dropdown-2 {
   0% {
-    opacity: 0;
+    opacity: 0%;
     transform: rotateY(-90deg) translateY(30px);
   }
+
   100% {
-    opacity: 1;
+    opacity: 100%;
     transform: rotateY(0) translateY(0);
   }
 }
 
 @keyframes dropdown-3 {
   0% {
-    opacity: 0;
+    opacity: 0%;
     transform: scale(0.5) translateY(-30px);
   }
+
   80% {
-    opacity: 1;
+    opacity: 100%;
     transform: scale(1.2);
   }
+
   100% {
-    opacity: 1;
+    opacity: 100%;
     transform: rotateY(0) translateY(0);
   }
 }
 
 @keyframes dropdown-4 {
   0% {
-    opacity: 0;
+    opacity: 0%;
     transform: rotate(-30deg) translateX(30px);
   }
+
   100% {
-    opacity: 1;
+    opacity: 100%;
     transform: rotate(0) translateX(0);
   }
 }

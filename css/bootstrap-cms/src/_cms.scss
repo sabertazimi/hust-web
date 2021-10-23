@@ -30,9 +30,8 @@ $violet-list: (
   '6': #be4bdb,
   '7': #ae3ec9,
   '8': #9c36b5,
-  '9': #862e9c
+  '9': #862e9c,
 ) !default;
-
 $violet-0: map-get($violet-list, '0') !default;
 $violet-1: map-get($violet-list, '1') !default;
 $violet-2: map-get($violet-list, '2') !default;
@@ -43,7 +42,6 @@ $violet-6: map-get($violet-list, '6') !default;
 $violet-7: map-get($violet-list, '7') !default;
 $violet-8: map-get($violet-list, '8') !default;
 $violet-9: map-get($violet-list, '9') !default;
-
 $violet: $violet-9;
 $green: #37b24d;
 $cyan: #1c7ed6;
@@ -60,7 +58,6 @@ $colors: (
   'yellow': $yellow,
   'red': $red,
 );
-
 $primary: $violet;
 $success: $green;
 $info: $cyan;
@@ -92,23 +89,19 @@ $border-radius: 0;
 $navbar-nav-link-padding-x: 1.5rem;
 $nav-link-padding-x: 1.5rem;
 $nav-link-padding-y: 1rem;
-
 $navbar-light-color: $violet-3;
 $navbar-light-hover-color: $violet-5;
 $navbar-light-active-color: $violet-9;
 $navbar-light-toggler-border-color: $violet-1;
-
 $navbar-dark-color: $violet-3;
 $navbar-dark-hover-color: $violet-5;
 $navbar-dark-active-color: $violet-1;
 $navbar-dark-toggler-border-color: $violet-1;
-
 $nav-tabs-border-color: $primary;
 $nav-tabs-link-hover-border-color: $violet-5;
 $nav-tabs-link-active-color: $violet-9;
 $nav-tabs-link-active-bg: $violet-3;
 $nav-tabs-link-active-border-color: $violet-1;
-
 $nav-pills-link-active-color: $white;
 $nav-pills-link-active-bg: $primary;
 
@@ -133,7 +126,7 @@ $card-bg: $violet-0;
 // custom breadcrumb
 $breadcrumb-bg: $violet-0;
 $breadcrumb-active-color: $violet-3;
-$breadcrumb-divider: quote('>');
+$breadcrumb-divider: '>';
 
 // custom form
 $input-btn-padding-y: 0.75rem;
