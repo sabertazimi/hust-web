@@ -25,16 +25,16 @@ jobs:
           architecture: x64
           registry-url: https://registry.npmjs.org/
           cache: 'yarn'
-      - name: Installation
+      - name: Install dependencies
         run: |
           yarn
-      - name: Code linting
+      - name: Run linter tests
         run: |
           yarn lint
-      - name: Unit testing
+      - name: Run unit tests
         run: |
           yarn test
-      - name: Building work
+      - name: Build applications
         run: |
           yarn build
       - name: Deploy to Github Pages
