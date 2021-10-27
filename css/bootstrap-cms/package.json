@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-cms",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "description": "CMS custom theme for Bootstrap 4",
   "main": "./src/index.js",
   "scripts": {

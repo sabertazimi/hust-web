@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/sabertazimi/hust-web/compare/v2.5.1...v2.6.0) (2021-10-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency graphql to ^15.6.1 ([#297](https://github.com/sabertazimi/hust-web/issues/297)) ([32082ee](https://github.com/sabertazimi/hust-web/commit/32082eed9298554b4204797bc70df2fadfe0a1ff))
+
+
+
+
+
 ## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
 
 

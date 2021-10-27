@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/sabertazimi/hust-web/compare/v2.5.1...v2.6.0) (2021-10-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency commander to ^8.3.0 ([#347](https://github.com/sabertazimi/hust-web/issues/347)) ([d89cbd9](https://github.com/sabertazimi/hust-web/commit/d89cbd94ffa6070b987e40994e8b63f91ff2b0ea))
+
+
+
+
+
 ## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
 
 

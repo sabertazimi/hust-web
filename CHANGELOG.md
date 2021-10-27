@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/sabertazimi/hust-web/compare/v2.5.1...v2.6.0) (2021-10-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency apollo-server-express to ^3.4.0 ([#320](https://github.com/sabertazimi/hust-web/issues/320)) ([8e41711](https://github.com/sabertazimi/hust-web/commit/8e41711e3d33c785d76fca3ca62287a315d7e927))
+* **deps:** update dependency async-validator to ^4.0.5 ([#312](https://github.com/sabertazimi/hust-web/issues/312)) ([f4198cd](https://github.com/sabertazimi/hust-web/commit/f4198cd7b546008209481210277730a0f2940d17))
+* **deps:** update dependency async-validator to ^4.0.7 ([#340](https://github.com/sabertazimi/hust-web/issues/340)) ([fc43e20](https://github.com/sabertazimi/hust-web/commit/fc43e20add5cc0e7f2b7fac09a2033155bffdc98))
+* **deps:** update dependency commander to ^8.3.0 ([#347](https://github.com/sabertazimi/hust-web/issues/347)) ([d89cbd9](https://github.com/sabertazimi/hust-web/commit/d89cbd94ffa6070b987e40994e8b63f91ff2b0ea))
+* **deps:** update dependency express-rate-limit to ^5.4.1 ([#296](https://github.com/sabertazimi/hust-web/issues/296)) ([9c33150](https://github.com/sabertazimi/hust-web/commit/9c33150e4d6eb9a04df6a9c67a6e4dd7a6b3c4d8))
+* **deps:** update dependency express-rate-limit to ^5.5.0 ([#321](https://github.com/sabertazimi/hust-web/issues/321)) ([636df80](https://github.com/sabertazimi/hust-web/commit/636df80fbf8aa1efc65004a9eda24308bd99bcf3))
+* **deps:** update dependency graphql to ^15.6.1 ([#297](https://github.com/sabertazimi/hust-web/issues/297)) ([32082ee](https://github.com/sabertazimi/hust-web/commit/32082eed9298554b4204797bc70df2fadfe0a1ff))
+* **deps:** update dependency react-icons to ^4.3.1 ([87f69ad](https://github.com/sabertazimi/hust-web/commit/87f69ad32a0cd088f011e37b950f40af9ecea88f))
+* **deps:** update dependency socket.io to ^4.3.1 ([#327](https://github.com/sabertazimi/hust-web/issues/327)) ([3193cd4](https://github.com/sabertazimi/hust-web/commit/3193cd42494bdb664f0ba789915347c54d8edb1b))
+* **deps:** update dependency socket.io-client to ^4.3.2 ([#328](https://github.com/sabertazimi/hust-web/issues/328)) ([2c817c2](https://github.com/sabertazimi/hust-web/commit/2c817c20a7e56dd2a55e079d8c8d15f64ec544d9))
+* **deps:** update dependency styled-components to ^5.3.3 ([#341](https://github.com/sabertazimi/hust-web/issues/341)) ([59eda3f](https://github.com/sabertazimi/hust-web/commit/59eda3fca8c793e153522f06e92af2b4163532d8))
+* **deps:** update dependency typeorm to ^0.2.38 ([#282](https://github.com/sabertazimi/hust-web/issues/282)) ([c5ebe75](https://github.com/sabertazimi/hust-web/commit/c5ebe75459222f41922829abceceefa90b1b4e05))
+* **deps:** update socket.io packages ([#322](https://github.com/sabertazimi/hust-web/issues/322)) ([012b949](https://github.com/sabertazimi/hust-web/commit/012b9496d75e00c8c7e30705b3dbd75f3d1113c4))
+
+
+### Features
+
+* **sass:** ship to `dart-sass`, drop `node-sass` ([50d0558](https://github.com/sabertazimi/hust-web/commit/50d0558378401bb4bbe4e8c574d560afa2a0a08e))
+
+
+
+
+
 ## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
 
 

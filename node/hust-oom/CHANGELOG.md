@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/sabertazimi/hust-oom/compare/v2.5.1...v2.6.0) (2021-10-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency express-rate-limit to ^5.4.1 ([#296](https://github.com/sabertazimi/hust-oom/issues/296)) ([9c33150](https://github.com/sabertazimi/hust-oom/commit/9c33150e4d6eb9a04df6a9c67a6e4dd7a6b3c4d8))
+* **deps:** update dependency express-rate-limit to ^5.5.0 ([#321](https://github.com/sabertazimi/hust-oom/issues/321)) ([636df80](https://github.com/sabertazimi/hust-oom/commit/636df80fbf8aa1efc65004a9eda24308bd99bcf3))
+* **deps:** update dependency socket.io to ^4.3.1 ([#327](https://github.com/sabertazimi/hust-oom/issues/327)) ([3193cd4](https://github.com/sabertazimi/hust-oom/commit/3193cd42494bdb664f0ba789915347c54d8edb1b))
+* **deps:** update dependency socket.io-client to ^4.3.2 ([#328](https://github.com/sabertazimi/hust-oom/issues/328)) ([2c817c2](https://github.com/sabertazimi/hust-oom/commit/2c817c20a7e56dd2a55e079d8c8d15f64ec544d9))
+* **deps:** update socket.io packages ([#322](https://github.com/sabertazimi/hust-oom/issues/322)) ([012b949](https://github.com/sabertazimi/hust-oom/commit/012b9496d75e00c8c7e30705b3dbd75f3d1113c4))
+
+
+### Features
+
+* **sass:** ship to `dart-sass`, drop `node-sass` ([50d0558](https://github.com/sabertazimi/hust-oom/commit/50d0558378401bb4bbe4e8c574d560afa2a0a08e))
+
+
+
+
+
 ## [2.5.1](https://github.com/sabertazimi/hust-oom/compare/v2.5.0...v2.5.1) (2021-10-02)
 
 

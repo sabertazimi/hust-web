@@ -1,6 +1,6 @@
 {
   "name": "ife-2016-task26",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "description": "task 26",
   "scripts": {
     "build": "yarn build:prepare && gulp build && yarn build:post",

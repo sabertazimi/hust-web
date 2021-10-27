@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/sabertazimi/hust-web/compare/v2.5.1...v2.6.0) (2021-10-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency async-validator to ^4.0.5 ([#312](https://github.com/sabertazimi/hust-web/issues/312)) ([f4198cd](https://github.com/sabertazimi/hust-web/commit/f4198cd7b546008209481210277730a0f2940d17))
+* **deps:** update dependency async-validator to ^4.0.7 ([#340](https://github.com/sabertazimi/hust-web/issues/340)) ([fc43e20](https://github.com/sabertazimi/hust-web/commit/fc43e20add5cc0e7f2b7fac09a2033155bffdc98))
+
+
+
+
+
 ## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
 
 **Note:** Version bump only for package ife-2018-collection

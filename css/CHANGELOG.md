@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/sabertazimi/hust-web/compare/v2.5.1...v2.6.0) (2021-10-27)
+
+
+### Features
+
+* **sass:** ship to `dart-sass`, drop `node-sass` ([50d0558](https://github.com/sabertazimi/hust-web/commit/50d0558378401bb4bbe4e8c574d560afa2a0a08e))
+
+
+
+
+
 ## [2.5.1](https://github.com/sabertazimi/hust-web/compare/v2.5.0...v2.5.1) (2021-10-02)
 
 
