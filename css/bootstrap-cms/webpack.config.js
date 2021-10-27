@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const packageJson = require('./package.json');
 
 const devMode = process.env.NODE_ENV !== 'production';
-const useSass = !!packageJson.devDependencies['node-sass'];
+const useSass = !!packageJson.devDependencies['sass'];
 
 const styleLoader = [
   devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
