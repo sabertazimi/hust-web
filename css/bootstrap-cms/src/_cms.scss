@@ -1,24 +1,4 @@
-// @function color($key: 'blue') {
-//   @return map-get($colors, $key);
-// }
-
-// @function theme-color($key: 'primary') {
-//   @return map-get($theme-colors, $key);
-// }
-
-// @function gray($key: '100') {
-//   @return map-get($grays, $key);
-// }
-
-// @function theme-color-level($color-name: 'primary', $level: 0) {
-//   $color: theme-color($color-name);
-//   $color-base: if($level > 0, #000, #fff);
-//   $level: abs($level);
-
-//   @return mix($color-base, $color, $level * $theme-color-interval);
-// }
-
-// color contrast: color-yiq(#000), color-yiq(theme-color('dark'))
+@use 'sass:map';
 
 $violet-list: (
   '0': #f8f0fc,
@@ -32,16 +12,16 @@ $violet-list: (
   '8': #9c36b5,
   '9': #862e9c,
 ) !default;
-$violet-0: map-get($violet-list, '0') !default;
-$violet-1: map-get($violet-list, '1') !default;
-$violet-2: map-get($violet-list, '2') !default;
-$violet-3: map-get($violet-list, '3') !default;
-$violet-4: map-get($violet-list, '4') !default;
-$violet-5: map-get($violet-list, '5') !default;
-$violet-6: map-get($violet-list, '6') !default;
-$violet-7: map-get($violet-list, '7') !default;
-$violet-8: map-get($violet-list, '8') !default;
-$violet-9: map-get($violet-list, '9') !default;
+$violet-0: map.get($violet-list, '0') !default;
+$violet-1: map.get($violet-list, '1') !default;
+$violet-2: map.get($violet-list, '2') !default;
+$violet-3: map.get($violet-list, '3') !default;
+$violet-4: map.get($violet-list, '4') !default;
+$violet-5: map.get($violet-list, '5') !default;
+$violet-6: map.get($violet-list, '6') !default;
+$violet-7: map.get($violet-list, '7') !default;
+$violet-8: map.get($violet-list, '8') !default;
+$violet-9: map.get($violet-list, '9') !default;
 $violet: $violet-9;
 $green: #37b24d;
 $cyan: #1c7ed6;
