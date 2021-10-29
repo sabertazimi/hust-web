@@ -7111,7 +7111,7 @@ __metadata:
     cross-env: ^7.0.3
     css-loader: ^6.4.0
     eslint: ^8.1.0
-    eslint-webpack-plugin: ^3.0.1
+    eslint-webpack-plugin: ^3.1.0
     file-loader: ^6.2.0
     html-loader: ^3.0.0
     html-webpack-plugin: ^5.4.0
@@ -7889,7 +7889,7 @@ __metadata:
     cross-env: ^7.0.3
     css-loader: ^6.4.0
     eslint: ^8.1.0
-    eslint-webpack-plugin: ^3.0.1
+    eslint-webpack-plugin: ^3.1.0
     express: ^4.17.1
     express-rate-limit: ^5.5.0
     html-loader: ^3.0.0
@@ -10990,7 +10990,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-webpack-plugin@npm:^3.0.1, eslint-webpack-plugin@npm:^3.1.0":
+"eslint-webpack-plugin@npm:^3.1.0":
   version: 3.1.0
   resolution: "eslint-webpack-plugin@npm:3.1.0"
   dependencies:
@@ -12276,7 +12276,7 @@ fsevents@^1.2.7:
     cross-env: ^7.0.3
     css-loader: ^6.4.0
     eslint: ^8.1.0
-    eslint-webpack-plugin: ^3.0.1
+    eslint-webpack-plugin: ^3.1.0
     html-loader: ^3.0.0
     html-webpack-plugin: ^5.4.0
     mini-css-extract-plugin: ^2.4.3
@@ -17645,7 +17645,7 @@ fsevents@^1.2.7:
     cross-env: ^7.0.3
     css-loader: ^6.4.0
     eslint: ^8.1.0
-    eslint-webpack-plugin: ^3.0.1
+    eslint-webpack-plugin: ^3.1.0
     html-loader: ^3.0.0
     html-webpack-plugin: ^5.4.0
     mini-css-extract-plugin: ^2.4.3
@@ -22519,7 +22519,7 @@ resolve@^2.0.0-next.3:
     cross-env: ^7.0.3
     css-loader: ^6.4.0
     eslint: ^8.1.0
-    eslint-webpack-plugin: ^3.0.1
+    eslint-webpack-plugin: ^3.1.0
     html-loader: ^3.0.0
     html-webpack-plugin: ^5.4.0
     mini-css-extract-plugin: ^2.4.3
