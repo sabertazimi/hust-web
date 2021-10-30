@@ -5,7 +5,8 @@ import './index.css';
 
 router.add({ rule: '/', Component: App, target: '#app' });
 
-Object.keys(Tasks).forEach((task) => {
+Object.keys(Tasks).forEach(task => {
+  // eslint-disable-next-line import/namespace
   const Task = Tasks[task];
   router.add({ rule: `/${task}`, Component: Task, target: '#app' });
 });
