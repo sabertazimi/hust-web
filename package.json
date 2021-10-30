@@ -67,6 +67,7 @@
     "./ife/2018",
     "./ife/2018/basic/mis",
     "./ife/2018/basic/oop",
+    "./ife/2018/mvvm",
     "./js",
     "./js/mpm",
     "./node/hust-oom",
