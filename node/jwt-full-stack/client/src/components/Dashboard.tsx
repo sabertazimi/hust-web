@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { Alert, Spin, Button } from 'antd';
 import { useUserQuery, useLogoutMutation } from '../query';
 import Auth from '../auth';
@@ -7,7 +7,7 @@ import Auth from '../auth';
 interface Props {}
 
 const Dashboard: React.FC<Props> = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { data, loading, error } = useUserQuery();
   const [logout, { client }] = useLogoutMutation();
 
@@ -15,12 +15,12 @@ const Dashboard: React.FC<Props> = () => {
     await logout();
     Auth.setAccessToken('');
     await client!.resetStore();
-    setTimeout(() => history.push('/login'), 0);
-  }, [logout, history, client]);
+    setTimeout(() => navigate('/login'), 0);
+  }, [logout, navigate, client]);
 
   if (error) {
     Auth.setAccessToken('');
-    setTimeout(() => history.push('/login'), 0);
+    setTimeout(() => navigate('/login'), 0);
     return <Alert message="Haven't logged in" type="info" showIcon />;
   }
 

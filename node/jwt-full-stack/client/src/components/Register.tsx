@@ -1,7 +1,7 @@
 import { Button, Checkbox, Form, FormProps, Input, message } from 'antd';
 import { Rule } from 'rc-field-form/lib/interface';
 import React, { useCallback, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { breakpoints } from '../config';
 import { useRegisterMutation } from '../query';
 
@@ -18,7 +18,7 @@ type FormValues = {
 
 const RegistrationForm: React.FC<Props> = () => {
   const [form] = Form.useForm();
-  const history = useHistory();
+  const navigate = useNavigate();
   const [register] = useRegisterMutation();
   const [confirmDirty, setConfirmDirty] = useState(false);
 
@@ -35,13 +35,13 @@ const RegistrationForm: React.FC<Props> = () => {
         });
 
         if (response.data!.register) {
-          setTimeout(() => history.push('/'), 0);
+          setTimeout(() => navigate('/'), 0);
         } else {
           message.error(`Email ${email} already registered`);
         }
       });
     },
-    [form, register, history]
+    [form, register, navigate]
   );
 
   const handleConfirmBlur = useCallback(
