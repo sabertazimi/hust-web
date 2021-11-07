@@ -1,6 +1,6 @@
 import { Button, Checkbox, Form, FormProps, Input, message } from 'antd';
 import React, { useCallback } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../auth';
 import { breakpoints } from '../config';
 import { useLoginMutation, UserDocument } from '../query';
@@ -15,7 +15,7 @@ type FormValues = {
 
 const NormalLoginForm: React.FC<Props> = () => {
   const [form] = Form.useForm();
-  const history = useHistory();
+  const navigate = useNavigate();
   const [login] = useLoginMutation();
 
   const handleSubmit = useCallback(
@@ -45,14 +45,14 @@ const NormalLoginForm: React.FC<Props> = () => {
 
         if (response.data!.login.accessToken) {
           Auth.setAccessToken(response.data!.login.accessToken);
-          setTimeout(() => history.push('/dashboard'), 0);
+          setTimeout(() => navigate('/dashboard'), 0);
         } else {
           Auth.setAccessToken('');
           message.error('Non-existent user or wrong password. Please retry');
         }
       });
     },
-    [form, history, login]
+    [form, navigate, login]
   );
 
   return (
