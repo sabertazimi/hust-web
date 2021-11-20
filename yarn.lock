@@ -7275,7 +7275,7 @@ __metadata:
     stylelint-webpack-plugin: ^3.1.0
     typescript: ^4.4.4
     url-loader: ^4.1.1
-    webpack: ^5.64.1
+    webpack: ^5.64.2
     webpack-cli: ^4.9.1
     webpack-dev-server: ^4.5.0
   languageName: unknown
@@ -8058,7 +8058,7 @@ __metadata:
     stylelint: ^14.0.1
     stylelint-webpack-plugin: ^3.1.0
     typescript: ^4.4.4
-    webpack: ^5.64.1
+    webpack: ^5.64.2
     webpack-cli: ^4.9.1
     webpack-dev-server: ^4.5.0
   languageName: unknown
@@ -12438,7 +12438,7 @@ fsevents@^1.2.7:
     stylelint: ^14.0.1
     stylelint-webpack-plugin: ^3.1.0
     typescript: ^4.4.4
-    webpack: ^5.64.1
+    webpack: ^5.64.2
     webpack-cli: ^4.9.1
     webpack-dev-server: ^4.5.0
   languageName: unknown
@@ -17384,7 +17384,7 @@ fsevents@^1.2.7:
     postcss: ^8.3.11
     postcss-loader: ^6.2.0
     style-loader: ^3.3.1
-    webpack: ^5.64.1
+    webpack: ^5.64.2
     webpack-cli: ^4.9.1
     webpack-dev-server: ^4.5.0
   languageName: unknown
@@ -17419,7 +17419,7 @@ fsevents@^1.2.7:
     react: ^17.0.2
     react-dom: ^17.0.2
     style-loader: ^3.3.1
-    webpack: ^5.64.1
+    webpack: ^5.64.2
     webpack-cli: ^4.9.1
     webpack-dev-server: ^4.5.0
   languageName: unknown
@@ -17817,7 +17817,7 @@ fsevents@^1.2.7:
     stylelint: ^14.0.1
     stylelint-webpack-plugin: ^3.1.0
     typescript: ^4.4.4
-    webpack: ^5.64.1
+    webpack: ^5.64.2
     webpack-cli: ^4.9.1
     webpack-dev-server: ^4.5.0
   languageName: unknown
@@ -18060,7 +18060,7 @@ fsevents@^1.2.7:
     stylelint: ^14.0.1
     stylelint-webpack-plugin: ^3.1.0
     typescript: ^4.4.4
-    webpack: ^5.64.1
+    webpack: ^5.64.2
     webpack-cli: ^4.9.1
     webpack-dev-server: ^4.5.0
   languageName: unknown
@@ -22697,7 +22697,7 @@ resolve@^2.0.0-next.3:
     stylelint: ^14.0.1
     stylelint-webpack-plugin: ^3.1.0
     typescript: ^4.4.4
-    webpack: ^5.64.1
+    webpack: ^5.64.2
     webpack-cli: ^4.9.1
     webpack-dev-server: ^4.5.0
   languageName: unknown
@@ -26589,9 +26589,9 @@ typescript@^4.4.4:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.62.1, webpack@npm:^5.64.1":
-  version: 5.64.1
-  resolution: "webpack@npm:5.64.1"
+"webpack@npm:^5.62.1, webpack@npm:^5.64.2":
+  version: 5.64.2
+  resolution: "webpack@npm:5.64.2"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -26622,7 +26622,7 @@ typescript@^4.4.4:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: d2a1baddaed03f2ce70c13501b89935d4bb4af30b4accb0d2dfbd00ec6f491eaf46272346cedcf013b477e131c8cc202ee0b2d2c51ece1cfb713fd2d98b80a52
+  checksum: e02fcd3bfdc7e3322291b476af60f46dc4a31ec4349af4d1d47018b8e449820968d4ab8f1e8b313dd5cfcf1b47c7f976fe39fde73411d03c173a692c3dae428e
   languageName: node
   linkType: hard
 
