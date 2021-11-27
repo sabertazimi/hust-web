@@ -18029,7 +18029,7 @@ fsevents@^1.2.7:
     postcss: ^8.4.4
     postcss-loader: ^6.2.1
     prettier: ^2.5.0
-    san: ^3.10.10
+    san: ^3.11.0
     san-loader: ^0.3.1
     san-router: ^1.2.4
     style-loader: ^3.3.1
@@ -22885,10 +22885,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"san@npm:^3.10.10, san@npm:^3.9.0":
-  version: 3.10.10
-  resolution: "san@npm:3.10.10"
-  checksum: e2c6c5d97852e7c98db9109f194e07198b6bfe0e54a31796f2f22c7834399ca383ddfd44ee5e5d54b01b2c0f670c56c865553ac324878c63383d4bc939c00e3c
+"san@npm:^3.11.0, san@npm:^3.9.0":
+  version: 3.11.0
+  resolution: "san@npm:3.11.0"
+  checksum: 8c2bbd7846501787697c4d4596a37695ce5952b8465c2f891662d9c74b7f18659b8edcc3159f46b3f62d193ae550dcf0e9cfec0c15e952f9672c38a8c2eb5ed1
   languageName: node
   linkType: hard
 
