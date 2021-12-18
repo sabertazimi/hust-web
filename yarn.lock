@@ -7260,7 +7260,7 @@ __metadata:
     copy-webpack-plugin: ^10.1.0
     cross-env: ^7.0.3
     css-loader: ^6.5.1
-    eslint: ^8.4.1
+    eslint: ^8.5.0
     eslint-webpack-plugin: ^3.1.1
     file-loader: ^6.2.0
     html-loader: ^3.0.1
@@ -8038,7 +8038,7 @@ __metadata:
     concurrently: ^6.5.0
     cross-env: ^7.0.3
     css-loader: ^6.5.1
-    eslint: ^8.4.1
+    eslint: ^8.5.0
     eslint-webpack-plugin: ^3.1.1
     express: ^4.17.2
     express-rate-limit: ^5.5.1
@@ -11182,9 +11182,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.2.0, eslint@npm:^8.4.1":
-  version: 8.4.1
-  resolution: "eslint@npm:8.4.1"
+"eslint@npm:^8.2.0, eslint@npm:^8.5.0":
+  version: 8.5.0
+  resolution: "eslint@npm:8.5.0"
   dependencies:
     "@eslint/eslintrc": ^1.0.5
     "@humanwhocodes/config-array": ^0.9.2
@@ -11226,7 +11226,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: d962cd7cd0f68ddc2412f47154b8992ad3af987cf47fa6e60e51a2b7d32a91f934388f7d29e2c45b16b7ac69f0d220d0a483189ec6ba43a8a480110c34f158f9
+  checksum: c1a9e26070520a308cc30b62ba0d37d5b115ed23987a93219819537bdea9398e6ebe57c27d97be36ecc83b5162c72e82ecb0a9e5b44b7992980f9be90eb5c4b3
   languageName: node
   linkType: hard
 
@@ -12440,7 +12440,7 @@ fsevents@^1.2.7:
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.5.1
-    eslint: ^8.4.1
+    eslint: ^8.5.0
     eslint-webpack-plugin: ^3.1.1
     html-loader: ^3.0.1
     html-webpack-plugin: ^5.5.0
@@ -13882,7 +13882,7 @@ fsevents@^1.2.7:
     "@dg-scripts/stylelint-config": ^5.5.10
     chalk: ^4.1.2
     consola: ^2.15.3
-    eslint: ^8.4.1
+    eslint: ^8.5.0
     lerna: ^4.0.0
     prettier: ^2.5.1
     semver: ^7.3.5
@@ -17784,7 +17784,7 @@ fsevents@^1.2.7:
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.5.1
-    eslint: ^8.4.1
+    eslint: ^8.5.0
     eslint-webpack-plugin: ^3.1.1
     html-loader: ^3.0.1
     html-webpack-plugin: ^5.5.0
@@ -17902,7 +17902,7 @@ fsevents@^1.2.7:
   dependencies:
     "@dg-scripts/eslint-config": ^5.5.10
     commander: ^8.3.0
-    eslint: ^8.4.1
+    eslint: ^8.5.0
     fs-extra: ^10.0.0
     gunzip-maybe: ^1.4.2
     jest: ^27.4.5
@@ -18017,7 +18017,7 @@ fsevents@^1.2.7:
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.5.1
-    eslint: ^8.4.1
+    eslint: ^8.5.0
     eslint-webpack-plugin: ^3.1.1
     html-loader: ^3.0.1
     html-webpack-plugin: ^5.5.0
@@ -22650,7 +22650,7 @@ resolve@^2.0.0-next.3:
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.5.1
-    eslint: ^8.4.1
+    eslint: ^8.5.0
     eslint-webpack-plugin: ^3.1.1
     html-loader: ^3.0.1
     html-webpack-plugin: ^5.5.0
