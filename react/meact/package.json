@@ -31,7 +31,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-transform-meact-jsx": "^0.1.2",
     "clean-webpack-plugin": "^4.0.0",
