@@ -6711,21 +6711,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.2.6, autoprefixer@npm:^10.4.0":
-  version: 10.4.0
-  resolution: "autoprefixer@npm:10.4.0"
+"autoprefixer@npm:^10.2.6, autoprefixer@npm:^10.4.0, autoprefixer@npm:^10.4.1":
+  version: 10.4.1
+  resolution: "autoprefixer@npm:10.4.1"
   dependencies:
-    browserslist: ^4.17.5
-    caniuse-lite: ^1.0.30001272
-    fraction.js: ^4.1.1
+    browserslist: ^4.19.1
+    caniuse-lite: ^1.0.30001294
+    fraction.js: ^4.1.2
     normalize-range: ^0.1.2
     picocolors: ^1.0.0
-    postcss-value-parser: ^4.1.0
+    postcss-value-parser: ^4.2.0
   peerDependencies:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 7d511c64daeaa13c7888b40b0394cd891fab1852a1f60165330c9e49ab70ac29ad1e3386665d86361661cf2bbe90cea42b78ea73cb77b373ffe30a8f4973a955
+  checksum: 96527cd62b88e44ad3949fd2dedcc771ece8818d0bfffffdffd9aa87e409e4c5c00cf0cda1ebe1dc75910a62052d33a7628adf3c13a1763ba7677c027250f88c
   languageName: node
   linkType: hard
 
@@ -7364,7 +7364,7 @@ __metadata:
     "@dg-scripts/eslint-config": ^5.5.10
     "@dg-scripts/stylelint-config": ^5.5.10
     "@popperjs/core": ^2.11.0
-    autoprefixer: ^10.4.0
+    autoprefixer: ^10.4.1
     babel-loader: ^8.2.3
     bootstrap: ^5.1.3
     clean-webpack-plugin: ^4.0.0
@@ -7474,18 +7474,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.0.0, browserslist@npm:^4.12.0, browserslist@npm:^4.14.5, browserslist@npm:^4.16.0, browserslist@npm:^4.16.5, browserslist@npm:^4.16.6, browserslist@npm:^4.17.5, browserslist@npm:^4.17.6, browserslist@npm:^4.6.4":
-  version: 4.17.6
-  resolution: "browserslist@npm:4.17.6"
+"browserslist@npm:^4.0.0, browserslist@npm:^4.12.0, browserslist@npm:^4.14.5, browserslist@npm:^4.16.0, browserslist@npm:^4.16.5, browserslist@npm:^4.16.6, browserslist@npm:^4.17.5, browserslist@npm:^4.17.6, browserslist@npm:^4.19.1, browserslist@npm:^4.6.4":
+  version: 4.19.1
+  resolution: "browserslist@npm:4.19.1"
   dependencies:
-    caniuse-lite: ^1.0.30001274
-    electron-to-chromium: ^1.3.886
+    caniuse-lite: ^1.0.30001286
+    electron-to-chromium: ^1.4.17
     escalade: ^3.1.1
     node-releases: ^2.0.1
     picocolors: ^1.0.0
   bin:
     browserslist: cli.js
-  checksum: 7191280a30621dcb9b285f7f22c462aacbd366a94fcacdac109b8fa1a2fdab826b6545ccb308ad40f5d80f4fc488ae1212af8b16342286b97a1418476a98f77c
+  checksum: c0777fd483691638fd6801e16c9d809e1d65f6d2b06db2e806654be51045cbab1452a89841a2c5caea2cbe19d621b4f1d391cffbb24512aa33280039ab345875
   languageName: node
   linkType: hard
 
@@ -7977,10 +7977,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001272, caniuse-lite@npm:^1.0.30001274":
-  version: 1.0.30001279
-  resolution: "caniuse-lite@npm:1.0.30001279"
-  checksum: c0330577718e4221caae92a1bee8131f546668001840cf66455d5aa6050797f44709865779c5cdcba7cbf32527004a743dc2879497d23f60478f8bbb203cfeeb
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001286, caniuse-lite@npm:^1.0.30001294":
+  version: 1.0.30001294
+  resolution: "caniuse-lite@npm:1.0.30001294"
+  checksum: 4e22649ef83781afbe6c81d6112ceac23c3ba29f91597ca1c14d323d5bfb646571edeb17436e76a29b07c8e9d75468655a2098a3e13dcc1438db47ff46fbb3ad
   languageName: node
   linkType: hard
 
@@ -8142,7 +8142,7 @@ __metadata:
     "@dg-scripts/eslint-config": ^5.5.10
     "@dg-scripts/stylelint-config": ^5.5.10
     "@livechat/ui-kit": ^0.5.0-20
-    autoprefixer: ^10.4.0
+    autoprefixer: ^10.4.1
     babel-loader: ^8.2.3
     body-parser: ^1.19.1
     clean-webpack-plugin: ^4.0.0
@@ -10543,10 +10543,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.886":
-  version: 1.3.895
-  resolution: "electron-to-chromium@npm:1.3.895"
-  checksum: 8280c14eb79bf202ecb34714757df6d551553db45b27e36a33cb4652b7c04a9e95ab6a2f1d3097cae5039b99282ab4ccb99f7a4990fcee45d8eea757fb398cb2
+"electron-to-chromium@npm:^1.4.17":
+  version: 1.4.30
+  resolution: "electron-to-chromium@npm:1.4.30"
+  checksum: ae786f52ee2530648e68264a6a771b6ca60d3c2b192f19e799be9aa5df0f9819d6a183f771497f37fb03df28846b968aab79252c79ca1f397ca030ccf7733c9f
   languageName: node
   linkType: hard
 
@@ -12343,10 +12343,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fraction.js@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "fraction.js@npm:4.1.1"
-  checksum: e5a1f81d73e32aabf4fbd6581a7b3dfabd9a449ceb97c7e71ed2931dd0607095622341100d7819741eb9b435eb4e0d4a040a69e411dc943fa9b3a3872f3a2e0f
+"fraction.js@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "fraction.js@npm:4.1.2"
+  checksum: a67eff2b599cb6546b77ce9c913bd0cccd646e1a525c793ba4e0bf5a399fc403f379227fca83423a6ea79d01e35c2f2b0f141ffa1d09e41377041268a53fb150
   languageName: node
   linkType: hard
 
@@ -12548,7 +12548,7 @@ fsevents@^1.2.7:
     "@babel/preset-react": ^7.16.7
     "@dg-scripts/eslint-config": ^5.5.10
     "@dg-scripts/stylelint-config": ^5.5.10
-    autoprefixer: ^10.4.0
+    autoprefixer: ^10.4.1
     babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -17458,7 +17458,7 @@ fsevents@^1.2.7:
     "@babel/plugin-proposal-object-rest-spread": ^7.16.7
     "@babel/preset-env": ^7.16.7
     "@babel/preset-react": ^7.16.7
-    autoprefixer: ^10.4.0
+    autoprefixer: ^10.4.1
     babel-loader: ^8.2.3
     babel-plugin-transform-meact-jsx: ^0.1.2
     clean-webpack-plugin: ^4.0.0
@@ -17491,7 +17491,7 @@ fsevents@^1.2.7:
     "@babel/plugin-proposal-object-rest-spread": ^7.16.7
     "@babel/preset-env": ^7.16.7
     "@babel/preset-react": ^7.16.7
-    autoprefixer: ^10.4.0
+    autoprefixer: ^10.4.1
     babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     css-loader: ^6.5.1
@@ -17892,7 +17892,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.16.7
     "@dg-scripts/eslint-config": ^5.5.10
     "@dg-scripts/stylelint-config": ^5.5.10
-    autoprefixer: ^10.4.0
+    autoprefixer: ^10.4.1
     babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -18125,7 +18125,7 @@ fsevents@^1.2.7:
     "@dg-scripts/eslint-config": ^5.5.10
     "@dg-scripts/stylelint-config": ^5.5.10
     async-validator: ^4.0.7
-    autoprefixer: ^10.4.0
+    autoprefixer: ^10.4.1
     babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -20774,10 +20774,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss-value-parser@npm:^4.0.2, postcss-value-parser@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "postcss-value-parser@npm:4.1.0"
-  checksum: 68a9ea27c780fa3cc350be37b47cc46385c61dd9627990909230e0e9c3debf6d5beb49006bd743a2e506cdd6fa7d07637f2d9504a394f67cc3011d1ff0134886
+"postcss-value-parser@npm:^4.0.2, postcss-value-parser@npm:^4.1.0, postcss-value-parser@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "postcss-value-parser@npm:4.2.0"
+  checksum: 819ffab0c9d51cf0acbabf8996dffbfafbafa57afc0e4c98db88b67f2094cb44488758f06e5da95d7036f19556a4a732525e84289a425f4f6fd8e412a9d7442f
   languageName: node
   linkType: hard
 
@@ -22744,7 +22744,7 @@ resolve@^2.0.0-next.3:
     "@babel/preset-env": ^7.16.7
     "@dg-scripts/eslint-config": ^5.5.10
     "@dg-scripts/stylelint-config": ^5.5.10
-    autoprefixer: ^10.4.0
+    autoprefixer: ^10.4.1
     babel-loader: ^8.2.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
