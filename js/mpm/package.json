@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.5.10",
-    "eslint": "^8.5.0",
+    "eslint": "^8.6.0",
     "jest": "^27.4.5",
     "prettier": "^2.5.1",
     "typescript": "^4.5.4"
