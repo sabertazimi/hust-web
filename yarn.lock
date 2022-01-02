@@ -8163,7 +8163,7 @@ __metadata:
     eslint: ^8.6.0
     eslint-webpack-plugin: ^3.1.1
     express: ^4.17.2
-    express-rate-limit: ^6.0.3
+    express-rate-limit: ^6.0.4
     html-loader: ^3.0.1
     html-webpack-plugin: ^5.5.0
     mini-css-extract-plugin: ^2.4.5
@@ -11604,12 +11604,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-rate-limit@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "express-rate-limit@npm:6.0.3"
+"express-rate-limit@npm:^6.0.4":
+  version: 6.0.4
+  resolution: "express-rate-limit@npm:6.0.4"
   peerDependencies:
     express: ^4
-  checksum: 081e7afbb76c6dcb841967e8afc2e6ba9ce98d7f9d0528ff9a42af93e5676f492362c31e233264bfe8f5680bfd4f52ac508d100146af9ee62f0597079aa8d344
+  checksum: 49381e36d2638f5f56d4e233c00be5cfb5cd47955eee28432416e406d8d58b42fe02df18079d71a2a17c6ff0c2c0e9b9ff7710c04a722761858ac9824931a04f
   languageName: node
   linkType: hard
 
