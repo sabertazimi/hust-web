@@ -7,8 +7,8 @@
     "build": "cross-env NODE_ENV=production webpack --mode production && yarn build:post",
     "build:post": "mkdir -p ../../../../build/ife/2018/basic/mis && mv ./build/* ../../../../build/ife/2018/basic/mis",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
-    "lint": "stylelint ./src/**/*.css && eslint --ext .js --ext .jsx ./src",
-    "lint:fix": "stylelint ./src/**/*.css --fix && eslint --ext .js --ext .jsx ./src --fix",
+    "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "start": "yarn dev"
   },
   "repository": {

@@ -1,6 +1,4 @@
-import {
-    createStore
-} from './medux';
+import { createStore } from './medux';
 
 import reducer from './reducer.js';
 

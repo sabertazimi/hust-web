@@ -10,6 +10,8 @@
     "build": "webpack --mode production && yarn build:post",
     "build:post": "mkdir -p ../../build/react/medux && mv ./build/* ../../build/react/medux",
     "dev": "webpack serve --port 2333 --mode development --open",
+    "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "start": "yarn dev"
   },
   "repository": {

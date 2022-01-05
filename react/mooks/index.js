@@ -1,4 +1,4 @@
-const React = (function() {
+const React = (function () {
   const hooks = [];
   let idx = 0;
 
@@ -32,7 +32,7 @@ const React = (function() {
 
   function render(Component) {
     idx = 0;
-    C = Component();
+    const C = Component();
     C.render();
 
     return C;
@@ -46,13 +46,15 @@ function App() {
   const [text, setText] = React.useState('apple');
 
   React.useEffect(() => {
+    // eslint-disable-next-line no-console
     console.log('"useEffect" called.');
   }, [text]);
 
   return {
+    // eslint-disable-next-line no-console
     render: () => console.log({ count, text }),
     click: () => setCount(count + 1),
-    type: word => setText(word)
+    type: word => setText(word),
   };
 }
 

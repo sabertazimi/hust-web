@@ -6,8 +6,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "client": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
-    "lint": "stylelint ./client/**/*.scss && eslint --ext .js --ext .jsx ./client ./server",
-    "lint:fix": "stylelint ./client/**/*.scss --fix && eslint --ext .js --ext .jsx ./client ./server --fix",
+    "lint": "stylelint ./client/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./client ./server",
+    "lint:fix": "stylelint ./client/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./client ./server --fix",
     "server": "nodemon ./server/index.js",
     "start": "concurrently \"yarn:server\" \"yarn:client\""
   },

@@ -12,6 +12,8 @@
     "build": "react-scripts build && yarn build:post",
     "build:post": "mkdir -p ../../build/react/styled-components-demo && mv ./build/* ../../build/react/styled-components-demo",
     "build:profile": "react-scripts build --profile",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "start": "react-scripts start",
     "start:https": "HTTPS=true react-scripts start",
     "test": "react-scripts test",
