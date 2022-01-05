@@ -1,6 +1,6 @@
 {
   "name": "meact",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "Minimal react-like library",
   "main": "./src/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "@babel/preset-react": "^7.16.7",
     "autoprefixer": "^10.4.1",
     "babel-loader": "^8.2.3",
-    "babel-plugin-transform-meact-jsx": "^0.1.2",
+    "babel-plugin-transform-meact-jsx": "^2.7.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "html-loader": "^3.0.1",

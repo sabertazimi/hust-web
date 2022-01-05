@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/sabertazimi/hust-web/compare/v2.6.0...v2.7.0) (2022-01-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prop-types to ^15.8.0 ([#481](https://github.com/sabertazimi/hust-web/issues/481)) ([8404a0b](https://github.com/sabertazimi/hust-web/commit/8404a0bb1064cf8d3ab70ddebbeaf80ec8d62efa))
+* **eslint:** add eslint for more packages ([#495](https://github.com/sabertazimi/hust-web/issues/495)) ([04c5f4d](https://github.com/sabertazimi/hust-web/commit/04c5f4de8a62ee5d65b18c44d3c3126814f66fc8))
+* **react-babel:** add imports specifiers checking ([#497](https://github.com/sabertazimi/hust-web/issues/497)) ([09f2436](https://github.com/sabertazimi/hust-web/commit/09f2436f4f33f97126f863cc8cace9bfe6611ea4))
+
+
+### Features
+
+* **react:** add babel plugin package ([#496](https://github.com/sabertazimi/hust-web/issues/496)) ([ef26f10](https://github.com/sabertazimi/hust-web/commit/ef26f100cda7fe0c8ff1c263ff18ac520ee9ec1f))
+
+
+
+
+
 # [2.6.0](https://github.com/sabertazimi/hust-web/compare/v2.5.1...v2.6.0) (2021-10-27)
 
 

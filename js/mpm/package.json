@@ -1,6 +1,6 @@
 {
   "name": "mpmjs",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "Minimal package manager",
   "main": "index.js",
   "scripts": {

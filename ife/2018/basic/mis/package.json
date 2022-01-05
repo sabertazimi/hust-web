@@ -1,6 +1,6 @@
 {
   "name": "mis",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "Management Information System",
   "main": "./src/index.js",
   "scripts": {

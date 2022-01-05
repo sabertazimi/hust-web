@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/sabertazimi/hust-web/compare/v2.6.0...v2.7.0) (2022-01-05)
+
+
+### Bug Fixes
+
+* **eslint:** add eslint for more packages ([#495](https://github.com/sabertazimi/hust-web/issues/495)) ([04c5f4d](https://github.com/sabertazimi/hust-web/commit/04c5f4de8a62ee5d65b18c44d3c3126814f66fc8))
+
+
+
+
+
 # [2.6.0](https://github.com/sabertazimi/hust-web/compare/v2.5.1...v2.6.0) (2021-10-27)
 
 **Note:** Version bump only for package switch

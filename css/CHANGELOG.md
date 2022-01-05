@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/sabertazimi/hust-web/compare/v2.6.0...v2.7.0) (2022-01-05)
+
+
+### Bug Fixes
+
+* **css-bootstrap:** bump bootstrap to v5 ([7edb0ed](https://github.com/sabertazimi/hust-web/commit/7edb0ed99f7d38240643ff3702ad8b19ccf88806))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to ^31.1.0 ([#453](https://github.com/sabertazimi/hust-web/issues/453)) ([48eb378](https://github.com/sabertazimi/hust-web/commit/48eb378d23942f776068f626326048cf3b7a8c69))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v31 ([#367](https://github.com/sabertazimi/hust-web/issues/367)) ([11c2dec](https://github.com/sabertazimi/hust-web/commit/11c2decc9f903593b6c064ce4d5a2151f0db869f))
+* **deps:** update dependency @popperjs/core to ^2.11.0 ([#430](https://github.com/sabertazimi/hust-web/issues/430)) ([11b9a98](https://github.com/sabertazimi/hust-web/commit/11b9a98e9f3fd681834df26430630d0edc110053))
+* **eslint:** add eslint for more packages ([#495](https://github.com/sabertazimi/hust-web/issues/495)) ([04c5f4d](https://github.com/sabertazimi/hust-web/commit/04c5f4de8a62ee5d65b18c44d3c3126814f66fc8))
+
+
+
+
+
 # [2.6.0](https://github.com/sabertazimi/hust-web/compare/v2.5.1...v2.6.0) (2021-10-27)
 
 

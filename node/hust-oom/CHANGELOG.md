@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/sabertazimi/hust-oom/compare/v2.6.0...v2.7.0) (2022-01-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency body-parser to ^1.19.1 ([#448](https://github.com/sabertazimi/hust-oom/issues/448)) ([1e04df3](https://github.com/sabertazimi/hust-oom/commit/1e04df310957ef3da94620a38cc50244bb06cad6))
+* **deps:** update dependency express to ^4.17.2 ([#465](https://github.com/sabertazimi/hust-oom/issues/465)) ([ef0ff75](https://github.com/sabertazimi/hust-oom/commit/ef0ff75597c776f9e4138c9044c7e64735f8a634))
+* **deps:** update dependency express-rate-limit to ^5.5.1 ([#382](https://github.com/sabertazimi/hust-oom/issues/382)) ([529d1d3](https://github.com/sabertazimi/hust-oom/commit/529d1d3bcf3f6217cdd236bde2579b8e89980b07))
+* **deps:** update dependency express-rate-limit to ^6.0.1 ([#483](https://github.com/sabertazimi/hust-oom/issues/483)) ([39d925f](https://github.com/sabertazimi/hust-oom/commit/39d925facaf973a7b3737c8652c14c143389cdb5))
+* **deps:** update dependency express-rate-limit to ^6.0.3 ([#489](https://github.com/sabertazimi/hust-oom/issues/489)) ([89cbca0](https://github.com/sabertazimi/hust-oom/commit/89cbca0f2520f9735f1686df91a7911752f07834))
+* **deps:** update dependency express-rate-limit to ^6.0.4 ([#494](https://github.com/sabertazimi/hust-oom/issues/494)) ([f327d7d](https://github.com/sabertazimi/hust-oom/commit/f327d7d551b8f6152d15cca654fa36c2cfa773cb))
+* **deps:** update dependency express-rate-limit to v6 ([#482](https://github.com/sabertazimi/hust-oom/issues/482)) ([a6d0b17](https://github.com/sabertazimi/hust-oom/commit/a6d0b17474fbc0a3811c7a5e1b28729a2c2ff702))
+* **deps:** update dependency react-redux to ^7.2.6 ([#358](https://github.com/sabertazimi/hust-oom/issues/358)) ([0bb67a3](https://github.com/sabertazimi/hust-oom/commit/0bb67a3fa4ad2bad760e71ac0323aa32c2d5964a))
+* **deps:** update dependency react-router-dom to ^6.0.2 ([#392](https://github.com/sabertazimi/hust-oom/issues/392)) ([5caba88](https://github.com/sabertazimi/hust-oom/commit/5caba880ec71fb51dae92658849b91b0a6ffabd0))
+* **deps:** update dependency react-router-dom to ^6.1.0 ([#455](https://github.com/sabertazimi/hust-oom/issues/455)) ([643b2e3](https://github.com/sabertazimi/hust-oom/commit/643b2e3a5aecba9637c5e9810b27291d2436b8fb))
+* **deps:** update dependency react-router-dom to ^6.1.1 ([#458](https://github.com/sabertazimi/hust-oom/issues/458)) ([4a8e073](https://github.com/sabertazimi/hust-oom/commit/4a8e073f928553e8c805c86a6e705cd661a76d55))
+* **deps:** update dependency react-router-dom to ^6.2.1 ([#471](https://github.com/sabertazimi/hust-oom/issues/471)) ([f22ef57](https://github.com/sabertazimi/hust-oom/commit/f22ef57013dc7d61598167035a9fb94bdf9c59ed))
+* **deps:** update dependency react-router-dom to v6 ([#386](https://github.com/sabertazimi/hust-oom/issues/386)) ([b78a4aa](https://github.com/sabertazimi/hust-oom/commit/b78a4aa213a31582d97ed8f0722688046a204763))
+* **deps:** update dependency redux to ^4.1.2 ([#359](https://github.com/sabertazimi/hust-oom/issues/359)) ([74427ab](https://github.com/sabertazimi/hust-oom/commit/74427abdb4aea2c47caedc4d8c759b01b16dca1c))
+* **deps:** update dependency socket.io to ^4.3.2 ([#393](https://github.com/sabertazimi/hust-oom/issues/393)) ([cf5eafe](https://github.com/sabertazimi/hust-oom/commit/cf5eafe2935cb3d011060d850b1ba2df9c57c5c6))
+* **deps:** update socket.io packages to ^4.4.0 ([#411](https://github.com/sabertazimi/hust-oom/issues/411)) ([06c7ed3](https://github.com/sabertazimi/hust-oom/commit/06c7ed37e69033440ed38854e1e91c16a6d9306f))
+* **eslint:** add eslint for more packages ([#495](https://github.com/sabertazimi/hust-oom/issues/495)) ([04c5f4d](https://github.com/sabertazimi/hust-oom/commit/04c5f4de8a62ee5d65b18c44d3c3126814f66fc8))
+
+
+
+
+
 # [2.6.0](https://github.com/sabertazimi/hust-oom/compare/v2.5.1...v2.6.0) (2021-10-27)
 
 
