@@ -8,6 +8,7 @@
     "build:post": "mkdir -p ../../../../build/ife/2018/basic/mis && mv ./build/* ../../../../build/ife/2018/basic/mis",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint ./src/**/*.css && eslint --ext .js --ext .jsx ./src",
+    "lint:fix": "stylelint ./src/**/*.css --fix && eslint --ext .js --ext .jsx ./src --fix",
     "start": "yarn dev"
   },
   "repository": {
@@ -30,8 +31,8 @@
     "@babel/core": "^7.16.7",
     "@babel/plugin-proposal-object-rest-spread": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
-    "@dg-scripts/eslint-config": "^5.5.10",
-    "@dg-scripts/stylelint-config": "^5.5.10",
+    "@dg-scripts/eslint-config": "^5.6.1",
+    "@dg-scripts/stylelint-config": "^5.6.1",
     "autoprefixer": "^10.4.1",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",

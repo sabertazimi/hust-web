@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { CELL_SIZE, BLACK, WHITE } from '../constants';
+import { BLACK, CELL_SIZE, WHITE } from '../constants';
 
 import './Cell.scss';
 

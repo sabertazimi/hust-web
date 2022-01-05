@@ -2,7 +2,7 @@
  * Score Board optimization
  */
 
-import { EMPTY, ROWS, COLS, Score } from '../constants';
+import { COLS, EMPTY, ROWS, Score } from '../constants';
 
 import { BoardVisitor } from '../utils';
 

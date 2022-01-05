@@ -7,6 +7,7 @@
     "build:post": "cp -fr index.html index.css ./build",
     "clean": "lerna clean --yes",
     "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
     "release": "node scripts/release.js --push",
     "test": "lerna run test",
     "start": "yarn workspace styled-components-demo start"
@@ -40,8 +41,8 @@
   "homepage": "https://github.com/sabertazimi/hust-web",
   "packageManager": "yarn@3.1.1",
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.5.10",
-    "@dg-scripts/stylelint-config": "^5.5.10",
+    "@dg-scripts/eslint-config": "^5.6.1",
+    "@dg-scripts/stylelint-config": "^5.6.1",
     "chalk": "^4.1.2",
     "consola": "^2.15.3",
     "eslint": "^8.6.0",

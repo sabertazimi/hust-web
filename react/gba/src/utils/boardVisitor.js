@@ -1,4 +1,4 @@
-import { ROWS, COLS } from '../constants';
+import { COLS, ROWS } from '../constants';
 
 const BoardVisitor = {
   /**

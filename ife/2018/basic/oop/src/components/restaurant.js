@@ -1,5 +1,5 @@
 import { $log } from '../utils';
-import { STAFF_WAITER, STAFF_COOK } from './constants';
+import { STAFF_COOK, STAFF_WAITER } from './constants';
 
 import Menu from './menu';
 

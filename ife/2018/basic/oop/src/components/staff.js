@@ -1,4 +1,4 @@
-import { STAFF_UNEMPLOYED, STAFF_FREE, STAFF_BUSY } from './constants';
+import { STAFF_BUSY, STAFF_FREE, STAFF_UNEMPLOYED } from './constants';
 
 export default class Staff {
   constructor(name = '', salary = 0) {
