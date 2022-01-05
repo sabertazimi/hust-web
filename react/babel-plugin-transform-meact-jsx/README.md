@@ -1,3 +1,5 @@
 # babel-plugin-transform-meact-jsx
 
-Convert JSX to function calls.
+Convert JSX tags to `Meact` function calls:
+
+`JSX` -> `React.createElement` -> `Meact.createElement`.
