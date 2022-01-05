@@ -13,7 +13,10 @@ module.exports = babel => {
         },
       },
       ImportDeclaration(path) {
-        if (path.node.specifiers[0].local.name === 'Meact') {
+        if (
+          path.node.specifiers[0] &&
+          path.node.specifiers[0].local.name === 'Meact'
+        ) {
           isMeactContextEnabled = true;
         }
       },
