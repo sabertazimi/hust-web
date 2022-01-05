@@ -1,21 +1,11 @@
-import {
-    createElement
-} from './element.js';
-import {
-    Component
-} from './component.js';
-import {
-    render
-} from './reconciler.js';
+import { createElement } from './element.js';
+import { Component } from './component.js';
+import { render } from './reconciler.js';
 
-export default {
-    createElement,
-    Component,
-    render
+const Meact = {
+  createElement,
+  Component,
+  render,
 };
 
-export {
-    createElement,
-    Component,
-    render
-};
+export default Meact;

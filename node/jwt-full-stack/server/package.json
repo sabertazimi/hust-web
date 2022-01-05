@@ -4,6 +4,8 @@
   "description": "Awesome project developed with TypeORM.",
   "scripts": {
     "dev": "nodemon",
+    "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "start": "ts-node src/index.ts"
   },
   "nodemonConfig": {

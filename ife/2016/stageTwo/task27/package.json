@@ -7,6 +7,8 @@
     "build:prepare": "rm -fr ../../../../build/ife/2016/stageTwo/task27 && mkdir -p ../../../../build/ife/2016/stageTwo/task27",
     "build:post": "mv dist/* ../../../../build/ife/2016/stageTwo/task27",
     "dev": "gulp",
+    "lint": "stylelint ./src/**/*.{css,scss}",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix",
     "start": "yarn dev"
   },
   "repository": {

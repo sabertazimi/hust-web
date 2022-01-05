@@ -13,6 +13,8 @@
   "scripts": {
     "build": "react-scripts build && yarn build:post",
     "build:post": "mkdir -p ../../build/react/hooks-form && mv ./build/* ../../build/react/hooks-form",
+    "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },

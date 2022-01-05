@@ -4,6 +4,8 @@
   "scripts": {
     "build": "react-scripts build",
     "gen": "graphql-codegen -r dotenv/config --config codegen.yml",
+    "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },

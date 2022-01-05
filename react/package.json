@@ -10,6 +10,8 @@
     "url": "https://github.com/sabertazimi/hust-web"
   },
   "scripts": {
-    "build": "mkdir -p ../build/react && cp -fr index.html index.css mooks ../build/react"
+    "build": "mkdir -p ../build/react && cp -fr index.html index.css mooks ../build/react",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./mooks",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./mooks --fix"
   }
 }
