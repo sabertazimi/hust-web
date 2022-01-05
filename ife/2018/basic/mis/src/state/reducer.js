@@ -1,5 +1,5 @@
 import sourceData from '../data';
-import { SHOW_ALL, FILTER_ALL, FILTER_DATA } from './constants';
+import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from './constants';
 
 const initialFilters = {
   region: ['north', 'south', 'east'],

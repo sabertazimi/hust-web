@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BLACK, WHITE, DEATH, ROWS, COLS } from '../constants';
+import { BLACK, COLS, DEATH, ROWS, WHITE } from '../constants';
 
 import Game from '../core';
 import Grid from './Grid';

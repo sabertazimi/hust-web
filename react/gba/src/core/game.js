@@ -1,4 +1,4 @@
-import { EMPTY, AIMode } from '../constants';
+import { AIMode, EMPTY } from '../constants';
 
 import SM from './stateMachine';
 import AI from './ai';

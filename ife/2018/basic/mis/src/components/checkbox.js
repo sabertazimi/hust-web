@@ -1,4 +1,4 @@
-import { SHOW_ALL, FILTER_ALL, FILTER_DATA } from '../state/constants';
+import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from '../state/constants';
 
 import createAction from '../state/action';
 import store from '../state/store';

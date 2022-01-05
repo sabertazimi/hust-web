@@ -7,6 +7,7 @@
     "build:post": "cp -fr index.html index.css ./build",
     "clean": "lerna clean --yes",
     "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
     "release": "node scripts/release.js --push",
     "test": "lerna run test",
     "start": "yarn workspace styled-components-demo start"

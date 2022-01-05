@@ -1,4 +1,4 @@
-import { EMPTY, BLACK, DEATH, ROWS, COLS } from '../constants';
+import { BLACK, COLS, DEATH, EMPTY, ROWS } from '../constants';
 
 import { BoardVisitor } from '../utils';
 

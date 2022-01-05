@@ -1,4 +1,4 @@
-import { LOGIN, ADD_FRIEND, DELETE_FRIEND, SEND_MESSAGE } from './types';
+import { ADD_FRIEND, DELETE_FRIEND, LOGIN, SEND_MESSAGE } from './types';
 
 const actions = {
   login(...args) {

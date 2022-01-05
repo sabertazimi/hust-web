@@ -7,6 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "client": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint ./client/**/*.scss && eslint --ext .js --ext .jsx ./client ./server",
+    "lint:fix": "stylelint ./client/**/*.scss --fix && eslint --ext .js --ext .jsx ./client ./server --fix",
     "server": "nodemon ./server/index.js",
     "start": "concurrently \"yarn:server\" \"yarn:client\""
   },

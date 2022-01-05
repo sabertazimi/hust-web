@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { Form, Dashboard } from './components';
+import { Dashboard, Form } from './components';
 
 import './index.scss';
 

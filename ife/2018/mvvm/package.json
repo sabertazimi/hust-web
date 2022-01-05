@@ -8,6 +8,7 @@
     "build:post": "mkdir -p ../../../build/ife/2018/mvvm && mv ./build/* ../../../build/ife/2018/mvvm",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint ./src/**/*.css && eslint --ext .js ./src",
+    "lint:fix": "stylelint ./src/**/*.css --fix && eslint --ext .js ./src --fix",
     "start": "yarn dev"
   },
   "repository": {

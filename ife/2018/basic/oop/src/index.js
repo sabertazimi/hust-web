@@ -1,4 +1,4 @@
-import { Restaurant, Waiter, Cook, Customer } from './components';
+import { Cook, Customer, Restaurant, Waiter } from './components';
 
 import { sleep } from './utils';
 
