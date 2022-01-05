@@ -6961,12 +6961,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-transform-meact-jsx@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "babel-plugin-transform-meact-jsx@npm:0.1.2"
-  checksum: 125cea96e4eca6012b83c4c42fa84368d0996d3eca3097854ec58998d690bca8b6470713dce5ccaf2772c9f5896b0782607a866fcd0cd9de0c684d71c15cb935
-  languageName: node
-  linkType: hard
+"babel-plugin-transform-meact-jsx@^0.1.2, babel-plugin-transform-meact-jsx@workspace:react/babel-plugin-transform-meact-jsx":
+  version: 0.0.0-use.local
+  resolution: "babel-plugin-transform-meact-jsx@workspace:react/babel-plugin-transform-meact-jsx"
+  languageName: unknown
+  linkType: soft
 
 "babel-plugin-transform-react-remove-prop-types@npm:^0.4.24":
   version: 0.4.24
