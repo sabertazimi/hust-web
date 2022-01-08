@@ -8155,8 +8155,8 @@ __metadata:
     redux: ^4.1.2
     sass: ^1.45.2
     sass-loader: ^12.4.0
-    socket.io: ^4.4.0
-    socket.io-client: ^4.4.0
+    socket.io: ^4.4.1
+    socket.io-client: ^4.4.1
     style-loader: ^3.3.1
     stylelint: ^14.2.0
     stylelint-webpack-plugin: ^3.1.0
@@ -23731,9 +23731,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"socket.io-client@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "socket.io-client@npm:4.4.0"
+"socket.io-client@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "socket.io-client@npm:4.4.1"
   dependencies:
     "@socket.io/component-emitter": ~3.0.0
     backo2: ~1.0.2
@@ -23741,7 +23741,7 @@ resolve@^2.0.0-next.3:
     engine.io-client: ~6.1.1
     parseuri: 0.0.6
     socket.io-parser: ~4.1.1
-  checksum: a56c2327709439dbf84a06130fabc9234b074b8d4e469de220af631ad686896ce51860209a209d10650f878f82d3068129545ed32ca55f6b606786a61b303a34
+  checksum: 4c7f77f439b72f851fa162603b45bdabc94154ad6bd7b1d1c1658b45cd25d7f495293c08f71cd3ce96bccc477045d99840c10a92e1da9c13e9a5ff939edde30d
   languageName: node
   linkType: hard
 
@@ -23766,9 +23766,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"socket.io@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "socket.io@npm:4.4.0"
+"socket.io@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "socket.io@npm:4.4.1"
   dependencies:
     accepts: ~1.3.4
     base64id: ~2.0.0
@@ -23776,7 +23776,7 @@ resolve@^2.0.0-next.3:
     engine.io: ~6.1.0
     socket.io-adapter: ~2.3.3
     socket.io-parser: ~4.0.4
-  checksum: 3e680f6969501d31200bfd9a420f23f923146343f329ba803d339715e4ef673a27a3250fe598d321b86ed1880f2873e56a2567fab070c2622238aedb84abd536
+  checksum: a559ae52359f1ca3ce5a347368cf985c72259e1ab1bf2bf769ca0add5db34e2a86f4e183a58f37f32676ec482c71fedb7b08d873dc31cf581f5ba0797a8382fe
   languageName: node
   linkType: hard
 
