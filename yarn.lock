@@ -4205,10 +4205,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.11.0":
-  version: 2.11.0
-  resolution: "@popperjs/core@npm:2.11.0"
-  checksum: 84d6f197d3ddfd8a5b05c7276c3692d8404c96128a946ab0a800b25567d8fc231928319c1f97a67e0817e76ce2a1b735589ef0f38f8e8835692408660a2395a1
+"@popperjs/core@npm:^2.11.2":
+  version: 2.11.2
+  resolution: "@popperjs/core@npm:2.11.2"
+  checksum: 5695bf020eda54636e16a62dc9b5fdd92beaf7b2d19f62fcef049d57c5cff92773562d80cbf760b217c3ec928da310eb24994ab6a00fd39dffa0af9b5dfc01a6
   languageName: node
   linkType: hard
 
@@ -7351,7 +7351,7 @@ __metadata:
     "@ckeditor/ckeditor5-build-classic": ^31.1.0
     "@dg-scripts/eslint-config": ^5.6.1
     "@dg-scripts/stylelint-config": ^5.6.1
-    "@popperjs/core": ^2.11.0
+    "@popperjs/core": ^2.11.2
     autoprefixer: ^10.4.2
     babel-loader: ^8.2.3
     bootstrap: ^5.1.3
