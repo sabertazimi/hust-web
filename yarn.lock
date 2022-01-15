@@ -7366,7 +7366,7 @@ __metadata:
     file-loader: ^6.2.0
     html-loader: ^3.1.0
     html-webpack-plugin: ^5.5.0
-    image-webpack-loader: ^8.0.1
+    image-webpack-loader: ^8.1.0
     mini-css-extract-plugin: ^2.4.6
     postcss: ^8.4.5
     postcss-loader: ^6.2.1
@@ -9616,16 +9616,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cwebp-bin@npm:^5.0.0":
-  version: 5.1.0
-  resolution: "cwebp-bin@npm:5.1.0"
+"cwebp-bin@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "cwebp-bin@npm:7.0.1"
   dependencies:
     bin-build: ^3.0.0
     bin-wrapper: ^4.0.1
-    logalot: ^2.1.0
   bin:
     cwebp: cli.js
-  checksum: c6a823083d9c510474cc9137d01fb4e9c4816b348c1dfa0138dc7721338363e5f30411662b921de0927faad6745b4179599cb524749478024376f0c06b51bb43
+  checksum: 89cdf06ee069161571b43153bbeeb1835b6dba1fcef12d19f8a9c289be74e035ff5679b2f45bdef8ee42a4cf71e3fb0d80f8a51d1b19c9c523bf3252685f667f
   languageName: node
   linkType: hard
 
@@ -11448,7 +11447,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"exec-buffer@npm:^3.0.0":
+"exec-buffer@npm:^3.0.0, exec-buffer@npm:^3.2.0":
   version: 3.2.0
   resolution: "exec-buffer@npm:3.2.0"
   dependencies:
@@ -14118,9 +14117,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"image-webpack-loader@npm:^8.0.1":
-  version: 8.0.1
-  resolution: "image-webpack-loader@npm:8.0.1"
+"image-webpack-loader@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "image-webpack-loader@npm:8.1.0"
   dependencies:
     imagemin: ^7.0.1
     imagemin-gifsicle: ^7.0.0
@@ -14128,7 +14127,7 @@ fsevents@^1.2.7:
     imagemin-optipng: ^8.0.0
     imagemin-pngquant: ^9.0.2
     imagemin-svgo: ^9.0.0
-    imagemin-webp: ^6.0.0
+    imagemin-webp: ^7.0.0
     loader-utils: ^2.0.0
     object-assign: ^4.1.1
     schema-utils: ^2.7.1
@@ -14145,7 +14144,7 @@ fsevents@^1.2.7:
       optional: true
     imagemin-webp:
       optional: true
-  checksum: 200256d3125f5d2ced1235207d7af5564d24fe26243ee9665e5ae74fb9ffae38a0c9625646bd9f4aa1d4029bd1d17e966bd70a9608b53ce66433fadedcd824fd
+  checksum: 2a9be1c1bf4b5ee8c10e70d04391805d90ab8686cac262fcd57e0debbc6c2c8c3b05bc09d873494a941a9dedee1aafea39d3613bdbd5ff61fbbd95f6067f657a
   languageName: node
   linkType: hard
 
@@ -14237,14 +14236,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"imagemin-webp@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "imagemin-webp@npm:6.0.0"
+"imagemin-webp@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "imagemin-webp@npm:7.0.0"
   dependencies:
-    cwebp-bin: ^5.0.0
-    exec-buffer: ^3.0.0
+    cwebp-bin: ^7.0.1
+    exec-buffer: ^3.2.0
     is-cwebp-readable: ^3.0.0
-  checksum: 10cc8a1af23a69e816caf240b780a7b55c32b3eae5a40a84da849a2466dafede189558e51d51ee57a8e95af7c04ff1d2e7322d5930b01d941ff3bd6736ee604b
+  checksum: 8f27c83b39936ce91767c6cef73f5f524a3c78db5c736deccfd2990c8d40074079a0a76c0d36220216b2d2e99bbf8a57e1dcdf766fa02ea7648274537597352f
   languageName: node
   linkType: hard
 
