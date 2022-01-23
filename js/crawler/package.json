@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/sabertazimi/hust-web#readme",
   "dependencies": {
-    "puppeteer-core": "^13.0.1"
+    "puppeteer-core": "^13.1.1"
   }
 }
