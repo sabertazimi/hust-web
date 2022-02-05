@@ -60,7 +60,7 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "nodemon": "^2.0.15",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.6",
     "postcss-loader": "^6.2.1",
     "prettier": "^2.5.1",
     "sass": "^1.49.0",
