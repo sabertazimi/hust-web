@@ -22,7 +22,7 @@
     "ext": "ts"
   },
   "dependencies": {
-    "apollo-server-express": "^3.6.2",
+    "apollo-server-express": "^3.6.3",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
