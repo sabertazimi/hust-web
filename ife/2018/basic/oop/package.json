@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
   "devDependencies": {
-    "@babel/core": "^7.17.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.16.7",
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
     "@babel/preset-env": "^7.16.11",
     "@dg-scripts/eslint-config": "^5.6.2",
     "@dg-scripts/stylelint-config": "^5.6.2",
