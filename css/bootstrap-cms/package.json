@@ -48,7 +48,7 @@
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.1.0",
-    "mini-css-extract-plugin": "^2.5.3",
+    "mini-css-extract-plugin": "^2.6.0",
     "postcss": "^8.4.7",
     "postcss-loader": "^6.2.1",
     "precss": "^4.0.0",
