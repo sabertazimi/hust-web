@@ -40,7 +40,6 @@
     "./js",
     "./js/mpm",
     "./node/hust-oom",
-    "./node/jwt-full-stack/client",
     "./react",
     "./react/*"
   ]
