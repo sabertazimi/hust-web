@@ -1,13 +1,13 @@
 <template>
 <div class="calendar">
   <div class="calendar__header">
-    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.PREV_YEAR)">&lt;&lt;</div>
-    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.PREV_MONTH)">&lt;</div>
+    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.PREV_YEAR)">LL</div>
+    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.PREV_MONTH)">L</div>
     <div class="calendar__item calendar__header__item calendar__header_date">
      {{ selectedDateItem.year }} 年 {{ selectedDateItem.month + 1 }} 月
     </div>
-    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.NEXT_MONTH)">&gt;</div>
-    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.NEXT_YEAR)">&gt;&gt;</div>
+    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.NEXT_MONTH)">R</div>
+    <div class="calendar__item calendar__header__item" on-click="handleHeaderClick(OP.NEXT_YEAR)">RR</div>
   </div>
   <div class="calendar__week">
     <div s-for="weekday in weekdayList" class="calendar__item">
