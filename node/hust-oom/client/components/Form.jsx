@@ -1,7 +1,6 @@
 /* eslint-disable max-classes-per-file */
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import {
   SERVER_LOGIN_PATH,
   SERVER_SIGNUP_PATH,
@@ -10,6 +9,7 @@ import {
 import Actions from '../states/actions';
 import postData from '../utils/postData';
 import './Form.scss';
+import withRouter from './withRouter';
 
 const FormContext = React.createContext({});
 const FormProvider = FormContext.Provider;

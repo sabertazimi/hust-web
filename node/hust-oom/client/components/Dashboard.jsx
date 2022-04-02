@@ -20,10 +20,10 @@ import {
 } from '@livechat/ui-kit';
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import * as io from 'socket.io-client';
 import { SERVER_URL } from '../constants';
 import './Dashboard.scss';
+import withRouter from './withRouter';
 
 class ChatMessage {
   constructor(from = '', to = '', content = '') {

@@ -1,9 +1,8 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { createStore } from 'redux';
-import { reducer } from './states';
 import App from './App';
+import { reducer } from './states';
 
 const store = createStore(reducer);
-
-render(<App store={store} />, document.getElementById('root'));
+createRoot(document.getElementById('root')).render(<App store={store} />);
