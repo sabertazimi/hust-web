@@ -47,7 +47,7 @@
     "mini-css-extract-plugin": "^2.6.0",
     "postcss": "^8.4.12",
     "postcss-loader": "^6.2.1",
-    "prettier": "^2.6.1",
+    "prettier": "^2.6.2",
     "san-loader": "^0.3.4",
     "style-loader": "^3.3.1",
     "stylelint": "^14.6.1",
