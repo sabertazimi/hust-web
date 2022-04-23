@@ -48,7 +48,7 @@
     "@babel/preset-react": "^7.16.7",
     "@dg-scripts/eslint-config": "^5.9.0",
     "@dg-scripts/stylelint-config": "^5.9.0",
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.5",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^7.1.0",
@@ -83,7 +83,7 @@
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "redux": "^4.2.0",
-    "socket.io": "^4.4.1",
-    "socket.io-client": "^4.4.1"
+    "socket.io": "^4.5.0",
+    "socket.io-client": "^4.5.0"
   }
 }
