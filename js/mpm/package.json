@@ -49,7 +49,7 @@
     "gunzip-maybe": "^1.4.2",
     "log4js": "^6.4.5",
     "node-fetch": "^2.6.7",
-    "ora": "^5.4.1",
+    "ora": "^6.1.0",
     "semver": "^7.3.7",
     "tar-fs": "^2.1.1",
     "tar-stream": "^2.2.0"
