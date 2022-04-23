@@ -3968,10 +3968,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@socket.io/component-emitter@npm:~3.0.0":
-  version: 3.0.0
-  resolution: "@socket.io/component-emitter@npm:3.0.0"
-  checksum: b5e909dbb16bcf27958d1bfb8319f3255f3a50f62fde78ecf9a584f39f916b928fdc5661519892eea912da082c6413d671c1e67bde70725c75ee62956aa67c26
+"@socket.io/base64-arraybuffer@npm:~1.0.2":
+  version: 1.0.2
+  resolution: "@socket.io/base64-arraybuffer@npm:1.0.2"
+  checksum: fa3e58c7581643d0557969cd3bece20e198596df77968ff29ede6be329d488e65104bef900e68a67f39d8855abfa59baa2b08d96fb856504bd01cbdd8f52249c
+  languageName: node
+  linkType: hard
+
+"@socket.io/component-emitter@npm:~3.1.0":
+  version: 3.1.0
+  resolution: "@socket.io/component-emitter@npm:3.1.0"
+  checksum: db069d95425b419de1514dffe945cc439795f6a8ef5b9465715acf5b8b50798e2c91b8719cbf5434b3fe7de179d6cdcd503c277b7871cb3dd03febb69bdd50fa
   languageName: node
   linkType: hard
 
@@ -5849,12 +5856,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.2.6, autoprefixer@npm:^10.4.4":
-  version: 10.4.4
-  resolution: "autoprefixer@npm:10.4.4"
+"autoprefixer@npm:^10.2.6, autoprefixer@npm:^10.4.4, autoprefixer@npm:^10.4.5":
+  version: 10.4.5
+  resolution: "autoprefixer@npm:10.4.5"
   dependencies:
     browserslist: ^4.20.2
-    caniuse-lite: ^1.0.30001317
+    caniuse-lite: ^1.0.30001332
     fraction.js: ^4.2.0
     normalize-range: ^0.1.2
     picocolors: ^1.0.0
@@ -5863,7 +5870,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: bd42e23d71af0228b6b0b27d0d0b33c95e67562e55eb4ca0e221cf795a06482c90d565d6544a5f4090d8e303b09b200845fa2bcaaa707d1e8777974250dffe1f
+  checksum: 6c638d8f515a9c37776f9d6b1263e497768d9e8d8ad3b45d901513ba0f26c74df73f4afb84efd3253ab3d1c57803b4e2d97ad9b8919ef1955e373fcf24661213
   languageName: node
   linkType: hard
 
@@ -6167,13 +6174,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"backo2@npm:~1.0.2":
-  version: 1.0.2
-  resolution: "backo2@npm:1.0.2"
-  checksum: fda8d0a0f4810068d23715f2f45153146d6ee8f62dd827ce1e0b6cc3c8328e84ad61e11399a83931705cef702fe7cbb457856bf99b9bd10c4ed57b0786252385
-  languageName: node
-  linkType: hard
-
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
@@ -6185,13 +6185,6 @@ __metadata:
   version: 2.0.0
   resolution: "balanced-match@npm:2.0.0"
   checksum: 9a5caad6a292c5df164cc6d0c38e0eedf9a1413f42e5fece733640949d74d0052cfa9587c1a1681f772147fb79be495121325a649526957fd75b3a216d1fbc68
-  languageName: node
-  linkType: hard
-
-"base64-arraybuffer@npm:~1.0.1":
-  version: 1.0.1
-  resolution: "base64-arraybuffer@npm:1.0.1"
-  checksum: 04b6fe6818b1c79774fa8aea169063521ad177f2ba04d2a4a0f00fca297d516319b551a3cda76050263da751b4ffb07d939fc1b5eb155f0e429659733e60afb0
   languageName: node
   linkType: hard
 
@@ -6451,7 +6444,7 @@ __metadata:
     "@dg-scripts/eslint-config": ^5.9.0
     "@dg-scripts/stylelint-config": ^5.9.0
     "@popperjs/core": ^2.11.5
-    autoprefixer: ^10.4.4
+    autoprefixer: ^10.4.5
     babel-loader: ^8.2.5
     bootstrap: ^5.1.3
     clean-webpack-plugin: ^4.0.0
@@ -7059,10 +7052,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001317":
-  version: 1.0.30001317
-  resolution: "caniuse-lite@npm:1.0.30001317"
-  checksum: 0a5fc7fb8c54dde515c2d468e5fc9e0cf2e82dd40d596cdffed90f64c50b5dadd0ab0c25e04769d86488b3115f949abd31d54d1f74d0029b45fa8206a031f47a
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001317, caniuse-lite@npm:^1.0.30001332":
+  version: 1.0.30001332
+  resolution: "caniuse-lite@npm:1.0.30001332"
+  checksum: e54182ea42ab3d2ff1440f9a6480292f7ab23c00c188df7ad65586312e4da567e8bedd5cb5fb8f0ff4193dc027a54e17e0b3c0b6db5d5a3fb61c7726ff9c45b3
   languageName: node
   linkType: hard
 
@@ -7196,7 +7189,7 @@ __metadata:
     "@dg-scripts/eslint-config": ^5.9.0
     "@dg-scripts/stylelint-config": ^5.9.0
     "@livechat/ui-kit": ^0.5.0-20
-    autoprefixer: ^10.4.4
+    autoprefixer: ^10.4.5
     babel-loader: ^8.2.5
     body-parser: ^1.20.0
     clean-webpack-plugin: ^4.0.0
@@ -7221,8 +7214,8 @@ __metadata:
     redux: ^4.2.0
     sass: ^1.50.1
     sass-loader: ^12.6.0
-    socket.io: ^4.4.1
-    socket.io-client: ^4.4.1
+    socket.io: ^4.5.0
+    socket.io-client: ^4.5.0
     style-loader: ^3.3.1
     stylelint: ^14.7.1
     stylelint-webpack-plugin: ^3.2.0
@@ -9470,35 +9463,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"engine.io-client@npm:~6.1.1":
-  version: 6.1.1
-  resolution: "engine.io-client@npm:6.1.1"
+"engine.io-client@npm:~6.2.1":
+  version: 6.2.1
+  resolution: "engine.io-client@npm:6.2.1"
   dependencies:
-    "@socket.io/component-emitter": ~3.0.0
+    "@socket.io/component-emitter": ~3.1.0
     debug: ~4.3.1
-    engine.io-parser: ~5.0.0
-    has-cors: 1.1.0
-    parseqs: 0.0.6
-    parseuri: 0.0.6
+    engine.io-parser: ~5.0.3
     ws: ~8.2.3
     xmlhttprequest-ssl: ~2.0.0
-    yeast: 0.1.2
-  checksum: c2e1cec87ac8cf45842527bd072d1b2c5f14fbf9e57f110b4120335ed7bf5310a86da0d33b5906dd4774094ee499d534a498db467d3c1cb53c7a1109a593b05d
+  checksum: 9b226c64e9b34299bf9bf93f582fed36ad50fcf7fdd6f748683e4e654d46941e4a1fb482cb58a4d4cdc6ee86aeb80ea35980dd3d9384b5864d76421a5df4c7c5
   languageName: node
   linkType: hard
 
-"engine.io-parser@npm:~5.0.0":
-  version: 5.0.1
-  resolution: "engine.io-parser@npm:5.0.1"
+"engine.io-parser@npm:~5.0.3":
+  version: 5.0.3
+  resolution: "engine.io-parser@npm:5.0.3"
   dependencies:
-    base64-arraybuffer: ~1.0.1
-  checksum: a6ec070af0c0f74d15bdb08ec4929846da6e6c561863780129606ab00e93de0b0456e7a0cc2bb441b7d4c7df28a135156c62b9c20e4aee7f1f49343824b2d10a
+    "@socket.io/base64-arraybuffer": ~1.0.2
+  checksum: 88d664420a441dd02db17d110f7bbbd9efe971747918150bf666b82ee138df596a2f5038f461c8a01864c83af67cb202548364e4174543f8c0bf5f4776ca6e0d
   languageName: node
   linkType: hard
 
-"engine.io@npm:~6.1.0":
-  version: 6.1.0
-  resolution: "engine.io@npm:6.1.0"
+"engine.io@npm:~6.2.0":
+  version: 6.2.0
+  resolution: "engine.io@npm:6.2.0"
   dependencies:
     "@types/cookie": ^0.4.1
     "@types/cors": ^2.8.12
@@ -9508,9 +9497,9 @@ __metadata:
     cookie: ~0.4.1
     cors: ~2.8.5
     debug: ~4.3.1
-    engine.io-parser: ~5.0.0
+    engine.io-parser: ~5.0.3
     ws: ~8.2.3
-  checksum: 37ff47e24c471d47d01ee2afbe9e7603013e256424a554ab73794a5bd4f69f08a4ba7d51f68832dcee028894f74e19043e173a071f26fc1d31493847100fb106
+  checksum: cc485c5ba2e0c4f6ca02dcafd192b22f9dad89d01dc815005298780d3fb910db4cebab4696e8615290c473c2eeb259e8bee2a1fb7ab594d9c80f9f3485771911
   languageName: node
   linkType: hard
 
@@ -11329,7 +11318,7 @@ fsevents@^1.2.7:
     "@babel/preset-react": ^7.16.7
     "@dg-scripts/eslint-config": ^5.9.0
     "@dg-scripts/stylelint-config": ^5.9.0
-    autoprefixer: ^10.4.4
+    autoprefixer: ^10.4.5
     babel-loader: ^8.2.5
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -12189,13 +12178,6 @@ fsevents@^1.2.7:
   version: 1.0.1
   resolution: "has-bigints@npm:1.0.1"
   checksum: 44ab55868174470065d2e0f8f6def1c990d12b82162a8803c679699fa8a39f966e336f2a33c185092fe8aea7e8bf2e85f1c26add5f29d98f2318bd270096b183
-  languageName: node
-  linkType: hard
-
-"has-cors@npm:1.1.0":
-  version: 1.1.0
-  resolution: "has-cors@npm:1.1.0"
-  checksum: 549ce94113fd23895b22d71ade9809918577b8558cd4d701fe79045d8b1d58d87eba870260b28f6a3229be933a691c55653afd496d0fc52e98fd2ff577f01197
   languageName: node
   linkType: hard
 
@@ -15764,7 +15746,7 @@ fsevents@^1.2.7:
     "@babel/plugin-proposal-object-rest-spread": ^7.17.3
     "@babel/preset-env": ^7.16.11
     "@babel/preset-react": ^7.16.7
-    autoprefixer: ^10.4.4
+    autoprefixer: ^10.4.5
     babel-loader: ^8.2.5
     babel-plugin-transform-meact-jsx: ^2.7.0
     clean-webpack-plugin: ^4.0.0
@@ -15797,7 +15779,7 @@ fsevents@^1.2.7:
     "@babel/plugin-proposal-object-rest-spread": ^7.17.3
     "@babel/preset-env": ^7.16.11
     "@babel/preset-react": ^7.16.7
-    autoprefixer: ^10.4.4
+    autoprefixer: ^10.4.5
     babel-loader: ^8.2.5
     clean-webpack-plugin: ^4.0.0
     css-loader: ^6.7.1
@@ -16200,7 +16182,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.16.11
     "@dg-scripts/eslint-config": ^5.9.0
     "@dg-scripts/stylelint-config": ^5.9.0
-    autoprefixer: ^10.4.4
+    autoprefixer: ^10.4.5
     babel-loader: ^8.2.5
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -16405,7 +16387,7 @@ fsevents@^1.2.7:
     "@dg-scripts/eslint-config": ^5.9.0
     "@dg-scripts/stylelint-config": ^5.9.0
     async-validator: ^4.0.7
-    autoprefixer: ^10.4.4
+    autoprefixer: ^10.4.5
     babel-loader: ^8.2.5
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -17728,20 +17710,6 @@ fsevents@^1.2.7:
   version: 6.0.1
   resolution: "parse5@npm:6.0.1"
   checksum: 7d569a176c5460897f7c8f3377eff640d54132b9be51ae8a8fa4979af940830b2b0c296ce75e5bd8f4041520aadde13170dbdec44889975f906098ea0002f4bd
-  languageName: node
-  linkType: hard
-
-"parseqs@npm:0.0.6":
-  version: 0.0.6
-  resolution: "parseqs@npm:0.0.6"
-  checksum: 7fc4ff4ba59764060bb8529875f6d4313056ea6939ff579b22dd7bd6f6033035e1fd2d6a559ab48ef0a7fa29a9d7731c982bfd1594e9115141fe1c328485ce9e
-  languageName: node
-  linkType: hard
-
-"parseuri@npm:0.0.6":
-  version: 0.0.6
-  resolution: "parseuri@npm:0.0.6"
-  checksum: fa430e40f0c75293a28e5f1023da5f51a5038d5e34c48c517b0d5187143f6bcc67d3091a062b68765db4a22757e488c7d15854f9d1921f2c2b9afa5ca0629a84
   languageName: node
   linkType: hard
 
@@ -20706,7 +20674,7 @@ resolve@^2.0.0-next.3:
     "@babel/preset-env": ^7.16.11
     "@dg-scripts/eslint-config": ^5.9.0
     "@dg-scripts/stylelint-config": ^5.9.0
-    autoprefixer: ^10.4.4
+    autoprefixer: ^10.4.5
     babel-loader: ^8.2.5
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -21426,24 +21394,22 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"socket.io-adapter@npm:~2.3.3":
-  version: 2.3.3
-  resolution: "socket.io-adapter@npm:2.3.3"
-  checksum: 73890e0a33e48a9e4be83e5fa2b8ea9728d2a35ae2fed373cad4d6744c6512c0e1c735e7820df9821e58c4738dc355bdaec5aae30bc56f4d6a41d999596d0c82
+"socket.io-adapter@npm:~2.4.0":
+  version: 2.4.0
+  resolution: "socket.io-adapter@npm:2.4.0"
+  checksum: a84639946dce13547b95f6e09fe167cdcd5d80941afc2e46790cc23384e0fd3c901e690ecc9bdd600939ce6292261ee15094a0b486f797ed621cfc8783d87a0c
   languageName: node
   linkType: hard
 
-"socket.io-client@npm:^4.4.1":
-  version: 4.4.1
-  resolution: "socket.io-client@npm:4.4.1"
+"socket.io-client@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "socket.io-client@npm:4.5.0"
   dependencies:
-    "@socket.io/component-emitter": ~3.0.0
-    backo2: ~1.0.2
+    "@socket.io/component-emitter": ~3.1.0
     debug: ~4.3.2
-    engine.io-client: ~6.1.1
-    parseuri: 0.0.6
-    socket.io-parser: ~4.1.1
-  checksum: 4c7f77f439b72f851fa162603b45bdabc94154ad6bd7b1d1c1658b45cd25d7f495293c08f71cd3ce96bccc477045d99840c10a92e1da9c13e9a5ff939edde30d
+    engine.io-client: ~6.2.1
+    socket.io-parser: ~4.2.0
+  checksum: e3483e75cd587bb6432f2c7a7ae6a6cd9e1b667da6bc099d2128b6e95f178aaa2203fe8114793b79c6050808a572636ebda7a41d2db949ba3b0db0d6edb0e36f
   languageName: node
   linkType: hard
 
@@ -21458,27 +21424,27 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"socket.io-parser@npm:~4.1.1":
-  version: 4.1.1
-  resolution: "socket.io-parser@npm:4.1.1"
+"socket.io-parser@npm:~4.2.0":
+  version: 4.2.0
+  resolution: "socket.io-parser@npm:4.2.0"
   dependencies:
-    "@socket.io/component-emitter": ~3.0.0
+    "@socket.io/component-emitter": ~3.1.0
     debug: ~4.3.1
-  checksum: d762d01f372df393ef08fa409c62dffbc69bb9820eb78ee1d646e7679fff60a56366778d7bc78e044ffa4c1d85537d771292133506097d164ad3b9ff7f879ef1
+  checksum: 622467a6f13d507f5b830dc35404e99311dce11f89f3fa3fb5fc5f0e3b0395987743115c29ad814bc1b1bc9e4734b14f09398d2da174fa009f429fbefe2b6e54
   languageName: node
   linkType: hard
 
-"socket.io@npm:^4.4.1":
-  version: 4.4.1
-  resolution: "socket.io@npm:4.4.1"
+"socket.io@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "socket.io@npm:4.5.0"
   dependencies:
     accepts: ~1.3.4
     base64id: ~2.0.0
     debug: ~4.3.2
-    engine.io: ~6.1.0
-    socket.io-adapter: ~2.3.3
+    engine.io: ~6.2.0
+    socket.io-adapter: ~2.4.0
     socket.io-parser: ~4.0.4
-  checksum: a559ae52359f1ca3ce5a347368cf985c72259e1ab1bf2bf769ca0add5db34e2a86f4e183a58f37f32676ec482c71fedb7b08d873dc31cf581f5ba0797a8382fe
+  checksum: 22fa55c65c947ed2e4ce79f7daa84ba8603c4f51dd0ffd0d927f6ac742e077abe9d0a825946b5eb2c90ea2a11fb7587fb43d3407049c5aa5281cc3bfc9a88e09
   languageName: node
   linkType: hard
 
@@ -25077,13 +25043,6 @@ resolve@^2.0.0-next.3:
     buffer-crc32: ~0.2.3
     fd-slicer: ~1.1.0
   checksum: 7f21fe0bbad6e2cb130044a5d1d0d5a0e5bf3d8d4f8c4e6ee12163ce798fee3de7388d22a7a0907f563ac5f9d40f8699a223d3d5c1718da90b0156da6904022b
-  languageName: node
-  linkType: hard
-
-"yeast@npm:0.1.2":
-  version: 0.1.2
-  resolution: "yeast@npm:0.1.2"
-  checksum: 81a250b69f601fed541e9518eb2972e75631dd81231689503d7f288612d4eec793b29c208d6807fd6bfc4c2a43614d0c6db233739a4ae6223e244aaed6a885c0
   languageName: node
   linkType: hard
 
