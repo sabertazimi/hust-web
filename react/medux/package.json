@@ -29,10 +29,10 @@
   },
   "homepage": "https://github.com/sabertazimi/medux",
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.17.10",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
-    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "autoprefixer": "^10.4.5",
     "babel-loader": "^8.2.5",
@@ -50,7 +50,7 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }
