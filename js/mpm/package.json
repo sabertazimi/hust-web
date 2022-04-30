@@ -55,7 +55,7 @@
     "tar-stream": "^2.2.0"
   },
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.9.0",
+    "@dg-scripts/eslint-config": "^5.10.0",
     "eslint": "^8.14.0",
     "jest": "^28.0.3",
     "prettier": "^2.6.2",
