@@ -16482,7 +16482,7 @@ fsevents@^1.2.7:
     prettier: ^2.6.2
     san: ^3.11.3
     san-loader: ^0.3.4
-    san-router: ^1.2.4
+    san-router: ^2.0.0
     style-loader: ^3.3.1
     stylelint: ^14.8.1
     stylelint-webpack-plugin: ^3.2.0
@@ -20946,10 +20946,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"san-router@npm:^1.2.4":
-  version: 1.2.4
-  resolution: "san-router@npm:1.2.4"
-  checksum: a9c5967e820c6da0400d4665401e6784759622be9c1016aff0345dc2154e8aab7eb6be8b7f3fdbeedd338337e0de6ba28d3a94ed185e4fdaa11f0394ece99c83
+"san-router@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "san-router@npm:2.0.0"
+  checksum: 2c79a12042154eaf23e952457970350f744a28d449887044f55012a793e5f3655ef28b8cd30f4086f750d422c5c817ef768ed72d2b7747c9eb9189e754f7961d
   languageName: node
   linkType: hard
 
