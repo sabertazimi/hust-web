@@ -1,176 +1,148 @@
-const path = require('path');
+const path = require('node:path');
 const mpm = require('./mpm.js');
 
 describe('mpm.getPinnedReference', () => {
-  test('~version', () => {
-    expect.assertions(2);
-    return mpm
-      .getPinnedReference({
-        name: 'react',
-        reference: '~15.3.0',
-      })
-      .then(({ name, reference }) => {
-        expect(name).toBe('react');
-        expect(reference).toBe('15.3.2');
-      });
+  test('~version', async () => {
+    const { name, reference } = await mpm.getPinnedReference({
+      name: 'react',
+      reference: '~15.3.0',
+    });
+
+    expect(name).toBe('react');
+    expect(reference).toBe('15.3.2');
   });
 
-  test('version', () => {
-    expect.assertions(2);
-    return mpm
-      .getPinnedReference({
-        name: 'react',
-        reference: '15.3.0',
-      })
-      .then(({ name, reference }) => {
-        expect(name).toBe('react');
-        expect(reference).toBe('15.3.0');
-      });
+  test('version', async () => {
+    const { name, reference } = await mpm.getPinnedReference({
+      name: 'react',
+      reference: '15.3.0',
+    });
+
+    expect(name).toBe('react');
+    expect(reference).toBe('15.3.0');
   });
 
-  test('not version', () => {
-    expect.assertions(2);
-    return mpm
-      .getPinnedReference({
-        name: 'react',
-        reference: '/tmp/react-15.3.2.tar.gz',
-      })
-      .then(({ name, reference }) => {
-        expect(name).toBe('react');
-        expect(reference).toBe('/tmp/react-15.3.2.tar.gz');
-      });
+  test('not version', async () => {
+    const { name, reference } = await mpm.getPinnedReference({
+      name: 'react',
+      reference: '/tmp/react-15.3.2.tar.gz',
+    });
+
+    expect(name).toBe('react');
+    expect(reference).toBe('/tmp/react-15.3.2.tar.gz');
   });
 
-  test('not found package', () => {
-    expect.assertions(1);
-    return mpm
-      .getPinnedReference({
+  test('not found package', async () => {
+    await expect(
+      mpm.getPinnedReference({
         name: 'reacttt',
         reference: '~15.3.0',
       })
-      .catch(error => {
-        // eslint-disable-next-line jest/no-conditional-expect
-        expect(error).toEqual(new Error('Couldn\'t fetch package "reacttt"'));
-      });
+    ).rejects.toThrowError(new Error('Couldn\'t fetch package "reacttt"'));
   });
 
-  test('not found version', () => {
-    expect.assertions(1);
-    return mpm
-      .getPinnedReference({
+  test('not found version', async () => {
+    await expect(
+      mpm.getPinnedReference({
         name: 'react',
         reference: '~99.0.0',
       })
-      .catch(error => {
-        // eslint-disable-next-line jest/no-conditional-expect
-        expect(error).toEqual(
-          new Error(
-            'Couldn\'t find a version matching "~99.0.0" for package  "react"'
-          )
-        );
-      });
+    ).rejects.toThrowError(
+      new Error(
+        'Couldn\'t find a version matching "~99.0.0" for package  "react"'
+      )
+    );
   });
 });
 
 describe('mpm.fetchPackage', () => {
-  test('react-16.4.0', () => {
-    expect.assertions(2);
-    return mpm
-      .fetchPackage({
-        name: 'react',
-        reference: '16.4.0',
-      })
-      .then(buffer => {
-        expect(Buffer.isBuffer(buffer)).toBe(true);
-        expect(buffer.length).toBeGreaterThan(255);
-      });
+  test('react-16.4.0', async () => {
+    const buffer = await mpm.fetchPackage({
+      name: 'react',
+      reference: '16.4.0',
+    });
+
+    expect(Buffer.isBuffer(buffer)).toBe(true);
+    expect(buffer.length).toBeGreaterThan(255);
   });
 
-  test('local file', () => {
-    expect.assertions(2);
-    return mpm
-      .fetchPackage({
-        name: 'mpm',
-        reference: './src/mpm.js',
-      })
-      .then(buffer => {
-        expect(Buffer.isBuffer(buffer)).toBe(true);
-        expect(buffer.length).toBeGreaterThan(255);
-      });
+  test('local file', async () => {
+    const buffer = await mpm.fetchPackage({
+      name: 'mpm',
+      reference: './src/mpm.js',
+    });
+
+    expect(Buffer.isBuffer(buffer)).toBe(true);
+    expect(buffer.length).toBeGreaterThan(255);
   });
 
-  test('not found package', () => {
-    expect.assertions(1);
-    return mpm
-      .fetchPackage({
+  test('not found package', async () => {
+    await expect(
+      mpm.fetchPackage({
         name: 'react',
         reference: '99.0.0',
       })
-      .catch(error => {
-        // eslint-disable-next-line jest/no-conditional-expect
-        expect(error instanceof Error).toBe(true);
-      });
+    ).rejects.toThrow();
   });
 });
 
 describe('mpm.getPackageDependencies', () => {
-  test('react-16.4.0', () => {
-    expect.assertions(4);
-    return mpm
-      .getPackageDependencies({
-        name: 'react',
-        reference: '16.4.0',
-      })
-      .then(({ dependencies, devDependencies }) => {
-        expect(Array.isArray(dependencies)).toBe(true);
-        expect(Array.isArray(devDependencies)).toBe(true);
-        expect(dependencies.length).toBeGreaterThan(3);
-        expect(devDependencies.length).toBe(0);
-      });
+  test('react-16.4.0', async () => {
+    const { dependencies, devDependencies } = await mpm.getPackageDependencies({
+      name: 'react',
+      reference: '16.4.0',
+    });
+
+    expect(Array.isArray(dependencies)).toBe(true);
+    expect(Array.isArray(devDependencies)).toBe(true);
+    expect(dependencies.length).toBeGreaterThan(3);
+    expect(devDependencies.length).toBe(0);
   });
 
-  test('semver-5.5.0', () => {
-    expect.assertions(4);
-    return mpm
-      .getPackageDependencies({
-        name: 'semver',
-        reference: '5.5.0',
-      })
-      .then(({ dependencies, devDependencies }) => {
-        expect(Array.isArray(dependencies)).toBe(true);
-        expect(Array.isArray(devDependencies)).toBe(true);
-        expect(dependencies.length).toBe(0);
-        expect(devDependencies.length).toBe(1);
-      });
+  test('semver-5.5.0', async () => {
+    const { dependencies, devDependencies } = await mpm.getPackageDependencies({
+      name: 'semver',
+      reference: '5.5.0',
+    });
+
+    expect(Array.isArray(dependencies)).toBe(true);
+    expect(Array.isArray(devDependencies)).toBe(true);
+    expect(dependencies.length).toBe(0);
+    expect(devDependencies.length).toBe(1);
   });
 });
 
 describe('mpm.getPackageDependencyTree', () => {
-  test('mpm-0.1.0', () => {
+  beforeAll(() => {
     jest.setTimeout(30000);
+  });
+
+  afterAll(() => {
+    jest.setTimeout(5000);
+  });
+
+  test('mpm-0.1.0', async () => {
     const packageDependencies = [
       {
         name: 'semver',
         reference: '5.5.0',
       },
     ];
-    expect.assertions(4);
-    return mpm
-      .getPackageDependencyTree({
+
+    const { name, reference, dependencies } =
+      await mpm.getPackageDependencyTree({
         name: 'mpm',
         reference: null,
         dependencies: packageDependencies,
-      })
-      .then(({ name, reference, dependencies }) => {
-        expect(name).toBe('mpm');
-        expect(reference).toBe(null);
-        expect(Array.isArray(dependencies)).toBe(true);
-        expect(dependencies.length).toBe(1);
       });
+
+    expect(name).toBe('mpm');
+    expect(reference).toBe(null);
+    expect(Array.isArray(dependencies)).toBe(true);
+    expect(dependencies.length).toBe(1);
   });
 
-  test('should skip available package (exact match)', () => {
-    jest.setTimeout(30000);
+  test('should skip available package (exact match)', async () => {
     const packageDependencies = [
       {
         name: 'semver',
@@ -178,26 +150,24 @@ describe('mpm.getPackageDependencyTree', () => {
       },
     ];
     const available = new Map([['semver', '5.5.0']]);
-    expect.assertions(4);
-    return mpm
-      .getPackageDependencyTree(
+
+    const { name, reference, dependencies } =
+      await mpm.getPackageDependencyTree(
         {
           name: 'mpm',
           reference: null,
           dependencies: packageDependencies,
         },
         available
-      )
-      .then(({ name, reference, dependencies }) => {
-        expect(name).toBe('mpm');
-        expect(reference).toBe(null);
-        expect(Array.isArray(dependencies)).toBe(true);
-        expect(dependencies.length).toBe(0);
-      });
+      );
+
+    expect(name).toBe('mpm');
+    expect(reference).toBe(null);
+    expect(Array.isArray(dependencies)).toBe(true);
+    expect(dependencies.length).toBe(0);
   });
 
-  test('should skip available package (semver match)', () => {
-    jest.setTimeout(30000);
+  test('should skip available package (semver match)', async () => {
     const packageDependencies = [
       {
         name: 'semver',
@@ -205,35 +175,41 @@ describe('mpm.getPackageDependencyTree', () => {
       },
     ];
     const available = new Map([['semver', '5.6.0']]);
-    expect.assertions(4);
-    return mpm
-      .getPackageDependencyTree(
+
+    const { name, reference, dependencies } =
+      await mpm.getPackageDependencyTree(
         {
           name: 'mpm',
           reference: null,
           dependencies: packageDependencies,
         },
         available
-      )
-      .then(({ name, reference, dependencies }) => {
-        expect(name).toBe('mpm');
-        expect(reference).toBe(null);
-        expect(Array.isArray(dependencies)).toBe(true);
-        expect(dependencies.length).toBe(0);
-      });
+      );
+
+    expect(name).toBe('mpm');
+    expect(reference).toBe(null);
+    expect(Array.isArray(dependencies)).toBe(true);
+    expect(dependencies.length).toBe(0);
   });
 });
 
 describe('mpm.linkPackages', () => {
-  test('mpm-0.1.0', async () => {
+  beforeAll(() => {
     jest.setTimeout(60000);
+  });
+
+  afterAll(() => {
+    jest.setTimeout(5000);
+  });
+
+  test('mpm-0.1.0', async () => {
     const packageDependencies = [
       {
         name: 'semver',
         reference: '5.7.0',
       },
     ];
-    expect.assertions(1);
+
     await expect(
       mpm.linkPackages(
         {
