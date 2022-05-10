@@ -17,7 +17,7 @@ describe('mpm.getPinnedReference', () => {
         status: 204,
       })
     );
-    expect.assertions(1);
+
     await expect(
       mpm.getPinnedReference({
         name: 'react',
