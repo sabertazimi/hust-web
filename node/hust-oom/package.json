@@ -42,10 +42,10 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.17.10",
-    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
-    "@babel/preset-env": "^7.17.10",
-    "@babel/preset-react": "^7.16.7",
+    "@babel/core": "^7.18.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-react": "^7.17.12",
     "@dg-scripts/eslint-config": "^5.10.0",
     "@dg-scripts/stylelint-config": "^5.10.0",
     "autoprefixer": "^10.4.7",
@@ -60,10 +60,10 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "nodemon": "^2.0.16",
-    "postcss": "^8.4.13",
+    "postcss": "^8.4.14",
     "postcss-loader": "^6.2.1",
     "prettier": "^2.6.2",
-    "sass": "^1.51.0",
+    "sass": "^1.52.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.8.2",
@@ -83,7 +83,7 @@
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "redux": "^4.2.0",
-    "socket.io": "^4.5.0",
-    "socket.io-client": "^4.5.0"
+    "socket.io": "^4.5.1",
+    "socket.io-client": "^4.5.1"
   }
 }
