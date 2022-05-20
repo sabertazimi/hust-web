@@ -6525,7 +6525,7 @@ __metadata:
     image-webpack-loader: ^8.1.0
     mini-css-extract-plugin: ^2.6.0
     postcss: ^8.4.14
-    postcss-loader: ^6.2.1
+    postcss-loader: ^7.0.0
     precss: ^4.0.0
     prettier: ^2.6.2
     sass: ^1.52.0
@@ -7271,7 +7271,7 @@ __metadata:
     mini-css-extract-plugin: ^2.6.0
     nodemon: ^2.0.16
     postcss: ^8.4.14
-    postcss-loader: ^6.2.1
+    postcss-loader: ^7.0.0
     prettier: ^2.6.2
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -11405,7 +11405,7 @@ fsevents@^1.2.7:
     html-webpack-plugin: ^5.5.0
     mini-css-extract-plugin: ^2.6.0
     postcss: ^8.4.14
-    postcss-loader: ^6.2.1
+    postcss-loader: ^7.0.0
     prettier: ^2.6.2
     prop-types: ^15.8.1
     react: ^18.1.0
@@ -15835,7 +15835,7 @@ fsevents@^1.2.7:
     html-webpack-plugin: ^5.5.0
     mini-css-extract-plugin: ^2.6.0
     postcss: ^8.4.14
-    postcss-loader: ^6.2.1
+    postcss-loader: ^7.0.0
     style-loader: ^3.3.1
     webpack: ^5.72.1
     webpack-cli: ^4.9.2
@@ -15867,7 +15867,7 @@ fsevents@^1.2.7:
     html-webpack-plugin: ^5.5.0
     mini-css-extract-plugin: ^2.6.0
     postcss: ^8.4.14
-    postcss-loader: ^6.2.1
+    postcss-loader: ^7.0.0
     prettier: ^2.6.2
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -16273,7 +16273,7 @@ fsevents@^1.2.7:
     html-webpack-plugin: ^5.5.0
     mini-css-extract-plugin: ^2.6.0
     postcss: ^8.4.14
-    postcss-loader: ^6.2.1
+    postcss-loader: ^7.0.0
     prettier: ^2.6.2
     style-loader: ^3.3.1
     stylelint: ^14.8.2
@@ -16478,7 +16478,7 @@ fsevents@^1.2.7:
     html-webpack-plugin: ^5.5.0
     mini-css-extract-plugin: ^2.6.0
     postcss: ^8.4.14
-    postcss-loader: ^6.2.1
+    postcss-loader: ^7.0.0
     prettier: ^2.6.2
     san: ^3.12.0
     san-loader: ^0.3.4
@@ -18649,6 +18649,20 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"postcss-loader@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "postcss-loader@npm:7.0.0"
+  dependencies:
+    cosmiconfig: ^7.0.0
+    klona: ^2.0.5
+    semver: ^7.3.7
+  peerDependencies:
+    postcss: ^7.0.0 || ^8.0.1
+    webpack: ^5.0.0
+  checksum: b8e51e99898cae8400de8690752b64af2ca1e3eed7c0d696c9e1ec6fc45dd334c958748247632c48109a519fb59f7545d0b8fe4b52479d982ca3ec4eb8e3b0c9
+  languageName: node
+  linkType: hard
+
 "postcss-logical@npm:^3.0.0":
   version: 3.0.0
   resolution: "postcss-logical@npm:3.0.0"
@@ -20738,7 +20752,7 @@ resolve@^2.0.0-next.3:
     html-webpack-plugin: ^5.5.0
     mini-css-extract-plugin: ^2.6.0
     postcss: ^8.4.14
-    postcss-loader: ^6.2.1
+    postcss-loader: ^7.0.0
     prettier: ^2.6.2
     style-loader: ^3.3.1
     stylelint: ^14.8.2
