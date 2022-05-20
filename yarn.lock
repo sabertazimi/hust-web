@@ -6533,7 +6533,7 @@ __metadata:
     scrollreveal: ^4.0.9
     style-loader: ^3.3.1
     stylelint: ^14.8.2
-    stylelint-webpack-plugin: ^3.2.0
+    stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.6.4
     url-loader: ^4.1.1
     webpack: ^5.72.1
@@ -7284,7 +7284,7 @@ __metadata:
     socket.io-client: ^4.5.1
     style-loader: ^3.3.1
     stylelint: ^14.8.2
-    stylelint-webpack-plugin: ^3.2.0
+    stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.6.4
     webpack: ^5.72.1
     webpack-cli: ^4.9.2
@@ -11414,7 +11414,7 @@ fsevents@^1.2.7:
     sass-loader: ^12.6.0
     style-loader: ^3.3.1
     stylelint: ^14.8.2
-    stylelint-webpack-plugin: ^3.2.0
+    stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.6.4
     webpack: ^5.72.1
     webpack-cli: ^4.9.2
@@ -14602,7 +14602,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jest-worker@npm:^27.0.2, jest-worker@npm:^27.3.1, jest-worker@npm:^27.4.5, jest-worker@npm:^27.5.1":
+"jest-worker@npm:^27.0.2, jest-worker@npm:^27.3.1, jest-worker@npm:^27.4.5":
   version: 27.5.1
   resolution: "jest-worker@npm:27.5.1"
   dependencies:
@@ -16277,7 +16277,7 @@ fsevents@^1.2.7:
     prettier: ^2.6.2
     style-loader: ^3.3.1
     stylelint: ^14.8.2
-    stylelint-webpack-plugin: ^3.2.0
+    stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.6.4
     webpack: ^5.72.1
     webpack-cli: ^4.9.2
@@ -16485,7 +16485,7 @@ fsevents@^1.2.7:
     san-router: ^2.0.0
     style-loader: ^3.3.1
     stylelint: ^14.8.2
-    stylelint-webpack-plugin: ^3.2.0
+    stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.6.4
     webpack: ^5.72.1
     webpack-cli: ^4.9.2
@@ -20742,7 +20742,7 @@ resolve@^2.0.0-next.3:
     prettier: ^2.6.2
     style-loader: ^3.3.1
     stylelint: ^14.8.2
-    stylelint-webpack-plugin: ^3.2.0
+    stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.6.4
     webpack: ^5.72.1
     webpack-cli: ^4.9.2
@@ -22470,19 +22470,19 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"stylelint-webpack-plugin@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "stylelint-webpack-plugin@npm:3.2.0"
+"stylelint-webpack-plugin@npm:^3.2.0, stylelint-webpack-plugin@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "stylelint-webpack-plugin@npm:3.3.0"
   dependencies:
     globby: ^11.1.0
-    jest-worker: ^27.5.1
-    micromatch: ^4.0.4
+    jest-worker: ^28.1.0
+    micromatch: ^4.0.5
     normalize-path: ^3.0.0
     schema-utils: ^4.0.0
   peerDependencies:
     stylelint: ^13.0.0 || ^14.0.0
     webpack: ^5.0.0
-  checksum: f26fc8bf022d89231fed383a982379eda194edfef34f650c29bf5e91e584a5375a4e37974a2ecd79c8f9d502092cdd193f0bfdc17546d8a8e73b7d3b17078b7a
+  checksum: 946c0049dab0394960583fe47853b9a9dc97c7b0c9125f5b6bca3f684657ef765c7f66a8b176f88e0834c9332ebd12c798fb653983465413f59843690679a70f
   languageName: node
   linkType: hard
 
