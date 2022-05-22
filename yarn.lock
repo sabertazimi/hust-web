@@ -15475,16 +15475,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"log4js@npm:^6.4.7":
-  version: 6.4.7
-  resolution: "log4js@npm:6.4.7"
+"log4js@npm:^6.5.0":
+  version: 6.5.0
+  resolution: "log4js@npm:6.5.0"
   dependencies:
     date-format: ^4.0.10
     debug: ^4.3.4
     flatted: ^3.2.5
     rfdc: ^1.3.0
-    streamroller: ^3.0.9
-  checksum: b6159bd38ba7bb7e87b21ca7ffad636637a3a93d7dd9e55861d736c285df6fe152f195bea2b93332e910c5a3f08729a91e2a6b009ae8a00be756112029331188
+    streamroller: ^3.1.0
+  checksum: 076fcba56a6316c12a130272c3ce04ab66064296ea229c642667ae97694430a00d21e2cccbacce227df0b46e5ce98032a8977e5ff47512c25fc2d03ee3199830
   languageName: node
   linkType: hard
 
@@ -16375,7 +16375,7 @@ fsevents@^1.2.7:
     fs-extra: ^10.1.0
     gunzip-maybe: ^1.4.2
     jest: ^28.1.0
-    log4js: ^6.4.7
+    log4js: ^6.5.0
     node-fetch: ^2.6.7
     ora: ^5.4.1
     prettier: ^2.6.2
@@ -21976,14 +21976,14 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"streamroller@npm:^3.0.9":
-  version: 3.0.9
-  resolution: "streamroller@npm:3.0.9"
+"streamroller@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "streamroller@npm:3.1.0"
   dependencies:
     date-format: ^4.0.10
     debug: ^4.3.4
     fs-extra: ^10.1.0
-  checksum: 1c03e760c9b48277bf507050c8dd70aa40322f0de699fae9096421be145603acb931b0e0e49ca84ede39520f9e7231278b90641a688c7ef2d8b7a40e70f67e61
+  checksum: be0656e26be7e5f8f9aaa1160fb83353beafb24bf7288b1e05fb05294c5f083c47a4c48017f3d8ddfefe13022ec3d8c831e8178ad99ec2447568fea32a40a089
   languageName: node
   linkType: hard
 
