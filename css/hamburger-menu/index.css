@@ -29,7 +29,7 @@ body {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  opacity: 0%;
+  opacity: 0;
 }
 
 .menu-hamburger {
@@ -49,12 +49,7 @@ body {
 /* hamburger middle bar */
 @media screen and (prefers-reduced-motion: reduce) {
   .menu-hamburger > span {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
     transition: none;
-    transform: rotate(0);
   }
 }
 
@@ -71,61 +66,8 @@ body {
 @media screen and (prefers-reduced-motion: reduce) {
   .menu-hamburger > span::before,
   .menu-hamburger > span::after {
-    position: absolute;
-    top: calc(var(--hamburger-size) / 4 * -1);
-    z-index: 1;
-    width: 100%;
-    height: 3px;
-    content: '';
-    background-color: #fff;
     transition: none;
-    transform: rotate(0);
   }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .menu-hamburger > span::before,
-  .menu-hamburger > span::after {
-    position: absolute;
-    top: calc(var(--hamburger-size) / 4 * -1);
-    z-index: 1;
-    width: 100%;
-    height: 3px;
-    content: '';
-    background-color: #fff;
-    transition: none;
-    transform: rotate(0);
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .menu-hamburger > span::before,
-  .menu-hamburger > span::after {
-    position: absolute;
-    top: calc(var(--hamburger-size) / 4 * -1);
-    z-index: 1;
-    width: 100%;
-    height: 3px;
-    content: '';
-    background-color: #fff;
-    transition: none;
-    transform: rotate(0);
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-.menu-hamburger > span::before,
-.menu-hamburger > span::after {
-  position: absolute;
-  top: calc(var(--hamburger-size) / 4 * -1);
-  z-index: 1;
-  width: 100%;
-  height: 3px;
-  content: '';
-  background-color: #fff;
-  transition: none;
-  transform: rotate(0);
-}
 }
 
 .menu-hamburger > span::before,
@@ -147,20 +89,7 @@ body {
 
 @media screen and (prefers-reduced-motion: reduce) {
   .menu-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    visibility: hidden;
-    background-color: var(--overlay-color);
     transition: none;
-    transform: translateX(-100%);
   }
 }
 
@@ -188,11 +117,6 @@ body {
 
 @media screen and (prefers-reduced-motion: reduce) {
   .menu-link {
-    font-size: 5rem;
-    font-weight: 800;
-    color: #fff;
-    text-decoration: none;
-    opacity: 0%;
     transition: none;
   }
 }
@@ -202,7 +126,7 @@ body {
   font-weight: 800;
   color: #fff;
   text-decoration: none;
-  opacity: 0%;
+  opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
 
@@ -230,15 +154,13 @@ body {
 
 @media screen and (prefers-reduced-motion: reduce) {
   .menu-toggle:checked ~ .menu-nav .menu-link {
-    opacity: 100%;
-
     /* magic effect for delaying transition */
     transition: none;
   }
 }
 
 .menu-toggle:checked ~ .menu-nav .menu-link {
-  opacity: 100%;
+  opacity: 1;
 
   /* magic effect for delaying transition */
   transition: opacity 0.4s ease-in-out 0.4s;
