@@ -1932,7 +1932,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/selector-specificity@npm:^2.0.0":
+"@csstools/selector-specificity@npm:^2.0.1":
   version: 2.0.1
   resolution: "@csstools/selector-specificity@npm:2.0.1"
   peerDependencies:
@@ -6651,7 +6651,7 @@ __metadata:
     sass-loader: ^13.0.0
     scrollreveal: ^4.0.9
     style-loader: ^3.3.1
-    stylelint: ^14.9.0
+    stylelint: ^14.9.1
     stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.7.3
     url-loader: ^4.1.1
@@ -7432,7 +7432,7 @@ __metadata:
     socket.io: ^4.5.1
     socket.io-client: ^4.5.1
     style-loader: ^3.3.1
-    stylelint: ^14.9.0
+    stylelint: ^14.9.1
     stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.7.3
     webpack: ^5.73.0
@@ -11527,7 +11527,7 @@ fsevents@^1.2.7:
     sass: ^1.52.3
     sass-loader: ^13.0.0
     style-loader: ^3.3.1
-    stylelint: ^14.9.0
+    stylelint: ^14.9.1
     stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.7.3
     webpack: ^5.73.0
@@ -12829,7 +12829,7 @@ fsevents@^1.2.7:
     lerna: ^5.1.1
     prettier: ^2.6.2
     semver: ^7.3.7
-    stylelint: ^14.9.0
+    stylelint: ^14.9.1
     typescript: ^4.7.3
   dependenciesMeta:
     scrollreveal:
@@ -16409,7 +16409,7 @@ fsevents@^1.2.7:
     postcss-loader: ^7.0.0
     prettier: ^2.6.2
     style-loader: ^3.3.1
-    stylelint: ^14.9.0
+    stylelint: ^14.9.1
     stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.7.3
     webpack: ^5.73.0
@@ -16617,7 +16617,7 @@ fsevents@^1.2.7:
     san-loader: ^0.3.4
     san-router: ^2.0.0
     style-loader: ^3.3.1
-    stylelint: ^14.9.0
+    stylelint: ^14.9.1
     stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.7.3
     webpack: ^5.73.0
@@ -20867,7 +20867,7 @@ resolve@^2.0.0-next.3:
     postcss-loader: ^7.0.0
     prettier: ^2.6.2
     style-loader: ^3.3.1
-    stylelint: ^14.9.0
+    stylelint: ^14.9.1
     stylelint-webpack-plugin: ^3.3.0
     typescript: ^4.7.3
     webpack: ^5.73.0
@@ -22609,11 +22609,11 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^14.8.1, stylelint@npm:^14.9.0":
-  version: 14.9.0
-  resolution: "stylelint@npm:14.9.0"
+"stylelint@npm:^14.8.1, stylelint@npm:^14.9.1":
+  version: 14.9.1
+  resolution: "stylelint@npm:14.9.1"
   dependencies:
-    "@csstools/selector-specificity": ^2.0.0
+    "@csstools/selector-specificity": ^2.0.1
     balanced-match: ^2.0.0
     colord: ^2.9.2
     cosmiconfig: ^7.0.1
@@ -22655,7 +22655,7 @@ resolve@^2.0.0-next.3:
     write-file-atomic: ^4.0.1
   bin:
     stylelint: bin/stylelint.js
-  checksum: 9996238740feb045c2f14def7152ed2a1a512c4cfd632c02bf136193f8be1c24f1357e53c27cd3c59876a73897f0f7bd5a1df0ee5af614050574ac8fc6ea179a
+  checksum: 53c65c9a1d0009ba15847905afc34efc2f4820edc989f8c2aeecf6b7873b2de3040a1969761ef0983caca2e773947482962df5c25216cb9e3f21af241675bb50
   languageName: node
   linkType: hard
 
