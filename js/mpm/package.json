@@ -47,7 +47,7 @@
     "commander": "^9.3.0",
     "fs-extra": "^10.1.0",
     "gunzip-maybe": "^1.4.2",
-    "log4js": "^6.5.2",
+    "log4js": "^6.6.0",
     "node-fetch": "^2.6.7",
     "ora": "^5.4.1",
     "semver": "^7.3.7",
