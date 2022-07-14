@@ -1,4 +1,3 @@
-/* eslint-disable max-classes-per-file */
 import React from 'react';
 import { connect } from 'react-redux';
 import {
@@ -57,8 +56,6 @@ const FormPanel = ({ isActive, children }) => (
 const Panel = ({ id, children }) => (
   <FormConsumer>
     {({ actions }) => (
-      // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-      // eslint-disable-next-line jsx-a11y/no-static-element-interactions
       <div onClick={() => actions.switchPanel(id)}>{children}</div>
     )}
   </FormConsumer>
