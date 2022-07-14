@@ -1,4 +1,3 @@
-/* eslint-disable max-classes-per-file */
 import {
   AgentBar,
   Avatar,
@@ -46,7 +45,6 @@ class Dashboard extends React.Component {
     super(props);
 
     this.state = {
-      // eslint-disable-next-line react/no-unused-state
       messageList: {},
       currentMessage: '',
       currentWindow: '',
