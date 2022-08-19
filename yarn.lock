@@ -4844,10 +4844,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^16.11.50":
-  version: 16.11.50
-  resolution: "@types/node@npm:16.11.50"
-  checksum: 8b64129ed651661602049e8e034f0cb77c09c87303dadfad1a2bdef658ece16b4be96a3142ef956a5e1a815336225c5beb0512c31a410e7d76075f18906df6da
+"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^16.11.51":
+  version: 16.11.51
+  resolution: "@types/node@npm:16.11.51"
+  checksum: b4193d3f9d4240d866db0ca50de4a8c3b68fd81754d0a572712b559497d0f34931e4246ce0b2692afc8f8def9fcc69fd176bd7176af896d07eefa6d78d886425
   languageName: node
   linkType: hard
 
@@ -6749,7 +6749,7 @@ __metadata:
     postcss-loader: ^7.0.1
     precss: ^4.0.0
     prettier: ^2.7.1
-    sass: ^1.54.4
+    sass: ^1.54.5
     sass-loader: ^13.0.2
     scrollreveal: ^4.0.9
     style-loader: ^3.3.1
@@ -7498,7 +7498,7 @@ __metadata:
     react-redux: ^8.0.2
     react-router-dom: ^6.3.0
     redux: ^4.2.0
-    sass: ^1.54.4
+    sass: ^1.54.5
     sass-loader: ^13.0.2
     socket.io: ^4.5.1
     socket.io-client: ^4.5.1
@@ -11585,7 +11585,7 @@ fsevents@^1.2.7:
     prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
-    sass: ^1.54.4
+    sass: ^1.54.5
     sass-loader: ^13.0.2
     style-loader: ^3.3.1
     stylelint: ^14.10.0
@@ -20959,16 +20959,16 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.54.4":
-  version: 1.54.4
-  resolution: "sass@npm:1.54.4"
+"sass@npm:^1.54.5":
+  version: 1.54.5
+  resolution: "sass@npm:1.54.5"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: bb6aead09764de450a02b9a66e4ee538f0ba6bc8f2fc3905c71b2c302b5f47e089b510b86cfa7ef2d4139c210c8abf99fe157e7a5bd356c057f10d29e6c4b44c
+  checksum: ba7a65aa7508419468547c8de4d59e537bec874f52823f501663dc98d80dfd2d374e8ea73a31200db7f510b8816c925edf89728c9b36889f4e6673d3e94ec100
   languageName: node
   linkType: hard
 
@@ -22211,7 +22211,7 @@ resolve@^2.0.0-next.3:
     "@testing-library/react": ^13.3.0
     "@testing-library/user-event": ^14.4.3
     "@types/jest": ^28.1.7
-    "@types/node": ^16.11.50
+    "@types/node": ^16.11.51
     "@types/react": ^18.0.17
     "@types/react-dom": ^18.0.6
     "@types/react-is": ^17.0.3
