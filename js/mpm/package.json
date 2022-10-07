@@ -42,7 +42,7 @@
       "!**/utils.js"
     ]
   },
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "yarn@3.2.4",
   "dependencies": {
     "commander": "^9.4.1",
     "fs-extra": "^10.1.0",
@@ -50,7 +50,7 @@
     "log4js": "^6.7.0",
     "node-fetch": "^2.6.7",
     "ora": "^5.4.1",
-    "semver": "^7.3.7",
+    "semver": "^7.3.8",
     "tar-fs": "^2.1.1",
     "tar-stream": "^2.2.0"
   },
