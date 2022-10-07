@@ -39,16 +39,16 @@
     "url": "https://github.com/sabertazimi/hust-web/issues"
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "yarn@3.2.4",
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.11.0",
     "@dg-scripts/stylelint-config": "^5.11.0",
     "chalk": "^4.1.2",
     "consola": "^2.15.3",
     "eslint": "^8.24.0",
-    "lerna": "^5.5.4",
+    "lerna": "^5.6.1",
     "prettier": "^2.7.1",
-    "semver": "^7.3.7",
+    "semver": "^7.3.8",
     "stylelint": "^14.13.0",
     "typescript": "^4.8.4"
   },
