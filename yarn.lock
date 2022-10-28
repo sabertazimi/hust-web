@@ -6556,6 +6556,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-loader@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "babel-loader@npm:9.0.0"
+  dependencies:
+    find-cache-dir: ^3.3.2
+    schema-utils: ^4.0.0
+  peerDependencies:
+    "@babel/core": ^7.12.0
+    webpack: ">=5"
+  checksum: 6b146e33c81fd948ffdefa8a6319efa1bea6e17c946bfac4641375710e51831aeb7f4a20c88604eaa00f5ecd4b6591da5a65ade326feba792609f932df150645
+  languageName: node
+  linkType: hard
+
 "babel-plugin-dynamic-import-node@npm:^2.3.3":
   version: 2.3.3
   resolution: "babel-plugin-dynamic-import-node@npm:2.3.3"
@@ -7071,7 +7084,7 @@ __metadata:
     "@dg-scripts/stylelint-config": ^5.11.0
     "@popperjs/core": ^2.11.6
     autoprefixer: ^10.4.13
-    babel-loader: ^8.2.5
+    babel-loader: ^9.0.0
     bootstrap: ^5.2.2
     clean-webpack-plugin: ^4.0.0
     copy-webpack-plugin: ^11.0.0
@@ -7815,7 +7828,7 @@ __metadata:
     "@dg-scripts/stylelint-config": ^5.11.0
     "@livechat/ui-kit": ^0.5.0-23
     autoprefixer: ^10.4.13
-    babel-loader: ^8.2.5
+    babel-loader: ^9.0.0
     body-parser: ^1.20.1
     clean-webpack-plugin: ^4.0.0
     concurrently: ^7.5.0
@@ -11469,7 +11482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:^3.3.1":
+"find-cache-dir@npm:^3.3.1, find-cache-dir@npm:^3.3.2":
   version: 3.3.2
   resolution: "find-cache-dir@npm:3.3.2"
   dependencies:
@@ -11945,7 +11958,7 @@ fsevents@^1.2.7:
     "@dg-scripts/eslint-config": ^5.11.0
     "@dg-scripts/stylelint-config": ^5.11.0
     autoprefixer: ^10.4.13
-    babel-loader: ^8.2.5
+    babel-loader: ^9.0.0
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.7.1
@@ -16695,7 +16708,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.19.4
     "@babel/preset-react": ^7.18.6
     autoprefixer: ^10.4.13
-    babel-loader: ^8.2.5
+    babel-loader: ^9.0.0
     babel-plugin-transform-meact-jsx: ^2.7.0
     clean-webpack-plugin: ^4.0.0
     css-loader: ^6.7.1
@@ -16728,7 +16741,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.19.4
     "@babel/preset-react": ^7.18.6
     autoprefixer: ^10.4.13
-    babel-loader: ^8.2.5
+    babel-loader: ^9.0.0
     clean-webpack-plugin: ^4.0.0
     css-loader: ^6.7.1
     html-loader: ^4.2.0
@@ -17145,7 +17158,7 @@ fsevents@^1.2.7:
     "@dg-scripts/eslint-config": ^5.11.0
     "@dg-scripts/stylelint-config": ^5.11.0
     autoprefixer: ^10.4.13
-    babel-loader: ^8.2.5
+    babel-loader: ^9.0.0
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.7.1
@@ -17350,7 +17363,7 @@ fsevents@^1.2.7:
     "@dg-scripts/stylelint-config": ^5.11.0
     async-validator: ^4.2.5
     autoprefixer: ^10.4.13
-    babel-loader: ^8.2.5
+    babel-loader: ^9.0.0
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.7.1
@@ -21568,7 +21581,7 @@ resolve@^2.0.0-next.3:
     "@dg-scripts/eslint-config": ^5.11.0
     "@dg-scripts/stylelint-config": ^5.11.0
     autoprefixer: ^10.4.13
-    babel-loader: ^8.2.5
+    babel-loader: ^9.0.0
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
     css-loader: ^6.7.1
