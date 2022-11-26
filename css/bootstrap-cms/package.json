@@ -52,7 +52,7 @@
     "postcss": "^8.4.19",
     "postcss-loader": "^7.0.1",
     "precss": "^4.0.0",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
@@ -65,9 +65,9 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^35.3.1",
+    "@ckeditor/ckeditor5-build-classic": "^35.3.2",
     "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "scrollreveal": "^4.0.9"
   }
 }
