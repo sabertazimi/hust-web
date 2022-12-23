@@ -40,7 +40,7 @@
     ]
   },
   "dependencies": {
-    "jquery": "^3.6.2"
+    "jquery": "^3.6.3"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
