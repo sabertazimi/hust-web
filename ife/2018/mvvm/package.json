@@ -30,8 +30,8 @@
   },
   "homepage": "https://sabertazimi.github.io/hust-web/ife/2018/mvvm",
   "devDependencies": {
-    "@babel/core": "^7.20.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.20.2",
+    "@babel/core": "^7.20.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
     "@dg-scripts/eslint-config": "^5.11.0",
     "@dg-scripts/stylelint-config": "^5.11.0",
