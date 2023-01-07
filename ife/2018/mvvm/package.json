@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "async-validator": "^4.2.5",
-    "san": "^3.12.1",
+    "san": "^3.12.2",
     "san-router": "^2.0.1"
   }
 }

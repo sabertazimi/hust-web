@@ -8365,10 +8365,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^9.4.0, commander@npm:^9.4.1":
-  version: 9.4.1
-  resolution: "commander@npm:9.4.1"
-  checksum: bfb18e325a5bdf772763c2213d5c7d9e77144d944124e988bcd8e5e65fb6d45d5d4e86b09155d0f2556c9a59c31e428720e57968bcd050b2306e910a0bf3cf13
+"commander@npm:^9.4.0, commander@npm:^9.4.1, commander@npm:^9.5.0":
+  version: 9.5.0
+  resolution: "commander@npm:9.5.0"
+  checksum: c7a3e27aa59e913b54a1bafd366b88650bc41d6651f0cbe258d4ff09d43d6a7394232a4dadd0bf518b3e696fdf595db1028a0d82c785b88bd61f8a440cecfade
   languageName: node
   linkType: hard
 
@@ -17345,7 +17345,7 @@ fsevents@^1.2.7:
   resolution: "mpmjs@workspace:js/mpm"
   dependencies:
     "@dg-scripts/eslint-config": ^5.11.0
-    commander: ^9.4.1
+    commander: ^9.5.0
     eslint: ^8.31.0
     fs-extra: ^11.1.0
     gunzip-maybe: ^1.4.2
@@ -17455,7 +17455,7 @@ fsevents@^1.2.7:
     postcss: ^8.4.21
     postcss-loader: ^7.0.2
     prettier: ^2.8.1
-    san: ^3.12.1
+    san: ^3.12.2
     san-loader: ^0.3.6
     san-router: ^2.0.1
     style-loader: ^3.3.1
@@ -21902,10 +21902,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"san@npm:^3.12.1, san@npm:^3.9.0":
-  version: 3.12.1
-  resolution: "san@npm:3.12.1"
-  checksum: 8ed378568ec84fe8312fd5228a856ff1ffa24371221dd2ff9caa9d40a7b0569a3844142c393bf68e3fa189417694d3264658c7d82dcead849e548a2feacd235c
+"san@npm:^3.12.2, san@npm:^3.9.0":
+  version: 3.12.2
+  resolution: "san@npm:3.12.2"
+  checksum: 4326b2515891888248bfb6f2a4f627b7664413c854398e4a4f17f6b3c9a61eb06eb4f4cc774c53c95ee610e371a74ca052a16d89486c74c4084020e0fcdb597c
   languageName: node
   linkType: hard
 
