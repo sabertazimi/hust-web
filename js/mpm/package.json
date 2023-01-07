@@ -44,7 +44,7 @@
   },
   "packageManager": "yarn@3.3.1",
   "dependencies": {
-    "commander": "^9.4.1",
+    "commander": "^9.5.0",
     "fs-extra": "^11.1.0",
     "gunzip-maybe": "^1.4.2",
     "log4js": "^6.7.1",
