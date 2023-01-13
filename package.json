@@ -46,7 +46,7 @@
     "chalk": "^4.1.2",
     "consola": "^2.15.3",
     "eslint": "^8.31.0",
-    "lerna": "^6.4.0",
+    "lerna": "^6.4.1",
     "prettier": "^2.8.2",
     "semver": "^7.3.8",
     "stylelint": "^14.16.1",
