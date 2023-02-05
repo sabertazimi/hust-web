@@ -7146,7 +7146,7 @@ __metadata:
     scrollreveal: ^4.0.9
     style-loader: ^3.3.1
     stylelint: ^14.16.1
-    stylelint-webpack-plugin: ^3.3.0
+    stylelint-webpack-plugin: ^4.0.0
     typescript: ^4.9.5
     url-loader: ^4.1.1
     webpack: ^5.75.0
@@ -7906,7 +7906,7 @@ __metadata:
     socket.io-client: ^4.5.4
     style-loader: ^3.3.1
     stylelint: ^14.16.1
-    stylelint-webpack-plugin: ^3.3.0
+    stylelint-webpack-plugin: ^4.0.0
     typescript: ^4.9.5
     webpack: ^5.75.0
     webpack-cli: ^5.0.1
@@ -12093,7 +12093,7 @@ fsevents@^1.2.7:
     sass-loader: ^13.2.0
     style-loader: ^3.3.1
     stylelint: ^14.16.1
-    stylelint-webpack-plugin: ^3.3.0
+    stylelint-webpack-plugin: ^4.0.0
     typescript: ^4.9.5
     webpack: ^5.75.0
     webpack-cli: ^5.0.1
@@ -17300,7 +17300,7 @@ fsevents@^1.2.7:
     prettier: ^2.8.3
     style-loader: ^3.3.1
     stylelint: ^14.16.1
-    stylelint-webpack-plugin: ^3.3.0
+    stylelint-webpack-plugin: ^4.0.0
     typescript: ^4.9.5
     webpack: ^5.75.0
     webpack-cli: ^5.0.1
@@ -17508,7 +17508,7 @@ fsevents@^1.2.7:
     san-router: ^2.0.1
     style-loader: ^3.3.1
     stylelint: ^14.16.1
-    stylelint-webpack-plugin: ^3.3.0
+    stylelint-webpack-plugin: ^4.0.0
     typescript: ^4.9.5
     webpack: ^5.75.0
     webpack-cli: ^5.0.1
@@ -21756,7 +21756,7 @@ resolve@^2.0.0-next.3:
     prettier: ^2.8.3
     style-loader: ^3.3.1
     stylelint: ^14.16.1
-    stylelint-webpack-plugin: ^3.3.0
+    stylelint-webpack-plugin: ^4.0.0
     typescript: ^4.9.5
     webpack: ^5.75.0
     webpack-cli: ^5.0.1
@@ -23461,6 +23461,22 @@ resolve@^2.0.0-next.3:
     stylelint: ^13.0.0 || ^14.0.0
     webpack: ^5.0.0
   checksum: 946c0049dab0394960583fe47853b9a9dc97c7b0c9125f5b6bca3f684657ef765c7f66a8b176f88e0834c9332ebd12c798fb653983465413f59843690679a70f
+  languageName: node
+  linkType: hard
+
+"stylelint-webpack-plugin@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "stylelint-webpack-plugin@npm:4.0.0"
+  dependencies:
+    globby: ^11.1.0
+    jest-worker: ^29.4.1
+    micromatch: ^4.0.5
+    normalize-path: ^3.0.0
+    schema-utils: ^4.0.0
+  peerDependencies:
+    stylelint: ^13.0.0 || ^14.0.0
+    webpack: ^5.0.0
+  checksum: efa099e59b59aa6302012a93990fb7dd57685a8cf3532a86273bb4f4a09f7dce85340d42925c328fa1964374b813f96e91d0e09d536acf98b8e7cf0c6ca938c7
   languageName: node
   linkType: hard
 
