@@ -42,7 +42,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
-    "eslint": "^8.33.0",
+    "eslint": "^8.34.0",
     "eslint-webpack-plugin": "^4.0.0",
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
@@ -52,7 +52,7 @@
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
     "precss": "^4.0.0",
-    "prettier": "^2.8.3",
+    "prettier": "^2.8.4",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
@@ -65,7 +65,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^36.0.0",
+    "@ckeditor/ckeditor5-build-classic": "^36.0.1",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "scrollreveal": "^4.0.9"
