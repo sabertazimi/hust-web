@@ -14,8 +14,6 @@
       "automerge": true,
       "automergeType": "pr",
       "automergeStrategy": "squash",
-      "groupName": "dependencies (major)",
-      "groupSlug": "deps"
     },
     {
       "matchUpdateTypes": [
