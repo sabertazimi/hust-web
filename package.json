@@ -41,8 +41,8 @@
   "homepage": "https://github.com/sabertazimi/hust-web",
   "packageManager": "yarn@3.4.1",
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.11.0",
-    "@dg-scripts/stylelint-config": "^5.11.0",
+    "@dg-scripts/eslint-config": "^5.12.0",
+    "@dg-scripts/stylelint-config": "^5.12.0",
     "chalk": "^4.1.2",
     "consola": "^2.15.3",
     "eslint": "^8.34.0",
