@@ -48,8 +48,8 @@
     "fs-extra": "^11.1.0",
     "gunzip-maybe": "^1.4.2",
     "log4js": "^6.7.1",
-    "node-fetch": "^2.6.9",
-    "ora": "^5.4.1",
+    "node-fetch": "^3.3.0",
+    "ora": "^6.1.2",
     "semver": "^7.3.8",
     "tar-fs": "^2.1.1",
     "tar-stream": "^3.0.0"
