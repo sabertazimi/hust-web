@@ -45,7 +45,7 @@
     "@dg-scripts/stylelint-config": "^5.13.3",
     "chalk": "^4.1.2",
     "consola": "^2.15.3",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "lerna": "^6.5.1",
     "prettier": "^2.8.4",
     "semver": "^7.3.8",
