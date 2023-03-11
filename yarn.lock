@@ -6329,7 +6329,7 @@ __metadata:
     postcss-loader: ^7.0.2
     precss: ^4.0.0
     prettier: ^2.8.4
-    sass: ^1.59.1
+    sass: ^1.59.2
     sass-loader: ^13.2.0
     scrollreveal: ^4.0.9
     style-loader: ^3.3.1
@@ -7088,7 +7088,7 @@ __metadata:
     react-redux: ^8.0.5
     react-router-dom: ^6.9.0
     redux: ^4.2.1
-    sass: ^1.59.1
+    sass: ^1.59.2
     sass-loader: ^13.2.0
     socket.io: ^4.6.1
     socket.io-client: ^4.6.1
@@ -11387,7 +11387,7 @@ fsevents@^1.2.7:
     prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
-    sass: ^1.59.1
+    sass: ^1.59.2
     sass-loader: ^13.2.0
     style-loader: ^3.3.1
     stylelint: ^15.2.0
@@ -21205,16 +21205,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.59.1":
-  version: 1.59.1
-  resolution: "sass@npm:1.59.1"
+"sass@npm:^1.59.2":
+  version: 1.59.2
+  resolution: "sass@npm:1.59.2"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 815bfd274a6d27f611fd280e7b3bd2b9672eb8ff98e58ed3abf2e43a210957e46ac1efc57557974afe623ad39c95697cb182c5141752c9c6deba73e18885618f
+  checksum: ab015ac49beb1252373023cc79b687aabd7850a7f450250b2fbe4eb3f64b0aef6759f8c7b33234221788a0e42cdd3999edfb5995218e474123b99cb126773e30
   languageName: node
   linkType: hard
 
