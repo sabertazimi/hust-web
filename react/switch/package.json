@@ -7,7 +7,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@sabertazimi/react-scripts": "^5.13.3"
+    "@sabertazimi/react-scripts": "^5.13.4"
   },
   "scripts": {
     "build": "react-scripts build && yarn build:post",
