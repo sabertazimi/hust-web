@@ -39,7 +39,7 @@
     "url": "https://github.com/sabertazimi/hust-web/issues"
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
-  "packageManager": "yarn@3.4.1",
+  "packageManager": "yarn@3.5.0",
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.13.4",
     "@dg-scripts/stylelint-config": "^5.13.4",
@@ -49,7 +49,7 @@
     "lerna": "^6.5.1",
     "prettier": "^2.8.4",
     "semver": "^7.3.8",
-    "stylelint": "^15.2.0",
+    "stylelint": "^15.3.0",
     "typescript": "^4.9.5"
   },
   "dependenciesMeta": {
