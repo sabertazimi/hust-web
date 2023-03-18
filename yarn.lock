@@ -6330,7 +6330,7 @@ __metadata:
     precss: ^4.0.0
     prettier: ^2.8.4
     sass: ^1.59.3
-    sass-loader: ^13.2.0
+    sass-loader: ^13.2.1
     scrollreveal: ^4.0.9
     style-loader: ^3.3.2
     stylelint: ^15.3.0
@@ -6339,7 +6339,7 @@ __metadata:
     url-loader: ^4.1.1
     webpack: ^5.76.2
     webpack-cli: ^5.0.1
-    webpack-dev-server: ^4.13.0
+    webpack-dev-server: ^4.13.1
   languageName: unknown
   linkType: soft
 
@@ -7089,7 +7089,7 @@ __metadata:
     react-router-dom: ^6.9.0
     redux: ^4.2.1
     sass: ^1.59.3
-    sass-loader: ^13.2.0
+    sass-loader: ^13.2.1
     socket.io: ^4.6.1
     socket.io-client: ^4.6.1
     style-loader: ^3.3.2
@@ -7098,7 +7098,7 @@ __metadata:
     typescript: ^5.0.2
     webpack: ^5.76.2
     webpack-cli: ^5.0.1
-    webpack-dev-server: ^4.13.0
+    webpack-dev-server: ^4.13.1
   languageName: unknown
   linkType: soft
 
@@ -11388,14 +11388,14 @@ fsevents@^1.2.7:
     react: ^18.2.0
     react-dom: ^18.2.0
     sass: ^1.59.3
-    sass-loader: ^13.2.0
+    sass-loader: ^13.2.1
     style-loader: ^3.3.2
     stylelint: ^15.3.0
     stylelint-webpack-plugin: ^4.1.0
     typescript: ^5.0.2
     webpack: ^5.76.2
     webpack-cli: ^5.0.1
-    webpack-dev-server: ^4.13.0
+    webpack-dev-server: ^4.13.1
   languageName: unknown
   linkType: soft
 
@@ -14985,7 +14985,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"klona@npm:^2.0.4, klona@npm:^2.0.6":
+"klona@npm:^2.0.6":
   version: 2.0.6
   resolution: "klona@npm:2.0.6"
   checksum: ac9ee3732e42b96feb67faae4d27cf49494e8a3bf3fa7115ce242fe04786788e0aff4741a07a45a2462e2079aa983d73d38519c85d65b70ef11447bbc3c58ce7
@@ -15922,7 +15922,7 @@ fsevents@^1.2.7:
     style-loader: ^3.3.2
     webpack: ^5.76.2
     webpack-cli: ^5.0.1
-    webpack-dev-server: ^4.13.0
+    webpack-dev-server: ^4.13.1
   languageName: unknown
   linkType: soft
 
@@ -15957,7 +15957,7 @@ fsevents@^1.2.7:
     style-loader: ^3.3.2
     webpack: ^5.76.2
     webpack-cli: ^5.0.1
-    webpack-dev-server: ^4.13.0
+    webpack-dev-server: ^4.13.1
   languageName: unknown
   linkType: soft
 
@@ -16378,7 +16378,7 @@ fsevents@^1.2.7:
     typescript: ^5.0.2
     webpack: ^5.76.2
     webpack-cli: ^5.0.1
-    webpack-dev-server: ^4.13.0
+    webpack-dev-server: ^4.13.1
   languageName: unknown
   linkType: soft
 
@@ -16586,7 +16586,7 @@ fsevents@^1.2.7:
     typescript: ^5.0.2
     webpack: ^5.76.2
     webpack-cli: ^5.0.1
-    webpack-dev-server: ^4.13.0
+    webpack-dev-server: ^4.13.1
   languageName: unknown
   linkType: soft
 
@@ -20968,7 +20968,7 @@ fsevents@^1.2.7:
     typescript: ^5.0.2
     webpack: ^5.76.2
     webpack-cli: ^5.0.1
-    webpack-dev-server: ^4.13.0
+    webpack-dev-server: ^4.13.1
   languageName: unknown
   linkType: soft
 
@@ -21190,11 +21190,11 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^13.2.0":
-  version: 13.2.0
-  resolution: "sass-loader@npm:13.2.0"
+"sass-loader@npm:^13.2.0, sass-loader@npm:^13.2.1":
+  version: 13.2.1
+  resolution: "sass-loader@npm:13.2.1"
   dependencies:
-    klona: ^2.0.4
+    klona: ^2.0.6
     neo-async: ^2.6.2
   peerDependencies:
     fibers: ">= 3.1.0"
@@ -21211,7 +21211,7 @@ fsevents@^1.2.7:
       optional: true
     sass-embedded:
       optional: true
-  checksum: ed6cdb5f5508e1a8a020d1451160a5e94805d0c2a97be5719c6a44ed28a258b5f37a1478d01b9d545f269367ae91ccb88adc93bd6202bfd609dbe3193228d51e
+  checksum: 5823b5f19d8efefeae6935027f4d5ba29bcd64998692e3ae7ef6684ddf5ef754daf98cdea10ebb61052045486cb62e0e07cc8cc999a52872b0d4da3274ecd493
   languageName: node
   linkType: hard
 
@@ -24451,9 +24451,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:^4.11.1, webpack-dev-server@npm:^4.13.0":
-  version: 4.13.0
-  resolution: "webpack-dev-server@npm:4.13.0"
+"webpack-dev-server@npm:^4.11.1, webpack-dev-server@npm:^4.13.1":
+  version: 4.13.1
+  resolution: "webpack-dev-server@npm:4.13.1"
   dependencies:
     "@types/bonjour": ^3.5.9
     "@types/connect-history-api-fallback": ^1.3.5
@@ -24488,11 +24488,13 @@ fsevents@^1.2.7:
   peerDependencies:
     webpack: ^4.37.0 || ^5.0.0
   peerDependenciesMeta:
+    webpack:
+      optional: true
     webpack-cli:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: 7546dd3b5a05f886209caf3c06265c717dea292e5a1a8e392bb8f1c9c58c7f87cc03daa0b92fa6eb56812c8c88304044bef923642e18c54b0a17ea233c02fdf4
+  checksum: f70611544b7d964a31eb3d934d7c2b376b97e6927a89e03b2e21cfa5812bb639625cd18fd350de1604ba6c455b324135523a894032f28c69d90d90682e4f3b7d
   languageName: node
   linkType: hard
 
