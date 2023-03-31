@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
   "devDependencies": {
-    "@babel/core": "^7.21.3",
+    "@babel/core": "^7.21.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
-    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-env": "^7.21.4",
     "@dg-scripts/eslint-config": "^5.13.5",
     "@dg-scripts/stylelint-config": "^5.13.5",
     "autoprefixer": "^10.4.14",
@@ -39,7 +39,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
-    "eslint": "^8.36.0",
+    "eslint": "^8.37.0",
     "eslint-webpack-plugin": "^4.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
@@ -50,8 +50,8 @@
     "style-loader": "^3.3.2",
     "stylelint": "^15.3.0",
     "stylelint-webpack-plugin": "^4.1.0",
-    "typescript": "^5.0.2",
-    "webpack": "^5.76.3",
+    "typescript": "^5.0.3",
+    "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.1"
   }
