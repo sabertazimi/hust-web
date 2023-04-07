@@ -65,7 +65,7 @@
     "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^36.0.1",
+    "@ckeditor/ckeditor5-build-classic": "^37.0.1",
     "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3",
     "scrollreveal": "^4.0.9"
