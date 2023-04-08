@@ -45,12 +45,12 @@
     "@dg-scripts/stylelint-config": "^5.13.5",
     "chalk": "^4.1.2",
     "consola": "^2.15.3",
-    "eslint": "^8.37.0",
+    "eslint": "^8.38.0",
     "lerna": "^6.6.1",
     "prettier": "^2.8.7",
     "semver": "^7.3.8",
     "stylelint": "^15.4.0",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "dependenciesMeta": {
     "scrollreveal": {
