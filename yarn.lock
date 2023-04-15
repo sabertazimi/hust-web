@@ -7981,6 +7981,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"consola@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "consola@npm:3.0.2"
+  checksum: e82503d738d410e36aca1543a37fb8ca385cd38c86b8fb055086f3df223ab1c353cea4e649b46169b5b7e9a7a61997f2693a57611522331d50a7811a372a816e
+  languageName: node
+  linkType: hard
+
 "console-control-strings@npm:^1.0.0, console-control-strings@npm:^1.1.0, console-control-strings@npm:~1.1.0":
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
@@ -13020,7 +13027,7 @@ fsevents@^1.2.7:
     "@dg-scripts/eslint-config": ^5.13.5
     "@dg-scripts/stylelint-config": ^5.13.5
     chalk: ^4.1.2
-    consola: ^2.15.3
+    consola: ^3.0.2
     eslint: ^8.38.0
     lerna: ^6.6.1
     prettier: ^2.8.7
