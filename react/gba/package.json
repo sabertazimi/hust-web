@@ -51,7 +51,7 @@
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
-    "stylelint": "^15.4.0",
+    "stylelint": "^15.5.0",
     "stylelint-webpack-plugin": "^4.1.1",
     "typescript": "^5.0.4",
     "webpack": "^5.79.0",
