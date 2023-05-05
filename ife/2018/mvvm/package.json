@@ -30,7 +30,7 @@
   },
   "homepage": "https://sabertazimi.github.io/hust-web/ife/2018/mvvm",
   "devDependencies": {
-    "@babel/core": "^7.21.5",
+    "@babel/core": "^7.21.8",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.21.5",
     "@dg-scripts/eslint-config": "^5.13.5",
@@ -50,10 +50,10 @@
     "prettier": "^2.8.8",
     "san-loader": "^0.3.6",
     "style-loader": "^3.3.2",
-    "stylelint": "^15.6.0",
+    "stylelint": "^15.6.1",
     "stylelint-webpack-plugin": "^4.1.1",
     "typescript": "^5.0.4",
-    "webpack": "^5.81.0",
+    "webpack": "^5.82.0",
     "webpack-cli": "^5.0.2",
     "webpack-dev-server": "^4.13.3"
   },
