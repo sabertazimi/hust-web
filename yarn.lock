@@ -2925,10 +2925,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@livechat/data-utils@npm:^0.2.16, @livechat/data-utils@npm:^0.2.17":
+"@livechat/data-utils@npm:^0.2.16":
   version: 0.2.17
   resolution: "@livechat/data-utils@npm:0.2.17"
   checksum: 41ae477bc9dc473109d90cec7693705876f927339531f7a34f620be9cf41d8592d2534797490ea5fc59c816d582620af0d5a60ed7dd1cbb8bc31c0283dd344ac
+  languageName: node
+  linkType: hard
+
+"@livechat/data-utils@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@livechat/data-utils@npm:1.0.1"
+  checksum: 79b73ffaaa7b76d5ac47bc2e83aced4d9f970f35ab29832ca16a79484c0a631853a95f7f010ec98705927fd15078442009e0677040c8f53712f2f8d78798c657
   languageName: node
   linkType: hard
 
@@ -2964,15 +2971,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@livechat/ui-kit@npm:^0.5.0-24":
-  version: 0.5.0-24
-  resolution: "@livechat/ui-kit@npm:0.5.0-24"
+"@livechat/ui-kit@npm:^0.5.0-25":
+  version: 0.5.0-25
+  resolution: "@livechat/ui-kit@npm:0.5.0-25"
   dependencies:
     "@babel/runtime": ^7.10.5
     "@emotion/is-prop-valid": ^1.1.0
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
-    "@livechat/data-utils": ^0.2.17
+    "@livechat/data-utils": ^1.0.1
     "@livechat/dom-utils": ^0.2.6
     "@livechat/react-hooks": ^0.3.18
     "@react-aria/button": ^3.3.2
@@ -2988,7 +2995,7 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18
     react-dom: ^16.8.0 || ^17 || ^18
-  checksum: 13dde8f86a2bd4a57fb6d4c9c13127d5d428426bfc238bd4c0659528773305df6f5f116c288ee6f7902b646b415ee18287b50c7b06eac17de9d8ad0b0c7f5514
+  checksum: 2778b68679008cf7aa47b86c56e10eda2bbf425ed91b8f0bec5e5be1fd4530f2cf033649e987c745e537c757fdb5c7b013b3bc2b77f22d848e7f8a84fe1eff12
   languageName: node
   linkType: hard
 
@@ -4083,9 +4090,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^9.0.0, @testing-library/dom@npm:^9.2.0":
-  version: 9.2.0
-  resolution: "@testing-library/dom@npm:9.2.0"
+"@testing-library/dom@npm:^9.0.0, @testing-library/dom@npm:^9.3.0":
+  version: 9.3.0
+  resolution: "@testing-library/dom@npm:9.3.0"
   dependencies:
     "@babel/code-frame": ^7.10.4
     "@babel/runtime": ^7.12.5
@@ -4095,7 +4102,7 @@ __metadata:
     dom-accessibility-api: ^0.5.9
     lz-string: ^1.5.0
     pretty-format: ^27.0.2
-  checksum: b145f43cd06ff083012cf2503aff6ccba97ff80715fcb106fe64af690f5536557bf24d37b97e8d685bbe3803d7f71d685ce71426cb1b9e250c3611e4372dcfa9
+  checksum: 790f4da6a8cbe7da8b7769e81e68caea1aed5b5f1973b808895692a945fb854fe8acdc66ffc34b6a57ec49bad9d76ccdd69b632ea8a82ad61d1e97d76cfdf9ec
   languageName: node
   linkType: hard
 
@@ -4478,10 +4485,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^18.16.5":
-  version: 18.16.5
-  resolution: "@types/node@npm:18.16.5"
-  checksum: b6df96a76a7655cd944794197cf63f5269e5034041bc355f4f243cb3f185ad3e1948011b6f0ac66c22434e50bc53a20ec3a9d95ad284f0e3819813d309d1650b
+"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^18.16.8":
+  version: 18.16.8
+  resolution: "@types/node@npm:18.16.8"
+  checksum: d2ec9b61abd260b0fa1e33e4eca8f0089ebb6f6ec1ad2f036a4d01af11dba4f1dbff95b2a1f5dbe9eab3a6f38ed4bd8bf95eb2de9ad96b1caa1f67671e623c1d
   languageName: node
   linkType: hard
 
@@ -5002,16 +5009,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webpack-cli/serve@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "@webpack-cli/serve@npm:2.0.3"
+"@webpack-cli/serve@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "@webpack-cli/serve@npm:2.0.4"
   peerDependencies:
     webpack: 5.x.x
     webpack-cli: 5.x.x
   peerDependenciesMeta:
     webpack-dev-server:
       optional: true
-  checksum: 1a133d8222d9a3b286cbc670a920af1a2ee66f136b61cb1448767bc481cdc3db65f06eae132a7093b4059ad7aa9a1a5b4810099f8698402843e7c39796804dd0
+  checksum: 561ea2e6eb551415f0b1675393a8480e1201293fe37eae334cbb1fdc466986668cca76ca1ca327ada9b498eae27cbecef0793e3bb5677288f1a5216cad414efe
   languageName: node
   linkType: hard
 
@@ -6509,8 +6516,8 @@ __metadata:
     stylelint-webpack-plugin: ^4.1.1
     typescript: ^5.0.4
     url-loader: ^4.1.1
-    webpack: ^5.82.0
-    webpack-cli: ^5.1.0
+    webpack: ^5.82.1
+    webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
   languageName: unknown
   linkType: soft
@@ -7257,7 +7264,7 @@ __metadata:
     "@babel/preset-react": ^7.18.6
     "@dg-scripts/eslint-config": ^5.13.5
     "@dg-scripts/stylelint-config": ^5.13.5
-    "@livechat/ui-kit": ^0.5.0-24
+    "@livechat/ui-kit": ^0.5.0-25
     autoprefixer: ^10.4.14
     babel-loader: ^9.1.2
     body-parser: ^1.20.2
@@ -7289,8 +7296,8 @@ __metadata:
     stylelint: ^15.6.1
     stylelint-webpack-plugin: ^4.1.1
     typescript: ^5.0.4
-    webpack: ^5.82.0
-    webpack-cli: ^5.1.0
+    webpack: ^5.82.1
+    webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
   languageName: unknown
   linkType: soft
@@ -9650,13 +9657,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.13.0":
-  version: 5.13.0
-  resolution: "enhanced-resolve@npm:5.13.0"
+"enhanced-resolve@npm:^5.14.0":
+  version: 5.14.0
+  resolution: "enhanced-resolve@npm:5.14.0"
   dependencies:
     graceful-fs: ^4.2.4
     tapable: ^2.2.0
-  checksum: 76d6844c4393d76beed5b3ce6cf5a98dee3ad5c84a9887f49ccde1224e3b7af201dfbd5a57ebf2b49f623b74883df262d50ff480d3cc02fc2881fc58b84e1bbe
+  checksum: fff1aaebbf376371e5df4502e111967f6247c37611ad3550e4e7fca657f6dcb29ef7ffe88bf14e5010b78997f1ddd984a8db97af87ee0a5477771398fd326f5b
   languageName: node
   linkType: hard
 
@@ -11632,8 +11639,8 @@ fsevents@^1.2.7:
     stylelint: ^15.6.1
     stylelint-webpack-plugin: ^4.1.1
     typescript: ^5.0.4
-    webpack: ^5.82.0
-    webpack-cli: ^5.1.0
+    webpack: ^5.82.1
+    webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
   languageName: unknown
   linkType: soft
@@ -13000,7 +13007,7 @@ fsevents@^1.2.7:
     eslint: ^8.40.0
     lerna: ^6.6.2
     prettier: ^2.8.8
-    semver: ^7.5.0
+    semver: ^7.5.1
     stylelint: ^15.6.1
     typescript: ^5.0.4
   dependenciesMeta:
@@ -13077,7 +13084,7 @@ fsevents@^1.2.7:
     gulp-rename: ^2.0.0
     gulp-sourcemaps: ^3.0.0
     gulp-uglify: ^3.0.2
-    jquery: ^3.6.4
+    jquery: ^3.7.0
   languageName: unknown
   linkType: soft
 
@@ -13093,7 +13100,7 @@ fsevents@^1.2.7:
     gulp-rename: ^2.0.0
     gulp-sourcemaps: ^3.0.0
     gulp-uglify: ^3.0.2
-    jquery: ^3.6.4
+    jquery: ^3.7.0
   languageName: unknown
   linkType: soft
 
@@ -13109,7 +13116,7 @@ fsevents@^1.2.7:
     gulp-rename: ^2.0.0
     gulp-sourcemaps: ^3.0.0
     gulp-uglify: ^3.0.2
-    jquery: ^3.6.4
+    jquery: ^3.7.0
   languageName: unknown
   linkType: soft
 
@@ -14912,10 +14919,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jquery@npm:^3.6.4":
-  version: 3.6.4
-  resolution: "jquery@npm:3.6.4"
-  checksum: 8354f7bd0a0424aa714ee1b6b1ef74b410f834eb5c8501682289b358bc151f11677f11188b544f3bb49309d6ec4d15d1a5de175661250c206b06185a252f706f
+"jquery@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "jquery@npm:3.7.0"
+  checksum: 907785e133afc427650a131af5fccef66a404885037513b3d4d7d63aee6409bcc32a39836868c60e59b05aa0fb8ace8961c18b2ee3ffdf6ffdb571d6d7cd88ff
   languageName: node
   linkType: hard
 
@@ -16231,8 +16238,8 @@ fsevents@^1.2.7:
     postcss: ^8.4.23
     postcss-loader: ^7.3.0
     style-loader: ^3.3.2
-    webpack: ^5.82.0
-    webpack-cli: ^5.1.0
+    webpack: ^5.82.1
+    webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
   languageName: unknown
   linkType: soft
@@ -16266,8 +16273,8 @@ fsevents@^1.2.7:
     react: ^18.2.0
     react-dom: ^18.2.0
     style-loader: ^3.3.2
-    webpack: ^5.82.0
-    webpack-cli: ^5.1.0
+    webpack: ^5.82.1
+    webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
   languageName: unknown
   linkType: soft
@@ -16743,8 +16750,8 @@ fsevents@^1.2.7:
     stylelint: ^15.6.1
     stylelint-webpack-plugin: ^4.1.1
     typescript: ^5.0.4
-    webpack: ^5.82.0
-    webpack-cli: ^5.1.0
+    webpack: ^5.82.1
+    webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
   languageName: unknown
   linkType: soft
@@ -16840,10 +16847,10 @@ fsevents@^1.2.7:
     gunzip-maybe: ^1.4.2
     jest: ^29.5.0
     log4js: ^6.9.1
-    node-fetch: ^2.6.9
+    node-fetch: ^2.6.11
     ora: ^5.4.1
     prettier: ^2.8.8
-    semver: ^7.5.0
+    semver: ^7.5.1
     tar-fs: ^2.1.1
     tar-stream: ^3.0.0
     typescript: ^5.0.4
@@ -16951,8 +16958,8 @@ fsevents@^1.2.7:
     stylelint: ^15.6.1
     stylelint-webpack-plugin: ^4.1.1
     typescript: ^5.0.4
-    webpack: ^5.82.0
-    webpack-cli: ^5.1.0
+    webpack: ^5.82.1
+    webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
   languageName: unknown
   linkType: soft
@@ -17086,9 +17093,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.7, node-fetch@npm:^2.6.9":
-  version: 2.6.9
-  resolution: "node-fetch@npm:2.6.9"
+"node-fetch@npm:^2.6.11, node-fetch@npm:^2.6.7":
+  version: 2.6.11
+  resolution: "node-fetch@npm:2.6.11"
   dependencies:
     whatwg-url: ^5.0.0
   peerDependencies:
@@ -17096,7 +17103,7 @@ fsevents@^1.2.7:
   peerDependenciesMeta:
     encoding:
       optional: true
-  checksum: acb04f9ce7224965b2b59e71b33c639794d8991efd73855b0b250921382b38331ffc9d61bce502571f6cc6e11a8905ca9b1b6d4aeb586ab093e2756a1fd190d0
+  checksum: 249d0666a9497553384d46b5ab296ba223521ac88fed4d8a17d6ee6c2efb0fc890f3e8091cafe7f9fba8151a5b8d925db2671543b3409a56c3cd522b468b47b3
   languageName: node
   linkType: hard
 
@@ -21445,8 +21452,8 @@ fsevents@^1.2.7:
     stylelint: ^15.6.1
     stylelint-webpack-plugin: ^4.1.1
     typescript: ^5.0.4
-    webpack: ^5.82.0
-    webpack-cli: ^5.1.0
+    webpack: ^5.82.1
+    webpack-cli: ^5.1.1
     webpack-dev-server: ^4.15.0
   languageName: unknown
   linkType: soft
@@ -21892,14 +21899,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.6, semver@npm:^7.3.7, semver@npm:^7.3.8, semver@npm:^7.5.0":
-  version: 7.5.0
-  resolution: "semver@npm:7.5.0"
+"semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.6, semver@npm:^7.3.7, semver@npm:^7.3.8, semver@npm:^7.5.1":
+  version: 7.5.1
+  resolution: "semver@npm:7.5.1"
   dependencies:
     lru-cache: ^6.0.0
   bin:
     semver: bin/semver.js
-  checksum: 2d266937756689a76f124ffb4c1ea3e1bbb2b263219f90ada8a11aebebe1280b13bb76cca2ca96bdee3dbc554cbc0b24752eb895b2a51577aa644427e9229f2b
+  checksum: d16dbedad53c65b086f79524b9ef766bf38670b2395bdad5c957f824dcc566b624988013564f4812bcace3f9d405355c3635e2007396a39d1bffc71cfec4a2fc
   languageName: node
   linkType: hard
 
@@ -23000,12 +23007,12 @@ fsevents@^1.2.7:
   resolution: "styled-components-demo@workspace:react/styled-components-demo"
   dependencies:
     "@sabertazimi/react-scripts": ^5.13.5
-    "@testing-library/dom": ^9.2.0
+    "@testing-library/dom": ^9.3.0
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^14.0.0
     "@testing-library/user-event": ^14.4.3
     "@types/jest": ^29.5.1
-    "@types/node": ^18.16.5
+    "@types/node": ^18.16.8
     "@types/react": ^18.2.6
     "@types/react-dom": ^18.2.4
     "@types/react-is": ^18.2.0
@@ -25004,14 +25011,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "webpack-cli@npm:5.1.0"
+"webpack-cli@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "webpack-cli@npm:5.1.1"
   dependencies:
     "@discoveryjs/json-ext": ^0.5.0
     "@webpack-cli/configtest": ^2.1.0
     "@webpack-cli/info": ^2.0.1
-    "@webpack-cli/serve": ^2.0.3
+    "@webpack-cli/serve": ^2.0.4
     colorette: ^2.0.14
     commander: ^10.0.1
     cross-spawn: ^7.0.3
@@ -25032,7 +25039,7 @@ fsevents@^1.2.7:
       optional: true
   bin:
     webpack-cli: bin/cli.js
-  checksum: 73749b9e27e16007011266dcd7b935168cc61cd4e346e4c09a697be066a310b822c1f386ba4a87417851eedd6df5812389918be68e275542c8a18e05ca1a719c
+  checksum: 7738e6a84a0098886e1e0c0fd0dab44b7dedfbb0580afbb5ef734c5109dcaee80140bebb5d9f4b40f425029563bb09bcbda8b08d904fa14e60ff632e6dcc8a17
   languageName: node
   linkType: hard
 
@@ -25147,9 +25154,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.76.2, webpack@npm:^5.82.0":
-  version: 5.82.0
-  resolution: "webpack@npm:5.82.0"
+"webpack@npm:^5.76.2, webpack@npm:^5.82.1":
+  version: 5.82.1
+  resolution: "webpack@npm:5.82.1"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^1.0.0
@@ -25160,7 +25167,7 @@ fsevents@^1.2.7:
     acorn-import-assertions: ^1.7.6
     browserslist: ^4.14.5
     chrome-trace-event: ^1.0.2
-    enhanced-resolve: ^5.13.0
+    enhanced-resolve: ^5.14.0
     es-module-lexer: ^1.2.1
     eslint-scope: 5.1.1
     events: ^3.2.0
@@ -25180,7 +25187,7 @@ fsevents@^1.2.7:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 499e7f5f24fccaa76f64f2a01f91f371073416f568ef6171dc73187a89078f0c33410d4c9f40d411f0827bab8455f8476eabd803ef4d2920d9a2e5f17efa2703
+  checksum: 747ee7ebd238c15249c2652060e3c6ca6d62cc66dcf7e4e2824ecd4875b7ea5e01fce8f4179080a3e84dfdb3c8d0992700444c7c5a05ef47b38c0623d3ac76de
   languageName: node
   linkType: hard
 
