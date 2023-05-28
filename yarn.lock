@@ -6672,7 +6672,7 @@ __metadata:
     clean-webpack-plugin: ^4.0.0
     copy-webpack-plugin: ^11.0.0
     cross-env: ^7.0.3
-    css-loader: ^6.7.4
+    css-loader: ^6.8.1
     eslint: ^8.41.0
     eslint-webpack-plugin: ^4.0.1
     file-loader: ^6.2.0
@@ -6681,11 +6681,11 @@ __metadata:
     image-webpack-loader: ^8.1.0
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.23
-    postcss-loader: ^7.3.1
+    postcss-loader: ^7.3.2
     precss: ^4.0.0
     prettier: ^2.8.8
     sass: ^1.62.1
-    sass-loader: ^13.3.0
+    sass-loader: ^13.3.1
     scrollreveal: ^4.0.9
     style-loader: ^3.3.3
     stylelint: ^15.6.2
@@ -7447,7 +7447,7 @@ __metadata:
     clean-webpack-plugin: ^4.0.0
     concurrently: ^8.0.1
     cross-env: ^7.0.3
-    css-loader: ^6.7.4
+    css-loader: ^6.8.1
     eslint: ^8.41.0
     eslint-webpack-plugin: ^4.0.1
     express: ^4.18.2
@@ -7457,7 +7457,7 @@ __metadata:
     mini-css-extract-plugin: ^2.7.6
     nodemon: ^2.0.22
     postcss: ^8.4.23
-    postcss-loader: ^7.3.1
+    postcss-loader: ^7.3.2
     prettier: ^2.8.8
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7465,7 +7465,7 @@ __metadata:
     react-router-dom: ^6.11.2
     redux: ^4.2.1
     sass: ^1.62.1
-    sass-loader: ^13.3.0
+    sass-loader: ^13.3.1
     socket.io: ^4.6.1
     socket.io-client: ^4.6.1
     style-loader: ^3.3.3
@@ -8591,21 +8591,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^6.7.3, css-loader@npm:^6.7.4":
-  version: 6.7.4
-  resolution: "css-loader@npm:6.7.4"
+"css-loader@npm:^6.7.3, css-loader@npm:^6.8.1":
+  version: 6.8.1
+  resolution: "css-loader@npm:6.8.1"
   dependencies:
     icss-utils: ^5.1.0
     postcss: ^8.4.21
     postcss-modules-extract-imports: ^3.0.0
-    postcss-modules-local-by-default: ^4.0.1
+    postcss-modules-local-by-default: ^4.0.3
     postcss-modules-scope: ^3.0.0
     postcss-modules-values: ^4.0.0
     postcss-value-parser: ^4.2.0
     semver: ^7.3.8
   peerDependencies:
     webpack: ^5.0.0
-  checksum: 6021fa9e375d767b9675e295c1513f2ee4ae04f76d9de69a75b8446e05f6e02b2170407ea72939925b788dcd5aa308527f6b41be3870dc1f4b0bfff8d2532c6e
+  checksum: 7c1784247bdbe76dc5c55fb1ac84f1d4177a74c47259942c9cfdb7a8e6baef11967a0bc85ac285f26bd26d5059decb848af8154a03fdb4f4894f41212f45eef3
   languageName: node
   linkType: hard
 
@@ -11805,20 +11805,20 @@ fsevents@^1.2.7:
     babel-loader: ^9.1.2
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
-    css-loader: ^6.7.4
+    css-loader: ^6.8.1
     eslint: ^8.41.0
     eslint-webpack-plugin: ^4.0.1
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.1
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.23
-    postcss-loader: ^7.3.1
+    postcss-loader: ^7.3.2
     prettier: ^2.8.8
     prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
     sass: ^1.62.1
-    sass-loader: ^13.3.0
+    sass-loader: ^13.3.1
     style-loader: ^3.3.3
     stylelint: ^15.6.2
     stylelint-webpack-plugin: ^4.1.1
@@ -16415,12 +16415,12 @@ fsevents@^1.2.7:
     babel-loader: ^9.1.2
     babel-plugin-transform-meact-jsx: ^2.7.0
     clean-webpack-plugin: ^4.0.0
-    css-loader: ^6.7.4
+    css-loader: ^6.8.1
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.1
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.23
-    postcss-loader: ^7.3.1
+    postcss-loader: ^7.3.2
     style-loader: ^3.3.3
     webpack: ^5.84.1
     webpack-cli: ^5.1.1
@@ -16447,12 +16447,12 @@ fsevents@^1.2.7:
     autoprefixer: ^10.4.14
     babel-loader: ^9.1.2
     clean-webpack-plugin: ^4.0.0
-    css-loader: ^6.7.4
+    css-loader: ^6.8.1
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.1
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.23
-    postcss-loader: ^7.3.1
+    postcss-loader: ^7.3.2
     prettier: ^2.8.8
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -16921,14 +16921,14 @@ fsevents@^1.2.7:
     babel-loader: ^9.1.2
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
-    css-loader: ^6.7.4
+    css-loader: ^6.8.1
     eslint: ^8.41.0
     eslint-webpack-plugin: ^4.0.1
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.1
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.23
-    postcss-loader: ^7.3.1
+    postcss-loader: ^7.3.2
     prettier: ^2.8.8
     style-loader: ^3.3.3
     stylelint: ^15.6.2
@@ -17126,14 +17126,14 @@ fsevents@^1.2.7:
     babel-loader: ^9.1.2
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
-    css-loader: ^6.7.4
+    css-loader: ^6.8.1
     eslint: ^8.41.0
     eslint-webpack-plugin: ^4.0.1
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.1
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.23
-    postcss-loader: ^7.3.1
+    postcss-loader: ^7.3.2
     prettier: ^2.8.8
     san: ^3.13.0
     san-loader: ^0.3.6
@@ -19455,9 +19455,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss-loader@npm:^7.1.0, postcss-loader@npm:^7.3.1":
-  version: 7.3.1
-  resolution: "postcss-loader@npm:7.3.1"
+"postcss-loader@npm:^7.1.0, postcss-loader@npm:^7.3.2":
+  version: 7.3.2
+  resolution: "postcss-loader@npm:7.3.2"
   dependencies:
     cosmiconfig: ^8.1.3
     jiti: ^1.18.2
@@ -19466,7 +19466,7 @@ fsevents@^1.2.7:
   peerDependencies:
     postcss: ^7.0.0 || ^8.0.1
     webpack: ^5.0.0
-  checksum: a8e0b8a078f309b1e90d0f947190ea24659c7ea2b922389b773c4983b116dfdf0a87b915e4c7477c7db99a5014c34d41cc1975b37075772ea2e6da3d0bbc0ca6
+  checksum: 7010f9aea756b801031a9f65c4c880b62c7c42d366312d47a7782c2cb05d0b8bedb149695a895d0104bc6639bc117350aed15da84029f58fc49828fee1fe244c
   languageName: node
   linkType: hard
 
@@ -19611,16 +19611,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss-modules-local-by-default@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "postcss-modules-local-by-default@npm:4.0.1"
+"postcss-modules-local-by-default@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "postcss-modules-local-by-default@npm:4.0.3"
   dependencies:
     icss-utils: ^5.0.0
     postcss-selector-parser: ^6.0.2
     postcss-value-parser: ^4.1.0
   peerDependencies:
     postcss: ^8.1.0
-  checksum: 1a95eb8bc54a363a77dbd77a0a88f500e7937ecbed5903becef9362eace28de406e6fdf62640126c22964678370e87eb10481eea2703702772935b4515603bfd
+  checksum: 2f8083687f3d6067885f8863dd32dbbb4f779cfcc7e52c17abede9311d84faf6d3ed8760e7c54c6380281732ae1f78e5e56a28baf3c271b33f450a11c9e30485
   languageName: node
   linkType: hard
 
@@ -21623,14 +21623,14 @@ fsevents@^1.2.7:
     babel-loader: ^9.1.2
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
-    css-loader: ^6.7.4
+    css-loader: ^6.8.1
     eslint: ^8.41.0
     eslint-webpack-plugin: ^4.0.1
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.1
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.23
-    postcss-loader: ^7.3.1
+    postcss-loader: ^7.3.2
     prettier: ^2.8.8
     style-loader: ^3.3.3
     stylelint: ^15.6.2
@@ -21871,9 +21871,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^13.2.1, sass-loader@npm:^13.3.0":
-  version: 13.3.0
-  resolution: "sass-loader@npm:13.3.0"
+"sass-loader@npm:^13.2.1, sass-loader@npm:^13.3.1":
+  version: 13.3.1
+  resolution: "sass-loader@npm:13.3.1"
   dependencies:
     klona: ^2.0.6
     neo-async: ^2.6.2
@@ -21892,7 +21892,7 @@ fsevents@^1.2.7:
       optional: true
     sass-embedded:
       optional: true
-  checksum: a3b57eaf09ae853fa95298bd7a42d64409f3f3b97f46ec4c61178763ffb61edddd5f89cc03940ef963aa328b4f6dcd4f1153e810e5eb29fb07ac02ddc121749c
+  checksum: 0cd4fcb6a6d7154412b27d19c65c3d84003c8e13dbf8196a905055043a4f70888cbb6c6d70d8b9e7ce55a6835644d8bdafe44eb6fd4a779188d528d558d492fb
   languageName: node
   linkType: hard
 
