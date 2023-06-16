@@ -24,7 +24,6 @@
     "**/__tests__/**",
     "**/*.md"
   ],
-  "useWorkspaces": true,
   "packages": [
     "./css",
     "./css/bootstrap-cms",
