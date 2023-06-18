@@ -7337,13 +7337,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chownr@npm:^1.1.1":
-  version: 1.1.4
-  resolution: "chownr@npm:1.1.4"
-  checksum: 115648f8eb38bac5e41c3857f3e663f9c39ed6480d1349977c4d96c95a47266fcacc5a5aabf3cb6c481e22d72f41992827db47301851766c4fd77ac21a4f081d
-  languageName: node
-  linkType: hard
-
 "chownr@npm:^2.0.0":
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
@@ -16740,7 +16733,7 @@ fsevents@^1.2.7:
     ora: ^5.4.1
     prettier: ^2.8.8
     semver: ^7.5.2
-    tar-fs: ^2.1.1
+    tar-fs: ^3.0.2
     tar-stream: ^3.1.1
     typescript: ^5.1.3
   bin:
@@ -23249,15 +23242,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"tar-fs@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "tar-fs@npm:2.1.1"
+"tar-fs@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "tar-fs@npm:3.0.2"
   dependencies:
-    chownr: ^1.1.1
     mkdirp-classic: ^0.5.2
     pump: ^3.0.0
-    tar-stream: ^2.1.4
-  checksum: f5b9a70059f5b2969e65f037b4e4da2daf0fa762d3d232ffd96e819e3f94665dbbbe62f76f084f1acb4dbdcce16c6e4dac08d12ffc6d24b8d76720f4d9cf032d
+    tar-stream: ^3.1.0
+  checksum: cbc2467c57f596595411334c24be3cbbb3b54ae15fd65b2608478a9584c603c5bcddd37538bc5ec149517c41fc2a911ecc46aab5335203ebb7c231f1ea81facb
   languageName: node
   linkType: hard
 
@@ -23276,7 +23268,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"tar-stream@npm:^2.1.4, tar-stream@npm:~2.2.0":
+"tar-stream@npm:^3.1.0, tar-stream@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "tar-stream@npm:3.1.1"
+  dependencies:
+    b4a: ^1.6.4
+    streamx: ^2.15.0
+  checksum: cc6153606f47ff5978f33d28c7984e78dfb7d0c7d606e6df49a7b6a0330da6762832260e25e62d49cb6ce646762843cc9d842ea7eec541497898ae176ff77c7d
+  languageName: node
+  linkType: hard
+
+"tar-stream@npm:~2.2.0":
   version: 2.2.0
   resolution: "tar-stream@npm:2.2.0"
   dependencies:
@@ -23286,16 +23288,6 @@ fsevents@^1.2.7:
     inherits: ^2.0.3
     readable-stream: ^3.1.1
   checksum: 699831a8b97666ef50021c767f84924cfee21c142c2eb0e79c63254e140e6408d6d55a065a2992548e72b06de39237ef2b802b99e3ece93ca3904a37622a66f3
-  languageName: node
-  linkType: hard
-
-"tar-stream@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "tar-stream@npm:3.1.1"
-  dependencies:
-    b4a: ^1.6.4
-    streamx: ^2.15.0
-  checksum: cc6153606f47ff5978f33d28c7984e78dfb7d0c7d606e6df49a7b6a0330da6762832260e25e62d49cb6ce646762843cc9d842ea7eec541497898ae176ff77c7d
   languageName: node
   linkType: hard
 
