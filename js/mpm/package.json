@@ -50,9 +50,9 @@
     "log4js": "^6.9.1",
     "node-fetch": "^2.6.11",
     "ora": "^5.4.1",
-    "semver": "^7.5.2",
-    "tar-fs": "^3.0.2",
-    "tar-stream": "^3.1.1"
+    "semver": "^7.5.3",
+    "tar-fs": "^3.0.3",
+    "tar-stream": "^3.1.4"
   },
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.13.5",
