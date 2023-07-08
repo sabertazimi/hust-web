@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/sabertazimi/hust-web#readme",
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.0.0"
   }
 }
