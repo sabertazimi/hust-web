@@ -41,13 +41,13 @@
   "homepage": "https://github.com/sabertazimi/hust-web",
   "packageManager": "yarn@3.6.1",
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.13.5",
-    "@dg-scripts/stylelint-config": "^5.13.5",
+    "@dg-scripts/eslint-config": "^5.14.0",
+    "@dg-scripts/stylelint-config": "^5.14.0",
     "chalk": "^4.1.2",
     "consola": "^3.2.2",
     "eslint": "^8.44.0",
     "lerna": "^7.1.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "semver": "^7.5.3",
     "stylelint": "^15.9.0",
     "typescript": "^5.1.6"
