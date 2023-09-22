@@ -4329,9 +4329,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^9.0.0, @testing-library/dom@npm:^9.3.1":
-  version: 9.3.1
-  resolution: "@testing-library/dom@npm:9.3.1"
+"@testing-library/dom@npm:^9.0.0, @testing-library/dom@npm:^9.3.3":
+  version: 9.3.3
+  resolution: "@testing-library/dom@npm:9.3.3"
   dependencies:
     "@babel/code-frame": ^7.10.4
     "@babel/runtime": ^7.12.5
@@ -4341,7 +4341,7 @@ __metadata:
     dom-accessibility-api: ^0.5.9
     lz-string: ^1.5.0
     pretty-format: ^27.0.2
-  checksum: 8ee3136451644e39990edea93709c38cf1e8ce5306f3c66273ca00935963faa51ca74e8d92b02eb442ccb842cfa28ca62833e393e075eb269cf9bef6f5600663
+  checksum: 34e0a564da7beb92aa9cc44a9080221e2412b1a132eb37be3d513fe6c58027674868deb9f86195756d98d15ba969a30fe00632a4e26e25df2a5a4f6ac0686e37
   languageName: node
   linkType: hard
 
@@ -4737,10 +4737,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^18.17.17":
-  version: 18.17.17
-  resolution: "@types/node@npm:18.17.17"
-  checksum: ff28f347c77723780836f9bb2ffa6db0cd72490bfd7604397c03db31db34f1f2899e82f0aaf3e825efeb09c15bd94d076ea9aca19a1407e1b56cb4603318936c
+"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^18.17.18":
+  version: 18.17.18
+  resolution: "@types/node@npm:18.17.18"
+  checksum: 59cbd906363d37017fe9ba0c08c1446e440d4d977459609c5f90b8fb7eb41f273ce8af30c5a5b5d599d7de934c1b3702bc9fc27caf8d2270e5cdb659c5232991
   languageName: node
   linkType: hard
 
@@ -4804,14 +4804,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.2.21":
-  version: 18.2.21
-  resolution: "@types/react@npm:18.2.21"
+"@types/react@npm:*, @types/react@npm:^18.2.22":
+  version: 18.2.22
+  resolution: "@types/react@npm:18.2.22"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: ffed203bfe7aad772b8286f7953305c9181ac3a8f27d3f5400fbbc2a8e27ca8e5bbff818ee014f39ca0d19d2b3bb154e5bdbec7e232c6f80b59069375aa78349
+  checksum: 44289523dabaadcd3fd85689abb98f9ebcc8492d7e978348d1c986138acef4801030b279e89a19e38a6319e294bcea77559e37e0c803e4bacf2b8ae3a56ba587
   languageName: node
   linkType: hard
 
@@ -6078,13 +6078,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.2.6, autoprefixer@npm:^10.4.14, autoprefixer@npm:^10.4.15":
-  version: 10.4.15
-  resolution: "autoprefixer@npm:10.4.15"
+"autoprefixer@npm:^10.2.6, autoprefixer@npm:^10.4.14, autoprefixer@npm:^10.4.16":
+  version: 10.4.16
+  resolution: "autoprefixer@npm:10.4.16"
   dependencies:
     browserslist: ^4.21.10
-    caniuse-lite: ^1.0.30001520
-    fraction.js: ^4.2.0
+    caniuse-lite: ^1.0.30001538
+    fraction.js: ^4.3.6
     normalize-range: ^0.1.2
     picocolors: ^1.0.0
     postcss-value-parser: ^4.2.0
@@ -6092,7 +6092,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: d490b14fb098c043e109fc13cd23628f146af99a493d35b9df3a26f8ec0b4dd8937c5601cdbaeb465b98ea31d3ea05aa7184711d4d93dfb52358d073dcb67032
+  checksum: 45fad7086495048dacb14bb7b00313e70e135b5d8e8751dcc60548889400763705ab16fc2d99ea628b44c3472698fb0e39598f595ba28409c965ab159035afde
   languageName: node
   linkType: hard
 
@@ -6681,7 +6681,7 @@ __metadata:
     "@dg-scripts/eslint-config": ^5.14.0
     "@dg-scripts/stylelint-config": ^5.14.0
     "@popperjs/core": ^2.11.8
-    autoprefixer: ^10.4.15
+    autoprefixer: ^10.4.16
     babel-loader: ^9.1.3
     bootstrap: ^5.3.2
     clean-webpack-plugin: ^4.0.0
@@ -6695,11 +6695,11 @@ __metadata:
     html-webpack-plugin: ^5.5.3
     image-webpack-loader: ^8.1.0
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.29
+    postcss: ^8.4.30
     postcss-loader: ^7.3.3
     precss: ^4.0.0
     prettier: ^3.0.3
-    sass: ^1.67.0
+    sass: ^1.68.0
     sass-loader: ^13.3.2
     scrollreveal: ^4.0.9
     style-loader: ^3.3.3
@@ -7339,10 +7339,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001517, caniuse-lite@npm:^1.0.30001520":
-  version: 1.0.30001521
-  resolution: "caniuse-lite@npm:1.0.30001521"
-  checksum: be2a2b2cd3be03401887aaa31b89f3e7c6230289e6ef704e224268389cc136480fca502ac9e5001a65ff1e50459d3d95f8c4b2d39f878ab9843af3d6f372c8bb
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001517, caniuse-lite@npm:^1.0.30001538":
+  version: 1.0.30001538
+  resolution: "caniuse-lite@npm:1.0.30001538"
+  checksum: 94c5d55757a339c7cc175f08a024671e2b4e7c04f130b1015793303d637061347efb6ad84447c3b8137333e742d150b8ad9672716bbf2482646c2e63a56f6c55
   languageName: node
   linkType: hard
 
@@ -7486,7 +7486,7 @@ __metadata:
     "@dg-scripts/eslint-config": ^5.14.0
     "@dg-scripts/stylelint-config": ^5.14.0
     "@livechat/ui-kit": ^0.5.0-27
-    autoprefixer: ^10.4.15
+    autoprefixer: ^10.4.16
     babel-loader: ^9.1.3
     body-parser: ^1.20.2
     clean-webpack-plugin: ^4.0.0
@@ -7501,7 +7501,7 @@ __metadata:
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
     nodemon: ^3.0.1
-    postcss: ^8.4.29
+    postcss: ^8.4.30
     postcss-loader: ^7.3.3
     prettier: ^3.0.3
     react: ^18.2.0
@@ -7509,7 +7509,7 @@ __metadata:
     react-redux: ^8.1.2
     react-router-dom: ^6.16.0
     redux: ^4.2.1
-    sass: ^1.67.0
+    sass: ^1.68.0
     sass-loader: ^13.3.2
     socket.io: ^4.7.2
     socket.io-client: ^4.7.2
@@ -11626,10 +11626,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fraction.js@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "fraction.js@npm:4.2.0"
-  checksum: 8c76a6e21dedea87109d6171a0ac77afa14205794a565d71cb10d2925f629a3922da61bf45ea52dbc30bce4d8636dc0a27213a88cbd600eab047d82f9a3a94c5
+"fraction.js@npm:^4.3.6":
+  version: 4.3.6
+  resolution: "fraction.js@npm:4.3.6"
+  checksum: e96ae77e64ebfd442d3a5a01a3f0637b0663fc2440bcf2841b3ad9341ba24c81fb2e3e7142e43ef7d088558c6b3f8609df135b201adc7a1c674aea6a71384162
   languageName: node
   linkType: hard
 
@@ -11866,7 +11866,7 @@ fsevents@^1.2.7:
     "@babel/preset-react": ^7.22.15
     "@dg-scripts/eslint-config": ^5.14.0
     "@dg-scripts/stylelint-config": ^5.14.0
-    autoprefixer: ^10.4.15
+    autoprefixer: ^10.4.16
     babel-loader: ^9.1.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -11876,13 +11876,13 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.29
+    postcss: ^8.4.30
     postcss-loader: ^7.3.3
     prettier: ^3.0.3
     prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
-    sass: ^1.67.0
+    sass: ^1.68.0
     sass-loader: ^13.3.2
     style-loader: ^3.3.3
     stylelint: ^15.10.3
@@ -16576,7 +16576,7 @@ fsevents@^1.2.7:
     "@babel/plugin-proposal-object-rest-spread": ^7.20.7
     "@babel/preset-env": ^7.22.20
     "@babel/preset-react": ^7.22.15
-    autoprefixer: ^10.4.15
+    autoprefixer: ^10.4.16
     babel-loader: ^9.1.3
     babel-plugin-transform-meact-jsx: ^2.7.0
     clean-webpack-plugin: ^4.0.0
@@ -16584,7 +16584,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.29
+    postcss: ^8.4.30
     postcss-loader: ^7.3.3
     style-loader: ^3.3.3
     webpack: ^5.88.2
@@ -16609,14 +16609,14 @@ fsevents@^1.2.7:
     "@babel/plugin-proposal-object-rest-spread": ^7.20.7
     "@babel/preset-env": ^7.22.20
     "@babel/preset-react": ^7.22.15
-    autoprefixer: ^10.4.15
+    autoprefixer: ^10.4.16
     babel-loader: ^9.1.3
     clean-webpack-plugin: ^4.0.0
     css-loader: ^6.8.1
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.29
+    postcss: ^8.4.30
     postcss-loader: ^7.3.3
     prettier: ^3.0.3
     react: ^18.2.0
@@ -17087,7 +17087,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.22.20
     "@dg-scripts/eslint-config": ^5.14.0
     "@dg-scripts/stylelint-config": ^5.14.0
-    autoprefixer: ^10.4.15
+    autoprefixer: ^10.4.16
     babel-loader: ^9.1.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -17097,7 +17097,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.29
+    postcss: ^8.4.30
     postcss-loader: ^7.3.3
     prettier: ^3.0.3
     style-loader: ^3.3.3
@@ -17288,7 +17288,7 @@ fsevents@^1.2.7:
     "@dg-scripts/eslint-config": ^5.14.0
     "@dg-scripts/stylelint-config": ^5.14.0
     async-validator: ^4.2.5
-    autoprefixer: ^10.4.15
+    autoprefixer: ^10.4.16
     babel-loader: ^9.1.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -17298,7 +17298,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.29
+    postcss: ^8.4.30
     postcss-loader: ^7.3.3
     prettier: ^3.0.3
     san: ^3.13.2
@@ -20413,14 +20413,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.14, postcss@npm:^8.3.0, postcss@npm:^8.3.5, postcss@npm:^8.4.0, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.25, postcss@npm:^8.4.27, postcss@npm:^8.4.29":
-  version: 8.4.29
-  resolution: "postcss@npm:8.4.29"
+"postcss@npm:^8.2.14, postcss@npm:^8.3.0, postcss@npm:^8.3.5, postcss@npm:^8.4.0, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.25, postcss@npm:^8.4.27, postcss@npm:^8.4.30":
+  version: 8.4.30
+  resolution: "postcss@npm:8.4.30"
   dependencies:
     nanoid: ^3.3.6
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: dd6daa25e781db9ae5b651d9b7bfde0ec6e60e86a37da69a18eb4773d5ddd51e28fc4ff054fbdc04636a31462e6bf09a1e50986f69ac52b10d46b7457cd36d12
+  checksum: 6c810c10c9bd3e03ca016e0b6b6756261e640aba1a9a7b1200b55502bc34b9165e38f590aef3493afc2f30ab55cdfcd43fd0f8408d69a77318ddbcf2a8ad164b
   languageName: node
   linkType: hard
 
@@ -21758,7 +21758,7 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.22.20
     "@dg-scripts/eslint-config": ^5.14.0
     "@dg-scripts/stylelint-config": ^5.14.0
-    autoprefixer: ^10.4.15
+    autoprefixer: ^10.4.16
     babel-loader: ^9.1.3
     clean-webpack-plugin: ^4.0.0
     cross-env: ^7.0.3
@@ -21768,7 +21768,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.29
+    postcss: ^8.4.30
     postcss-loader: ^7.3.3
     prettier: ^3.0.3
     style-loader: ^3.3.3
@@ -22053,16 +22053,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.67.0":
-  version: 1.67.0
-  resolution: "sass@npm:1.67.0"
+"sass@npm:^1.68.0":
+  version: 1.68.0
+  resolution: "sass@npm:1.68.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 9e7566e8b7386cf265dddcdb266a023fb5759c5a8f48a11da199c8bf419e5f08f4ff6404d85d6bf5eac01e1f7c7061fdb6b7b65cbfda164e59b0a06b72ac8567
+  checksum: 65ccede83c96768beeb8dcaf67957b7c76b12ff1276bfd2849d7be151d46ba1400048a67717e6e5e4969bc75e87348e5530f5f272833f2e60a891c21a33d8ab0
   languageName: node
   linkType: hard
 
@@ -23394,13 +23394,13 @@ fsevents@^1.2.7:
   resolution: "styled-components-demo@workspace:react/styled-components-demo"
   dependencies:
     "@sabertazimi/react-scripts": ^5.14.0
-    "@testing-library/dom": ^9.3.1
+    "@testing-library/dom": ^9.3.3
     "@testing-library/jest-dom": ^6.1.3
     "@testing-library/react": ^14.0.0
     "@testing-library/user-event": ^14.5.1
     "@types/jest": ^29.5.5
-    "@types/node": ^18.17.17
-    "@types/react": ^18.2.21
+    "@types/node": ^18.17.18
+    "@types/react": ^18.2.22
     "@types/react-dom": ^18.2.7
     "@types/react-is": ^18.2.1
     "@types/styled-components": ^5.1.27
