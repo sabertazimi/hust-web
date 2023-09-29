@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
   "devDependencies": {
-    "@babel/core": "^7.22.20",
+    "@babel/core": "^7.23.0",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.22.20",
@@ -49,7 +49,7 @@
     "html-webpack-plugin": "^5.5.3",
     "image-webpack-loader": "^8.1.0",
     "mini-css-extract-plugin": "^2.7.6",
-    "postcss": "^8.4.30",
+    "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
     "precss": "^4.0.0",
     "prettier": "^3.0.3",
