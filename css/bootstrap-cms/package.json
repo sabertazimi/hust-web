@@ -53,7 +53,7 @@
     "postcss-loader": "^7.3.3",
     "precss": "^4.0.0",
     "prettier": "^3.0.3",
-    "sass": "^1.68.0",
+    "sass": "^1.69.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
     "stylelint": "^15.10.3",
