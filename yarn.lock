@@ -4737,10 +4737,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^18.18.1":
-  version: 18.18.1
-  resolution: "@types/node@npm:18.18.1"
-  checksum: 079085afc8615b91727900628410a2077f7fff51c5c3e20c4ab2d9caae4010b035aac13dae1221155e9d6ca46084aebf68121642140527b4009eee17b716d339
+"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^18.18.3":
+  version: 18.18.3
+  resolution: "@types/node@npm:18.18.3"
+  checksum: ed97a832179e0cfbb93738021fe16d0bc5c0f34bea35269c23c9dd5f0ecc8be93dbe5efd51630189a099b31786a47c1bde115508831a7245613a55c3ad1a7d6b
   languageName: node
   linkType: hard
 
@@ -4786,12 +4786,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.0, @types/react-dom@npm:^18.2.8":
-  version: 18.2.8
-  resolution: "@types/react-dom@npm:18.2.8"
+"@types/react-dom@npm:^18.0.0, @types/react-dom@npm:^18.2.10":
+  version: 18.2.10
+  resolution: "@types/react-dom@npm:18.2.10"
   dependencies:
     "@types/react": "*"
-  checksum: d36264631028d021b73cd9e015f10b95c4959ae1ce8f7a7419f318d1f05b1d063e6afffcd2a349a6bccd64ccc9ee9d2d976e1f0437643f0e7db621fa035bca65
+  checksum: ced70643d82dd9d165cd6d1a98ec7556daf77d8fdec1ed19badb744a2a2370a84cc109248667536d7f850409e85432c300ec9f8c87d46e066ad295ddf9b6ab03
   languageName: node
   linkType: hard
 
@@ -4804,14 +4804,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.2.24":
-  version: 18.2.24
-  resolution: "@types/react@npm:18.2.24"
+"@types/react@npm:*, @types/react@npm:^18.2.25":
+  version: 18.2.25
+  resolution: "@types/react@npm:18.2.25"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: ea5d8204e71b1c9c6631f429a93f8e7be0614cdbdb464e92b3181bdccd8a7c45e30ded8b13da726684b6393f651317c36d54832e3d3cdea0da480a3f26268909
+  checksum: 177515cd44135d56191ec6c5c10edd490c96c175d37624d9c37bc2007c3abcf6cc2d2137d2a073d692cdc5129d5d5785bd60a6ddd315f695da5d8b989fa2afc5
   languageName: node
   linkType: hard
 
@@ -6699,7 +6699,7 @@ __metadata:
     postcss-loader: ^7.3.3
     precss: ^4.0.0
     prettier: ^3.0.3
-    sass: ^1.68.0
+    sass: ^1.69.0
     sass-loader: ^13.3.2
     scrollreveal: ^4.0.9
     style-loader: ^3.3.3
@@ -7496,7 +7496,7 @@ __metadata:
     eslint: ^8.50.0
     eslint-webpack-plugin: ^4.0.1
     express: ^4.18.2
-    express-rate-limit: ^7.0.2
+    express-rate-limit: ^7.1.0
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
@@ -7509,7 +7509,7 @@ __metadata:
     react-redux: ^8.1.3
     react-router-dom: ^6.16.0
     redux: ^4.2.1
-    sass: ^1.68.0
+    sass: ^1.69.0
     sass-loader: ^13.3.2
     socket.io: ^4.7.2
     socket.io-client: ^4.7.2
@@ -10895,12 +10895,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-rate-limit@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "express-rate-limit@npm:7.0.2"
+"express-rate-limit@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "express-rate-limit@npm:7.1.0"
   peerDependencies:
     express: ^4 || ^5
-  checksum: 0d3a853d910b0bfcb70d7e38bcd3f39b20a0d1f402528288eafa3e836e14d670ec633952d4f423d10354705ed729a34d883f86a6d74fb7908a44083a5f691ccf
+  checksum: d10e5419058d62d696b4ca9279cdd6089e808b4480e880968b662ba739fe0fed91f8a610ab608fce68dd1da6c2ddb7aa9f08de8a929ea1909e82682081dcee15
   languageName: node
   linkType: hard
 
@@ -11882,7 +11882,7 @@ fsevents@^1.2.7:
     prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
-    sass: ^1.68.0
+    sass: ^1.69.0
     sass-loader: ^13.3.2
     style-loader: ^3.3.3
     stylelint: ^15.10.3
@@ -22053,16 +22053,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.68.0":
-  version: 1.68.0
-  resolution: "sass@npm:1.68.0"
+"sass@npm:^1.69.0":
+  version: 1.69.0
+  resolution: "sass@npm:1.69.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 65ccede83c96768beeb8dcaf67957b7c76b12ff1276bfd2849d7be151d46ba1400048a67717e6e5e4969bc75e87348e5530f5f272833f2e60a891c21a33d8ab0
+  checksum: eabea31ea3b1dd529c7eff345c8b6468afe6ab8011bd4f95caa2cffb8fb115cc055ea21de425be6197f7ed22516f5652eccb98d315d592ea152ada553f964b8a
   languageName: node
   linkType: hard
 
@@ -23399,9 +23399,9 @@ fsevents@^1.2.7:
     "@testing-library/react": ^14.0.0
     "@testing-library/user-event": ^14.5.1
     "@types/jest": ^29.5.5
-    "@types/node": ^18.18.1
-    "@types/react": ^18.2.24
-    "@types/react-dom": ^18.2.8
+    "@types/node": ^18.18.3
+    "@types/react": ^18.2.25
+    "@types/react-dom": ^18.2.10
     "@types/react-is": ^18.2.2
     "@types/styled-components": ^5.1.28
     react: ^18.2.0
