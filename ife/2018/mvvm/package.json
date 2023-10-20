@@ -50,7 +50,7 @@
     "prettier": "^3.0.3",
     "san-loader": "^0.3.7",
     "style-loader": "^3.3.3",
-    "stylelint": "^15.10.3",
+    "stylelint": "^15.11.0",
     "stylelint-webpack-plugin": "^4.1.1",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0",
@@ -60,6 +60,6 @@
   "dependencies": {
     "async-validator": "^4.2.5",
     "san": "^3.13.3",
-    "san-router": "^2.0.1"
+    "san-router": "^2.0.2"
   }
 }
