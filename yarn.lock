@@ -4525,6 +4525,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/expect@npm:^1.20.4":
+  version: 1.20.4
+  resolution: "@types/expect@npm:1.20.4"
+  checksum: c09a9abec2c1776dd8948920dc3bad87b1206c843509d3d3002040983b1769b2e3914202a6c20b72e5c3fb5738a1ab87cb7be9d3fe9efabf2a324173b222a224
+  languageName: node
+  linkType: hard
+
 "@types/express-serve-static-core@npm:*, @types/express-serve-static-core@npm:^4.17.18":
   version: 4.17.27
   resolution: "@types/express-serve-static-core@npm:4.17.27"
@@ -4889,6 +4896,16 @@ __metadata:
   version: 0.0.3
   resolution: "@types/use-sync-external-store@npm:0.0.3"
   checksum: 161ddb8eec5dbe7279ac971531217e9af6b99f7783213566d2b502e2e2378ea19cf5e5ea4595039d730aa79d3d35c6567d48599f69773a02ffcff1776ec2a44e
+  languageName: node
+  linkType: hard
+
+"@types/vinyl@npm:^2.0.9":
+  version: 2.0.9
+  resolution: "@types/vinyl@npm:2.0.9"
+  dependencies:
+    "@types/expect": ^1.20.4
+    "@types/node": "*"
+  checksum: 69f1718cbe09646fad7c2145326191b27a20e9200331813050eabad7f8e5b23b6503d48fb068c107ada02ea3b788b3a98ea7ddbdb611cc0318f9b4a3f16924ae
   languageName: node
   linkType: hard
 
@@ -6042,7 +6059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.2.6, autoprefixer@npm:^10.4.14, autoprefixer@npm:^10.4.16":
+"autoprefixer@npm:^10.4.14, autoprefixer@npm:^10.4.16":
   version: 10.4.16
   resolution: "autoprefixer@npm:10.4.16"
   dependencies:
@@ -9759,6 +9776,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"easy-transform-stream@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "easy-transform-stream@npm:1.0.1"
+  checksum: 3d783ad3ffa21690c9e84ee54a9993a882f07e86416f15fe8dfcfb2c93ea28ce79f10775c2e56d846bba6a9e85e64f9f867c085d5906031c06c97c5a5234be46
+  languageName: node
+  linkType: hard
+
 "ee-first@npm:1.1.1":
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
@@ -10989,7 +11013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fancy-log@npm:^1.1.0, fancy-log@npm:^1.3.2, fancy-log@npm:^1.3.3":
+"fancy-log@npm:^1.1.0, fancy-log@npm:^1.3.2":
   version: 1.3.3
   resolution: "fancy-log@npm:1.3.3"
   dependencies:
@@ -12455,22 +12479,20 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"gulp-autoprefixer@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "gulp-autoprefixer@npm:8.0.0"
+"gulp-autoprefixer@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "gulp-autoprefixer@npm:9.0.0"
   dependencies:
-    autoprefixer: ^10.2.6
-    fancy-log: ^1.3.3
-    plugin-error: ^1.0.1
-    postcss: ^8.3.0
-    through2: ^4.0.2
+    autoprefixer: ^10.4.16
+    gulp-plugin-extras: ^0.2.2
+    postcss: ^8.4.31
     vinyl-sourcemaps-apply: ^0.2.1
   peerDependencies:
     gulp: ">=4"
   peerDependenciesMeta:
     gulp:
       optional: true
-  checksum: 4187d2dcabbe8618e3162b5e3effdb44d9d8d070a40947f2d9770b39566ce1d11caaf447ea1d853bba0b537b0dec189345eeae83f198c6b39a2eaeb39777cfc9
+  checksum: cb27cf948e4769504959d51d7f6c53fe2106fc2561bff915aead51df53d42053c70fa578a7f2d04366ba9c70c8babd3225e91b89a6d32a0c5ec7e7b52f6e8183
   languageName: node
   linkType: hard
 
@@ -12557,6 +12579,17 @@ fsevents@^1.2.7:
     vinyl-bufferstream: ^1.0.1
     vinyl-sourcemaps-apply: ^0.2.0
   checksum: 78feb32387134039400a615613eb6bab741c3cc9a6fec162f5fe097772156d1c5d98685f4155fa2679dd860b65162ebae93ad79a4fc7c1afeb1d06562cc14ad1
+  languageName: node
+  linkType: hard
+
+"gulp-plugin-extras@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "gulp-plugin-extras@npm:0.2.2"
+  dependencies:
+    "@types/vinyl": ^2.0.9
+    chalk: ^5.3.0
+    easy-transform-stream: ^1.0.1
+  checksum: 96ce1f063f67891d3a02e30c5c63c2d2f41606816700102b289179cbffee4201e59f6e607355638852a42f7936e6de4ab2ecff22013ff62775a2ba2d873fc39e
   languageName: node
   linkType: hard
 
@@ -13319,7 +13352,7 @@ fsevents@^1.2.7:
   resolution: "ife-2016-task26@workspace:ife/2016/stageTwo/task26"
   dependencies:
     gulp: ^4.0.2
-    gulp-autoprefixer: ^8.0.0
+    gulp-autoprefixer: ^9.0.0
     gulp-concat: ^2.6.1
     gulp-imagemin: ^7.1.0
     gulp-minify-css: ^1.2.4
@@ -13335,7 +13368,7 @@ fsevents@^1.2.7:
   resolution: "ife-2016-task27@workspace:ife/2016/stageTwo/task27"
   dependencies:
     gulp: ^4.0.2
-    gulp-autoprefixer: ^8.0.0
+    gulp-autoprefixer: ^9.0.0
     gulp-concat: ^2.6.1
     gulp-imagemin: ^7.1.0
     gulp-minify-css: ^1.2.4
@@ -13351,7 +13384,7 @@ fsevents@^1.2.7:
   resolution: "ife-2016-task28@workspace:ife/2016/stageTwo/task28"
   dependencies:
     gulp: ^4.0.2
-    gulp-autoprefixer: ^8.0.0
+    gulp-autoprefixer: ^9.0.0
     gulp-concat: ^2.6.1
     gulp-imagemin: ^7.1.0
     gulp-minify-css: ^1.2.4
@@ -20397,7 +20430,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.14, postcss@npm:^8.3.0, postcss@npm:^8.3.5, postcss@npm:^8.4.0, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.25, postcss@npm:^8.4.28, postcss@npm:^8.4.31":
+"postcss@npm:^8.2.14, postcss@npm:^8.3.5, postcss@npm:^8.4.0, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.25, postcss@npm:^8.4.28, postcss@npm:^8.4.31":
   version: 8.4.31
   resolution: "postcss@npm:8.4.31"
   dependencies:
@@ -21222,7 +21255,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:2 || 3, readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.0.2, readable-stream@npm:^3.0.6, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
+"readable-stream@npm:2 || 3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.0.2, readable-stream@npm:^3.0.6, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
   dependencies:
@@ -24135,15 +24168,6 @@ fsevents@^1.2.7:
     inherits: ^2.0.4
     readable-stream: 2 || 3
   checksum: 47c9586c735e7d9cbbc1029f3ff422108212f7cc42e06d5cc9fff7901e659c948143c790e0d0d41b1b5f89f1d1200bdd200c7b72ad34f42f9edbeb32ea49e8b7
-  languageName: node
-  linkType: hard
-
-"through2@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "through2@npm:4.0.2"
-  dependencies:
-    readable-stream: 3
-  checksum: ac7430bd54ccb7920fd094b1c7ff3e1ad6edd94202e5528331253e5fde0cc56ceaa690e8df9895de2e073148c52dfbe6c4db74cacae812477a35660090960cc0
   languageName: node
   linkType: hard
 
