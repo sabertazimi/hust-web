@@ -6675,7 +6675,7 @@ __metadata:
     html-webpack-plugin: ^5.5.3
     image-webpack-loader: ^8.1.0
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.31
+    postcss: ^8.4.32
     postcss-loader: ^7.3.3
     precss: ^4.0.0
     prettier: ^3.1.0
@@ -7464,7 +7464,7 @@ __metadata:
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
     nodemon: ^3.0.2
-    postcss: ^8.4.31
+    postcss: ^8.4.32
     postcss-loader: ^7.3.3
     prettier: ^3.1.0
     react: ^18.2.0
@@ -11758,7 +11758,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.31
+    postcss: ^8.4.32
     postcss-loader: ^7.3.3
     prettier: ^3.1.0
     prop-types: ^15.8.1
@@ -16449,7 +16449,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.31
+    postcss: ^8.4.32
     postcss-loader: ^7.3.3
     style-loader: ^3.3.3
     webpack: ^5.89.0
@@ -16481,7 +16481,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.31
+    postcss: ^8.4.32
     postcss-loader: ^7.3.3
     prettier: ^3.1.0
     react: ^18.2.0
@@ -16944,7 +16944,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.31
+    postcss: ^8.4.32
     postcss-loader: ^7.3.3
     prettier: ^3.1.0
     style-loader: ^3.3.3
@@ -17133,7 +17133,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.31
+    postcss: ^8.4.32
     postcss-loader: ^7.3.3
     prettier: ^3.1.0
     san: ^3.13.3
@@ -17169,12 +17169,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.6":
-  version: 3.3.6
-  resolution: "nanoid@npm:3.3.6"
+"nanoid@npm:^3.3.7":
+  version: 3.3.7
+  resolution: "nanoid@npm:3.3.7"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 7d0eda657002738aa5206107bd0580aead6c95c460ef1bdd0b1a87a9c7ae6277ac2e9b945306aaa5b32c6dcb7feaf462d0f552e7f8b5718abfc6ead5c94a71b3
+  checksum: d36c427e530713e4ac6567d488b489a36582ef89da1d6d4e3b87eded11eb10d7042a877958c6f104929809b2ab0bafa17652b076cdf84324aa75b30b722204f2
   languageName: node
   linkType: hard
 
@@ -20206,14 +20206,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.14, postcss@npm:^8.3.5, postcss@npm:^8.4.0, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.25, postcss@npm:^8.4.28, postcss@npm:^8.4.31":
-  version: 8.4.31
-  resolution: "postcss@npm:8.4.31"
+"postcss@npm:^8.2.14, postcss@npm:^8.3.5, postcss@npm:^8.4.0, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.25, postcss@npm:^8.4.28, postcss@npm:^8.4.31, postcss@npm:^8.4.32":
+  version: 8.4.32
+  resolution: "postcss@npm:8.4.32"
   dependencies:
-    nanoid: ^3.3.6
+    nanoid: ^3.3.7
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: 1d8611341b073143ad90486fcdfeab49edd243377b1f51834dc4f6d028e82ce5190e4f11bb2633276864503654fb7cab28e67abdc0fbf9d1f88cad4a0ff0beea
+  checksum: 220d9d0bf5d65be7ed31006c523bfb11619461d296245c1231831f90150aeb4a31eab9983ac9c5c89759a3ca8b60b3e0d098574964e1691673c3ce5c494305ae
   languageName: node
   linkType: hard
 
@@ -21558,7 +21558,7 @@ fsevents@^1.2.7:
     html-loader: ^4.2.0
     html-webpack-plugin: ^5.5.3
     mini-css-extract-plugin: ^2.7.6
-    postcss: ^8.4.31
+    postcss: ^8.4.32
     postcss-loader: ^7.3.3
     prettier: ^3.1.0
     style-loader: ^3.3.3
