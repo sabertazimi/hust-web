@@ -6678,7 +6678,7 @@ __metadata:
     postcss: ^8.4.32
     postcss-loader: ^7.3.3
     precss: ^4.0.0
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     sass: ^1.69.5
     sass-loader: ^13.3.2
     scrollreveal: ^4.0.9
@@ -7466,7 +7466,7 @@ __metadata:
     nodemon: ^3.0.2
     postcss: ^8.4.32
     postcss-loader: ^7.3.3
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     react: ^18.2.0
     react-dom: ^18.2.0
     react-redux: ^9.0.2
@@ -11777,7 +11777,7 @@ fsevents@^1.2.7:
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.32
     postcss-loader: ^7.3.3
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -13200,7 +13200,7 @@ fsevents@^1.2.7:
     consola: ^3.2.3
     eslint: ^8.55.0
     lerna: ^8.0.0
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     semver: ^7.5.4
     stylelint: ^16.0.1
     typescript: ^5.3.3
@@ -16500,7 +16500,7 @@ fsevents@^1.2.7:
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.32
     postcss-loader: ^7.3.3
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     react: ^18.2.0
     react-dom: ^18.2.0
     style-loader: ^3.3.3
@@ -16970,7 +16970,7 @@ fsevents@^1.2.7:
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.32
     postcss-loader: ^7.3.3
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     style-loader: ^3.3.3
     stylelint: ^16.0.1
     stylelint-webpack-plugin: ^4.1.1
@@ -17051,7 +17051,7 @@ fsevents@^1.2.7:
     log4js: ^6.9.1
     node-fetch: ^2.7.0
     ora: ^7.0.1
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     semver: ^7.5.4
     tar-fs: ^3.0.4
     tar-stream: ^3.1.6
@@ -17159,7 +17159,7 @@ fsevents@^1.2.7:
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.32
     postcss-loader: ^7.3.3
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     san: ^3.14.1
     san-loader: ^0.3.7
     san-router: ^2.0.2
@@ -20357,12 +20357,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.0.0, prettier@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "prettier@npm:3.1.0"
+"prettier@npm:^3.0.0, prettier@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "prettier@npm:3.1.1"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 44b556bd56f74d7410974fbb2418bb4e53a894d3e7b42f6f87779f69f27a6c272fa7fc27cec0118cd11730ef3246478052e002cbd87e9a253f9cd04a56aa7d9b
+  checksum: e386855e3a1af86a748e16953f168be555ce66d6233f4ba54eb6449b88eb0c6b2ca79441b11eae6d28a7f9a5c96440ce50864b9d5f6356d331d39d6bb66c648e
   languageName: node
   linkType: hard
 
@@ -21587,7 +21587,7 @@ fsevents@^1.2.7:
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.32
     postcss-loader: ^7.3.3
-    prettier: ^3.1.0
+    prettier: ^3.1.1
     style-loader: ^3.3.3
     stylelint: ^16.0.1
     stylelint-webpack-plugin: ^4.1.1
