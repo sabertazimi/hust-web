@@ -17139,7 +17139,7 @@ fsevents@^1.2.7:
     jest: ^29.7.0
     log4js: ^6.9.1
     node-fetch: ^2.7.0
-    ora: ^8.0.0
+    ora: ^8.0.1
     prettier: ^3.1.1
     semver: ^7.5.4
     tar-fs: ^3.0.4
@@ -18236,9 +18236,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ora@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "ora@npm:8.0.0"
+"ora@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "ora@npm:8.0.1"
   dependencies:
     chalk: ^5.3.0
     cli-cursor: ^4.0.0
@@ -18246,10 +18246,10 @@ fsevents@^1.2.7:
     is-interactive: ^2.0.0
     is-unicode-supported: ^2.0.0
     log-symbols: ^6.0.0
-    stdin-discarder: ^0.2.0
+    stdin-discarder: ^0.2.1
     string-width: ^7.0.0
     strip-ansi: ^7.1.0
-  checksum: 6c35289804a297542a0a9c72f436c9230c5f76892a487fd54a5533670bc974075bc2d73eb5592b54be28903953fb0319b4ff4e088207ee1a73556837a4d0c432
+  checksum: 894061df204cc2b97b410d3b6073303b725bb0a25cec1fa8718632968a5ac5a965fe3dbc1dc7c481a17880b21b68547e64d5fd1a6d6c723f352c14b8d03843d9
   languageName: node
   linkType: hard
 
@@ -22977,10 +22977,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"stdin-discarder@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "stdin-discarder@npm:0.2.0"
-  checksum: 51de9aac71f61aa2e20fc5ed7112e9c698adc8b2b804e8fa83785995ba86f7a58a86a5c6c321244b8b11296a1ab439980632fa0101eefcb18dd70797e6b1a5d1
+"stdin-discarder@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "stdin-discarder@npm:0.2.1"
+  checksum: e2401a8c7e2170c4b1900b50d36c842d27801bd27f85773f577b9ea5be13487d2089ce7b7ddadd4d60d050c73a1769d426acd71e66e0bad538783a5a04b5cd61
   languageName: node
   linkType: hard
 
