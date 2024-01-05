@@ -3149,9 +3149,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lerna/create@npm:8.0.1":
-  version: 8.0.1
-  resolution: "@lerna/create@npm:8.0.1"
+"@lerna/create@npm:8.0.2":
+  version: 8.0.2
+  resolution: "@lerna/create@npm:8.0.2"
   dependencies:
     "@npmcli/run-script": "npm:7.0.2"
     "@nx/devkit": "npm:>=17.1.2 < 18"
@@ -3217,7 +3217,7 @@ __metadata:
     write-pkg: "npm:4.0.0"
     yargs: "npm:17.7.2"
     yargs-parser: "npm:21.1.1"
-  checksum: 93a2f3414a8eb37015190e2dc3a5ab9634fcf54bfd317b2452171ffb2d69f6dfedd8d50c6a351e796a12c776dea1d73eb1f97ceb792fbab072c42da31ff41369
+  checksum: 1569183c38fb627f80f3b953119a07d12bdfd7a511899d0608d5ce27fd386bcf1a66f869d00e2bf3dc82a1e0e27f09b3f95b194a5b8ac4e213f4e8b04fed1bac
   languageName: node
   linkType: hard
 
@@ -4349,16 +4349,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^6.1.6":
-  version: 6.1.6
-  resolution: "@testing-library/jest-dom@npm:6.1.6"
+"@testing-library/jest-dom@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "@testing-library/jest-dom@npm:6.2.0"
   dependencies:
     "@adobe/css-tools": "npm:^4.3.2"
     "@babel/runtime": "npm:^7.9.2"
     aria-query: "npm:^5.0.0"
     chalk: "npm:^3.0.0"
     css.escape: "npm:^1.5.1"
-    dom-accessibility-api: "npm:^0.5.6"
+    dom-accessibility-api: "npm:^0.6.3"
     lodash: "npm:^4.17.15"
     redent: "npm:^3.0.0"
   peerDependencies:
@@ -4375,7 +4375,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: f98f79f3e470517469c86947d0ff1bb83ac2e59fd2a29728ab306eca5fba63c948084ec06b7b531642e6002d1f0211d918c298c628f0d386c0ef63ba881c47ba
+  checksum: 71421693e0ad6a46be7d16f00b58a45725c238693972b8b5b1fd9ab797902ccf1209cf259afe8da1bf59d7c958762c46ee85d1aa5b164a5ec330981ea2376b08
   languageName: node
   linkType: hard
 
@@ -6869,11 +6869,11 @@ __metadata:
     html-webpack-plugin: "npm:^5.6.0"
     image-webpack-loader: "npm:^8.1.0"
     mini-css-extract-plugin: "npm:^2.7.6"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.33"
     postcss-loader: "npm:^7.3.4"
     precss: "npm:^4.0.0"
     prettier: "npm:^3.1.1"
-    sass: "npm:^1.69.6"
+    sass: "npm:^1.69.7"
     sass-loader: "npm:^13.3.3"
     scrollreveal: "npm:^4.0.9"
     style-loader: "npm:^3.3.3"
@@ -7613,7 +7613,7 @@ __metadata:
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.6"
     nodemon: "npm:^3.0.2"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.33"
     postcss-loader: "npm:^7.3.4"
     prettier: "npm:^3.1.1"
     react: "npm:^18.2.0"
@@ -7621,10 +7621,10 @@ __metadata:
     react-redux: "npm:^9.0.4"
     react-router-dom: "npm:^6.21.1"
     redux: "npm:^5.0.1"
-    sass: "npm:^1.69.6"
+    sass: "npm:^1.69.7"
     sass-loader: "npm:^13.3.3"
-    socket.io: "npm:^4.7.2"
-    socket.io-client: "npm:^4.7.2"
+    socket.io: "npm:^4.7.3"
+    socket.io-client: "npm:^4.7.3"
     style-loader: "npm:^3.3.3"
     stylelint: "npm:^16.1.0"
     stylelint-webpack-plugin: "npm:^4.1.1"
@@ -9594,10 +9594,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dom-accessibility-api@npm:^0.5.6, dom-accessibility-api@npm:^0.5.9":
+"dom-accessibility-api@npm:^0.5.9":
   version: 0.5.9
   resolution: "dom-accessibility-api@npm:0.5.9"
   checksum: 2d9ca613e6ab4b4468ce7c6f44b6ed7fc8f87c2021edeacee33a641e49e85961f723b9f043660b4053d8152c5c8ae083eeb5f4de6013dc52d2228ec1611ba652
+  languageName: node
+  linkType: hard
+
+"dom-accessibility-api@npm:^0.6.3":
+  version: 0.6.3
+  resolution: "dom-accessibility-api@npm:0.6.3"
+  checksum: 10bee5aa514b2a9a37c87cd81268db607a2e933a050074abc2f6fa3da9080ebed206a320cbc123567f2c3087d22292853bdfdceaffdd4334ffe2af9510b29360
   languageName: node
   linkType: hard
 
@@ -11997,13 +12004,13 @@ __metadata:
     html-loader: "npm:^4.2.0"
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.6"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.33"
     postcss-loader: "npm:^7.3.4"
     prettier: "npm:^3.1.1"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    sass: "npm:^1.69.6"
+    sass: "npm:^1.69.7"
     sass-loader: "npm:^13.3.3"
     style-loader: "npm:^3.3.3"
     stylelint: "npm:^16.1.0"
@@ -13475,7 +13482,7 @@ __metadata:
     chalk: "npm:^4.1.2"
     consola: "npm:^3.2.3"
     eslint: "npm:^8.56.0"
-    lerna: "npm:^8.0.1"
+    lerna: "npm:^8.0.2"
     prettier: "npm:^3.1.1"
     semver: "npm:^7.5.4"
     stylelint: "npm:^16.1.0"
@@ -15900,11 +15907,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lerna@npm:^8.0.1":
-  version: 8.0.1
-  resolution: "lerna@npm:8.0.1"
+"lerna@npm:^8.0.2":
+  version: 8.0.2
+  resolution: "lerna@npm:8.0.2"
   dependencies:
-    "@lerna/create": "npm:8.0.1"
+    "@lerna/create": "npm:8.0.2"
     "@npmcli/run-script": "npm:7.0.2"
     "@nx/devkit": "npm:>=17.1.2 < 18"
     "@octokit/plugin-enterprise-rest": "npm:6.0.1"
@@ -15980,7 +15987,7 @@ __metadata:
     yargs-parser: "npm:21.1.1"
   bin:
     lerna: dist/cli.js
-  checksum: bc1ccd5d7321b1e11e8fb2464db4c500b77400f446f3cbdeba4bd9bcfb6735e1d5aaa2ed36da70393e72e0703a1e67d745a03a739a715b12ffe51eac7cb5d40b
+  checksum: 0b9eee6c962a6fe242ee9c7d0fd4f5a65206c9102a7f44cb862c7a2b8f269f0736b7abfdbf5b07b72335a7c429278f78550bbabb35c91b9b78ea6f22c78c2466
   languageName: node
   linkType: hard
 
@@ -16766,7 +16773,7 @@ __metadata:
     html-loader: "npm:^4.2.0"
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.6"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.33"
     postcss-loader: "npm:^7.3.4"
     style-loader: "npm:^3.3.3"
     webpack: "npm:^5.89.0"
@@ -16798,7 +16805,7 @@ __metadata:
     html-loader: "npm:^4.2.0"
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.6"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.33"
     postcss-loader: "npm:^7.3.4"
     prettier: "npm:^3.1.1"
     react: "npm:^18.2.0"
@@ -17233,7 +17240,7 @@ __metadata:
     html-loader: "npm:^4.2.0"
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.6"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.33"
     postcss-loader: "npm:^7.3.4"
     prettier: "npm:^3.1.1"
     style-loader: "npm:^3.3.3"
@@ -17429,7 +17436,7 @@ __metadata:
     html-loader: "npm:^4.2.0"
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.6"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.33"
     postcss-loader: "npm:^7.3.4"
     prettier: "npm:^3.1.1"
     san: "npm:^3.14.1"
@@ -20562,14 +20569,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.14, postcss@npm:^8.3.5, postcss@npm:^8.4.0, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.31, postcss@npm:^8.4.32":
-  version: 8.4.32
-  resolution: "postcss@npm:8.4.32"
+"postcss@npm:^8.2.14, postcss@npm:^8.3.5, postcss@npm:^8.4.0, postcss@npm:^8.4.21, postcss@npm:^8.4.23, postcss@npm:^8.4.24, postcss@npm:^8.4.31, postcss@npm:^8.4.32, postcss@npm:^8.4.33":
+  version: 8.4.33
+  resolution: "postcss@npm:8.4.33"
   dependencies:
     nanoid: "npm:^3.3.7"
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
-  checksum: 39308a9195fa34d4dbdd7b58a896cff0c7809f84f7a4ac1b95b68ca86c9138a395addff33075668ed3983d41b90aac05754c445237a9365eb1c3a5602ebd03ad
+  checksum: 16eda83458fcd8a91bece287b5920c7f57164c3ea293e6c80d0ea71ce7843007bcd8592260a5160b9a7f02693e6ac93e2495b02d8c7596d3f3f72c1447e3ba79
   languageName: node
   linkType: hard
 
@@ -21898,7 +21905,7 @@ __metadata:
     html-loader: "npm:^4.2.0"
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.6"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.33"
     postcss-loader: "npm:^7.3.4"
     prettier: "npm:^3.1.1"
     style-loader: "npm:^3.3.3"
@@ -22188,16 +22195,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.69.6":
-  version: 1.69.6
-  resolution: "sass@npm:1.69.6"
+"sass@npm:^1.69.7":
+  version: 1.69.7
+  resolution: "sass@npm:1.69.7"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 8153db8e51e74a9007bb54332e14d122c34288c7d21a5f2eaefef753a1b7bb13f35e042dc6247253dab5b1550b05cea27970371e7548286b4f50f23dd1147d89
+  checksum: 773d0938e7d4ff3972d3fda3132f34fe98a2f712e028a58e28fecd615434795eff3266eddc38d5e13f03b90c0d6360d0e737b30bff2949a47280c64a18e0fb18
   languageName: node
   linkType: hard
 
@@ -22724,15 +22731,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"socket.io-client@npm:^4.7.2":
-  version: 4.7.2
-  resolution: "socket.io-client@npm:4.7.2"
+"socket.io-client@npm:^4.7.3":
+  version: 4.7.3
+  resolution: "socket.io-client@npm:4.7.3"
   dependencies:
     "@socket.io/component-emitter": "npm:~3.1.0"
     debug: "npm:~4.3.2"
     engine.io-client: "npm:~6.5.2"
     socket.io-parser: "npm:~4.2.4"
-  checksum: 164931221deaa30278185c795772b6065273b751b4951ce16581eff0aed955196ae3e911489d66542409ef3629e4a5dc85908902c6aa9f8f79fee314732e624b
+  checksum: 24cbb3c620141bf92005b15a3db12fcb8caf7dc8d9b710ecef742384d973778e7017076a80c16c6d3598564da2318644450fb7bad162658617a4ed6234a97d1b
   languageName: node
   linkType: hard
 
@@ -22746,9 +22753,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"socket.io@npm:^4.7.2":
-  version: 4.7.2
-  resolution: "socket.io@npm:4.7.2"
+"socket.io@npm:^4.7.3":
+  version: 4.7.3
+  resolution: "socket.io@npm:4.7.3"
   dependencies:
     accepts: "npm:~1.3.4"
     base64id: "npm:~2.0.0"
@@ -22757,7 +22764,7 @@ __metadata:
     engine.io: "npm:~6.5.2"
     socket.io-adapter: "npm:~2.5.2"
     socket.io-parser: "npm:~4.2.4"
-  checksum: ce43f44e21513d8fcdc1a5e9bb7de4f28cea34536a51d52612ebcedb8634432cf5587976163a0d5fc361d1fe926abce65c5aee17c35dace3766420c2a264953c
+  checksum: a457a36b466fcc08aa923b3b719d2ca2ad21cecb4a271a34337f8cb8af920059c30617d8399d9d5efbc70a6bd83cd02bb591662f1081e1697d84cc16a5fa4845
   languageName: node
   linkType: hard
 
@@ -23552,7 +23559,7 @@ __metadata:
   dependencies:
     "@sabertazimi/react-scripts": "npm:^5.14.1"
     "@testing-library/dom": "npm:^9.3.3"
-    "@testing-library/jest-dom": "npm:^6.1.6"
+    "@testing-library/jest-dom": "npm:^6.2.0"
     "@testing-library/react": "npm:^14.1.2"
     "@testing-library/user-event": "npm:^14.5.2"
     "@types/jest": "npm:^29.5.11"
