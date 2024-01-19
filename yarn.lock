@@ -17317,7 +17317,7 @@ __metadata:
     prettier: "npm:^3.2.4"
     semver: "npm:^7.5.4"
     tar-fs: "npm:^3.0.4"
-    tar-stream: "npm:^3.1.6"
+    tar-stream: "npm:^3.1.7"
     typescript: "npm:^5.3.3"
   bin:
     mpm: ./src/index.js
@@ -24080,14 +24080,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar-stream@npm:^3.1.5, tar-stream@npm:^3.1.6":
-  version: 3.1.6
-  resolution: "tar-stream@npm:3.1.6"
+"tar-stream@npm:^3.1.5, tar-stream@npm:^3.1.7":
+  version: 3.1.7
+  resolution: "tar-stream@npm:3.1.7"
   dependencies:
     b4a: "npm:^1.6.4"
     fast-fifo: "npm:^1.2.0"
     streamx: "npm:^2.15.0"
-  checksum: 7d52d1a56eb25b8434c9544becb737eb6c4f0ed19d205e739fdd2537ad8d1d623a6c93f7f8e58d9028cb0cdf86c0d8b67164e070cd1702cc78b8ab7cba0f3702
+  checksum: a09199d21f8714bd729993ac49b6c8efcb808b544b89f23378ad6ffff6d1cb540878614ba9d4cfec11a64ef39e1a6f009a5398371491eb1fda606ffc7f70f718
   languageName: node
   linkType: hard
 
