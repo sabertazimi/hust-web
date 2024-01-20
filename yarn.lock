@@ -6876,7 +6876,7 @@ __metadata:
     image-webpack-loader: "npm:^8.1.0"
     mini-css-extract-plugin: "npm:^2.7.7"
     postcss: "npm:^8.4.33"
-    postcss-loader: "npm:^7.3.4"
+    postcss-loader: "npm:^8.0.0"
     precss: "npm:^4.0.0"
     prettier: "npm:^3.2.4"
     sass: "npm:^1.70.0"
@@ -7620,7 +7620,7 @@ __metadata:
     mini-css-extract-plugin: "npm:^2.7.7"
     nodemon: "npm:^3.0.3"
     postcss: "npm:^8.4.33"
-    postcss-loader: "npm:^7.3.4"
+    postcss-loader: "npm:^8.0.0"
     prettier: "npm:^3.2.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -11995,7 +11995,7 @@ __metadata:
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.7"
     postcss: "npm:^8.4.33"
-    postcss-loader: "npm:^7.3.4"
+    postcss-loader: "npm:^8.0.0"
     prettier: "npm:^3.2.4"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
@@ -16765,7 +16765,7 @@ __metadata:
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.7"
     postcss: "npm:^8.4.33"
-    postcss-loader: "npm:^7.3.4"
+    postcss-loader: "npm:^8.0.0"
     style-loader: "npm:^3.3.4"
     webpack: "npm:^5.89.0"
     webpack-cli: "npm:^5.1.4"
@@ -16797,7 +16797,7 @@ __metadata:
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.7"
     postcss: "npm:^8.4.33"
-    postcss-loader: "npm:^7.3.4"
+    postcss-loader: "npm:^8.0.0"
     prettier: "npm:^3.2.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -17232,7 +17232,7 @@ __metadata:
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.7"
     postcss: "npm:^8.4.33"
-    postcss-loader: "npm:^7.3.4"
+    postcss-loader: "npm:^8.0.0"
     prettier: "npm:^3.2.4"
     style-loader: "npm:^3.3.4"
     stylelint: "npm:^16.2.0"
@@ -17428,7 +17428,7 @@ __metadata:
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.7"
     postcss: "npm:^8.4.33"
-    postcss-loader: "npm:^7.3.4"
+    postcss-loader: "npm:^8.0.0"
     prettier: "npm:^3.2.4"
     san: "npm:^3.14.1"
     san-loader: "npm:^0.3.7"
@@ -19775,7 +19775,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-loader@npm:^7.3.3, postcss-loader@npm:^7.3.4":
+"postcss-loader@npm:^7.3.3":
   version: 7.3.4
   resolution: "postcss-loader@npm:7.3.4"
   dependencies:
@@ -19786,6 +19786,20 @@ __metadata:
     postcss: ^7.0.0 || ^8.0.1
     webpack: ^5.0.0
   checksum: 1bf7614aeea9ad1f8ee6be3a5451576c059391688ea67f825aedc2674056369597faeae4e4a81fe10843884c9904a71403d9a54197e1f560e8fbb9e61f2a2680
+  languageName: node
+  linkType: hard
+
+"postcss-loader@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "postcss-loader@npm:8.0.0"
+  dependencies:
+    cosmiconfig: "npm:^9.0.0"
+    jiti: "npm:^1.20.0"
+    semver: "npm:^7.5.4"
+  peerDependencies:
+    postcss: ^7.0.0 || ^8.0.1
+    webpack: ^5.0.0
+  checksum: a31eedd2cac3a46b60527a2aee2369010f65dfc1dafb6ee00badfe6b662cefe00269b03adaa04be1524c566ea5b00f8716c150e79fe9b5c4fc8bb39a4e372be1
   languageName: node
   linkType: hard
 
@@ -21904,7 +21918,7 @@ __metadata:
     html-webpack-plugin: "npm:^5.6.0"
     mini-css-extract-plugin: "npm:^2.7.7"
     postcss: "npm:^8.4.33"
-    postcss-loader: "npm:^7.3.4"
+    postcss-loader: "npm:^8.0.0"
     prettier: "npm:^3.2.4"
     style-loader: "npm:^3.3.4"
     stylelint: "npm:^16.2.0"
