@@ -42,7 +42,7 @@
       "!**/utils.js"
     ]
   },
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.1.0",
   "dependencies": {
     "commander": "^11.1.0",
     "fs-extra": "^11.2.0",
