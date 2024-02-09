@@ -46,9 +46,9 @@
     "chalk": "^4.1.2",
     "consola": "^3.2.3",
     "eslint": "^8.56.0",
-    "lerna": "^8.0.2",
+    "lerna": "^8.1.2",
     "prettier": "^3.2.5",
-    "semver": "^7.5.4",
+    "semver": "^7.6.0",
     "stylelint": "^16.2.1",
     "typescript": "^5.3.3"
   },
