@@ -49,7 +49,7 @@
     "html-webpack-plugin": "^5.6.0",
     "image-webpack-loader": "^8.1.0",
     "mini-css-extract-plugin": "^2.8.0",
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.35",
     "postcss-loader": "^8.1.0",
     "precss": "^4.0.0",
     "prettier": "^3.2.5",
@@ -65,7 +65,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^41.0.0",
+    "@ckeditor/ckeditor5-build-classic": "^41.1.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
     "scrollreveal": "^4.0.9"
