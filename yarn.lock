@@ -4782,12 +4782,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^20.11.17":
-  version: 20.11.17
-  resolution: "@types/node@npm:20.11.17"
+"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^20.11.19":
+  version: 20.11.19
+  resolution: "@types/node@npm:20.11.19"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/1f30dae80b416cbf38f133a619ffb0e9fb9e7bc58f82d900bf73816ae5781740c4640892bf5971dd9c12570d5d05241646be3e7540bb4e059322ec6af4e51e15
+  checksum: 10c0/f451ef0a1d78f29c57bad7b77e49ebec945f2a6d0d7a89851d7e185ee9fe7ad94d651c0dfbcb7858c9fa791310c8b40a881e2260f56bd3c1b7e7ae92723373ae
   languageName: node
   linkType: hard
 
@@ -6918,7 +6918,7 @@ __metadata:
     postcss-loader: "npm:^8.1.0"
     precss: "npm:^4.0.0"
     prettier: "npm:^3.2.5"
-    sass: "npm:^1.70.0"
+    sass: "npm:^1.71.0"
     sass-loader: "npm:^14.1.0"
     scrollreveal: "npm:^4.0.9"
     style-loader: "npm:^3.3.4"
@@ -6926,7 +6926,7 @@ __metadata:
     stylelint-webpack-plugin: "npm:^5.0.0"
     typescript: "npm:^5.3.3"
     url-loader: "npm:^4.1.1"
-    webpack: "npm:^5.90.1"
+    webpack: "npm:^5.90.2"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
   languageName: unknown
@@ -7666,7 +7666,7 @@ __metadata:
     react-redux: "npm:^9.1.0"
     react-router-dom: "npm:^6.22.0"
     redux: "npm:^5.0.1"
-    sass: "npm:^1.70.0"
+    sass: "npm:^1.71.0"
     sass-loader: "npm:^14.1.0"
     socket.io: "npm:^4.7.4"
     socket.io-client: "npm:^4.7.4"
@@ -7674,7 +7674,7 @@ __metadata:
     stylelint: "npm:^16.2.1"
     stylelint-webpack-plugin: "npm:^5.0.0"
     typescript: "npm:^5.3.3"
-    webpack: "npm:^5.90.1"
+    webpack: "npm:^5.90.2"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
   languageName: unknown
@@ -12057,13 +12057,13 @@ __metadata:
     prop-types: "npm:^15.8.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    sass: "npm:^1.70.0"
+    sass: "npm:^1.71.0"
     sass-loader: "npm:^14.1.0"
     style-loader: "npm:^3.3.4"
     stylelint: "npm:^16.2.1"
     stylelint-webpack-plugin: "npm:^5.0.0"
     typescript: "npm:^5.3.3"
-    webpack: "npm:^5.90.1"
+    webpack: "npm:^5.90.2"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
   languageName: unknown
@@ -16826,7 +16826,7 @@ __metadata:
     postcss: "npm:^8.4.35"
     postcss-loader: "npm:^8.1.0"
     style-loader: "npm:^3.3.4"
-    webpack: "npm:^5.90.1"
+    webpack: "npm:^5.90.2"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
   languageName: unknown
@@ -16861,7 +16861,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     style-loader: "npm:^3.3.4"
-    webpack: "npm:^5.90.1"
+    webpack: "npm:^5.90.2"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
   languageName: unknown
@@ -17298,7 +17298,7 @@ __metadata:
     stylelint: "npm:^16.2.1"
     stylelint-webpack-plugin: "npm:^5.0.0"
     typescript: "npm:^5.3.3"
-    webpack: "npm:^5.90.1"
+    webpack: "npm:^5.90.2"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
   languageName: unknown
@@ -17490,7 +17490,7 @@ __metadata:
     stylelint: "npm:^16.2.1"
     stylelint-webpack-plugin: "npm:^5.0.0"
     typescript: "npm:^5.3.3"
-    webpack: "npm:^5.90.1"
+    webpack: "npm:^5.90.2"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
   languageName: unknown
@@ -21984,7 +21984,7 @@ __metadata:
     stylelint: "npm:^16.2.1"
     stylelint-webpack-plugin: "npm:^5.0.0"
     typescript: "npm:^5.3.3"
-    webpack: "npm:^5.90.1"
+    webpack: "npm:^5.90.2"
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
   languageName: unknown
@@ -22269,16 +22269,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.70.0":
-  version: 1.70.0
-  resolution: "sass@npm:1.70.0"
+"sass@npm:^1.71.0":
+  version: 1.71.0
+  resolution: "sass@npm:1.71.0"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 10c0/7c309ee1c096d591746d122da9f1ebd65b4c4b3a60c2cc0ec720fd98fe1205fa8b44c9f563d113b9fdfeb25af1e32ec9b3e048bd4b8e05d267f020953bd7baf0
+  checksum: 10c0/a20ff6e59ed560a01175adc75a4fbafa5bbfbc4d6f0c89225348d54bc9e53a0c519105d1ae595a9216fc2fe9001d3bd7629ed10ccd6fceeb42b07e8393694627
   languageName: node
   linkType: hard
 
@@ -23629,7 +23629,7 @@ __metadata:
     "@testing-library/react": "npm:^14.2.1"
     "@testing-library/user-event": "npm:^14.5.2"
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^20.11.17"
+    "@types/node": "npm:^20.11.19"
     "@types/react": "npm:^18.2.55"
     "@types/react-dom": "npm:^18.2.19"
     "@types/react-is": "npm:^18.2.4"
@@ -25816,9 +25816,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.89.0, webpack@npm:^5.90.1":
-  version: 5.90.1
-  resolution: "webpack@npm:5.90.1"
+"webpack@npm:^5.89.0, webpack@npm:^5.90.2":
+  version: 5.90.2
+  resolution: "webpack@npm:5.90.2"
   dependencies:
     "@types/eslint-scope": "npm:^3.7.3"
     "@types/estree": "npm:^1.0.5"
@@ -25849,7 +25849,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 10c0/c36b86e5aa42f07c865cc5221d88b84bc62267ca2e60edaf69e8fccebe284c8199d352701697546a0fa6599d648a05ea427607e854c61ccc269b9c230fb25efa
+  checksum: 10c0/8ade2720dd91b6bcfa22ff4fabfeef474c9ab4cf716c4b6501dc0b0b1dfcaedb54d50f71b9e643c0e831f0996f0d8c1fc23d3faf9fb2d860c04b3b843358704e
   languageName: node
   linkType: hard
 
