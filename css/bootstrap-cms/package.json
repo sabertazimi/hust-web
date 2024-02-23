@@ -53,21 +53,21 @@
     "postcss-loader": "^8.1.0",
     "precss": "^4.0.0",
     "prettier": "^3.2.5",
-    "sass": "^1.71.0",
-    "sass-loader": "^14.1.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
     "style-loader": "^3.3.4",
     "stylelint": "^16.2.1",
     "stylelint-webpack-plugin": "^5.0.0",
     "typescript": "^5.3.3",
     "url-loader": "^4.1.1",
-    "webpack": "^5.90.2",
+    "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.2"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^41.1.0",
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.2",
+    "bootstrap": "^5.3.3",
     "scrollreveal": "^4.0.9"
   }
 }
