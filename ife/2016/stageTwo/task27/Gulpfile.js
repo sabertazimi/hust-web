@@ -1,18 +1,16 @@
-const path = require('path');
+const path = require('node:path');
 const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
-const minifycss = require('gulp-minify-css');
+const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 
 function vendor() {
   return gulp
-    .src(
-      path.join(__dirname, '../../../../node_modules/jquery/dist/jquery.min.js')
-    )
+    .src(path.join(__dirname, 'node_modules/jquery/dist/jquery.min.js'))
     .pipe(gulp.dest('./dist/js/'));
 }
 
@@ -28,7 +26,7 @@ function css() {
     .pipe(sourcemaps.init())
     .pipe(autoprefixer())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss())
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/css/'));
 }

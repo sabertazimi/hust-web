@@ -113,9 +113,8 @@ class Mpm {
             return true;
           })
           .map(async volatileDependency => {
-            const pinnedDependency = await this.getPinnedReference(
-              volatileDependency
-            );
+            const pinnedDependency =
+              await this.getPinnedReference(volatileDependency);
             const { dependencies: subDependencies } =
               await this.getPackageDependencies(pinnedDependency);
             const subAvailable = new Map(available);

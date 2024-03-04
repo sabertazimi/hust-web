@@ -180,8 +180,8 @@ const reconcileChildrenArray = (wipFiber, newChildElements) => {
     newChildElements == null
       ? []
       : Array.isArray(newChildElements)
-      ? newChildElements
-      : [newChildElements];
+        ? newChildElements
+        : [newChildElements];
 
   let index = 0;
   let oldFiber = wipFiber.alternate ? wipFiber.alternate.child : null;

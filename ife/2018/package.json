@@ -10,7 +10,7 @@
     "url": "https://github.com/sabertazimi/hust-web"
   },
   "scripts": {
-    "build": "yarn build:directory && yarn build:index && yarn build:basic && yarn build:css",
+    "build": "pnpm build:directory && pnpm build:index && pnpm build:basic && pnpm build:css",
     "build:directory": "mkdir -p ../../build/ife/2018/basic ../../build/ife/2018/css",
     "build:index": "cp -fr ./index.html ./index.css ../../build/ife/2018",
     "build:basic": "cp -fr ./basic/layout ./basic/resume ../../build/ife/2018/basic",
