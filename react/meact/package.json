@@ -4,12 +4,12 @@
   "description": "Minimal react-like library",
   "main": "./src/index.js",
   "scripts": {
-    "build": "webpack --mode production && yarn build:post",
+    "build": "webpack --mode production && pnpm build:post",
     "build:post": "mkdir -p ../../build/react/meact && mv ./build/* ../../build/react/meact",
     "dev": "webpack serve --port 2333 --mode development --open",
     "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
     "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
-    "start": "yarn dev"
+    "start": "pnpm dev"
   },
   "repository": {
     "type": "git",
@@ -29,8 +29,8 @@
   "homepage": "https://github.com/sabertazimi/meact#readme",
   "devDependencies": {
     "@babel/core": "^7.24.0",
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-class-properties": "^7.23.3",
+    "@babel/plugin-transform-object-rest-spread": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
     "autoprefixer": "^10.4.18",

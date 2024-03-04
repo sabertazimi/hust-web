@@ -4,12 +4,12 @@
   "description": "Minimal webpack boilerplate",
   "main": "./src/index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --mode production && yarn build:post",
+    "build": "cross-env NODE_ENV=production webpack --mode production && pnpm build:post",
     "build:post": "mkdir -p ../../build/react/gba && mv ./build/* ../../build/react/gba",
     "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
     "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
     "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
-    "start": "yarn dev"
+    "start": "pnpm dev"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/sabertazimi/gba",
   "devDependencies": {
     "@babel/core": "^7.24.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-object-rest-spread": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
     "@dg-scripts/eslint-config": "^5.14.2",

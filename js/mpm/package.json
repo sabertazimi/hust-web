@@ -19,7 +19,7 @@
   },
   "keywords": [
     "npm",
-    "yarn",
+    "pnpm",
     "package manager"
   ],
   "author": "sabertazimi",
@@ -42,7 +42,7 @@
       "!**/utils.js"
     ]
   },
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "pnpm@8.15.4",
   "dependencies": {
     "commander": "^12.0.0",
     "fs-extra": "^11.2.0",

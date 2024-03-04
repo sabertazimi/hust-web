@@ -9,7 +9,7 @@
     "styled-components": "^6.1.8"
   },
   "scripts": {
-    "build": "react-scripts build && yarn build:post",
+    "build": "react-scripts build && pnpm build:post",
     "build:post": "mkdir -p ../../build/react/styled-components-demo && mv ./build/* ../../build/react/styled-components-demo",
     "build:profile": "react-scripts build --profile",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",

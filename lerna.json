@@ -1,6 +1,6 @@
 {
   "version": "2.7.0",
-  "npmClient": "yarn",
+  "npmClient": "pnpm",
   "command": {
     "bootstrap": {
       "npmClientArgs": [
@@ -23,23 +23,5 @@
     "**/__fixtures__/**",
     "**/__tests__/**",
     "**/*.md"
-  ],
-  "packages": [
-    "./css",
-    "./css/bootstrap-cms",
-    "./fcc",
-    "./ife/2016",
-    "./ife/2016/stageTwo/task26",
-    "./ife/2016/stageTwo/task27",
-    "./ife/2016/stageTwo/task28",
-    "./ife/2018",
-    "./ife/2018/basic/mis",
-    "./ife/2018/basic/oop",
-    "./ife/2018/mvvm",
-    "./js",
-    "./js/mpm",
-    "./node/hust-oom",
-    "./react",
-    "./react/*"
   ]
 }

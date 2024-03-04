@@ -9,7 +9,7 @@
     "lint": "stylelint ./client/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./client ./server",
     "lint:fix": "stylelint ./client/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./client ./server --fix",
     "server": "nodemon ./server/index.js",
-    "start": "concurrently \"yarn:server\" \"yarn:client\""
+    "start": "concurrently \"pnpm:server\" \"pnpm:client\""
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-object-rest-spread": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
     "@dg-scripts/eslint-config": "^5.14.2",

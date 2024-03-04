@@ -46,8 +46,7 @@ body {
 .grid-container {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  justify-items: center;
+  place-items: center;
   width: 100%;
   min-width: 512px;
   max-width: 1024px;
