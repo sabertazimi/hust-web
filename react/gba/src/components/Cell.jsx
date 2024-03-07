@@ -1,40 +1,40 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { BLACK, CELL_SIZE, WHITE } from '../constants';
+import { BLACK, CELL_SIZE, WHITE } from '../constants'
 
-import './Cell.scss';
+import './Cell.scss'
 
 const Cell = props => {
-  const { row, col, val } = props;
+  const { row, col, val } = props
 
   const styles = {
     width: CELL_SIZE,
     height: CELL_SIZE,
     top: row * CELL_SIZE,
     left: col * CELL_SIZE,
-  };
+  }
 
-  let innerClass = '';
+  let innerClass = ''
 
   switch (val) {
     case BLACK:
-      innerClass = 'black';
-      break;
+      innerClass = 'black'
+      break
     case WHITE:
-      innerClass = 'white';
-      break;
+      innerClass = 'white'
+      break
     default:
-      innerClass = '';
-      break;
+      innerClass = ''
+      break
   }
 
   return (
     <div {...props} className="cell" style={styles}>
       <div className={innerClass} />
     </div>
-  );
-};
+  )
+}
 
 Cell.propTypes = {
   row: PropTypes.number.isRequired,
@@ -42,6 +42,6 @@ Cell.propTypes = {
   rows: PropTypes.number.isRequired,
   cols: PropTypes.number.isRequired,
   val: PropTypes.number.isRequired,
-};
+}
 
-export default Cell;
+export default Cell

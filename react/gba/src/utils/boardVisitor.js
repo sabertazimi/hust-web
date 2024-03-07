@@ -1,31 +1,31 @@
-import { COLS, ROWS } from '../constants';
+import { COLS, ROWS } from '../constants'
 
 const BoardVisitor = {
   /**
    * @param {object} currentState {board, player}
    */
   countOnDirection: (currentState, play, xdir, ydir, range, cb, ...args) => {
-    const { row, col } = play;
+    const { row, col } = play
 
-    let count = 0;
+    let count = 0
 
     for (let i = 1; i <= range; i += 1) {
       if (xdir !== 0 && (col + xdir * i < 0 || col + xdir * i >= COLS)) {
-        break;
+        break
       }
 
       if (ydir !== 0 && (row + ydir * i < 0 || row + ydir * i >= ROWS)) {
-        break;
+        break
       }
 
       if (cb && cb(currentState, play, xdir, ydir, i, ...args)) {
-        count += 1;
+        count += 1
       } else {
-        break;
+        break
       }
     }
 
-    return count;
+    return count
   },
   /**
    * @param {function} cb1 inner callback function (state, play, xdir, ydir, step, ...args)
@@ -41,13 +41,13 @@ const BoardVisitor = {
     cb2,
     ...args
   ) {
-    let count = 0;
+    let count = 0
 
     for (let i = 0; i < directions.length; i += 1) {
-      let axisCount = 0;
-      const axis = directions[i];
-      const xdir = axis[0];
-      const ydir = axis[1];
+      let axisCount = 0
+      const axis = directions[i]
+      const xdir = axis[0]
+      const ydir = axis[1]
 
       axisCount += this.countOnDirection(
         currentState,
@@ -57,15 +57,15 @@ const BoardVisitor = {
         range,
         cb1,
         ...args
-      );
+      )
 
       if (cb2 && cb2(currentState, play, xdir, ydir, axisCount, ...args)) {
-        count += 1;
+        count += 1
       }
     }
 
-    return count;
+    return count
   },
-};
+}
 
-export default BoardVisitor;
+export default BoardVisitor

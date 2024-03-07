@@ -16,19 +16,19 @@ import {
   TextInput,
   ThemeProvider,
   Title,
-} from '@livechat/ui-kit';
-import React from 'react';
-import { connect } from 'react-redux';
-import * as io from 'socket.io-client';
-import { SERVER_URL } from '../constants';
-import './Dashboard.scss';
-import withRouter from './withRouter';
+} from '@livechat/ui-kit'
+import React from 'react'
+import { connect } from 'react-redux'
+import * as io from 'socket.io-client'
+import { SERVER_URL } from '../constants'
+import './Dashboard.scss'
+import withRouter from './withRouter'
 
 class ChatMessage {
   constructor(from = '', to = '', content = '') {
-    this.from = from;
-    this.to = to;
-    this.content = content;
+    this.from = from
+    this.to = to
+    this.content = content
   }
 
   toJSON() {
@@ -36,108 +36,108 @@ class ChatMessage {
       from: this.from,
       to: this.to,
       content: this.content,
-    });
+    })
   }
 }
 
 class Dashboard extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       messageList: {},
       currentMessage: '',
       currentWindow: '',
-    };
+    }
 
-    this.handleSwitch = this.handleSwitch.bind(this);
-    this.handleType = this.handleType.bind(this);
-    this.handleSend = this.handleSend.bind(this);
+    this.handleSwitch = this.handleSwitch.bind(this)
+    this.handleType = this.handleType.bind(this)
+    this.handleSend = this.handleSend.bind(this)
   }
 
   componentDidMount() {
-    const { username, friends } = this.props;
+    const { username, friends } = this.props
 
     if (username !== '') {
-      const prevState = this.state;
-      const { messageList } = prevState;
-      const socket = io(SERVER_URL, { query: { username } });
+      const prevState = this.state
+      const { messageList } = prevState
+      const socket = io(SERVER_URL, { query: { username } })
 
       friends.forEach(friend => {
         if (!messageList[friend]) {
-          messageList[friend] = [];
+          messageList[friend] = []
         }
-      });
+      })
 
       socket.on('connect', () => {
         // eslint-disable-next-line no-console
-        console.log('Connected to server !');
-      });
+        console.log('Connected to server !')
+      })
 
       socket.on(username, chatMessage => {
-        const prevvState = this.state;
-        const { from, to, content } = JSON.parse(chatMessage);
-        const message = new ChatMessage(from, to, content);
-        messageList[from].push(message);
+        const prevvState = this.state
+        const { from, to, content } = JSON.parse(chatMessage)
+        const message = new ChatMessage(from, to, content)
+        messageList[from].push(message)
 
         this.setState({
           ...prevvState,
           messageList,
-        });
-      });
+        })
+      })
 
       this.setState({
         ...prevState,
         messageList,
         socket,
-      });
+      })
     }
   }
 
   handleSwitch(event) {
-    const prevState = this.state;
+    const prevState = this.state
 
     this.setState({
       ...prevState,
       currentWindow: event.currentTarget.dataset.name,
-    });
+    })
   }
 
   handleType(event) {
-    const prevState = this.state;
+    const prevState = this.state
 
     this.setState({
       ...prevState,
       currentMessage: event.target.value,
-    });
+    })
   }
 
   handleSend() {
-    const prevState = this.state;
-    const { username } = this.props;
+    const prevState = this.state
+    const { username } = this.props
     const {
       messageList,
       currentWindow: to,
       currentMessage: content,
       socket,
-    } = prevState;
+    } = prevState
 
     if (to !== '') {
-      const message = new ChatMessage(username, to, content);
+      const message = new ChatMessage(username, to, content)
 
-      messageList[to].push(message);
-      socket.emit(username, message.toJSON());
+      messageList[to].push(message)
+      socket.emit(username, message.toJSON())
 
       this.setState({
         ...prevState,
         messageList,
-      });
+      })
     }
   }
 
   render() {
-    const { email, username, friends, history } = this.props;
-    const { currentWindow, messageList } = this.state;
+    const { email, username, friends, history } = this.props
+    const { currentWindow, messageList } = this.state
 
     if (email === '' || username === '') {
       return (
@@ -147,7 +147,7 @@ class Dashboard extends React.Component {
               <MessageText>Plesase sign up or login !</MessageText>
               <IconButton
                 onClick={() => {
-                  history.push('/');
+                  history.push('/')
                 }}
               >
                 <SendIcon color="#f03e3e" />
@@ -155,7 +155,7 @@ class Dashboard extends React.Component {
             </Message>
           </MessageList>
         </ThemeProvider>
-      );
+      )
     }
 
     return (
@@ -251,18 +251,18 @@ class Dashboard extends React.Component {
           </div>
         </div>
       </ThemeProvider>
-    );
+    )
   }
 }
 
 export default withRouter(
   connect(state => {
-    const { username, email, friends } = state;
+    const { username, email, friends } = state
 
     return {
       username,
       email,
       friends,
-    };
+    }
   })(Dashboard)
-);
+)

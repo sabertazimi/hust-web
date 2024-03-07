@@ -1,6 +1,6 @@
-import Emitter from './emitter';
-import Factory from './factory';
-import $log from './log';
-import sleep from './sleep';
+import Emitter from './emitter'
+import Factory from './factory'
+import $log from './log'
+import sleep from './sleep'
 
-export { Emitter, Factory, $log, sleep };
+export { Emitter, Factory, $log, sleep }

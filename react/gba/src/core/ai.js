@@ -1,16 +1,16 @@
-import { AIMode } from '../constants';
+import { AIMode } from '../constants'
 
-import config from '../ai.json';
-import MCTS from './mcts';
+import config from '../ai.json'
+import MCTS from './mcts'
 
 class AI {
   constructor(_config) {
-    this.config = _config || {};
-    this.config.mode = this.config.defaultMode || AIMode.EASY;
+    this.config = _config || {}
+    this.config.mode = this.config.defaultMode || AIMode.EASY
   }
 
   setMode(mode) {
-    this.config.mode = mode || AIMode.EASY;
+    this.config.mode = mode || AIMode.EASY
   }
 
   /**
@@ -19,23 +19,23 @@ class AI {
   bestPlay(currentState) {
     switch (this.config.mode) {
       case AIMode.EASY:
-        MCTS.runSearch(currentState, 0.1);
-        break;
+        MCTS.runSearch(currentState, 0.1)
+        break
       case AIMode.MEDIUM:
-        MCTS.runSearch(currentState, 1);
-        break;
+        MCTS.runSearch(currentState, 1)
+        break
       case AIMode.HARD:
-        MCTS.runSearch(currentState, 3);
-        break;
+        MCTS.runSearch(currentState, 3)
+        break
       default:
-        MCTS.runSearch(currentState, 1);
-        break;
+        MCTS.runSearch(currentState, 1)
+        break
     }
 
-    return MCTS.bestPlay(currentState);
+    return MCTS.bestPlay(currentState)
   }
 }
 
-const ai = new AI(config);
+const ai = new AI(config)
 
-export default ai;
+export default ai

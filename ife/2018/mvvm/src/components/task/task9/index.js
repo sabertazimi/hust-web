@@ -1,3 +1,3 @@
-import Task9 from './Task9.san';
+import Task9 from './Task9.san'
 
-export default Task9;
+export default Task9

@@ -1,1 +1,1 @@
-export const INIT_MEDUX = '@@medux/INIT';
+export const INIT_MEDUX = '@@medux/INIT'

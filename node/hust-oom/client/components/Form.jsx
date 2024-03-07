@@ -1,30 +1,26 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import {
-  SERVER_LOGIN_PATH,
-  SERVER_SIGNUP_PATH,
-  SERVER_URL,
-} from '../constants';
-import Actions from '../states/actions';
-import postData from '../utils/postData';
-import './Form.scss';
-import withRouter from './withRouter';
+import React from 'react'
+import { connect } from 'react-redux'
+import { SERVER_LOGIN_PATH, SERVER_SIGNUP_PATH, SERVER_URL } from '../constants'
+import Actions from '../states/actions'
+import postData from '../utils/postData'
+import './Form.scss'
+import withRouter from './withRouter'
 
-const FormContext = React.createContext({});
-const FormProvider = FormContext.Provider;
-const FormConsumer = FormContext.Consumer;
+const FormContext = React.createContext({})
+const FormProvider = FormContext.Provider
+const FormConsumer = FormContext.Consumer
 
 class FormWrapper extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       activePanel: 'login',
-    };
+    }
   }
 
   render() {
-    const { children } = this.props;
-    const { activePanel } = this.state;
+    const { children } = this.props
+    const { activePanel } = this.state
 
     return (
       <>
@@ -35,7 +31,7 @@ class FormWrapper extends React.Component {
               switchPanel: newPanel => {
                 this.setState({
                   activePanel: newPanel,
-                });
+                })
               },
             },
           }}
@@ -43,7 +39,7 @@ class FormWrapper extends React.Component {
           {children}
         </FormProvider>
       </>
-    );
+    )
   }
 }
 
@@ -51,7 +47,7 @@ const FormPanel = ({ isActive, children }) => (
   <FormConsumer>
     {({ activePanel }) => (activePanel === isActive ? children : null)}
   </FormConsumer>
-);
+)
 
 const Panel = ({ id, children }) => (
   <FormConsumer>
@@ -59,33 +55,33 @@ const Panel = ({ id, children }) => (
       <div onClick={() => actions.switchPanel(id)}>{children}</div>
     )}
   </FormConsumer>
-);
+)
 
 class _Login extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       email: '',
       password: '',
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(event) {
-    const prevState = this.state;
+    const prevState = this.state
 
     this.setState({
       ...prevState,
       [event.target.name]: event.target.value,
-    });
+    })
   }
 
   handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
 
-    const { email, password } = this.state;
-    const { history, onLogin } = this.props;
+    const { email, password } = this.state
+    const { history, onLogin } = this.props
 
     postData(`${SERVER_URL}${SERVER_LOGIN_PATH}`, {
       email,
@@ -93,16 +89,16 @@ class _Login extends React.Component {
     })
       .then(res => {
         if (res.status === 200) {
-          onLogin(res);
-          history.push('/dashboard');
+          onLogin(res)
+          history.push('/dashboard')
         } else {
           // eslint-disable-next-line no-alert
-          alert(res.message);
+          alert(res.message)
         }
       })
       .catch(() => {
-        history.push('/');
-      });
+        history.push('/')
+      })
   }
 
   render() {
@@ -132,36 +128,36 @@ class _Login extends React.Component {
           </form>
         </div>
       </>
-    );
+    )
   }
 }
 
 class _SignUp extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       email: '',
       username: '',
       password: '',
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(event) {
-    const prevState = this.state;
+    const prevState = this.state
 
     this.setState({
       ...prevState,
       [event.target.name]: event.target.value,
-    });
+    })
   }
 
   handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
 
-    const { email, username, password } = this.state;
-    const { history, onLogin } = this.props;
+    const { email, username, password } = this.state
+    const { history, onLogin } = this.props
 
     postData(`${SERVER_URL}${SERVER_SIGNUP_PATH}`, {
       email,
@@ -170,16 +166,16 @@ class _SignUp extends React.Component {
     })
       .then(res => {
         if (res.status === 200) {
-          onLogin(res);
-          history.push('/dashboard');
+          onLogin(res)
+          history.push('/dashboard')
         } else {
           // eslint-disable-next-line no-alert
-          alert(res.message);
+          alert(res.message)
         }
       })
       .catch(() => {
-        history.push('/');
-      });
+        history.push('/')
+      })
   }
 
   render() {
@@ -220,7 +216,7 @@ class _SignUp extends React.Component {
           </form>
         </div>
       </>
-    );
+    )
   }
 }
 
@@ -229,22 +225,22 @@ const Login = withRouter(
     () => ({}),
     dispatch => ({
       onLogin: (...args) => {
-        dispatch(Actions.login(...args));
+        dispatch(Actions.login(...args))
       },
     })
   )(_Login)
-);
+)
 
 const SignUp = withRouter(
   connect(
     () => ({}),
     dispatch => ({
       onLogin: (...args) => {
-        dispatch(Actions.login(...args));
+        dispatch(Actions.login(...args))
       },
     })
   )(_SignUp)
-);
+)
 
 const Form = () => (
   <div className="form-wrap">
@@ -267,6 +263,6 @@ const Form = () => (
       </FormPanel>
     </FormWrapper>
   </div>
-);
+)
 
-export default Form;
+export default Form

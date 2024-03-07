@@ -1,14 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import { connect } from './medux';
+import { connect } from './medux'
 
-import createAction from './action.js';
-import {
-  CLOSE_NOTE,
-  CREATE_NOTE,
-  OPEN_NOTE,
-  UPDATE_NOTE,
-} from './constants.js';
+import createAction from './action.js'
+import { CLOSE_NOTE, CREATE_NOTE, OPEN_NOTE, UPDATE_NOTE } from './constants.js'
 
 const NoteEditor = ({ note, onChangeNote, onCloseNote }) => (
   <div>
@@ -26,17 +21,17 @@ const NoteEditor = ({ note, onChangeNote, onCloseNote }) => (
       Close
     </button>
   </div>
-);
+)
 
 const NoteTitle = ({ note }) => {
-  const title = note.content.split('\n')[0].replace(/^\s+|\s+$/g, '');
+  const title = note.content.split('\n')[0].replace(/^\s+|\s+$/g, '')
 
   if (title === '') {
-    return <i>Untitled</i>;
+    return <i>Untitled</i>
   }
 
-  return <span>{title}</span>;
-};
+  return <span>{title}</span>
+}
 
 const NoteLink = ({ note, onOpenNote }) => (
   <li className="note-list-item">
@@ -45,7 +40,7 @@ const NoteLink = ({ note, onOpenNote }) => (
       <NoteTitle note={note} />
     </a>
   </li>
-);
+)
 
 const NoteList = ({ notes, onOpenNote }) => (
   <ul className="note-list">
@@ -53,7 +48,7 @@ const NoteList = ({ notes, onOpenNote }) => (
       <NoteLink key={id} note={notes[id]} onOpenNote={onOpenNote} />
     ))}
   </ul>
-);
+)
 
 const NoteApp = ({
   notes,
@@ -79,28 +74,28 @@ const NoteApp = ({
       </div>
     )}
   </div>
-);
+)
 
 const mapStateToProps = (state) => ({
   notes: state.notes,
   openNoteId: state.openNoteId,
-});
+})
 
 const mapDispatchToProps = (dispatch) => ({
   onAddNote: () => {
-    dispatch(createAction(CREATE_NOTE));
+    dispatch(createAction(CREATE_NOTE))
   },
   onChangeNote: (id, content) => {
-    dispatch(createAction(UPDATE_NOTE, id, content));
+    dispatch(createAction(UPDATE_NOTE, id, content))
   },
   onOpenNote: (id) => {
-    dispatch(createAction(OPEN_NOTE, id));
+    dispatch(createAction(OPEN_NOTE, id))
   },
   onCloseNote: () => {
-    dispatch(createAction(CLOSE_NOTE));
+    dispatch(createAction(CLOSE_NOTE))
   },
-});
+})
 
-const App = connect(mapStateToProps, mapDispatchToProps)(NoteApp);
+const App = connect(mapStateToProps, mapDispatchToProps)(NoteApp)
 
-export default App;
+export default App

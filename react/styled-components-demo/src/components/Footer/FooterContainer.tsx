@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
   padding: 100px 0 60px;
@@ -16,6 +16,6 @@ const FooterContainer = styled.footer`
   p {
     text-align: right;
   }
-`;
+`
 
-export default FooterContainer;
+export default FooterContainer

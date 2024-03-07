@@ -1,7 +1,7 @@
-import { Button, Container, Flex } from '../index';
-import HeaderContainer from './HeaderContainer';
-import HeaderImage from './HeaderImage';
-import HeaderNav from './HeaderNav';
+import { Button, Container, Flex } from '../index'
+import HeaderContainer from './HeaderContainer'
+import HeaderImage from './HeaderImage'
+import HeaderNav from './HeaderNav'
 
 export default function Header() {
   return (
@@ -27,5 +27,5 @@ export default function Header() {
         </Flex>
       </Container>
     </HeaderContainer>
-  );
+  )
 }

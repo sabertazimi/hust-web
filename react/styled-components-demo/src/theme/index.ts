@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme } from 'styled-components'
 
 const theme: DefaultTheme = {
   colors: {
@@ -6,6 +6,6 @@ const theme: DefaultTheme = {
     body: '#fff',
     footer: '#003333',
   },
-};
+}
 
-export default theme;
+export default theme

@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Provider } from 'react-redux'
 
-import { Dashboard, Form } from './components';
+import { Dashboard, Form } from './components'
 
-import './index.scss';
+import './index.scss'
 
 const App = ({ store }) => (
   <Provider store={store}>
@@ -15,6 +15,6 @@ const App = ({ store }) => (
       </Routes>
     </BrowserRouter>
   </Provider>
-);
+)
 
-export default App;
+export default App

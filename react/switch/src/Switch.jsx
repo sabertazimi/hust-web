@@ -1,5 +1,5 @@
-import React from 'react';
-import './Switch.css';
+import React from 'react'
+import './Switch.css'
 
 const Switch = ({ isOn, handleToggle, onColor }) => {
   return (
@@ -19,7 +19,7 @@ const Switch = ({ isOn, handleToggle, onColor }) => {
         <span className={`react-switch-button`} />
       </label>
     </>
-  );
-};
+  )
+}
 
-export default Switch;
+export default Switch

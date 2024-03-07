@@ -1,4 +1,4 @@
-import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from './constants';
+import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from './constants'
 
 const createAction = (type, ...args) => {
   switch (type) {
@@ -9,9 +9,9 @@ const createAction = (type, ...args) => {
         payload: {
           field: args[0],
         },
-      };
+      }
     case FILTER_DATA: {
-      const [field, filter] = args;
+      const [field, filter] = args
 
       return {
         type,
@@ -19,15 +19,15 @@ const createAction = (type, ...args) => {
           field,
           filter,
         },
-      };
+      }
     }
     default:
       return {
         type: undefined,
         payload: new Error('Unknown action type'),
         error: true,
-      };
+      }
   }
-};
+}
 
-export default createAction;
+export default createAction

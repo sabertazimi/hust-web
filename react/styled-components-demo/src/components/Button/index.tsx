@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface Props {
-  readonly color?: string;
-  readonly bg?: string;
+  readonly color?: string
+  readonly bg?: string
 }
 
 const Button = styled.button<Props>`
@@ -21,6 +21,6 @@ const Button = styled.button<Props>`
     opacity: 0.9;
     transform: scale(0.98);
   }
-`;
+`
 
-export default Button;
+export default Button

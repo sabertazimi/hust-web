@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 // class MessageList extends React.PureComponent {
 //   render() {
@@ -57,6 +57,6 @@ import React from 'react';
 //   }
 // }
 
-const Message = () => <div>Hello Chat!</div>;
+const Message = () => <div>Hello Chat!</div>
 
-export default Message;
+export default Message

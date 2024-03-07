@@ -1,5 +1,5 @@
-import { Container, Flex, SocialIcons } from '../index';
-import FooterContainer from './FooterContainer';
+import { Container, Flex, SocialIcons } from '../index'
+import FooterContainer from './FooterContainer'
 
 export default function Footer() {
   return (
@@ -30,5 +30,5 @@ export default function Footer() {
         <p>&copy; 2021 Huddle. All rights reserved</p>
       </Container>
     </FooterContainer>
-  );
+  )
 }

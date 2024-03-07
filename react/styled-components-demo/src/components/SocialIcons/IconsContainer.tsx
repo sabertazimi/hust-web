@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const SocialIcons = styled.div`
   display: flex;
@@ -21,6 +21,6 @@ const SocialIcons = styled.div`
     border: 1px solid #fff;
     border-radius: 50%;
   }
-`;
+`
 
-export default SocialIcons;
+export default SocialIcons

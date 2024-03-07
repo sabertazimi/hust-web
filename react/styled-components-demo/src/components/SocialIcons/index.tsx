@@ -1,5 +1,5 @@
-import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import IconsContainer from './IconsContainer';
+import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import IconsContainer from './IconsContainer'
 
 export default function SocialIcons() {
   return (
@@ -20,5 +20,5 @@ export default function SocialIcons() {
         </a>
       </li>
     </IconsContainer>
-  );
+  )
 }

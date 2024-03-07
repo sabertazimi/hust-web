@@ -1,10 +1,10 @@
-import { renderCheckBoxes, renderTable } from './components';
+import { renderCheckBoxes, renderTable } from './components'
 
-import { $productFilter, $regionFilter, $table } from './containers';
+import { $productFilter, $regionFilter, $table } from './containers'
 
-import store from './state/store';
+import store from './state/store'
 
-import './index.css';
+import './index.css'
 
 renderCheckBoxes($regionFilter, 'region', {
   label: 'Region',
@@ -22,7 +22,7 @@ renderCheckBoxes($regionFilter, 'region', {
       text: 'East',
     },
   ],
-});
+})
 
 renderCheckBoxes($productFilter, 'product', {
   label: 'Product',
@@ -40,12 +40,12 @@ renderCheckBoxes($productFilter, 'product', {
       text: 'Smart Speaker',
     },
   ],
-});
+})
 
-renderTable($table);
+renderTable($table)
 
-const { subscribe } = store;
+const { subscribe } = store
 
 subscribe(() => {
-  renderTable($table);
-});
+  renderTable($table)
+})

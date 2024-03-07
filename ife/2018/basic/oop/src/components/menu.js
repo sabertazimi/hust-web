@@ -1,4 +1,4 @@
-import Food from './food';
+import Food from './food'
 
 export default class Menu {
   constructor() {
@@ -9,11 +9,11 @@ export default class Menu {
       new Food('Dumplings', 35, 70, 3),
       new Food('Spring Rolls', 20, 50, 3),
       new Food('Peking Roasted Duck', 100, 200, 5),
-    ];
+    ]
   }
 
   generateOrder() {
-    const index = Math.floor(Math.random() * (this.list.length - 1));
-    return this.list.slice(index, index + 3);
+    const index = Math.floor(Math.random() * (this.list.length - 1))
+    return this.list.slice(index, index + 3)
   }
 }

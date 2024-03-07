@@ -1,3 +1,3 @@
-import Task7 from './Task7.san';
+import Task7 from './Task7.san'
 
-export default Task7;
+export default Task7

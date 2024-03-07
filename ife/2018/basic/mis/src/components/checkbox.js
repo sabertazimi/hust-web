@@ -1,18 +1,18 @@
-import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from '../state/constants';
+import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from '../state/constants'
 
-import createAction from '../state/action';
-import store from '../state/store';
+import createAction from '../state/action'
+import store from '../state/store'
 
-const { dispatch } = store;
+const { dispatch } = store
 
 const generateCheckBoxes = schema => {
-  const { label, data } = schema;
+  const { label, data } = schema
 
-  const labelHTML = `${label}: `;
+  const labelHTML = `${label}: `
   const checkAllBoxHTML = `
     <input type="checkbox" id="${label}-all" name="${label}" value="all" checked>
     <label for="${label}-all">All</label>
-  `;
+  `
   const checkBoxesHTML = data
     .map(
       ({ value, text }) => `
@@ -20,48 +20,48 @@ const generateCheckBoxes = schema => {
     <label for="${label}-${value}">${text}</label>
   `
     )
-    .join('');
+    .join('')
 
   return `
     ${labelHTML}
     ${checkAllBoxHTML}
     ${checkBoxesHTML}
-  `;
-};
+  `
+}
 
 const handleCheckBoxes = ($container, field, event) => {
   const [allCheckBox, ...checkBoxes] = Array.from(
     $container.querySelectorAll('input[type="checkbox"]')
-  );
+  )
 
   if (event.target.value.includes('all')) {
-    const { checked } = allCheckBox;
+    const { checked } = allCheckBox
 
     checkBoxes.forEach(checkbox => {
-      checkbox.checked = checked;
-    });
+      checkbox.checked = checked
+    })
 
-    dispatch(createAction(checked ? SHOW_ALL : FILTER_ALL, field));
+    dispatch(createAction(checked ? SHOW_ALL : FILTER_ALL, field))
   } else {
-    const filter = [];
+    const filter = []
 
     checkBoxes.forEach(checkbox => {
       if (checkbox.checked) {
-        filter.push(checkbox.value);
+        filter.push(checkbox.value)
       }
-    });
+    })
 
-    allCheckBox.checked = checkBoxes.every(checkBox => checkBox.checked);
+    allCheckBox.checked = checkBoxes.every(checkBox => checkBox.checked)
 
-    dispatch(createAction(FILTER_DATA, field, filter));
+    dispatch(createAction(FILTER_DATA, field, filter))
   }
-};
+}
 
 const renderCheckBoxes = ($container, field, schema) => {
-  $container.innerHTML = generateCheckBoxes(schema);
+  $container.innerHTML = generateCheckBoxes(schema)
   $container.addEventListener('change', event =>
     handleCheckBoxes($container, field, event)
-  );
-};
+  )
+}
 
-export default renderCheckBoxes;
+export default renderCheckBoxes

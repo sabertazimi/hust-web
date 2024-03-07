@@ -1,3 +1,3 @@
-import Task14 from './Task14.san';
+import Task14 from './Task14.san'
 
-export default Task14;
+export default Task14

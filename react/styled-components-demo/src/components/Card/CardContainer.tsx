@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface Props {
-  readonly layout: string;
+  readonly layout: string
 }
 
 const CardContainer = styled.div<Props>`
@@ -21,6 +21,6 @@ const CardContainer = styled.div<Props>`
   & > div {
     flex: 1;
   }
-`;
+`
 
-export default CardContainer;
+export default CardContainer

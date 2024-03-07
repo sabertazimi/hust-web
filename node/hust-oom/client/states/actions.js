@@ -1,4 +1,4 @@
-import { ADD_FRIEND, DELETE_FRIEND, LOGIN, SEND_MESSAGE } from './types';
+import { ADD_FRIEND, DELETE_FRIEND, LOGIN, SEND_MESSAGE } from './types'
 
 const actions = {
   login(...args) {
@@ -7,7 +7,7 @@ const actions = {
       payload: {
         ...args[0],
       },
-    };
+    }
   },
   addFriend(...args) {
     return {
@@ -15,7 +15,7 @@ const actions = {
       payload: {
         username: args[0],
       },
-    };
+    }
   },
   deleteFriend(...args) {
     return {
@@ -23,7 +23,7 @@ const actions = {
       payload: {
         username: args[0],
       },
-    };
+    }
   },
   sendMessage(...args) {
     return {
@@ -32,8 +32,8 @@ const actions = {
         username: args[0],
         message: args[1],
       },
-    };
+    }
   },
-};
+}
 
-export default actions;
+export default actions

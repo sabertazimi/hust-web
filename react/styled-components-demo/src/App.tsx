@@ -1,8 +1,8 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { Card, Container, Footer, GlobalStyles, Header } from './components';
-import content from './content';
-import theme from './theme';
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { Card, Container, Footer, GlobalStyles, Header } from './components'
+import content from './content'
+import theme from './theme'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Footer />
       </>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

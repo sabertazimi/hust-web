@@ -1,12 +1,12 @@
-import CardContainer from './CardContainer';
+import CardContainer from './CardContainer'
 
 interface Props {
   readonly item: {
-    readonly id: number;
-    readonly title: string;
-    readonly body: string;
-    readonly image: string;
-  };
+    readonly id: number
+    readonly title: string
+    readonly body: string
+    readonly image: string
+  }
 }
 
 export default function Card({ item: { id, title, body, image } }: Props) {
@@ -20,5 +20,5 @@ export default function Card({ item: { id, title, body, image } }: Props) {
         <img src={`./images/${image}`} alt="" />
       </div>
     </CardContainer>
-  );
+  )
 }

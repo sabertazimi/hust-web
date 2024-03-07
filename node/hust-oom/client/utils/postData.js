@@ -11,6 +11,6 @@ const postData = (url, data) =>
     mode: 'cors', // no-cors, cors, *same-origin
     redirect: 'follow', // manual, *follow, error
     referrer: 'no-referrer', // *client, no-referrer
-  }).then(response => response.json());
+  }).then(response => response.json())
 
-export default postData;
+export default postData

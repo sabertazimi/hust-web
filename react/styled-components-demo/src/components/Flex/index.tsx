@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Flex = styled.div`
   display: flex;
@@ -8,6 +8,6 @@ const Flex = styled.div`
   & > ul {
     flex: 1;
   }
-`;
+`
 
-export default Flex;
+export default Flex

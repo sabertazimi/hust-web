@@ -1,18 +1,18 @@
-import { BLACK, COLS, DEATH, EMPTY, ROWS } from '../constants';
+import { BLACK, COLS, DEATH, EMPTY, ROWS } from '../constants'
 
-import { BoardVisitor } from '../utils';
+import { BoardVisitor } from '../utils'
 
-import SBTS from './sbts';
+import SBTS from './sbts'
 
 const StateMachine = {
   getInitState() {
-    const board = [];
+    const board = []
 
     for (let i = 0; i < ROWS; i += 1) {
-      board[i] = new Array(COLS);
+      board[i] = new Array(COLS)
 
       for (let j = 0; j < COLS; j += 1) {
-        board[i][j] = EMPTY;
+        board[i][j] = EMPTY
       }
     }
 
@@ -21,57 +21,57 @@ const StateMachine = {
       player: BLACK,
       winner: EMPTY,
       board,
-    };
+    }
 
-    return state;
+    return state
   },
 
   loadState() {
-    const state = localStorage.getItem('gobang-state');
+    const state = localStorage.getItem('gobang-state')
 
     if (state) {
-      return JSON.parse(state);
+      return JSON.parse(state)
     }
 
-    return this.getInitState();
+    return this.getInitState()
   },
 
   storeState(state) {
-    localStorage.setItem('gobang-state', JSON.stringify(state));
+    localStorage.setItem('gobang-state', JSON.stringify(state))
   },
 
   nextState(state, play) {
-    const newHistory = state.playHistory.slice();
-    newHistory.push(play);
-    const newBoard = state.board.map(row => row.slice());
-    newBoard[play.row][play.col] = state.player;
-    const newPlayer = -state.player;
-    const winner = this.checkWinner(state, play);
+    const newHistory = state.playHistory.slice()
+    newHistory.push(play)
+    const newBoard = state.board.map(row => row.slice())
+    newBoard[play.row][play.col] = state.player
+    const newPlayer = -state.player
+    const winner = this.checkWinner(state, play)
 
     return {
       playHistory: newHistory,
       player: newPlayer,
       winner,
       board: newBoard,
-    };
+    }
   },
 
   isDeadGame(state) {
-    const { board } = state;
+    const { board } = state
 
     for (let i = 1; i < ROWS; i += 1) {
       for (let j = 1; j < COLS; j += 1) {
         if (board[i][j] === EMPTY) {
-          return false;
+          return false
         }
       }
     }
 
-    return true;
+    return true
   },
 
   checkWinnerWithoutPlay(state) {
-    const { board } = state;
+    const { board } = state
 
     for (let i = 1; i < ROWS; i += 1) {
       for (let j = 1; j < COLS; j += 1) {
@@ -79,16 +79,16 @@ const StateMachine = {
           const winner = this.checkWinnerWithPlay(state, {
             row: i,
             col: j,
-          });
+          })
 
           if (winner !== EMPTY) {
-            return winner;
+            return winner
           }
         }
       }
     }
 
-    return EMPTY;
+    return EMPTY
   },
 
   checkWinnerWithPlay(state, play) {
@@ -101,10 +101,10 @@ const StateMachine = {
       [1, -1],
       [-1, -1],
       [1, 1],
-    ];
+    ]
 
-    let axisFlag = 0;
-    let axisCount = 0;
+    let axisFlag = 0
+    let axisCount = 0
 
     if (
       BoardVisitor.countOnDirections(
@@ -113,46 +113,46 @@ const StateMachine = {
         directions,
         4,
         (curstate, playy, xdir, ydir, step) => {
-          const { board, player } = curstate;
-          const { row, col } = playy;
+          const { board, player } = curstate
+          const { row, col } = playy
 
-          return board[row + ydir * step][col + xdir * step] === player;
+          return board[row + ydir * step][col + xdir * step] === player
         },
         (_, __, ___, ____, curCount) => {
           if (axisFlag === 0) {
-            axisFlag = 1;
-            axisCount += curCount;
-            return false;
+            axisFlag = 1
+            axisCount += curCount
+            return false
           }
 
-          const count = axisCount + curCount;
-          axisFlag = 0;
-          axisCount = 0;
-          return count >= 4;
+          const count = axisCount + curCount
+          axisFlag = 0
+          axisCount = 0
+          return count >= 4
         }
       )
     ) {
-      return state.player;
+      return state.player
     }
 
-    return EMPTY;
+    return EMPTY
   },
 
   checkWinner(state, play) {
     if (this.isDeadGame(state)) {
-      return DEATH;
+      return DEATH
     }
 
     if (!play) {
-      return this.checkWinnerWithoutPlay(state);
+      return this.checkWinnerWithoutPlay(state)
     }
 
-    return this.checkWinnerWithPlay(state, play);
+    return this.checkWinnerWithPlay(state, play)
   },
 
   legalPlays(state) {
-    return SBTS.bestPlays(state);
+    return SBTS.bestPlays(state)
   },
-};
+}
 
-export default StateMachine;
+export default StateMachine

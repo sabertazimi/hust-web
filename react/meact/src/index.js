@@ -1,5 +1,5 @@
-import Meact from './meact.js';
-import './index.css';
+import Meact from './meact.js'
+import './index.css'
 
 const stories = [
   {
@@ -22,7 +22,7 @@ const stories = [
     name: 'Components and state',
     url: 'http://bit.ly/2rE16nh',
   },
-];
+]
 
 class App extends Meact.Component {
   render() {
@@ -31,31 +31,31 @@ class App extends Meact.Component {
         <h1>Didact Stories</h1>
         <ul>
           {this.props.stories.map(story => {
-            return <Story name={story.name} url={story.url} />;
+            return <Story name={story.name} url={story.url} />
           })}
         </ul>
       </div>
-    );
+    )
   }
 }
 
 class Story extends Meact.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       likes: Math.ceil(Math.random() * 100),
-    };
+    }
   }
 
   like() {
     this.setState({
       likes: this.state.likes + 1,
-    });
+    })
   }
 
   render() {
-    const { name, url } = this.props;
-    const { likes } = this.state;
+    const { name, url } = this.props
+    const { likes } = this.state
     return (
       <li>
         <button onClick={() => this.like()}>
@@ -64,8 +64,8 @@ class Story extends Meact.Component {
         </button>
         <a href={url}>{name}</a>
       </li>
-    );
+    )
   }
 }
 
-Meact.render(<App stories={stories} />, document.getElementById('root'));
+Meact.render(<App stories={stories} />, document.getElementById('root'))

@@ -1,13 +1,13 @@
-import React from 'react';
-import useForm from '../hooks/useForm';
+import React from 'react'
+import useForm from '../hooks/useForm'
 
 const Form = () => {
   const login = () => {
-    console.log(values);
-    window.alert(JSON.stringify(values));
-  };
+    console.log(values)
+    window.alert(JSON.stringify(values))
+  }
 
-  const { values, handleChange, handleSubmit } = useForm(login);
+  const { values, handleChange, handleSubmit } = useForm(login)
 
   return (
     <div className="section is-fullheight">
@@ -50,7 +50,7 @@ const Form = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form

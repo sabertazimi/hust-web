@@ -1,11 +1,11 @@
-const TEXT_ELEMENT_TYPE = 'text element';
+const TEXT_ELEMENT_TYPE = 'text element'
 
 const createElement = (type, config, ...args) => {
   const props = {
     ...config,
-  };
-  const hasChildren = args.length > 0;
-  const rawChildren = hasChildren ? [].concat(...args) : [];
+  }
+  const hasChildren = args.length > 0
+  const rawChildren = hasChildren ? [].concat(...args) : []
 
   // transform text element when c === 'string'
   props.children = rawChildren
@@ -16,12 +16,12 @@ const createElement = (type, config, ...args) => {
         : createElement(TEXT_ELEMENT_TYPE, {
             nodeValue: c,
           })
-    );
+    )
 
   return {
     type,
     props,
-  };
-};
+  }
+}
 
-export { TEXT_ELEMENT_TYPE, createElement };
+export { TEXT_ELEMENT_TYPE, createElement }
