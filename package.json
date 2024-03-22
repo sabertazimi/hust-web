@@ -39,7 +39,7 @@
     "url": "https://github.com/sabertazimi/hust-web/issues"
   },
   "homepage": "https://github.com/sabertazimi/hust-web",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.5",
   "devDependencies": {
     "@dg-scripts/eslint-config": "^5.14.3",
     "@dg-scripts/stylelint-config": "^5.14.3",
@@ -50,7 +50,7 @@
     "prettier": "^3.2.5",
     "semver": "^7.6.0",
     "stylelint": "^16.2.1",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "dependenciesMeta": {
     "scrollreveal": {
