@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: Raleway, serif;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.col {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .button {
+    padding: 0.8em 1.2em;
+    margin-bottom: 1em;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 30em;
+    transition: none;
+  }
+}
+
+.button {
+  padding: 0.8em 1.2em;
+  margin-bottom: 1em;
+  font-size: 20px;
+  color: red;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 30em;
+  transition: color 0.3s, background 0.3s;
+}
+
+.button:hover,
+.button:focus {
+  color: white;
+  background-color: red;
+}
+
+.popup {
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1024px;
+  height: 80%;
+  background-color: white;
+  box-shadow: 0 0 20px 10px rgb(0 0 0 / 30%);
+  opacity: 0%;
+}
+
+.popup:target ~ .col {
+  display: none;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .popup:target {
+    z-index: 999;
+    opacity: 100%;
+    transform-origin: top center;
+    animation: none;
+  }
+}
+
+.popup:target {
+  z-index: 999;
+  opacity: 100%;
+  transform-origin: top center;
+  animation: popup 500ms ease forwards;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0%;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    opacity: 100%;
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
