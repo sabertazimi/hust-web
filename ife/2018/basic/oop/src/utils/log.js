@@ -2,7 +2,7 @@ let LOG_ID = 0
 
 const $logger = document.querySelector('.logger')
 
-const $log = message => {
+function $log(message) {
   if (!message) {
     $logger.innerHTML += '<br />'
   } else if (typeof message === 'object') {

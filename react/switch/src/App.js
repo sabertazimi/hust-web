@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import './App.css'
-import Switch from './Switch'
+import Switch from './Switch.jsx'
 
+/**
+ * The main component of the application.
+ * @returns {JSX.Element} The rendered App component.
+ */
 function App() {
   const [value, setValue] = useState(false)
 

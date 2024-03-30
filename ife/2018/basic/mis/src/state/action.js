@@ -1,6 +1,6 @@
 import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from './constants'
 
-const createAction = (type, ...args) => {
+function createAction(type, ...args) {
   switch (type) {
     case SHOW_ALL:
     case FILTER_ALL:

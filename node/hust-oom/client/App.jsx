@@ -6,15 +6,17 @@ import { Dashboard, Form } from './components'
 
 import './index.scss'
 
-const App = ({ store }) => (
-  <Provider store={store}>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Form />} />
-        <Route path="dashboard" element={<Dashboard />} />
-      </Routes>
-    </BrowserRouter>
-  </Provider>
-)
+function App({ store }) {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Form />} />
+          <Route path="dashboard" element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
+  )
+}
 
 export default App

@@ -28,7 +28,7 @@ class FormWrapper extends React.Component {
           value={{
             activePanel,
             actions: {
-              switchPanel: newPanel => {
+              switchPanel: (newPanel) => {
                 this.setState({
                   activePanel: newPanel,
                 })
@@ -43,19 +43,23 @@ class FormWrapper extends React.Component {
   }
 }
 
-const FormPanel = ({ isActive, children }) => (
-  <FormConsumer>
-    {({ activePanel }) => (activePanel === isActive ? children : null)}
-  </FormConsumer>
-)
+function FormPanel({ isActive, children }) {
+  return (
+    <FormConsumer>
+      {({ activePanel }) => (activePanel === isActive ? children : null)}
+    </FormConsumer>
+  )
+}
 
-const Panel = ({ id, children }) => (
-  <FormConsumer>
-    {({ actions }) => (
-      <div onClick={() => actions.switchPanel(id)}>{children}</div>
-    )}
-  </FormConsumer>
-)
+function Panel({ id, children }) {
+  return (
+    <FormConsumer>
+      {({ actions }) => (
+        <div onClick={() => actions.switchPanel(id)}>{children}</div>
+      )}
+    </FormConsumer>
+  )
+}
 
 class _Login extends React.Component {
   constructor(props) {
@@ -87,7 +91,7 @@ class _Login extends React.Component {
       email,
       password,
     })
-      .then(res => {
+      .then((res) => {
         if (res.status === 200) {
           onLogin(res)
           history.push('/dashboard')
@@ -164,7 +168,7 @@ class _SignUp extends React.Component {
       username,
       password,
     })
-      .then(res => {
+      .then((res) => {
         if (res.status === 200) {
           onLogin(res)
           history.push('/dashboard')
@@ -227,8 +231,8 @@ const Login = withRouter(
       onLogin: (...args) => {
         dispatch(Actions.login(...args))
       },
-    })
-  )(_Login)
+    }),
+  )(_Login),
 )
 
 const SignUp = withRouter(
@@ -238,31 +242,33 @@ const SignUp = withRouter(
       onLogin: (...args) => {
         dispatch(Actions.login(...args))
       },
-    })
-  )(_SignUp)
+    }),
+  )(_SignUp),
 )
 
-const Form = () => (
-  <div className="form-wrap">
-    <FormWrapper>
-      <div className="tabs">
-        <Panel id="login">
-          <h2 className="login-tab">Login</h2>
-        </Panel>
-        <Panel id="signup">
-          <h2 className="signup-tab">Sign Up</h2>
-        </Panel>
-      </div>
+function Form() {
+  return (
+    <div className="form-wrap">
+      <FormWrapper>
+        <div className="tabs">
+          <Panel id="login">
+            <h2 className="login-tab">Login</h2>
+          </Panel>
+          <Panel id="signup">
+            <h2 className="signup-tab">Sign Up</h2>
+          </Panel>
+        </div>
 
-      <FormPanel isActive="login">
-        <Login />
-      </FormPanel>
+        <FormPanel isActive="login">
+          <Login />
+        </FormPanel>
 
-      <FormPanel isActive="signup">
-        <SignUp />
-      </FormPanel>
-    </FormWrapper>
-  </div>
-)
+        <FormPanel isActive="signup">
+          <SignUp />
+        </FormPanel>
+      </FormWrapper>
+    </div>
+  )
+}
 
 export default Form

@@ -38,9 +38,8 @@ const Game = {
       if (newState.winner === EMPTY) {
         const aiPlay = AI.bestPlay(newState)
 
-        if (aiPlay.col !== -1 && aiPlay.row !== -1) {
+        if (aiPlay.col !== -1 && aiPlay.row !== -1)
           newState = SM.nextState(newState, aiPlay)
-        }
       }
 
       SM.storeState(newState)

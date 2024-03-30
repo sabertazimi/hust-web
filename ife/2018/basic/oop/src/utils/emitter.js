@@ -13,9 +13,8 @@ export default class Emitter {
    */
   on(channel, receiver) {
     // create new channel
-    if (!this.channels[channel]) {
+    if (!this.channels[channel])
       this.channels[channel] = []
-    }
 
     this.channels[channel].push(receiver)
     return this.channels[channel].indexOf(receiver)
@@ -26,9 +25,8 @@ export default class Emitter {
   }
 
   emit(channel, message) {
-    if (!this.channels[channel]) {
+    if (!this.channels[channel])
       return
-    }
 
     this.channels[channel].forEach(receiver => receiver(message))
   }

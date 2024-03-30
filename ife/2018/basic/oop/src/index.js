@@ -4,7 +4,7 @@ import { sleep } from './utils'
 
 import './index.css'
 
-const app = () => {
+function app() {
   const ifeRestaurant = new Restaurant({
     cash: 0,
     seats: 1,

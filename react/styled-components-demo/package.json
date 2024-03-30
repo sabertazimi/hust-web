@@ -1,19 +1,13 @@
 {
   "name": "styled-components-demo",
   "version": "2.7.0",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.0.1",
-    "react-is": "^18.2.0",
-    "styled-components": "^6.1.8"
-  },
+  "homepage": "https://sabertazimi.github.io/hust-web/react/styled-components-demo",
   "scripts": {
     "build": "react-scripts build && pnpm build:post",
     "build:post": "mkdir -p ../../build/react/styled-components-demo && mv ./build/* ../../build/react/styled-components-demo",
     "build:profile": "react-scripts build --profile",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
     "start": "react-scripts start",
     "start:https": "HTTPS=true react-scripts start",
     "test": "react-scripts test",
@@ -21,12 +15,26 @@
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "test:node": "react-scripts test --env=node"
   },
-  "eslintConfig": {
-    "extends": [
-      "bod",
-      "bod/jest",
-      "plugin:prettier/recommended"
-    ]
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-is": "^18.2.0",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {
+    "@sabertazimi/react-scripts": "^5.17.0",
+    "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.2",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
+    "@types/react-is": "^18.2.4",
+    "@types/styled-components": "^5.1.34",
+    "typescript": "^5.4.3"
   },
   "stylelint": {
     "extends": [
@@ -58,20 +66,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@sabertazimi/react-scripts": "^5.14.3",
-    "@testing-library/dom": "^9.3.4",
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.2",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.2",
-    "@types/react": "^18.2.73",
-    "@types/react-dom": "^18.2.23",
-    "@types/react-is": "^18.2.4",
-    "@types/styled-components": "^5.1.34",
-    "typescript": "^5.4.3"
-  },
-  "homepage": "https://sabertazimi.github.io/hust-web/react/styled-components-demo"
+  }
 }

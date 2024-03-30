@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
 import { createDOMElement, updateDOMProperties } from './dom-utils.js'
 import { createInstance } from './component.js'
 
@@ -19,42 +18,36 @@ const updateQueue = []
 let nextUnitOfWork = null
 let pendingCommit = null
 
-const performWork = deadline => {
+function performWork(deadline) {
   workloop(deadline)
 
   // checks if there's pending work
-  if (nextUnitOfWork || updateQueue.length > 0) {
+  if (nextUnitOfWork || updateQueue.length > 0)
     requestIdleCallback(performWork)
-  }
 }
 
-const workloop = deadline => {
-  if (!nextUnitOfWork) {
+function workloop(deadline) {
+  if (!nextUnitOfWork)
     resetNextUnitOfWork()
-  }
 
-  while (nextUnitOfWork && deadline.timeRemaining() > ENOUGH_TIME) {
+  while (nextUnitOfWork && deadline.timeRemaining() > ENOUGH_TIME)
     nextUnitOfWork = performUnitOfWork(nextUnitOfWork)
-  }
 
-  if (pendingCommit) {
+  if (pendingCommit)
     commitAllWork(pendingCommit)
-  }
 }
 
-const resetNextUnitOfWork = () => {
+function resetNextUnitOfWork() {
   const update = updateQueue.shift()
 
-  if (!update) {
+  if (!update)
     return
-  }
 
-  if (update.partialState) {
+  if (update.partialState)
     update.instance.__fiber.partialState = update.partialState
-  }
 
-  const root =
-    update.from === HOST_ROOT
+  const root
+    = update.from === HOST_ROOT
       ? update.dom._rootContainerFiber
       : getRoot(update.instance.__fiber)
 
@@ -66,17 +59,16 @@ const resetNextUnitOfWork = () => {
   }
 }
 
-const getRoot = fiber => {
+function getRoot(fiber) {
   let node = fiber
 
-  while (node.parent) {
+  while (node.parent)
     node = node.parent
-  }
 
   return node
 }
 
-const performUnitOfWork = wipFiber => {
+function performUnitOfWork(wipFiber) {
   // pre-order traverse
   beginWork(wipFiber)
 
@@ -91,35 +83,32 @@ const performUnitOfWork = wipFiber => {
     // no child, return sibling to nextUnitOfWork (current branch ended)
     completeWork(uow)
 
-    if (uow.sibling) {
+    if (uow.sibling)
       return uow.sibling
-    }
 
     uow = uow.parent
   }
 }
 
-const beginWork = wipFiber => {
+function beginWork(wipFiber) {
   // create the stateNode if we don’t have one
   // get the component children and pass them to reconcileChildrenArray()
-  if (wipFiber.tag === CLASS_COMPONENT) {
+  if (wipFiber.tag === CLASS_COMPONENT)
     updateClassComponent(wipFiber)
-  } else {
+  else
     updateHostComponent(wipFiber)
-  }
 }
 
-const updateHostComponent = wipFiber => {
-  if (!wipFiber.stateNode) {
+function updateHostComponent(wipFiber) {
+  if (!wipFiber.stateNode)
     wipFiber.stateNode = createDOMElement(wipFiber)
-  }
 
   // reconcile
   const newChildElements = wipFiber.props.children
   reconcileChildrenArray(wipFiber, newChildElements)
 }
 
-const updateClassComponent = wipFiber => {
+function updateClassComponent(wipFiber) {
   let instance = wipFiber.stateNode
 
   if (instance == null) {
@@ -143,12 +132,11 @@ const updateClassComponent = wipFiber => {
   reconcileChildrenArray(wipFiber, newChildElements)
 }
 
-const cloneChildFibers = parentFiber => {
+function cloneChildFibers(parentFiber) {
   const oldFiber = parentFiber.alternate
 
-  if (!oldFiber.child) {
+  if (!oldFiber.child)
     return
-  }
 
   let oldChild = oldFiber.child
   let prevChild = null
@@ -164,20 +152,19 @@ const cloneChildFibers = parentFiber => {
       parent: parentFiber,
     }
 
-    if (prevChild) {
+    if (prevChild)
       prevChild.sibling = newChild
-    } else {
+    else
       parentFiber.child = newChild
-    }
 
     prevChild = newChild
     oldChild = oldChild.sibling
   }
 }
 
-const reconcileChildrenArray = (wipFiber, newChildElements) => {
-  const elements =
-    newChildElements == null
+function reconcileChildrenArray(wipFiber, newChildElements) {
+  const elements
+    = newChildElements == null
       ? []
       : Array.isArray(newChildElements)
         ? newChildElements
@@ -222,24 +209,21 @@ const reconcileChildrenArray = (wipFiber, newChildElements) => {
       wipFiber.effects.push(oldFiber)
     }
 
-    if (oldFiber) {
+    if (oldFiber)
       oldFiber = oldFiber.sibling
-    }
 
-    if (index === 0) {
+    if (index === 0)
       wipFiber.child = newFiber
-    } else if (prevFiber && element) {
+    else if (prevFiber && element)
       prevFiber.sibling = newFiber
-    }
 
     ++index
   }
 }
 
-const completeWork = fiber => {
-  if (fiber.tag === CLASS_COMPONENT) {
+function completeWork(fiber) {
+  if (fiber.tag === CLASS_COMPONENT)
     fiber.stateNode.__fiber = fiber
-  }
 
   if (fiber.parent) {
     const childEffects = fiber.effects || []
@@ -251,8 +235,8 @@ const completeWork = fiber => {
   }
 }
 
-const commitAllWork = fiber => {
-  fiber.effects.forEach(f => {
+function commitAllWork(fiber) {
+  fiber.effects.forEach((f) => {
     commitWork(f)
   })
 
@@ -261,29 +245,26 @@ const commitAllWork = fiber => {
   pendingCommit = null
 }
 
-const commitWork = fiber => {
-  if (fiber.tag === HOST_ROOT) {
+function commitWork(fiber) {
+  if (fiber.tag === HOST_ROOT)
     return
-  }
 
   let domParentFiber = fiber.parent
 
-  while (domParentFiber.tag === CLASS_COMPONENT) {
+  while (domParentFiber.tag === CLASS_COMPONENT)
     domParentFiber = domParentFiber.parent
-  }
 
   const domParent = domParentFiber.stateNode
 
-  if (fiber.effectTag === PLACEMENT && fiber.tag === HOST_COMPONENT) {
+  if (fiber.effectTag === PLACEMENT && fiber.tag === HOST_COMPONENT)
     domParent.appendChild(fiber.stateNode)
-  } else if (fiber.effectTag === UPDATE && fiber.tag === HOST_COMPONENT) {
+  else if (fiber.effectTag === UPDATE && fiber.tag === HOST_COMPONENT)
     updateDOMProperties(fiber.stateNode, fiber.alternate.props, fiber.props)
-  } else if (fiber.effectTag === DELETION) {
+  else if (fiber.effectTag === DELETION)
     commitDeletion(fiber, domParent)
-  }
 }
 
-const commitDeletion = (fiber, domParent) => {
+function commitDeletion(fiber, domParent) {
   let node = fiber
 
   // pre-order traverse
@@ -295,19 +276,17 @@ const commitDeletion = (fiber, domParent) => {
 
     domParent.removeChild(node.stateNode)
 
-    while (node !== fiber && !node.sibling) {
+    while (node !== fiber && !node.sibling)
       node = node.parent
-    }
 
-    if (node === fiber) {
+    if (node === fiber)
       return
-    }
 
     node = node.sibling
   }
 }
 
-const scheduleUpdate = (instance, partialState) => {
+function scheduleUpdate(instance, partialState) {
   updateQueue.push({
     from: CLASS_COMPONENT,
     instance,
@@ -317,7 +296,7 @@ const scheduleUpdate = (instance, partialState) => {
   requestIdleCallback(performWork)
 }
 
-const render = (elements, container) => {
+function render(elements, container) {
   updateQueue.push({
     from: HOST_ROOT,
     dom: container,

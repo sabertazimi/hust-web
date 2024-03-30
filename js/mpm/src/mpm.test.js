@@ -1,8 +1,9 @@
+const { Buffer } = require('node:buffer')
 const path = require('node:path')
 const mpm = require('./mpm.js')
 
 describe('mpm.getPinnedReference', () => {
-  test('~version', async () => {
+  it('~version', async () => {
     const { name, reference } = await mpm.getPinnedReference({
       name: 'react',
       reference: '~15.3.0',
@@ -12,7 +13,7 @@ describe('mpm.getPinnedReference', () => {
     expect(reference).toBe('15.3.2')
   })
 
-  test('version', async () => {
+  it('version', async () => {
     const { name, reference } = await mpm.getPinnedReference({
       name: 'react',
       reference: '15.3.0',
@@ -22,7 +23,7 @@ describe('mpm.getPinnedReference', () => {
     expect(reference).toBe('15.3.0')
   })
 
-  test('not version', async () => {
+  it('not version', async () => {
     const { name, reference } = await mpm.getPinnedReference({
       name: 'react',
       reference: '/tmp/react-15.3.2.tar.gz',
@@ -32,31 +33,31 @@ describe('mpm.getPinnedReference', () => {
     expect(reference).toBe('/tmp/react-15.3.2.tar.gz')
   })
 
-  test('not found package', async () => {
+  it('not found package', async () => {
     await expect(
       mpm.getPinnedReference({
         name: 'reacttt',
         reference: '~15.3.0',
-      })
+      }),
     ).rejects.toThrowError(new Error('Couldn\'t fetch package "reacttt"'))
   })
 
-  test('not found version', async () => {
+  it('not found version', async () => {
     await expect(
       mpm.getPinnedReference({
         name: 'react',
         reference: '~99.0.0',
-      })
+      }),
     ).rejects.toThrowError(
       new Error(
-        'Couldn\'t find a version matching "~99.0.0" for package  "react"'
-      )
+        'Couldn\'t find a version matching "~99.0.0" for package  "react"',
+      ),
     )
   })
 })
 
 describe('mpm.fetchPackage', () => {
-  test('react-16.4.0', async () => {
+  it('react-16.4.0', async () => {
     const buffer = await mpm.fetchPackage({
       name: 'react',
       reference: '16.4.0',
@@ -66,7 +67,7 @@ describe('mpm.fetchPackage', () => {
     expect(buffer.length).toBeGreaterThan(255)
   })
 
-  test('local file', async () => {
+  it('local file', async () => {
     const buffer = await mpm.fetchPackage({
       name: 'mpm',
       reference: './src/mpm.js',
@@ -76,18 +77,18 @@ describe('mpm.fetchPackage', () => {
     expect(buffer.length).toBeGreaterThan(255)
   })
 
-  test('not found package', async () => {
+  it('not found package', async () => {
     await expect(
       mpm.fetchPackage({
         name: 'react',
         reference: '99.0.0',
-      })
+      }),
     ).rejects.toThrow()
   })
 })
 
 describe('mpm.getPackageDependencies', () => {
-  test('react-16.4.0', async () => {
+  it('react-16.4.0', async () => {
     const { dependencies, devDependencies } = await mpm.getPackageDependencies({
       name: 'react',
       reference: '16.4.0',
@@ -99,7 +100,7 @@ describe('mpm.getPackageDependencies', () => {
     expect(devDependencies.length).toBe(0)
   })
 
-  test('semver-5.5.0', async () => {
+  it('semver-5.5.0', async () => {
     const { dependencies, devDependencies } = await mpm.getPackageDependencies({
       name: 'semver',
       reference: '5.5.0',
@@ -121,7 +122,7 @@ describe('mpm.getPackageDependencyTree', () => {
     jest.setTimeout(5000)
   })
 
-  test('mpm-0.1.0', async () => {
+  it('mpm-0.1.0', async () => {
     const packageDependencies = [
       {
         name: 'semver',
@@ -129,8 +130,8 @@ describe('mpm.getPackageDependencyTree', () => {
       },
     ]
 
-    const { name, reference, dependencies } =
-      await mpm.getPackageDependencyTree({
+    const { name, reference, dependencies }
+      = await mpm.getPackageDependencyTree({
         name: 'mpm',
         reference: null,
         dependencies: packageDependencies,
@@ -142,7 +143,7 @@ describe('mpm.getPackageDependencyTree', () => {
     expect(dependencies.length).toBe(1)
   })
 
-  test('should skip available package (exact match)', async () => {
+  it('should skip available package (exact match)', async () => {
     const packageDependencies = [
       {
         name: 'semver',
@@ -151,14 +152,14 @@ describe('mpm.getPackageDependencyTree', () => {
     ]
     const available = new Map([['semver', '5.5.0']])
 
-    const { name, reference, dependencies } =
-      await mpm.getPackageDependencyTree(
+    const { name, reference, dependencies }
+      = await mpm.getPackageDependencyTree(
         {
           name: 'mpm',
           reference: null,
           dependencies: packageDependencies,
         },
-        available
+        available,
       )
 
     expect(name).toBe('mpm')
@@ -167,7 +168,7 @@ describe('mpm.getPackageDependencyTree', () => {
     expect(dependencies.length).toBe(0)
   })
 
-  test('should skip available package (semver match)', async () => {
+  it('should skip available package (semver match)', async () => {
     const packageDependencies = [
       {
         name: 'semver',
@@ -176,14 +177,14 @@ describe('mpm.getPackageDependencyTree', () => {
     ]
     const available = new Map([['semver', '5.6.0']])
 
-    const { name, reference, dependencies } =
-      await mpm.getPackageDependencyTree(
+    const { name, reference, dependencies }
+      = await mpm.getPackageDependencyTree(
         {
           name: 'mpm',
           reference: null,
           dependencies: packageDependencies,
         },
-        available
+        available,
       )
 
     expect(name).toBe('mpm')
@@ -202,7 +203,7 @@ describe('mpm.linkPackages', () => {
     jest.setTimeout(5000)
   })
 
-  test('mpm-0.1.0', async () => {
+  it('mpm-0.1.0', async () => {
     const packageDependencies = [
       {
         name: 'semver',
@@ -217,8 +218,8 @@ describe('mpm.linkPackages', () => {
           reference: null,
           dependencies: packageDependencies,
         },
-        path.join(__dirname)
-      )
+        path.join(__dirname),
+      ),
     ).resolves.toBeUndefined()
   })
 })

@@ -13,9 +13,6 @@ class AI {
     this.config.mode = mode || AIMode.EASY
   }
 
-  /**
-   * @param {matrix} board
-   */
   bestPlay(currentState) {
     switch (this.config.mode) {
       case AIMode.EASY:

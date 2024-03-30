@@ -26,7 +26,7 @@ export default class Restaurant {
     return this.staffs.filter(
       staff =>
         // staff.getType() === type && staff.isFree()
-        staff.getType() === type
+        staff.getType() === type,
     )
   }
 
@@ -52,7 +52,7 @@ export default class Restaurant {
             $log(
               `customer '${customer.name}' ordered (${order
                 .map(food => food.name)
-                .join(', ')}) !`
+                .join(', ')}) !`,
             )
             return cook.work(order, _waiter)
           })
@@ -60,14 +60,14 @@ export default class Restaurant {
             const eatenOrder = order.filter(food => !leftOrder.includes(food))
             const sales = eatenOrder.reduce(
               (sale, food) => sale + food.price,
-              0
+              0,
             )
             this.cash += sales
 
             $log(
               `customer '${customer.name}' eaten (${eatenOrder
                 .map(food => food.name)
-                .join(', ')}) !`
+                .join(', ')}) !`,
             )
             $log(`customer '${customer.name}' paid $${sales} !`)
             $log(`restaurant cash is $${this.cash} !`)

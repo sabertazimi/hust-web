@@ -2,6 +2,20 @@
   "name": "medux",
   "version": "2.7.0",
   "description": "Minimal redux-like library",
+  "author": "sabertazimi",
+  "license": "MIT",
+  "homepage": "https://github.com/sabertazimi/medux",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabertazimi/medux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabertazimi/medux/issues"
+  },
+  "keywords": [
+    "redux",
+    "react"
+  ],
   "main": "index.js",
   "engines": {
     "node": ">=9"
@@ -10,24 +24,14 @@
     "build": "webpack --mode production && pnpm build:post",
     "build:post": "mkdir -p ../../build/react/medux && mv ./build/* ../../build/react/medux",
     "dev": "webpack serve --port 2333 --mode development --open",
-    "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
+    "lint": "stylelint ./src/**/*.{css,scss} && eslint ./src",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint ./src --fix",
     "start": "pnpm dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sabertazimi/medux.git"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "keywords": [
-    "redux",
-    "react"
-  ],
-  "author": "sabertazimi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sabertazimi/medux/issues"
-  },
-  "homepage": "https://github.com/sabertazimi/medux",
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/plugin-transform-class-properties": "^7.24.1",
@@ -48,9 +52,5 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }

@@ -23,17 +23,15 @@ class Node {
   childNode(play) {
     const child = this.children.get(Hash.play(play))
 
-    if (child === undefined) {
+    if (child === undefined)
       throw new Error('No such play!')
-    }
 
     return child.node
   }
 
   expand(play, childState, unexpandedPlays) {
-    if (!this.children.has(Hash.play(play))) {
+    if (!this.children.has(Hash.play(play)))
       throw new Error('No such play!')
-    }
 
     const childNode = new Node(this, play, childState, unexpandedPlays)
     this.children.set(Hash.play(play), { play, node: childNode })
@@ -52,10 +50,9 @@ class Node {
   unexpandedPlays() {
     const ret = []
 
-    this.children.forEach(child => {
-      if (child.node === null) {
+    this.children.forEach((child) => {
+      if (child.node === null)
         ret.push(child.play)
-      }
     })
 
     return ret
@@ -63,18 +60,16 @@ class Node {
 
   isFullyExpanded() {
     for (const child of this.children.values()) {
-      if (child.node === null) {
+      if (child.node === null)
         return false
-      }
     }
 
     return true
   }
 
   isLeaf() {
-    if (this.children.size === 0) {
+    if (this.children.size === 0)
       return true
-    }
 
     return false
   }
@@ -82,7 +77,7 @@ class Node {
   getUCB1(biasParam) {
     const exploitTerm = this.nWins / this.nPlays
     const exploreTerm = Math.sqrt(
-      (biasParam * Math.log(this.parent.nPlays)) / this.nPlays
+      (biasParam * Math.log(this.parent.nPlays)) / this.nPlays,
     )
     return exploitTerm + exploreTerm
   }

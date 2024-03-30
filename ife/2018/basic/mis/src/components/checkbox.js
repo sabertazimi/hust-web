@@ -5,7 +5,7 @@ import store from '../state/store'
 
 const { dispatch } = store
 
-const generateCheckBoxes = schema => {
+function generateCheckBoxes(schema) {
   const { label, data } = schema
 
   const labelHTML = `${label}: `
@@ -18,7 +18,7 @@ const generateCheckBoxes = schema => {
       ({ value, text }) => `
     <input type="checkbox" id="${label}-${value}" name="${label}" value="${value}" checked>
     <label for="${label}-${value}">${text}</label>
-  `
+  `,
     )
     .join('')
 
@@ -29,15 +29,15 @@ const generateCheckBoxes = schema => {
   `
 }
 
-const handleCheckBoxes = ($container, field, event) => {
+function handleCheckBoxes($container, field, event) {
   const [allCheckBox, ...checkBoxes] = Array.from(
-    $container.querySelectorAll('input[type="checkbox"]')
+    $container.querySelectorAll('input[type="checkbox"]'),
   )
 
   if (event.target.value.includes('all')) {
     const { checked } = allCheckBox
 
-    checkBoxes.forEach(checkbox => {
+    checkBoxes.forEach((checkbox) => {
       checkbox.checked = checked
     })
 
@@ -45,10 +45,9 @@ const handleCheckBoxes = ($container, field, event) => {
   } else {
     const filter = []
 
-    checkBoxes.forEach(checkbox => {
-      if (checkbox.checked) {
+    checkBoxes.forEach((checkbox) => {
+      if (checkbox.checked)
         filter.push(checkbox.value)
-      }
     })
 
     allCheckBox.checked = checkBoxes.every(checkBox => checkBox.checked)
@@ -57,11 +56,10 @@ const handleCheckBoxes = ($container, field, event) => {
   }
 }
 
-const renderCheckBoxes = ($container, field, schema) => {
+function renderCheckBoxes($container, field, schema) {
   $container.innerHTML = generateCheckBoxes(schema)
   $container.addEventListener('change', event =>
-    handleCheckBoxes($container, field, event)
-  )
+    handleCheckBoxes($container, field, event))
 }
 
 export default renderCheckBoxes

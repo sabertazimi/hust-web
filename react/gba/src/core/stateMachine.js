@@ -9,11 +9,10 @@ const StateMachine = {
     const board = []
 
     for (let i = 0; i < ROWS; i += 1) {
-      board[i] = new Array(COLS)
+      board[i] = Array.from({ length: COLS })
 
-      for (let j = 0; j < COLS; j += 1) {
+      for (let j = 0; j < COLS; j += 1)
         board[i][j] = EMPTY
-      }
     }
 
     const state = {
@@ -29,9 +28,8 @@ const StateMachine = {
   loadState() {
     const state = localStorage.getItem('gobang-state')
 
-    if (state) {
+    if (state)
       return JSON.parse(state)
-    }
 
     return this.getInitState()
   },
@@ -61,9 +59,8 @@ const StateMachine = {
 
     for (let i = 1; i < ROWS; i += 1) {
       for (let j = 1; j < COLS; j += 1) {
-        if (board[i][j] === EMPTY) {
+        if (board[i][j] === EMPTY)
           return false
-        }
       }
     }
 
@@ -81,9 +78,8 @@ const StateMachine = {
             col: j,
           })
 
-          if (winner !== EMPTY) {
+          if (winner !== EMPTY)
             return winner
-          }
         }
       }
     }
@@ -129,23 +125,20 @@ const StateMachine = {
           axisFlag = 0
           axisCount = 0
           return count >= 4
-        }
+        },
       )
-    ) {
+    )
       return state.player
-    }
 
     return EMPTY
   },
 
   checkWinner(state, play) {
-    if (this.isDeadGame(state)) {
+    if (this.isDeadGame(state))
       return DEATH
-    }
 
-    if (!play) {
+    if (!play)
       return this.checkWinnerWithoutPlay(state)
-    }
 
     return this.checkWinnerWithPlay(state, play)
   },

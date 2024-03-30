@@ -2,27 +2,23 @@
   "name": "switch",
   "version": "2.7.0",
   "homepage": "https://sabertazimi.github.io/hust-web/react/switch",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "react-scripts build && pnpm build:post",
+    "build:post": "mkdir -p ../../build/react/switch && mv ./build/* ../../build/react/switch",
+    "lint": "stylelint ./src/**/*.{css,scss} && eslint ./src",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint ./src --fix",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@sabertazimi/react-scripts": "^5.14.3"
-  },
-  "scripts": {
-    "build": "react-scripts build && pnpm build:post",
-    "build:post": "mkdir -p ../../build/react/switch && mv ./build/* ../../build/react/switch",
-    "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
-    "start": "react-scripts start",
-    "test": "react-scripts test"
-  },
-  "eslintConfig": {
-    "extends": [
-      "bod",
-      "bod/jest",
-      "plugin:prettier/recommended"
-    ]
+    "@sabertazimi/react-scripts": "^5.17.0"
   },
   "stylelint": {
     "extends": [
@@ -54,8 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engines": {
-    "node": ">=14.0.0"
   }
 }

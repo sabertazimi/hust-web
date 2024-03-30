@@ -3,15 +3,15 @@
   "version": "2.7.0",
   "description": "React Collection",
   "author": "sabertazimi <sabertazimi@gmail.com>",
-  "homepage": "https://github.com/sabertazimi/hust-web",
   "license": "MIT",
+  "homepage": "https://github.com/sabertazimi/hust-web",
   "repository": {
     "type": "git",
     "url": "https://github.com/sabertazimi/hust-web"
   },
   "scripts": {
     "build": "mkdir -p ../build/react && cp -fr index.html index.css mooks ../build/react",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./mooks",
-    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./mooks --fix"
+    "lint": "eslint ./mooks",
+    "lint:fix": "eslint ./mooks --fix"
   }
 }

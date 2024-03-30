@@ -1,3 +1,4 @@
+const { Buffer } = require('node:buffer')
 const gunzipMaybe = require('gunzip-maybe')
 const tar = require('tar-stream')
 const tarFs = require('tar-fs')
@@ -9,9 +10,8 @@ function getFileName(entryName, virtualPath) {
   for (let i = 0; i < virtualPath; ++i) {
     const index = entryName.indexOf('/')
 
-    if (index === -1) {
+    if (index === -1)
       return null
-    }
 
     entryName = entryName.substr(index + 1)
   }
@@ -20,7 +20,8 @@ function getFileName(entryName, virtualPath) {
 }
 
 /**
- * @param  {Buffer} buffer archive buffer
+ * Read archive file.
+ * @params {Buffer} buffer archive buffer
  */
 async function readFileFromArchive(fileName, buffer) {
   return new Promise((resolve /* , rejects */) => {
@@ -53,7 +54,7 @@ async function readPackageJsonFromArchive(packageBuffer) {
 
 async function extractArchiveTo(packageBuffer, target, { virtualPath }) {
   return new Promise((resolve /* , rejects */) => {
-    const map = header => {
+    const map = (header) => {
       // header.name = getFileName(header.name, virtualPath) || header.name;
       header.name = getFileName(header.name, virtualPath)
       return header
