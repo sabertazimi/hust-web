@@ -1,6 +1,6 @@
 const TEXT_ELEMENT_TYPE = 'text element'
 
-const createElement = (type, config, ...args) => {
+function createElement(type, config, ...args) {
   const props = {
     ...config,
   }
@@ -14,8 +14,8 @@ const createElement = (type, config, ...args) => {
       c instanceof Object
         ? c
         : createElement(TEXT_ELEMENT_TYPE, {
-            nodeValue: c,
-          })
+          nodeValue: c,
+        }),
     )
 
   return {

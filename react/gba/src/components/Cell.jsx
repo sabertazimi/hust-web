@@ -5,7 +5,7 @@ import { BLACK, CELL_SIZE, WHITE } from '../constants'
 
 import './Cell.scss'
 
-const Cell = props => {
+function Cell(props) {
   const { row, col, val } = props
 
   const styles = {

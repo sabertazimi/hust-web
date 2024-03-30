@@ -3,6 +3,10 @@ import HeaderContainer from './HeaderContainer'
 import HeaderImage from './HeaderImage'
 import HeaderNav from './HeaderNav'
 
+/**
+ * Renders the header component.
+ * @returns {JSX.Element} The header component.
+ */
 export default function Header() {
   return (
     <HeaderContainer>

@@ -5,7 +5,7 @@ import { CELL_SIZE } from '../constants'
 
 import './Grid.scss'
 
-const Grid = ({ rows, cols }) => {
+function Grid({ rows, cols }) {
   const cellNodes = []
 
   for (let i = 0; i < rows - 1; i += 1) {
@@ -21,20 +21,20 @@ const Grid = ({ rows, cols }) => {
         styles.borderRightWidth = 3
         styles.borderBottomWidth = 3
       } else if (
-        i === Math.floor(rows / 2 - 1) &&
-        j === Math.floor(cols / 2 - 1) + 1
+        i === Math.floor(rows / 2 - 1)
+        && j === Math.floor(cols / 2 - 1) + 1
       ) {
         styles.borderLeftWidth = 3
         styles.borderBottomWidth = 3
       } else if (
-        i === Math.floor(rows / 2 - 1) + 1 &&
-        j === Math.floor(cols / 2 - 1)
+        i === Math.floor(rows / 2 - 1) + 1
+        && j === Math.floor(cols / 2 - 1)
       ) {
         styles.borderRightWidth = 3
         styles.borderTopWidth = 3
       } else if (
-        i === Math.floor(rows / 2 - 1) + 1 &&
-        j === Math.floor(cols / 2 - 1) + 1
+        i === Math.floor(rows / 2 - 1) + 1
+        && j === Math.floor(cols / 2 - 1) + 1
       ) {
         styles.borderLeftWidth = 3
         styles.borderTopWidth = 3

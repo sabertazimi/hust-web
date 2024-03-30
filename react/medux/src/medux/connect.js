@@ -1,15 +1,14 @@
 import React from 'react'
 
-export const Provider = ({ store, children }) => {
+export function Provider({ store, children }) {
   const StoreContext = React.createContext(store)
 
   return (
     <StoreContext.Provider value={store}>
       <StoreContext.Consumer>
         {(store) => {
-          const childrenWithStore = React.Children.map(children, (child) =>
-            React.cloneElement(child, { store })
-          )
+          const childrenWithStore = React.Children.map(children, child =>
+            React.cloneElement(child, { store }))
 
           return <div>{childrenWithStore}</div>
         }}
@@ -18,9 +17,8 @@ export const Provider = ({ store, children }) => {
   )
 }
 
-export const connect =
-  (mapStateToProps = () => ({}), mapDispatchToProps = () => ({})) =>
-  (Component) => {
+export function connect(mapStateToProps = () => ({}), mapDispatchToProps = () => ({})) {
+  return (Component) => {
     class Connected extends React.Component {
       onStoreOrPropsChange(props) {
         const { store } = this.props
@@ -37,7 +35,7 @@ export const connect =
         const { store } = this.props
         this.onStoreOrPropsChange(this.props)
         this.unsubscribe = store.subscribe(() =>
-          this.onStoreOrPropsChange(this.props)
+          this.onStoreOrPropsChange(this.props),
         )
       }
 
@@ -56,3 +54,4 @@ export const connect =
 
     return Connected
   }
+}

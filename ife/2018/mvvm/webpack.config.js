@@ -1,12 +1,13 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const SanLoaderPlugin = require('san-loader/lib/plugin');
+const path = require('node:path')
+const process = require('node:process')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const SanLoaderPlugin = require('san-loader/lib/plugin')
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV !== 'production'
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
@@ -53,7 +54,11 @@ module.exports = {
       filename: devMode ? '[name].css' : '[name].[contenthash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
     }),
-    new ESLintPlugin({ extensions: ['js'] }),
+    new ESLintPlugin({
+      extensions: ['js'],
+      configType: 'flat',
+      eslintPath: 'eslint/use-at-your-own-risk',
+    }),
     new StyleLintPlugin(),
     new SanLoaderPlugin(),
   ],
@@ -61,4 +66,4 @@ module.exports = {
     extensions: ['.js', '.san'],
   },
   devtool: devMode ? 'eval-cheap-module-source-map' : false,
-};
+}

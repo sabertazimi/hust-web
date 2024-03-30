@@ -14,11 +14,10 @@ const SBTS = {
     const scoreBoard = []
 
     for (let i = 0; i < ROWS; i += 1) {
-      scoreBoard[i] = new Array(COLS)
+      scoreBoard[i] = Array.from({ length: COLS })
 
-      for (let j = 0; j < COLS; j += 1) {
+      for (let j = 0; j < COLS; j += 1)
         scoreBoard[i][j] = 0
-      }
     }
 
     const directions = [
@@ -47,9 +46,8 @@ const SBTS = {
         return true
       }
 
-      if (currentplayer === EMPTY) {
+      if (currentplayer === EMPTY)
         emptyCount += 1
-      }
 
       return false
     }
@@ -67,18 +65,18 @@ const SBTS = {
           scoreBoard[row][col] += Score.Kill2
           break
         case 2:
-          if (emptyCount === 1) {
+          if (emptyCount === 1)
             scoreBoard[row][col] += Score.Kill3_1
-          } else if (emptyCount === 2) {
+          else if (emptyCount === 2)
             scoreBoard[row][col] += Score.Kill3_2
-          }
+
           break
         case 3:
-          if (emptyCount === 1) {
+          if (emptyCount === 1)
             scoreBoard[row][col] += Score.Kill4_1
-          } else if (emptyCount === 2) {
+          else if (emptyCount === 2)
             scoreBoard[row][col] += Score.Kill4_2
-          }
+
           break
         case 4:
           scoreBoard[row][col] += Score.Kill5
@@ -129,18 +127,18 @@ const SBTS = {
           scoreBoard[row][col] += Score.Live2
           break
         case 2:
-          if (emptyCount === 1) {
+          if (emptyCount === 1)
             scoreBoard[row][col] += Score.Dead3
-          } else if (emptyCount === 2) {
+          else if (emptyCount === 2)
             scoreBoard[row][col] += Score.Live3
-          }
+
           break
         case 3:
-          if (emptyCount === 1) {
+          if (emptyCount === 1)
             scoreBoard[row][col] += Score.Dead4
-          } else if (emptyCount === 2) {
+          else if (emptyCount === 2)
             scoreBoard[row][col] += Score.Live4
-          }
+
           break
         case 4:
           scoreBoard[row][col] += Score.Live5
@@ -168,7 +166,7 @@ const SBTS = {
             directions,
             4,
             humanCB1,
-            humanCB2
+            humanCB2,
           )
           BoardVisitor.countOnDirections(
             currentState,
@@ -179,7 +177,7 @@ const SBTS = {
             directions,
             4,
             aiCB1,
-            aiCB2
+            aiCB2,
           )
         }
       }

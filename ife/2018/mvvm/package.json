@@ -2,39 +2,44 @@
   "name": "mvvm",
   "version": "2.7.0",
   "description": "IFE 2018 MVVM Project",
-  "main": "./src/index.js",
-  "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --mode production && pnpm build:post",
-    "build:post": "mkdir -p ../../../build/ife/2018/mvvm && mv ./build/* ../../../build/ife/2018/mvvm",
-    "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
-    "lint": "stylelint ./src/**/*.{css,scss} && eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
-    "start": "pnpm dev"
-  },
+  "author": "sabertazimi",
+  "license": "MIT",
+  "homepage": "https://sabertazimi.github.io/hust-web/ife/2018/mvvm",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sabertazimi/hust-web.git"
   },
-  "engines": {
-    "node": ">=9"
+  "bugs": {
+    "url": "https://github.com/sabertazimi/hust-web/issues"
   },
   "keywords": [
     "mvvm",
     "san",
     "webpack"
   ],
-  "author": "sabertazimi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sabertazimi/hust-web/issues"
+  "main": "./src/index.js",
+  "engines": {
+    "node": ">=9"
   },
-  "homepage": "https://sabertazimi.github.io/hust-web/ife/2018/mvvm",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --mode production && pnpm build:post",
+    "build:post": "mkdir -p ../../../build/ife/2018/mvvm && mv ./build/* ../../../build/ife/2018/mvvm",
+    "dev": "cross-env NODE_ENV=development webpack serve --port 2333 --mode development --open",
+    "lint": "stylelint ./src/**/*.{css,scss} && eslint ./src",
+    "lint:fix": "stylelint ./src/**/*.{css,scss} --fix && eslint ./src --fix",
+    "start": "pnpm dev"
+  },
+  "dependencies": {
+    "async-validator": "^4.2.5",
+    "san": "^3.14.1",
+    "san-router": "^2.0.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/plugin-transform-object-rest-spread": "^7.24.1",
     "@babel/preset-env": "^7.24.3",
-    "@dg-scripts/eslint-config": "^5.16.0",
-    "@dg-scripts/stylelint-config": "^5.16.0",
+    "@dg-scripts/eslint-config": "^5.17.0",
+    "@dg-scripts/stylelint-config": "^5.17.0",
     "autoprefixer": "^10.4.19",
     "babel-loader": "^9.1.3",
     "clean-webpack-plugin": "^4.0.0",
@@ -56,10 +61,5 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
-  },
-  "dependencies": {
-    "async-validator": "^4.2.5",
-    "san": "^3.14.1",
-    "san-router": "^2.0.2"
   }
 }

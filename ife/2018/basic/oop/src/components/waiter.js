@@ -19,7 +19,7 @@ export default class Waiter extends Staff {
       // serve order to customer
       const cookedOrder = arg
 
-      return this.customer.eat(cookedOrder).then(leftOrder => {
+      return this.customer.eat(cookedOrder).then((leftOrder) => {
         this.order = leftOrder
         return [[...this.order], this]
       })
@@ -29,7 +29,7 @@ export default class Waiter extends Staff {
     // command pattern: set receiver
     this.customer = customer
 
-    return this.customer.getOrder(this.getMenu()).then(order => {
+    return this.customer.getOrder(this.getMenu()).then((order) => {
       this.order.push(...order)
       return [[...this.order], this]
     })

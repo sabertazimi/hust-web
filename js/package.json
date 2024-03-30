@@ -3,8 +3,8 @@
   "version": "2.7.0",
   "description": "JavaScript Collection",
   "author": "sabertazimi <sabertazimi@gmail.com>",
-  "homepage": "https://github.com/sabertazimi/hust-web",
   "license": "MIT",
+  "homepage": "https://github.com/sabertazimi/hust-web",
   "repository": {
     "type": "git",
     "url": "https://github.com/sabertazimi/hust-web"

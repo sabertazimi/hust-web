@@ -10,28 +10,20 @@ const BoardVisitor = {
     let count = 0
 
     for (let i = 1; i <= range; i += 1) {
-      if (xdir !== 0 && (col + xdir * i < 0 || col + xdir * i >= COLS)) {
+      if (xdir !== 0 && (col + xdir * i < 0 || col + xdir * i >= COLS))
         break
-      }
 
-      if (ydir !== 0 && (row + ydir * i < 0 || row + ydir * i >= ROWS)) {
+      if (ydir !== 0 && (row + ydir * i < 0 || row + ydir * i >= ROWS))
         break
-      }
 
-      if (cb && cb(currentState, play, xdir, ydir, i, ...args)) {
+      if (cb && cb(currentState, play, xdir, ydir, i, ...args))
         count += 1
-      } else {
+      else
         break
-      }
     }
 
     return count
   },
-  /**
-   * @param {function} cb1 inner callback function (state, play, xdir, ydir, step, ...args)
-   * @param {function} cb2 outer callback function (state, play, xdir, ydir, axisCount, ...args)
-   * @param  {...any} args arguments to cb1 and cb2 function
-   */
   countOnDirections: function countOnDirections(
     currentState,
     play,
@@ -56,12 +48,11 @@ const BoardVisitor = {
         ydir,
         range,
         cb1,
-        ...args
+        ...args,
       )
 
-      if (cb2 && cb2(currentState, play, xdir, ydir, axisCount, ...args)) {
+      if (cb2 && cb2(currentState, play, xdir, ydir, axisCount, ...args))
         count += 1
-      }
     }
 
     return count

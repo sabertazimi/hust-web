@@ -1,24 +1,24 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const packageJson = require('./package.json');
+const path = require('node:path')
+const process = require('node:process')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const packageJson = require('./package.json')
 
-const devMode = process.env.NODE_ENV !== 'production';
-const useSass = !!packageJson.devDependencies['sass'];
+const devMode = process.env.NODE_ENV !== 'production'
+const useSass = !!packageJson.devDependencies.sass
 
 const styleLoader = [
   devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
   'css-loader',
   'postcss-loader',
-];
+]
 
-if (useSass) {
-  styleLoader.push('sass-loader');
-}
+if (useSass)
+  styleLoader.push('sass-loader')
 
 const plugins = [
   new CleanWebpackPlugin(),
@@ -62,15 +62,19 @@ const plugins = [
     chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
   }),
   new StyleLintPlugin(),
-  new ESLintPlugin({ extensions: ['js', 'jsx'] }),
-];
+  new ESLintPlugin({
+    extensions: ['js', 'jsx'],
+    configType: 'flat',
+    eslintPath: 'eslint/use-at-your-own-risk',
+  }),
+]
 
 if (!devMode) {
   plugins.push(
     new CopyWebpackPlugin({
       patterns: [{ from: './src/favicon.ico' }],
-    })
-  );
+    }),
+  )
 }
 
 /** @type {import('webpack').Configuration} */
@@ -152,4 +156,4 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   devtool: devMode ? 'eval-cheap-module-source-map' : false,
-};
+}

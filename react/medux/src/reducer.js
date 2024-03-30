@@ -6,7 +6,7 @@ const initialState = {
   notes: {},
 }
 
-const reducer = (state = initialState, action) => {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case CREATE_NOTE: {
       const id = state.nextNoteId

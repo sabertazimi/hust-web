@@ -20,7 +20,7 @@ export default class Cook extends Staff {
       (promise, food, index, array) =>
         promise.then(() => {
           $log(
-            `cook '${this.name}' is cooking (${food.name}) (${food.time} s) ...`
+            `cook '${this.name}' is cooking (${food.name}) (${food.time} s) ...`,
           )
           return sleep(food.time)
             .then(() => {
@@ -36,7 +36,7 @@ export default class Cook extends Staff {
             })
             .then(([leftOrder]) => [order, leftOrder])
         }),
-      Promise.resolve()
+      Promise.resolve(),
     )
   }
 }

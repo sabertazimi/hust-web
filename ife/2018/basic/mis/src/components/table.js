@@ -2,7 +2,7 @@ import store from '../state/store'
 
 const { getState } = store
 
-const generateHeader = headers => {
+function generateHeader(headers) {
   const headersHTML = headers.map(header => `<th>${header}</th>`).join('')
 
   return `
@@ -12,9 +12,9 @@ const generateHeader = headers => {
   `
 }
 
-const generateRow = ({ product, region, sales }, rowspan = 1) => {
-  const productHTML =
-    rowspan === 0 ? '' : `<td rowspan="${rowspan}">${product}</td>`
+function generateRow({ product, region, sales }, rowspan = 1) {
+  const productHTML
+    = rowspan === 0 ? '' : `<td rowspan="${rowspan}">${product}</td>`
   const regionHTML = `<td>${region}</td>`
   // use `data-row` and `data-column` to locate cells
   // const { currentTarget: { dataset: { row, column }}} = event;
@@ -23,7 +23,7 @@ const generateRow = ({ product, region, sales }, rowspan = 1) => {
       sale =>
         `<td contenteditable class="right">${sale
           .toString(10)
-          .padStart(3)}</td>`
+          .padStart(3)}</td>`,
     )
     .join('')
 
@@ -36,13 +36,16 @@ const generateRow = ({ product, region, sales }, rowspan = 1) => {
   `
 }
 
-const generateTable = data => {
+function generateTable(data) {
   const sortedData = data.sort((a, b) => {
-    if (a.product < b.product) return -1
+    if (a.product < b.product)
+      return -1
 
     if (a.product === b.product) {
-      if (a.region < b.region) return -1
-      if (a.region === b.region) return 0
+      if (a.region < b.region)
+        return -1
+      if (a.region === b.region)
+        return 0
     }
 
     return 1
@@ -54,7 +57,7 @@ const generateTable = data => {
       if (index === 0 || array[index - 1].product !== item.product) {
         const rowspan = array.reduce(
           (acc, cur) => acc + Number(item.product === cur.product),
-          0
+          0,
         )
         return generateRow(item, rowspan)
       }
@@ -69,7 +72,7 @@ const generateTable = data => {
   `
 }
 
-const renderTable = $table => {
+function renderTable($table) {
   $table.innerHTML = generateTable(getState().data)
 }
 

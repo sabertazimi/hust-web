@@ -1,5 +1,5 @@
-const postData = (url, data) =>
-  fetch(url, {
+function postData(url, data) {
+  return fetch(url, {
     body: JSON.stringify(data), // must match 'Content-Type' header
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
     credentials: 'same-origin', // include, same-origin, *omit
@@ -12,5 +12,6 @@ const postData = (url, data) =>
     redirect: 'follow', // manual, *follow, error
     referrer: 'no-referrer', // *client, no-referrer
   }).then(response => response.json())
+}
 
 export default postData

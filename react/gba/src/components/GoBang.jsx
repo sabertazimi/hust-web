@@ -64,16 +64,15 @@ class GoBang extends React.Component {
           <Cell
             key={i * ROWS + j}
             onClick={() => {
-              if (enabled) {
+              if (enabled)
                 this.handleClick(i, j)
-              }
             }}
             row={i}
             col={j}
             rows={ROWS}
             cols={COLS}
             val={board[i][j]}
-          />
+          />,
         )
       }
     }

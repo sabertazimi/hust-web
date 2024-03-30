@@ -40,7 +40,7 @@ class ChatMessage {
   }
 }
 
-class Dashboard extends React.Component {
+class DashboardComponent extends React.Component {
   constructor(props) {
     super(props)
 
@@ -63,10 +63,9 @@ class Dashboard extends React.Component {
       const { messageList } = prevState
       const socket = io(SERVER_URL, { query: { username } })
 
-      friends.forEach(friend => {
-        if (!messageList[friend]) {
+      friends.forEach((friend) => {
+        if (!messageList[friend])
           messageList[friend] = []
-        }
       })
 
       socket.on('connect', () => {
@@ -74,7 +73,7 @@ class Dashboard extends React.Component {
         console.log('Connected to server !')
       })
 
-      socket.on(username, chatMessage => {
+      socket.on(username, (chatMessage) => {
         const prevvState = this.state
         const { from, to, content } = JSON.parse(chatMessage)
         const message = new ChatMessage(from, to, content)
@@ -214,39 +213,43 @@ class Dashboard extends React.Component {
               }}
             >
               <MessageList active>
-                {messageList[currentWindow] ? (
-                  messageList[currentWindow].map(message => (
-                    <Message
-                      key={`${message.content} ${Math.random()}`}
-                      isOwn={message.from !== currentWindow}
-                    >
-                      <MessageText>{message.content}</MessageText>
+                {messageList[currentWindow]
+                  ? (
+                      messageList[currentWindow].map(message => (
+                        <Message
+                          key={`${message.content} ${Math.random()}`}
+                          isOwn={message.from !== currentWindow}
+                        >
+                          <MessageText>{message.content}</MessageText>
+                        </Message>
+                      ))
+                    )
+                  : (
+                    <Message authorName="Welcome">
+                      <MessageText>Welcome to Chat System !</MessageText>
                     </Message>
-                  ))
-                ) : (
-                  <Message authorName="Welcome">
-                    <MessageText>Welcome to Chat System !</MessageText>
-                  </Message>
-                )}
+                    )}
               </MessageList>
             </div>
             <div>
-              {messageList[currentWindow] ? (
-                <TextComposer
-                  onChange={this.handleType}
-                  onSend={this.handleSend}
-                >
-                  <Row align="center">
-                    <TextInput
-                      placeholder="Write something to send ..."
-                      fill="true"
-                    />
-                    <SendButton fit="true" />
-                  </Row>
-                </TextComposer>
-              ) : (
-                <br />
-              )}
+              {messageList[currentWindow]
+                ? (
+                  <TextComposer
+                    onChange={this.handleType}
+                    onSend={this.handleSend}
+                  >
+                    <Row align="center">
+                      <TextInput
+                        placeholder="Write something to send ..."
+                        fill="true"
+                      />
+                      <SendButton fit="true" />
+                    </Row>
+                  </TextComposer>
+                  )
+                : (
+                  <br />
+                  )}
             </div>
           </div>
         </div>
@@ -255,8 +258,8 @@ class Dashboard extends React.Component {
   }
 }
 
-export default withRouter(
-  connect(state => {
+const Dashboard = withRouter(
+  connect((state) => {
     const { username, email, friends } = state
 
     return {
@@ -264,5 +267,7 @@ export default withRouter(
       email,
       friends,
     }
-  })(Dashboard)
+  })(DashboardComponent),
 )
+
+export default Dashboard

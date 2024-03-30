@@ -1,40 +1,41 @@
 {
   "name": "mpmjs",
   "version": "2.7.0",
+  "packageManager": "pnpm@8.15.5",
   "description": "Minimal package manager",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
-    "start": "node src/index.js",
-    "test": "jest --config ./jest.config.js",
-    "test:watch": "jest --watch"
-  },
+  "author": "sabertazimi",
+  "license": "MIT",
+  "homepage": "https://github.com/sabertazimi/mpm#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sabertazimi/mpm.git"
   },
-  "engines": {
-    "node": ">=14.0.0"
+  "bugs": {
+    "url": "https://github.com/sabertazimi/mpm/issues"
   },
   "keywords": [
     "npm",
     "pnpm",
     "package manager"
   ],
-  "author": "sabertazimi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sabertazimi/mpm/issues"
-  },
-  "homepage": "https://github.com/sabertazimi/mpm#readme",
+  "main": "index.js",
   "bin": {
     "mpm": "./src/index.js"
   },
   "files": [
-    "src/**/*.js",
-    "!src/**/*.test.js"
+    "!src/**/*.test.js",
+    "src/**/*.js"
   ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "start": "node src/index.js",
+    "test": "jest --config ./jest.config.js",
+    "test:watch": "jest --watch"
+  },
   "jest": {
     "collectCoverageFrom": [
       "src/*.{js}",
@@ -42,7 +43,6 @@
       "!**/utils.js"
     ]
   },
-  "packageManager": "pnpm@8.15.5",
   "dependencies": {
     "commander": "^12.0.0",
     "fs-extra": "^11.2.0",
@@ -55,7 +55,7 @@
     "tar-stream": "^3.1.7"
   },
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.16.0",
+    "@dg-scripts/eslint-config": "^5.17.0",
     "eslint": "^8.57.0",
     "jest": "^29.7.0",
     "prettier": "^3.2.5",

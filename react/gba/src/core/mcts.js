@@ -31,7 +31,7 @@ class MCTS {
     while (node.isFullyExpanded() && !node.isLeaf()) {
       const plays = node.allPlays()
       let bestPlay
-      let bestUCB1 = -Infinity
+      let bestUCB1 = Number.NEGATIVE_INFINITY
 
       for (let i = 0; i < plays.length; i += 1) {
         const play = plays[i]
@@ -73,9 +73,8 @@ class MCTS {
     while (winner === EMPTY) {
       const plays = SM.legalPlays(state)
 
-      if (plays.length === 0) {
+      if (plays.length === 0)
         break
-      }
 
       const play = plays[Math.floor(Math.random() * plays.length)]
       // const bestPlays = SBTS.bestPlays(state);
@@ -97,9 +96,8 @@ class MCTS {
 
       // winner info for parent node
       // node.parent.state.player === winner
-      if (node.state.player === -winner) {
+      if (node.state.player === -winner)
         node.nWins += 1
-      }
 
       node = node.parent
     }
@@ -133,7 +131,7 @@ class MCTS {
     const node = this.nodes.get(Hash.state(state))
     const allPlays = node.allPlays()
     let bestPlay
-    let max = -Infinity
+    let max = Number.NEGATIVE_INFINITY
 
     for (let i = 0; i < allPlays.length; i += 1) {
       const play = allPlays[i]
@@ -151,9 +149,8 @@ class MCTS {
     }
 
     // downgrade to SBTS
-    if (!bestPlay) {
+    if (!bestPlay)
       bestPlay = SBTS.bestPlay(state)
-    }
 
     return bestPlay
   }
@@ -167,7 +164,7 @@ class MCTS {
       children: [],
     }
 
-    node.children.forEach(child => {
+    node.children.forEach((child) => {
       if (child.node === null) {
         stats.children.push({
           play: child.play,

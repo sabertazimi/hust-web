@@ -1,4 +1,5 @@
 const fs = require('node:fs')
+const process = require('node:process')
 const path = require('node:path')
 const http = require('node:http')
 const express = require('express')
@@ -23,7 +24,7 @@ app.use(
     max: 5,
     message: 'You exceeded 100 requests in 12 hour limit!',
     headers: true,
-  })
+  }),
 )
 
 app.use((req, res, next) => {
@@ -32,7 +33,7 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT')
   res.header(
     'Access-Control-Allow-Headers',
-    'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers'
+    'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
   )
   next()
 })
@@ -43,7 +44,7 @@ app.post('/signup', (req, res) => {
   if (
     dbData.users.every(
       ({ email: _email, username: _username }) =>
-        _email !== email && _username !== username
+        _email !== email && _username !== username,
     )
   ) {
     dbData.users.push({
@@ -52,7 +53,7 @@ app.post('/signup', (req, res) => {
       password,
       friends: ['sabertazimi'],
     })
-    dbData.users = dbData.users.map(user => {
+    dbData.users = dbData.users.map((user) => {
       const { username: _username, friends: _friends } = user
 
       if (_username === 'sabertazimi') {
@@ -72,7 +73,7 @@ app.post('/signup', (req, res) => {
       {
         encoding: 'utf8',
         flag: 'w+',
-      }
+      },
     )
 
     res.json({
@@ -109,7 +110,7 @@ app.post('/login', (req, res) => {
         }
 
         return false
-      }
+      },
     )
   ) {
     res.json({
@@ -126,7 +127,7 @@ app.post('/login', (req, res) => {
   }
 })
 
-io.on('connection', socket => {
+io.on('connection', (socket) => {
   const { username } = socket.handshake.query
 
   sockets.push({
@@ -134,13 +135,12 @@ io.on('connection', socket => {
     channel: socket,
   })
 
-  socket.on(username, chatMessage => {
+  socket.on(username, (chatMessage) => {
     const { to } = JSON.parse(chatMessage)
 
     sockets.forEach(({ name, channel }) => {
-      if (name === to) {
+      if (name === to)
         channel.emit(to, chatMessage)
-      }
     })
   })
 })

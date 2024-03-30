@@ -6,7 +6,7 @@ const React = (function () {
     const state = hooks[idx] || initVal
 
     const _idx = idx
-    const setState = newVal => {
+    const setState = (newVal) => {
       hooks[_idx] = newVal
     }
 
@@ -18,13 +18,11 @@ const React = (function () {
     const oldDeps = hooks[idx]
     let hasChanged = true
 
-    if (oldDeps) {
+    if (oldDeps)
       hasChanged = depsArray.some((dep, i) => !Object.is(dep, oldDeps[i]))
-    }
 
-    if (hasChanged) {
+    if (hasChanged)
       callback()
-    }
 
     hooks[idx] = depsArray
     idx++

@@ -1,20 +1,16 @@
 {
   "name": "hust-web",
+  "packageManager": "pnpm@8.15.5",
   "description": "A repo for learning demo archives",
-  "scripts": {
-    "build": "pnpm build:prepare && lerna run build && pnpm build:post",
-    "build:prepare": "rm -fr ./build && mkdir -p ./build",
-    "build:post": "cp -fr index.html index.css ./build",
-    "clean": "lerna clean --yes",
-    "lint": "lerna run lint",
-    "lint:fix": "lerna run lint:fix",
-    "release": "node scripts/release.js --push",
-    "test": "lerna run test",
-    "start": "pnpm --filter styled-components-demo start"
-  },
+  "author": "sabertazimi",
+  "license": "MIT",
+  "homepage": "https://github.com/sabertazimi/hust-web",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sabertazimi/hust-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabertazimi/hust-web/issues"
   },
   "keywords": [
     "html",
@@ -33,16 +29,19 @@
     "web",
     "web development"
   ],
-  "author": "sabertazimi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sabertazimi/hust-web/issues"
+  "scripts": {
+    "build": "pnpm build:prepare && pnpm -r run build && pnpm build:post",
+    "build:prepare": "rm -fr ./build && mkdir -p ./build",
+    "build:post": "cp -fr index.html index.css ./build",
+    "lint": "pnpm -r run lint",
+    "lint:fix": "pnpm -r run lint:fix",
+    "release": "node scripts/release.js --push",
+    "test": "pnpm -r run test",
+    "start": "pnpm --filter styled-components-demo start"
   },
-  "homepage": "https://github.com/sabertazimi/hust-web",
-  "packageManager": "pnpm@8.15.5",
   "devDependencies": {
-    "@dg-scripts/eslint-config": "^5.16.0",
-    "@dg-scripts/stylelint-config": "^5.16.0",
+    "@dg-scripts/eslint-config": "^5.17.0",
+    "@dg-scripts/stylelint-config": "^5.17.0",
     "chalk": "^4.1.2",
     "consola": "^3.2.3",
     "eslint": "^8.57.0",

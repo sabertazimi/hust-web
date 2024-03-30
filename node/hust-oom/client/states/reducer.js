@@ -6,7 +6,7 @@ const initialState = {
   friends: [],
 }
 
-const reducer = (state = { ...initialState }, action) => {
+function reducer(state = { ...initialState }, action) {
   switch (action.type) {
     case LOGIN: {
       const { username, email, friends } = action.payload

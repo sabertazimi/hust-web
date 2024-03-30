@@ -1,6 +1,10 @@
 import { Container, Flex, SocialIcons } from '../index'
 import FooterContainer from './FooterContainer'
 
+/**
+ * Renders the footer section of the page.
+ * @returns {JSX.Element} Footer component.
+ */
 export default function Footer() {
   return (
     <FooterContainer>

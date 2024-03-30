@@ -9,8 +9,8 @@ const semver = require('semver')
 const ora = require('ora')
 
 const REGISTRY_URL = 'https://registry.npmjs.org'
-const readPackageJsonFromArchive =
-  require('./utils.js').readPackageJsonFromArchive
+const readPackageJsonFromArchive
+  = require('./utils.js').readPackageJsonFromArchive
 const extractNpmArchiveTo = require('./utils.js').extractNpmArchiveTo
 
 class Mpm {
@@ -23,13 +23,11 @@ class Mpm {
     if (semver.validRange(reference) && !semver.valid(reference)) {
       const response = await fetch(`${REGISTRY_URL}/${name}`)
 
-      if (!response.ok) {
+      if (!response.ok)
         throw new Error(`Couldn't fetch package "${name}"`)
-      }
 
-      if (response.status === 204) {
+      if (response.status === 204)
         throw new Error('HTTP 204')
-      }
 
       const info = await response.json()
       const versions = Object.keys(info.versions)
@@ -37,7 +35,7 @@ class Mpm {
 
       if (maxSatisfying === null) {
         throw new Error(
-          `Couldn't find a version matching "${reference}" for package  "${name}"`
+          `Couldn't find a version matching "${reference}" for package  "${name}"`,
         )
       }
 
@@ -48,9 +46,8 @@ class Mpm {
   }
 
   async fetchPackage({ name, reference }) {
-    if (['/', './', '../'].some(prefix => reference.startsWith(prefix))) {
+    if (['/', './', '../'].some(prefix => reference.startsWith(prefix)))
       return await fs.readFile(reference)
-    }
 
     if (semver.valid(reference)) {
       return await this.fetchPackage({
@@ -61,9 +58,8 @@ class Mpm {
 
     const response = await fetch(reference)
 
-    if (!response.ok) {
+    if (!response.ok)
       throw new Error(`Couldn't fetch package "${reference}"`)
-    }
 
     return await response.buffer()
   }
@@ -71,16 +67,16 @@ class Mpm {
   async getPackageDependencies({ name, reference }) {
     const packageBuffer = await this.fetchPackage({ name, reference })
     const packageJson = JSON.parse(
-      await readPackageJsonFromArchive(packageBuffer)
+      await readPackageJsonFromArchive(packageBuffer),
     )
     const dependencies = packageJson.dependencies || {}
     const devDependencies = packageJson.devDependencies || {}
 
     return {
-      dependencies: Object.keys(dependencies).map(name => {
+      dependencies: Object.keys(dependencies).map((name) => {
         return { name, reference: dependencies[name] }
       }),
-      devDependencies: Object.keys(devDependencies).map(name => {
+      devDependencies: Object.keys(devDependencies).map((name) => {
         return { name, reference: devDependencies[name] }
       }),
     }
@@ -88,35 +84,33 @@ class Mpm {
 
   async getPackageDependencyTree(
     { name, reference, dependencies },
-    available = new Map()
+    available = new Map(),
   ) {
     return {
       name,
       reference,
       dependencies: await Promise.all(
         dependencies
-          .filter(volatileDependency => {
+          .filter((volatileDependency) => {
             const availableReference = available.get(volatileDependency.name)
 
             // exactly match, no need for copy package
-            if (volatileDependency.reference === availableReference) {
+            if (volatileDependency.reference === availableReference)
               return false
-            }
 
             if (
-              semver.validRange(volatileDependency.reference) &&
-              semver.satisfies(availableReference, volatileDependency.reference)
-            ) {
+              semver.validRange(volatileDependency.reference)
+              && semver.satisfies(availableReference, volatileDependency.reference)
+            )
               return false
-            }
 
             return true
           })
-          .map(async volatileDependency => {
-            const pinnedDependency =
-              await this.getPinnedReference(volatileDependency)
-            const { dependencies: subDependencies } =
-              await this.getPackageDependencies(pinnedDependency)
+          .map(async (volatileDependency) => {
+            const pinnedDependency
+              = await this.getPinnedReference(volatileDependency)
+            const { dependencies: subDependencies }
+              = await this.getPackageDependencies(pinnedDependency)
             const subAvailable = new Map(available)
 
             subAvailable.set(pinnedDependency.name, pinnedDependency.reference)
@@ -126,9 +120,9 @@ class Mpm {
                 ...pinnedDependency,
                 dependencies: subDependencies,
               },
-              subAvailable
+              subAvailable,
             )
-          })
+          }),
       ),
     }
   }
@@ -200,8 +194,8 @@ class Mpm {
             //     });
             //   }
             // }
-          }
-        )
+          },
+        ),
       )
     }
   }

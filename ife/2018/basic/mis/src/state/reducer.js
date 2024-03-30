@@ -12,14 +12,15 @@ const initialState = {
   data: sourceData,
 }
 
-const getDataWithFilters = (data, filters) =>
-  data.filter(item =>
+function getDataWithFilters(data, filters) {
+  return data.filter(item =>
     Object.keys(filters)
       .map(key => filters[key].includes(item[key]))
-      .every(Boolean)
+      .every(Boolean),
   )
+}
 
-const reducer = (state = initialState, action) => {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_ALL: {
       const { field } = action.payload

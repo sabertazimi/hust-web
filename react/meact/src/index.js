@@ -30,7 +30,7 @@ class App extends Meact.Component {
       <div>
         <h1>Didact Stories</h1>
         <ul>
-          {this.props.stories.map(story => {
+          {this.props.stories.map((story) => {
             return <Story name={story.name} url={story.url} />
           })}
         </ul>

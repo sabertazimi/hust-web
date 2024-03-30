@@ -1,6 +1,6 @@
 import { CLOSE_NOTE, CREATE_NOTE, OPEN_NOTE, UPDATE_NOTE } from './constants.js'
 
-const createAction = (type, ...args) => {
+function createAction(type, ...args) {
   switch (type) {
     case CREATE_NOTE:
       return {

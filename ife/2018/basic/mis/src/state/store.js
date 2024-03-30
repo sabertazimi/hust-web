@@ -1,13 +1,13 @@
 import reducer from './reducer'
 
-const createStore = _reducer => {
+function createStore(_reducer) {
   // clousre for storing global state
   let state
 
   // subscribe to `dispatch` event
   const subscribers = []
 
-  const coreDispatch = action => {
+  const coreDispatch = (action) => {
     state = _reducer(state, action)
     subscribers.forEach(handler => handler())
   }
@@ -17,18 +17,16 @@ const createStore = _reducer => {
   const store = {
     dispatch: coreDispatch,
     getState,
-    subscribe: handler => {
-      if (!subscribers.includes(handler)) {
+    subscribe: (handler) => {
+      if (!subscribers.includes(handler))
         subscribers.push(handler)
-      }
 
       // unsubscribe function
       return () => {
         const index = subscribers.indexOf(handler)
 
-        if (index !== -1) {
+        if (index !== -1)
           subscribers.splice(index, 1)
-        }
       }
     },
   }

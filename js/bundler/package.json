@@ -2,24 +2,24 @@
   "name": "bundler",
   "version": "1.0.0",
   "description": "A simple web bundler",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "author": "sabertazimi",
+  "license": "MIT",
+  "homepage": "https://github.com/sabertazimi/hust-web#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sabertazimi/hust-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabertazimi/hust-web/issues"
   },
   "keywords": [
     "bundler",
     "webpack"
   ],
-  "author": "sabertazimi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sabertazimi/hust-web/issues"
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
   },
-  "homepage": "https://github.com/sabertazimi/hust-web#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",

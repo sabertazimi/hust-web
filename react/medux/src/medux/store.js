@@ -1,33 +1,31 @@
 import { validateAction } from './action.js'
 import { INIT_MEDUX } from './constants.js'
 
-const applyMiddleware =
-  (...middlewares) =>
-  (store) => {
+function applyMiddleware(...middlewares) {
+  return (store) => {
     // should return (next) => (action) => { ... } function
-    if (middlewares.length === 0) {
-      return (dispatch) => dispatch
-    }
+    if (middlewares.length === 0)
+      return dispatch => dispatch
 
-    if (middlewares.length === 1) {
+    if (middlewares.length === 1)
       return middlewares[0]
-    }
 
     // [ (next) => (action) => {...}, ... ] array
     // next: (action) => { ... } function
-    const boundMiddlewares = middlewares.map((middleware) => middleware(store))
+    const boundMiddlewares = middlewares.map(middleware => middleware(store))
 
-    return boundMiddlewares.reduce((a, b) => (next) => a(b(next)))
+    return boundMiddlewares.reduce((a, b) => next => a(b(next)))
   }
+}
 
-const createStore = (reducer, middleware) => {
+function createStore(reducer, middleware) {
   // clousre for storing global state
   let state
   const subscribers = []
   const coreDispatch = (action) => {
     validateAction(action)
     state = reducer(state, action)
-    subscribers.forEach((handler) => handler())
+    subscribers.forEach(handler => handler())
   }
   const getState = () => state
 
@@ -41,16 +39,15 @@ const createStore = (reducer, middleware) => {
       return () => {
         const index = subscribers.indexOf(handler)
 
-        if (index > 0) {
+        if (index > 0)
           subscribers.splice(index, 1)
-        }
       }
     },
   }
 
   if (middleware) {
     // store default dispatch
-    const dispatch = (action) => store.dispatch(action)
+    const dispatch = action => store.dispatch(action)
 
     // const middleware = ({ dispatch, getState }) => (next) => (action) => { ... };
     // middleware is a higher-order function (return a function (action) => { ... });
