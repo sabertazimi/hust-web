@@ -1,52 +1,32 @@
 // @ts-check
-/** @type {(options: any) => Promise<any> | any} */
-const lernaVersion = require('@lerna/version');
-const semver = require('semver');
-const utils = require('./utils');
+const process = require('node:process')
+const utils = require('./utils')
 
-const main = async () => {
-  utils.checkGitStatus();
-  utils.info(`Working in directory ${process.cwd()}.`);
+function main() {
+  utils.checkGitStatus()
+  utils.info(`Working in directory ${process.cwd()}.`)
+  const isPush = process.argv.includes('-p') || process.argv.includes('--push')
+  const versionMatch = utils
+    .execPipe(
+      'pnpm lerna version --force-publish --no-commit-hooks --no-git-tag-version --no-push --yes',
+    )
+    .toString()
+    .split('\n')
+    .join('')
+    .match(/=>\s\d+\.\d+\.\d+/i)
 
-  const opts = {
-    changelogPreset: 'angular',
-    conventionalCommits: true,
-    message: 'chore(release): %s',
-    forcePublish: true,
-    commitHooks: false,
-    gitTagVersion: false,
-    yes: true,
-  };
+  if (versionMatch) {
+    const version = utils.semver.clean(versionMatch[0].replace('=> ', ''))
+    utils.exec('pnpm install')
+    utils.exec('git add .')
+    utils.exec(`git commit -a -m "chore(release): ${version}"`)
+    utils.exec(`git tag v${version} -s -m "v${version}"`)
 
-  const push = process.argv.includes('-p') || process.argv.includes('--push');
-  const result = await lernaVersion({
-    ...opts,
-    push,
-  });
-
-  let proceed = false;
-  let version = '';
-
-  for (const v of result.updatesVersions.values()) {
-    if (semver.valid(v)) {
-      proceed = true;
-      version = semver.valid(v);
-      break;
-    }
+    if (isPush)
+      utils.exec('git push --follow-tags')
+    else
+      utils.info('Run `git push --follow-tags origin main` to publish.')
   }
+}
 
-  if (proceed) {
-    utils.exec('yarn');
-    utils.exec('git add .');
-    utils.exec(`git commit -a -m "chore(release): ${version}"`);
-    utils.exec(`git tag v${version} -s -m "v${version}"`);
-
-    if (push) {
-      utils.exec('git push --follow-tags origin main');
-    } else {
-      utils.info('Run `git push --follow-tags origin main` to publish.');
-    }
-  }
-};
-
-main();
+main()
