@@ -1,6 +1,6 @@
 {
   "name": "mpmjs",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "packageManager": "pnpm@8.15.5",
   "description": "Minimal package manager",
   "author": "sabertazimi",

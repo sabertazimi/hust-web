@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/sabertazimi/hust-web/compare/v2.7.0...v2.8.0) (2024-04-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies (non-major) ([#1008](https://github.com/sabertazimi/hust-web/issues/1008)) ([186b0c4](https://github.com/sabertazimi/hust-web/commit/186b0c4ada2e427a2e46ea6c8e6ba91c83035f4e))
+* **deps:** update dependencies (non-major) ([#650](https://github.com/sabertazimi/hust-web/issues/650)) ([8109ead](https://github.com/sabertazimi/hust-web/commit/8109eadfc849e3bf213fd35d3b95b870d40fc8f1))
+* **deps:** update dependencies (non-major) ([#726](https://github.com/sabertazimi/hust-web/issues/726)) ([17867d4](https://github.com/sabertazimi/hust-web/commit/17867d45f964d59eb22a796fd256bdbe4651b7d4))
+* **deps:** update dependencies (non-major) ([#736](https://github.com/sabertazimi/hust-web/issues/736)) ([c7a278a](https://github.com/sabertazimi/hust-web/commit/c7a278af81bf0abc0b6e39ae39009cddc13a823e))
+* **deps:** update dependencies (non-major) ([#743](https://github.com/sabertazimi/hust-web/issues/743)) ([c8f809a](https://github.com/sabertazimi/hust-web/commit/c8f809a01390114e0755c9644c3bd7da3611f110))
+* **deps:** update dependencies (non-major) ([#756](https://github.com/sabertazimi/hust-web/issues/756)) ([6075e47](https://github.com/sabertazimi/hust-web/commit/6075e4795a7914cf1a0ff845b5799c29f75f89a5))
+* **deps:** update dependencies (non-major) ([#776](https://github.com/sabertazimi/hust-web/issues/776)) ([76b96f0](https://github.com/sabertazimi/hust-web/commit/76b96f062a9c021bb9e94c65e05d8b7e4778fe3d))
+* **deps:** update dependencies (non-major) ([#779](https://github.com/sabertazimi/hust-web/issues/779)) ([c904723](https://github.com/sabertazimi/hust-web/commit/c9047238134ab68993c55e59a2be32447e3c4a82))
+* **deps:** update dependencies (non-major) ([#786](https://github.com/sabertazimi/hust-web/issues/786)) ([9343201](https://github.com/sabertazimi/hust-web/commit/9343201d9ce97e63bd37ff38cc3d54588d3f76cb))
+* **deps:** update dependencies (non-major) ([#810](https://github.com/sabertazimi/hust-web/issues/810)) ([bb1000f](https://github.com/sabertazimi/hust-web/commit/bb1000f4034a096bea2f7e66a85cde66e245868a))
+* **deps:** update dependencies (non-major) ([#814](https://github.com/sabertazimi/hust-web/issues/814)) ([112fad4](https://github.com/sabertazimi/hust-web/commit/112fad4fbc1ab7990b489b80e8be3422a03a1f7d))
+* **deps:** update dependencies (non-major) ([#841](https://github.com/sabertazimi/hust-web/issues/841)) ([f8c0910](https://github.com/sabertazimi/hust-web/commit/f8c0910cba32d7fe11447e3e5962551bd282f7be))
+* **deps:** update dependencies (non-major) ([#857](https://github.com/sabertazimi/hust-web/issues/857)) ([75d7042](https://github.com/sabertazimi/hust-web/commit/75d7042e47a3ad7145de97b92c0d59e3e3987319))
+* **deps:** update dependencies (non-major) ([#869](https://github.com/sabertazimi/hust-web/issues/869)) ([62c4bfe](https://github.com/sabertazimi/hust-web/commit/62c4bfe06a12a51b3b764ebc56cd984dbe6e37eb))
+* **deps:** update dependencies (non-major) ([#892](https://github.com/sabertazimi/hust-web/issues/892)) ([f97d991](https://github.com/sabertazimi/hust-web/commit/f97d991b772e8a36f3f3d9bf6d2c774716f509d3))
+* **deps:** update dependencies (non-major) ([#951](https://github.com/sabertazimi/hust-web/issues/951)) ([91876be](https://github.com/sabertazimi/hust-web/commit/91876be71fa29719cac5ade7e24703d34e5421c1))
+* **deps:** update dependencies (non-major) ([#954](https://github.com/sabertazimi/hust-web/issues/954)) ([4fbfeb4](https://github.com/sabertazimi/hust-web/commit/4fbfeb43a81f3a3fd05e3fb6530d505fb9b5c55b))
+* **deps:** update dependencies (non-major) ([#995](https://github.com/sabertazimi/hust-web/issues/995)) ([e46046d](https://github.com/sabertazimi/hust-web/commit/e46046d2850553d4e905b31513d4be5d711d1c5c))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v32 ([#573](https://github.com/sabertazimi/hust-web/issues/573)) ([7614054](https://github.com/sabertazimi/hust-web/commit/7614054f0af13d1b92147d9172abc260879a2998))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v33 ([#638](https://github.com/sabertazimi/hust-web/issues/638)) ([c598e7b](https://github.com/sabertazimi/hust-web/commit/c598e7b945b127498eeadbc31f9533ea869bf4cd))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v34 ([#666](https://github.com/sabertazimi/hust-web/issues/666)) ([799527c](https://github.com/sabertazimi/hust-web/commit/799527c43b25ab979681d49decc3f0f4f95e1b8f))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v35 ([#732](https://github.com/sabertazimi/hust-web/issues/732)) ([5a4e3e4](https://github.com/sabertazimi/hust-web/commit/5a4e3e4f8a7ebe10d1e7c4e5b3d174605ebf1016))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v36 ([#808](https://github.com/sabertazimi/hust-web/issues/808)) ([6d77fff](https://github.com/sabertazimi/hust-web/commit/6d77fff9d68d7e0d19ed35bfd2b58af5ecb85060))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v37 ([#850](https://github.com/sabertazimi/hust-web/issues/850)) ([72b0257](https://github.com/sabertazimi/hust-web/commit/72b0257ee34e18ccea9f46bf92941ac925676d0b))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v38 ([#874](https://github.com/sabertazimi/hust-web/issues/874)) ([8dc0147](https://github.com/sabertazimi/hust-web/commit/8dc014754023288a9ee67ee13b4404d4d7bff2cf))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v39 ([#909](https://github.com/sabertazimi/hust-web/issues/909)) ([b555d96](https://github.com/sabertazimi/hust-web/commit/b555d96b8ae87a11b3814dc60e31e733f1d2a1ff))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v40 ([#935](https://github.com/sabertazimi/hust-web/issues/935)) ([8622187](https://github.com/sabertazimi/hust-web/commit/86221873f17c041d6e85e696b406c0f4171088e4))
+* **deps:** update dependency @ckeditor/ckeditor5-build-classic to v41 ([#986](https://github.com/sabertazimi/hust-web/issues/986)) ([49a88b6](https://github.com/sabertazimi/hust-web/commit/49a88b6f0597f0dbb74ff10f8b5c318d6a2204c8))
+* **deps:** update dependency @popperjs/core to ^2.11.2 ([#502](https://github.com/sabertazimi/hust-web/issues/502)) ([92a94d9](https://github.com/sabertazimi/hust-web/commit/92a94d9daa240962c4d037f6abddd2d2512295f9))
+* **deps:** update dependency @popperjs/core to ^2.11.3 ([#639](https://github.com/sabertazimi/hust-web/issues/639)) ([2e266e7](https://github.com/sabertazimi/hust-web/commit/2e266e7ad7fc8d6c9e268164ba06dc440ebe5cad))
+
+
+### Features
+
+* **css-bootstrap:** remove bootstrap files ([d1cb503](https://github.com/sabertazimi/hust-web/commit/d1cb503631be66ac942b4a241fee9c839e38a438))
+
+
+
+
+
 # [2.7.0](https://github.com/sabertazimi/hust-web/compare/v2.6.0...v2.7.0) (2022-01-05)
 
 

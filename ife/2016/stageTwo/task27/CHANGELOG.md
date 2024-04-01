@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/sabertazimi/hust-web/compare/v2.7.0...v2.8.0) (2024-04-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies (non-major) ([#786](https://github.com/sabertazimi/hust-web/issues/786)) ([9343201](https://github.com/sabertazimi/hust-web/commit/9343201d9ce97e63bd37ff38cc3d54588d3f76cb))
+* **deps:** update dependencies (non-major) ([#869](https://github.com/sabertazimi/hust-web/issues/869)) ([62c4bfe](https://github.com/sabertazimi/hust-web/commit/62c4bfe06a12a51b3b764ebc56cd984dbe6e37eb))
+
+
+
+
+
 # [2.7.0](https://github.com/sabertazimi/hust-web/compare/v2.6.0...v2.7.0) (2022-01-05)
 
 

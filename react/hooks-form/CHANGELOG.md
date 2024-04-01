@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/sabertazimi/hust-web/compare/v2.7.0...v2.8.0) (2024-04-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency bulma to v1 ([#1013](https://github.com/sabertazimi/hust-web/issues/1013)) ([a18d1cc](https://github.com/sabertazimi/hust-web/commit/a18d1cc4468891c2750d264ccb2cd883c6db4616))
+* **deps:** update react monorepo to v18 ([#653](https://github.com/sabertazimi/hust-web/issues/653)) ([e601e44](https://github.com/sabertazimi/hust-web/commit/e601e449cf9896881907e22c246bf00ae156d83a))
+* **react-v18:** switch from `render` to `createRoot` function ([#656](https://github.com/sabertazimi/hust-web/issues/656)) ([7983ea7](https://github.com/sabertazimi/hust-web/commit/7983ea785ab54395b98764a32866f419242b17b7))
+
+
+
+
+
 # [2.7.0](https://github.com/sabertazimi/hust-web/compare/v2.6.0...v2.7.0) (2022-01-05)
 
 
