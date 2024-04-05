@@ -69,7 +69,7 @@ class DashboardComponent extends React.Component {
       })
 
       socket.on('connect', () => {
-        // eslint-disable-next-line no-console
+        // eslint-disable-next-line no-console -- CLI output.
         console.log('Connected to server !')
       })
 

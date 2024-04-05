@@ -94,10 +94,10 @@ class _Login extends React.Component {
       .then((res) => {
         if (res.status === 200) {
           onLogin(res)
-          history.push('/dashboard')
+          return history.push('/dashboard')
         } else {
-          // eslint-disable-next-line no-alert
-          alert(res.message)
+          // eslint-disable-next-line no-alert -- Legacy code.
+          return alert(res.message)
         }
       })
       .catch(() => {
@@ -171,10 +171,10 @@ class _SignUp extends React.Component {
       .then((res) => {
         if (res.status === 200) {
           onLogin(res)
-          history.push('/dashboard')
+          return history.push('/dashboard')
         } else {
-          // eslint-disable-next-line no-alert
-          alert(res.message)
+          // eslint-disable-next-line no-alert -- Legacy code.
+          return alert(res.message)
         }
       })
       .catch(() => {

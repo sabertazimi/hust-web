@@ -18,7 +18,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@sabertazimi/react-scripts": "^5.17.0"
+    "@sabertazimi/react-scripts": "^5.20.1"
   },
   "stylelint": {
     "extends": [

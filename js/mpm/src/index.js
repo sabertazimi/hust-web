@@ -23,6 +23,7 @@ program
   .action((package) => {
     if (!package) {
       const cwd = process.cwd()
+      // eslint-disable-next-line security/detect-non-literal-require -- cwd is not user input.
       const packageJson = require(path.join(cwd, 'package.json'))
 
       packageJson.dependencies = Object.keys(

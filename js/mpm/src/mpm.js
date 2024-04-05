@@ -47,6 +47,7 @@ class Mpm {
 
   async fetchPackage({ name, reference }) {
     if (['/', './', '../'].some(prefix => reference.startsWith(prefix)))
+      // eslint-disable-next-line security/detect-non-literal-fs-filename -- reference is safe.
       return await fs.readFile(reference)
 
     if (semver.valid(reference)) {
@@ -153,6 +154,7 @@ class Mpm {
 
             await this.linkPackages({ name, reference, dependencies }, target)
 
+            // eslint-disable-next-line security/detect-non-literal-require -- target is safe.
             const dependencyPackageJson = require(`${target}/package.json`)
 
             // create binaries symbol link defined in 'bin' field
@@ -167,6 +169,7 @@ class Mpm {
               const dest = `${binTarget}/${binName}`
 
               await fs.mkdirp(`${cwd}/node_modules/.bin`)
+              // eslint-disable-next-line security/detect-non-literal-fs-filename -- source is safe.
               fs.symlink(path.relative(binTarget, source), dest)
               // fs.access(dest, (err) => {
               //   if (err) {

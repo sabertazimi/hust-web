@@ -71,6 +71,7 @@ export default class Restaurant {
             )
             $log(`customer '${customer.name}' paid $${sales} !`)
             $log(`restaurant cash is $${this.cash} !`)
+            return this.cash
           })
       }
 

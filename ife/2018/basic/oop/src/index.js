@@ -26,12 +26,17 @@ function app() {
       if (CUSTOMER_ID < 10) {
         CUSTOMER_ID += 1
         const customer = new Customer(`Customer ${CUSTOMER_ID}`)
+        // eslint-disable-next-line promise/no-nesting -- Legacy code.
         customer.enter(ifeRestaurant).then(() => {
-          customer.leave(ifeRestaurant)
-        })
+          return customer.leave(ifeRestaurant)
+        // eslint-disable-next-line promise/no-nesting -- Legacy code.
+        }).catch(console.error)
         mainLoop()
       }
+
+      return true
     })
+      .catch(console.error)
   }
 
   mainLoop()
