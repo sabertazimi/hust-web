@@ -12,7 +12,7 @@ class Component {
 }
 
 function createInstance(fiber) {
-  // eslint-disable-next-line new-cap
+  // eslint-disable-next-line new-cap -- create fiber instance.
   const instance = new fiber.type(fiber.props)
   instance.__fiber = fiber
   return instance

@@ -153,6 +153,6 @@ server.listen(PORT, () => {
 
   dbData.users = JSON.parse(data).users
 
-  // eslint-disable-next-line no-console
+  // eslint-disable-next-line no-console -- CLI output.
   console.log(`Server is running at port '${PORT}' ...`)
 })

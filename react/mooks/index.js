@@ -44,12 +44,12 @@ function App() {
   const [text, setText] = React.useState('apple')
 
   React.useEffect(() => {
-    // eslint-disable-next-line no-console
+    // eslint-disable-next-line no-console -- CLI output.
     console.log('"useEffect" called.')
   }, [text])
 
   return {
-    // eslint-disable-next-line no-console
+    // eslint-disable-next-line no-console -- CLI output.
     render: () => console.log({ count, text }),
     click: () => setCount(count + 1),
     type: word => setText(word),
