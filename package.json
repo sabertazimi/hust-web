@@ -1,6 +1,6 @@
 {
   "name": "hust-web",
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@8.15.7",
   "description": "A repo for learning demo archives",
   "author": "sabertazimi",
   "license": "MIT",
