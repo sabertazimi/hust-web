@@ -30,7 +30,7 @@
     "start": "pnpm dev"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^41.3.0",
+    "@ckeditor/ckeditor5-build-classic": "^41.3.1",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "scrollreveal": "^4.0.9"
@@ -54,13 +54,13 @@
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
     "image-webpack-loader": "^8.1.0",
-    "mini-css-extract-plugin": "^2.8.1",
+    "mini-css-extract-plugin": "^2.9.0",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "postcss-nested": "^6.0.1",
     "prettier": "^3.2.5",
     "sass": "^1.75.0",
-    "sass-loader": "^14.2.0",
+    "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
     "stylelint": "^16.3.1",
     "stylelint-webpack-plugin": "^5.0.0",
