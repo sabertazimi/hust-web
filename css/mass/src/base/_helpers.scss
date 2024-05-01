@@ -1,0 +1,26 @@
+.hide-text {
+  padding: 0;
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.hidden {
+  @include hidden;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.text-align-center {
+  @include text-align;
+}
+
+.container {
+  @include container;
+}
+
+.text-container {
+  @include container;
+}

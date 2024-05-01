@@ -1,0 +1,95 @@
+@use 'sass:math';
+
+////
+/// Global typography variablse defination
+/// @group Typography
+/// @author sabertazimi
+////
+
+/// Font family stack
+/// @type List
+$font-stack: (
+  'Raleway',
+  'HelveticaNeue',
+  'Helvetica Neue',
+  helvetica,
+  'Open Sans',
+  arial,
+  sans-serif,
+  serif
+) !default;
+
+/// Root text font scale ratio
+/// @type Number
+$root-scale-ratio: 100% !default;
+$root-base-size: 16px * math.div($root-scale-ratio, 100%) !default;
+
+/// Base text font size
+/// @type Length
+$text-base-size: 1rem !default;
+
+/// Scale ratio for font size
+/// @type Number
+$text-scale-ratio: 1.2 !default;
+$text-scale-ratio-2: ($text-scale-ratio * $text-scale-ratio);
+$text-scale-ratio-3: ($text-scale-ratio-2 * $text-scale-ratio);
+$text-scale-ratio-4: ($text-scale-ratio-3 * $text-scale-ratio);
+$text-scale-ratio-5: ($text-scale-ratio-4 * $text-scale-ratio);
+$text-scale-ratio-6: ($text-scale-ratio-5 * $text-scale-ratio);
+
+/// Text font-size group
+/// @type Length
+$text-xxxsmall: math.div($text-base-size, $text-scale-ratio-4) !default;
+
+/// Text font-size group
+/// @type Length
+$text-xxsmall: math.div($text-base-size, $text-scale-ratio-3) !default;
+
+/// Text font-size group
+/// @type Length
+$text-xsmall: math.div($text-base-size, $text-scale-ratio-2) !default;
+
+/// Text font-size group
+/// @type Length
+$text-small: math.div($text-base-size, $text-scale-ratio) !default;
+
+/// Text font-size group
+/// @type Length
+$text-medium: ($text-base-size * $text-scale-ratio) !default;
+
+/// Text font-size group
+/// @type Length
+$text-large: ($text-base-size * $text-scale-ratio-2) !default;
+
+/// Text font-size group
+/// @type Length
+$text-xlarge: ($text-base-size * $text-scale-ratio-3) !default;
+
+/// Text font-size group
+/// @type Length
+$text-xxlarge: ($text-base-size * $text-scale-ratio-4) !default;
+
+/// Text font-size group
+/// @type Length
+$text-xxxlarge: ($text-base-size * $text-scale-ratio-5) !default;
+
+/// Text font-size group
+/// @type Length
+$text-xxxxlarge: ($text-base-size * $text-scale-ratio-6) !default;
+
+/// Font size map
+/// @type Map
+/// @prop {String} key - name of font size
+/// @prop {Length} value - value of font size
+$font-main-list: (
+  'xxxsmall': $text-xxxsmall,
+  'xxsmall': $text-xxsmall,
+  'xsmall': $text-xsmall,
+  'small': $text-small,
+  'medium': $text-medium,
+  'large': $text-large,
+  'xlarge': $text-xlarge,
+  'xxlarge': $text-xxlarge,
+  'xxxlarge': $text-xxxlarge,
+  'xxxxlarge': $text-xxxxlarge,
+) !default;
