@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.9.0](https://github.com/sabertazimi/mass/compare/v2.8.0...v2.9.0) (2024-05-01)
+
+
+### Features
+
+* **css-mass:** merge mass into css gallery ([#1038](https://github.com/sabertazimi/mass/issues/1038)) ([7334143](https://github.com/sabertazimi/mass/commit/73341431450313106d791680710e4fb5649a09b1))
+
+
+
+
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.

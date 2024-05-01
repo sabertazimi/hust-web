@@ -1,6 +1,6 @@
 {
   "name": "ife-2016-task27",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "task 27",
   "scripts": {
     "build": "pnpm build:prepare && gulp build && pnpm build:post",

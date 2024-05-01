@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/sabertazimi/gba/compare/v2.8.0...v2.9.0) (2024-05-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies (non-major) ([#1026](https://github.com/sabertazimi/gba/issues/1026)) ([293a3d8](https://github.com/sabertazimi/gba/commit/293a3d859bbb67bb9ffdcd878c5c9ccfe23a9015))
+* **deps:** update dependencies (non-major) ([#1033](https://github.com/sabertazimi/gba/issues/1033)) ([a8ab041](https://github.com/sabertazimi/gba/commit/a8ab04184ab844f4d4a2f52b018112fa66e946f6))
+
+
+
+
+
 # [2.8.0](https://github.com/sabertazimi/gba/compare/v2.7.0...v2.8.0) (2024-04-01)
 
 
