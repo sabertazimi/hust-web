@@ -1,0 +1,213 @@
+////
+/// Global mixin defination
+/// @group Global
+/// @author sabertazimi
+////
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// BEM style event wrapper
+/// @param {Bool} $self [false] - Whether or not to include current selector
+@mixin bem-on-event($self: false) {
+  @if $self {
+    &,
+    &--hover:hover,
+    &--active:active,
+    &--focus:focus {
+      @content;
+    }
+  } @else {
+    &--hover:hover,
+    &--active:active,
+    &--focus:focus {
+      @content;
+    }
+  }
+}
+
+/// Mixin helper to output vendor prefixes
+/// @access public
+/// @author Hugo Giraudel
+/// @param {String} $property - Unprefixed CSS property
+/// @param {*} $value - Raw CSS value
+/// @param {List} $prefixes - List of prefixes to output
+/// @example scss - Usage
+///   .foo {
+///     @include prefix(transform, rotate(90deg), ('webkit', 'ms'));
+///   }
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
+/// font size rem to px fallback
+/// @access public
+/// @param {Length} $rem [1rem] - font size with `rem` length
+/// @group Typography
+@mixin font-size($rem: 1rem) {
+  font-size: rem2px($rem);
+  font-size: $rem;
+}
+
+/// media queries helper mixin
+/// @access public
+/// @param {String} $range [medium-up] - different range of device size
+/* stylelint-disable media-query-no-invalid */
+@mixin respond-to($range: medium-up) {
+  @if $range == small-up {
+    @media only screen {
+      @content;
+    }
+  } @else if $range == small-only {
+    @media only screen and (max-width: nth($small-range, 2)) {
+      @content;
+    }
+  } @else if $range == medium-up {
+    @media only screen and (min-width: nth($medium-range, 1)) {
+      @content;
+    }
+  } @else if $range == medium-only {
+    @media only screen and (min-width: nth($medium-range, 1)) and (max-width: nth($medium-range, 2)) {
+      @content;
+    }
+  } @else if $range == large-up {
+    @media only screen and (min-width: nth($large-range, 1)) {
+      @content;
+    }
+  } @else if $range == large-only {
+    @media only screen and (min-width: nth($large-range, 1)) and (max-width: nth($large-range, 2)) {
+      @content;
+    }
+  } @else if $range == xlarge-up {
+    @media only screen and (min-width: nth($xlarge-range, 1)) {
+      @content;
+    }
+  } @else if $range == xlarge-only {
+    @media only screen and (min-width: nth($xlarge-range, 1)) and (max-width: nth($xlarge-range, 2)) {
+      @content;
+    }
+  } @else if $range == xxlarge-up {
+    @media only screen and (min-width: nth($xxlarge-range, 1)) {
+      @content;
+    }
+  } @else {
+    @error 'Invalid device size range.';
+  }
+}
+/* stylelint-enable media-query-no-invalid */
+
+/// Helper to clear inner floats
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+@mixin clearfix {
+  &::before,
+  &::after {
+    display: table;
+    content: ' ';
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+/// default container mixin
+/// @param {Length} $param-max-width [$max-width] - max width of container
+@mixin container($param-max-width: $max-width) {
+  display: block;
+  width: 100%;
+  max-width: $param-max-width;
+  margin: 0 auto;
+
+  @include respond-to(small-only) {
+    padding-right: $space-sm;
+    padding-left: $space-sm;
+
+    .container & {
+      padding: 0;
+    }
+  }
+}
+
+/// Mixin helper to align ine-block or text paragraph
+/// @access public
+/// @param {String} $align [center] - alignment direction
+/// @example scss - Usage
+///  .text-align-center {
+///    @include text-align
+///  }
+@mixin text-align($align: center) {
+  text-align: $align;
+}
+
+/// Add underline animation to <a> element
+/// Require that element with position other than `static`
+/// @access public
+/// @param {Color} $color [$color-primary] - color of underline
+/// @param {Length} $height [3px] - height of underline
+@mixin underline($color: $color-primary, $height: 3px) {
+  @media screen and (prefers-reduced-motion: reduce) {
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: $height;
+      content: '';
+      background-color: $color;
+      transition: none;
+      transform: scaleX(0) translateX(50%);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    content: '';
+    background-color: $color;
+    transition: transform 0.2s;
+    transform: scaleX(0) translateX(50%);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1) translateX(0);
+  }
+}
+
+/// hidden elements
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}

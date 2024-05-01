@@ -1,0 +1,69 @@
+@use 'sass:math';
+@use 'sass:map';
+
+////
+/// Global function helpers
+/// @group Global
+/// @author sabertazimi
+////
+
+/// Get a z-index value from a layer name
+/// @author Sass Guidelines
+/// @access public
+/// @param {String} $layer - Layer's name
+/// @return {Number}
+/// @require $z-indexes
+@function z($layer) {
+  @if not map.has-key($z-indexes, $layer) {
+    @error 'There is no layer named `#{$layer}` in $z-indexes. ' + 'Layer should be one of #{map.keys($z-indexes)}.';
+    @return null;
+  }
+
+  @return map.get($z-indexes, $layer);
+}
+
+/// Slightly lighten a color
+/// @author Compass
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+/// @group Color
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @author Compass
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+/// @group Color
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/// Throw error message and stop execution
+/// @param {String} $log - message to log out
+/// @return {Bool} [false]
+@function throw($log) {
+  @error $log;
+  @return false;
+}
+
+/// rem2px helper function
+/// @access public
+/// @param {Length} $rem - rem to px
+/// @return {Length} px
+/// @group Typography
+@function rem2px($rem) {
+  @if unitless($rem) {
+    @warn 'Assuming #{$rem} to be in rems, attempting to convert it into rems.';
+    @return null;
+  } @else if unit($rem) == px {
+    @return $rem;
+  }
+
+  @return $root-base-size * math.div($rem, 1rem);
+}

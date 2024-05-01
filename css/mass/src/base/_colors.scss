@@ -1,0 +1,84 @@
+@use 'sass:map';
+
+/* color default config */
+body {
+  color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+form legend {
+  color: $color-text-heading;
+}
+
+@mixin color-helper($name, $color, $suffix: 1px) {
+  @if type-of($suffix) == number {
+    .text-#{$name} {
+      color: $color !important;
+
+      @include bem-on-event {
+        color: $color !important;
+      }
+    }
+
+    .bg-#{$name} {
+      background-color: $color !important;
+
+      @include bem-on-event {
+        background-color: $color !important;
+      }
+    }
+
+    .border-#{$name} {
+      border: 1px solid $color !important;
+
+      @include bem-on-event {
+        border: 1px solid $color !important;
+      }
+    }
+  } @else {
+    .text-#{$name}-#{$suffix} {
+      color: $color !important;
+
+      @include bem-on-event {
+        color: $color !important;
+      }
+    }
+
+    .bg-#{$name}-#{$suffix} {
+      background-color: $color !important;
+
+      @include bem-on-event {
+        background-color: $color !important;
+      }
+    }
+
+    .border-#{$name}-#{$suffix} {
+      border: 1px solid $color !important;
+
+      @include bem-on-event {
+        border: 1px solid $color !important;
+      }
+    }
+  }
+}
+
+@include color-helper('white', $color-white);
+@include color-helper('black', $color-black);
+
+/* color helper class */
+@each $color-list, $selector in $color-lists {
+  $primary-color: map.get($color-list, $color-primary-depth);
+
+  @include color-helper($selector, $primary-color);
+
+  @each $depth, $color in $color-list {
+    @include color-helper($selector, $color, $depth);
+  }
+}
+
+@each $name, $color in $color-main-list {
+  @include color-helper($name, $color);
+}

@@ -1,6 +1,7 @@
 packages:
   - css
   - css/bootstrap-cms
+  - css/mass
   - fcc
   - ife/2016
   - ife/2016/stageTwo/task26

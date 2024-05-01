@@ -1,0 +1,147 @@
+@use 'sass:math';
+
+/// Max number of columns
+/// @type Number
+$grid-max-columns: 12 !default;
+
+/// get floor width of grid column
+/// @param {Number} $i - number ratio of column width
+/// @param {Number} $max [$grid-max-columns] - max number of columns
+/// @return {Number} percent ratio of column width
+/// @require $grid-max-columns
+@function floor-width($i, $max: $grid-max-columns) {
+  $width: math.div($i, $max);
+
+  @return math.percentage($width);
+}
+
+/// column generator
+/// @param {Number} $i [1] - number ratio of column width
+/// @param {Number} $max [$grid-max-columns] - max number of columns
+@mixin column($i: 1, $max: $grid-max-columns) {
+  float: left;
+  width: floor-width($i, $max);
+  max-width: floor-width($i, $max);
+  min-height: 1px;
+}
+
+.grid-container {
+  @include clearfix;
+  @include container;
+
+  .row {
+    @include clearfix;
+
+    display: block;
+    width: 100%;
+  }
+}
+
+/* flex grid helper class */
+
+.flex-container {
+  @include container;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include respond-to(small-only) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+/* column width definition */
+.col {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+@include respond-to(medium-up) {
+  .col {
+    flex: 1;
+  }
+}
+
+@for $i from 1 through $grid-max-columns {
+  .col-#{$i} {
+    @include column($i);
+  }
+
+  @for $j from 1 through ($i - 1) {
+    .col-#{$j}-#{$i} {
+      @include column($j, $i);
+    }
+  }
+}
+
+@for $i from 1 through $grid-max-columns {
+  @include respond-to(small-only) {
+    .col-sm-#{$i} {
+      @include column($i);
+    }
+
+    @for $j from 1 through ($i - 1) {
+      .col-sm-#{$j}-#{$i} {
+        @include column($j, $i);
+      }
+    }
+  }
+
+  @include respond-to(medium-only) {
+    .col-md-#{$i} {
+      @include column($i);
+    }
+
+    @for $j from 1 through ($i - 1) {
+      .col-md-#{$j}-#{$i} {
+        @include column($j, $i);
+      }
+    }
+  }
+
+  @include respond-to(large-only) {
+    .col-lg-#{$i} {
+      @include column($i);
+    }
+
+    @for $j from 1 through ($i - 1) {
+      .col-lg-#{$j}-#{$i} {
+        @include column($j, $i);
+      }
+    }
+  }
+
+  @include respond-to(xlarge-only) {
+    .col-xl-#{$i} {
+      @include column($i);
+    }
+
+    @for $j from 1 through ($i - 1) {
+      .col-xl-#{$j}-#{$i} {
+        @include column($j, $i);
+      }
+    }
+  }
+
+  @include respond-to(xxlarge-up) {
+    .col-xxl-#{$i} {
+      @include column($i);
+    }
+
+    @for $j from 1 through ($i - 1) {
+      .col-xxl-#{$j}-#{$i} {
+        @include column($j, $i);
+      }
+    }
+  }
+}

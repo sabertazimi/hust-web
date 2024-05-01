@@ -1,0 +1,104 @@
+html {
+  font-size: $root-scale-ratio;
+}
+
+body {
+  @include font-size($text-base-size);
+
+  width: 100%;
+  height: 100%;
+  font-family: $font-stack;
+  color: $color-text;
+}
+
+/* vertical rhythm */
+h1,
+h2,
+h3,
+h4,
+h5,
+form legend {
+  margin-bottom: $space-xxs;
+  line-height: $heading-line-height;
+}
+
+h1 {
+  @include font-size($text-xxxlarge);
+}
+
+h2 {
+  @include font-size($text-xxlarge);
+}
+
+h3 {
+  @include font-size($text-xlarge);
+}
+
+h4 {
+  @include font-size($text-large);
+}
+
+h5 {
+  @include font-size($text-medium);
+}
+
+small {
+  @include font-size($text-small);
+}
+
+p {
+  line-height: $body-line-height;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+.text-container {
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: $space-sm;
+  }
+
+  ul,
+  ol,
+  p {
+    margin-bottom: $space-md;
+  }
+
+  ul,
+  ol {
+    padding-left: $space-sm;
+    list-style-position: inside;
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul li,
+  ol li {
+    line-height: $body-line-height;
+  }
+}
+
+/* text size */
+@each $name, $text-size in $font-main-list {
+  .text-#{$name} {
+    @include font-size($text-size);
+  }
+}
+
+.truncate {
+  // truncate text if it exceeds parent
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
