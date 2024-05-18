@@ -30,7 +30,7 @@
     "start": "pnpm dev"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^41.3.1",
+    "@ckeditor/ckeditor5-build-classic": "^41.4.2",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "scrollreveal": "^4.0.9"
@@ -59,7 +59,7 @@
     "postcss-loader": "^8.1.1",
     "postcss-nested": "^6.0.1",
     "prettier": "^3.2.5",
-    "sass": "^1.77.1",
+    "sass": "^1.77.2",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
     "stylelint": "^16.5.0",
