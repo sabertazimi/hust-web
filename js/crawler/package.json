@@ -24,6 +24,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "puppeteer-core": "^22.8.0"
+    "puppeteer-core": "^22.9.0"
   }
 }
