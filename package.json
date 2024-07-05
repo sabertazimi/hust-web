@@ -45,11 +45,11 @@
     "chalk": "^4.1.2",
     "consola": "^3.2.3",
     "eslint": "^8.57.0",
-    "lerna": "^8.1.5",
+    "lerna": "^8.1.6",
     "prettier": "^3.3.2",
     "semver": "^7.6.2",
     "stylelint": "^16.6.1",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   },
   "dependenciesMeta": {
     "scrollreveal": {
