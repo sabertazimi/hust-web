@@ -35,7 +35,7 @@
     "san-router": "^2.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.8",
+    "@babel/core": "^7.24.9",
     "@babel/plugin-transform-object-rest-spread": "^7.24.7",
     "@babel/preset-env": "^7.24.8",
     "@dg-scripts/eslint-config": "^5.21.1",
