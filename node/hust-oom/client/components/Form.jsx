@@ -23,22 +23,20 @@ class FormWrapper extends React.Component {
     const { activePanel } = this.state
 
     return (
-      <>
-        <FormProvider
-          value={{
-            activePanel,
-            actions: {
-              switchPanel: (newPanel) => {
-                this.setState({
-                  activePanel: newPanel,
-                })
-              },
+      <FormProvider
+        value={{
+          activePanel,
+          actions: {
+            switchPanel: (newPanel) => {
+              this.setState({
+                activePanel: newPanel,
+              })
             },
-          }}
-        >
-          {children}
-        </FormProvider>
-      </>
+          },
+        }}
+      >
+        {children}
+      </FormProvider>
     )
   }
 }
@@ -107,31 +105,29 @@ class _Login extends React.Component {
 
   render() {
     return (
-      <>
-        <div id="login-tab-content" className="active tabs-content">
-          <form className="login-form" onSubmit={this.handleSubmit}>
-            <input
-              type="email"
-              name="email"
-              className="input"
-              id="user_login"
-              onChange={this.handleChange}
-              placeholder="Email"
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              className="input"
-              id="user_pass"
-              onChange={this.handleChange}
-              placeholder="Password"
-              required
-            />
-            <input type="submit" className="button" value="Login" />
-          </form>
-        </div>
-      </>
+      <div id="login-tab-content" className="active tabs-content">
+        <form className="login-form" onSubmit={this.handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            className="input"
+            id="user_login"
+            onChange={this.handleChange}
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            className="input"
+            id="user_pass"
+            onChange={this.handleChange}
+            placeholder="Password"
+            required
+          />
+          <input type="submit" className="button" value="Login" />
+        </form>
+      </div>
     )
   }
 }
@@ -184,42 +180,40 @@ class _SignUp extends React.Component {
 
   render() {
     return (
-      <>
-        <div id="signup-tab-content" className="active tabs-content">
-          <form className="signup-form" onSubmit={this.handleSubmit}>
-            <input
-              type="email"
-              name="email"
-              className="input"
-              id="user_email"
-              onChange={this.handleChange}
-              placeholder="Email"
-              required
-            />
-            <input
-              type="text"
-              name="username"
-              className="input"
-              id="user_name"
-              onChange={this.handleChange}
-              placeholder="Username"
-              pattern="\w+"
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              className="input"
-              id="user_pass"
-              onChange={this.handleChange}
-              placeholder="Password (More than 6 bits)"
-              pattern="[0-9a-zA-Z]{6,}"
-              required
-            />
-            <input type="submit" className="button" value="Sign Up" />
-          </form>
-        </div>
-      </>
+      <div id="signup-tab-content" className="active tabs-content">
+        <form className="signup-form" onSubmit={this.handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            className="input"
+            id="user_email"
+            onChange={this.handleChange}
+            placeholder="Email"
+            required
+          />
+          <input
+            type="text"
+            name="username"
+            className="input"
+            id="user_name"
+            onChange={this.handleChange}
+            placeholder="Username"
+            pattern="\w+"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            className="input"
+            id="user_pass"
+            onChange={this.handleChange}
+            placeholder="Password (More than 6 bits)"
+            pattern="[0-9a-zA-Z]{6,}"
+            required
+          />
+          <input type="submit" className="button" value="Sign Up" />
+        </form>
+      </div>
     )
   }
 }

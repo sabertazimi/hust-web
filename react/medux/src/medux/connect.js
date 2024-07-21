@@ -7,7 +7,9 @@ export function Provider({ store, children }) {
     <StoreContext.Provider value={store}>
       <StoreContext.Consumer>
         {(store) => {
+          // eslint-disable-next-line react/no-children-map -- legacy code
           const childrenWithStore = React.Children.map(children, child =>
+            // eslint-disable-next-line react/no-clone-element -- legacy code
             React.cloneElement(child, { store }))
 
           return <div>{childrenWithStore}</div>
@@ -31,7 +33,8 @@ export function connect(mapStateToProps = () => ({}), mapDispatchToProps = () =>
         })
       }
 
-      componentWillMount() {
+      // eslint-disable-next-line react/no-unsafe-component-will-mount -- legacy code
+      UNSAFE_componentWillMount() {
         const { store } = this.props
         this.onStoreOrPropsChange(this.props)
         this.unsubscribe = store.subscribe(() =>
@@ -39,7 +42,8 @@ export function connect(mapStateToProps = () => ({}), mapDispatchToProps = () =>
         )
       }
 
-      componentWillReceiveProps(nextProps) {
+      // eslint-disable-next-line react/no-unsafe-component-will-receive-props -- legacy codee
+      UNSAFE_componentWillReceiveProps(nextProps) {
         this.onStoreOrPropsChange(nextProps)
       }
 
