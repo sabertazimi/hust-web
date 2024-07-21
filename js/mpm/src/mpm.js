@@ -102,8 +102,9 @@ class Mpm {
             if (
               semver.validRange(volatileDependency.reference)
               && semver.satisfies(availableReference, volatileDependency.reference)
-            )
+            ) {
               return false
+            }
 
             return true
           })

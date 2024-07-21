@@ -31,7 +31,7 @@ class App extends Meact.Component {
         <h1>Didact Stories</h1>
         <ul>
           {this.props.stories.map((story) => {
-            return <Story name={story.name} url={story.url} />
+            return <Story name={story.name} url={story.url} key={story.url} />
           })}
         </ul>
       </div>
@@ -48,9 +48,7 @@ class Story extends Meact.Component {
   }
 
   like() {
-    this.setState({
-      likes: this.state.likes + 1,
-    })
+    this.setState(({ likes }) => ({ likes: likes + 1 }))
   }
 
   render() {
@@ -58,7 +56,7 @@ class Story extends Meact.Component {
     const { likes } = this.state
     return (
       <li>
-        <button onClick={() => this.like()}>
+        <button onClick={() => this.like()} type="button">
           {likes}
           <b>❤️</b>
         </button>

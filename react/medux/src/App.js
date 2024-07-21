@@ -18,7 +18,7 @@ function NoteEditor({ note, onChangeNote, onCloseNote }) {
           rows={10}
         />
       </div>
-      <button className="editor-button" onClick={onCloseNote}>
+      <button className="editor-button" onClick={onCloseNote} type="button">
         Close
       </button>
     </div>
@@ -66,19 +66,19 @@ function NoteApp({
     <div>
       {openNoteId
         ? (
-          <NoteEditor
-            note={notes[openNoteId]}
-            onChangeNote={onChangeNote}
-            onCloseNote={onCloseNote}
-          />
+            <NoteEditor
+              note={notes[openNoteId]}
+              onChangeNote={onChangeNote}
+              onCloseNote={onCloseNote}
+            />
           )
         : (
-          <div>
-            <NoteList notes={notes} onOpenNote={onOpenNote} />
-            <button className="editor-button" onClick={onAddNote}>
-              New Note
-            </button>
-          </div>
+            <div>
+              <NoteList notes={notes} onOpenNote={onOpenNote} />
+              <button className="editor-button" onClick={onAddNote} type="button">
+                New Note
+              </button>
+            </div>
           )}
     </div>
   )

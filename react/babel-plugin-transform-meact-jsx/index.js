@@ -15,8 +15,9 @@ module.exports = (babel) => {
         if (
           path.node.specifiers[0]
           && path.node.specifiers[0].local.name === 'Meact'
-        )
+        ) {
           isMeactContextEnabled = true
+        }
       },
       MemberExpression(path) {
         if (

@@ -225,30 +225,30 @@ class DashboardComponent extends React.Component {
                       ))
                     )
                   : (
-                    <Message authorName="Welcome">
-                      <MessageText>Welcome to Chat System !</MessageText>
-                    </Message>
+                      <Message authorName="Welcome">
+                        <MessageText>Welcome to Chat System !</MessageText>
+                      </Message>
                     )}
               </MessageList>
             </div>
             <div>
               {messageList[currentWindow]
                 ? (
-                  <TextComposer
-                    onChange={this.handleType}
-                    onSend={this.handleSend}
-                  >
-                    <Row align="center">
-                      <TextInput
-                        placeholder="Write something to send ..."
-                        fill="true"
-                      />
-                      <SendButton fit="true" />
-                    </Row>
-                  </TextComposer>
+                    <TextComposer
+                      onChange={this.handleType}
+                      onSend={this.handleSend}
+                    >
+                      <Row align="center">
+                        <TextInput
+                          placeholder="Write something to send ..."
+                          fill="true"
+                        />
+                        <SendButton fit="true" />
+                      </Row>
+                    </TextComposer>
                   )
                 : (
-                  <br />
+                    <br />
                   )}
             </div>
           </div>
