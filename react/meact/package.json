@@ -28,10 +28,10 @@
     "start": "pnpm dev"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.9",
+    "@babel/core": "^7.25.2",
     "@babel/plugin-transform-class-properties": "^7.24.7",
     "@babel/plugin-transform-object-rest-spread": "^7.24.7",
-    "@babel/preset-env": "^7.25.0",
+    "@babel/preset-env": "^7.25.3",
     "@babel/preset-react": "^7.24.7",
     "autoprefixer": "^10.4.19",
     "babel-loader": "^9.1.3",
