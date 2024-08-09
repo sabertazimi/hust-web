@@ -30,7 +30,7 @@
     "start": "pnpm dev"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^42.0.2",
+    "@ckeditor/ckeditor5-build-classic": "^43.0.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "scrollreveal": "^4.0.9"
