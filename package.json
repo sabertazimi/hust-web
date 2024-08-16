@@ -1,6 +1,6 @@
 {
   "name": "hust-web",
-  "packageManager": "pnpm@9.7.0",
+  "packageManager": "pnpm@9.7.1",
   "description": "A repo for learning demo archives",
   "author": "sabertazimi",
   "license": "MIT",
@@ -49,7 +49,7 @@
     "lerna": "^8.1.8",
     "prettier": "^3.3.3",
     "semver": "^7.6.3",
-    "stylelint": "^16.8.1",
+    "stylelint": "^16.8.2",
     "typescript": "^5.5.4"
   },
   "dependenciesMeta": {
