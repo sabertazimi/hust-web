@@ -1,7 +1,7 @@
 {
   "name": "mpmjs",
   "version": "2.9.0",
-  "packageManager": "pnpm@9.7.1",
+  "packageManager": "pnpm@9.8.0",
   "description": "Minimal package manager",
   "author": "sabertazimi",
   "license": "MIT",
