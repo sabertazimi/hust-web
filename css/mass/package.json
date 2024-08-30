@@ -1,7 +1,7 @@
 {
   "name": "@sabertazimi/mass",
   "version": "2.9.0",
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@9.9.0",
   "description": "A minimal sass-based UI library",
   "author": "sabertazimi",
   "license": "MIT",
@@ -63,7 +63,7 @@
     "sass-loader": "^16.0.1",
     "sassdoc": "^2.7.4",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.8.2",
+    "stylelint": "^16.9.0",
     "stylelint-webpack-plugin": "^5.0.1",
     "terser-webpack-plugin": "^5.3.10",
     "typescript": "^5.5.4",
