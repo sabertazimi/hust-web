@@ -30,7 +30,7 @@
     "start": "pnpm dev"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^43.1.0",
+    "@ckeditor/ckeditor5-build-classic": "^43.1.1",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "scrollreveal": "^4.0.9"
@@ -66,7 +66,7 @@
     "stylelint-webpack-plugin": "^5.0.1",
     "typescript": "^5.6.2",
     "url-loader": "^4.1.1",
-    "webpack": "^5.94.0",
+    "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
   }
