@@ -132,11 +132,11 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       sass:
-        specifier: ^1.79.3
-        version: 1.79.3
+        specifier: ^1.79.4
+        version: 1.79.4
       sass-loader:
         specifier: ^16.0.2
-        version: 16.0.2(sass@1.79.3)(webpack@5.95.0(webpack-cli@5.1.4))
+        version: 16.0.2(sass@1.79.4)(webpack@5.95.0(webpack-cli@5.1.4))
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.95.0(webpack-cli@5.1.4))
@@ -234,11 +234,11 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       sass:
-        specifier: ^1.79.3
-        version: 1.79.3
+        specifier: ^1.79.4
+        version: 1.79.4
       sass-loader:
         specifier: ^16.0.2
-        version: 16.0.2(sass@1.79.3)(webpack@5.95.0(webpack-cli@5.1.4))
+        version: 16.0.2(sass@1.79.4)(webpack@5.95.0(webpack-cli@5.1.4))
       sassdoc:
         specifier: ^2.7.4
         version: 2.7.4(chokidar@3.6.0)
@@ -761,11 +761,11 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       sass:
-        specifier: ^1.79.3
-        version: 1.79.3
+        specifier: ^1.79.4
+        version: 1.79.4
       sass-loader:
         specifier: ^16.0.2
-        version: 16.0.2(sass@1.79.3)(webpack@5.95.0(webpack-cli@5.1.4))
+        version: 16.0.2(sass@1.79.4)(webpack@5.95.0(webpack-cli@5.1.4))
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.95.0(webpack-cli@5.1.4))
@@ -862,11 +862,11 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       sass:
-        specifier: ^1.79.3
-        version: 1.79.3
+        specifier: ^1.79.4
+        version: 1.79.4
       sass-loader:
         specifier: ^16.0.2
-        version: 16.0.2(sass@1.79.3)(webpack@5.95.0(webpack-cli@5.1.4))
+        version: 16.0.2(sass@1.79.4)(webpack@5.95.0(webpack-cli@5.1.4))
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.95.0(webpack-cli@5.1.4))
@@ -903,7 +903,7 @@ importers:
     devDependencies:
       '@sabertazimi/react-scripts':
         specifier: ^5.21.3
-        version: 5.21.3(@types/babel__core@7.20.5)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@7.16.1(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.3)(type-fest@0.21.3)(typescript@5.6.2)
+        version: 5.21.3(@types/babel__core@7.20.5)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@7.16.1(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.4)(type-fest@0.21.3)(typescript@5.6.2)
 
   react/meact:
     devDependencies:
@@ -1052,7 +1052,7 @@ importers:
     devDependencies:
       '@sabertazimi/react-scripts':
         specifier: ^5.21.3
-        version: 5.21.3(@types/babel__core@7.20.5)(@types/node@20.16.10)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@8.0.0-alpha.40(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.3)(type-fest@0.21.3)(typescript@5.6.2)
+        version: 5.21.3(@types/babel__core@7.20.5)(@types/node@20.16.10)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@8.0.0-alpha.40(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.4)(type-fest@0.21.3)(typescript@5.6.2)
       '@testing-library/dom':
         specifier: ^10.4.0
         version: 10.4.0
@@ -1098,7 +1098,7 @@ importers:
     devDependencies:
       '@sabertazimi/react-scripts':
         specifier: ^5.21.3
-        version: 5.21.3(@types/babel__core@7.20.5)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@8.0.0-alpha.40(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.3)(type-fest@0.21.3)(typescript@5.6.2)
+        version: 5.21.3(@types/babel__core@7.20.5)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@8.0.0-alpha.40(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.4)(type-fest@0.21.3)(typescript@5.6.2)
 
 packages:
 
@@ -10424,8 +10424,8 @@ packages:
       webpack:
         optional: true
 
-  sass@1.79.3:
-    resolution: {integrity: sha512-m7dZxh0W9EZ3cw50Me5GOuYm/tVAJAn91SUnohLRo9cXBixGUOdvmryN+dXpwR831bhoY3Zv7rEFt85PUwTmzA==}
+  sass@1.79.4:
+    resolution: {integrity: sha512-K0QDSNPXgyqO4GZq2HO5Q70TLxTH6cIT59RdoCHMivrC8rqzaTw5ab9prjz9KUN1El4FLXrBXJhik61JR4HcGg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -15311,7 +15311,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@sabertazimi/react-scripts@5.21.3(@types/babel__core@7.20.5)(@types/node@20.16.10)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@8.0.0-alpha.40(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.3)(type-fest@0.21.3)(typescript@5.6.2)':
+  '@sabertazimi/react-scripts@5.21.3(@types/babel__core@7.20.5)(@types/node@20.16.10)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@8.0.0-alpha.40(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.4)(type-fest@0.21.3)(typescript@5.6.2)':
     dependencies:
       '@babel/core': 7.25.2
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@0.21.3)(webpack-dev-server@5.1.0(webpack@5.95.0))(webpack@5.95.0)
@@ -15355,7 +15355,7 @@ snapshots:
       react-refresh: 0.14.2
       resolve: 1.22.8
       resolve-url-loader: 5.0.0
-      sass-loader: 14.2.1(sass@1.79.3)(webpack@5.95.0)
+      sass-loader: 14.2.1(sass@1.79.4)(webpack@5.95.0)
       semver: 7.6.3
       source-map-loader: 5.0.0(webpack@5.95.0)
       style-loader: 4.0.0(webpack@5.95.0)
@@ -15421,7 +15421,7 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@sabertazimi/react-scripts@5.21.3(@types/babel__core@7.20.5)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@7.16.1(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.3)(type-fest@0.21.3)(typescript@5.6.2)':
+  '@sabertazimi/react-scripts@5.21.3(@types/babel__core@7.20.5)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@7.16.1(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.4)(type-fest@0.21.3)(typescript@5.6.2)':
     dependencies:
       '@babel/core': 7.25.2
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@0.21.3)(webpack-dev-server@5.1.0(webpack@5.95.0))(webpack@5.95.0)
@@ -15465,7 +15465,7 @@ snapshots:
       react-refresh: 0.14.2
       resolve: 1.22.8
       resolve-url-loader: 5.0.0
-      sass-loader: 14.2.1(sass@1.79.3)(webpack@5.95.0)
+      sass-loader: 14.2.1(sass@1.79.4)(webpack@5.95.0)
       semver: 7.6.3
       source-map-loader: 5.0.0(webpack@5.95.0)
       style-loader: 4.0.0(webpack@5.95.0)
@@ -15531,7 +15531,7 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@sabertazimi/react-scripts@5.21.3(@types/babel__core@7.20.5)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@8.0.0-alpha.40(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.3)(type-fest@0.21.3)(typescript@5.6.2)':
+  '@sabertazimi/react-scripts@5.21.3(@types/babel__core@7.20.5)(@typescript-eslint/eslint-plugin@7.16.1(@typescript-eslint/parser@8.0.0-alpha.40(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2))(babel-plugin-macros@3.1.0)(react@18.3.1)(sass@1.79.4)(type-fest@0.21.3)(typescript@5.6.2)':
     dependencies:
       '@babel/core': 7.25.2
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@0.21.3)(webpack-dev-server@5.1.0(webpack@5.95.0))(webpack@5.95.0)
@@ -15575,7 +15575,7 @@ snapshots:
       react-refresh: 0.14.2
       resolve: 1.22.8
       resolve-url-loader: 5.0.0
-      sass-loader: 14.2.1(sass@1.79.3)(webpack@5.95.0)
+      sass-loader: 14.2.1(sass@1.79.4)(webpack@5.95.0)
       semver: 7.6.3
       source-map-loader: 5.0.0(webpack@5.95.0)
       style-loader: 4.0.0(webpack@5.95.0)
@@ -25215,21 +25215,21 @@ snapshots:
       through2: 2.0.5
       which: 1.3.1
 
-  sass-loader@14.2.1(sass@1.79.3)(webpack@5.95.0):
+  sass-loader@14.2.1(sass@1.79.4)(webpack@5.95.0):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
-      sass: 1.79.3
+      sass: 1.79.4
       webpack: 5.95.0
 
-  sass-loader@16.0.2(sass@1.79.3)(webpack@5.95.0(webpack-cli@5.1.4)):
+  sass-loader@16.0.2(sass@1.79.4)(webpack@5.95.0(webpack-cli@5.1.4)):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
-      sass: 1.79.3
+      sass: 1.79.4
       webpack: 5.95.0(webpack-cli@5.1.4)
 
-  sass@1.79.3:
+  sass@1.79.4:
     dependencies:
       chokidar: 4.0.0
       immutable: 4.3.5
