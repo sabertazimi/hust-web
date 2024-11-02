@@ -1,7 +1,7 @@
 {
   "name": "mpmjs",
   "version": "2.9.0",
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@9.12.3",
   "description": "Minimal package manager",
   "author": "sabertazimi",
   "license": "MIT",
@@ -49,7 +49,7 @@
     "gunzip-maybe": "^1.4.2",
     "log4js": "^6.9.1",
     "node-fetch": "^2.7.0",
-    "ora": "^8.1.0",
+    "ora": "^8.1.1",
     "semver": "^7.6.3",
     "tar-fs": "^3.0.6",
     "tar-stream": "^3.1.7"
