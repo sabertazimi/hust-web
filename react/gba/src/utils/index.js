@@ -1,4 +1,4 @@
-import Hash from './hash'
 import BoardVisitor from './boardVisitor'
+import Hash from './hash'
 
-export { Hash, BoardVisitor }
+export { BoardVisitor, Hash }

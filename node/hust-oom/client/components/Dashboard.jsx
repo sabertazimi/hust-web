@@ -1,28 +1,9 @@
-import {
-  AgentBar,
-  Avatar,
-  ChatList,
-  ChatListItem,
-  Column,
-  IconButton,
-  Message,
-  MessageList,
-  MessageText,
-  Row,
-  SendButton,
-  SendIcon,
-  Subtitle,
-  TextComposer,
-  TextInput,
-  ThemeProvider,
-  Title,
-} from '@livechat/ui-kit'
 import React from 'react'
 import { connect } from 'react-redux'
 import * as io from 'socket.io-client'
 import { SERVER_URL } from '../constants'
-import './Dashboard.scss'
 import withRouter from './withRouter'
+import './Dashboard.scss'
 
 class ChatMessage {
   constructor(from = '', to = '', content = '') {

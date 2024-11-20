@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const fs = require('node:fs')
-const process = require('node:process')
 const path = require('node:path')
+const process = require('node:process')
 const { program } = require('commander')
 const log = require('log4js').getLogger()
 const mpm = require('./mpm.js')
@@ -20,8 +20,8 @@ program
   .command('install [package]')
   .alias('i')
   .description('Install dependencies')
-  .action((package) => {
-    if (!package) {
+  .action((_package) => {
+    if (!_package) {
       const cwd = process.cwd()
       // eslint-disable-next-line security/detect-non-literal-require -- cwd is not user input.
       const packageJson = require(path.join(cwd, 'package.json'))

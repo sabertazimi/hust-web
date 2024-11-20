@@ -5,9 +5,9 @@
 import { EMPTY } from '../constants'
 import { Hash } from '../utils'
 
-import SM from './stateMachine'
-import SBTS from './sbts'
 import Node from './node'
+import SBTS from './sbts'
+import SM from './stateMachine'
 
 class MCTS {
   constructor(UCB1ExploreParam = 2) {

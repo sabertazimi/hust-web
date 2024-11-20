@@ -28,13 +28,4 @@ $color-success: #37b24d !default;
 $color-warning: #f59f00 !default;
 $color-danger: #f03e3e !default;
 $color-info: #1c7ed6 !default;
-$font-stack: (
-  'Raleway',
-  'HelveticaNeue',
-  'Helvetica Neue',
-  helvetica,
-  'Open Sans',
-  arial,
-  sans-serif,
-  serif
-) !default;
+$font-stack: ('Raleway', 'Helvetica', 'Arial', sans-serif, serif) !default;

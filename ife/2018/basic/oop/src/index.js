@@ -35,8 +35,7 @@ function app() {
       }
 
       return true
-    })
-      .catch(console.error)
+    }).catch(console.error)
   }
 
   mainLoop()

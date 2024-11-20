@@ -2,17 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#000000" />
     <title>Bootstrap CMS Theme</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-    <link
-      href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -85,14 +79,7 @@
                 Create Content
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a
-                  class="dropdown-item"
-                  href="#"
-                  data-toggle="modal"
-                  data-target="#addPageModal"
-                >
-                  Add Page
-                </a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addPageModal"> Add Page </a>
                 <a class="dropdown-item" href="#">Add Post</a>
                 <a class="dropdown-item" href="#">Add User</a>
               </div>
@@ -125,23 +112,17 @@
               <a href="pages.html" class="list-group-item">
                 <i class="fa fa-list-alt" aria-hidden="true"></i>
                 Pages
-                <span class="badge badge-pill badge-primary float-right mt-1"
-                  >5</span
-                >
+                <span class="badge badge-pill badge-primary float-right mt-1">5</span>
               </a>
               <a href="posts.html" class="list-group-item">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
                 Posts
-                <span class="badge badge-pill badge-primary float-right mt-1"
-                  >253</span
-                >
+                <span class="badge badge-pill badge-primary float-right mt-1">253</span>
               </a>
               <a href="users.html" class="list-group-item">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 Users
-                <span class="badge badge-pill badge-primary float-right mt-1"
-                  >24</span
-                >
+                <span class="badge badge-pill badge-primary float-right mt-1">24</span>
               </a>
             </div>
             <!-- Resources Statistics -->
@@ -180,9 +161,7 @@
           <div class="col-md-9">
             <!-- Website Overview -->
             <div class="card mb-3">
-              <div class="card-header text-white bg-primary">
-                Website Overview
-              </div>
+              <div class="card-header text-white bg-primary">Website Overview</div>
               <div class="card-body text-center">
                 <div class="row">
                   <div class="col-md-3">
@@ -276,9 +255,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div
-        class="container-fluid p-4 font-weight-bold text-center text-muted bg-dark"
-      >
+      <div class="container-fluid p-4 font-weight-bold text-center text-muted bg-dark">
         <p class="mb-0">Copyright &copy; 2019-now</p>
       </div>
     </footer>
@@ -297,66 +274,34 @@
           <form>
             <div class="modal-header">
               <h5 class="modal-title">Add Page</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
               <div class="form-group">
                 <label for="inputPageTitle">Page Title</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputPageTitle"
-                  placeholder="Enter Page Title"
-                />
+                <input type="text" class="form-control" id="inputPageTitle" placeholder="Enter Page Title" />
               </div>
               <div class="form-group">
                 <label for="pageEditor">Page Body</label>
                 <textarea name="pageEditor" id="pageEditor"></textarea>
               </div>
               <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="inputPublishPage"
-                />
-                <label class="form-check-label" for="inputPublishPage"
-                  >Published</label
-                >
+                <input type="checkbox" class="form-check-input" id="inputPublishPage" />
+                <label class="form-check-label" for="inputPublishPage">Published</label>
               </div>
               <div class="form-group">
                 <label for="inputMetaTags">Meta Tags</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputMetaTags"
-                  placeholder="Add Some Tags"
-                />
+                <input type="text" class="form-control" id="inputMetaTags" placeholder="Add Some Tags" />
               </div>
               <div class="form-group">
                 <label for="inputMetaDescription">Meta Description</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputMetaDescription"
-                  placeholder="Add Meta Description"
-                />
+                <input type="text" class="form-control" id="inputMetaDescription" placeholder="Add Meta Description" />
               </div>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="submit" class="btn btn-primary">Save</button>
             </div>
           </form>
@@ -365,18 +310,9 @@
     </div>
 
     <!-- CKEditor Setup Failure Alert -->
-    <div
-      id="ckeAlert"
-      class="alert alert-danger alert-dismissible fade d-none"
-      role="alert"
-    >
+    <div id="ckeAlert" class="alert alert-danger alert-dismissible fade d-none" role="alert">
       <strong>Error!</strong> CKEditor setup failed.
-      <button
-        type="button"
-        class="close"
-        data-dismiss="alert"
-        aria-label="Close"
-      >
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>

@@ -1,5 +1,5 @@
-import { createDOMElement, updateDOMProperties } from './dom-utils.js'
 import { createInstance } from './component.js'
+import { createDOMElement, updateDOMProperties } from './dom-utils.js'
 
 // fiber tags
 const HOST_COMPONENT = 'host'
@@ -308,4 +308,4 @@ function render(elements, container) {
   requestIdleCallback(performWork)
 }
 
-export { scheduleUpdate, render }
+export { render, scheduleUpdate }

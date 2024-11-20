@@ -1,5 +1,5 @@
-import { createElement } from './element.js'
 import { Component } from './component.js'
+import { createElement } from './element.js'
 import { render } from './reconciler.js'
 
 const Meact = {

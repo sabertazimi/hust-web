@@ -3,6 +3,7 @@ import globals from 'globals'
 
 export default eslintConfig.append({
   rules: {
+    'react/jsx-uses-vars': 'error',
     'react/prop-types': 'off',
     'security/detect-object-injection': 'off',
   },

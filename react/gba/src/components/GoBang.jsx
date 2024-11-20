@@ -3,8 +3,8 @@ import React from 'react'
 import { BLACK, COLS, DEATH, ROWS, WHITE } from '../constants'
 
 import Game from '../core'
-import Grid from './Grid'
 import Cell from './Cell'
+import Grid from './Grid'
 
 import './GoBang.scss'
 

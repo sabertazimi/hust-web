@@ -1,9 +1,7 @@
-import React from 'react'
-
-import { connect } from './medux'
-
 import createAction from './action.js'
+
 import { CLOSE_NOTE, CREATE_NOTE, OPEN_NOTE, UPDATE_NOTE } from './constants.js'
+import { connect } from './medux'
 
 function NoteEditor({ note, onChangeNote, onCloseNote }) {
   return (

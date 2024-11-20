@@ -1,7 +1,7 @@
 jest.mock('node-fetch')
 const fetch = require('node-fetch')
-const { getFileName } = require('./utils.js')
 const mpm = require('./mpm.js')
+const { getFileName } = require('./utils.js')
 
 describe('utils.getFileName', () => {
   it('should return [null] when [virtualPath] mismatch [entryName]', () => {

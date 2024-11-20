@@ -2,13 +2,4 @@ $color-grey: #999 !default;
 $color-black: #333 !default;
 $color-white: #fff !default;
 $color-red: #f03e3e !default;
-$font-stack: (
-  'Raleway',
-  'HelveticaNeue',
-  'Helvetica Neue',
-  helvetica,
-  'Open Sans',
-  arial,
-  sans-serif,
-  serif
-) !default;
+$font-stack: ('Raleway', 'Helvetica', 'Arial', sans-serif, serif) !default;
