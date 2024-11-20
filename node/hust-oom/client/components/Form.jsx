@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { SERVER_LOGIN_PATH, SERVER_SIGNUP_PATH, SERVER_URL } from '../constants'
 import Actions from '../states/actions'
 import postData from '../utils/postData'
-import './Form.scss'
 import withRouter from './withRouter'
+import './Form.scss'
 
 const FormContext = React.createContext({})
 const FormProvider = FormContext.Provider

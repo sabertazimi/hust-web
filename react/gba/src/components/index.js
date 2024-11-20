@@ -1,5 +1,5 @@
-import Grid from './Grid'
 import Cell from './Cell'
 import GoBang from './GoBang'
+import Grid from './Grid'
 
-export { Grid, Cell, GoBang }
+export { Cell, GoBang, Grid }

@@ -1,7 +1,7 @@
 import { AIMode, EMPTY } from '../constants'
 
-import SM from './stateMachine'
 import AI from './ai'
+import SM from './stateMachine'
 
 const Game = {
   getInitState() {

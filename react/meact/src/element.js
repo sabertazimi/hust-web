@@ -24,4 +24,4 @@ function createElement(type, config, ...args) {
   }
 }
 
-export { TEXT_ELEMENT_TYPE, createElement }
+export { createElement, TEXT_ELEMENT_TYPE }

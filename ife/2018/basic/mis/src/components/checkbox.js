@@ -1,6 +1,6 @@
-import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from '../state/constants'
-
 import createAction from '../state/action'
+
+import { FILTER_ALL, FILTER_DATA, SHOW_ALL } from '../state/constants'
 import store from '../state/store'
 
 const { dispatch } = store

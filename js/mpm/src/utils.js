@@ -1,7 +1,7 @@
 const { Buffer } = require('node:buffer')
 const gunzipMaybe = require('gunzip-maybe')
-const tar = require('tar-stream')
 const tarFs = require('tar-fs')
+const tar = require('tar-stream')
 
 function getFileName(entryName, virtualPath) {
   // remove prefix '/'

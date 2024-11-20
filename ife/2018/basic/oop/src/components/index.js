@@ -1,6 +1,6 @@
-import Restaurant from './restaurant'
-import Waiter from './waiter'
 import Cook from './cook'
 import Customer from './customer'
+import Restaurant from './restaurant'
+import Waiter from './waiter'
 
-export { Restaurant, Waiter, Cook, Customer }
+export { Cook, Customer, Restaurant, Waiter }

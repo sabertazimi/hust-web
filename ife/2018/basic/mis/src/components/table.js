@@ -50,7 +50,7 @@ function generateTable(data) {
 
     return 1
   })
-  const months = [...Array.from(Array(12).keys())].map(number => number + 1)
+  const months = [...Array.from(Array.from({ length: 12 }).keys())].map(number => number + 1)
   const headersHTML = generateHeader(['product', 'region', ...months])
   const bodyHTML = sortedData
     .map((item, index, array) => {

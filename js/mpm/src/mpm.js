@@ -5,8 +5,8 @@ const path = require('node:path')
 
 const fs = require('fs-extra')
 const fetch = require('node-fetch')
-const semver = require('semver')
 const ora = require('ora')
+const semver = require('semver')
 
 const REGISTRY_URL = 'https://registry.npmjs.org'
 const readPackageJsonFromArchive

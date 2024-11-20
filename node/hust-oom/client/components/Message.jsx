@@ -1,5 +1,3 @@
-import React from 'react'
-
 // class MessageList extends React.PureComponent {
 //   render() {
 //     return (

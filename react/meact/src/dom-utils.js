@@ -47,4 +47,4 @@ function createDOMElement(element) {
   return dom
 }
 
-export { updateDOMProperties, createDOMElement }
+export { createDOMElement, updateDOMProperties }

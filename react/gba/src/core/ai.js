@@ -1,6 +1,6 @@
-import { AIMode } from '../constants'
-
 import config from '../ai.json'
+
+import { AIMode } from '../constants'
 import MCTS from './mcts'
 
 class AI {
