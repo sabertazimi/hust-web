@@ -1,0 +1,39 @@
+html,
+body {
+    margin: 0 auto;
+    padding: 0px auto;
+
+    text-align: center;
+
+    font: 14px/1.5 "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+#stack {
+    margin-top: 30px;
+}
+
+.demo {
+    margin-top: 50px;
+}
+
+.input-custom,
+.btn-custom {
+    padding: 6px 20px;
+
+    color: #e74f4d;
+    border: 1px solid #e74f4d;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.input-custom:hover,
+.btn-custom:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: #e74f4d;
+}
+
+a {
+    text-decoration: none;
+    margin: 0 5px;
+}
