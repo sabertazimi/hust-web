@@ -48,7 +48,7 @@
     "express-rate-limit": "^7.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-redux": "^9.1.2",
+    "react-redux": "^9.2.0",
     "react-router": "^7.0.2",
     "redux": "^5.0.1",
     "socket.io": "^4.8.1",
@@ -72,11 +72,11 @@
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
-    "nodemon": "^3.1.7",
+    "nodemon": "^3.1.9",
     "postcss": "^8.4.49",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.4.2",
-    "sass": "^1.82.0",
+    "sass": "^1.83.0",
     "sass-loader": "^16.0.4",
     "style-loader": "^4.0.0",
     "stylelint": "^16.11.0",
@@ -84,6 +84,6 @@
     "typescript": "^5.7.2",
     "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.2.0"
   }
 }
