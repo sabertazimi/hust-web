@@ -14,8 +14,8 @@ function createElement(type, config, ...args) {
       c instanceof Object
         ? c
         : createElement(TEXT_ELEMENT_TYPE, {
-          nodeValue: c,
-        }),
+            nodeValue: c,
+          }),
     )
 
   return {

@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import { BLACK, CELL_SIZE, WHITE } from '../constants'
 
 import './Cell.scss'
@@ -33,14 +31,6 @@ function Cell(props) {
       <div className={innerClass} />
     </div>
   )
-}
-
-Cell.propTypes = {
-  row: PropTypes.number.isRequired,
-  col: PropTypes.number.isRequired,
-  rows: PropTypes.number.isRequired,
-  cols: PropTypes.number.isRequired,
-  val: PropTypes.number.isRequired,
 }
 
 export default Cell
