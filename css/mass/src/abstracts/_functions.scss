@@ -1,5 +1,6 @@
-@use 'sass:math';
+@use 'sass:color';
 @use 'sass:map';
+@use 'sass:math';
 
 ////
 /// Global function helpers
@@ -30,7 +31,7 @@
 /// @return {Color}
 /// @group Color
 @function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
+  @return color.mix(white, $color, $percentage);
 }
 
 /// Slightly darken a color
@@ -41,7 +42,7 @@
 /// @return {Color}
 /// @group Color
 @function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
+  @return color.mix(black, $color, $percentage);
 }
 
 /// Throw error message and stop execution
@@ -58,10 +59,10 @@
 /// @return {Length} px
 /// @group Typography
 @function rem2px($rem) {
-  @if unitless($rem) {
+  @if math.is-unitless($rem) {
     @warn 'Assuming #{$rem} to be in rems, attempting to convert it into rems.';
     @return null;
-  } @else if unit($rem) == px {
+  } @else if math.unit($rem) == px {
     @return $rem;
   }
 

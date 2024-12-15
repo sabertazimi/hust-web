@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import { CELL_SIZE } from '../constants'
 
 import './Grid.scss'
@@ -55,11 +53,6 @@ function Grid({ rows, cols }) {
       {cellNodes}
     </div>
   )
-}
-
-Grid.propTypes = {
-  rows: PropTypes.number.isRequired,
-  cols: PropTypes.number.isRequired,
 }
 
 export default Grid

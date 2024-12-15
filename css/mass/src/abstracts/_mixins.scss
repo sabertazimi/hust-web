@@ -4,6 +4,8 @@
 /// @author sabertazimi
 ////
 
+@use 'sass:list';
+
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -81,35 +83,35 @@
       @content;
     }
   } @else if $range == small-only {
-    @media only screen and (max-width: nth($small-range, 2)) {
+    @media only screen and (max-width: list.nth($small-range, 2)) {
       @content;
     }
   } @else if $range == medium-up {
-    @media only screen and (min-width: nth($medium-range, 1)) {
+    @media only screen and (min-width: list.nth($medium-range, 1)) {
       @content;
     }
   } @else if $range == medium-only {
-    @media only screen and (min-width: nth($medium-range, 1)) and (max-width: nth($medium-range, 2)) {
+    @media only screen and (min-width: list.nth($medium-range, 1)) and (max-width: list.nth($medium-range, 2)) {
       @content;
     }
   } @else if $range == large-up {
-    @media only screen and (min-width: nth($large-range, 1)) {
+    @media only screen and (min-width: list.nth($large-range, 1)) {
       @content;
     }
   } @else if $range == large-only {
-    @media only screen and (min-width: nth($large-range, 1)) and (max-width: nth($large-range, 2)) {
+    @media only screen and (min-width: list.nth($large-range, 1)) and (max-width: list.nth($large-range, 2)) {
       @content;
     }
   } @else if $range == xlarge-up {
-    @media only screen and (min-width: nth($xlarge-range, 1)) {
+    @media only screen and (min-width: list.nth($xlarge-range, 1)) {
       @content;
     }
   } @else if $range == xlarge-only {
-    @media only screen and (min-width: nth($xlarge-range, 1)) and (max-width: nth($xlarge-range, 2)) {
+    @media only screen and (min-width: list.nth($xlarge-range, 1)) and (max-width: list.nth($xlarge-range, 2)) {
       @content;
     }
   } @else if $range == xxlarge-up {
-    @media only screen and (min-width: nth($xxlarge-range, 1)) {
+    @media only screen and (min-width: list.nth($xxlarge-range, 1)) {
       @content;
     }
   } @else {

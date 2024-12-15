@@ -4,7 +4,7 @@ export function Provider({ store, children }) {
   const StoreContext = React.createContext(store)
 
   return (
-    <StoreContext.Provider value={store}>
+    <StoreContext value={store}>
       <StoreContext.Consumer>
         {(store) => {
           // eslint-disable-next-line react/no-children-map -- legacy code
@@ -15,7 +15,7 @@ export function Provider({ store, children }) {
           return <div>{childrenWithStore}</div>
         }}
       </StoreContext.Consumer>
-    </StoreContext.Provider>
+    </StoreContext>
   )
 }
 
