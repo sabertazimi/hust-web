@@ -1,7 +1,7 @@
 {
   "name": "@sabertazimi/mass",
   "version": "2.9.0",
-  "packageManager": "pnpm@9.15.1",
+  "packageManager": "pnpm@9.15.2",
   "description": "A minimal sass-based UI library",
   "author": "sabertazimi",
   "license": "MIT",
