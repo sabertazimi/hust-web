@@ -14,7 +14,7 @@
     "test": "react-scripts test"
   },
   "dependencies": {
-    "bulma": "^1.0.2",
+    "bulma": "^1.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
