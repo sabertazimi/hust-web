@@ -1,0 +1,163 @@
+.degree-effect {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  color: #3498db;
+  text-align: center;
+  background: #f1f1f1;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .degree-effect i {
+    font-size: 1.8em;
+    line-height: 90px;
+    transition: none;
+  }
+}
+
+.degree-effect i {
+  font-size: 1.8em;
+  line-height: 90px;
+  transition: 0.2s linear;
+}
+
+.degree-effect:hover i,
+.degree-effect:focus i {
+  color: white;
+  transform: scale(1.3);
+}
+
+.degree-effect::before {
+  position: absolute;
+  top: 90%;
+  left: -110%;
+  width: 120%;
+  height: 120%;
+  content: '';
+  background: #3498db;
+  transform: rotate(45deg);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .degree-effect:hover::before,
+  .degree-effect:focus::before {
+    top: -10%;
+    left: -10%;
+    animation: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .degree-effect:hover::before,
+  .degree-effect:focus::before {
+    top: -10%;
+    left: -10%;
+    animation: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .degree-effect:hover::before,
+  .degree-effect:focus::before {
+    top: -10%;
+    left: -10%;
+    animation: none;
+  }
+}
+
+.degree-effect:hover::before,
+.degree-effect:focus::before {
+  top: -10%;
+  left: -10%;
+  animation: degree 0.7s 1;
+}
+
+@keyframes degree {
+  0% {
+    top: 90%;
+    left: -110%;
+  }
+
+  50% {
+    top: -30%;
+    left: 10%;
+  }
+
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+
+.switch-effect {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+  background: #ffc109;
+  border: 1px solid #ffc109;
+  border-radius: 5px;
+  outline: none;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .switch-effect::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.2em;
+    color: white;
+    content: 'Hover Me';
+    transition: none;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.switch-effect::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.2em;
+  color: white;
+  content: 'Hover Me';
+  transition: all 0.5s;
+  transform: translate(-50%, -50%);
+}
+
+.switch-effect:hover::before,
+.switch-effect:focus::before {
+  top: -2em;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .switch-effect::after {
+    position: absolute;
+    bottom: -2em;
+    left: 50%;
+    font-size: 1.2em;
+    color: white;
+    content: 'Superise';
+    transition: none;
+    transform: translate(-50%, 50%);
+  }
+}
+
+.switch-effect::after {
+  position: absolute;
+  bottom: -2em;
+  left: 50%;
+  font-size: 1.2em;
+  color: white;
+  content: 'Superise';
+  transition: all 0.5s;
+  transform: translate(-50%, 50%);
+}
+
+.switch-effect:hover::after,
+.switch-effect:focus::after {
+  bottom: 50%;
+}
