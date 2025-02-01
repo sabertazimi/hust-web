@@ -55,7 +55,7 @@
     "prettier": "^3.4.2",
     "san-loader": "^0.3.7",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.14.0",
+    "stylelint": "^16.14.1",
     "stylelint-webpack-plugin": "^5.0.1",
     "typescript": "^5.7.3",
     "webpack": "^5.97.1",
