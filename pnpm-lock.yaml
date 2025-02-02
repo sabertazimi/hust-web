@@ -633,8 +633,8 @@ importers:
         specifier: ^2.7.0
         version: 2.7.0(encoding@0.1.13)
       ora:
-        specifier: ^8.1.1
-        version: 8.1.1
+        specifier: ^8.2.0
+        version: 8.2.0
       semver:
         specifier: ^7.7.0
         version: 7.7.0
@@ -8875,8 +8875,8 @@ packages:
     resolution: {integrity: sha512-5b6Y85tPxZZ7QytO+BQzysW31HJku27cRIlkbAXaNx+BdcVi+LlRFmVXzeF6a7JCwJpyw5c4b+YSVImQIrBpuQ==}
     engines: {node: '>=10'}
 
-  ora@8.1.1:
-    resolution: {integrity: sha512-YWielGi1XzG1UTvOaCFaNgEnuhZVMSHYkW/FQ7UX8O26PtlpdM84c0f7wLPlkvx2RfiQmnzd61d/MGxmpQeJPw==}
+  ora@8.2.0:
+    resolution: {integrity: sha512-weP+BZ8MVNnlCm8c0Qdc1WSWq4Qn7I+9CJGm7Qali6g44e/PUzbjNqJX5NJ9ljlNMosfJvg1fKEGILklK9cwnw==}
     engines: {node: '>=18'}
 
   ordered-read-streams@1.0.1:
@@ -22641,7 +22641,7 @@ snapshots:
       strip-ansi: 6.0.1
       wcwidth: 1.0.1
 
-  ora@8.1.1:
+  ora@8.2.0:
     dependencies:
       chalk: 5.3.0
       cli-cursor: 5.0.0
