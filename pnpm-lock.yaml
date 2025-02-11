@@ -7,6 +7,9 @@ settings:
 importers:
 
   .:
+    dependenciesMeta:
+      scrollreveal:
+        built: false
     devDependencies:
       '@dg-scripts/eslint-config':
         specifier: ^5.21.5
@@ -41,9 +44,6 @@ importers:
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
-    dependenciesMeta:
-      scrollreveal:
-        built: false
 
   css: {}
 
