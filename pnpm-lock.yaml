@@ -102,8 +102,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0(jiti@1.21.6)
       eslint-webpack-plugin:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
+        specifier: ^5.0.0
+        version: 5.0.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
       file-loader:
         specifier: ^6.2.0
         version: 6.2.0(webpack@5.98.0)
@@ -207,8 +207,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0(jiti@1.21.6)
       eslint-webpack-plugin:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
+        specifier: ^5.0.0
+        version: 5.0.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
       html-loader:
         specifier: ^5.1.0
         version: 5.1.0(webpack@5.98.0)
@@ -402,8 +402,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0(jiti@1.21.6)
       eslint-webpack-plugin:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
+        specifier: ^5.0.0
+        version: 5.0.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
       html-loader:
         specifier: ^5.1.0
         version: 5.1.0(webpack@5.98.0)
@@ -480,8 +480,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0(jiti@1.21.6)
       eslint-webpack-plugin:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
+        specifier: ^5.0.0
+        version: 5.0.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
       html-loader:
         specifier: ^5.1.0
         version: 5.1.0(webpack@5.98.0)
@@ -568,8 +568,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0(jiti@1.21.6)
       eslint-webpack-plugin:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
+        specifier: ^5.0.0
+        version: 5.0.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
       html-loader:
         specifier: ^5.1.0
         version: 5.1.0(webpack@5.98.0)
@@ -737,8 +737,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0(jiti@1.21.6)
       eslint-webpack-plugin:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
+        specifier: ^5.0.0
+        version: 5.0.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
       html-loader:
         specifier: ^5.1.0
         version: 5.1.0(webpack@5.98.0)
@@ -838,8 +838,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0(jiti@1.21.6)
       eslint-webpack-plugin:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
+        specifier: ^5.0.0
+        version: 5.0.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0)
       html-loader:
         specifier: ^5.1.0
         version: 5.1.0(webpack@5.98.0)
@@ -3349,6 +3349,9 @@ packages:
 
   '@types/eslint@8.56.10':
     resolution: {integrity: sha512-Shavhk87gCtY2fhXDctcfS3e6FdxWkCx1iUZ9eEUbh7rTqlZT0/IzOkCOVt0fCjcFuZ9FPYfuezTBImfHCDBGQ==}
+
+  '@types/eslint@9.6.1':
+    resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
 
   '@types/estree@0.0.39':
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
@@ -6007,6 +6010,13 @@ packages:
   eslint-webpack-plugin@4.2.0:
     resolution: {integrity: sha512-rsfpFQ01AWQbqtjgPRr2usVRxhWDuG0YDYcG8DJOteD3EFnpeuYuOwk0PQiN7PRBTqS6ElNdtPZPggj8If9WnA==}
     engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      eslint: ^8.0.0 || ^9.0.0
+      webpack: ^5.0.0
+
+  eslint-webpack-plugin@5.0.0:
+    resolution: {integrity: sha512-iDhXf2r55KO1UhMfpus8oGp93wdNF+934q5kEkwa7qn3BH9f51QEC11xQidt+8jfqRnEYYZa2/8lhac7U/vqWw==}
+    engines: {node: '>= 18.12.0'}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0
       webpack: ^5.0.0
@@ -15624,10 +15634,15 @@ snapshots:
 
   '@types/eslint-scope@3.7.7':
     dependencies:
-      '@types/eslint': 8.56.10
+      '@types/eslint': 9.6.1
       '@types/estree': 1.0.6
 
   '@types/eslint@8.56.10':
+    dependencies:
+      '@types/estree': 1.0.6
+      '@types/json-schema': 7.0.15
+
+  '@types/eslint@9.6.1':
     dependencies:
       '@types/estree': 1.0.6
       '@types/json-schema': 7.0.15
@@ -18906,6 +18921,16 @@ snapshots:
   eslint-webpack-plugin@4.2.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0):
     dependencies:
       '@types/eslint': 8.56.10
+      eslint: 9.21.0(jiti@1.21.6)
+      jest-worker: 29.7.0
+      micromatch: 4.0.8
+      normalize-path: 3.0.0
+      schema-utils: 4.3.0
+      webpack: 5.98.0(webpack-cli@6.0.1)
+
+  eslint-webpack-plugin@5.0.0(eslint@9.21.0(jiti@1.21.6))(webpack@5.98.0):
+    dependencies:
+      '@types/eslint': 9.6.1
       eslint: 9.21.0(jiti@1.21.6)
       jest-worker: 29.7.0
       micromatch: 4.0.8
