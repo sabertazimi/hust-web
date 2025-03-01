@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hust-web/react/switch/static/css/main.959a92da.css",
+    "main.js": "/hust-web/react/switch/static/js/main.e5909c64.js",
+    "index.html": "/hust-web/react/switch/index.html",
+    "main.959a92da.css.map": "/hust-web/react/switch/static/css/main.959a92da.css.map",
+    "main.e5909c64.js.map": "/hust-web/react/switch/static/js/main.e5909c64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.959a92da.css",
+    "static/js/main.e5909c64.js"
+  ]
+}
