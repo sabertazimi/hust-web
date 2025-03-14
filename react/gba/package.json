@@ -33,7 +33,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
+    "@babel/core": "^7.26.10",
     "@babel/plugin-transform-object-rest-spread": "^7.25.9",
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
@@ -55,7 +55,7 @@
     "sass": "^1.85.1",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.15.0",
+    "stylelint": "^16.16.0",
     "stylelint-webpack-plugin": "^5.0.1",
     "typescript": "^5.8.2",
     "webpack": "^5.98.0",
