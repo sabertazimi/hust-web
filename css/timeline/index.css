@@ -1,0 +1,158 @@
+/* inspired by CSS conf site */
+
+/* presets */
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #470974;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* container */
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 5em 2em;
+  margin: 0 auto;
+}
+
+/* list normalize */
+.timeline {
+  margin: 0;
+  list-style-type: none;
+}
+
+/* add left timeline */
+.timeline li {
+  position: relative;
+  padding: 0;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  border: 0 solid transparent;
+  border-left: 8px solid #f59f00;
+}
+
+/* remove margin of content */
+.timeline li * {
+  margin: 0;
+}
+
+/* change font/color/layout of content */
+.timeline li time {
+  position: absolute;
+  top: 20px;
+  left: -60px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
+  cursor: pointer;
+}
+
+.timeline li h4 {
+  font-size: 14px;
+  font-weight: 100;
+  color: #999;
+  cursor: pointer;
+}
+
+.timeline li h3 {
+  margin-bottom: 0.8em;
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  cursor: pointer;
+}
+
+.timeline li p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #997ead;
+}
+
+/* add horizontal block divider */
+.timeline li::before {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 10px;
+  height: 8px;
+  content: '';
+  background-color: #f59f00;
+}
+
+/* special style for start/end timeline */
+
+/* change layout of time */
+
+/* change divider to circle */
+.timeline li.start time,
+.timeline li.end time {
+  top: 0;
+}
+
+.timeline li.start::before,
+.timeline li.end::before {
+  top: -4px;
+  left: -14px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.timeline li.end::before {
+  top: 2px;
+}
+
+.timeline li.end::after {
+  position: absolute;
+  top: 5px;
+  left: -11px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.timeline li.end {
+  padding-bottom: 0;
+  padding-left: 20px;
+}
+
+/* special style for break timeline */
+
+/* change border left to dotted */
+
+/* change layout of time/h3 */
+
+/* remove divider */
+.timeline li.break {
+  border-left: 8px dotted #666;
+}
+
+.timeline li.break time {
+  top: 28px;
+}
+
+.timeline li.break h3 {
+  position: relative;
+  top: 28px;
+}
+
+.timeline li.break::before {
+  width: 0;
+  height: 0;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <form class="search-form">
+      <input type="text" class="search" placeholder="City or State" />
+      <ul class="suggestions">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+      </ul>
+    </form>
+    <script>
+      const endpoint =
+        'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+      const cities = [];
+
+      fetch(endpoint)
+        .then((res) => res.json())
+        .then((data) => cities.push(...data));
+
+      const searchInput = document.querySelector('.search');
+      const suggestions = document.querySelector('.suggestions');
+
+      const findMatches = (word, cities) => {
+        return cities.filter((place) => {
+          const regex = new RegExp(word, 'gi');
+          return place.city.match(regex) || place.state.match(regex);
+        });
+      };
+
+      const createNameSpan = (value, city, state) => {
+        const nameSpan = document.createElement('span');
+        nameSpan.classList.add('name');
+
+        const cityHighlightIndex = city.indexOf(value);
+        const stateHighlightIndex = state.indexOf(value);
+
+        const constructHighlightSpan = (field, index) => {
+          if (index >= 0) {
+            const startString = field.slice(0, index) || '';
+            const highlightString =
+              field.slice(index, index + value.length) || '';
+            const endString = field.slice(index + value.length) || '';
+
+            const startSpan = document.createTextNode(startString);
+            const highlightSpan = document.createElement('span');
+            highlightSpan.classList.add('hl');
+            highlightSpan.appendChild(document.createTextNode(highlightString));
+            const endSpan = document.createTextNode(endString);
+
+            nameSpan.appendChild(startSpan);
+            nameSpan.appendChild(highlightSpan);
+            nameSpan.appendChild(endSpan);
+          } else {
+            nameSpan.appendChild(document.createTextNode(field));
+          }
+        };
+
+        constructHighlightSpan(city, cityHighlightIndex);
+        nameSpan.appendChild(document.createTextNode(', '));
+        constructHighlightSpan(state, stateHighlightIndex);
+        return nameSpan;
+      };
+
+      const createPopulationSpan = (population) => {
+        const populationSpan = document.createElement('span');
+        populationSpan.classList.add('population');
+        populationSpan.appendChild(document.createTextNode(population));
+        return populationSpan;
+      };
+
+      const displayMatches = function (event) {
+        const matchArray = findMatches(this.value, cities);
+        const matchedListNodes = matchArray.map(
+          ({ city, state, population }) => {
+            const list = document.createElement('li');
+            const nameNode = createNameSpan(this.value, city, state);
+            const populationNode = createPopulationSpan(population);
+            list.appendChild(nameNode);
+            list.appendChild(populationNode);
+            return list;
+          }
+        );
+        suggestions.replaceChildren(...matchedListNodes);
+      };
+
+      searchInput.addEventListener('change', displayMatches);
+      searchInput.addEventListener('keyup', displayMatches);
+    </script>
+  </body>
+</html>
