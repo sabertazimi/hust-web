@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@livechat/ui-kit": "^0.5.0-32",
-    "body-parser": "^1.20.3",
+    "body-parser": "^2.2.0",
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
     "react": "^19.0.0",
