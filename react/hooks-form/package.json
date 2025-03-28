@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "bulma": "^1.0.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@sabertazimi/react-scripts": "^5.21.5"
