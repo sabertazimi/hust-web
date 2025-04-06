@@ -1,0 +1,35 @@
+@media screen and (prefers-reduced-motion: reduce) {
+  input {
+    transition: none;
+  }
+}
+
+input {
+  transition: border-bottom 0.5s ease-out;
+}
+
+input:focus {
+  border-bottom: 1px solid #2196f3;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  input ~ label {
+    transition: none;
+  }
+}
+
+input ~ label {
+  transition: transform 0.25s ease-in-out;
+}
+
+input[value=''] ~ label {
+  transform: scale(1) translate(0, 0);
+}
+
+input:not([value='']) ~ label {
+  transform: scale(0.8) translate(-40px, -20px);
+}
+
+input[value='']:focus ~ label {
+  transform: scale(0.8) translate(-40px, -20px);
+}
