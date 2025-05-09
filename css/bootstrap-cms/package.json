@@ -32,14 +32,14 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^44.3.0",
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.5",
+    "bootstrap": "^5.3.6",
     "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/plugin-transform-class-properties": "^7.27.1",
-    "@babel/plugin-transform-object-rest-spread": "^7.27.1",
-    "@babel/preset-env": "^7.27.1",
+    "@babel/plugin-transform-object-rest-spread": "^7.27.2",
+    "@babel/preset-env": "^7.27.2",
     "@dg-scripts/eslint-config": "^5.21.5",
     "@dg-scripts/stylelint-config": "^5.21.5",
     "autoprefixer": "^10.4.21",
@@ -66,7 +66,7 @@
     "stylelint-webpack-plugin": "^5.0.1",
     "typescript": "^5.8.3",
     "url-loader": "^4.1.1",
-    "webpack": "^5.99.7",
+    "webpack": "^5.99.8",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
   }
