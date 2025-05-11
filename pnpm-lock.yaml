@@ -132,11 +132,11 @@ importers:
         specifier: ^3.5.3
         version: 3.5.3
       sass:
-        specifier: ^1.87.0
-        version: 1.87.0
+        specifier: ^1.88.0
+        version: 1.88.0
       sass-loader:
         specifier: ^16.0.5
-        version: 16.0.5(sass@1.87.0)(webpack@5.99.8)
+        version: 16.0.5(sass@1.88.0)(webpack@5.99.8)
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.99.8)
@@ -234,11 +234,11 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
       sass:
-        specifier: ^1.87.0
-        version: 1.87.0
+        specifier: ^1.88.0
+        version: 1.88.0
       sass-loader:
         specifier: ^16.0.5
-        version: 16.0.5(sass@1.87.0)(webpack@5.99.8)
+        version: 16.0.5(sass@1.88.0)(webpack@5.99.8)
       sassdoc:
         specifier: ^2.7.4
         version: 2.7.4(chokidar@3.6.0)
@@ -761,11 +761,11 @@ importers:
         specifier: ^3.5.3
         version: 3.5.3
       sass:
-        specifier: ^1.87.0
-        version: 1.87.0
+        specifier: ^1.88.0
+        version: 1.88.0
       sass-loader:
         specifier: ^16.0.5
-        version: 16.0.5(sass@1.87.0)(webpack@5.99.8)
+        version: 16.0.5(sass@1.88.0)(webpack@5.99.8)
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.99.8)
@@ -859,11 +859,11 @@ importers:
         specifier: ^3.5.3
         version: 3.5.3
       sass:
-        specifier: ^1.87.0
-        version: 1.87.0
+        specifier: ^1.88.0
+        version: 1.88.0
       sass-loader:
         specifier: ^16.0.5
-        version: 16.0.5(sass@1.87.0)(webpack@5.99.8)
+        version: 16.0.5(sass@1.88.0)(webpack@5.99.8)
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.99.8)
@@ -900,7 +900,7 @@ importers:
     devDependencies:
       '@sabertazimi/react-scripts':
         specifier: ^5.21.5
-        version: 5.21.5(@types/babel__core@7.20.5)(@types/node@22.15.17)(@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(babel-plugin-macros@3.1.0)(jiti@1.21.6)(react@19.1.0)(sass@1.87.0)(type-fest@0.21.3)(typescript@5.8.3)
+        version: 5.21.5(@types/babel__core@7.20.5)(@types/node@22.15.17)(@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(babel-plugin-macros@3.1.0)(jiti@1.21.6)(react@19.1.0)(sass@1.88.0)(type-fest@0.21.3)(typescript@5.8.3)
 
   react/meact:
     devDependencies:
@@ -1049,7 +1049,7 @@ importers:
     devDependencies:
       '@sabertazimi/react-scripts':
         specifier: ^5.21.5
-        version: 5.21.5(@types/babel__core@7.20.5)(@types/node@22.15.17)(@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(babel-plugin-macros@3.1.0)(jiti@1.21.6)(react@19.1.0)(sass@1.87.0)(type-fest@0.21.3)(typescript@5.8.3)
+        version: 5.21.5(@types/babel__core@7.20.5)(@types/node@22.15.17)(@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(babel-plugin-macros@3.1.0)(jiti@1.21.6)(react@19.1.0)(sass@1.88.0)(type-fest@0.21.3)(typescript@5.8.3)
       '@testing-library/dom':
         specifier: ^10.4.0
         version: 10.4.0
@@ -1095,7 +1095,7 @@ importers:
     devDependencies:
       '@sabertazimi/react-scripts':
         specifier: ^5.21.5
-        version: 5.21.5(@types/babel__core@7.20.5)(@types/node@22.15.17)(@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(babel-plugin-macros@3.1.0)(jiti@1.21.6)(react@19.1.0)(sass@1.87.0)(type-fest@0.21.3)(typescript@5.8.3)
+        version: 5.21.5(@types/babel__core@7.20.5)(@types/node@22.15.17)(@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(babel-plugin-macros@3.1.0)(jiti@1.21.6)(react@19.1.0)(sass@1.88.0)(type-fest@0.21.3)(typescript@5.8.3)
 
 packages:
 
@@ -10585,8 +10585,8 @@ packages:
       webpack:
         optional: true
 
-  sass@1.87.0:
-    resolution: {integrity: sha512-d0NoFH4v6SjEK7BoX810Jsrhj7IQSYHAHLi/iSpgqKc7LaIDshFRlSg5LOymf9FqQhxEHs2W5ZQXlvy0KD45Uw==}
+  sass@1.88.0:
+    resolution: {integrity: sha512-sF6TWQqjFvr4JILXzG4ucGOLELkESHL+I5QJhh7CNaE+Yge0SI+ehCatsXhJ7ymU1hAFcIS3/PBpjdIbXoyVbg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -15409,7 +15409,7 @@ snapshots:
     optionalDependencies:
       rollup: 2.79.1
 
-  '@sabertazimi/react-scripts@5.21.5(@types/babel__core@7.20.5)(@types/node@22.15.17)(@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(babel-plugin-macros@3.1.0)(jiti@1.21.6)(react@19.1.0)(sass@1.87.0)(type-fest@0.21.3)(typescript@5.8.3)':
+  '@sabertazimi/react-scripts@5.21.5(@types/babel__core@7.20.5)(@types/node@22.15.17)(@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.26.0(jiti@1.21.6))(typescript@5.8.3))(babel-plugin-macros@3.1.0)(jiti@1.21.6)(react@19.1.0)(sass@1.88.0)(type-fest@0.21.3)(typescript@5.8.3)':
     dependencies:
       '@babel/core': 7.27.1
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.16.0)(type-fest@0.21.3)(webpack-dev-server@5.2.1(webpack@5.99.8))(webpack@5.99.8)
@@ -15453,7 +15453,7 @@ snapshots:
       react-refresh: 0.16.0
       resolve: 1.22.9
       resolve-url-loader: 5.0.0
-      sass-loader: 16.0.5(sass@1.87.0)(webpack@5.99.8)
+      sass-loader: 16.0.5(sass@1.88.0)(webpack@5.99.8)
       semver: 7.7.1
       source-map-loader: 5.0.0(webpack@5.99.8)
       style-loader: 4.0.0(webpack@5.99.8)
@@ -24632,14 +24632,14 @@ snapshots:
       through2: 2.0.5
       which: 1.3.1
 
-  sass-loader@16.0.5(sass@1.87.0)(webpack@5.99.8):
+  sass-loader@16.0.5(sass@1.88.0)(webpack@5.99.8):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
-      sass: 1.87.0
+      sass: 1.88.0
       webpack: 5.99.8(webpack-cli@6.0.1)
 
-  sass@1.87.0:
+  sass@1.88.0:
     dependencies:
       chokidar: 4.0.0
       immutable: 5.0.2
