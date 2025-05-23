@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hust-web/react/hooks-form/static/css/main.497298ca.css",
+    "main.js": "/hust-web/react/hooks-form/static/js/main.13849568.js",
+    "index.html": "/hust-web/react/hooks-form/index.html",
+    "main.497298ca.css.map": "/hust-web/react/hooks-form/static/css/main.497298ca.css.map",
+    "main.13849568.js.map": "/hust-web/react/hooks-form/static/js/main.13849568.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.497298ca.css",
+    "static/js/main.13849568.js"
+  ]
+}
