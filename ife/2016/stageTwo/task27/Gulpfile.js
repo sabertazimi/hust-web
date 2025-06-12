@@ -1,23 +1,23 @@
-const path = require('node:path');
-const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
-const concat = require('gulp-concat');
-const imagemin = require('gulp-imagemin');
-const cleanCSS = require('gulp-clean-css');
-const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
+const path = require('node:path')
+const gulp = require('gulp')
+const autoprefixer = require('gulp-autoprefixer')
+const concat = require('gulp-concat')
+const cleanCSS = require('gulp-clean-css')
+const imagemin = require('gulp-imagemin')
+const rename = require('gulp-rename')
+const sourcemaps = require('gulp-sourcemaps')
+const uglify = require('gulp-uglify')
 
 function vendor() {
   return gulp
     .src(path.join(__dirname, 'node_modules/jquery/dist/jquery.min.js'))
-    .pipe(gulp.dest('./dist/js/'));
+    .pipe(gulp.dest('./dist/js/'))
 }
 
 function html() {
-  const htmlSrc = './src/*.html';
-  const htmlDst = './dist/';
-  return gulp.src(htmlSrc).pipe(gulp.dest(htmlDst));
+  const htmlSrc = './src/*.html'
+  const htmlDst = './dist/'
+  return gulp.src(htmlSrc).pipe(gulp.dest(htmlDst))
 }
 
 function css() {
@@ -28,7 +28,7 @@ function css() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/css/'));
+    .pipe(gulp.dest('dist/css/'))
 }
 
 function js() {
@@ -44,11 +44,11 @@ function js() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/js/'));
+    .pipe(gulp.dest('dist/js/'))
 }
 
 function fonts() {
-  return gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts/'));
+  return gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts/'))
 }
 
 function images() {
@@ -57,17 +57,17 @@ function images() {
     .pipe(
       imagemin({
         progressive: true,
-      })
+      }),
     )
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('dist/images'))
 }
 
-exports.build = gulp.parallel(vendor, html, css, js, fonts, images);
+exports.build = gulp.parallel(vendor, html, css, js)
 
 exports.default = function () {
-  gulp.watch('src/**/*.html', html);
-  gulp.watch('src/css/**/*.css', css);
-  gulp.watch('src/js/**/*.js', js);
-  gulp.watch('src/fonts/**/*', fonts);
-  gulp.watch('src/images/**/*', images);
-};
+  gulp.watch('src/**/*.html', html)
+  gulp.watch('src/css/**/*.css', css)
+  gulp.watch('src/js/**/*.js', js)
+  gulp.watch('src/fonts/**/*', fonts)
+  gulp.watch('src/images/**/*', images)
+}
