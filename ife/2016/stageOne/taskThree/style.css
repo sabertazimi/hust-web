@@ -1,0 +1,91 @@
+* {
+    color: white;
+
+    font-family: serif monospace;
+    font-size: 62.5%;
+    font-weight: normal;
+}
+
+html,
+body {
+    height: 900px;
+    margin: 0;
+
+    font-size: 1.5rem;
+}
+
+.left {
+    margin-left: -100%;
+}
+
+.right {
+    margin-left: -220px;
+}
+
+.left,
+.right {
+    float: left;
+
+    height: 100%;
+
+    background-color: #0ea5ff;
+}
+
+.left {
+    width: 200px;
+}
+
+.right {
+    width: 220px;
+}
+
+.main,
+.body {
+    height: 100%;
+
+    background-color: #73ffb8;
+}
+
+.main {
+    float: left;
+
+    width: 100%;
+}
+
+.body {
+    /* 内容区域实体, 左右 margin 值为 .left/.right 宽度*/
+    width: auto;
+    margin: 0 230px 0 210px;
+}
+
+figure {
+    text-align: center;
+}
+
+figure > figcaption {
+    margin-top: 20px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #bbb;
+}
+
+figure > img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.left > figure > figcaption {
+    font-size: 1.0rem;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+.right > figure > figcaption {
+    font-size: 0.5rem;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.right > figure > img {
+    margin-bottom: 30px;
+}
