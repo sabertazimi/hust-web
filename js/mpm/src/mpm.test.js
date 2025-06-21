@@ -39,7 +39,7 @@ describe('mpm.getPinnedReference', () => {
         name: 'reacttt',
         reference: '~15.3.0',
       }),
-    ).rejects.toThrowError(new Error('Couldn\'t fetch package "reacttt"'))
+    ).rejects.toThrow(new Error('Couldn\'t fetch package "reacttt"'))
   })
 
   it('not found version', async () => {
@@ -48,7 +48,7 @@ describe('mpm.getPinnedReference', () => {
         name: 'react',
         reference: '~99.0.0',
       }),
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       new Error(
         'Couldn\'t find a version matching "~99.0.0" for package  "react"',
       ),

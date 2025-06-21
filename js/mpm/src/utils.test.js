@@ -23,6 +23,6 @@ describe('mpm.getPinnedReference', () => {
         name: 'react',
         reference: '~15.3.0',
       }),
-    ).rejects.toThrowError(new Error('HTTP 204'))
+    ).rejects.toThrow(new Error('HTTP 204'))
   })
 })
