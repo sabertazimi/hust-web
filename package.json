@@ -44,12 +44,12 @@
     "@dg-scripts/stylelint-config": "^5.21.5",
     "chalk": "^4.1.2",
     "consola": "^3.4.2",
-    "eslint": "^9.30.0",
-    "globals": "^16.2.0",
-    "lerna": "^8.2.2",
+    "eslint": "^9.30.1",
+    "globals": "^16.3.0",
+    "lerna": "^8.2.3",
     "prettier": "^3.6.2",
     "semver": "^7.7.2",
-    "stylelint": "^16.21.0",
+    "stylelint": "^16.21.1",
     "typescript": "^5.8.3"
   },
   "dependenciesMeta": {
