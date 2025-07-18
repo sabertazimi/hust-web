@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "async-validator": "^4.2.5",
-    "san": "^3.15.1",
+    "san": "^3.15.2",
     "san-router": "^2.0.2"
   },
   "devDependencies": {
@@ -55,10 +55,10 @@
     "prettier": "^3.6.2",
     "san-loader": "^0.3.7",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.21.1",
+    "stylelint": "^16.22.0",
     "stylelint-webpack-plugin": "^5.0.1",
     "typescript": "^5.8.3",
-    "webpack": "^5.100.1",
+    "webpack": "^5.100.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   }
