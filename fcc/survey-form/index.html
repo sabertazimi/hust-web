@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 id="title">Survey Form</h1>
+  </header>
+  <main class="main">
+    <fieldset name="main">
+      <legend class="legend">Survey Form</legend>
+      <p id="description">Let us know how we can improve freeCodeCamp</p>
+      <form id="survey-form" name="surveyForm" class="survey-form">
+        <label for="name" id="name-label" aria-required="true" class="required">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        <label for="email" id="email-label" aria-required="true" class="required">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+        <label for="number" id="number-label" aria-required="true" class="required">Age:</label>
+        <input type="number" name="number" id="number" min="15" max="60" placeholder="Age" required>
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select name="dropdown" id="dropdown">
+          <option value disabled>Select an option</option>
+          <option value="student" selected>Student</option>
+          <option value="full-time-job">Full Time Job</option>
+          <option value="full-time-learner">Full Time Learner</option>
+          <option value="prefer-not-to-say">Prefer not to Say</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="ratings" aria-required="true" class="required">
+          How likely is that you would recommend freeCodeCamp to a friend?
+        </label>
+        <ul class="survey-form__list">
+          <li><input type="radio" name="ratings" id="definitely" value="1" checked><label for="definitely">Definitely</label></li>
+          <li><input type="radio" name="ratings" id="maybe" value="2"><label for="maybe">Maybe</label></li>
+          <li><input type="radio" name="ratings" id="not-sure" value="3"><label for="not-sure">Not sure</label></li>
+        </ul>
+        <label for="like">What do you like most in FCC:</label>
+        <select name="like" id="like">
+          <option value disabled selected>Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="open-source">Open Source</option>
+        </select>
+        <label for="improve">
+          Things that should be improved in the future
+          <br>
+          (Check all that apply):
+        </label>
+        <ul class="survey-form__list">
+          <li><input type="checkbox" name="improve" id="front-end-projects" value="1"><label for="front-end-projects">Front-end Projects</label></li>
+          <li><input type="checkbox" name="improve" id="back-end-projects" value="2"><label for="back-end-projects">Back-end Projects</label></li>
+          <li><input type="checkbox" name="improve" id="data-visualization" value="3"><label for="data-visualization">Data Visualization</label></li>
+          <li><input type="checkbox" name="improve" id="challenges" value="4"><label for="challenges">Challenges</label></li>
+          <li><input type="checkbox" name="improve" id="open-source-community" value="5"><label for="open-source-community">Open Source Community</label></li>
+          <li><input type="checkbox" name="improve" id="gitter-help-rooms" value="6"><label for="gitter-help-rooms">Gitter Help Rooms</label></li>
+          <li><input type="checkbox" name="improve" id="videos" value="7"><label for="videos">Videos</label></li>
+          <li><input type="checkbox" name="improve" id="city-meetups" value="8"><label for="city-meetups">City Meetups</label></li>
+          <li><input type="checkbox" name="improve" id="wiki" value="9"><label for="wiki">Wiki</label></li>
+          <li><input type="checkbox" name="improve" id="forum" value="10"><label for="forum">Forum</label></li>
+          <li><input type="checkbox" name="improve" id="additional-courses" value="11"><label for="additional-courses">Additional Courses</label></li>
+        </ul>
+        <label for="comment">Any Comments or Suggestions?</label>
+        <textarea name="comment" id="comment" placeholder="Enter your comment here..."></textarea>
+        <button type="submit" id="submit" name="submit" class="survey-form__submit">Submit</button>
+      </form>
+    </fieldset>
+  </main>
+</body>
+</html>
