@@ -93,8 +93,8 @@ importers:
         specifier: ^13.0.0
         version: 13.0.0(webpack@5.100.2)
       cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
+        specifier: ^10.0.0
+        version: 10.0.0
       css-loader:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.100.2)
@@ -195,8 +195,8 @@ importers:
         specifier: ^12.5.1
         version: 12.5.1
       cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
+        specifier: ^10.0.0
+        version: 10.0.0
       css-loader:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.100.2)
@@ -393,8 +393,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.100.2)
       cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
+        specifier: ^10.0.0
+        version: 10.0.0
       css-loader:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.100.2)
@@ -471,8 +471,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.100.2)
       cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
+        specifier: ^10.0.0
+        version: 10.0.0
       css-loader:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.100.2)
@@ -559,8 +559,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.100.2)
       cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
+        specifier: ^10.0.0
+        version: 10.0.0
       css-loader:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.100.2)
@@ -728,8 +728,8 @@ importers:
         specifier: ^9.2.0
         version: 9.2.0
       cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
+        specifier: ^10.0.0
+        version: 10.0.0
       css-loader:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.100.2)
@@ -829,8 +829,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.100.2)
       cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
+        specifier: ^10.0.0
+        version: 10.0.0
       css-loader:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.100.2)
@@ -2431,6 +2431,9 @@ packages:
 
   '@emotion/weak-memoize@0.3.1':
     resolution: {integrity: sha512-EsBwpc7hBUJWAsNPBmJy4hxWx12v6bshQsldrVmjxJoc3isbxhOrF2IcCpaXxfvq03NwkI7sbsOLXbYuqF/8Ww==}
+
+  '@epic-web/invariant@1.0.0':
+    resolution: {integrity: sha512-lrTPqgvfFQtR/eY/qkIzp98OGdNJu0m5ji3q/nJI8v3SXkRKEnWiOxMmbvcSoAIzv/cGiuvRy57k4suKQSAdwA==}
 
   '@es-joy/jsdoccomment@0.46.0':
     resolution: {integrity: sha512-C3Axuq1xd/9VqFZpW4YAzOx5O9q/LP46uIQy/iNDpHG3fmPa6TBtvfglMCs3RBiBxAIi0Go97r8+jvTt55XMyQ==}
@@ -5223,9 +5226,9 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
 
-  cross-env@7.0.3:
-    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
-    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+  cross-env@10.0.0:
+    resolution: {integrity: sha512-aU8qlEK/nHYtVuN4p7UQgAwVljzMg8hB4YK5ThRqD2l/ziSnryncPNn7bMLt5cFYsKVKBh8HqLqyCoTupEUu7Q==}
+    engines: {node: '>=20'}
     hasBin: true
 
   cross-spawn@5.1.0:
@@ -14763,6 +14766,8 @@ snapshots:
 
   '@emotion/weak-memoize@0.3.1': {}
 
+  '@epic-web/invariant@1.0.0': {}
+
   '@es-joy/jsdoccomment@0.46.0':
     dependencies:
       comment-parser: 1.4.1
@@ -18449,8 +18454,9 @@ snapshots:
       - supports-color
       - ts-node
 
-  cross-env@7.0.3:
+  cross-env@10.0.0:
     dependencies:
+      '@epic-web/invariant': 1.0.0
       cross-spawn: 7.0.6
 
   cross-spawn@5.1.0:
