@@ -1,0 +1,83 @@
+/* reset */
+
+html {
+  box-sizing: border-box;
+  min-width: 300px;
+  min-height: 100vh;
+  color: black;
+  font-size: 16px;
+  background: linear-gradient(to bottom, #B721FF, #2AF598, #fec051, #FEE140, #FA709A);
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #21D4FD 75%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 10px auto;
+  width: 90%;
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  background-color: #eee;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* end of reset */
+
+.container {
+  margin: 0 auto;
+}
+
+header.container h1 {
+  padding-top: 20px;
+}
+
+header.container figure {
+  background-color: white;
+}
+
+header.container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+}
+
+header.container figcaption {
+  width: 80%;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+main.container ul {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  list-style-position: inside;
+}
+
+main.container time {
+  font-weight: bold;
+}
+
+footer.container blockquote {
+  font-size: 15px;
+  font-style: italic;
+}
+
+footer.container h3 {
+  padding-bottom: 20px;
+}
