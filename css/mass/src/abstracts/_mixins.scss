@@ -1,3 +1,4 @@
+/* stylelint-disable nesting-selector-no-missing-scoping-root */
 ////
 /// Global mixin defination
 /// @group Global
@@ -179,8 +180,8 @@
       height: $height;
       content: '';
       background-color: $color;
-      transition: none;
       transform: scaleX(0) translateX(50%);
+      transition: none;
     }
   }
 
@@ -192,8 +193,8 @@
     height: $height;
     content: '';
     background-color: $color;
-    transition: transform 0.2s;
     transform: scaleX(0) translateX(50%);
+    transition: transform 0.2s;
   }
 
   &:hover::after,
@@ -210,6 +211,6 @@
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
   border: 0;
+  clip-path: rect(0 0 0 0);
 }

@@ -22,8 +22,8 @@ a {
     top: 25%;
     left: -$space-lg;
     color: $color-primary;
-    transition: none;
     transform: scale(0);
+    transition: none;
   }
 }
 
@@ -32,8 +32,8 @@ a {
   top: 25%;
   left: -$space-lg;
   color: $color-primary;
-  transition: all 0.2s;
   transform: scale(0);
+  transition: all 0.2s;
 }
 
 .section-grid .row:hover::before,
@@ -151,8 +151,8 @@ a {
   @include respond-to(small-only) {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
     transform: scale(0.5);
+    transition: all 0.3s ease-in-out;
 
     .navbar-toggle:checked ~ & {
       max-height: 100%;

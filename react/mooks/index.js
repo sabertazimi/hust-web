@@ -2,6 +2,7 @@ const React = (function () {
   const hooks = []
   let idx = 0
 
+  // eslint-disable-next-line react-hooks-extra/no-unnecessary-use-prefix -- custom hook implementation.
   function useState(initVal) {
     const state = hooks[idx] || initVal
 
@@ -14,6 +15,7 @@ const React = (function () {
     return [state, setState]
   }
 
+  // eslint-disable-next-line react-hooks-extra/no-unnecessary-use-prefix -- custom hook implementation.
   function useEffect(callback, depsArray) {
     const oldDeps = hooks[idx]
     let hasChanged = true

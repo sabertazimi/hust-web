@@ -17,8 +17,8 @@ input {
 }
 
 .tabs h2 {
-  display: block;
   float: left;
+  display: block;
   width: 50%;
   padding: 0.5em 0;
   font-weight: 400;
@@ -50,8 +50,8 @@ input {
   margin: 0 0 0.8em;
   font-family: inherit;
   color: inherit;
-  border: 1px solid #cfcfcf;
   outline: 0;
+  border: 1px solid #cfcfcf;
 }
 
 .form-wrap form .button {
@@ -70,7 +70,7 @@ input {
 }
 
 .form-wrap form .checkbox {
+  visibility: hidden;
   padding: 20px;
   margin: 0.5em 0 1.5em;
-  visibility: hidden;
 }
