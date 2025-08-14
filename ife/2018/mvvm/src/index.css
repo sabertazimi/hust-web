@@ -24,9 +24,9 @@ body {
     margin: 0 auto;
     color: #f03e3e;
     cursor: pointer;
+    outline: none;
     background-color: #fff;
     border: 1px solid #f03e3e;
-    outline: none;
     transition: none;
   }
 }
@@ -38,9 +38,9 @@ body {
   margin: 0 auto;
   color: #f03e3e;
   cursor: pointer;
+  outline: none;
   background-color: #fff;
   border: 1px solid #f03e3e;
-  outline: none;
   transition:
     background-color 0.2s ease-in,
     color 0.2s ease-in;
