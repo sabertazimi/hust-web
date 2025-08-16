@@ -1,0 +1,91 @@
+body,
+.container {
+  height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+  widows: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .button {
+    position: relative;
+    display: block;
+    width: 8em;
+    padding: 1em 2em;
+    font-size: 1.25em;
+    color: #ba55d3;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid transparent;
+    outline: none;
+    transition: none;
+  }
+}
+
+.button {
+  position: relative;
+  display: block;
+  width: 8em;
+  padding: 1em 2em;
+  font-size: 1.25em;
+  color: #ba55d3;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid transparent;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.button + .button {
+  margin-top: 1em;
+}
+
+.button-switch {
+  border: 1px solid #ba55d3;
+}
+
+.button-switch:hover,
+.button-switch:focus {
+  color: #fff;
+  background-color: #ba55d3;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .button-menu::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 5px;
+    content: '';
+    background-color: blue;
+    transition: none;
+  }
+}
+
+.button-menu::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 5px;
+  content: '';
+  background-color: blue;
+  transition: all 0.3s ease;
+}
+
+.button-menu-blue {
+  color: blue;
+}
+
+.button-menu-enable::after {
+  left: 0;
+  width: 100%;
+}
