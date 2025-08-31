@@ -32,7 +32,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^44.3.0",
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
@@ -59,7 +59,7 @@
     "postcss-loader": "^8.1.1",
     "postcss-nested": "^7.0.2",
     "prettier": "^3.6.2",
-    "sass": "^1.90.0",
+    "sass": "^1.91.0",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
     "stylelint": "^16.23.1",
