@@ -60,7 +60,7 @@
     "prettier": "^3.6.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sass": "^1.92.0",
+    "sass": "^1.92.1",
     "sass-loader": "^16.0.5",
     "sassdoc": "^2.7.4",
     "style-loader": "^4.0.0",
