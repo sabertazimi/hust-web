@@ -1,7 +1,7 @@
 {
   "name": "mpmjs",
   "version": "2.9.0",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.16.1",
   "description": "Minimal package manager",
   "author": "sabertazimi",
   "license": "MIT",
@@ -44,7 +44,7 @@
     ]
   },
   "dependencies": {
-    "commander": "^14.0.0",
+    "commander": "^14.0.1",
     "fs-extra": "^11.3.1",
     "gunzip-maybe": "^1.4.2",
     "log4js": "^6.9.1",
