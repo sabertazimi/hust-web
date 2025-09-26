@@ -1,7 +1,7 @@
 {
   "name": "@sabertazimi/mass",
   "version": "2.9.0",
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.17.1",
   "description": "A minimal sass-based UI library",
   "author": "sabertazimi",
   "license": "MIT",
@@ -60,7 +60,7 @@
     "prettier": "^3.6.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sass": "^1.93.0",
+    "sass": "^1.93.2",
     "sass-loader": "^16.0.5",
     "sassdoc": "^2.7.4",
     "style-loader": "^4.0.0",
