@@ -44,7 +44,7 @@
     ]
   },
   "dependencies": {
-    "commander": "^14.0.1",
+    "commander": "^14.0.2",
     "fs-extra": "^11.3.2",
     "gunzip-maybe": "^1.4.2",
     "log4js": "^6.9.1",
