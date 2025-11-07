@@ -42,7 +42,7 @@
     ]
   },
   "dependencies": {
-    "@livechat/ui-kit": "^0.5.0-35",
+    "@livechat/ui-kit": "^0.5.0-36",
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "express-rate-limit": "^8.2.1",
@@ -67,7 +67,7 @@
     "concurrently": "^9.2.1",
     "cross-env": "^10.1.0",
     "css-loader": "^7.1.2",
-    "eslint": "^9.39.0",
+    "eslint": "^9.39.1",
     "eslint-webpack-plugin": "^5.0.2",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.4",
