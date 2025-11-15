@@ -1,0 +1,497 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: Raleway, 'Open Sans', sans, sans-serif;
+  font-size: 1.6em;
+}
+
+/* website exercise */
+
+ul {
+  list-style: none inside;
+}
+
+.website {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+  margin: 0 auto;
+  background-color: #333;
+}
+
+.nav-bar {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.nav-link {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-item:first-child {
+  float: left;
+}
+
+.nav-item:first-child .nav-link {
+  font-size: 1.8em;
+  text-decoration: none;
+}
+
+.banner {
+  box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  background-color: rgb(119 185 19);
+}
+
+.banner-content {
+  position: relative;
+  width: 960px;
+  height: 150px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.banner-list {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.banner-item {
+  display: inline-block;
+  padding: 0.5em;
+  background-color: #fff;
+  border: 1px solid #000;
+  opacity: 50%;
+}
+
+.banner-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.banner-item-active {
+  padding-top: 1em;
+  opacity: 100%;
+}
+
+.tab-bar {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  border-bottom: 1px solid rgb(0 0 0 / 20%);
+}
+
+.tab-list {
+  width: 960px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: -1px;
+  text-align: left;
+}
+
+.tab-item {
+  display: inline-block;
+  padding: 1em;
+  margin-left: -5px;
+  background-color: rgb(0 0 0 / 30%);
+  border: 1px solid rgb(0 0 0 / 20%);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  opacity: 80%;
+}
+
+.tab-item-active {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.tab-link {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 960px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.col {
+  box-sizing: border-box;
+  flex: 1 1 100%;
+  padding: 50px 40px;
+  margin: 0.5em;
+  text-align: center;
+  border: 1px solid rgb(0 0 0 / 20%);
+}
+
+.col-1-3 {
+  width: 33.3%;
+  max-width: 33.3%;
+}
+
+.col-1-4 {
+  width: 25%;
+  max-width: 25%;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  color: white;
+  background-color: #444;
+}
+
+.footer a {
+  color: white;
+}
+
+/* layout exercise */
+
+div {
+  margin: 0;
+  text-align: center;
+}
+
+/* 2 columns, left 30%, right 70% */
+.container-1 {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  line-height: 50vh;
+  color: white;
+}
+
+/* float + float */
+.container-1 .left {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+.container-1 .right {
+  float: left;
+  width: 70%;
+  height: 100%;
+  background-color: darkred;
+}
+
+.flex-container-1 {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  line-height: 50vh;
+  color: white;
+}
+
+.flex-container-1 .left {
+  flex: 3;
+  background-color: darkred;
+}
+
+.flex-container-1 .right {
+  flex: 7;
+  background-color: blueviolet;
+}
+
+/* 2 columns, left fixed width, right auto width */
+.container-2 {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  line-height: 50vh;
+  color: white;
+}
+
+/* float + BFC */
+.container-2 .left {
+  float: left;
+  width: 300px;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+.container-2 .right {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  background-color: darkred;
+}
+
+.flex-container-2 {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  line-height: 50vh;
+  color: white;
+}
+
+.flex-container-2 .left {
+  flex: none;
+  width: 300px;
+  background-color: darkred;
+}
+
+.flex-container-2 .right {
+  flex: auto;
+  background-color: blueviolet;
+}
+
+/* 2 columns, left auto width, right fixed width */
+.container-3 {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  line-height: 50vh;
+  color: white;
+}
+
+/* float + BFC */
+.container-3 .left {
+  width: auto;
+  height: 100%;
+
+  /* create BFC */
+  overflow: hidden;
+  background-color: blueviolet;
+}
+
+.container-3 .right {
+  float: right;
+  width: 300px;
+  height: 100%;
+  background-color: darkred;
+}
+
+.flex-container-3 {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  line-height: 50vh;
+  color: white;
+}
+
+.flex-container-3 .left {
+  flex: auto;
+  background-color: darkred;
+}
+
+.flex-container-3 .right {
+  flex: none;
+  width: 300px;
+  background-color: blueviolet;
+}
+
+/* 3 columns, left and right fixed width, middle auto width */
+.container-4 {
+  box-sizing: border-box;
+  min-width: 500px;
+  padding: 0 100px 0 150px; /* padding-left = .left width, same to .right */
+  overflow: hidden;
+  line-height: 50vh;
+  color: white;
+}
+
+.container-4 .middle {
+  float: left;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.container-4 .left {
+  position: relative;
+  right: 150px;
+  float: left;
+  width: 150px;
+  margin-left: -100%;
+  background-color: darkblue;
+}
+
+.container-4 .right {
+  position: relative;
+  float: left;
+  width: 100px;
+  margin-right: -100px;
+  background-color: darkred;
+}
+
+.flex-container-4 {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  line-height: 50vh;
+  color: white;
+}
+
+.flex-container-4 .left {
+  flex: none;
+  width: 300px;
+  background-color: darkred;
+}
+
+.flex-container-4 .middle {
+  flex: 1;
+  background-color: darkblue;
+}
+
+.flex-container-4 .right {
+  flex: none;
+  width: 200px;
+  background-color: blueviolet;
+}
+
+/* 3 columns, left and middle fixed width, right auto width */
+.container-5 {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 550px;
+  height: 50vh;
+  overflow: hidden;
+  line-height: 50vh;
+  color: white;
+}
+
+.container-5 .left {
+  float: left;
+  width: 300px;
+  background-color: darkblue;
+}
+
+.container-5 .middle {
+  float: left;
+  width: 200px;
+  background-color: blueviolet;
+}
+
+.container-5 .right {
+  width: auto;
+  overflow: hidden;
+  background-color: darkred;
+}
+
+.flex-container-5 {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  line-height: 50vh;
+  color: white;
+}
+
+.flex-container-5 .left {
+  flex: none;
+  width: 300px;
+  background-color: darkred;
+}
+
+.flex-container-5 .middle {
+  flex: none;
+  width: 200px;
+  background-color: darkblue;
+}
+
+.flex-container-5 .right {
+  flex: 1;
+  background-color: blueviolet;
+}
+
+/* 3 columns, left auto width, middle and right fixed width */
+.container-6 {
+  box-sizing: border-box;
+  min-width: 500px;
+  padding: 0 100px 0 0;
+  overflow: hidden;
+  line-height: 50vh;
+  color: white;
+}
+
+.container-6 .left {
+  float: left;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.container-6 .middle {
+  float: right;
+  width: 150px;
+  margin-left: -150px;
+  background-color: darkblue;
+}
+
+.container-6 .right {
+  float: left;
+  width: 100px;
+  margin-right: -100px;
+  background-color: darkred;
+}
+
+.flex-container-6 {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  line-height: 50vh;
+  color: white;
+}
+
+.flex-container-6 .left {
+  flex: 1;
+  background-color: darkred;
+}
+
+.flex-container-6 .middle {
+  flex: none;
+  width: 300px;
+  background-color: darkblue;
+}
+
+.flex-container-6 .right {
+  flex: none;
+  width: 200px;
+  background-color: blueviolet;
+}

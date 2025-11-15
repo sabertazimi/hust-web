@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>IFE JavaScript Task 01</title>
+  </head>
+  <body>
+    <label>请输入北京今天空气质量：<input id="aqi-input" type="text" /></label>
+    <button type="button" id="button">确认填写</button>
+
+    <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+
+    <script type="text/javascript">
+      (function () {
+        var btn = document.getElementById('button'),
+          input = document.getElementById('aqi-input'),
+          display = document.getElementById('aqi-display');
+
+        btn.addEventListener(
+          'click',
+          function () {
+            // 处理空格输入 与 XSS攻击
+            input.value = Array.prototype.filter
+              .call(input.value, function (item) {
+                return item !== '<' && item !== '>' && item !== ' ';
+              })
+              .join('');
+
+            if (input.value) {
+              display.replaceChild(document.createTextNode(input.value), display.firstChild);
+            } else {
+              display.replaceChild(document.createTextNode('请输入天气质量!'), display.firstChild);
+            }
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>

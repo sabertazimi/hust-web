@@ -1,0 +1,198 @@
+:root {
+  --primary-color: #1899ef;
+  --overlay-color: rgb(0 0 0 / 70%);
+  --hamburger-size: 60px;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: calc(var(--hamburger-size) + 2 * 1rem);
+  height: calc(var(--hamburger-size) + 2 * 1rem);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.menu-hamburger {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  width: var(--hamburger-size);
+  height: var(--hamburger-size);
+  padding: 1rem;
+  background: var(--primary-color);
+}
+
+/* hamburger middle bar */
+@media screen and (prefers-reduced-motion: reduce) {
+  .menu-hamburger > span {
+    transition: none;
+  }
+}
+
+.menu-hamburger > span {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: transform 0.4s ease-in-out;
+  transform: rotate(0);
+}
+
+/* hamburger top and bottom bar */
+@media screen and (prefers-reduced-motion: reduce) {
+  .menu-hamburger > span::before,
+  .menu-hamburger > span::after {
+    transition: none;
+  }
+}
+
+.menu-hamburger > span::before,
+.menu-hamburger > span::after {
+  position: absolute;
+  top: calc(var(--hamburger-size) / 4 * -1);
+  z-index: 1;
+  width: 100%;
+  height: 3px;
+  content: '';
+  background-color: #fff;
+  transition: transform 0.4s ease-in-out, top 0.4s ease-in-out;
+  transform: rotate(0);
+}
+
+.menu-hamburger > span::after {
+  top: calc(var(--hamburger-size) / 4);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .menu-nav {
+    transition: none;
+  }
+}
+
+.menu-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  background-color: var(--overlay-color);
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.menu-item {
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .menu-link {
+    transition: none;
+  }
+}
+
+.menu-link {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* animation for hamburger bars */
+.menu-toggle:checked ~ .menu-hamburger > span {
+  transform: rotate(135deg);
+}
+
+.menu-toggle:checked ~ .menu-hamburger > span::before,
+.menu-toggle:checked ~ .menu-hamburger > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-toggle:checked:hover ~ .menu-hamburger > span,
+.menu-toggle:checked:focus ~ .menu-hamburger > span {
+  transform: rotate(225deg);
+}
+
+/* animation for showing menu items */
+.menu-toggle:checked ~ .menu-nav {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .menu-toggle:checked ~ .menu-nav .menu-link {
+    /* magic effect for delaying transition */
+    transition: none;
+  }
+}
+
+.menu-toggle:checked ~ .menu-nav .menu-link {
+  opacity: 1;
+
+  /* magic effect for delaying transition */
+  transition: opacity 0.4s ease-in-out 0.4s;
+}
+
+.jumbotron {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url('./bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.jumbotron h1 {
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-link {
+    font-size: 3rem;
+  }
+
+  .jumbotron h1 {
+    font-size: 4rem;
+  }
+}

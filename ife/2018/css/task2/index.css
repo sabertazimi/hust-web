@@ -1,0 +1,47 @@
+body,
+.container {
+  height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+  widows: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 10em;
+  height: 5em;
+  line-height: 5em;
+  color: white;
+  text-align: center;
+  background-color: #ba55d3;
+}
+
+.box + .box {
+  margin-top: 1em;
+}
+
+.box1 {
+  transform: skewX(30deg);
+}
+
+.box2 {
+  transform: scaleX(0.5);
+}
+
+.box3 {
+  transform: rotate(45deg);
+}
+
+.box4 {
+  transform: translate(10px, 20px);
+}
+
+.box5 {
+  transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px, 20px);
+}

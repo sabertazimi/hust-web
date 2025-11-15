@@ -1,0 +1,751 @@
+html,
+body {
+    width: 100%;
+    min-width: 1280px;
+}
+
+/* utils */
+
+.line-wrapper {
+    height: 10px;
+    padding: 10px 0 30px 0;
+
+    line-height: 10px;
+}
+
+.line {
+    display: inline-block;
+
+    width: 30px;
+    height: 3px;
+
+    background-color: #fff;
+}
+
+.trans-btn {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 7px 27px;
+
+    color: #e74f4d;
+    border: 1px solid #e74f4d;
+}
+
+.trans-btn:hover {
+    text-decoration: none;
+
+    color: #fff;
+    border: none;
+    background-color: #e74f4d;
+}
+
+/* end of utils */
+
+.nav-bar {
+    height: 55px;
+
+    line-height: 55px;
+}
+
+.brand {
+    display: inline-block;
+
+    height: 30px;
+
+    line-height: 30px;
+}
+
+.brand > img {
+    float: left;
+
+    height: 30px;
+    margin: 0 10px 0 60px;
+}
+
+.brand > span{
+     color: #393a3a;
+
+     font-family:'SimHei';
+     font-size: 1.75em;
+}
+
+.nav {
+    float: right;
+}
+
+.nav > li {
+    float: left;
+
+    height: 50px;
+
+    line-height: 50px;
+}
+
+.nav > li > a {
+    display: inline-block;
+
+    padding: 0 20px;
+
+    color: #787b83;
+
+    font-size: 1.2em;
+    line-height: 50px;
+}
+
+.nav > li > a:hover {
+    text-decoration: none;
+
+    color: #e74f4d;
+    border-bottom: 5px #e74f4d solid;
+}
+
+.focus > a {
+    color: #e74f4d;
+    border-bottom: 5px #e74f4d solid;
+}
+
+.login {
+    display: inline-block;
+    float: right;
+
+    height: 30px;
+    margin: 12px 80px 0 0;
+
+    color: #e74f4d;
+
+    font-size: 1.2em;
+    line-height: 30px;
+}
+
+.login > img {
+    margin: 0 10px 0 20px;
+}
+
+.cover-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 700px;
+
+    background: url("../img/cover.jpg")  center center no-repeat;
+    background-size: cover;
+}
+
+.cover-content {
+    position: absolute;
+    top: 33.333333%;
+    left: 10%;
+
+    color: #fff;
+}
+
+.cover-content > h1 {
+    margin-bottom: 30px;
+
+    font-size: 5em;
+}
+
+.cover-content > p {
+    text-indent: 7px;
+
+    font-size: 1.75em;
+    line-height: 32px;
+}
+
+.cover-btn {
+    display: block;
+
+    width: 350px;
+    height: 60px;
+    margin: 60px 0 0 10px;
+
+    text-align: center;
+
+    color: #fff;
+    background-color: #e74f4d;
+
+    font-size: 2.5em;
+    line-height: 60px;
+}
+
+.cover-btn:hover {
+    text-decoration: none;
+
+    background-color: #e9615f;
+}
+
+.feature-list {
+    width: 100%;
+    height: 210px;
+    padding-top: 50px;
+}
+
+.feature-list > li {
+    float: left;
+
+    width: 25%;
+
+    text-align: center;
+}
+
+.feature-list > li > img {
+    height: 40px;
+}
+
+.feature-list > li > p {
+    width: 50%;
+    height: 50px;
+    margin-top: 20px;
+    padding: 20px 25% 0 25%;
+
+    color: #767777;
+    border-right: 2px solid #aaa;
+
+    font-family: 'SimHei';
+    font-size: 1.2em;
+}
+
+.more {
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+    padding-top: 100px;
+
+    text-align: center;
+
+    background-color: #ededec;
+}
+
+.more > p {
+    margin-top: 80px;
+
+    color: #767777;
+
+    font-family: 'SimHei';
+    font-size: 4.5em;
+}
+
+.place {
+    width: 100%;
+    height: 333px;
+    padding-top: 40px;
+
+    text-align: center;
+
+    background: url("../img/map.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.place-content {
+    margin-bottom: 30px;
+}
+
+.place-content > h2 {
+    color: #fff;
+
+    font-size: 1.75em;
+}
+
+.place-content > p {
+    color: #fff;
+}
+
+
+.place-search {
+    width: 100%;
+}
+
+.place-search > select {
+    width: 15%;
+    height: 35px;
+    margin-right: 20px;
+    /* 消除默认箭头 */
+
+    text-indent: 0.01px;
+    text-overflow: "";
+    /* 自定义边框 */
+
+    border: 0;
+    /* 将箭头图片移至右端 */
+    background: url('../img/arrow.png') 95% 50% no-repeat;
+    background-color: #fff;
+    /* 消除默认样式 */
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.place-search > select:hover {
+    border: 1px solid #e74f4d;
+}
+
+.place-search option {
+    width: 100%;
+    height: 25px;
+    padding-left: 30px;
+
+    color: #323333;
+    background-color: #e3e2e4;
+
+    line-height: 25px;
+}
+
+.place-search option:hover {
+    color: #fff;
+    background: url(../img/tick.png) 5% center no-repeat;
+    background-color: #e74f4d;
+}
+
+.place-search > a {
+    padding: 10px 40px 10px 65px;
+
+    text-align: center;
+    letter-spacing: 25px;
+
+    color: #fff;
+    background-color: #e74f4d;
+
+    font-size: 1.2em;
+}
+
+.place-search > a:hover {
+    text-decoration: none;
+
+    background-color: #e9615f;
+}
+
+.gallery {
+    width: 100%;
+    height: 500px;
+    padding-top: 60px;
+
+    text-align: center;
+
+    background-color: #f8f7f7;
+}
+
+.gallery > figure {
+    display: inline-block;
+
+    width: 16%;
+    margin: 5px 15px;
+
+    transition: width .3s linear;
+}
+
+.gallery > figure > img {
+    padding: 10px 5px;
+
+    border: 1px solid #dcdcdc;
+}
+
+.gallery > figure h3 {
+    margin-bottom: 2px;
+
+    font-size: 1.2em;
+}
+
+.gallery > figure p {
+    color: #bcbdbd;
+}
+
+.gallery > figure:nth-child(2) h3 {
+    padding-left: 25px;
+
+    letter-spacing: 25px;
+
+    font-size: 1.4em;
+}
+
+.gallery > figure:hover {
+    width: 20%;
+}
+
+.first-details {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+}
+
+.first-details-intro {
+    position: relative;
+
+    width: 900px;
+    height: 380px;
+    padding-top: 120px;
+
+    text-align: center;
+
+    color: #fff;
+    background: url("../img/bg-man.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.first-details-intro::after {
+     position: absolute;
+     top: 50%;
+     right: 0;
+
+     width: 0;
+     height: 0;
+
+     content: "";
+
+     border-top: 15px solid transparent;
+     border-right: 25px solid #fff;
+     border-bottom: 15px solid transparent;
+}
+
+.first-details-intro > h3 {
+    font-size: 2.5em;
+}
+
+.first-details-intro > h1 {
+    font-size: 10em;
+}
+
+.first-details-intro > p,
+.first-details-intro > time {
+    font-size: 1.6em;
+}
+
+.first-details-intro > time {
+    position: relative;
+    top: 10px;
+}
+
+.first-details-content {
+    position: absolute;
+    top: 0;
+    right: 5px;
+
+    width: 440px;
+    height: 500px;
+    padding-top: 140px;
+
+    text-align: center;
+
+    color: #000;
+}
+
+.first-details-content > h3 {
+    font-size: 1.6em;
+}
+
+.first-details-content span {
+    color: #e74f4d;
+
+    font-size: 1.2em;
+}
+
+.first-details-content > p {
+    margin-top: 10px;
+    padding: 0 55px;
+
+    color: #aaa;
+
+    line-height: 30px;
+}
+
+.more-points {
+    margin-top: 25px;
+
+    letter-spacing: 10px;
+}
+
+.second-details {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+}
+
+.more-link {
+    position: absolute;
+
+    width: 450px;
+    height: 300px;
+    padding-top: 200px;
+
+    text-align: center;
+}
+
+.more-link > h4,
+.more-link > p {
+    font-size: 1.6em;
+}
+
+.more-link a {
+    margin-top: 0;
+    padding: 8px 30px;
+
+    font-size: 1.6em;
+}
+
+.first-link {
+    top: 0;
+    left: 0;
+
+    color: #fff;
+    background-color: #e74f4d;
+}
+
+.first-link > a {
+    color: #fff;
+    border-color: #fff;
+}
+
+.first-link > a:hover {
+    text-decoration: none;
+
+    color: #e74f4d;
+    border: none;
+    background-color: #fff;
+}
+
+.second-link {
+    top: 0;
+    left: 450px;
+}
+
+.second-link .line {
+    background-color: #e74f4d;
+}
+
+.second-details-bg {
+    position: absolute;
+    top:0;
+    left:900px;
+
+    width: 455px;
+    height: 500px;
+
+    background: url(../img/bg_woman.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.form {
+    width: 100%;
+    height: 700px;
+    padding-top: 100px;
+
+    text-align: center;
+}
+
+.form-title {
+    margin-bottom: 100px;
+}
+
+.form-title .line-wrapper {
+    padding-bottom: 10px;
+}
+
+.form-title .line {
+    background-color: #e74f4d;
+}
+
+.form-title > h2 {
+    font-size: 1.6em;
+}
+
+.form-title > p {
+    color: #aaa;
+
+    font-size: 1.2em;
+}
+
+.form-aside {
+    float: left;
+
+    width: 300px;
+    padding-left: 100px;
+
+    text-align: left;
+
+    color: #aaa;
+}
+
+.form-aside > li {
+    margin-bottom: 25px;
+}
+
+.form-aside > li > h3 {
+    margin-bottom: 25px;
+
+    font-size: 1.2em;
+}
+
+.form-aside > li > p {
+    width: 100%;
+
+    line-height: 15px;
+}
+
+.form-aside > li > a {
+    position: relative;
+    left: 250px;
+
+    display: block;
+
+    padding-left: 20px;
+
+    color: #aaa;
+    background: url(../img/unfold.png) 0% 95% no-repeat;
+}
+
+.form-content {
+    position: relative;
+    left: 500px;
+
+    width:800px;
+    height: 300px;
+}
+
+.form-content > div {
+    height: 20%;
+}
+
+.form-raw {
+    position: absolute;
+
+    width: 45%;
+
+    text-align: left;
+
+    background-color: #ededef;
+}
+
+.form-raw:first-child {
+    left: 0;
+}
+
+.form-raw:last-child {
+    right: 5%;
+}
+
+.form-raw label{
+    margin-left: 10px;
+}
+
+.form-raw > input{
+    width: 60%;
+    height: 40px;
+
+    border: none;
+    background-color: #ededef;
+
+    font-size: 1.2em;
+}
+
+.form-content > textarea {
+    position: absolute;
+    top: 120px;
+    left: 0;
+
+    width: 93%;
+    height: 100px;
+    padding-top: 8px;
+    padding-left: 16px;
+
+    border: none;
+    background-color: #ededef;
+}
+
+.form-content > button {
+    position: absolute;
+    top: 250px;
+    left: 0;
+
+    width: 95%;
+    padding: 10px;
+
+    border: none;
+    background-color: #ededef;
+
+    font-size: 1.3em;
+}
+
+.form-content > button:hover {
+    background-color: #aaa;
+}
+
+.contact-us {
+
+    width: 100%;
+    height: 250px;
+    margin-top: -50px;
+    padding-top: 100px;
+
+    text-align: center;
+
+    color: #fff;
+    background-color: #32353e;
+}
+
+.contact-us > h2 {
+    margin-bottom: 10px;
+}
+
+.contact-us > p {
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+#email {
+    border: none;
+    font-size: 1.2em;
+    width: 430px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+#email:hover {
+    color: #fff;
+    background-color: #e74f4d;
+}
+
+#contact_submit {
+    position: relative;
+    right: 3px;
+    height: 40px;
+    width: 80px;
+    padding-left: 10px;
+    border: none;
+    font-size: 1.3em;
+    text-align: center;
+    color: #fff;
+    background-color: #6f7178;
+    letter-spacing: 10px;
+}
+
+#contact_submit:hover {
+    background-color: #aaa;
+}
+
+.share {
+    margin-top: 40px;
+    letter-spacing: 20px;
+}
+
+.black-footer {
+    width: 100%;
+    height: 85px;
+    line-height: 85px;
+    background-color: #2f2f38;
+    color: #fff;
+}
+
+.copyright {
+    margin-left: 80px;
+    float: left;
+}
+
+.top {
+    color: #fff;
+    margin-right: 30px;
+    float: right;
+}

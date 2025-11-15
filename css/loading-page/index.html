@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <style>
+        body:before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: auto;
+            height: 100vh;
+            background: #fff5f5;
+            z-index: 999;
+            animation-name: bg;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes bg {
+            0% {
+                height: 100vh;
+            }
+            80% {
+                height: 100vh;
+            }
+            100% {
+                height: 0vh;
+                display: none;
+            }
+        }
+        
+        body:after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: auto;
+            bottom: auto;
+            height: 0.5vh;
+            background: #fa5252;
+            z-index: 1000;
+            animation-name: loadingBar;
+            animation-duration: 1.6s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes loadingBar {
+            0% {
+                width: 0vw;
+            }
+            50% {
+                width: 50vw;
+            }
+            80% {
+                width: 50vw;
+            }
+            95% {
+                width: 100vw;
+                height: 0.5vh;
+            }
+            100% {
+                width: 100vw;
+                height: 0vh;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    Hello World
+</body>
+
+</html>

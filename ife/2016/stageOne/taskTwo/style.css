@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.4rem;
+}
+
+html,
+body {
+    position: relative;
+
+    margin:0 auto;
+    padding: 0;
+
+    font-size: 62.5%;
+}
+
+header {
+    clear: right;
+
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 0;
+
+    background-color: black;
+
+    line-height: 50px;
+}
+
+header > h1 {
+    display: inline;
+
+    padding-left: 10px;
+
+    color: white;
+
+    font-size: 2.5rem;
+}
+
+header > nav {
+    float:right;
+
+    font-size: 1.5rem;
+}
+
+header > nav > ul {
+    height: 50px;
+    margin: 0;
+
+    text-align: center;
+}
+
+header > nav > ul > li {
+    float: right;
+}
+
+header > nav > ul > li > a {
+    padding: 15px;
+
+    transition: color,background-color,border-bottom .1s ease-in;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    color: white;
+}
+
+header > nav > ul > li > a:hover {
+    color: black;
+    border-bottom: 3px solid black;
+    background-color: white;
+}
+
+article p {
+    text-indent: 2em;
+}
+
+article {
+    margin-bottom: 100px;
+    padding-bottom: 30px;
+
+    border-bottom: 10px groove black;
+
+    font-size: 1.2rem;
+}
+
+article > aside {
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+
+    border-bottom: 1px solid #000;
+}
+
+hgroup {
+    position: relative;
+    left: 50%;
+
+    float: left;
+
+    text-align: center;
+}
+
+hgroup > h2 {
+    position: relative;
+    left: -50%;
+}
+
+hgroup > h2:last-child {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    color: rgb(108, 108, 108);
+    border-bottom: 1px solid #000;
+
+    font-size: 1.5rem;;
+}
+
+hgroup > h2:first-child {
+    color: rgb(55, 55, 55);
+
+    font-size: 1.8rem;
+}
+
+aside,
+section,
+figure,
+form {
+    clear: both;
+}
+
+section > ul {
+    list-style: none;
+    text-align: center;
+    border-radius:20px;
+    border: 1px solid black;
+}
+
+section > ul > li {
+    text-indent: 2em;
+    margin-bottom: 10px;
+}
+
+figure {
+    margin: 0 20% 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    text-align: center;
+
+    border-bottom: 1px solid black;
+}
+
+figure > figcaption{
+    margin-bottom: 2px;
+
+    font-size: 2.2rem;
+}
+
+figure > img {
+    margin: 20px;
+    padding:20px;
+
+    border: 1px solid rgba(88, 88, 88, 0.5);
+}
+
+table {
+    width: 100%;
+
+	color:#333;
+	border-collapse: collapse;
+	border-width: 1px;
+	border-color: #a9c6c9;
+}
+
+table th {
+	padding: 8px;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+table tr {
+    color: white;
+}
+
+table tr:nth-child(2n+1) {
+    background-color: rgb(55, 128, 195);
+}
+
+table tr:nth-child(2n) {
+    background-color: rgb(156, 72, 5);
+}
+
+table td {
+	padding: 8px;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+#form > form label, p{
+    margin-left: 30px;
+
+    text-align: left;
+
+    line-height: 30px;
+}
+
+#form > form label {
+    width: 30px;
+}
+
+#form > form button {
+    display: block;
+
+    margin:0 auto;
+    margin-bottom: 30px;
+    padding:10px 45% 10px 45%;
+
+    transition: color,background-color .5s ease-in;
+    letter-spacing: 10px;
+
+    color:white;
+    border-radius: 10px;
+    background-color: rgb(97, 127, 246);
+}
+
+#form > form button:hover{
+    color: white;
+    background-color: #555;
+}
+
+#form > form fieldset {
+    border: none;
+}
+
+footer {
+    height: 50px;
+
+    color: white;
+    background-color: black;
+
+    line-height: 50px;
+}
+
+footer > p {
+    text-align: center;
+    letter-spacing: 3px;
+
+    line-height: 50px;
+}

@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.jumbotron {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url('./bg.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-weight: 800;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+}
+
+#cursor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #1899ef;
+  opacity: 1;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+  mix-blend-mode: difference;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Slide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./index.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./animation.css">
+</head>
+<body>
+  <main class="slide-container">
+    <section class="slide slide--left" id="slide1">
+      <a class="slide-link slide-prev-link slide-link--hidden" href="#slide5">prev</a>
+      <a class="slide-link slide-next-link" href="#slide2">next</a>
+      <div class="slide-content">1</div>
+    </section>
+    <section class="slide slide--left" id="slide2">
+      <a class="slide-link slide-prev-link" href="#slide1">prev</a>
+      <a class="slide-link slide-next-link" href="#slide3">next</a>
+      <div class="slide-content">2</div>
+    </section>
+    <section class="slide slide--left" id="slide3">
+      <a class="slide-link slide-prev-link" href="#slide2">prev</a>
+      <a class="slide-link slide-next-link" href="#slide4">next</a>
+      <div class="slide-content">3</div>
+    </section>
+    <section class="slide slide--left" id="slide4">
+      <a class="slide-link slide-prev-link" href="#slide3">prev</a>
+      <a class="slide-link slide-next-link" href="#slide5">next</a>
+      <div class="slide-content">4</div>
+    </section>
+    <section class="slide slide--left" id="slide5">
+      <a class="slide-link slide-prev-link" href="#slide4">prev</a>
+      <div class="slide-content">5</div>
+    </section>
+  </main>
+  <select name="animation" id="animation" class="animation-select">
+    <option value="left">Left</option>
+    <option value="right">Right</option>
+    <option value="up">Up</option>
+    <option value="down">Down</option>
+    <option value="rotate">Rotate</option>
+    <option value="scale">Scale</option>
+    <option value="fade">Fade</option>
+    <option value="no">No</option>
+  </select>
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500); 
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  background-color: #A2DAD1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: inherit;
+  font-family: inherit;
+}
+
+* + * {
+  margin: 5px;
+}
+
+.header {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.main {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  background-color: #FAFAFA;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.main > fieldset {
+  width: 100%;
+}
+
+.legend {
+  padding: 3px 6px;
+  background-color: #000;
+  color: #FFF;
+}
+
+.survey-form > * {
+  display: inline-block;
+  width: 43%;
+  padding: 10px;
+}
+
+.survey-form > label {
+  text-align: right;
+  vertical-align: top;
+}
+
+.survey-form input {
+  border: 1px solid #C0C0C0;
+  border-radius: 2px;
+}
+
+.survey-form input:valid {
+  border: 1px solid green;
+}
+
+.survey-form input:invalid {
+  border: 1px solid red;
+}
+
+label.required::before {
+  content: "*";
+}
+
+.survey-form__list {
+  padding-left: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.survey-form__list li {
+  margin-left: 0px;
+}
+
+.survey-form__submit {
+  display: block;
+  width: auto;
+  margin: 15px auto;
+  padding: 10px 20px;
+  border: 0; 
+  border-radius: 5px;
+  font-size: 1.1em;
+  background-color: #59ACE0;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding: 10px;
+  }
+
+  .survey-form > * {
+    display: block;
+    width: 96%;
+  }
+
+  .survey-form > label {
+    text-align: left;
+  }
+
+  .survey-form__submit {
+    width: auto;
+  }
+}

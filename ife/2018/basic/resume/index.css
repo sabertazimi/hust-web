@@ -1,0 +1,133 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: Raleway, 'Open Sans', sans, sans-serif;
+  font-size: 1.6em;
+  widows: 100%;
+}
+
+main,
+section,
+h1,
+h2,
+h3,
+small,
+time,
+ul,
+li,
+a,
+span {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  margin-bottom: 1em;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .time {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    display: inline-block;
+    padding: 0.5em;
+    transition: none;
+  }
+}
+
+.time {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  display: inline-block;
+  padding: 0.5em;
+  transition: background 0.3s;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.resume-section {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #111;
+}
+
+.resume-title {
+  text-transform: capitalize;
+}
+
+.resume-list {
+  list-style: none inside;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .resume-list a {
+    color: darkred;
+    text-decoration: none;
+    transition: none;
+  }
+}
+
+.resume-list a {
+  color: darkred;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.resume-list a:hover,
+.resume-list a:focus {
+  color: white;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .resume-item {
+    position: relative;
+    padding: 0.5em;
+    transition: none;
+  }
+}
+
+.resume-item {
+  position: relative;
+  padding: 0.5em;
+  transition: all 0.3s ease;
+}
+
+.resume-item:hover,
+.resume-item:focus {
+  color: white;
+  background-color: blueviolet;
+}
+
+.resume-item:hover a,
+.resume-item:focus a {
+  color: white;
+}
+
+.resume-item:hover .time,
+.resume-item:focus .time {
+  background-color: black;
+}

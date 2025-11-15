@@ -1,0 +1,68 @@
+html,
+body {
+    margin: 0 auto;
+    padding: 0px auto;
+
+    text-align: center;
+
+    font: 14px/1.5 "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+.stack {
+    margin-top: 30px;
+}
+
+.btn-group {
+    display: inline;
+}
+
+.demo {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: 50px;
+    padding: 370px 0 50px 50px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-end;
+}
+
+.input-custom,
+.btn-custom {
+    padding: 6px 20px;
+
+    color: #e74f4d;
+    border: 1px solid #e74f4d;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.input-custom:hover,
+.btn-custom:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: #e74f4d;
+}
+
+.inverse {
+    color: #fff;
+    border-color: #fff;
+    background-color: #e74f4d;
+    animation-name: elem-fade-in;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes elem-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+a {
+    text-decoration: none;
+}

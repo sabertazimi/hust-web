@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+</head>
+<body>
+  <h3>Please check console</h3>
+<script>
+  const pressed = [];
+  const secretCode = 'saber';
+
+  window.addEventListener('keyup', (event) => {
+    pressed.push(event.key);
+
+    // get last keys
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+
+    if (pressed.join('').includes(secretCode)) {
+      console.count('Bingo!');
+    }
+  });
+</script>
+</body>
+</html>

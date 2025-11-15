@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fancy Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="form-title">Fancy Form</h1>
+    <div class="form-box">
+      <i class="fa fa-arrow-left prev-btn" aria-hidden="true"></i>
+      <i class="fa fa-arrow-right next-btn" aria-hidden="true"></i>
+      <div class="form-group">
+        <input type="text" class="form-control" name="question" id="question" required>
+        <label for="question" class="form-label">Enter Your First Name</label>
+        <div class="form-progress"></div>
+      </div>
+      <div class="progress-bar"></div>
+    </div>
+    <i class="fa fa-spinner loading-icon hidden" aria-hidden="true"></i>
+    <i class="fa fa-check-circle end-icon hidden" aria-hidden="true"></i>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
